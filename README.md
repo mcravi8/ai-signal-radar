@@ -1,14 +1,14 @@
 # AI Signal Radar
 
-AI Signal Radar turns scattered AI news, research, repositories, and operator narratives into evidence-linked category abstractions.
+AI Signal Radar turns the full AlphaSignal newsletter archive plus public AI research, repositories, and technical discussion into a factual research database.
 
-The public site is designed for two readers: a technically curious person who wants a concise weekly brief, and an expert who wants to inspect the underlying claims, projects, sources, and scoring methodology.
+The public site is designed for direct inspection: corpus counts, stack distribution, trend evidence, monthly frequency, ranked projects, score inputs, official links, and explicit limitations. It is not a blog or editorial feed.
 
 ## What is public
 
 - Collection and scoring code
 - Public-source metadata and links
-- Sanitized AlphaSignal-derived records
+- Sanitized AlphaSignal-derived trend and project research
 - Themes, aliases, projects, claims, and evidence relationships
 - Weekly reports and historical scores
 - The static dashboard
@@ -62,6 +62,21 @@ Open `http://localhost:8000`.
 
 Gmail ingestion is intentionally local. `pipeline.collectors.email_import` accepts only a previously sanitized export.
 
+## AlphaSignal research
+
+The tracked `data/public/alphasignal-research.json` is a derivative, public-safe research artifact built from the private local corpus. It currently covers 129 received emails, 128 substantive issues, 901 extracted signal records, 888 unique catalog records, 15 analyzed trends, and 20 ranked projects from April 14 through September 20, 2026.
+
+It publishes aggregate counts, analyst findings, monthly theme frequencies, the four-layer stack classification, score components, project assessments, and official project URLs. It does **not** publish raw email bodies, Gmail links, message IDs, account addresses, private headers, or the newsletter's full text.
+
+To refresh the public derivative from a private local analysis file:
+
+```bash
+python scripts/export_alphasignal_research.py /path/to/private/alpha_analysis_data.json
+python -m pipeline.cli validate-public
+```
+
+Trend score and opportunity score remain separate: the first measures persistence inside the newsletter corpus; the second measures whether a specific project appears worth testing for workflow automation. See [docs/alphasignal-methodology.md](docs/alphasignal-methodology.md).
+
 ## Current status
 
-This scaffold establishes the contracts, privacy boundary, initial taxonomy, working dashboard, and automation entry points. The initial dashboard deliberately marks unobserved evidence as `N/O`; collectors add real observations over time.
+The dashboard contains the reviewed AlphaSignal analysis and a separately collected public-evidence layer. Unobserved public categories remain `N/O`; the interface does not convert missing evidence into zero.

@@ -12,6 +12,7 @@ class SiteBuildTests(unittest.TestCase):
         subprocess.run([sys.executable, "scripts/build_site.py"], cwd=ROOT, check=True)
         self.assertTrue((ROOT / "dist/index.html").exists())
         self.assertTrue((ROOT / "dist/data/dashboard.json").exists())
+        self.assertTrue((ROOT / "dist/data/alphasignal-research.json").exists())
 
 
 if __name__ == "__main__":

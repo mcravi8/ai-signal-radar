@@ -1,0 +1,1053 @@
+{
+  "meta": {
+    "title": "AlphaSignal corpus analysis",
+    "source": "AlphaSignal newsletter",
+    "analysis_date": "2026-09-20",
+    "coverage_start": "2026-04-14",
+    "coverage_end": "2026-09-20",
+    "email_count": 129,
+    "substantive_email_count": 128,
+    "raw_signal_records": 901,
+    "unique_catalog_records": 888,
+    "sponsored_records": 62,
+    "trend_count": 15,
+    "project_count": 20,
+    "publication_boundary": "Derivative analysis only. No email addresses, mailbox links, message identifiers, private headers, or full newsletter text are included."
+  },
+  "layers": [
+    {
+      "name": "Models & capabilities",
+      "catalog_records": 213,
+      "definition": "Foundation models, specialized models, multimodal capabilities, and local inference."
+    },
+    {
+      "name": "Harness & orchestration",
+      "catalog_records": 299,
+      "definition": "Agent loops, state, memory, routing, sandboxes, and execution control."
+    },
+    {
+      "name": "Tools, skills & integrations",
+      "catalog_records": 185,
+      "definition": "Reusable capabilities, data access, application connectors, and workflow components."
+    },
+    {
+      "name": "Assurance layer",
+      "catalog_records": 191,
+      "definition": "Evaluation, validation, security, governance, and observability."
+    }
+  ],
+  "findings": [
+    {
+      "finding": "Deployability is the dominant model story",
+      "evidence": "Open weights, mixture-of-experts architectures, quantization, local inference, and routing appeared in 270 matched records."
+    },
+    {
+      "finding": "Agents are becoming systems rather than chat interfaces",
+      "evidence": "Durable state, parallel work, sandboxes, handoffs, skills, and model-independent harnesses form a distinct control layer."
+    },
+    {
+      "finding": "Reliability is becoming the constraint",
+      "evidence": "Validation, evaluation, observability, context management, and security recur alongside the largest applied categories."
+    },
+    {
+      "finding": "Enabling layers offer the nearest-term leverage",
+      "evidence": "Document routing, structured output, integrations, CLI wrappers, and durable agent state can upgrade many workflows at once."
+    },
+    {
+      "finding": "The late-period mix shifts toward vertical deployment",
+      "evidence": "September coverage increasingly combines domain indexes, live business-system access, governed data interfaces, and specialized agents."
+    }
+  ],
+  "trends": [
+    {
+      "name": "Training, evaluation and self-improvement",
+      "mentions": 147,
+      "direction": "Broad rise through August",
+      "finding": "More systems learned from failures, generated training environments, optimized prompts or exposed stronger evaluation methods.",
+      "examples": [
+        "WikiSkill",
+        "PromptWizard",
+        "Shopify pipeline"
+      ],
+      "primary_layer": "Assurance layer",
+      "secondary_layer": "Models & capabilities",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 9,
+        "2026-05": 14,
+        "2026-06": 19,
+        "2026-07": 19,
+        "2026-08": 29,
+        "2026-09": 22
+      },
+      "score": {
+        "recurrence": 22,
+        "acceleration": 20,
+        "persistence": 25,
+        "breadth": 22,
+        "total": 89,
+        "tier": "Structural"
+      }
+    },
+    {
+      "name": "Agent orchestration and autonomy",
+      "mentions": 190,
+      "direction": "Accelerating into Aug-Sep",
+      "finding": "Agents moved from single-session assistants toward parallel, cloud-hosted and long-running work.",
+      "examples": [
+        "Claude Code Projects",
+        "LoopX",
+        "DeepSeek Harness"
+      ],
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 17,
+        "2026-05": 26,
+        "2026-06": 34,
+        "2026-07": 36,
+        "2026-08": 44,
+        "2026-09": 30
+      },
+      "score": {
+        "recurrence": 23,
+        "acceleration": 16,
+        "persistence": 25,
+        "breadth": 23,
+        "total": 87,
+        "tier": "Structural"
+      }
+    },
+    {
+      "name": "Open/local models and inference efficiency",
+      "mentions": 270,
+      "direction": "Dominant; peak in July",
+      "finding": "Open weights, MoE, quantization, local and on-device inference repeatedly reduced cost and deployment constraints.",
+      "examples": [
+        "GLM",
+        "Qwen",
+        "DeepSeek",
+        "Unsloth",
+        "llama.cpp"
+      ],
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "monthly_mentions": {
+        "2026-04": 26,
+        "2026-05": 46,
+        "2026-06": 40,
+        "2026-07": 63,
+        "2026-08": 39,
+        "2026-09": 30
+      },
+      "score": {
+        "recurrence": 25,
+        "acceleration": 9,
+        "persistence": 25,
+        "breadth": 25,
+        "total": 84,
+        "tier": "Structural"
+      }
+    },
+    {
+      "name": "Validation and release bottlenecks",
+      "mentions": 141,
+      "direction": "Peak in July",
+      "finding": "As agents generated more output, testing, review, observability and trustworthy deployment became the limiting layer.",
+      "examples": [
+        "runtime validation",
+        "CI repair",
+        "agent tracing"
+      ],
+      "primary_layer": "Assurance layer",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 10,
+        "2026-05": 23,
+        "2026-06": 23,
+        "2026-07": 44,
+        "2026-08": 31,
+        "2026-09": 17
+      },
+      "score": {
+        "recurrence": 22,
+        "acceleration": 12,
+        "persistence": 25,
+        "breadth": 22,
+        "total": 81,
+        "tier": "Structural"
+      }
+    },
+    {
+      "name": "Coding agents and developer tooling",
+      "mentions": 174,
+      "direction": "Persistent; peak in June",
+      "finding": "Coding remained the newsletter's largest applied domain, with growing emphasis on repo search, validation and release flow.",
+      "examples": [
+        "Codex",
+        "Claude Code",
+        "Cursor",
+        "FastContext"
+      ],
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 12,
+        "2026-05": 15,
+        "2026-06": 23,
+        "2026-07": 15,
+        "2026-08": 21,
+        "2026-09": 10
+      },
+      "score": {
+        "recurrence": 23,
+        "acceleration": 12,
+        "persistence": 25,
+        "breadth": 20,
+        "total": 80,
+        "tier": "Structural"
+      }
+    },
+    {
+      "name": "Multimodal generation and 3D",
+      "mentions": 98,
+      "direction": "High and sustained",
+      "finding": "Video, image, avatar and 3D systems became faster, more editable and increasingly local or real time.",
+      "examples": [
+        "depth-anything.cpp",
+        "OpenReel",
+        "avatar models"
+      ],
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 9,
+        "2026-05": 14,
+        "2026-06": 18,
+        "2026-07": 22,
+        "2026-08": 15,
+        "2026-09": 16
+      },
+      "score": {
+        "recurrence": 21,
+        "acceleration": 12,
+        "persistence": 25,
+        "breadth": 21,
+        "total": 79,
+        "tier": "Strong"
+      }
+    },
+    {
+      "name": "Voice and audio interfaces",
+      "mentions": 45,
+      "direction": "Rising since July",
+      "finding": "Low-latency speech, multilingual cloning and self-hosted voice-agent stacks turned voice into a practical workflow interface.",
+      "examples": [
+        "Dograh",
+        "VoiceStudio",
+        "realtime speech models"
+      ],
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 3,
+        "2026-05": 5,
+        "2026-06": 4,
+        "2026-07": 13,
+        "2026-08": 10,
+        "2026-09": 7
+      },
+      "score": {
+        "recurrence": 17,
+        "acceleration": 16,
+        "persistence": 25,
+        "breadth": 17,
+        "total": 75,
+        "tier": "Strong"
+      }
+    },
+    {
+      "name": "Skills, plugins, MCP and harnesses",
+      "mentions": 47,
+      "direction": "Surged in July",
+      "finding": "Reusable capabilities and interoperable tool layers became a distinct platform layer around models.",
+      "examples": [
+        "MCP",
+        "Agent Skills",
+        "DeepSeek Harness",
+        "CLI-Anything"
+      ],
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 3,
+        "2026-05": 6,
+        "2026-06": 6,
+        "2026-07": 13,
+        "2026-08": 10,
+        "2026-09": 4
+      },
+      "score": {
+        "recurrence": 17,
+        "acceleration": 13,
+        "persistence": 25,
+        "breadth": 17,
+        "total": 72,
+        "tier": "Strong"
+      }
+    },
+    {
+      "name": "Security, safety and observability",
+      "mentions": 37,
+      "direction": "Sharp August spike",
+      "finding": "Agent permissions, prompt injection, malicious skills, monitoring and red-teaming moved into the core stack.",
+      "examples": [
+        "agent tracing",
+        "skill scanners",
+        "OpenMed",
+        "security CLIs"
+      ],
+      "primary_layer": "Assurance layer",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 1,
+        "2026-05": 6,
+        "2026-06": 3,
+        "2026-07": 8,
+        "2026-08": 9,
+        "2026-09": 1
+      },
+      "score": {
+        "recurrence": 16,
+        "acceleration": 14,
+        "persistence": 25,
+        "breadth": 16,
+        "total": 71,
+        "tier": "Strong"
+      }
+    },
+    {
+      "name": "Enterprise and vertical AI",
+      "mentions": 35,
+      "direction": "Strong September acceleration",
+      "finding": "General models were wrapped with domain indexes and live business-system access.",
+      "examples": [
+        "legal search",
+        "Salesforce tools",
+        "finance agents"
+      ],
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 1,
+        "2026-05": 2,
+        "2026-06": 1,
+        "2026-07": 2,
+        "2026-08": 2,
+        "2026-09": 2
+      },
+      "score": {
+        "recurrence": 16,
+        "acceleration": 15,
+        "persistence": 25,
+        "breadth": 11,
+        "total": 67,
+        "tier": "Strong"
+      }
+    },
+    {
+      "name": "Memory and context engineering",
+      "mentions": 37,
+      "direction": "Built through July",
+      "finding": "Context pruning, disk spill, persistent memory and skill-based compression addressed long-running-agent cost and drift.",
+      "examples": [
+        "Pi prune-and-spill",
+        "Jev",
+        "persistent wikis"
+      ],
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": "Assurance layer",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 1,
+        "2026-05": 8,
+        "2026-06": 12,
+        "2026-07": 7,
+        "2026-08": 6,
+        "2026-09": 4
+      },
+      "score": {
+        "recurrence": 16,
+        "acceleration": 8,
+        "persistence": 25,
+        "breadth": 17,
+        "total": 66,
+        "tier": "Strong"
+      }
+    },
+    {
+      "name": "Documents, retrieval and structured data",
+      "mentions": 41,
+      "direction": "Strong July cluster",
+      "finding": "Document parsing, OCR routing, GraphRAG and constrained outputs improved the reliability of knowledge workflows.",
+      "examples": [
+        "Docling",
+        "pdf-inspector",
+        "GraphRAG",
+        "Outlines"
+      ],
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 0,
+        "2026-05": 4,
+        "2026-06": 5,
+        "2026-07": 9,
+        "2026-08": 3,
+        "2026-09": 3
+      },
+      "score": {
+        "recurrence": 17,
+        "acceleration": 8,
+        "persistence": 21,
+        "breadth": 14,
+        "total": 60,
+        "tier": "Emerging"
+      }
+    },
+    {
+      "name": "Robotics and embodied AI",
+      "mentions": 23,
+      "direction": "July spike, then cooled",
+      "finding": "World models, robot datasets and self-improving control loops linked multimodal models to physical systems.",
+      "examples": [
+        "GR00T",
+        "Figure datasets",
+        "world models"
+      ],
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 1,
+        "2026-05": 3,
+        "2026-06": 4,
+        "2026-07": 8,
+        "2026-08": 3,
+        "2026-09": 2
+      },
+      "score": {
+        "recurrence": 14,
+        "acceleration": 7,
+        "persistence": 25,
+        "breadth": 14,
+        "total": 60,
+        "tier": "Emerging"
+      }
+    },
+    {
+      "name": "Web and browser automation",
+      "mentions": 24,
+      "direction": "Steady niche",
+      "finding": "Browser control, scraping and form completion increasingly appeared as cheap, reusable agent capabilities.",
+      "examples": [
+        "Scrapling",
+        "browser agents",
+        "stealth browsers"
+      ],
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 3,
+        "2026-05": 6,
+        "2026-06": 2,
+        "2026-07": 3,
+        "2026-08": 3,
+        "2026-09": 1
+      },
+      "score": {
+        "recurrence": 14,
+        "acceleration": 7,
+        "persistence": 25,
+        "breadth": 14,
+        "total": 60,
+        "tier": "Emerging"
+      }
+    },
+    {
+      "name": "Model routing and heterogeneous stacks",
+      "mentions": 10,
+      "direction": "Emerged Jun-Aug",
+      "finding": "Teams increasingly treated models as interchangeable components selected by cost, speed and task fit.",
+      "examples": [
+        "routers",
+        "cascades",
+        "ensembles",
+        "OpenRouter"
+      ],
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": "Models & capabilities",
+      "cross_layer": true,
+      "monthly_mentions": {
+        "2026-04": 1,
+        "2026-05": 0,
+        "2026-06": 1,
+        "2026-07": 2,
+        "2026-08": 2,
+        "2026-09": 0
+      },
+      "score": {
+        "recurrence": 11,
+        "acceleration": 13,
+        "persistence": 17,
+        "breadth": 9,
+        "total": 50,
+        "tier": "Emerging"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "name": "Docling",
+      "editorial_rank": 5,
+      "source_date": "2026-08-19",
+      "category": "Document intelligence",
+      "why_it_matters": "Converts PDFs, Office files and images into structured, LLM-ready representations.",
+      "workflow_opportunity": "Build private document ingestion, extraction and RAG pipelines with local processing.",
+      "caveat": "Established open-source project; extraction quality still varies with layout and scans.",
+      "official_url": "https://github.com/docling-project/docling",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 4,
+        "composability": 5,
+        "cost_accessibility": 5,
+        "ease": 4,
+        "relevance": 5
+      },
+      "opportunity_score": 94,
+      "action": "Test now",
+      "hype_risk": "Low",
+      "rank": 1
+    },
+    {
+      "name": "Outlines",
+      "editorial_rank": 7,
+      "source_date": "2026-07-23",
+      "category": "Structured generation",
+      "why_it_matters": "Constrains model output to schemas, JSON, regexes or grammars during generation.",
+      "workflow_opportunity": "Make extraction and agent-tool payloads deterministic enough for software workflows.",
+      "caveat": "Established library; model and inference-backend compatibility should be tested.",
+      "official_url": "https://github.com/dottxt-ai/outlines",
+      "primary_layer": "Assurance layer",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 4,
+        "composability": 5,
+        "cost_accessibility": 5,
+        "ease": 4,
+        "relevance": 5
+      },
+      "opportunity_score": 94,
+      "action": "Test now",
+      "hype_risk": "Low",
+      "rank": 2
+    },
+    {
+      "name": "CLI-Anything",
+      "editorial_rank": 3,
+      "source_date": "2026-05-18",
+      "category": "Agent integration",
+      "why_it_matters": "Turns software into structured command-line interfaces that agents can invoke.",
+      "workflow_opportunity": "Make legacy or GUI-first applications agent-controllable without rebuilding their full API surface.",
+      "caveat": "Broad community project; generated interfaces still require testing and permission controls.",
+      "official_url": "https://github.com/HKUDS/CLI-Anything",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 3,
+        "composability": 5,
+        "cost_accessibility": 5,
+        "ease": 3,
+        "relevance": 5
+      },
+      "opportunity_score": 88,
+      "action": "Test now",
+      "hype_risk": "Medium",
+      "rank": 3
+    },
+    {
+      "name": "Nango",
+      "editorial_rank": 4,
+      "source_date": "2026-05-27",
+      "category": "Product integrations",
+      "why_it_matters": "Open-source integration layer for OAuth, credentials and external APIs.",
+      "workflow_opportunity": "Connect agents and SaaS products to customer systems without rebuilding authentication and token refresh.",
+      "caveat": "Mature project, but connector behavior and hosted versus self-hosted boundaries need review.",
+      "official_url": "https://github.com/NangoHQ/nango",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 5,
+        "composability": 5,
+        "cost_accessibility": 3,
+        "ease": 3,
+        "relevance": 5
+      },
+      "opportunity_score": 88,
+      "action": "Test now",
+      "hype_risk": "Low",
+      "rank": 4
+    },
+    {
+      "name": "pdf-inspector",
+      "editorial_rank": 6,
+      "source_date": "2026-08-03",
+      "category": "Document routing",
+      "why_it_matters": "Fast Rust library that detects whether a PDF needs OCR and extracts text when it does not.",
+      "workflow_opportunity": "Reduce document-pipeline latency and OCR cost by routing only scanned pages to expensive models.",
+      "caveat": "Focused component; still needs a downstream OCR and validation path.",
+      "official_url": "https://github.com/firecrawl/pdf-inspector",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Assurance layer",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 3,
+        "composability": 5,
+        "cost_accessibility": 5,
+        "ease": 5,
+        "relevance": 4
+      },
+      "opportunity_score": 87,
+      "action": "Test now",
+      "hype_risk": "Medium",
+      "rank": 5
+    },
+    {
+      "name": "DeepSeek Harness",
+      "editorial_rank": 1,
+      "source_date": "2026-08-21",
+      "category": "Agent infrastructure",
+      "why_it_matters": "A modular agent harness where models, tools, sandboxes, UI and control loops are plugins.",
+      "workflow_opportunity": "Prototype coding or operations agents without committing to one model vendor.",
+      "caveat": "Developer preview; expect breaking changes.",
+      "official_url": "https://github.com/deepseek-ai/deepseek-harness",
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 2,
+        "composability": 5,
+        "cost_accessibility": 5,
+        "ease": 3,
+        "relevance": 5
+      },
+      "opportunity_score": 85,
+      "action": "Test now",
+      "hype_risk": "Medium",
+      "rank": 6
+    },
+    {
+      "name": "LoopX",
+      "editorial_rank": 2,
+      "source_date": "2026-08-05",
+      "category": "Long-running agents",
+      "why_it_matters": "Adds durable goals, evidence, quotas, recovery and handoffs above existing agent runtimes.",
+      "workflow_opportunity": "Run multi-day research, engineering or monitoring workflows with explicit state and human gates.",
+      "caveat": "Usable but still evolving; not an autonomous production controller.",
+      "official_url": "https://github.com/loopx-project/loopx",
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": "Assurance layer",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 3,
+        "composability": 5,
+        "cost_accessibility": 4,
+        "ease": 3,
+        "relevance": 5
+      },
+      "opportunity_score": 85,
+      "action": "Test now",
+      "hype_risk": "Medium",
+      "rank": 7
+    },
+    {
+      "name": "WrenAI",
+      "editorial_rank": 9,
+      "source_date": "2026-07-21",
+      "category": "Business intelligence",
+      "why_it_matters": "Governed natural-language-to-SQL and dashboard generation across many data sources.",
+      "workflow_opportunity": "Let teams and agents answer operational questions while centralizing business definitions.",
+      "caveat": "Review its mixed licensing and governance model before production adoption.",
+      "official_url": "https://github.com/Canner/WrenAI",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 4,
+        "composability": 4,
+        "cost_accessibility": 4,
+        "ease": 3,
+        "relevance": 5
+      },
+      "opportunity_score": 84,
+      "action": "Pilot / watch",
+      "hype_risk": "Medium",
+      "rank": 8
+    },
+    {
+      "name": "Dograh",
+      "editorial_rank": 13,
+      "source_date": "2026-05-18",
+      "category": "Voice agents",
+      "why_it_matters": "Self-hostable voice-agent platform with telephony and a visual workflow builder.",
+      "workflow_opportunity": "Prototype call automation, triage and service workflows while controlling the model and data stack.",
+      "caveat": "Production features exist, but LLM-provider swapping is still described as beta.",
+      "official_url": "https://github.com/dograh-hq/dograh",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 4,
+        "composability": 4,
+        "cost_accessibility": 4,
+        "ease": 3,
+        "relevance": 4
+      },
+      "opportunity_score": 82,
+      "action": "Pilot / watch",
+      "hype_risk": "Medium",
+      "rank": 9
+    },
+    {
+      "name": "Hallmark",
+      "editorial_rank": 17,
+      "source_date": "2026-05-21",
+      "category": "AI interface design",
+      "why_it_matters": "A reusable design skill intended to prevent generic, repetitive AI-generated interfaces.",
+      "workflow_opportunity": "Encode a design system and structural rules directly into coding-agent workflows.",
+      "caveat": "Useful as guidance, not a substitute for user testing or visual review.",
+      "official_url": "https://github.com/Nutlope/hallmark",
+      "primary_layer": "Assurance layer",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 3,
+        "maturity": 3,
+        "composability": 5,
+        "cost_accessibility": 5,
+        "ease": 5,
+        "relevance": 4
+      },
+      "opportunity_score": 82,
+      "action": "Pilot / watch",
+      "hype_risk": "Medium",
+      "rank": 10
+    },
+    {
+      "name": "Scrapling",
+      "editorial_rank": 10,
+      "source_date": "2026-05-04",
+      "category": "Web data acquisition",
+      "why_it_matters": "Adaptive scraping toolkit that can relocate selectors when websites change.",
+      "workflow_opportunity": "Build resilient market research, monitoring and data-collection workflows for permitted sources.",
+      "caveat": "Anti-bot claims are context-dependent; respect site terms, law and robots policies.",
+      "official_url": "https://github.com/D4Vinci/Scrapling",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 4,
+        "composability": 4,
+        "cost_accessibility": 5,
+        "ease": 3,
+        "relevance": 4
+      },
+      "opportunity_score": 80,
+      "action": "Pilot / watch",
+      "hype_risk": "High",
+      "rank": 11
+    },
+    {
+      "name": "Unsloth Desktop",
+      "editorial_rank": 11,
+      "source_date": "2026-08-12",
+      "category": "Local model operations",
+      "why_it_matters": "Desktop interface for running and training models locally.",
+      "workflow_opportunity": "Evaluate, fine-tune and serve smaller models without standing up a full ML platform.",
+      "caveat": "New desktop layer on an established project; hardware and model support vary.",
+      "official_url": "https://github.com/unslothai/unsloth",
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 4,
+        "composability": 4,
+        "cost_accessibility": 5,
+        "ease": 3,
+        "relevance": 4
+      },
+      "opportunity_score": 80,
+      "action": "Pilot / watch",
+      "hype_risk": "Medium",
+      "rank": 12
+    },
+    {
+      "name": "OpenReel Video",
+      "editorial_rank": 15,
+      "source_date": "2026-05-07",
+      "category": "Local media production",
+      "why_it_matters": "Client-side browser video editor using WebGPU and WebCodecs.",
+      "workflow_opportunity": "Embed private video editing and automated media workflows without uploading source files.",
+      "caveat": "Open-source and functional, but browser support and export reliability need testing.",
+      "official_url": "https://github.com/afatabe/openreel",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 3,
+        "composability": 4,
+        "cost_accessibility": 5,
+        "ease": 4,
+        "relevance": 4
+      },
+      "opportunity_score": 80,
+      "action": "Pilot / watch",
+      "hype_risk": "Medium",
+      "rank": 13
+    },
+    {
+      "name": "WikiSkill",
+      "editorial_rank": 20,
+      "source_date": "2026-09-17",
+      "category": "Reusable agent knowledge",
+      "why_it_matters": "Compiles agent experience into a persistent wiki and reusable cross-model skills.",
+      "workflow_opportunity": "Turn successful runs into maintained organizational procedures rather than ephemeral chat history.",
+      "caveat": "Research framework; requires evaluation before operational deployment.",
+      "official_url": "https://arxiv.org/abs/2608.27454",
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 5,
+        "maturity": 2,
+        "composability": 4,
+        "cost_accessibility": 5,
+        "ease": 2,
+        "relevance": 5
+      },
+      "opportunity_score": 78,
+      "action": "Pilot / watch",
+      "hype_risk": "High",
+      "rank": 14
+    },
+    {
+      "name": "VoiceStudio",
+      "editorial_rank": 14,
+      "source_date": "2026-09-07",
+      "category": "Local voice production",
+      "why_it_matters": "Local voice cloning, dubbing, dictation and long-form audio across many engines.",
+      "workflow_opportunity": "Automate multilingual media and accessibility workflows without a per-minute hosted service.",
+      "caveat": "Active beta and AGPL; consent, impersonation and model-license controls are mandatory.",
+      "official_url": "https://github.com/debpalash/VoiceStudio",
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 3,
+        "composability": 4,
+        "cost_accessibility": 5,
+        "ease": 3,
+        "relevance": 4
+      },
+      "opportunity_score": 77,
+      "action": "Pilot / watch",
+      "hype_risk": "High",
+      "rank": 15
+    },
+    {
+      "name": "PromptWizard",
+      "editorial_rank": 18,
+      "source_date": "2026-07-23",
+      "category": "Prompt optimization",
+      "why_it_matters": "Automatically critiques and refines prompts and few-shot examples against a task dataset.",
+      "workflow_opportunity": "Replace manual prompt tweaking with an evaluation-driven optimization loop.",
+      "caveat": "Microsoft labels it research-oriented; production use needs independent safety and robustness checks.",
+      "official_url": "https://github.com/microsoft/PromptWizard",
+      "primary_layer": "Assurance layer",
+      "secondary_layer": "Models & capabilities",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 3,
+        "composability": 4,
+        "cost_accessibility": 5,
+        "ease": 3,
+        "relevance": 4
+      },
+      "opportunity_score": 77,
+      "action": "Pilot / watch",
+      "hype_risk": "Medium",
+      "rank": 16
+    },
+    {
+      "name": "depth-anything.cpp",
+      "editorial_rank": 16,
+      "source_date": "2026-07-20",
+      "category": "3D and spatial computing",
+      "why_it_matters": "Native local inference for depth, camera pose and point-cloud reconstruction from images or video.",
+      "workflow_opportunity": "Create spatial inspection, robotics, mapping or product-visualization pipelines from ordinary cameras.",
+      "caveat": "Engine is MIT; individual model-weight licenses differ and some restrict commercial use.",
+      "official_url": "https://github.com/localai-org/depth-anything.cpp",
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": "Tools, skills & integrations",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 4,
+        "composability": 4,
+        "cost_accessibility": 5,
+        "ease": 2,
+        "relevance": 3
+      },
+      "opportunity_score": 75,
+      "action": "Pilot / watch",
+      "hype_risk": "High",
+      "rank": 17
+    },
+    {
+      "name": "Microsoft GraphRAG",
+      "editorial_rank": 8,
+      "source_date": "2026-07-29",
+      "category": "Knowledge systems",
+      "why_it_matters": "Builds graph-structured representations from private text for global and relationship-aware queries.",
+      "workflow_opportunity": "Analyze interconnected policies, research, customers or operational records that ordinary vector search misses.",
+      "caveat": "Powerful but indexing can be costly; start with a bounded corpus.",
+      "official_url": "https://github.com/microsoft/graphrag",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": "Harness & orchestration",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 4,
+        "composability": 4,
+        "cost_accessibility": 3,
+        "ease": 2,
+        "relevance": 4
+      },
+      "opportunity_score": 71,
+      "action": "Selective",
+      "hype_risk": "Medium",
+      "rank": 18
+    },
+    {
+      "name": "OpenMed",
+      "editorial_rank": 12,
+      "source_date": "2026-07-06",
+      "category": "Privacy and healthcare",
+      "why_it_matters": "On-device clinical PII detection and de-identification.",
+      "workflow_opportunity": "Create private healthcare text pipelines without sending patient data to a hosted model.",
+      "caveat": "Promising domain toolkit; institution-specific validation remains essential.",
+      "official_url": "https://github.com/maziyarpanahi/openmed",
+      "primary_layer": "Assurance layer",
+      "secondary_layer": "Models & capabilities",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 3,
+        "composability": 3,
+        "cost_accessibility": 5,
+        "ease": 2,
+        "relevance": 3
+      },
+      "opportunity_score": 68,
+      "action": "Selective",
+      "hype_risk": "Medium",
+      "rank": 19
+    },
+    {
+      "name": "TypeSafe AI Jev",
+      "editorial_rank": 19,
+      "source_date": "2026-09-18",
+      "category": "Fast agent decisions",
+      "why_it_matters": "A small decision model designed for typed, low-latency choices such as context compaction.",
+      "workflow_opportunity": "Move routing, relevance filtering and tool-call retention away from expensive general models.",
+      "caveat": "Very new; production reliability and lock-in should be evaluated with your own traces.",
+      "official_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": "Models & capabilities",
+      "cross_layer": true,
+      "ratings": {
+        "leverage": 4,
+        "maturity": 2,
+        "composability": 3,
+        "cost_accessibility": 3,
+        "ease": 2,
+        "relevance": 4
+      },
+      "opportunity_score": 61,
+      "action": "Research only",
+      "hype_risk": "High",
+      "rank": 20
+    }
+  ],
+  "methodology": {
+    "corpus": "Summary-section extraction from all AlphaSignal newsletters, exact normalized deduplication, keyword theme tagging, and manual review of top candidates.",
+    "trend_score": {
+      "purpose": "Measures whether a capability represents a durable pattern in the AlphaSignal corpus.",
+      "components": {
+        "recurrence": "Log-scaled AlphaSignal mentions, 25 points.",
+        "acceleration": "August–September monthly rate compared with April–July, 25 points.",
+        "persistence": "Active months across the six-month observation window, 25 points.",
+        "breadth": "Log-scaled distinct lead entities in non-sponsored records, 25 points."
+      }
+    },
+    "opportunity_score": {
+      "purpose": "Measures whether a specific project is worth testing for workflow automation; it does not inherit the trend score.",
+      "weights": {
+        "leverage": 25,
+        "maturity": 15,
+        "composability": 20,
+        "cost_accessibility": 15,
+        "ease": 15,
+        "relevance": 10
+      },
+      "scale": "Each component is an analyst rating from 1 (weak) to 5 (strong). Hype risk remains separate."
+    },
+    "limitations": [
+      "Counts measure AlphaSignal editorial attention, not total market adoption.",
+      "Keyword themes overlap; a catalog record may contribute to more than one trend.",
+      "Sponsored records remain counted in corpus metadata but are excluded from trend interpretation and project ranking.",
+      "Newsletter claims were treated as leads rather than independently verified facts.",
+      "Project relevance is provisional because it reflects a broad workflow-automation goal rather than a detailed operating context."
+    ]
+  }
+}

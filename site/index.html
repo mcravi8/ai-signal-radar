@@ -3,93 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Evidence-linked radar for emerging AI categories, papers, projects, and narratives." />
-    <title>AI Signal Radar</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='22' cy='32' r='12' fill='%23df5b35'/%3E%3Ccircle cx='44' cy='32' r='12' fill='%23167d64'/%3E%3C/svg%3E" />
+    <meta name="description" content="Fact-dense analysis of AlphaSignal newsletters and corroborating public AI signals." />
+    <title>AI Signal Radar — Research Database</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 12h48v8H8zm0 16h48v8H8zm0 16h48v8H8z' fill='%2317354d'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="brand" href="#overview" aria-label="AI Signal Radar home">
-        <span class="brand-mark" aria-hidden="true"></span>
+    <a class="skip-link" href="#main">Skip to research</a>
+    <header class="topbar">
+      <a class="brand" href="#corpus" aria-label="AI Signal Radar research home">
+        <span class="brand-glyph" aria-hidden="true">AS</span>
         <span>AI Signal Radar</span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="#overview">This week</a>
-        <a href="#radar">Radar</a>
-        <a href="#evidence">Evidence</a>
+      <nav aria-label="Research sections">
+        <a href="#corpus">Corpus</a>
+        <a href="#trends">Trends</a>
+        <a href="#projects">Projects</a>
+        <a href="#live">Live evidence</a>
         <a href="#method">Method</a>
       </nav>
-      <span class="edition" id="edition">Initial watchlist</span>
+      <div class="dataset-state" id="dataset-state" aria-live="polite">Loading datasets</div>
     </header>
 
     <main id="main">
-      <section class="hero" id="overview" aria-labelledby="weekly-title">
-        <div class="eyebrow">Weekly intelligence brief</div>
-        <h1 id="weekly-title">Loading this week’s signals…</h1>
-        <p class="hero-summary" id="weekly-summary">Reading the latest validated public snapshot.</p>
-        <div class="status-row" id="status-row" aria-live="polite"></div>
-      </section>
-
-      <section class="section" id="radar" aria-labelledby="radar-title">
-        <div class="section-heading">
+      <section class="research-head" id="corpus" aria-labelledby="page-title">
+        <div class="document-kicker">Research dataset · version 1.0</div>
+        <div class="title-line">
           <div>
-            <div class="eyebrow">Category radar</div>
-            <h2 id="radar-title">Where the stack is moving</h2>
+            <h1 id="page-title">AlphaSignal corpus analysis</h1>
+            <p class="dek">A structured review of every AlphaSignal newsletter received from April through September 2026: recurring capabilities, market direction, stack layers, and projects worth testing.</p>
           </div>
-          <label class="filter">
-            <span>Filter categories</span>
-            <input id="theme-filter" type="search" placeholder="Try “inference” or “ontology”" autocomplete="off" />
-          </label>
+          <dl class="coverage" id="coverage">
+            <div><dt>Coverage</dt><dd>Loading</dd></div>
+            <div><dt>Source</dt><dd>AlphaSignal</dd></div>
+          </dl>
         </div>
-        <div class="theme-list" id="theme-list" aria-live="polite"></div>
+        <div class="metric-strip" id="corpus-metrics" aria-label="Corpus summary">
+          <div class="metric loading-block"></div><div class="metric loading-block"></div><div class="metric loading-block"></div>
+          <div class="metric loading-block"></div><div class="metric loading-block"></div><div class="metric loading-block"></div>
+        </div>
+        <div class="boundary-note" id="boundary-note">
+          <strong>Publication boundary</strong>
+          <span>Derivative research only. Private mailbox data is not published.</span>
+        </div>
       </section>
 
-      <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
-        <div class="section-heading">
+      <section class="research-section" aria-labelledby="findings-title">
+        <header class="section-header">
+          <div><span class="section-number">01</span><h2 id="findings-title">Executive findings</h2></div>
+          <p>The five highest-level conclusions from the reviewed corpus. Each statement is an analyst synthesis, not a direct newsletter claim.</p>
+        </header>
+        <ol class="finding-list" id="finding-list"><li class="table-message">Loading research findings…</li></ol>
+      </section>
+
+      <section class="research-section" aria-labelledby="layers-title">
+        <header class="section-header">
+          <div><span class="section-number">02</span><h2 id="layers-title">Stack distribution</h2></div>
+          <p>Primary classification of the 888 unique catalog records. Counts do not indicate technical quality.</p>
+        </header>
+        <div class="layer-table" id="layer-table"></div>
+      </section>
+
+      <section class="research-section" id="trends" aria-labelledby="trends-title">
+        <header class="section-header">
+          <div><span class="section-number">03</span><h2 id="trends-title">Trend evidence</h2></div>
+          <p>Trend score measures durability inside the AlphaSignal corpus. Open a row for the monthly series and four score components.</p>
+        </header>
+        <div class="table-tools" aria-label="Trend table controls">
+          <label><span>Search</span><input id="trend-search" type="search" placeholder="Trend, example, or finding" autocomplete="off" /></label>
+          <label><span>Stack layer</span><select id="trend-layer"><option value="">All layers</option></select></label>
+          <label><span>Order</span><select id="trend-sort"><option value="score">Trend score</option><option value="mentions">Mentions</option><option value="acceleration">Acceleration</option><option value="name">Name</option></select></label>
+          <output id="trend-count">—</output>
+        </div>
+        <div class="table-shell">
+          <table class="data-table trend-table">
+            <thead><tr><th scope="col">Rank</th><th scope="col">Trend / finding</th><th scope="col">Mentions</th><th scope="col">Direction</th><th scope="col">Primary layer</th><th scope="col">Score</th><th scope="col">Tier</th></tr></thead>
+            <tbody id="trend-body"><tr><td colspan="7" class="table-message">Loading AlphaSignal trend analysis…</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="research-section" id="projects" aria-labelledby="projects-title">
+        <header class="section-header">
+          <div><span class="section-number">04</span><h2 id="projects-title">Projects worth investigating</h2></div>
+          <p>Opportunity score measures practical testing value. It is independent from trend frequency; hype risk is reported separately.</p>
+        </header>
+        <div class="table-tools project-tools" aria-label="Project table controls">
+          <label><span>Search</span><input id="project-search" type="search" placeholder="Project, category, or workflow" autocomplete="off" /></label>
+          <label><span>Recommended action</span><select id="project-action"><option value="">All actions</option></select></label>
+          <label><span>Hype risk</span><select id="project-risk"><option value="">All levels</option><option>Low</option><option>Medium</option><option>High</option></select></label>
+          <output id="project-count">—</output>
+        </div>
+        <div class="table-shell">
+          <table class="data-table project-table">
+            <thead><tr><th scope="col">Rank</th><th scope="col">Project / assessment</th><th scope="col">Opportunity</th><th scope="col">Action</th><th scope="col">Hype risk</th><th scope="col">Primary layer</th><th scope="col">Source date</th></tr></thead>
+            <tbody id="project-body"><tr><td colspan="7" class="table-message">Loading ranked project analysis…</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="research-section" id="live" aria-labelledby="live-title">
+        <header class="section-header">
+          <div><span class="section-number">05</span><h2 id="live-title">Corroborating public evidence</h2></div>
+          <p>Independent papers, repositories, and technical discussions collected after the AlphaSignal analysis. These sources do not retroactively alter the reviewed AlphaSignal scores.</p>
+        </header>
+        <div class="live-summary" id="live-summary"></div>
+        <div class="split-data">
           <div>
-            <div class="eyebrow">Evidence explorer</div>
-            <h2 id="evidence-title">Claims you can trace</h2>
+            <h3>Category observations</h3>
+            <div class="table-shell compact-shell"><table class="data-table compact-table"><thead><tr><th>Category</th><th>Evidence</th><th>Sources</th><th>Score</th></tr></thead><tbody id="live-theme-body"><tr><td colspan="4" class="table-message">Loading public evidence…</td></tr></tbody></table></div>
           </div>
+          <div><h3>Recent records</h3><ol class="record-list" id="record-list"><li class="table-message">Loading records…</li></ol></div>
         </div>
-        <div id="evidence-list"></div>
       </section>
 
-      <section class="section method" id="method" aria-labelledby="method-title">
-        <div class="eyebrow">Method</div>
-        <h2 id="method-title">Observation before inference</h2>
-        <div class="method-grid">
-          <p>A category is promoted after evidence from three independent credible sources, or one strong thesis source plus three concrete projects.</p>
-          <p>Trend scores combine recurrence, acceleration, persistence, and source breadth. Unobserved components display <strong>N/O</strong>, never a fabricated zero.</p>
-          <p>Research, repositories, community discussion, company formation, and operator narratives remain separate evidence channels.</p>
+      <section class="research-section method-section" id="method" aria-labelledby="method-title">
+        <header class="section-header">
+          <div><span class="section-number">06</span><h2 id="method-title">Method and limitations</h2></div>
+          <p>The interface separates observed counts, analyst scores, and external corroboration so they cannot be mistaken for one another.</p>
+        </header>
+        <div class="method-layout">
+          <article><h3>Trend score · 0–100</h3><p id="trend-purpose"></p><dl class="definition-list" id="trend-method"></dl></article>
+          <article><h3>Opportunity score · 0–100</h3><p id="opportunity-purpose"></p><dl class="definition-list" id="opportunity-method"></dl></article>
+          <article><h3>Interpretation limits</h3><ul class="limitations" id="limitations"></ul></article>
         </div>
+      </section>
+
+      <section class="load-failure" id="load-failure" hidden aria-live="assertive">
+        <strong>Some research data could not be loaded.</strong><span id="failure-detail"></span><button id="retry-load" type="button">Retry</button>
       </section>
     </main>
 
-    <footer>
-      <p>Public evidence, transparent scoring, and links back to original sources.</p>
-    </footer>
-
-    <template id="theme-template">
-      <article class="theme-card">
-        <div class="theme-main">
-          <div class="theme-meta">
-            <span class="maturity"></span>
-            <span class="layer"></span>
-          </div>
-          <h3></h3>
-          <p class="definition"></p>
-          <p class="aliases"></p>
-        </div>
-        <div class="theme-score" aria-label="Trend score">
-          <strong></strong>
-          <span>Trend score</span>
-        </div>
-        <div class="theme-evidence"></div>
-      </article>
-    </template>
-
+    <footer><span>AI Signal Radar</span><span>Facts, scoring inputs, provenance, and explicit limits.</span><a href="https://github.com/mcravi8/ai-signal-radar">Source repository</a></footer>
     <script src="./app.js" defer></script>
   </body>
 </html>
