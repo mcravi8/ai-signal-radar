@@ -1,0 +1,68 @@
+stack_layers:
+  - id: compute-inference-serving
+    name: Compute, inference & serving infrastructure
+    definition: Chips, clusters, runtimes, serving systems, networking, memory, and power used to execute AI workloads.
+
+  - id: models-capabilities
+    name: Models & capabilities
+    definition: Foundation, specialized, multimodal, reasoning, and task-specific models and their core capabilities.
+
+  - id: harness-orchestration
+    name: Harness & orchestration
+    definition: Runtimes, memory, planning, coordination, context management, and control loops around models.
+
+  - id: tools-skills-integrations
+    name: Tools, skills & integrations
+    definition: Reusable tools, connectors, protocols, skills, and application integrations used by people or agents.
+
+  - id: assurance
+    name: Assurance
+    definition: Evaluation, security, governance, observability, provenance, permissions, and operational controls.
+
+cross_cutting_lenses:
+  - id: commercialization
+    name: Commercialization & GTM
+  - id: enterprise-adoption
+    name: Enterprise adoption
+  - id: open-source
+    name: Open source
+  - id: local-sovereign
+    name: Local & sovereign AI
+
+seed_themes:
+  - id: ai-native-gtm
+    name: AI-native GTM
+    aliases: [agentic GTM, AI revenue stack, autonomous BDR, AI RevOps]
+    primary_layer: tools-skills-integrations
+    lens: commercialization
+
+  - id: small-specialized-models
+    name: Small & specialized models
+    aliases: [SLM, small language model, compact model, distilled model, task-specific model]
+    primary_layer: models-capabilities
+
+  - id: operational-ontology
+    name: Operational ontology
+    aliases: [Palantir ontology, enterprise ontology, context graph, semantic operating layer, company brain]
+    primary_layer: harness-orchestration
+    secondary_layer: tools-skills-integrations
+
+  - id: frontier-inference-infrastructure
+    name: Frontier inference infrastructure
+    aliases: [frontier inference cluster, inference cloud, AI factory, token factory, inference cluster]
+    primary_layer: compute-inference-serving
+
+  - id: specialized-inference-silicon
+    name: Specialized inference silicon
+    aliases: [LPU, language processing unit, inference ASIC, wafer-scale engine, AI accelerator]
+    primary_layer: compute-inference-serving
+
+  - id: agent-harnesses
+    name: Agent harnesses
+    aliases: [agent scaffolding, orchestration layer, agent runtime, self-improving harness]
+    primary_layer: harness-orchestration
+
+  - id: assurance-infrastructure
+    name: Assurance infrastructure
+    aliases: [AI assurance, agent security, eval infrastructure, AI observability]
+    primary_layer: assurance

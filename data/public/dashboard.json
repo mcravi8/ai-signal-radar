@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "generated_at": null,
+    "status": "seed",
+    "source_count": 0,
+    "evidence_count": 0,
+    "warnings": [
+      "Collectors have not run yet. Theme definitions are the initial watchlist, not observed conclusions."
+    ]
+  },
+  "weekly": {
+    "title": "The radar is ready for its first collection",
+    "summary": "The initial taxonomy is visible below. Scores remain N/O until public evidence has been collected and classified.",
+    "signals": []
+  },
+  "themes": [
+    {
+      "id": "ai-native-gtm",
+      "name": "AI-native GTM",
+      "definition": "AI systems that perform or reshape sales, marketing, revenue operations, and customer acquisition work.",
+      "aliases": ["agentic GTM", "AI revenue stack", "autonomous BDR", "AI RevOps"],
+      "primary_layer": "tools-skills-integrations",
+      "lens": "commercialization",
+      "maturity": "watchlist",
+      "evidence_count": 0,
+      "source_types": [],
+      "score": null
+    },
+    {
+      "id": "small-specialized-models",
+      "name": "Small & specialized models",
+      "definition": "Compact or task-specific models optimized for cost, latency, privacy, or a bounded workload.",
+      "aliases": ["SLM", "small language model", "compact model", "distilled model"],
+      "primary_layer": "models-capabilities",
+      "maturity": "watchlist",
+      "evidence_count": 0,
+      "source_types": [],
+      "score": null
+    },
+    {
+      "id": "operational-ontology",
+      "name": "Operational ontology",
+      "definition": "A structured representation connecting enterprise entities, data, permissions, and actions for people and agents.",
+      "aliases": ["Palantir ontology", "enterprise ontology", "context graph", "company brain"],
+      "primary_layer": "harness-orchestration",
+      "secondary_layer": "tools-skills-integrations",
+      "maturity": "watchlist",
+      "evidence_count": 0,
+      "source_types": [],
+      "score": null
+    },
+    {
+      "id": "frontier-inference-infrastructure",
+      "name": "Frontier inference infrastructure",
+      "definition": "Large-scale compute, networking, serving, memory, and power systems optimized for frontier-model inference.",
+      "aliases": ["inference clusters", "AI factories", "token factories", "inference cloud"],
+      "primary_layer": "compute-inference-serving",
+      "maturity": "watchlist",
+      "evidence_count": 0,
+      "source_types": [],
+      "score": null
+    },
+    {
+      "id": "specialized-inference-silicon",
+      "name": "Specialized inference silicon",
+      "definition": "Purpose-built chips and architectures optimized for low-latency or high-throughput model inference.",
+      "aliases": ["LPU", "inference ASIC", "wafer-scale engine", "AI accelerator"],
+      "primary_layer": "compute-inference-serving",
+      "maturity": "watchlist",
+      "evidence_count": 0,
+      "source_types": [],
+      "score": null
+    },
+    {
+      "id": "agent-harnesses",
+      "name": "Agent harnesses",
+      "definition": "Control loops, context, memory, planning, and orchestration systems that turn models into reliable agents.",
+      "aliases": ["agent scaffolding", "agent runtime", "orchestration layer"],
+      "primary_layer": "harness-orchestration",
+      "maturity": "watchlist",
+      "evidence_count": 0,
+      "source_types": [],
+      "score": null
+    },
+    {
+      "id": "assurance-infrastructure",
+      "name": "Assurance infrastructure",
+      "definition": "Evaluation, security, observability, governance, provenance, and operational controls for AI systems.",
+      "aliases": ["AI assurance", "agent security", "eval infrastructure", "AI observability"],
+      "primary_layer": "assurance",
+      "maturity": "watchlist",
+      "evidence_count": 0,
+      "source_types": [],
+      "score": null
+    }
+  ],
+  "evidence": [],
+  "projects": [],
+  "sources": []
+}

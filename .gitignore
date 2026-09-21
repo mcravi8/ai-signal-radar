@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+node_modules/
+dist/
+
+# Mailbox exports and other sensitive local inputs never enter Git.
+data/private/**
+!data/private/.gitkeep
+
+# Temporary collector output.
+work/
+*.log

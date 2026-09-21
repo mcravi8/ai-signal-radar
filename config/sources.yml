@@ -1,0 +1,52 @@
+sources:
+  - id: arxiv
+    name: arXiv
+    channel: paper
+    enabled: true
+    collection: api
+    categories: [cs.AI, cs.LG, cs.CL, cs.DC, cs.AR, cs.SE, cs.CR, stat.ML]
+    source_quality: high
+    commercial_bias: low
+
+  - id: huggingface-papers
+    name: Hugging Face Daily Papers
+    channel: paper-curation
+    enabled: true
+    collection: official-cli
+    limit: 50
+    source_quality: medium
+    commercial_bias: low
+
+  - id: github
+    name: GitHub
+    channel: repository
+    enabled: true
+    collection: rest-api
+    source_quality: medium
+    commercial_bias: mixed
+
+  - id: hacker-news
+    name: Hacker News
+    channel: community
+    enabled: true
+    collection: official-api
+    feeds: [topstories, newstories, showstories, askstories, jobstories]
+    source_quality: mixed
+    commercial_bias: mixed
+
+  - id: alphasignal
+    name: AlphaSignal
+    channel: newsletter
+    enabled: false
+    local_only: true
+    collection: sanitized-local-export
+    source_quality: medium
+    commercial_bias: disclosed-and-mixed
+
+  - id: manual-public-evidence
+    name: Curated public evidence
+    channel: mixed
+    enabled: true
+    collection: reviewed-manual-import
+    source_quality: reviewed
+    commercial_bias: recorded-per-item

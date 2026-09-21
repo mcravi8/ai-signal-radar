@@ -1,0 +1,17 @@
+queries:
+  - id: new-ai
+    query: topic:artificial-intelligence created:>={since}
+  - id: new-ml
+    query: topic:machine-learning created:>={since}
+  - id: new-llm
+    query: topic:llm created:>={since}
+  - id: new-agents
+    query: topic:ai-agents created:>={since}
+  - id: inference
+    query: '"inference engine" in:name,description,readme pushed:>={since}'
+  - id: small-models
+    query: '"small language model" in:name,description,readme pushed:>={since}'
+  - id: agent-harness
+    query: '"agent harness" in:name,description,readme pushed:>={since}'
+  - id: ontology
+    query: 'LLM "knowledge graph" in:name,description,readme pushed:>={since}'

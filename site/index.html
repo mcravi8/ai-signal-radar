@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Evidence-linked radar for emerging AI categories, papers, projects, and narratives." />
+    <title>AI Signal Radar</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='22' cy='32' r='12' fill='%23df5b35'/%3E%3Ccircle cx='44' cy='32' r='12' fill='%23167d64'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#overview" aria-label="AI Signal Radar home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>AI Signal Radar</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#overview">This week</a>
+        <a href="#radar">Radar</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#method">Method</a>
+      </nav>
+      <span class="edition" id="edition">Initial watchlist</span>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="overview" aria-labelledby="weekly-title">
+        <div class="eyebrow">Weekly intelligence brief</div>
+        <h1 id="weekly-title">Loading this week’s signals…</h1>
+        <p class="hero-summary" id="weekly-summary">Reading the latest validated public snapshot.</p>
+        <div class="status-row" id="status-row" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="radar" aria-labelledby="radar-title">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Category radar</div>
+            <h2 id="radar-title">Where the stack is moving</h2>
+          </div>
+          <label class="filter">
+            <span>Filter categories</span>
+            <input id="theme-filter" type="search" placeholder="Try “inference” or “ontology”" autocomplete="off" />
+          </label>
+        </div>
+        <div class="theme-list" id="theme-list" aria-live="polite"></div>
+      </section>
+
+      <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Evidence explorer</div>
+            <h2 id="evidence-title">Claims you can trace</h2>
+          </div>
+        </div>
+        <div id="evidence-list"></div>
+      </section>
+
+      <section class="section method" id="method" aria-labelledby="method-title">
+        <div class="eyebrow">Method</div>
+        <h2 id="method-title">Observation before inference</h2>
+        <div class="method-grid">
+          <p>A category is promoted after evidence from three independent credible sources, or one strong thesis source plus three concrete projects.</p>
+          <p>Trend scores combine recurrence, acceleration, persistence, and source breadth. Unobserved components display <strong>N/O</strong>, never a fabricated zero.</p>
+          <p>Research, repositories, community discussion, company formation, and operator narratives remain separate evidence channels.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Public evidence, transparent scoring, and links back to original sources.</p>
+    </footer>
+
+    <template id="theme-template">
+      <article class="theme-card">
+        <div class="theme-main">
+          <div class="theme-meta">
+            <span class="maturity"></span>
+            <span class="layer"></span>
+          </div>
+          <h3></h3>
+          <p class="definition"></p>
+          <p class="aliases"></p>
+        </div>
+        <div class="theme-score" aria-label="Trend score">
+          <strong></strong>
+          <span>Trend score</span>
+        </div>
+        <div class="theme-evidence"></div>
+      </article>
+    </template>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

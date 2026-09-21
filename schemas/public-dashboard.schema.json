@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ai-signal-radar/public-dashboard.schema.json",
+  "title": "AI Signal Radar public dashboard",
+  "type": "object",
+  "required": ["meta", "weekly", "themes", "evidence", "projects", "sources"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["status", "source_count", "evidence_count", "warnings"],
+      "properties": {
+        "generated_at": { "type": ["string", "null"] },
+        "status": { "type": "string" },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "evidence_count": { "type": "integer", "minimum": 0 },
+        "warnings": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "weekly": {
+      "type": "object",
+      "required": ["title", "summary", "signals"],
+      "properties": {
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "signals": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "themes": { "type": "array", "items": { "$ref": "#/$defs/theme" } },
+    "evidence": { "type": "array", "items": { "type": "object" } },
+    "projects": { "type": "array", "items": { "type": "object" } },
+    "sources": { "type": "array", "items": { "type": "object" } }
+  },
+  "$defs": {
+    "theme": {
+      "type": "object",
+      "required": ["id", "name", "definition", "aliases", "primary_layer", "maturity", "evidence_count", "source_types", "score"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "definition": { "type": "string" },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "primary_layer": { "type": "string" },
+        "secondary_layer": { "type": "string" },
+        "lens": { "type": "string" },
+        "maturity": { "enum": ["candidate", "watchlist", "emerging", "validated", "crowded"] },
+        "evidence_count": { "type": "integer", "minimum": 0 },
+        "source_types": { "type": "array", "items": { "type": "string" } },
+        "score": { "type": ["object", "null"] }
+      }
+    }
+  }
+}
