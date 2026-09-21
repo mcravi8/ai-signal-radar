@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-21T16:37:00.296571+00:00",
+    "generated_at": "2026-09-21T17:36:02.846266+00:00",
     "status": "success",
     "normalized_evidence_count": 875,
     "public_record_count": 840,
@@ -33,7 +33,7 @@
         "radical-ventures"
       ],
       "evidence_count": 875,
-      "updated_at": "2026-09-21T16:37:00.296571+00:00"
+      "updated_at": "2026-09-21T17:36:02.846266+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -66,7 +66,7 @@
         "yc-essays"
       ],
       "evidence_count": 840,
-      "updated_at": "2026-09-21T16:37:00.296571+00:00"
+      "updated_at": "2026-09-21T17:36:02.846266+00:00"
     },
     {
       "id": "operator-narratives",
@@ -383,7 +383,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-21T16:37:00.296571+00:00"
+      "updated_at": "2026-09-21T17:36:02.846266+00:00"
     },
     {
       "id": "project-opportunities",
@@ -405,7 +405,7 @@
     "as_of": "2026-09-21",
     "window_start": "2026-09-14",
     "previous_window_start": "2026-09-07",
-    "new_public_records": 447,
+    "new_public_records": 445,
     "movements": [
       {
         "theme_id": "training-self-improvement",
@@ -33833,6 +33833,8 @@
       "channel": "community",
       "source_quality": "mixed",
       "commercial_bias": "mixed",
+      "homepage_url": "https://news.ycombinator.com/",
+      "logo_url": "https://news.ycombinator.com/y18.svg",
       "normalized_evidence_count": 246,
       "status": "active"
     },
@@ -33842,6 +33844,8 @@
       "channel": "repository",
       "source_quality": "medium",
       "commercial_bias": "mixed",
+      "homepage_url": "https://github.com/",
+      "logo_url": "https://github.githubassets.com/favicons/favicon.svg",
       "normalized_evidence_count": 235,
       "status": "active"
     },
@@ -33851,6 +33855,8 @@
       "channel": "paper",
       "source_quality": "high",
       "commercial_bias": "low",
+      "homepage_url": "https://arxiv.org/",
+      "logo_url": "https://arxiv.org/static/browse/0.3.4/images/icons/favicon-32x32.png",
       "normalized_evidence_count": 200,
       "status": "active"
     },
@@ -33860,6 +33866,8 @@
       "channel": "paper-curation",
       "source_quality": "medium",
       "commercial_bias": "low",
+      "homepage_url": "https://huggingface.co/papers",
+      "logo_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
       "normalized_evidence_count": 54,
       "status": "active"
     },
@@ -33869,6 +33877,8 @@
       "channel": "investor-essay",
       "source_quality": "high",
       "commercial_bias": "disclosed",
+      "homepage_url": "https://greylock.com/blog/",
+      "logo_url": "https://greylock.com/favicon.ico",
       "normalized_evidence_count": 40,
       "status": "active"
     },
@@ -33878,6 +33888,8 @@
       "channel": "newsletter",
       "source_quality": "medium",
       "commercial_bias": "disclosed-and-mixed",
+      "homepage_url": "https://alphasignal.ai/",
+      "logo_url": "https://alphasignal.ai/images/logo_alpha_signal_icon.svg",
       "normalized_evidence_count": 35,
       "status": "active"
     },
@@ -33887,6 +33899,8 @@
       "channel": "investor-essay",
       "source_quality": "high",
       "commercial_bias": "disclosed",
+      "homepage_url": "https://www.sequoiacap.com/articles",
+      "logo_url": "https://framerusercontent.com/images/ItZ3Og0z4GahXe5uWHqwk69EPRw.png",
       "normalized_evidence_count": 30,
       "status": "active"
     },
@@ -33896,6 +33910,8 @@
       "channel": "operator-essay",
       "source_quality": "high",
       "commercial_bias": "disclosed",
+      "homepage_url": "https://www.ycombinator.com/blog",
+      "logo_url": "https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico",
       "normalized_evidence_count": 15,
       "status": "active"
     },
@@ -33905,6 +33921,8 @@
       "channel": "investor-essay",
       "source_quality": "high",
       "commercial_bias": "disclosed",
+      "homepage_url": "https://menlovc.com/perspective/",
+      "logo_url": "https://menlovc.com/favicon.svg",
       "normalized_evidence_count": 10,
       "status": "active"
     },
@@ -33914,6 +33932,8 @@
       "channel": "investor-essay",
       "source_quality": "high",
       "commercial_bias": "disclosed",
+      "homepage_url": "https://radical.vc/articles/",
+      "logo_url": "https://radical.vc/wp-content/themes/radical-ventures-theme/assets/img/favicon.png",
       "normalized_evidence_count": 10,
       "status": "active"
     },

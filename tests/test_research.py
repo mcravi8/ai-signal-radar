@@ -80,6 +80,12 @@ class CrossSourceResearchTests(unittest.TestCase):
     def test_public_boundary(self):
         validate_public_payload(self.payload)
 
+    def test_active_sources_publish_official_brand_metadata(self):
+        branded = [source for source in self.payload["sources"] if source["status"] == "active"]
+        self.assertTrue(branded)
+        self.assertTrue(all(source.get("homepage_url", "").startswith("https://") for source in branded))
+        self.assertTrue(all(source.get("logo_url", "").startswith("https://") for source in branded))
+
 
 if __name__ == "__main__":
     unittest.main()

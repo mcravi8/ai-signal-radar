@@ -121,7 +121,7 @@ def synthesize() -> None:
         "evidence": public_items[-250:],
         "projects": [],
         "sources": [
-            {key: source[key] for key in ("id", "name", "channel", "source_quality", "commercial_bias") if key in source}
+            {key: source[key] for key in ("id", "name", "channel", "source_quality", "commercial_bias", "homepage_url", "logo_url") if key in source}
             for source in _yaml(ROOT / "config/sources.yml")["sources"]
         ],
     }

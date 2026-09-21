@@ -2,6 +2,8 @@ sources:
   - id: arxiv
     name: arXiv
     channel: paper
+    homepage_url: https://arxiv.org/
+    logo_url: https://arxiv.org/static/browse/0.3.4/images/icons/favicon-32x32.png
     enabled: true
     collection: api
     categories: [cs.AI, cs.LG, cs.CL, cs.DC, cs.AR, cs.SE, cs.CR, stat.ML]
@@ -11,6 +13,8 @@ sources:
   - id: huggingface-papers
     name: Hugging Face Daily Papers
     channel: paper-curation
+    homepage_url: https://huggingface.co/papers
+    logo_url: https://huggingface.co/front/assets/huggingface_logo-noborder.svg
     enabled: true
     collection: official-cli
     limit: 50
@@ -20,6 +24,8 @@ sources:
   - id: github
     name: GitHub
     channel: repository
+    homepage_url: https://github.com/
+    logo_url: https://github.githubassets.com/favicons/favicon.svg
     enabled: true
     collection: rest-api
     source_quality: medium
@@ -28,6 +34,8 @@ sources:
   - id: hacker-news
     name: Hacker News
     channel: community
+    homepage_url: https://news.ycombinator.com/
+    logo_url: https://news.ycombinator.com/y18.svg
     enabled: true
     collection: official-api
     feeds: [topstories, newstories, showstories, askstories, jobstories]
@@ -37,6 +45,8 @@ sources:
   - id: yc-essays
     name: Y Combinator essays
     channel: operator-essay
+    homepage_url: https://www.ycombinator.com/blog
+    logo_url: https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico
     enabled: true
     collection: rss
     feed_url: https://www.ycombinator.com/blog/feed
@@ -47,6 +57,8 @@ sources:
   - id: sequoia-essays
     name: Sequoia essays
     channel: investor-essay
+    homepage_url: https://www.sequoiacap.com/articles
+    logo_url: https://framerusercontent.com/images/ItZ3Og0z4GahXe5uWHqwk69EPRw.png
     enabled: true
     collection: rss
     feed_url: https://www.sequoiacap.com/feed/
@@ -57,6 +69,8 @@ sources:
   - id: menlo-ventures
     name: Menlo Ventures perspectives
     channel: investor-essay
+    homepage_url: https://menlovc.com/perspective/
+    logo_url: https://menlovc.com/favicon.svg
     enabled: true
     collection: rss
     feed_url: https://menlovc.com/feed/
@@ -67,6 +81,8 @@ sources:
   - id: greylock-essays
     name: Greylock essays
     channel: investor-essay
+    homepage_url: https://greylock.com/blog/
+    logo_url: https://greylock.com/favicon.ico
     enabled: true
     collection: rss
     feed_url: https://greylock.com/feed/
@@ -77,6 +93,8 @@ sources:
   - id: radical-ventures
     name: Radical Ventures insights
     channel: investor-essay
+    homepage_url: https://radical.vc/articles/
+    logo_url: https://radical.vc/wp-content/themes/radical-ventures-theme/assets/img/favicon.png
     enabled: true
     collection: rss
     feed_url: https://radical.vc/feed/
@@ -87,6 +105,8 @@ sources:
   - id: alphasignal
     name: AlphaSignal
     channel: newsletter
+    homepage_url: https://alphasignal.ai/
+    logo_url: https://alphasignal.ai/images/logo_alpha_signal_icon.svg
     enabled: false
     local_only: true
     collection: sanitized-local-export

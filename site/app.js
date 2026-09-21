@@ -69,33 +69,35 @@ function sourceName(sourceId) {
 }
 
 function sourceIcon(source) {
-  const channel = source?.channel || "mixed";
-  const family = channel.includes("paper") ? "paper"
-    : channel === "repository" ? "code"
-      : channel === "community" ? "discussion"
-        : channel === "newsletter" ? "mail"
-          : channel.includes("essay") ? "essay"
-            : "collection";
-  const drawings = {
-    paper: '<path d="M7 3.5h7l3 3V20H7z"/><path d="M14 3.5V7h3M9.5 11h5M9.5 14h5M9.5 17h3.5"/>',
-    code: '<path d="M9 7 4.5 12 9 17M15 7l4.5 5-4.5 5M13 5l-2 14"/>',
-    discussion: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>',
-    mail: '<rect x="3.5" y="5" width="17" height="14" rx="1"/><path d="m4 7 8 6 8-6"/>',
-    essay: '<path d="M6 4h12v16H6zM9 8h6M9 11h6M9 14h4"/><path d="m15.5 17.5 3-3"/>',
-    collection: '<rect x="5" y="5" width="12" height="12"/><path d="M8 2h12v12M2 8v12h12"/>',
-  };
-  const icon = node("span", `source-icon source-icon-${family}`);
-  icon.title = `${label(channel)} source`;
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("viewBox", "0 0 24 24");
-  svg.setAttribute("aria-hidden", "true");
-  svg.innerHTML = drawings[family];
-  icon.append(svg);
+  const icon = node("span", `source-icon source-icon-${source.id}`);
+  icon.title = source?.name || "Source";
+  icon.setAttribute("aria-hidden", "true");
+  const fallback = node("span", "source-monogram", (source?.name || "Source").split(/\s+/).slice(0, 2).map((word) => word[0]).join("").toUpperCase());
+  if (!source?.logo_url) {
+    icon.append(fallback);
+    return icon;
+  }
+  fallback.hidden = true;
+  const image = node("img", "source-logo");
+  image.src = source.logo_url;
+  image.alt = "";
+  image.decoding = "async";
+  image.referrerPolicy = "no-referrer";
+  image.addEventListener("error", () => {
+    image.hidden = true;
+    fallback.hidden = false;
+  }, { once: true });
+  icon.append(image, fallback);
   return icon;
 }
 
 function sourceIdentity(source) {
-  const identity = node("span", "source-identity");
+  const identity = node(source?.homepage_url ? "a" : "span", "source-identity");
+  if (source?.homepage_url) {
+    identity.href = source.homepage_url;
+    identity.target = "_blank";
+    identity.rel = "noreferrer";
+  }
   identity.append(sourceIcon(source), node("strong", "", source?.name || "Unknown source"));
   return identity;
 }
