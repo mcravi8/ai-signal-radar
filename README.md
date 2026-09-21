@@ -1,6 +1,6 @@
 # AI Signal Radar
 
-AI Signal Radar is one cross-source research system for first-party AI labs, newsletters, papers, repositories, public essays, and technical discussion.
+AI Signal Radar is one cross-source research system for first-party AI labs, newsletters, papers, repositories, public essays, expert social observations, and technical discussion.
 
 Every source enters the same evidence contract. The public site is organized around analyses, theme dossiers, project opportunities, and inspectable evidence—not around a privileged newsletter or a blog feed.
 
@@ -58,7 +58,7 @@ Open `http://localhost:8000`.
 ## Automation
 
 - `collect-daily.yml` collects free public metadata from first-party AI labs, expert newsletters, practitioner blogs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds.
-- `synthesize-weekly.yml` retrieves new AgentMail newsletters, immediately reduces them to sanitized evidence, normalizes every source, recalculates cross-source scores, and produces a weekly brief.
+- `synthesize-weekly.yml` retrieves relevant posts from a curated Bluesky expert list and new AgentMail newsletters, reduces them to sanitized evidence, normalizes every source, recalculates cross-source scores, and produces a weekly brief.
 - `deploy-dashboard.yml` validates the public boundary and deploys the static site to GitHub Pages.
 
 Gmail ingestion remains local. Future subscribed newsletters arrive in the dedicated AgentMail inbox and are ingested weekly with a read-only API key. Raw bodies exist only in AgentMail and runner memory; only allowlisted derivative records enter Git. `pipeline.collectors.email_import` still accepts previously sanitized local exports.
@@ -67,7 +67,7 @@ The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only 
 
 ## Cross-source contract
 
-`data/public/research.json` is the frontend's primary dataset. First-party lab publications, papers, repositories, community discussions, essays, AlphaSignal trend aggregates, and AlphaSignal project assessments all expose the same core fields:
+`data/public/research.json` is the frontend's primary dataset. First-party lab publications, papers, repositories, community discussions, expert social observations, essays, AlphaSignal trend aggregates, and AlphaSignal project assessments all expose the same core fields:
 
 - source and source type;
 - evidence kind and publication date;
@@ -94,4 +94,4 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 ## Current status
 
-The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert interpretation is labeled separately from curated roundups and first-party claims. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.
+The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.

@@ -113,6 +113,19 @@ class CrossSourceResearchTests(unittest.TestCase):
         roundups = [source for source in sources if source["evidence_role"] == "curated-roundup"]
         self.assertEqual({source["id"] for source in roundups}, {"the-batch", "last-week-in-ai"})
 
+    def test_bluesky_experts_feed_a_separate_analysis(self):
+        analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}
+        pulse = analyses["expert-pulse"]
+        self.assertIn(pulse["status"], {"configured", "active"})
+        self.assertIn("engagement", pulse["interpretation_note"].casefold())
+        bluesky_sources = [
+            source for source in self.payload["sources"]
+            if source.get("channel") == "expert-social"
+        ]
+        self.assertEqual(len(bluesky_sources), 8)
+        self.assertTrue(all(source["evidence_role"] == "expert-observation" for source in bluesky_sources))
+        self.assertTrue(all("bsky.social/about/brand-assets/" in source["logo_url"] for source in bluesky_sources))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,127 @@
+api_root: https://public.api.bsky.app
+per_account_limit: 50
+
+include_terms:
+  - artificial intelligence
+  - ai
+  - llm
+  - language model
+  - model
+  - agent
+  - inference
+  - training
+  - fine-tuning
+  - reinforcement learning
+  - eval
+  - benchmark
+  - transformer
+  - reasoning
+  - neural
+  - machine learning
+  - open source
+  - open weights
+  - multimodal
+  - alignment
+  - prompt
+  - coding
+  - robotics
+  - mcp
+  - rag
+  - openai
+  - anthropic
+  - claude
+  - gemini
+  - llama
+  - mistral
+  - qwen
+  - hugging face
+
+artifact_domains:
+  - arxiv.org
+  - github.com
+  - huggingface.co
+  - paperswithcode.com
+
+accounts:
+  - source_id: simon-willison
+    publisher_id: simon-willison
+    display_name: Simon Willison
+    handle: simonwillison.net
+    did: did:plc:kft6lu4trxowqmter2b6vg6z
+    focus: Practical LLM engineering, open-source tooling, and prompt-injection research.
+    identity_confidence: verified
+
+  - source_id: bluesky-karpathy
+    publisher_id: andrej-karpathy
+    display_name: Andrej Karpathy
+    handle: karpathy.bsky.social
+    did: did:plc:j7gi6r4kh6uof7rfrqpm3fej
+    focus: LLM architectures, neural networks, and minimalist agent systems.
+    identity_confidence: profile-match
+
+  - source_id: latent-space
+    publisher_id: latent-space
+    display_name: Shawn "swyx" Wang
+    handle: swyx.io
+    did: did:plc:xxuso5disl5vq5xfzlr7mf52
+    focus: AI engineering, developer tooling, and market narratives.
+    identity_confidence: domain-handle
+
+  - source_id: bluesky-nathan-lambert
+    publisher_id: nathan-lambert
+    display_name: Nathan Lambert
+    handle: natolambert.bsky.social
+    did: did:plc:brkj2yocng7vtggmyujy4khq
+    focus: Open-model training, reinforcement learning, and model releases.
+    identity_confidence: profile-match
+
+  - source_id: bluesky-mark-riedl
+    publisher_id: mark-riedl
+    display_name: Mark Riedl
+    handle: markriedl.bsky.social
+    did: did:plc:3igkkqe5nkm66olc4y2syzpy
+    focus: Explainability, safety, narrative intelligence, and deployment.
+    identity_confidence: profile-match
+
+  - source_id: bluesky-ethan-mollick
+    publisher_id: ethan-mollick
+    display_name: Ethan Mollick
+    handle: emollick.bsky.social
+    did: did:plc:flxq4uyjfotciovpw3x3fxnu
+    focus: Evidence on how generative AI changes work, education, and capability.
+    identity_confidence: verified
+
+  - source_id: bluesky-arvind-narayanan
+    publisher_id: arvind-narayanan
+    display_name: Arvind Narayanan
+    handle: randomwalker.bsky.social
+    did: did:plc:h3imi5zmcoqinwouamcnuh7m
+    focus: Rigorous capability evaluation and scrutiny of industry claims.
+    identity_confidence: profile-match
+
+  - source_id: bluesky-melanie-mitchell
+    publisher_id: melanie-mitchell
+    display_name: Melanie Mitchell
+    handle: melaniemitchell.bsky.social
+    did: did:plc:p72jkscm4rt4xuep3lzv6doh
+    focus: Cognitive science, reasoning, and the limits of AI systems.
+    identity_confidence: verified
+
+  - source_id: bluesky-margaret-mitchell
+    publisher_id: margaret-mitchell
+    display_name: Margaret Mitchell
+    handle: margaretmitchell.bsky.social
+    did: did:plc:zy4pox66w4ecb7guf2fjkjix
+    focus: Responsible AI engineering, evaluation, datasets, and system impacts.
+    identity_confidence: profile-match
+
+  - source_id: bluesky-emily-bender
+    publisher_id: emily-bender
+    display_name: Emily M. Bender
+    handle: emilymbender.bsky.social
+    did: did:plc:aeug3w4mdhnc2wv73hmrh36v
+    focus: Computational linguistics and critical analysis of language-model claims.
+    identity_confidence: verified
+
+# François Chollet is intentionally omitted: the proposed fchollet.bsky.social
+# handle did not resolve on 2026-09-21. Add only after a valid identity is confirmed.

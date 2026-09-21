@@ -115,6 +115,24 @@ def collect_newsletters() -> None:
     )
 
 
+def collect_bluesky() -> None:
+    from .collectors import bluesky
+
+    result = bluesky.collect(_yaml(ROOT / "config/bluesky.yml"))
+    sanitized = [sanitize_item(item.to_dict()) for item in result.items]
+    validate_public_payload({"items": sanitized})
+    added = merge_items(ROOT / "data/processed/items.jsonl", result.items)
+    if sanitized:
+        snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "bluesky-items.jsonl"
+        write_jsonl(snapshot, sanitized)
+    for error in result.errors:
+        print(f"bluesky: partial failure: {error}")
+    print(
+        f"bluesky: collected {result.accounts_collected} accounts, "
+        f"extracted {len(result.items)} relevant public posts, added {added}"
+    )
+
+
 def synthesize() -> None:
     rows = deduplicate(read_jsonl(ROOT / "data/processed/items.jsonl"))
     keywords = _yaml(ROOT / "config/keywords.yml").get("themes", {})
@@ -194,10 +212,15 @@ def validate_public() -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(prog="ai-signal-radar")
-    parser.add_argument("command", choices=["collect", "collect-newsletters", "synthesize", "validate-public"])
+    parser.add_argument(
+        "command",
+        choices=["collect", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public"],
+    )
     args = parser.parse_args()
     if args.command == "collect":
         collect()
+    elif args.command == "collect-bluesky":
+        collect_bluesky()
     elif args.command == "collect-newsletters":
         collect_newsletters()
     elif args.command == "synthesize":

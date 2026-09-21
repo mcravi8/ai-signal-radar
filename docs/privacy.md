@@ -29,3 +29,4 @@ Public records may contain:
 4. Tests exercise known leakage cases.
 5. Deployment stops if validation fails; the last valid Pages deployment remains available.
 6. AgentMail processing happens in runner memory. The workflow persists only sanitized source items and a timestamp cursor, and the API key is stored as an encrypted GitHub Actions secret.
+7. Bluesky collection uses only public feeds and publishes a bounded post excerpt, author name, date, canonical post link, and classification. It stores no account credentials, follower graph, or engagement counters.

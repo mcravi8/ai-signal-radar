@@ -27,6 +27,7 @@ jobs:
           python-version: "3.13"
           cache: pip
       - run: python -m pip install -e .
+      - run: python -m pipeline.cli collect-bluesky
       - run: python -m pipeline.cli collect-newsletters
       - run: python -m pipeline.cli synthesize
       - run: python -m pipeline.cli validate-public

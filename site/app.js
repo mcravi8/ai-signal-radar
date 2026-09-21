@@ -322,6 +322,35 @@ function renderAnalysisDetail() {
     }
     section.append(rows);
     detail.append(section);
+  } else if (analysis.id === "expert-pulse") {
+    if (analysis.interpretation_note) detail.append(node("p", "interpretation-note", analysis.interpretation_note));
+    const themes = node("section", "detail-section");
+    themes.append(node("h3", "", "Leading expert observations"));
+    const themeRows = node("div", "compact-rows");
+    for (const summary of analysis.theme_summary || []) {
+      const theme = state.research.themes.find((item) => item.id === summary.theme_id);
+      if (!theme) continue;
+      const row = node("div", "compact-row");
+      row.append(themeButton(theme, true), node("span", "tabular", `${summary.evidence_count} posts`), node("span", "tabular", `${summary.source_count} experts`));
+      themeRows.append(row);
+    }
+    if (!themeRows.children.length) themeRows.append(node("p", "empty-state", "No classified expert observations are available yet."));
+    themes.append(themeRows);
+
+    const recent = node("section", "detail-section");
+    recent.append(node("h3", "", "Recent relevant posts"));
+    const evidenceRows = node("div", "evidence-list");
+    const evidenceIds = new Set(analysis.evidence_ids || []);
+    const posts = state.research.evidence.filter((item) => evidenceIds.has(item.id)).slice(0, 30);
+    for (const post of posts) {
+      const row = node("article", "evidence-list-item");
+      const author = (post.authors || []).join(", ") || sourceName(post.source_id);
+      row.append(linkOrText(post), node("span", "", `${author} · ${formatDate(post.published_at)} · ${post.theme_ids.length} matched themes`));
+      evidenceRows.append(row);
+    }
+    if (!evidenceRows.children.length) evidenceRows.append(node("p", "empty-state", "The weekly collector has not added any matching posts yet."));
+    recent.append(evidenceRows);
+    detail.append(themes, recent);
   } else if (analysis.id === "operator-narratives") {
     const synthesis = node("section", "detail-section narrative-synthesis");
     synthesis.append(node("h3", "", "Executive synthesis"), node("p", "synthesis-lead", analysis.executive_summary || "No synthesis has been published yet."));

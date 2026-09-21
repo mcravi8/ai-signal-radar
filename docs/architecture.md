@@ -3,7 +3,7 @@
 ## Data flow
 
 ```text
-official public collectors + weekly sanitized newsletter ingestion
+official public collectors + weekly expert/social + newsletter ingestion
                          ↓
            common normalized evidence contract
                          ↓
@@ -51,3 +51,5 @@ Promotion is never based on engagement alone.
 ## Compute boundary
 
 GitHub-hosted runners collect public metadata, first-party AI lab publications, and official essay feeds, then retrieve subscribed newsletters from a dedicated AgentMail inbox once per week. Newsletter bodies are reduced to allowlisted derivative records in memory and are never committed or uploaded as artifacts. Gmail access and optional local-model enrichment stay on the owner's machine.
+
+The weekly runner also reads public author feeds from Bluesky's unauthenticated AppView API. Accounts are pinned by DID so a changed or reused handle cannot silently redirect collection. Replies, repost-only activity, off-topic posts, and engagement counters are excluded. Simon Willison and swyx reuse their existing publisher IDs so cross-posting across social, blog, and newsletter channels cannot inflate source breadth.

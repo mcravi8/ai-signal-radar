@@ -403,6 +403,29 @@ def build_research(
         sources.append(source)
     sources.sort(key=lambda source: (-source["normalized_evidence_count"], source["name"]))
     active_source_ids = [source["id"] for source in sources if source["status"] == "active"]
+    expert_social_items = [item for item in public_evidence if item["source_type"] == "expert-social"]
+    classified_expert_items = [item for item in expert_social_items if item.get("theme_ids")]
+    expert_source_ids = sorted({item["source_id"] for item in expert_social_items})
+    expert_theme_items: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for item in classified_expert_items:
+        for theme_id in item["theme_ids"]:
+            expert_theme_items[theme_id].append(item)
+    expert_theme_summary = sorted(
+        (
+            {
+                "theme_id": theme_id,
+                "evidence_count": len(items),
+                "source_ids": sorted({item["source_id"] for item in items}),
+                "source_count": len({item["source_id"] for item in items}),
+                "evidence_ids": [
+                    item["id"]
+                    for item in sorted(items, key=lambda row: (row.get("published_at", ""), row["id"]), reverse=True)
+                ],
+            }
+            for theme_id, items in expert_theme_items.items()
+        ),
+        key=lambda row: (-row["source_count"], -row["evidence_count"], row["theme_id"]),
+    )
     narrative_source_ids = sorted(
         source["id"]
         for source in sources
@@ -595,6 +618,23 @@ def build_research(
             "updated_at": generated_at,
         },
         {
+            "id": "expert-pulse",
+            "title": "Expert pulse",
+            "question": "Which technical ideas, tools, and capability claims are appearing across curated AI experts on Bluesky?",
+            "summary": (
+                f"{len(classified_expert_items)} relevant public posts from {len(expert_source_ids)} curated experts, "
+                "classified with the same taxonomy as the rest of the radar."
+            ),
+            "status": "active" if expert_social_items else "configured",
+            "source_ids": expert_source_ids,
+            "evidence_count": len(classified_expert_items),
+            "corpus_count": len(expert_social_items),
+            "evidence_ids": [item["id"] for item in classified_expert_items],
+            "theme_summary": expert_theme_summary,
+            "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
+            "updated_at": generated_at,
+        },
+        {
             "id": "operator-narratives",
             "title": "Operator and investor narratives",
             "question": "Which categories are being named or framed by startup operators and investors before broad technical corroboration?",
@@ -659,6 +699,7 @@ def build_research(
                 "Source concentration is shown because a high score can still be dominated by one source.",
                 "First-party lab publications establish what an organization announced or claimed; they do not independently validate performance or adoption.",
                 "Expert newsletters and practitioner blogs contribute interpretation. Curated roundups can repeat announcements already present elsewhere: they add attention breadth, but do not independently validate technical claims.",
+                "Curated Bluesky posts are treated as expert observations. Engagement is ignored, and the same publisher is counted once across its social, blog, and newsletter channels.",
                 "Hugging Face may curate papers also present on arXiv; the source breakdown makes this visible.",
                 "Keyword classification is deterministic and inspectable but can miss unusual language or create false positives.",
                 "Seven-day movement excludes month-level AlphaSignal aggregates because their dates are not equally precise.",

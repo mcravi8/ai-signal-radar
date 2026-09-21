@@ -303,6 +303,102 @@ sources:
     source_quality: high
     commercial_bias: authorial
 
+  - id: bluesky-karpathy
+    name: Andrej Karpathy on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/karpathy.bsky.social
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: andrej-karpathy
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: bluesky-nathan-lambert
+    name: Nathan Lambert on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/natolambert.bsky.social
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: nathan-lambert
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: bluesky-mark-riedl
+    name: Mark Riedl on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/markriedl.bsky.social
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: mark-riedl
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: bluesky-ethan-mollick
+    name: Ethan Mollick on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/emollick.bsky.social
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: ethan-mollick
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: bluesky-arvind-narayanan
+    name: Arvind Narayanan on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/randomwalker.bsky.social
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: arvind-narayanan
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: bluesky-melanie-mitchell
+    name: Melanie Mitchell on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/melaniemitchell.bsky.social
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: melanie-mitchell
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: bluesky-margaret-mitchell
+    name: Margaret Mitchell on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/margaretmitchell.bsky.social
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: margaret-mitchell
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: bluesky-emily-bender
+    name: Emily M. Bender on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/emilymbender.bsky.social
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: emily-bender
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
   - id: yc-essays
     name: Y Combinator essays
     channel: operator-essay
