@@ -1,6 +1,13 @@
 name: Synthesize weekly radar
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/synthesize-weekly.yml
+      - config/bluesky.yml
+      - pipeline/collectors/bluesky.py
+      - pipeline/cli.py
   schedule:
     - cron: "23 7 * * 0"
   workflow_dispatch:
