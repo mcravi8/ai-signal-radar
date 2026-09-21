@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-21T19:57:57.752952+00:00",
+    "generated_at": "2026-09-21T20:14:42.440710+00:00",
     "status": "success",
-    "source_count": 33,
-    "evidence_count": 1540,
+    "source_count": 35,
+    "evidence_count": 1558,
     "warnings": []
   },
   "weekly": {
@@ -597,22 +597,6 @@
     }
   ],
   "evidence": [
-    {
-      "id": "hn:49780797",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "AX – Google’s Open Agentic Orchestrator",
-      "url": "https://agentexecutor.io",
-      "published_at": "2026-09-20T22:32:43+00:00",
-      "summary": "",
-      "authors": [
-        "blazarquasar"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
     {
       "id": "hn:49780820",
       "source_id": "hacker-news",
@@ -3709,6 +3693,25 @@
       "theme_ids": []
     },
     {
+      "id": "bluesky:4ac5e6fe880a:3mw2ahshc5k2o",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "title": "A bit from me in @wired.com today wrt our research on AI agents with @evijit.io and Samir Passi. This is a really detailed article, thanks for writing it @thiccreese.bsky.social! www.wired.com/stor...",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mw2ahshc5k2o",
+      "published_at": "2026-09-21T17:30:34.278Z",
+      "summary": "AI agents make you dumb! 🚨 www.wired.com/story/metas-...",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
       "id": "hn:49790501",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -4945,7 +4948,7 @@
       "commercial_bias": "authorial",
       "publisher_id": "margaret-mitchell",
       "evidence_role": "expert-observation",
-      "homepage_url": "https://bsky.app/profile/margaretmitchell.bsky.social",
+      "homepage_url": "https://bsky.app/profile/mmitchell.bsky.social",
       "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg"
     },
     {

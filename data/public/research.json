@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-21T19:57:57.752952+00:00",
+    "generated_at": "2026-09-21T20:14:42.440710+00:00",
     "status": "success",
-    "normalized_evidence_count": 1575,
-    "public_record_count": 1540,
-    "active_source_count": 34,
+    "normalized_evidence_count": 1593,
+    "public_record_count": 1558,
+    "active_source_count": 36,
     "theme_count": 20,
     "observed_theme_count": 19,
     "project_count": 253,
@@ -24,8 +24,8 @@
         "hacker-news",
         "github",
         "arxiv",
-        "huggingface-papers",
         "simon-willison",
+        "huggingface-papers",
         "bluesky-nathan-lambert",
         "greylock-essays",
         "bluesky-ethan-mollick",
@@ -49,15 +49,17 @@
         "last-week-in-ai",
         "bluesky-mark-riedl",
         "yc-essays",
+        "bluesky-margaret-mitchell",
         "radical-ventures",
         "chip-huyen",
         "menlo-ventures",
         "microsoft-research-blog",
         "bluesky-emily-bender",
-        "bluesky-arvind-narayanan"
+        "bluesky-arvind-narayanan",
+        "bluesky-karpathy"
       ],
-      "evidence_count": 1575,
-      "updated_at": "2026-09-21T19:57:57.752952+00:00"
+      "evidence_count": 1593,
+      "updated_at": "2026-09-21T20:14:42.440710+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -85,6 +87,8 @@
         "bluesky-arvind-narayanan",
         "bluesky-emily-bender",
         "bluesky-ethan-mollick",
+        "bluesky-karpathy",
+        "bluesky-margaret-mitchell",
         "bluesky-mark-riedl",
         "bluesky-melanie-mitchell",
         "bluesky-nathan-lambert",
@@ -113,19 +117,21 @@
         "the-batch",
         "yc-essays"
       ],
-      "evidence_count": 1540,
-      "updated_at": "2026-09-21T19:57:57.752952+00:00"
+      "evidence_count": 1558,
+      "updated_at": "2026-09-21T20:14:42.440710+00:00"
     },
     {
       "id": "expert-pulse",
       "title": "Expert pulse",
       "question": "Which technical ideas, tools, and capability claims are appearing across curated AI experts on Bluesky?",
-      "summary": "14 relevant public posts from 8 curated experts, classified with the same taxonomy as the rest of the radar.",
+      "summary": "14 relevant public posts from 10 curated experts, classified with the same taxonomy as the rest of the radar.",
       "status": "active",
       "source_ids": [
         "bluesky-arvind-narayanan",
         "bluesky-emily-bender",
         "bluesky-ethan-mollick",
+        "bluesky-karpathy",
+        "bluesky-margaret-mitchell",
         "bluesky-mark-riedl",
         "bluesky-melanie-mitchell",
         "bluesky-nathan-lambert",
@@ -133,7 +139,7 @@
         "simon-willison"
       ],
       "evidence_count": 14,
-      "corpus_count": 166,
+      "corpus_count": 184,
       "evidence_ids": [
         "bluesky:e14dee24058c:3lbe443vxms2y",
         "bluesky:2a5707251144:3mkbfcbtlbs2n",
@@ -240,7 +246,7 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-09-21T19:57:57.752952+00:00"
+      "updated_at": "2026-09-21T20:14:42.440710+00:00"
     },
     {
       "id": "operator-narratives",
@@ -557,7 +563,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-21T19:57:57.752952+00:00"
+      "updated_at": "2026-09-21T20:14:42.440710+00:00"
     },
     {
       "id": "project-opportunities",
@@ -579,14 +585,14 @@
     "as_of": "2026-09-21",
     "window_start": "2026-09-14",
     "previous_window_start": "2026-09-07",
-    "new_public_records": 665,
+    "new_public_records": 667,
     "movements": [
       {
         "theme_id": "training-self-improvement",
         "name": "Training, evaluation & self-improvement",
-        "recent": 63,
-        "prior": 13,
-        "delta": 50,
+        "recent": 62,
+        "prior": 14,
+        "delta": 48,
         "direction": "rising"
       },
       {
@@ -616,9 +622,9 @@
       {
         "theme_id": "agent-harnesses",
         "name": "Agent harnesses",
-        "recent": 12,
-        "prior": 27,
-        "delta": -15,
+        "recent": 11,
+        "prior": 28,
+        "delta": -17,
         "direction": "falling"
       },
       {
@@ -10721,6 +10727,30 @@
       "published_at": "2026-09-21T17:36:48+00:00",
       "authors": [
         "toomuchtodo"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:4ac5e6fe880a:3mw2ahshc5k2o",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "A bit from me in @wired.com today wrt our research on AI agents with @evijit.io and Samir Passi. This is a really detailed article, thanks for writing it @thiccreese.bsky.social! www.wired.com/stor...",
+      "summary": "AI agents make you dumb! 🚨 www.wired.com/story/metas-...",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mw2ahshc5k2o",
+      "published_at": "2026-09-21T17:30:34.278Z",
+      "authors": [
+        "Margaret Mitchell"
       ],
       "projects": [],
       "theme_ids": [],
@@ -27370,6 +27400,30 @@
       }
     },
     {
+      "id": "bluesky:4ac5e6fe880a:3mvjdnl5juk2x",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "If you read just one thing about the realities of modern AI and agents going \"rogue\", read this: aiguide.substack.com/p/misleading... Brilliant piece from @melaniemitchell.bsky.social",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mvjdnl5juk2x",
+      "published_at": "2026-09-15T00:12:13.619Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "bluesky:c2ef00c3e14c:3mvjd7goirc2q",
       "source_id": "bluesky-mark-riedl",
       "source_type": "expert-social",
@@ -27422,6 +27476,30 @@
         "models-capabilities",
         "tools-skills-integrations"
       ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mvj5zbmqpc24",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Having Fable 5.1 Max and GPT-6 Astra Pro argue with each other over proposed translations of the famously untranslated Minoan language Linear A. (Neither of them appear to have cracked it, for what...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mvj5zbmqpc24",
+      "published_at": "2026-09-14T22:31:23.833Z",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -28172,6 +28250,30 @@
       }
     },
     {
+      "id": "bluesky:1278ebf77949:3mvghxanmds2g",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "I cannot emphasize enough how much GPT-6 Astra and Fable 5.1 are already enough for transformative impact in large sections of the economy. They can reliably do weeks worth of human work when prope...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mvghxanmds2g",
+      "published_at": "2026-09-13T20:51:13.905Z",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "bluesky:1278ebf77949:3mvfqufeavk2g",
       "source_id": "bluesky-ethan-mollick",
       "source_type": "expert-social",
@@ -28280,6 +28382,30 @@
       "published_at": "2026-09-13T01:50:07.178Z",
       "authors": [
         "Melanie Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:b3614927c6a2:3mved4krjbs2b",
+      "source_id": "simon-willison",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "This is pretty neat: ChatGPT Work and GPT-6 Astra (I used \"Max\") can take an address and produce a 5K/10K circular running route starting from that address, using OSM data simonwillison.net/2026/Se...",
+      "summary": "",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mved4krjbs2b",
+      "published_at": "2026-09-13T00:19:24.106Z",
+      "authors": [
+        "Simon Willison"
       ],
       "projects": [],
       "theme_ids": [],
@@ -32659,6 +32785,30 @@
       "url": "https://www.latent.space/p/ainews-collusionwiki-a-second-undisclosed",
       "published_at": "2026-09-05T04:32:00+00:00",
       "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:b3614927c6a2:3mupxubgrls2c",
+      "source_id": "simon-willison",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Got access to GPT-6 Astra. Want to see some pelicans? Yeah you want to see some pelicans... here's a grid comparing Astra to GPT-5.6 Sol, Terra, and Luna static.simonwillison.net/static/2026/... Tr...",
+      "summary": "",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mupxubgrls2c",
+      "published_at": "2026-09-04T22:04:39.941Z",
+      "authors": [
+        "Simon Willison"
+      ],
       "projects": [],
       "theme_ids": [],
       "stack_layers": [],
@@ -38971,6 +39121,30 @@
       }
     },
     {
+      "id": "bluesky:4ac5e6fe880a:3mselb4mtjc2y",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "If you are at @deeplearningindaba.bsky.social, remember to check out the Trust AI Workshop!",
+      "summary": "🚨 Just days away! The 4th TrustAI Workshop @deeplearningindaba.bsky.social , Lagos 🇳🇬 is here! Topic: How trustworthy are LLMs-as-Judges and what does it mea...",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mselb4mtjc2y",
+      "published_at": "2026-08-05T22:29:32.097Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "radical-ventures:3daaa59eaea4027da4cb",
       "source_id": "radical-ventures",
       "source_type": "investor-essay",
@@ -39936,6 +40110,30 @@
       }
     },
     {
+      "id": "bluesky:4ac5e6fe880a:3mrsey7dpb22o",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "We @hf.co made an interactive visual of the actual hack from the Hugging Face side: the attack chain across trust boundaries, phase activity, and the commands as they were recorded. Key #transparen...",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mrsey7dpb22o",
+      "published_at": "2026-07-29T16:49:15.212Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "deepmind-blog:05b5e14c97505dcc5509",
       "source_id": "deepmind-blog",
       "source_type": "first-party-lab",
@@ -40217,6 +40415,30 @@
       "published_at": "2026-07-27T13:30:53+00:00",
       "authors": [
         "Jack Clark"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:4ac5e6fe880a:3mrj3gcohrc2w",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "People not in tech have been interested in what happened with the Open AI agent/Hugging Face hack. So, I \"Explain it Like I'm 5\"-ed it and made a cartoon in 8 panels. Apologies for some anthro-ing....",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mrj3gcohrc2w",
+      "published_at": "2026-07-26T00:04:13.409Z",
+      "authors": [
+        "Margaret Mitchell"
       ],
       "projects": [],
       "theme_ids": [],
@@ -41299,6 +41521,30 @@
       }
     },
     {
+      "id": "bluesky:4ac5e6fe880a:3mpylks3txs2r",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "If you haven't read this piece on language use in around AI, you definitely should. Great work from @emilymbender.bsky.social , @nannainie.bsky.social and Peter Zukerman, with solutions for what to...",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mpylks3txs2r",
+      "published_at": "2026-07-06T17:12:36.481Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "import-ai:0b21b930d5baa9d90533",
       "source_id": "import-ai",
       "source_type": "expert-newsletter",
@@ -41507,6 +41753,30 @@
         "tools-skills-integrations",
         "harness-orchestration"
       ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:4ac5e6fe880a:3mphgqxpkqc2z",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "I am beyond honored to have been selected to give a keynote at Deep Learning Indaba: 4.August, Lagos. I will be cutting into some of the deepest issues I see in AI (hint: it's not alignment) and wh...",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mphgqxpkqc2z",
+      "published_at": "2026-06-29T21:31:19.435Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-06": 1
@@ -42065,6 +42335,30 @@
       }
     },
     {
+      "id": "bluesky:4ac5e6fe880a:3mo43e6w65225",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "So apparently KPMG wrote a report describing the successful use of AI by businesses. But the case studies turned out to be AI hallucinations. www.ft.com/content/b382...",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mo43e6w65225",
+      "published_at": "2026-06-12T15:42:50.876Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "the-batch:0361ba5c5fc4f4fb8124",
       "source_id": "the-batch",
       "source_type": "curated-newsletter",
@@ -42480,6 +42774,30 @@
       }
     },
     {
+      "id": "bluesky:4ac5e6fe880a:3mn7ota3kx22p",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "📣 Announcing the release of the 🕊️ Annotated Encyclical 🕊️ from the ethics & society folks at @hf.co. Includes citations to relevant academic work. Very much a WIP. Please add work we haven't added...",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mn7ota3kx22p",
+      "published_at": "2026-06-01T08:44:04.100Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "sequoia-essays:fe47a5f900b0daa36254",
       "source_id": "sequoia-essays",
       "source_type": "investor-essay",
@@ -42860,6 +43178,30 @@
       }
     },
     {
+      "id": "bluesky:4ac5e6fe880a:3mmc6jzekss27",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Instead of finding content you need, you get to have an interactive AI *experience*.",
+      "summary": "Wow some terrible reporting about Google's latest horrible ideas about how to distort information access in the name of \"convenience\" (or something): techcru...",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mmc6jzekss27",
+      "published_at": "2026-05-20T15:05:22.784Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-05": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "last-week-in-ai:b0863ed1de4b71ba3de7",
       "source_id": "last-week-in-ai",
       "source_type": "curated-newsletter",
@@ -42870,6 +43212,30 @@
       "published_at": "2026-05-20T07:45:49+00:00",
       "authors": [
         "Last Week in AI"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-05": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:4ac5e6fe880a:3mma73pfooc2k",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Against the constant pressure of *genAI, genAI, genAI*, I am really appreciating @ai2.bsky.social 's work on creating tools for critical needs -- like crop maps and forest loss analysis. They just...",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mma73pfooc2k",
+      "published_at": "2026-05-19T20:09:56.837Z",
+      "authors": [
+        "Margaret Mitchell"
       ],
       "projects": [],
       "theme_ids": [],
@@ -42985,6 +43351,30 @@
       "url": "https://www.deeplearning.ai/the-batch/issue-353",
       "published_at": "2026-05-15T07:00:15.000-07:00",
       "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-05": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:4ac5e6fe880a:3mlsruufank2w",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "The “instrumental convergence” theory posits an AI that, in its quest for a narrow goal, uses all of the earth’s resources. If that theory pans out, it will not be at the level of a single AI syste...",
+      "summary": "I had a realisation Context: In our Reclaiming AI paper we argued that AI systems cannot scale up to human-level cognition without consuming astronomical amo...",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mlsruufank2w",
+      "published_at": "2026-05-14T12:08:51.942Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
       "projects": [],
       "theme_ids": [],
       "stack_layers": [],
@@ -43631,6 +44021,30 @@
         "harness-orchestration",
         "tools-skills-integrations"
       ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-04": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:4ac5e6fe880a:3mk3ymrhilc2g",
+      "source_id": "bluesky-margaret-mitchell",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Just got a very AI-generated-sounding invite to come to a reading group and discuss my book \"Gone with the Wind\". Maybe I should show up with a wig and stuff.",
+      "summary": "",
+      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mk3ymrhilc2g",
+      "published_at": "2026-04-22T17:13:11.017Z",
+      "authors": [
+        "Margaret Mitchell"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-04": 1
@@ -49769,6 +50183,30 @@
       }
     },
     {
+      "id": "bluesky:fbdf102e749d:3jwoneqcave2h",
+      "source_id": "bluesky-karpathy",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "How can you not be jealous when you copy paste a long passage of text to GPT-4, ask it to eg summarize and see tokens flowing moments later",
+      "summary": "",
+      "url": "https://bsky.app/profile/karpathy.bsky.social/post/3jwoneqcave2h",
+      "published_at": "2023-05-27T03:56:08.230Z",
+      "authors": [
+        "Andrej Karpathy"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2023-05": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:639195966",
       "source_id": "github",
       "source_type": "repository",
@@ -51261,17 +51699,6 @@
       "status": "active"
     },
     {
-      "id": "huggingface-papers",
-      "name": "Hugging Face Daily Papers",
-      "channel": "paper-curation",
-      "source_quality": "medium",
-      "commercial_bias": "low",
-      "homepage_url": "https://huggingface.co/papers",
-      "logo_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-      "normalized_evidence_count": 57,
-      "status": "active"
-    },
-    {
       "id": "simon-willison",
       "name": "Simon Willison's Weblog",
       "channel": "practitioner-blog",
@@ -51281,7 +51708,18 @@
       "evidence_role": "expert-interpretation",
       "homepage_url": "https://simonwillison.net/",
       "logo_url": "https://simonwillison.net/favicon.ico",
-      "normalized_evidence_count": 56,
+      "normalized_evidence_count": 58,
+      "status": "active"
+    },
+    {
+      "id": "huggingface-papers",
+      "name": "Hugging Face Daily Papers",
+      "channel": "paper-curation",
+      "source_quality": "medium",
+      "commercial_bias": "low",
+      "homepage_url": "https://huggingface.co/papers",
+      "logo_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+      "normalized_evidence_count": 57,
       "status": "active"
     },
     {
@@ -51318,7 +51756,7 @@
       "evidence_role": "expert-observation",
       "homepage_url": "https://bsky.app/profile/emollick.bsky.social",
       "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 36,
+      "normalized_evidence_count": 38,
       "status": "active"
     },
     {
@@ -51576,6 +52014,19 @@
       "status": "active"
     },
     {
+      "id": "bluesky-margaret-mitchell",
+      "name": "Margaret Mitchell on Bluesky",
+      "channel": "expert-social",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "margaret-mitchell",
+      "evidence_role": "expert-observation",
+      "homepage_url": "https://bsky.app/profile/mmitchell.bsky.social",
+      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
+      "normalized_evidence_count": 13,
+      "status": "active"
+    },
+    {
       "id": "radical-ventures",
       "name": "Radical Ventures insights",
       "channel": "investor-essay",
@@ -51659,8 +52110,8 @@
       "evidence_role": "expert-observation",
       "homepage_url": "https://bsky.app/profile/karpathy.bsky.social",
       "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 0,
-      "status": "configured"
+      "normalized_evidence_count": 1,
+      "status": "active"
     },
     {
       "id": "manual-public-evidence",
@@ -51668,19 +52119,6 @@
       "channel": "mixed",
       "source_quality": "reviewed",
       "commercial_bias": "recorded-per-item",
-      "normalized_evidence_count": 0,
-      "status": "configured"
-    },
-    {
-      "id": "bluesky-margaret-mitchell",
-      "name": "Margaret Mitchell on Bluesky",
-      "channel": "expert-social",
-      "source_quality": "high",
-      "commercial_bias": "authorial",
-      "publisher_id": "margaret-mitchell",
-      "evidence_role": "expert-observation",
-      "homepage_url": "https://bsky.app/profile/margaretmitchell.bsky.social",
-      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
       "normalized_evidence_count": 0,
       "status": "configured"
     }
