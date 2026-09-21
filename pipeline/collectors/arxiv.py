@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import hashlib
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -9,6 +11,32 @@ from pipeline.models import SourceItem
 from pipeline.normalize import compact_text
 
 ATOM = "{http://www.w3.org/2005/Atom}"
+RETRYABLE_STATUS_CODES = {406, 408, 425, 429, 500, 502, 503, 504}
+
+
+def _fetch(url: str, attempts: int = 4) -> bytes:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "Accept": "application/atom+xml, application/xml;q=0.9, */*;q=0.8",
+            "User-Agent": "ai-signal-radar/0.1 (public research dashboard; https://github.com/mcravi8/ai-signal-radar)",
+        },
+    )
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(request, timeout=45) as response:
+                return response.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code not in RETRYABLE_STATUS_CODES or attempt == attempts - 1:
+                raise
+            retry_after = exc.headers.get("Retry-After") if exc.headers else None
+            delay = float(retry_after) if retry_after and retry_after.isdigit() else 2**attempt
+            time.sleep(min(delay, 15))
+        except (TimeoutError, urllib.error.URLError):
+            if attempt == attempts - 1:
+                raise
+            time.sleep(2**attempt)
+    raise RuntimeError("arXiv request exhausted without returning a response")
 
 
 def collect(categories: list[str], limit: int = 100) -> list[SourceItem]:
@@ -22,12 +50,7 @@ def collect(categories: list[str], limit: int = 100) -> list[SourceItem]:
             "sortOrder": "descending",
         }
     )
-    request = urllib.request.Request(
-        f"https://export.arxiv.org/api/query?{params}",
-        headers={"User-Agent": "ai-signal-radar/0.1 (public research dashboard)"},
-    )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        root = ET.fromstring(response.read())
+    root = ET.fromstring(_fetch(f"https://export.arxiv.org/api/query?{params}"))
 
     items: list[SourceItem] = []
     for entry in root.findall(f"{ATOM}entry"):
