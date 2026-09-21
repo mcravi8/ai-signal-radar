@@ -32,37 +32,135 @@ cross_cutting_lenses:
 seed_themes:
   - id: ai-native-gtm
     name: AI-native GTM
+    definition: AI systems that execute or coordinate prospecting, sales, marketing, customer intelligence, and revenue operations.
     aliases: [agentic GTM, AI revenue stack, autonomous BDR, AI RevOps]
     primary_layer: tools-skills-integrations
     lens: commercialization
 
   - id: small-specialized-models
     name: Small & specialized models
+    definition: Compact or task-specific models optimized for cost, latency, privacy, or a narrow operational decision.
     aliases: [SLM, small language model, compact model, distilled model, task-specific model]
     primary_layer: models-capabilities
 
   - id: operational-ontology
     name: Operational ontology
+    definition: A governed semantic layer connecting business objects, relationships, rules, and actions for people and agents.
     aliases: [Palantir ontology, enterprise ontology, context graph, semantic operating layer, company brain]
     primary_layer: harness-orchestration
     secondary_layer: tools-skills-integrations
 
   - id: frontier-inference-infrastructure
     name: Frontier inference infrastructure
+    definition: Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.
     aliases: [frontier inference cluster, inference cloud, AI factory, token factory, inference cluster]
     primary_layer: compute-inference-serving
 
   - id: specialized-inference-silicon
     name: Specialized inference silicon
+    definition: Chips and computer architectures designed specifically to reduce the latency, energy, or cost of model inference.
     aliases: [LPU, language processing unit, inference ASIC, wafer-scale engine, AI accelerator]
     primary_layer: compute-inference-serving
 
   - id: agent-harnesses
     name: Agent harnesses
+    definition: Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.
     aliases: [agent scaffolding, orchestration layer, agent runtime, self-improving harness]
     primary_layer: harness-orchestration
 
   - id: assurance-infrastructure
     name: Assurance infrastructure
+    definition: Evaluation, security, observability, permissions, governance, and provenance required to operate AI systems safely.
     aliases: [AI assurance, agent security, eval infrastructure, AI observability]
     primary_layer: assurance
+
+  - id: open-local-inference
+    name: Open, local & efficient inference
+    definition: Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.
+    aliases: [open weights, local inference, quantization, mixture of experts, on-device inference]
+    primary_layer: models-capabilities
+    secondary_layer: compute-inference-serving
+
+  - id: model-routing
+    name: Model routing & heterogeneous stacks
+    definition: Systems that select or combine models according to task, cost, latency, capability, privacy, or reliability requirements.
+    aliases: [model router, model cascade, model selector, mixture of agents]
+    primary_layer: harness-orchestration
+    secondary_layer: models-capabilities
+
+  - id: training-self-improvement
+    name: Training, evaluation & self-improvement
+    definition: Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.
+    aliases: [fine-tuning, reinforcement learning, synthetic training, prompt optimization, self-improving systems]
+    primary_layer: models-capabilities
+    secondary_layer: assurance
+
+  - id: coding-agents
+    name: Coding agents & developer tooling
+    definition: AI systems that search repositories, write and review code, run tools, validate changes, and participate in software delivery.
+    aliases: [coding agent, software engineering agent, repository agent, code generation]
+    primary_layer: harness-orchestration
+    secondary_layer: tools-skills-integrations
+
+  - id: validation-release
+    name: Validation & release infrastructure
+    definition: Testing, review, runtime validation, and deployment controls that determine whether AI-generated work is safe to release.
+    aliases: [runtime validation, AI code review, agent testing, release controls]
+    primary_layer: assurance
+    secondary_layer: harness-orchestration
+
+  - id: multimodal-3d
+    name: Multimodal generation & 3D
+    definition: Systems that generate, edit, understand, or reconstruct images, video, spatial scenes, avatars, and three-dimensional environments.
+    aliases: [video generation, image generation, world model, 3D generation, spatial AI]
+    primary_layer: models-capabilities
+    secondary_layer: tools-skills-integrations
+
+  - id: voice-audio
+    name: Voice & audio interfaces
+    definition: Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.
+    aliases: [voice agent, speech model, text to speech, voice cloning, audio generation]
+    primary_layer: models-capabilities
+    secondary_layer: tools-skills-integrations
+
+  - id: skills-integrations
+    name: Skills, protocols & integrations
+    definition: Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.
+    aliases: [agent skills, plugins, MCP, tool protocol, connectors]
+    primary_layer: tools-skills-integrations
+    secondary_layer: harness-orchestration
+
+  - id: document-knowledge-systems
+    name: Documents, retrieval & knowledge systems
+    definition: Parsing, retrieval, structured generation, graphs, and data systems that make private or complex information usable by AI workflows.
+    aliases: [RAG, document intelligence, OCR, GraphRAG, structured generation]
+    primary_layer: tools-skills-integrations
+    secondary_layer: harness-orchestration
+
+  - id: memory-context
+    name: Memory & context engineering
+    definition: Techniques for selecting, compressing, persisting, and retrieving context across long-running model or agent activity.
+    aliases: [agent memory, context management, context compression, persistent memory]
+    primary_layer: harness-orchestration
+    secondary_layer: assurance
+
+  - id: enterprise-vertical-ai
+    name: Enterprise & vertical AI
+    definition: AI products adapted to industry workflows, governed organizational data, and live business systems.
+    aliases: [vertical AI, enterprise agent, industry-specific model, business system agent]
+    primary_layer: tools-skills-integrations
+    lens: enterprise-adoption
+
+  - id: web-browser-automation
+    name: Web & browser automation
+    definition: Agent capabilities for navigating websites, collecting permitted web data, operating forms, and executing browser-based workflows.
+    aliases: [browser agent, web agent, web automation, AI scraping]
+    primary_layer: tools-skills-integrations
+    secondary_layer: harness-orchestration
+
+  - id: robotics-embodied-ai
+    name: Robotics & embodied AI
+    definition: Models, datasets, simulations, and control systems that connect learned intelligence to physical sensing and action.
+    aliases: [robotics foundation model, embodied agent, robot learning, physical AI]
+    primary_layer: models-capabilities
+    secondary_layer: tools-skills-integrations

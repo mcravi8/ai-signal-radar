@@ -13,6 +13,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertTrue((ROOT / "dist/index.html").exists())
         self.assertTrue((ROOT / "dist/data/dashboard.json").exists())
         self.assertTrue((ROOT / "dist/data/alphasignal-research.json").exists())
+        self.assertTrue((ROOT / "dist/data/research.json").exists())
 
 
 if __name__ == "__main__":

@@ -10,6 +10,7 @@ from .classify import classify_text
 from .cluster import group_by_theme
 from .deduplicate import deduplicate
 from .export_public import validate_public_payload, write_public_dashboard
+from .research import build_research, write_weekly_report
 from .score import score_theme
 from .storage import merge_items, read_jsonl, write_jsonl
 
@@ -23,7 +24,7 @@ def _yaml(path: Path) -> dict:
 
 
 def collect() -> None:
-    from .collectors import arxiv, github, hackernews, huggingface
+    from .collectors import arxiv, github, hackernews, huggingface, rss
 
     source_config = _yaml(ROOT / "config/sources.yml")["sources"]
     enabled = {source["id"]: source for source in source_config if source.get("enabled")}
@@ -49,6 +50,17 @@ def collect() -> None:
         attempt("github", lambda: github.collect(queries, since))
     if "hacker-news" in enabled:
         attempt("hacker-news", lambda: hackernews.collect(enabled["hacker-news"]["feeds"]))
+    for source_id, source in enabled.items():
+        if source.get("collection") == "rss":
+            attempt(
+                source_id,
+                lambda source_id=source_id, source=source: rss.collect(
+                    source_id,
+                    source.get("channel", "essay"),
+                    source["feed_url"],
+                    source.get("limit", 30),
+                ),
+            )
 
     snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "items.jsonl"
     write_jsonl(snapshot, [item.to_dict() for item in collected])
@@ -87,7 +99,7 @@ def synthesize() -> None:
         )
 
     public_items = []
-    for row in rows[-250:]:
+    for row in rows:
         public_items.append({key: row[key] for key in (
             "id", "source_id", "source_type", "title", "url", "published_at", "summary", "authors", "tags", "projects", "sponsor_status", "theme_ids"
         ) if key in row})
@@ -106,7 +118,7 @@ def synthesize() -> None:
             "signals": [theme["id"] for theme in sorted(themes, key=lambda item: item.get("evidence_count", 0), reverse=True)[:5]],
         },
         "themes": themes,
-        "evidence": public_items,
+        "evidence": public_items[-250:],
         "projects": [],
         "sources": [
             {key: source[key] for key in ("id", "name", "channel", "source_quality", "commercial_bias") if key in source}
@@ -114,6 +126,20 @@ def synthesize() -> None:
         ],
     }
     write_public_dashboard(ROOT / "data/public/dashboard.json", payload)
+
+    alpha_path = ROOT / "data/public/alphasignal-research.json"
+    if alpha_path.exists():
+        alpha = json.loads(alpha_path.read_text(encoding="utf-8"))
+        mappings = _yaml(ROOT / "config/source-theme-mappings.yml")
+        research_input = {**payload, "evidence": public_items}
+        research = build_research(research_input, alpha, taxonomy, mappings)
+        write_public_dashboard(ROOT / "data/public/research.json", research)
+        report_date = research["weekly"]["as_of"]
+        write_weekly_report(ROOT / "reports/weekly" / f"{report_date}.md", research)
+        print(
+            f"research: {research['meta']['normalized_evidence_count']} normalized evidence records, "
+            f"{research['meta']['observed_theme_count']} observed themes"
+        )
 
 
 def validate_public() -> None:

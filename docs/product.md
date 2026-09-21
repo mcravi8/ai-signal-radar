@@ -8,7 +8,7 @@ Platform: public responsive website, primarily desktop and mobile browsers.
 
 Consequence of error: meaningful. A false trend can waste attention or distort strategic decisions, so scores must remain inspectable and evidence-linked.
 
-Personality: editorial, rigorous, calm.
+Personality: factual, rigorous, calm.
 
 Success evidence: a reader can identify the week's important themes, inspect their evidence, distinguish observation from inference, and open the original sources.
 
@@ -28,11 +28,12 @@ Recovery promise: failed or partial runs preserve the previous valid public snap
 
 ## Information hierarchy
 
-1. Required attention and collection health
-2. Weekly synthesis
-3. Accelerating and newly coined categories
-4. Evidence and projects
-5. Source mix, scoring, and methodology
+1. **Overview:** what changed, strongest cross-source themes, and collection coverage.
+2. **Analyses:** research questions and source-specific studies, including AlphaSignal.
+3. **Themes:** durable category dossiers with score inputs, source contribution, and evidence.
+4. **Projects:** concrete tools, testing value, risk, and corroboration.
+5. **Evidence:** one filterable normalized corpus across every source.
+6. **Method:** scoring, provenance, privacy boundaries, and limitations.
 
 ## Core states
 

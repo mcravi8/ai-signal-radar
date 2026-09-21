@@ -2,12 +2,16 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
+from pathlib import Path
 
 from pipeline.models import SourceItem
 
 
 def collect(limit: int = 50) -> list[SourceItem]:
-    command = ["hf", "papers", "list", "--sort", "trending", "--limit", str(limit), "--format", "json"]
+    local_cli = Path(sys.executable).with_name("hf")
+    executable = str(local_cli) if local_cli.exists() else "hf"
+    command = [executable, "papers", "list", "--sort", "trending", "--limit", str(limit), "--format", "json"]
     completed = subprocess.run(command, check=True, capture_output=True, text=True)
     payload = json.loads(completed.stdout)
     records = payload if isinstance(payload, list) else payload.get("items", payload.get("papers", []))

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ai-signal-radar/cross-source-research.schema.json",
+  "title": "AI Signal Radar cross-source research",
+  "type": "object",
+  "required": ["meta", "analyses", "weekly", "themes", "projects", "evidence", "sources", "methodology"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["generated_at", "normalized_evidence_count", "active_source_count", "theme_count", "observed_theme_count"]
+    },
+    "analyses": { "type": "array", "items": { "type": "object", "required": ["id", "title", "question", "source_ids", "evidence_count"] } },
+    "weekly": { "type": "object", "required": ["as_of", "window_start", "movements", "note"] },
+    "themes": { "type": "array", "items": { "$ref": "#/$defs/theme" } },
+    "projects": { "type": "array", "items": { "type": "object" } },
+    "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } },
+    "sources": { "type": "array", "items": { "type": "object", "required": ["id", "name", "channel", "normalized_evidence_count", "status"] } },
+    "methodology": { "type": "object" }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": ["id", "source_id", "source_type", "evidence_kind", "title", "published_at", "theme_ids", "stack_layers", "support_count", "monthly_counts", "provenance"]
+    },
+    "theme": {
+      "type": "object",
+      "required": ["id", "name", "evidence_count", "support_units", "source_count", "source_breakdown", "monthly_counts", "maturity", "evidence_ids"]
+    }
+  }
+}

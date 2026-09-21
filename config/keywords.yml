@@ -7,8 +7,11 @@ themes:
     - ai revops
   small-specialized-models:
     - small language model
+    - small model
+    - slm
     - compact model
     - distilled model
+    - distillation
     - task-specific model
     - on-device model
   operational-ontology:
@@ -35,9 +38,140 @@ themes:
     - agent runtime
     - agent scaffolding
     - orchestration layer
+    - agent orchestration
+    - multi-agent
+    - multi agent
+    - long-running agent
+    - autonomous agent
   assurance-infrastructure:
     - agent security
     - ai observability
     - evaluation infrastructure
     - model governance
     - provenance
+    - prompt injection
+    - red teaming
+    - red-team
+    - permission control
+  open-local-inference:
+    - open weights
+    - open-weight
+    - open source model
+    - open-source model
+    - local inference
+    - on-device inference
+    - quantization
+    - quantized
+    - mixture of experts
+    - moe model
+    - llama.cpp
+    - gguf
+  model-routing:
+    - model router
+    - model routing
+    - route models
+    - model cascade
+    - model selector
+    - heterogeneous models
+    - mixture of agents
+  training-self-improvement:
+    - fine-tuning
+    - fine tuning
+    - reinforcement learning
+    - synthetic training
+    - training environment
+    - self-improving
+    - self improving
+    - prompt optimization
+    - benchmark
+    - evaluation method
+  coding-agents:
+    - coding agent
+    - code agent
+    - software engineering agent
+    - repository agent
+    - repo agent
+    - code generation
+    - code review agent
+    - swe-bench
+  validation-release:
+    - runtime validation
+    - release bottleneck
+    - agent testing
+    - ai code review
+    - continuous integration
+    - test generation
+    - deployment validation
+  multimodal-3d:
+    - video generation
+    - image generation
+    - text-to-video
+    - text to video
+    - text-to-image
+    - text to image
+    - world model
+    - 3d generation
+    - point cloud
+    - spatial ai
+  voice-audio:
+    - voice agent
+    - speech model
+    - text-to-speech
+    - text to speech
+    - speech-to-text
+    - voice cloning
+    - audio generation
+    - realtime voice
+    - real-time voice
+  skills-integrations:
+    - agent skill
+    - model context protocol
+    - mcp server
+    - tool protocol
+    - plugin system
+    - api integration
+    - connector framework
+  document-knowledge-systems:
+    - retrieval augmented generation
+    - retrieval-augmented generation
+    - graphrag
+    - graph rag
+    - knowledge graph
+    - document intelligence
+    - document parsing
+    - optical character recognition
+    - structured generation
+    - structured output
+  memory-context:
+    - agent memory
+    - persistent memory
+    - context engineering
+    - context management
+    - context compression
+    - context pruning
+    - long context
+  enterprise-vertical-ai:
+    - vertical ai
+    - enterprise ai
+    - enterprise agent
+    - industry-specific
+    - domain-specific model
+    - business system
+    - salesforce
+    - healthcare ai
+    - legal ai
+  web-browser-automation:
+    - browser agent
+    - browser automation
+    - web agent
+    - web automation
+    - web scraping
+    - scraping agent
+  robotics-embodied-ai:
+    - embodied ai
+    - embodied agent
+    - robot learning
+    - robotics foundation model
+    - physical ai
+    - humanoid robot
+    - robot policy

@@ -34,6 +34,26 @@ sources:
     source_quality: mixed
     commercial_bias: mixed
 
+  - id: yc-essays
+    name: Y Combinator essays
+    channel: operator-essay
+    enabled: true
+    collection: rss
+    feed_url: https://www.ycombinator.com/blog/feed
+    limit: 30
+    source_quality: high
+    commercial_bias: disclosed
+
+  - id: sequoia-essays
+    name: Sequoia essays
+    channel: investor-essay
+    enabled: true
+    collection: rss
+    feed_url: https://www.sequoiacap.com/feed/
+    limit: 30
+    source_quality: high
+    commercial_bias: disclosed
+
   - id: alphasignal
     name: AlphaSignal
     channel: newsletter
