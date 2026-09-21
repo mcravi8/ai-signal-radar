@@ -66,6 +66,14 @@ class CrossSourceResearchTests(unittest.TestCase):
         narrative_evidence = [item for item in self.payload["evidence"] if item["id"] in narrative_ids]
         self.assertEqual(len(narrative_evidence), analyses["operator-narratives"]["evidence_count"])
         self.assertFalse(any(item["title"].casefold().startswith("welcome") for item in narrative_evidence))
+        self.assertTrue(analyses["operator-narratives"]["executive_summary"])
+        findings = analyses["operator-narratives"]["findings"]
+        self.assertGreaterEqual(len(findings), 5)
+        self.assertTrue(all({"analysis", "why_it_matters", "workflow_opportunity", "caveat", "evidence_ids"}.issubset(finding) for finding in findings))
+        self.assertTrue(all(set(finding["evidence_ids"]).issubset(narrative_ids) for finding in findings))
+        gtm_watch = next(finding for finding in findings if finding["id"] == "ai-native-gtm-watch")
+        self.assertEqual(gtm_watch["strength"], "watch")
+        self.assertEqual(gtm_watch["metrics"]["publishers"], 1)
         self.assertTrue({"yc-essays", "sequoia-essays", "menlo-ventures", "greylock-essays", "radical-ventures"}.issubset(analyses["operator-narratives"]["source_ids"]))
         self.assertGreater(len(analyses["cross-source-landscape"]["source_ids"]), len(analyses["alphasignal-corpus"]["source_ids"]))
 

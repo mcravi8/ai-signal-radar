@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-21T15:49:08.453920+00:00",
+    "generated_at": "2026-09-21T16:37:00.296571+00:00",
     "status": "success",
     "normalized_evidence_count": 875,
     "public_record_count": 840,
@@ -33,7 +33,7 @@
         "radical-ventures"
       ],
       "evidence_count": 875,
-      "updated_at": "2026-09-21T15:49:08.453920+00:00"
+      "updated_at": "2026-09-21T16:37:00.296571+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -66,13 +66,13 @@
         "yc-essays"
       ],
       "evidence_count": 840,
-      "updated_at": "2026-09-21T15:49:08.453920+00:00"
+      "updated_at": "2026-09-21T16:37:00.296571+00:00"
     },
     {
       "id": "operator-narratives",
       "title": "Operator and investor narratives",
       "question": "Which categories are being named or framed by startup operators and investors before broad technical corroboration?",
-      "summary": "Official writing from Greylock essays, Menlo Ventures perspectives, Radical Ventures insights, Sequoia essays, Y Combinator essays classified against the same themes as papers, repositories, community discussion, and AlphaSignal. Completion requires at least five active sources with relevant classified evidence.",
+      "summary": "Official writing from Greylock essays, Menlo Ventures perspectives, Radical Ventures insights, Sequoia essays, Y Combinator essays analyzed against the shared taxonomy and compared with the wider evidence base.",
       "status": "complete",
       "source_ids": [
         "greylock-essays",
@@ -122,6 +122,149 @@
         "radical-ventures:f1d373af6ede201d5a8d",
         "greylock-essays:4db96be55ee28289e4fd",
         "greylock-essays:aacd57b6bec14e3c9da1"
+      ],
+      "executive_summary": "The corpus does not point to one winning application category. It points to a product architecture: agents own bounded workflows; specialized runtime, context, and infrastructure make them usable; assurance controls make them deployable. Independent agreement is strongest around assurance and coding-agent infrastructure. Inference, physical AI, and AI-native GTM are earlier signals, not established conclusions.",
+      "interpretation_note": "These are narrative signals from investor and operator writing, not market-size or adoption estimates. Counts refer to classified essays and distinct publishers; commercial bias is retained in the source metadata.",
+      "findings": [
+        {
+          "id": "workflow-ownership",
+          "strength": "moderate",
+          "label": "Cross-source pattern",
+          "title": "The commercial narrative has moved from copilots to workflow ownership",
+          "analysis": "15 essays across 2 publishers describe AI as a workforce, teammate, revenue engine, system of action, autopilot, or employee. The shared product thesis is not a better interface for a human task; it is a bounded system that carries the task from trigger to outcome.",
+          "why_it_matters": "If this framing holds, products will be judged on completed work, exception handling, and measurable operating outcomes—not primarily on model quality or chat experience.",
+          "workflow_opportunity": "Choose one workflow with a clear trigger, handoffs, and completion state. Let an agent execute the routine path, route exceptions to a human, and measure cycle time, intervention rate, and error cost.",
+          "caveat": "The evidence comes from two investors writing about portfolio companies. It is a coherent thesis, not proof of broad customer adoption.",
+          "theme_ids": [
+            "agent-harnesses",
+            "ai-native-gtm",
+            "enterprise-vertical-ai"
+          ],
+          "evidence_ids": [
+            "greylock-essays:aacd57b6bec14e3c9da1",
+            "sequoia-essays:afde56cfaaeb81f69523",
+            "greylock-essays:da9d5e408f534282b985",
+            "sequoia-essays:775cb9638e7b090ad2d9"
+          ],
+          "metrics": {
+            "essays": 15,
+            "publishers": 2
+          }
+        },
+        {
+          "id": "assurance-layer",
+          "strength": "strong",
+          "label": "Strongest narrative consensus",
+          "title": "Assurance is becoming a separate infrastructure layer for agents",
+          "analysis": "7 essays across 3 publishers converge on runtime controls: vulnerability discovery, penetration testing, identity, data sovereignty, defensive models, and detection of abnormal agent intent. In the wider radar this theme appears across 8 sources and 197 support units.",
+          "why_it_matters": "As agents gain permission to act, the deployment bottleneck moves from raw capability to whether their behavior can be observed, constrained, investigated, and trusted.",
+          "workflow_opportunity": "Build a reusable assurance wrapper around agent workflows: complete action logs, policy gates, sandbox boundaries, anomaly detection, evaluation suites, and human escalation for high-impact steps.",
+          "caveat": "Most narrative evidence is cybersecurity-focused. General agent governance is a reasoned extension, not yet equally demonstrated across every workflow category.",
+          "theme_ids": [
+            "assurance-infrastructure"
+          ],
+          "evidence_ids": [
+            "greylock-essays:aacd57b6bec14e3c9da1",
+            "sequoia-essays:c57f2c6dba9448876fb0",
+            "menlo-ventures:3f0b4d0e045fc978a741",
+            "greylock-essays:16bf0805df87e8f7760d"
+          ],
+          "metrics": {
+            "essays": 7,
+            "publishers": 3
+          }
+        },
+        {
+          "id": "coding-agent-stack",
+          "strength": "strong",
+          "label": "Corroborated infrastructure thesis",
+          "title": "The coding-agent opportunity is shifting below the assistant interface",
+          "analysis": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 87.7 and appears across 8 radar sources.",
+          "why_it_matters": "The durable layer may be the context, execution environment, verification, and operational control that lets agents finish real work—not another chat surface around a frontier model.",
+          "workflow_opportunity": "Prototype a repository task runner that provisions an isolated environment, assembles relevant context, executes the agent, tests the result, and presents a reviewable change with traces and rollback.",
+          "caveat": "The evidence mixes coding, implementation, research, and operations. Their shared infrastructure needs are clearer than a single winning product category.",
+          "theme_ids": [
+            "coding-agents"
+          ],
+          "evidence_ids": [
+            "radical-ventures:4e64543f295794b596b4",
+            "greylock-essays:c20b6ac7c42eb8c20580",
+            "sequoia-essays:bf2824ba4e01a7fceb94",
+            "greylock-essays:cbdde800c82cd1b1c5e4"
+          ],
+          "metrics": {
+            "essays": 4,
+            "publishers": 3
+          }
+        },
+        {
+          "id": "inference-control-plane",
+          "strength": "emerging",
+          "label": "Emerging thesis",
+          "title": "Inference is being productized as a control plane, not a commodity endpoint",
+          "analysis": "3 essays across 2 publishers frame specialized runtimes, inference clusters, and model routing as products in their own right. The common bet is that cost, latency, model selection, and workload fit will require active control rather than a single default provider.",
+          "why_it_matters": "A heterogeneous model market creates value above raw compute: routing, benchmarking, caching, capacity selection, and policy-aware fallback can materially change unit economics and reliability.",
+          "workflow_opportunity": "Instrument one expensive AI workflow across several models and runtimes. Route by task type and service objective, then compare quality, latency, failure rate, and cost per accepted outcome.",
+          "caveat": "This is a small, recent sample. Treat it as a monitored infrastructure thesis, not an established market structure.",
+          "theme_ids": [
+            "frontier-inference-infrastructure",
+            "model-routing"
+          ],
+          "evidence_ids": [
+            "menlo-ventures:357c545badf007e3def4",
+            "sequoia-essays:8a2fe18efd08a18eea8c",
+            "menlo-ventures:dfeaba0c266f13ed7f2c"
+          ],
+          "metrics": {
+            "essays": 3,
+            "publishers": 2
+          }
+        },
+        {
+          "id": "physical-ai-simulation",
+          "strength": "emerging",
+          "label": "Emerging cross-source pattern",
+          "title": "Physical AI is being organized around world models and simulation before deployment",
+          "analysis": "4 essays across 2 publishers connect spatial world models, robotics, and high-fidelity simulation. The recurring idea is that embodied systems need safe, scalable environments in which to learn, test, and validate before acting in the physical world.",
+          "why_it_matters": "For robotics and physical systems, synthetic experience and validation infrastructure may be a nearer-term enabling layer than a general-purpose robot application.",
+          "workflow_opportunity": "Build domain-specific simulation and evaluation loops that generate edge cases, replay failures, and gate physical deployment against measurable safety and task-performance thresholds.",
+          "caveat": "The signal comes from two publishers and four essays. Commercial timing, transfer from simulation, and deployment economics remain unresolved.",
+          "theme_ids": [
+            "multimodal-3d",
+            "robotics-embodied-ai"
+          ],
+          "evidence_ids": [
+            "greylock-essays:4db96be55ee28289e4fd",
+            "radical-ventures:f1d373af6ede201d5a8d",
+            "radical-ventures:002cb1815fb8b4589802",
+            "radical-ventures:20d1ce473b192f88b82c"
+          ],
+          "metrics": {
+            "essays": 4,
+            "publishers": 2
+          }
+        },
+        {
+          "id": "ai-native-gtm-watch",
+          "strength": "watch",
+          "label": "Source-specific watch",
+          "title": "AI-native GTM is a named category, but not yet a cross-source conclusion",
+          "analysis": "2 essays from 1 publisher describe an AI revenue engine and a system of action for organic growth. The interesting abstraction is a closed loop from market signal to executed action, but independent narrative confirmation is absent in this corpus.",
+          "why_it_matters": "The useful distinction is between generating sales or marketing content and continuously sensing, deciding, and acting across a revenue workflow.",
+          "workflow_opportunity": "Test one closed-loop motion—such as inbound qualification or organic-content refresh—with explicit triggers, approvals, CRM writes, attribution, and a measurable revenue or pipeline outcome.",
+          "caveat": "Both observations come from Greylock. Keep this on the watchlist until another publisher or technical source independently supports the category.",
+          "theme_ids": [
+            "ai-native-gtm"
+          ],
+          "evidence_ids": [
+            "greylock-essays:32b264a22d3e04806ae3",
+            "greylock-essays:841d14442685e9cea677"
+          ],
+          "metrics": {
+            "essays": 2,
+            "publishers": 1
+          }
+        }
       ],
       "theme_summary": [
         {
@@ -240,7 +383,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-21T15:49:08.453920+00:00"
+      "updated_at": "2026-09-21T16:37:00.296571+00:00"
     },
     {
       "id": "project-opportunities",

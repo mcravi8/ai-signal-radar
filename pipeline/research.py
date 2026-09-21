@@ -434,6 +434,129 @@ def build_research(
         ),
         key=lambda row: (-row["source_count"], -row["evidence_count"], row["theme_id"]),
     )
+    theme_analysis_by_id = {theme["id"]: theme for theme in themes}
+
+    def narrative_subset(theme_ids: set[str]) -> list[dict[str, Any]]:
+        return [item for item in classified_narrative_items if theme_ids.intersection(item["theme_ids"])]
+
+    def narrative_evidence_ids(theme_ids: set[str], limit: int = 4) -> list[str]:
+        candidates = sorted(
+            narrative_subset(theme_ids),
+            key=lambda item: (item.get("published_at", ""), item["id"]),
+            reverse=True,
+        )
+        selected: list[dict[str, Any]] = []
+        seen_sources: set[str] = set()
+        for item in candidates:
+            if item["source_id"] not in seen_sources:
+                selected.append(item)
+                seen_sources.add(item["source_id"])
+            if len(selected) == limit:
+                break
+        if len(selected) < limit:
+            selected_ids = {item["id"] for item in selected}
+            selected.extend(item for item in candidates if item["id"] not in selected_ids)
+        return [item["id"] for item in selected[:limit]]
+
+    def narrative_stats(theme_ids: set[str]) -> tuple[int, int]:
+        items = narrative_subset(theme_ids)
+        return len(items), len({item["source_id"] for item in items})
+
+    outcome_themes = {"enterprise-vertical-ai", "agent-harnesses", "ai-native-gtm"}
+    assurance_themes = {"assurance-infrastructure"}
+    coding_themes = {"coding-agents"}
+    inference_themes = {"frontier-inference-infrastructure", "model-routing"}
+    physical_themes = {"robotics-embodied-ai", "multimodal-3d"}
+    gtm_themes = {"ai-native-gtm"}
+    outcome_count, outcome_sources = narrative_stats(outcome_themes)
+    assurance_count, assurance_sources = narrative_stats(assurance_themes)
+    coding_count, coding_sources = narrative_stats(coding_themes)
+    inference_count, inference_sources = narrative_stats(inference_themes)
+    physical_count, physical_sources = narrative_stats(physical_themes)
+    gtm_count, gtm_sources = narrative_stats(gtm_themes)
+    assurance_global = theme_analysis_by_id["assurance-infrastructure"]
+    coding_global = theme_analysis_by_id["coding-agents"]
+
+    narrative_findings = [
+        {
+            "id": "workflow-ownership",
+            "strength": "moderate",
+            "label": "Cross-source pattern",
+            "title": "The commercial narrative has moved from copilots to workflow ownership",
+            "analysis": f"{outcome_count} essays across {outcome_sources} publishers describe AI as a workforce, teammate, revenue engine, system of action, autopilot, or employee. The shared product thesis is not a better interface for a human task; it is a bounded system that carries the task from trigger to outcome.",
+            "why_it_matters": "If this framing holds, products will be judged on completed work, exception handling, and measurable operating outcomes—not primarily on model quality or chat experience.",
+            "workflow_opportunity": "Choose one workflow with a clear trigger, handoffs, and completion state. Let an agent execute the routine path, route exceptions to a human, and measure cycle time, intervention rate, and error cost.",
+            "caveat": "The evidence comes from two investors writing about portfolio companies. It is a coherent thesis, not proof of broad customer adoption.",
+            "theme_ids": sorted(outcome_themes),
+            "evidence_ids": narrative_evidence_ids(outcome_themes),
+            "metrics": {"essays": outcome_count, "publishers": outcome_sources},
+        },
+        {
+            "id": "assurance-layer",
+            "strength": "strong",
+            "label": "Strongest narrative consensus",
+            "title": "Assurance is becoming a separate infrastructure layer for agents",
+            "analysis": f"{assurance_count} essays across {assurance_sources} publishers converge on runtime controls: vulnerability discovery, penetration testing, identity, data sovereignty, defensive models, and detection of abnormal agent intent. In the wider radar this theme appears across {assurance_global['source_count']} sources and {assurance_global['support_units']} support units.",
+            "why_it_matters": "As agents gain permission to act, the deployment bottleneck moves from raw capability to whether their behavior can be observed, constrained, investigated, and trusted.",
+            "workflow_opportunity": "Build a reusable assurance wrapper around agent workflows: complete action logs, policy gates, sandbox boundaries, anomaly detection, evaluation suites, and human escalation for high-impact steps.",
+            "caveat": "Most narrative evidence is cybersecurity-focused. General agent governance is a reasoned extension, not yet equally demonstrated across every workflow category.",
+            "theme_ids": sorted(assurance_themes),
+            "evidence_ids": narrative_evidence_ids(assurance_themes),
+            "metrics": {"essays": assurance_count, "publishers": assurance_sources},
+        },
+        {
+            "id": "coding-agent-stack",
+            "strength": "strong",
+            "label": "Corroborated infrastructure thesis",
+            "title": "The coding-agent opportunity is shifting below the assistant interface",
+            "analysis": f"{coding_count} essays across {coding_sources} publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores {coding_global['score']['total']} and appears across {coding_global['source_count']} radar sources.",
+            "why_it_matters": "The durable layer may be the context, execution environment, verification, and operational control that lets agents finish real work—not another chat surface around a frontier model.",
+            "workflow_opportunity": "Prototype a repository task runner that provisions an isolated environment, assembles relevant context, executes the agent, tests the result, and presents a reviewable change with traces and rollback.",
+            "caveat": "The evidence mixes coding, implementation, research, and operations. Their shared infrastructure needs are clearer than a single winning product category.",
+            "theme_ids": sorted(coding_themes),
+            "evidence_ids": narrative_evidence_ids(coding_themes),
+            "metrics": {"essays": coding_count, "publishers": coding_sources},
+        },
+        {
+            "id": "inference-control-plane",
+            "strength": "emerging",
+            "label": "Emerging thesis",
+            "title": "Inference is being productized as a control plane, not a commodity endpoint",
+            "analysis": f"{inference_count} essays across {inference_sources} publishers frame specialized runtimes, inference clusters, and model routing as products in their own right. The common bet is that cost, latency, model selection, and workload fit will require active control rather than a single default provider.",
+            "why_it_matters": "A heterogeneous model market creates value above raw compute: routing, benchmarking, caching, capacity selection, and policy-aware fallback can materially change unit economics and reliability.",
+            "workflow_opportunity": "Instrument one expensive AI workflow across several models and runtimes. Route by task type and service objective, then compare quality, latency, failure rate, and cost per accepted outcome.",
+            "caveat": "This is a small, recent sample. Treat it as a monitored infrastructure thesis, not an established market structure.",
+            "theme_ids": sorted(inference_themes),
+            "evidence_ids": narrative_evidence_ids(inference_themes),
+            "metrics": {"essays": inference_count, "publishers": inference_sources},
+        },
+        {
+            "id": "physical-ai-simulation",
+            "strength": "emerging",
+            "label": "Emerging cross-source pattern",
+            "title": "Physical AI is being organized around world models and simulation before deployment",
+            "analysis": f"{physical_count} essays across {physical_sources} publishers connect spatial world models, robotics, and high-fidelity simulation. The recurring idea is that embodied systems need safe, scalable environments in which to learn, test, and validate before acting in the physical world.",
+            "why_it_matters": "For robotics and physical systems, synthetic experience and validation infrastructure may be a nearer-term enabling layer than a general-purpose robot application.",
+            "workflow_opportunity": "Build domain-specific simulation and evaluation loops that generate edge cases, replay failures, and gate physical deployment against measurable safety and task-performance thresholds.",
+            "caveat": "The signal comes from two publishers and four essays. Commercial timing, transfer from simulation, and deployment economics remain unresolved.",
+            "theme_ids": sorted(physical_themes),
+            "evidence_ids": narrative_evidence_ids(physical_themes),
+            "metrics": {"essays": physical_count, "publishers": physical_sources},
+        },
+        {
+            "id": "ai-native-gtm-watch",
+            "strength": "watch",
+            "label": "Source-specific watch",
+            "title": "AI-native GTM is a named category, but not yet a cross-source conclusion",
+            "analysis": f"{gtm_count} essays from {gtm_sources} publisher describe an AI revenue engine and a system of action for organic growth. The interesting abstraction is a closed loop from market signal to executed action, but independent narrative confirmation is absent in this corpus.",
+            "why_it_matters": "The useful distinction is between generating sales or marketing content and continuously sensing, deciding, and acting across a revenue workflow.",
+            "workflow_opportunity": "Test one closed-loop motion—such as inbound qualification or organic-content refresh—with explicit triggers, approvals, CRM writes, attribution, and a measurable revenue or pipeline outcome.",
+            "caveat": "Both observations come from Greylock. Keep this on the watchlist until another publisher or technical source independently supports the category.",
+            "theme_ids": sorted(gtm_themes),
+            "evidence_ids": narrative_evidence_ids(gtm_themes),
+            "metrics": {"essays": gtm_count, "publishers": gtm_sources},
+        },
+    ]
 
     analyses = [
         {
@@ -471,13 +594,16 @@ def build_research(
             "id": "operator-narratives",
             "title": "Operator and investor narratives",
             "question": "Which categories are being named or framed by startup operators and investors before broad technical corroboration?",
-            "summary": f"Official writing from {', '.join(narrative_source_names)} classified against the same themes as papers, repositories, community discussion, and AlphaSignal. Completion requires at least five active sources with relevant classified evidence.",
+            "summary": f"Official writing from {', '.join(narrative_source_names)} analyzed against the shared taxonomy and compared with the wider evidence base.",
             "status": narrative_status,
             "source_ids": narrative_source_ids,
             "evidence_count": len(classified_narrative_items),
             "corpus_count": len(narrative_items),
             "classified_source_count": len(classified_narrative_source_ids),
             "evidence_ids": [item["id"] for item in classified_narrative_items],
+            "executive_summary": "The corpus does not point to one winning application category. It points to a product architecture: agents own bounded workflows; specialized runtime, context, and infrastructure make them usable; assurance controls make them deployable. Independent agreement is strongest around assurance and coding-agent infrastructure. Inference, physical AI, and AI-native GTM are earlier signals, not established conclusions.",
+            "interpretation_note": "These are narrative signals from investor and operator writing, not market-size or adoption estimates. Counts refer to classified essays and distinct publishers; commercial bias is retained in the source metadata.",
+            "findings": narrative_findings,
             "theme_summary": narrative_theme_summary,
             "coverage_target": 5,
             "updated_at": generated_at,

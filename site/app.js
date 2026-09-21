@@ -204,9 +204,7 @@ function renderAnalysisIndex() {
   }
 }
 
-function analysisHeader(analysis) {
-  const fragment = document.createDocumentFragment();
-  fragment.append(node("span", "detail-kicker", label(analysis.status)), node("h2", "", analysis.title), node("p", "detail-question", analysis.question), node("p", "", analysis.summary));
+function analysisFacts(analysis) {
   const facts = node("dl", "detail-facts");
   const factsList = [
     ["Evidence", formatNumber(analysis.evidence_count)],
@@ -214,10 +212,14 @@ function analysisHeader(analysis) {
     ["Updated", formatDate(analysis.updated_at)],
   ];
   if (analysis.corpus_count !== undefined) factsList.splice(1, 0, ["Corpus items", formatNumber(analysis.corpus_count)]);
-  for (const [term, value] of factsList) {
-    facts.append(node("dt", "", term), node("dd", "", value));
-  }
-  fragment.append(facts);
+  for (const [term, value] of factsList) facts.append(node("dt", "", term), node("dd", "", value));
+  return facts;
+}
+
+function analysisHeader(analysis, includeFacts = true) {
+  const fragment = document.createDocumentFragment();
+  fragment.append(node("span", "detail-kicker", label(analysis.status)), node("h2", "", analysis.title), node("p", "detail-question", analysis.question), node("p", "", analysis.summary));
+  if (includeFacts) fragment.append(analysisFacts(analysis));
   return fragment;
 }
 
@@ -225,7 +227,7 @@ function renderAnalysisDetail() {
   const analysis = state.research.analyses.find((item) => item.id === state.selectedAnalysis) || state.research.analyses[0];
   state.selectedAnalysis = analysis.id;
   const detail = $("#analysis-detail");
-  detail.replaceChildren(analysisHeader(analysis));
+  detail.replaceChildren(analysisHeader(analysis, analysis.id !== "operator-narratives"));
 
   if (analysis.id === "alphasignal-corpus") {
     if (!state.alpha) {
@@ -274,8 +276,56 @@ function renderAnalysisDetail() {
     section.append(rows);
     detail.append(section);
   } else if (analysis.id === "operator-narratives") {
+    const synthesis = node("section", "detail-section narrative-synthesis");
+    synthesis.append(node("h3", "", "Executive synthesis"), node("p", "synthesis-lead", analysis.executive_summary || "No synthesis has been published yet."));
+    if (analysis.interpretation_note) synthesis.append(node("p", "interpretation-note", analysis.interpretation_note));
+
+    const findings = node("section", "detail-section");
+    findings.append(node("h3", "", "Research findings"));
+    const findingList = node("div", "research-findings");
+    const evidenceById = new Map(state.research.evidence.map((item) => [item.id, item]));
+    for (const [index, finding] of (analysis.findings || []).entries()) {
+      const article = node("article", `research-finding finding-${finding.strength || "moderate"}`);
+      const head = node("div", "finding-head");
+      head.append(node("span", "finding-index tabular", String(index + 1).padStart(2, "0")));
+      const title = node("div", "finding-title");
+      title.append(node("span", "finding-label", finding.label), node("h4", "", finding.title));
+      head.append(title, node("span", "finding-metrics tabular", `${finding.metrics.essays} essays · ${finding.metrics.publishers} ${finding.metrics.publishers === 1 ? "publisher" : "publishers"}`));
+
+      const body = node("div", "finding-body");
+      body.append(node("p", "finding-analysis", finding.analysis));
+      const implications = node("div", "finding-implications");
+      for (const [heading, copy] of [["Why it matters", finding.why_it_matters], ["Workflow opportunity", finding.workflow_opportunity], ["Caveat", finding.caveat]]) {
+        const item = node("div", "finding-implication");
+        item.append(node("strong", "", heading), node("p", "", copy));
+        implications.append(item);
+      }
+      body.append(implications);
+
+      const citedEvidence = (finding.evidence_ids || []).map((id) => evidenceById.get(id)).filter(Boolean);
+      if (citedEvidence.length) {
+        const details = node("details", "finding-evidence");
+        details.append(node("summary", "", `${citedEvidence.length} supporting essays`));
+        const rows = node("div", "evidence-list");
+        for (const essay of citedEvidence) {
+          const row = node("article", "evidence-list-item");
+          row.append(linkOrText(essay), node("span", "", `${sourceName(essay.source_id)} · ${formatDate(essay.published_at)}`));
+          rows.append(row);
+        }
+        details.append(rows);
+        body.append(details);
+      }
+      article.append(head, body);
+      findingList.append(article);
+    }
+    if (!findingList.children.length) findingList.append(node("p", "empty-state", "No narrative findings have been published yet."));
+    findings.append(findingList);
+
+    const scope = node("section", "detail-section analysis-scope");
+    scope.append(node("h3", "", "Corpus scope"), analysisFacts(analysis));
+
     const categories = node("section", "detail-section");
-    categories.append(node("h3", "", "Narrative categories"));
+    categories.append(node("h3", "", "Category evidence counts"));
     const categoryRows = node("div", "compact-rows");
     for (const summary of analysis.theme_summary || []) {
       const theme = state.research.themes.find((item) => item.id === summary.theme_id);
@@ -287,7 +337,7 @@ function renderAnalysisDetail() {
     if (!categoryRows.children.length) categoryRows.append(node("p", "empty-state", "No narrative categories are classified yet."));
     categories.append(categoryRows);
     const section = node("section", "detail-section");
-    section.append(node("h3", "", "Recent classified essays"));
+    section.append(node("h3", "", "Recent classified evidence"));
     const rows = node("div", "evidence-list");
     const narrativeEvidenceIds = new Set(analysis.evidence_ids || []);
     const essays = state.research.evidence.filter((item) => narrativeEvidenceIds.has(item.id)).slice(0, 20);
@@ -297,7 +347,7 @@ function renderAnalysisDetail() {
       rows.append(row);
     }
     section.append(rows);
-    detail.append(categories, section);
+    detail.append(synthesis, findings, scope, categories, section);
   } else {
     const section = node("section", "detail-section");
     section.append(node("h3", "", "Highest-priority projects"));
