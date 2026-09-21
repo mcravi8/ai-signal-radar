@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-21T15:41:11.263207+00:00",
+    "generated_at": "2026-09-21T15:49:08.453920+00:00",
     "status": "success",
     "normalized_evidence_count": 875,
     "public_record_count": 840,
@@ -33,7 +33,7 @@
         "radical-ventures"
       ],
       "evidence_count": 875,
-      "updated_at": "2026-09-21T15:41:11.263207+00:00"
+      "updated_at": "2026-09-21T15:49:08.453920+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -66,7 +66,7 @@
         "yc-essays"
       ],
       "evidence_count": 840,
-      "updated_at": "2026-09-21T15:41:11.263207+00:00"
+      "updated_at": "2026-09-21T15:49:08.453920+00:00"
     },
     {
       "id": "operator-narratives",
@@ -84,6 +84,45 @@
       "evidence_count": 37,
       "corpus_count": 94,
       "classified_source_count": 5,
+      "evidence_ids": [
+        "greylock-essays:b2f832aeaa3a7520dce3",
+        "greylock-essays:841d14442685e9cea677",
+        "greylock-essays:effa1418b70e2034c31f",
+        "greylock-essays:95709decf180c923f94e",
+        "greylock-essays:b5d0a493521b25d69daf",
+        "greylock-essays:568bff58c053c7627fd9",
+        "greylock-essays:7ae3d96ba71e4e63c7f2",
+        "greylock-essays:cbdde800c82cd1b1c5e4",
+        "greylock-essays:eccdc18b7206e05d0e7c",
+        "greylock-essays:c7b10bf9696f4b68e41d",
+        "greylock-essays:32b264a22d3e04806ae3",
+        "sequoia-essays:950591afd0b774f7db06",
+        "greylock-essays:d21542f6564a82ff3cf3",
+        "sequoia-essays:9f1197b773225a4e033b",
+        "yc-essays:204ce739063162db8136",
+        "greylock-essays:16bf0805df87e8f7760d",
+        "greylock-essays:46157fce42603f1b75d2",
+        "sequoia-essays:33b279b2aa96ca8cf3dd",
+        "sequoia-essays:bf2824ba4e01a7fceb94",
+        "sequoia-essays:703f99775041cc65de25",
+        "sequoia-essays:17b85daaf71b44ad7742",
+        "greylock-essays:2517cac042b8164a4888",
+        "greylock-essays:c20b6ac7c42eb8c20580",
+        "sequoia-essays:775cb9638e7b090ad2d9",
+        "menlo-ventures:3f0b4d0e045fc978a741",
+        "greylock-essays:da9d5e408f534282b985",
+        "sequoia-essays:afde56cfaaeb81f69523",
+        "menlo-ventures:dfeaba0c266f13ed7f2c",
+        "sequoia-essays:8a2fe18efd08a18eea8c",
+        "radical-ventures:20d1ce473b192f88b82c",
+        "sequoia-essays:c57f2c6dba9448876fb0",
+        "radical-ventures:4e64543f295794b596b4",
+        "menlo-ventures:357c545badf007e3def4",
+        "radical-ventures:002cb1815fb8b4589802",
+        "radical-ventures:f1d373af6ede201d5a8d",
+        "greylock-essays:4db96be55ee28289e4fd",
+        "greylock-essays:aacd57b6bec14e3c9da1"
+      ],
       "theme_summary": [
         {
           "theme_id": "assurance-infrastructure",
@@ -201,7 +240,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-21T15:41:11.263207+00:00"
+      "updated_at": "2026-09-21T15:49:08.453920+00:00"
     },
     {
       "id": "project-opportunities",
@@ -223,7 +262,7 @@
     "as_of": "2026-09-21",
     "window_start": "2026-09-14",
     "previous_window_start": "2026-09-07",
-    "new_public_records": 448,
+    "new_public_records": 447,
     "movements": [
       {
         "theme_id": "training-self-improvement",

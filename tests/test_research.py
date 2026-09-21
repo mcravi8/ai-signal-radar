@@ -62,6 +62,10 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertGreaterEqual(len(analyses["operator-narratives"]["source_ids"]), 5)
         self.assertEqual(analyses["operator-narratives"]["classified_source_count"], 5)
         self.assertTrue(analyses["operator-narratives"]["theme_summary"])
+        narrative_ids = set(analyses["operator-narratives"]["evidence_ids"])
+        narrative_evidence = [item for item in self.payload["evidence"] if item["id"] in narrative_ids]
+        self.assertEqual(len(narrative_evidence), analyses["operator-narratives"]["evidence_count"])
+        self.assertFalse(any(item["title"].casefold().startswith("welcome") for item in narrative_evidence))
         self.assertTrue({"yc-essays", "sequoia-essays", "menlo-ventures", "greylock-essays", "radical-ventures"}.issubset(analyses["operator-narratives"]["source_ids"]))
         self.assertGreater(len(analyses["cross-source-landscape"]["source_ids"]), len(analyses["alphasignal-corpus"]["source_ids"]))
 

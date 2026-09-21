@@ -477,6 +477,7 @@ def build_research(
             "evidence_count": len(classified_narrative_items),
             "corpus_count": len(narrative_items),
             "classified_source_count": len(classified_narrative_source_ids),
+            "evidence_ids": [item["id"] for item in classified_narrative_items],
             "theme_summary": narrative_theme_summary,
             "coverage_target": 5,
             "updated_at": generated_at,

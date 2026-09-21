@@ -289,7 +289,8 @@ function renderAnalysisDetail() {
     const section = node("section", "detail-section");
     section.append(node("h3", "", "Recent classified essays"));
     const rows = node("div", "evidence-list");
-    const essays = state.research.evidence.filter((item) => analysis.source_ids.includes(item.source_id) && item.theme_ids.length).slice(0, 20);
+    const narrativeEvidenceIds = new Set(analysis.evidence_ids || []);
+    const essays = state.research.evidence.filter((item) => narrativeEvidenceIds.has(item.id)).slice(0, 20);
     for (const essay of essays) {
       const row = node("article", "evidence-list-item");
       row.append(linkOrText(essay), node("span", "", `${sourceName(essay.source_id)} · ${formatDate(essay.published_at)} · ${essay.theme_ids.length} matched themes`));
