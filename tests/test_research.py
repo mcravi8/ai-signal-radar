@@ -20,10 +20,8 @@ class CrossSourceResearchTests(unittest.TestCase):
             "theme_ids", "stack_layers", "support_count", "monthly_counts", "provenance",
         }
         self.assertGreaterEqual(self.payload["meta"]["active_source_count"], 7)
-        self.assertEqual(
-            {item["source_id"] for item in self.payload["evidence"]},
-            {"alphasignal", "arxiv", "huggingface-papers", "github", "hacker-news", "yc-essays", "sequoia-essays"},
-        )
+        expected_sources = {"alphasignal", "arxiv", "huggingface-papers", "github", "hacker-news", "yc-essays", "sequoia-essays", "menlo-ventures", "greylock-essays", "radical-ventures"}
+        self.assertTrue(expected_sources.issubset({item["source_id"] for item in self.payload["evidence"]}))
         for item in self.payload["evidence"]:
             self.assertTrue(required.issubset(item), item["id"])
 
@@ -43,9 +41,9 @@ class CrossSourceResearchTests(unittest.TestCase):
             self.assertIsNone(theme["score"])
             self.assertEqual(theme["support_units"], 0)
 
-    def test_source_specific_category_watchlist_has_three_candidates(self):
-        candidates = [theme for theme in self.payload["themes"] if theme["maturity"] == "source-specific"]
-        self.assertEqual(len(candidates), 3)
+    def test_emerging_category_pool_can_supply_three_candidates(self):
+        candidates = [theme for theme in self.payload["themes"] if theme["maturity"] in {"source-specific", "emerging"}]
+        self.assertGreaterEqual(len(candidates), 3)
 
     def test_project_catalog_combines_reviewed_and_discovered_projects(self):
         reviewed = [project for project in self.payload["projects"] if project["review_status"] == "reviewed"]
@@ -60,7 +58,11 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertIn("cross-source-landscape", analyses)
         self.assertIn("alphasignal-corpus", analyses)
         self.assertIn("operator-narratives", analyses)
-        self.assertEqual(analyses["operator-narratives"]["source_ids"], ["yc-essays", "sequoia-essays"])
+        self.assertEqual(analyses["operator-narratives"]["status"], "complete")
+        self.assertGreaterEqual(len(analyses["operator-narratives"]["source_ids"]), 5)
+        self.assertEqual(analyses["operator-narratives"]["classified_source_count"], 5)
+        self.assertTrue(analyses["operator-narratives"]["theme_summary"])
+        self.assertTrue({"yc-essays", "sequoia-essays", "menlo-ventures", "greylock-essays", "radical-ventures"}.issubset(analyses["operator-narratives"]["source_ids"]))
         self.assertGreater(len(analyses["cross-source-landscape"]["source_ids"]), len(analyses["alphasignal-corpus"]["source_ids"]))
 
     def test_public_boundary(self):

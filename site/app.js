@@ -112,12 +112,12 @@ function themeButton(theme, compact = false) {
 function renderOverview() {
   const { meta, weekly, themes, sources } = state.research;
   const structuralTrendCount = state.alpha?.trends.filter((trend) => trend.score?.tier === "Structural").length;
-  const emergingCategoryCount = themes.filter((theme) => theme.maturity === "source-specific").length;
+  const emergingCategoryCount = Math.min(3, themes.filter((theme) => ["source-specific", "emerging"].includes(theme.maturity)).length);
   $("#overview-metrics").replaceChildren(
     metric("Normalized evidence", formatNumber(meta.normalized_evidence_count), `${formatNumber(meta.public_record_count)} direct public records`),
     metric("Active sources", formatNumber(meta.active_source_count), "One shared evidence contract"),
     metric("Structural trends", structuralTrendCount === undefined ? "N/O" : formatNumber(structuralTrendCount), "Reviewed AlphaSignal corpus"),
-    metric("Emerging categories", formatNumber(emergingCategoryCount), "Single-source candidates to validate"),
+    metric("Emerging categories", formatNumber(emergingCategoryCount), "Priority watchlist to validate"),
     metric("Reviewed projects", formatNumber(meta.reviewed_project_count), `${meta.discovered_project_count} discoveries await review`),
     metric("Analyses", formatNumber(state.research.analyses.length), "Cross-source and source-specific"),
   );
@@ -208,11 +208,13 @@ function analysisHeader(analysis) {
   const fragment = document.createDocumentFragment();
   fragment.append(node("span", "detail-kicker", label(analysis.status)), node("h2", "", analysis.title), node("p", "detail-question", analysis.question), node("p", "", analysis.summary));
   const facts = node("dl", "detail-facts");
-  for (const [term, value] of [
+  const factsList = [
     ["Evidence", formatNumber(analysis.evidence_count)],
     ["Sources", analysis.source_ids.map(sourceName).join(" · ")],
     ["Updated", formatDate(analysis.updated_at)],
-  ]) {
+  ];
+  if (analysis.corpus_count !== undefined) factsList.splice(1, 0, ["Corpus items", formatNumber(analysis.corpus_count)]);
+  for (const [term, value] of factsList) {
     facts.append(node("dt", "", term), node("dd", "", value));
   }
   fragment.append(facts);
@@ -272,17 +274,29 @@ function renderAnalysisDetail() {
     section.append(rows);
     detail.append(section);
   } else if (analysis.id === "operator-narratives") {
+    const categories = node("section", "detail-section");
+    categories.append(node("h3", "", "Narrative categories"));
+    const categoryRows = node("div", "compact-rows");
+    for (const summary of analysis.theme_summary || []) {
+      const theme = state.research.themes.find((item) => item.id === summary.theme_id);
+      if (!theme) continue;
+      const row = node("div", "compact-row");
+      row.append(themeButton(theme, true), node("span", "tabular", `${summary.evidence_count} essays`), node("span", "tabular", `${summary.source_count} sources`));
+      categoryRows.append(row);
+    }
+    if (!categoryRows.children.length) categoryRows.append(node("p", "empty-state", "No narrative categories are classified yet."));
+    categories.append(categoryRows);
     const section = node("section", "detail-section");
-    section.append(node("h3", "", "Recent public essays"));
+    section.append(node("h3", "", "Recent classified essays"));
     const rows = node("div", "evidence-list");
-    const essays = state.research.evidence.filter((item) => analysis.source_ids.includes(item.source_id)).slice(0, 20);
+    const essays = state.research.evidence.filter((item) => analysis.source_ids.includes(item.source_id) && item.theme_ids.length).slice(0, 20);
     for (const essay of essays) {
       const row = node("article", "evidence-list-item");
       row.append(linkOrText(essay), node("span", "", `${sourceName(essay.source_id)} · ${formatDate(essay.published_at)} · ${essay.theme_ids.length} matched themes`));
       rows.append(row);
     }
     section.append(rows);
-    detail.append(section);
+    detail.append(categories, section);
   } else {
     const section = node("section", "detail-section");
     section.append(node("h3", "", "Highest-priority projects"));

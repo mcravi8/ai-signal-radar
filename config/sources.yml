@@ -54,6 +54,36 @@ sources:
     source_quality: high
     commercial_bias: disclosed
 
+  - id: menlo-ventures
+    name: Menlo Ventures perspectives
+    channel: investor-essay
+    enabled: true
+    collection: rss
+    feed_url: https://menlovc.com/feed/
+    limit: 30
+    source_quality: high
+    commercial_bias: disclosed
+
+  - id: greylock-essays
+    name: Greylock essays
+    channel: investor-essay
+    enabled: true
+    collection: rss
+    feed_url: https://greylock.com/feed/
+    limit: 40
+    source_quality: high
+    commercial_bias: disclosed
+
+  - id: radical-ventures
+    name: Radical Ventures insights
+    channel: investor-essay
+    enabled: true
+    collection: rss
+    feed_url: https://radical.vc/feed/
+    limit: 30
+    source_quality: high
+    commercial_bias: disclosed
+
   - id: alphasignal
     name: AlphaSignal
     channel: newsletter

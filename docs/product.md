@@ -35,6 +35,8 @@ Recovery promise: failed or partial runs preserve the previous valid public snap
 5. **Evidence:** one filterable normalized corpus across every source.
 6. **Method:** scoring, provenance, privacy boundaries, and limitations.
 
+The operator and investor narrative analysis is complete only when at least five independent official narrative sources are active. Its initial portfolio is YC, Sequoia, Menlo Ventures, Greylock, and Radical Ventures; source count expresses coverage, not quality.
+
 ## Core states
 
 | Surface | Loading | Empty | Partial | Success | Failure/offline |

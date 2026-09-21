@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-21T06:38:18.174908+00:00",
+    "generated_at": "2026-09-21T07:43:44.131867+00:00",
     "status": "success",
-    "source_count": 6,
-    "evidence_count": 707,
+    "source_count": 9,
+    "evidence_count": 795,
     "warnings": []
   },
   "weekly": {
@@ -14,7 +14,7 @@
       "agent-harnesses",
       "coding-agents",
       "open-local-inference",
-      "small-specialized-models"
+      "multimodal-3d"
     ]
   },
   "themes": [
@@ -31,9 +31,17 @@
       "primary_layer": "tools-skills-integrations",
       "lens": "commercialization",
       "maturity": "watchlist",
-      "evidence_count": 0,
-      "source_types": [],
-      "score": null
+      "evidence_count": 2,
+      "source_types": [
+        "investor-essay"
+      ],
+      "score": {
+        "recurrence": 5.0,
+        "acceleration": 0.0,
+        "persistence": 10.0,
+        "breadth": 5.0,
+        "total": 20.0
+      }
     },
     {
       "id": "small-specialized-models",
@@ -102,17 +110,19 @@
         "inference cluster"
       ],
       "primary_layer": "compute-inference-serving",
-      "maturity": "watchlist",
-      "evidence_count": 1,
+      "maturity": "emerging",
+      "evidence_count": 4,
       "source_types": [
-        "paper"
+        "investor-essay",
+        "paper",
+        "repository"
       ],
       "score": {
-        "recurrence": 2.5,
-        "acceleration": 12.0,
-        "persistence": 5.0,
-        "breadth": 5.0,
-        "total": 24.5
+        "recurrence": 10.0,
+        "acceleration": 8.0,
+        "persistence": 15.0,
+        "breadth": 15.0,
+        "total": 48.0
       }
     },
     {
@@ -144,8 +154,9 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 34,
+      "evidence_count": 37,
       "source_types": [
+        "investor-essay",
         "paper",
         "paper-curation",
         "repository"
@@ -154,8 +165,8 @@
         "recurrence": 25.0,
         "acceleration": 25.0,
         "persistence": 25.0,
-        "breadth": 15.0,
-        "total": 90.0
+        "breadth": 20.0,
+        "total": 95.0
       }
     },
     {
@@ -170,18 +181,20 @@
       ],
       "primary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 9,
+      "evidence_count": 17,
       "source_types": [
+        "community",
+        "investor-essay",
         "paper",
         "paper-curation",
         "repository"
       ],
       "score": {
-        "recurrence": 22.5,
+        "recurrence": 25.0,
         "acceleration": 25.0,
-        "persistence": 20.0,
-        "breadth": 15.0,
-        "total": 82.5
+        "persistence": 25.0,
+        "breadth": 25.0,
+        "total": 100.0
       }
     },
     {
@@ -226,9 +239,17 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "models-capabilities",
       "maturity": "watchlist",
-      "evidence_count": 0,
-      "source_types": [],
-      "score": null
+      "evidence_count": 1,
+      "source_types": [
+        "investor-essay"
+      ],
+      "score": {
+        "recurrence": 2.5,
+        "acceleration": 0.0,
+        "persistence": 5.0,
+        "breadth": 5.0,
+        "total": 12.5
+      }
     },
     {
       "id": "training-self-improvement",
@@ -244,9 +265,10 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 88,
+      "evidence_count": 92,
       "source_types": [
         "community",
+        "investor-essay",
         "paper",
         "paper-curation",
         "repository"
@@ -255,8 +277,8 @@
         "recurrence": 25.0,
         "acceleration": 25.0,
         "persistence": 25.0,
-        "breadth": 20.0,
-        "total": 95.0
+        "breadth": 25.0,
+        "total": 100.0
       }
     },
     {
@@ -272,9 +294,10 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 28,
+      "evidence_count": 32,
       "source_types": [
         "community",
+        "investor-essay",
         "paper",
         "paper-curation",
         "repository"
@@ -283,8 +306,8 @@
         "recurrence": 25.0,
         "acceleration": 25.0,
         "persistence": 25.0,
-        "breadth": 20.0,
-        "total": 95.0
+        "breadth": 25.0,
+        "total": 100.0
       }
     },
     {
@@ -326,8 +349,9 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 18,
+      "evidence_count": 21,
       "source_types": [
+        "investor-essay",
         "paper",
         "paper-curation",
         "repository"
@@ -336,8 +360,8 @@
         "recurrence": 25.0,
         "acceleration": 25.0,
         "persistence": 25.0,
-        "breadth": 15.0,
-        "total": 90.0
+        "breadth": 20.0,
+        "total": 95.0
       }
     },
     {
@@ -354,17 +378,18 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 3,
+      "evidence_count": 5,
       "source_types": [
+        "investor-essay",
         "paper",
         "repository"
       ],
       "score": {
-        "recurrence": 7.5,
+        "recurrence": 12.5,
         "acceleration": 12.0,
-        "persistence": 15.0,
-        "breadth": 10.0,
-        "total": 44.5
+        "persistence": 20.0,
+        "breadth": 15.0,
+        "total": 59.5
       }
     },
     {
@@ -381,8 +406,10 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 17,
+      "evidence_count": 19,
       "source_types": [
+        "investor-essay",
+        "operator-essay",
         "paper",
         "paper-curation",
         "repository"
@@ -391,8 +418,8 @@
         "recurrence": 25.0,
         "acceleration": 25.0,
         "persistence": 25.0,
-        "breadth": 15.0,
-        "total": 90.0
+        "breadth": 25.0,
+        "total": 100.0
       }
     },
     {
@@ -436,17 +463,18 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 5,
+      "evidence_count": 6,
       "source_types": [
+        "investor-essay",
         "paper",
         "repository"
       ],
       "score": {
-        "recurrence": 12.5,
+        "recurrence": 15.0,
         "acceleration": 24.0,
-        "persistence": 15.0,
-        "breadth": 10.0,
-        "total": 61.5
+        "persistence": 20.0,
+        "breadth": 15.0,
+        "total": 74.0
       }
     },
     {
@@ -461,17 +489,18 @@
       ],
       "primary_layer": "tools-skills-integrations",
       "lens": "enterprise-adoption",
-      "maturity": "watchlist",
-      "evidence_count": 1,
+      "maturity": "emerging",
+      "evidence_count": 12,
       "source_types": [
+        "investor-essay",
         "paper-curation"
       ],
       "score": {
-        "recurrence": 2.5,
+        "recurrence": 25.0,
         "acceleration": 0.0,
-        "persistence": 5.0,
-        "breadth": 5.0,
-        "total": 12.5
+        "persistence": 25.0,
+        "breadth": 10.0,
+        "total": 60.0
       }
     },
     {
@@ -511,623 +540,22 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
-      "maturity": "watchlist",
-      "evidence_count": 1,
+      "maturity": "emerging",
+      "evidence_count": 3,
       "source_types": [
+        "investor-essay",
         "paper"
       ],
       "score": {
-        "recurrence": 2.5,
-        "acceleration": 12.0,
-        "persistence": 5.0,
-        "breadth": 5.0,
-        "total": 24.5
+        "recurrence": 7.5,
+        "acceleration": 20.0,
+        "persistence": 10.0,
+        "breadth": 10.0,
+        "total": 47.5
       }
     }
   ],
   "evidence": [
-    {
-      "id": "arxiv:2609.20822v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-      "url": "http://arxiv.org/abs/2609.20822v1",
-      "published_at": "2026-09-17T17:59:58Z",
-      "summary": "Coding agents have emerged as a promising paradigm for robot manipulation: a language model writes the robot controller as a program, and agents built in this way now operate robots without robot-specific training.Whether this paradigm is also safe, however, has not been asked. We evaluate coding agent under a safety constraint, where each task pairs a manipulation goal with an obstacle the robot must not touch. The agent pursues the goal but collides with the obstacle in most cases, treating task completion as its sole objective while neglecting safety. The agent reasons about the obstacle in its traces, and the prompt already forbids touching it, so neither perception nor instruction is at fault; the fault lies in the planning, where the stated constraint never becomes a priority. By decomposing manipulation into a route phase and a contact-rich moment, we locate the source of the failure. Along the route, the model cannot prioritize the safety constraint, having no notion of a clearing route and none of replanning once a chosen route becomes infeasible. At the contact, it is unaware that contact execution is bounded by the same constraint. To close this gap, we present SafeHarne",
-      "authors": [
-        "Bingxin Xu",
-        "Yuzhang Shang",
-        "Zhen Dong",
-        "Emilio Ferrara"
-      ],
-      "tags": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ]
-    },
-    {
-      "id": "hn:49746346",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Snapdrop: Instantly share files between devices. No setup, no signup",
-      "url": "https://snapdrop.me",
-      "published_at": "2026-09-17T20:48:04+00:00",
-      "summary": "",
-      "authors": [
-        "Capira"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49748041",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Scry, programmable internet search w/ congestion pricing",
-      "url": "https://scry.io/",
-      "published_at": "2026-09-17T23:15:57+00:00",
-      "summary": "Meet Scry, a 500 TB NVMe internet index in ClickHouse that you can run ~arbitrary readonly SQL and some of Datalog over, and I handle the problem of resource-contention with congestion-based micro-auction pricing. When there&#x27;s capacity, the service is free for non-commercial use.<p>---<p>Hello. It&#x27;s 2026, we&#x27;re training simulated fruit fly brains to play Beat Saber, do we still have to be stuck with internet (re)search as fn: natural language -&gt; black box we can&#x27;t do anything about -&gt; ranked_list&#x2F;summary?<p>There is a long history of people trying to do very fancy things that end up being done in relational databases and a little SQL. There is a gravity to them, a bitter lesson, just like scaling of generalized ml training methods. I mean many, many information products can be built off essentially giant real-time OLAP databases and frontier LLMs writing brilliant SQL+Datalog+vector+Jev etc. queries.<p>Google Search, Tavily, Exa essentially have the problem of <i>mapping</i> your agents&#x27; context you are willing to provide, to a tiny subset of their index. You pay a fixed cost to an extremely hard problem that has a distribution of hardness, which",
-      "authors": [
-        "Xyra"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49748553",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-      "url": "https://cactuscompute.com/needle",
-      "published_at": "2026-09-18T00:11:44+00:00",
-      "summary": "Hey HN, Henry from Cactus here.<p>We submitted Needle 2 here a few weeks ago, and the feedback in the discussion thread was incredibly valuable, thanks! Thanks to all that feedback, we’ve been able to move quickly to release Needle 3 and I&#x27;d love to hear what you think again.<p>The key features:<p>1) Automation (tool calls &amp; structured JSON output): Needle still doesn&#x27;t chat by design, its quite challenging to pack general capacity into such small models, so we focus on tool calls and structured JSON. If no tool you declared fits the request, you get an empty list back (note for when playing with the demo).<p>2) Intelligence Laddering: Every layer (2 to 20) is a deployable subnetwork, so one set of weights, 25 to 121 million parameters at 2-bit, shipping as 8-29MB binaries. On a Raspberry Pi 5 it decodes at up to 4k tokens&#x2F;sec and prefills at up to 10k.<p>3) Monarch Hadamard MLP: replaces the dense FFN with three learnable Walsh-Hadamard-initialized Kronecker (Monarch) factor pairs interleaved with per-channel diagonal scales, fixed permutations, a SiLU nonlinearity, and a rank-8 input-conditioned gate, so each token gets a fully mixed nonlinear transform of its ",
-      "authors": [
-        "HenryNdubuaku"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "github:1375397100",
-      "source_id": "github",
-      "source_type": "repository",
-      "title": "wfzyx/von",
-      "url": "https://github.com/wfzyx/von",
-      "published_at": "2026-09-18T05:03:47Z",
-      "summary": "The open-source System One decision model. Sub-15ms, non-autoregressive, local drop-in alternative to TypeSafe Jev.",
-      "authors": [
-        "wfzyx"
-      ],
-      "tags": [
-        "decision-model",
-        "jev",
-        "machine-learning",
-        "python",
-        "rlcd",
-        "system-one",
-        "typesafe"
-      ],
-      "projects": [
-        "wfzyx/von"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "github:1375694187",
-      "source_id": "github",
-      "source_type": "repository",
-      "title": "cobanov/awesome-jev",
-      "url": "https://github.com/cobanov/awesome-jev",
-      "published_at": "2026-09-18T10:12:18Z",
-      "summary": "A curated, source-backed list of projects built with Jev, TypeSafe AI's System One model for typed decisions.",
-      "authors": [
-        "cobanov"
-      ],
-      "tags": [
-        "ai-agents",
-        "awesome",
-        "awesome-list",
-        "confidence-aware-ai",
-        "decision-intelligence",
-        "jev",
-        "llm-guardrails",
-        "model-routing",
-        "open-source",
-        "structured-output",
-        "system-one-models",
-        "typesafe-ai"
-      ],
-      "projects": [
-        "cobanov/awesome-jev"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49753131",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Cekura (YC F24) Is Hiring",
-      "url": "https://www.ycombinator.com/companies/cekura-ai/jobs/AiWwUxI-forward-deployed-engineer-us",
-      "published_at": "2026-09-18T12:00:10+00:00",
-      "summary": "",
-      "authors": [
-        "atarus"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21667v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "From Code Archival to Knowledge Graph: Bridging Software Heritage, COAR Notify and Wikidata",
-      "url": "http://arxiv.org/abs/2609.21667v1",
-      "published_at": "2026-09-18T12:03:19Z",
-      "summary": "Software is a first-class scientific object, yet validated links between source code and the scholarly record remain largely absent from the Linked Open Data (LOD) cloud, isolating archived artefacts from semantic discovery. This paper presents an end-to-end reconciliation pipeline that harvests, validates, and models publication-to-repository pairs from sources where the link between a paper and its source code is explicit and editorially verified: the software-centric journals JOSS, SoftwareX, and IPOL, together with the reproducibility reports of the SIGMOD Availability and Reproducibility Initiative (ARI). This yields a curated corpus of 4,397 $\\langle$DOI, repository-URL$\\rangle$ pairs. We design two distinct application profiles grounded in Wikidata classes (one for scholarly articles, one for software instances) aligned with the schema.org and CodeMeta vocabularies. This architectural separation enables rule-based reconciliation at two granularities: lightweight, inline publication references or standalone, first-class Wikidata software nodes equipped with SWHIDs, Software Heritage's content-addressed identifiers. A read-only lookup against Wikidata shows that only 82 of the",
-      "authors": [
-        "Camillo Carlo Pellizzari di San Girolamo",
-        "Francesco Tosoni"
-      ],
-      "tags": [
-        "cs.DL",
-        "cs.AI",
-        "cs.SE"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "document-knowledge-systems",
-        "operational-ontology"
-      ]
-    },
-    {
-      "id": "arxiv:2609.21672v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
-      "url": "http://arxiv.org/abs/2609.21672v1",
-      "published_at": "2026-09-18T12:08:31Z",
-      "summary": "Large language models (LLMs) achieve strong performance but suffer from slow and costly inference. Existing acceleration methods often lead to noticeable performance degradation, while Mixture-of-Experts (MoE) models require extensive computational resources. In this paper, we propose L0-MoE, a lightweight MoE approach using L0-regularization to accelerate dense LLMs nearly without performance loss. Our method introduces a cluster confusion matrix for domain-aware dataset curation and applies dynamic batching for efficient training. Experiments show that L0-MoE achieves up to 2.5x speedup over dense models while maintaining competitive performance, outperforming existing LLM acceleration baselines.",
-      "authors": [
-        "Zhenyu Zhang",
-        "Jiudong Yang",
-        "Zhaowen Tao",
-        "Meng Chen"
-      ],
-      "tags": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21673v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "PRISM-BN: A Controlled Corpus and Benchmark for Text-to-Parameterized Bayesian Network Extraction",
-      "url": "http://arxiv.org/abs/2609.21673v1",
-      "published_at": "2026-09-18T12:09:20Z",
-      "summary": "Probabilistic Graphical Models (PGMs), especially Bayesian Networks (BNs), expose directed structure and probabilistic parameters, making them natural symbolic targets for neurosymbolic AI. Yet training text-to-parameterized-BN systems requires paired text-to-BN resources unavailable at scale. We introduce PRISM-BN, a controlled corpus of 5054 BN-grounded descriptions paired with discrete reference BNs containing variables, states, directed edges, root priors, and full multi-parent CPDs across five domains. The instances are derived from 50 Wikipedia-seeded backbones, and their probabilities are internally constructed benchmark targets rather than externally validated causal estimates. PRISM-BN is built with PRISM, a marginal-first pipeline that elicits marginal and local joint distributions, analytically recovers normalized CPDs, and constructs locally reparameterized subgraphs. We define a benchmark with semantic node and state alignment, conditional structural scoring, and strict full-CPD evaluation. Across six LLM extractors, Node F1 ranges from 0.56 to 0.83, conditional Edge F1 from 0.90 to 0.97, and CPD-KL from 1.11 to 3.14. Conditional state and edge recovery remain consiste",
-      "authors": [
-        "Amartya Bhattacharya",
-        "Nikhil Singh",
-        "Neeti Pokhriyal",
-        "Soroush Vosoughi"
-      ],
-      "tags": [
-        "cs.CL"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "training-self-improvement"
-      ]
-    },
-    {
-      "id": "arxiv:2609.21676v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "The Spoken Wikipedia Presentation Corpus",
-      "url": "http://arxiv.org/abs/2609.21676v1",
-      "published_at": "2026-09-18T12:13:06Z",
-      "summary": "We present the Spoken Wikipedia Presentation Corpus, an extension of the Spoken Wikipedia Corpora featuring LLM-generated slide decks for multimodal ASR. Slides are created from LLM-segmented sections using a hybrid pipeline that combines LLM-based content planning with rule-based design decisions. For each section, an LLM generates a slide title, bullet points, a takeaway message, and a visual description that is used to create an illustration. Rule-based matching then selects layouts, themes, and styles to produce the final slides. A vision LLM extracts slide text as Markdown. We evaluate multiple ASR and spoken language models (SLMs). The best model achieves an average micro-WER of 10.23% and an average micro-CER of 6.48% on audio-only inputs. English yields the lowest error rates, followed by German and Dutch, while performance declines across lower-resource languages. Although audio-only baselines are strong, multimodal zero-shot prompting of omni models remains challenging. The aligned slide, text, and audio data show a strong potential to improve recognition through cross-modal context.",
-      "authors": [
-        "Thomas Ranzenberger",
-        "Steffen Freisinger",
-        "Tobias Bocklet",
-        "Korbinian Riedhammer"
-      ],
-      "tags": [
-        "eess.AS",
-        "cs.CL",
-        "cs.MM",
-        "cs.SD"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "arxiv:2609.21677v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "GUARD: Natural Forgetting in Large Reasoning Models via Guided Answer-Reasoning Distillation",
-      "url": "http://arxiv.org/abs/2609.21677v1",
-      "published_at": "2026-09-18T12:13:24Z",
-      "summary": "Recent advances in large reasoning models (LRMs) have made machine unlearning more challenging, as protected facts or unsafe rationales may surface in intermediate chain-of-thought (CoT) traces before the final answer is produced. Existing unlearning objectives typically suppress the target content or redirect internal representations, but they never specify how the post-forgetting trajectory should continue, which can lead to hallucinated substitutes, malformed boundaries, or repetitive outputs. We argue that LRM unlearning should instead learn a natural forgetting trajectory: a coherent non-disclosing CoT followed by a stable refusal-style answer that replace the original disclosure. To this end, we propose Guided Answer-Reasoning Distillation (GUARD), which converts model-generated unsafe disclosures into safe-exit trajectories, aligns a frozen LRM via guidance tokens, and distills the guided behavior into model parameters.To address the lack of metrics for replacement quality beyond leakage, we further introduce Natural Forgetting Reasoning Score (NFRS), which captures structural stability, fluency, and unsupported substitutes in forgotten outputs. Extensive experiments on R-TO",
-      "authors": [
-        "Zeyu Yan",
-        "Guanghao Zhou",
-        "Minghui Qiu",
-        "Ming Gao",
-        "Cen Chen"
-      ],
-      "tags": [
-        "cs.AI"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "arxiv:2609.21683v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Listen Before You Speak: Response Planning from Listener Facial Reactions for Conversational Speech Generation",
-      "url": "http://arxiv.org/abs/2609.21683v1",
-      "published_at": "2026-09-18T12:18:16Z",
-      "summary": "Conversational speech depends on dialogue context and the listener's immediately preceding behavior. We propose ReACT-TTS, a two-stage framework that uses a one-second pre-response listener facial sequence to plan the next utterance's emotion and prosody before speech realization. On a strict dyadic MELD protocol, Temporal conditioning yields higher mean macro-F1 and VAD concordance than Text-only across ten seeds, while accuracy remains essentially unchanged. Ablations show that temporal modeling performs best among the visual variants and that an explicit early-to-late difference is unnecessary; correct listener reactions also outperform cyclic mismatches on average. In a contextual-appropriateness study with 20 speech researchers, 76% of judgments prefer Temporal, 9% Text-only, and 15% report no preference. We further connect the predicted response style to a Grad-TTS backbone for end-to-end speech realization. Overall, the results support pre-response listener dynamics as complementary cues for conversational response planning. The source code is available at https://github.com/CYJ1/ReACT-TTS_public.",
-      "authors": [
-        "Yunji Chu"
-      ],
-      "tags": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CV",
-        "cs.SD"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21686v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "CIPL: A Channel-Aware Framework for Recoverable Privacy Leakage in LLM Agents",
-      "url": "http://arxiv.org/abs/2609.21686v1",
-      "published_at": "2026-09-18T12:23:41Z",
-      "summary": "Privacy leakage in LLM agents is commonly evaluated within individual components such as memory, retrieval, or tool-use pipelines, which makes it difficult to distinguish internal exposure from information that an external observer can actually recover. We present CIPL (Channel Inversion for Privacy Leakage), a channel-aware evaluation framework for black-box privacy leakage in LLM agents. CIPL represents a target through sensitive source, selection, assembly, execution, observation, and extraction stages and evaluates the transition from selected sensitive units to attacker-recoverable output under a shared protocol. Experiments across memory-based, retrieval-mediated, and tool-mediated targets, together with a BrowserUse live-agent case study, show that storage labels alone do not determine recoverability. Memory targets form a near-saturated reference case, retrieval-mediated leakage is frequently partial, and tool-mediated and live-agent leakage varies strongly with observation surface, prompt-to-channel alignment, retrieval depth, and provider behavior. A stratified semantic audit further identifies attacker-useful disclosures that canonical exact matching misses. CIPL therefo",
-      "authors": [
-        "Tao Huang",
-        "Guosen Wu",
-        "Guolong Zheng",
-        "Jiayang Meng",
-        "Chen Hou",
-        "Xu Yang",
-        "Xuechao Yang",
-        "Feng Xia"
-      ],
-      "tags": [
-        "cs.CR",
-        "cs.AI"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21693v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Optimization Geometry of Equivalent Brownian RKHS Representations",
-      "url": "http://arxiv.org/abs/2609.21693v1",
-      "published_at": "2026-09-18T12:28:20Z",
-      "summary": "Equivalent finite parameterizations can represent the same functions and intrinsic norm yet induce different optimization algorithms. We study this effect in a controlled finite Brownian RKHS with nodal, increment, and spectral coordinates. Classical finite-element, RKHS-interpolation, Brownian-covariance, and mixed-boundary DCT identities make the shared hypothesis class, Brownian energy, approximation operator, and coordinate maps explicit. Our main results concern the optimization geometry of this fixed model. With mapped initialization, identical scalar steps, and identical minibatches, nodal and spectral GD/SGD have exactly the same mapped trajectories. Increment GD is an explicit Euler step for the constant Brownian/Sobolev metric, with factor $1/h$. For Brownian-regularized least squares, $κ_2(\\mathbf H_{\\mathrm{inc}})\\le1+A/ρ$, independently of grid resolution $G$ for fixed $A$, $ρ>0$, and the stated normalization. Under the stated standard-Adam convention, the universal orthogonal equivariance group is exactly the signed permutations; the block DCT-VIII transform is not one. Float64 tests over five grids numerically verify the finite identities, mapped one-layer and recurs",
-      "authors": [
-        "Mahdi Mohammadigohari",
-        "Gustau Camps-Valls"
-      ],
-      "tags": [
-        "cs.LG"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21694v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Bayesian classification of astronomical spectra with class uncertainties",
-      "url": "http://arxiv.org/abs/2609.21694v1",
-      "published_at": "2026-09-18T12:28:56Z",
-      "summary": "Context: We developed a probabilistic machine learning method with the aim of performing the O(10)-way classification of low- and high-resolution spectra of stellar and extragalactic targets for the upcoming 4MOST survey. In fulfilment of the survey requirements, this method should be able to express uncertainty in the input data as well as uncertainty introduced in its prediction. Aims: Four different methods are explored: (1) convolutional neural networks (CNNs), (2) the Dirichlet distribution, (3) Monte Carlo dropout (MCD), (4) Bayesian neural Networks (BNNs) + variational inference (VI). Training and validation was performed using labelled spectra from the SDSS database and a custom 4MOST mock dataset. All the methods were compared in terms of the same metrics: accuracy, area under the curve (AUC), expected calibration error (ECE), Shannon entropy, negative log-likelihood (NLL), Brier score, training time, and inference time. Methods: A CNN with simple architecture and about 20,000 parameters was trained to achieve classification accuracies of 91.5% on SDSS data and 92.8% on 4MOST mock data. The direct Dirichlet prediction and VI models tested provide uncertainties on class mem",
-      "authors": [
-        "Simon Barton",
-        "Martin Sahlén",
-        "Andreas Korn",
-        "Christian Glaser"
-      ],
-      "tags": [
-        "astro-ph.IM",
-        "cs.LG",
-        "physics.data-an"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21697v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Integrating Approximate Logic Synthesis into Approximate High-Level Synthesis",
-      "url": "http://arxiv.org/abs/2609.21697v1",
-      "published_at": "2026-09-18T12:34:23Z",
-      "summary": "Approximate high-level synthesis (HLS) and approximate logic synthesis (ALS) are two techniques for generating approximate circuits. They operate at different granularities. Approximate HLS typically modifies instructions in a control and data flow graph, whereas ALS modifies gates and interconnects in a gate-level netlist. The absence of a unified framework combining these techniques limits the potential for joint optimization. To bridge this gap, we propose to integrate ALS into the flow of approximate HLS. This integration expands the design space of approximate HLS by introducing fine-grained approximation induced by ALS, thereby generating approximate circuits with higher quality. Experimental results show that under the same error bound, our method reduces the hardware cost by 11% on average compared to the state-of-the-art methods.",
-      "authors": [
-        "Jian Shi",
-        "Ruicheng Dai",
-        "Chang Meng",
-        "Yue Yang",
-        "Weikang Qian"
-      ],
-      "tags": [
-        "cs.AR"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21704v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "SpecQuant: Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference",
-      "url": "http://arxiv.org/abs/2609.21704v1",
-      "published_at": "2026-09-18T12:39:47Z",
-      "summary": "Running large language models (LLMs) locally continues to be limited by restrictions of compute and memory on consumer hardware. The popular acceleration technologies, such as quantization, speculative decoding, and adaptive inferencing, offer substantial speed boosts but usually necessitate retraining, per architecture tuning, or draft models. SpecQuant is a trainingfree framework, that combines speculative decoding with multiparent quantization to perform adaptive, efficient inference of LLMs. SpecQuant derives multiple quantized variants (INT4, FP8, FP16) from a shared base model, and dynamically routes queries based on predicted complexity; lightweight variants are used for simple or factual tasks, and full-precision models are used for complex reasoning tasks or long-context inputs. The shared-weight design of SpecQuant ensures sufficient token acceptance for speculative decoding without compatibility issues using separate draft parent models. We evaluate SpecQuant on Qwen2.5 based models on the MMLU, AlpacaEval, and GSM8K datasets, or benchmarks, demonstrating 35-43% speedups without degrading accuracy greater than 2%, substantial within the LLM community. SpecQuant enables p",
-      "authors": [
-        "Harish KB",
-        "Jagadeeswaran M",
-        "Pradheep P",
-        "Yuvanesh S",
-        "Sivakumar T"
-      ],
-      "tags": [
-        "cs.LG"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "open-local-inference",
-        "training-self-improvement"
-      ]
-    },
-    {
-      "id": "hn:49753579",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Does this mean it's fine to use Claude subscriptions with third party harnesses?",
-      "url": "https://news.ycombinator.com/item?id=49753579",
-      "published_at": "2026-09-18T12:40:16+00:00",
-      "summary": "I&#x27;ve been curious about using a claude subscription with OpenCode, Pi and some other third party harnesses.<p>If you remember, there was a lot of chatter about a ban on third party harnesses and then Claude have had some pretty confusing messaging about it since.<p>I thought I should read the information they have on it and came across this page on their support site:<p>&quot;Update June 15: We&#x27;re pausing the changes to Claude Agent SDK usage described below. For now, nothing has changed: Claude Agent SDK, claude -p, and third-party app usage still draw from your subscription&#x27;s usage limits. The previously announced monthly credit, which would have been available to eligible claimants in connection with these changes, isn&#x27;t available. We’re working to update the plan to better support how users build with Claude subscriptions. When we have an update, we&#x27;ll share it before anything takes effect.&quot;<p>https:&#x2F;&#x2F;support.claude.com&#x2F;en&#x2F;articles&#x2F;15036540-use-the-claude-agent-sdk-with-your-claude-plan<p>Is it right that it is currently fine to use your claude subscription with opencode, pi, openclaw or any third party harness?<p>If so, wh",
-      "authors": [
-        "jakemanger"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21713v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "TERMon: Detecting Persistent Behavioral Threats in Edge AI via Hardware-Native Ternary Runtime Monitor",
-      "url": "http://arxiv.org/abs/2609.21713v1",
-      "published_at": "2026-09-18T12:49:50Z",
-      "summary": "Edge AI accelerators are increasingly deployed in safety-critical environments, where model outputs may control physical actuators, make access-control decisions, or trigger alarms. In these settings, runtime failures often remain undetected because model corruption, distribution shift, and adversarial inputs can still produce well-formed, confident predictions. This paper presents TERMon, a lightweight hardware runtime monitor that detects such anomalies by observing inference behavior rather than re-executing or formally verifying the model. TERMon represents class-conditional trusted behavior as hardware-efficient ternary patterns that are matched in parallel against a thermometer-encoded fingerprint. The ternary encoding reproduces the corresponding unquantized range decision exactly. TERMon detects harmful weight corruptions in proportion to their behavioral impact, while out-of-distribution and adversarial inputs are largely not separable using the monitored features at a strict false-positive operating point. We implemented TERMon on a PYNQ-Z2 FPGA, and the pipelined design requires no on-chip block RAM or DSPs and has a two-cycle decision latency.",
-      "authors": [
-        "Arish Sateesan",
-        "Edlira Dushku"
-      ],
-      "tags": [
-        "cs.CR",
-        "cs.AI"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "open-local-inference"
-      ]
-    },
-    {
-      "id": "arxiv:2609.21717v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "A Framework to Quantify the Probability of Future Cyber Loss Events",
-      "url": "http://arxiv.org/abs/2609.21717v1",
-      "published_at": "2026-09-18T12:53:22Z",
-      "summary": "Cybersecurity risk quantification remains challenging due to limited operational data and difficulties in quantifying Loss Event Frequency (LEF). This paper introduces the Loss Event Frequency Security Analyser (LEFSA), a probabilistic framework that reformulates LEF estimation as machine-level Cyber Loss Event (CLE) prediction combined with hierarchical infrastructure-level aggregation. LEFSA estimates calibrated machine-level CLE probabilities from operational cybersecurity telemetry and aggregates them across infrastructure layers while accounting for machine-level dependencies. This provides a foundation for scalable, explainable, and operationally applicable cyber risk estimation at the level of machines, services, business processes, and the entire organization. The framework was evaluated using proprietary Managed Detection & Response telemetry from 23 organizations using Microsoft Defender for Endpoint. XGBoost achieved the strongest predictive performance, with a mean area under the receiver operating characteristic curve of 0.90 and consistently low calibration error across evaluation periods. The results demonstrate that operational cybersecurity telemetry contains subst",
-      "authors": [
-        "Siem Peters",
-        "Martin Eian"
-      ],
-      "tags": [
-        "cs.CR",
-        "stat.AP"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21722v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "CIBuzzBench: A Benchmark for Cross-Lingual Understanding of Chinese Internet Buzzwords",
-      "url": "http://arxiv.org/abs/2609.21722v1",
-      "published_at": "2026-09-18T12:57:10Z",
-      "summary": "Chinese social media has generated a vast and continually evolving lexicon of internet buzzwords whose meanings are often non-literal and deeply rooted in local cultural and pragmatic contexts. Existing research has primarily focused on interpreting these buzzwords within Chinese, leaving largely unexplored whether LLMs can transfer such culturally grounded knowledge across languages and accurately convey the intended meanings in English. This cross-lingual capability is also critical for safety, as harmful expressions may obscure their offensive content through culture-specific homophony, euphemism, irony, or coded language. In this paper, we investigate the ability of advanced LLMs to understand Chinese internet buzzwords across languages. To this end, we introduce CIBuzzBench, the first benchmark for cross-lingual Chinese-to-English understanding of Chinese internet buzzwords. CIBuzzBench comprises 3,001 Chinese internet buzzwords annotated with English meaning explanations, English equivalents, category labels, and harmfulness labels. Based on these annotations, we design three evaluation tasks: Meaning Explanation, Cross-lingual Equivalent Matching, and Culturally Grounded Har",
-      "authors": [
-        "Yifan Wang",
-        "Junyu Lu",
-        "Qifan Wang",
-        "Shun Zhang",
-        "Chaozhuo Li",
-        "Jiahao Liu",
-        "Zhijun Cao",
-        "Lingbin Bu",
-        "Fanliang Bu"
-      ],
-      "tags": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "training-self-improvement"
-      ]
-    },
-    {
-      "id": "arxiv:2609.21728v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Verifiable Computation with Trusted Execution Environments and On-Chain Digital Rights Tokens",
-      "url": "http://arxiv.org/abs/2609.21728v1",
-      "published_at": "2026-09-18T13:05:29Z",
-      "summary": "We present an architecture that enables data owners to combine private data into data pools using Trusted Execution Environments (TEEs) and manage these pools by issuing narrowly scoped computational rights, encoded as Digital Rights Tokens (DRTs), to third-party data analysts. Each DRT binds specific open-source code to a pool and is issued and redeemed on a distributed ledger. Data analysts can obtain the right to execute open-source code on the combined sealed data inside a TEE and receive the result from this code execution, but not the underlying data. We argue for a control-centric view of privacy in which creators retain ex ante control over how their data is processed. A reference implementation runs WebAssembly (WASM)/Python jobs over sealed datasets and records redemptions on Solana, illustrating the feasibility and limitations of the platform.",
-      "authors": [
-        "Bingle Stegmann Kruger",
-        "Co-Pierre Georg"
-      ],
-      "tags": [
-        "cs.CR",
-        "cs.DC"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21735v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "GEM-MPC: Balancing Exploration and Exploitation through Expert-Guided Planning",
-      "url": "http://arxiv.org/abs/2609.21735v1",
-      "published_at": "2026-09-18T13:14:39Z",
-      "summary": "Effective exploration in high-dimensional continuous control remains a central challenge in reinforcement learning. Planning-based methods address this by combining online planning with learned policies and value functions, but their components can become misaligned during training: learned sampling policies may diverge from planner behavior, while planning distributions stored in replay become stale as the model and value function evolve. Reanalysis can refresh these targets, but at substantial computational cost. We propose GEM-MPC, an MPPI-based reinforcement learning method that improves the interaction between planning and learning. GEM-MPC uses MPPI to combine a policy trained to clone the planner with a KL-regularized policy that explores around it, providing complementary exploitation and guided exploration within planning. We further introduce Gated Prior Distillation, which selectively learns from stored planning distributions only when they provide a better target than the current prior, reducing the impact of stale planning data without requiring full reanalysis. Across continuous-control benchmarks, GEM-MPC consistently outperforms existing planning-based baselines und",
-      "authors": [
-        "Alvaro Serra-Gomez",
-        "Thomas Moerland"
-      ],
-      "tags": [
-        "cs.LG"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models",
-        "training-self-improvement"
-      ]
-    },
-    {
-      "id": "arxiv:2609.21743v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Balanced Prompt Adaptation against Entropy-Induced Collapse for Test-Time Binary Segmentation",
-      "url": "http://arxiv.org/abs/2609.21743v1",
-      "published_at": "2026-09-18T13:18:39Z",
-      "summary": "Entropy minimization is a standard objective for test-time adaptation (TTA), but it can fail in imbalanced binary segmentation. Unlike image classification, dense segmentation aggregates thousands of pixel predictions, allowing the larger predicted class to dominate the update, pull minority predictions toward itself, and produce a degenerate mask as predictions saturate and their entropy gradients vanish. We theoretically establish this collapse in a shared-shift model. This analysis motivates Balanced-Anchor Prompt Adaptation (BAPA), which combines two complementary modules. The Class-Balanced Anchors (CBA) module selects high-confidence anchors separately from each predicted class and gives foreground and background equal total loss weight, preventing the larger region from dominating the update. Dynamic Prompt Adaptation (DPA) refreshes these anchors after each prediction update and optimizes only text-side prompt residuals while keeping the vision-language encoders frozen. This prompt-only update refines the foreground-background decision boundary without altering the pretrained dense visual representation. Across experiments from four domains, BAPA achieves the highest mean D",
-      "authors": [
-        "Zhengshan Wang",
-        "Joshua Charles Webster-Ford",
-        "Yifei Tian",
-        "Xinxin Wang",
-        "Long Chen",
-        "Weiping Ding"
-      ],
-      "tags": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21747v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "Single-Loop Stochastic Projected Damped Extragradient Methods for Stochastic Nonconvex--(Strongly) Concave Minimax Optimization",
-      "url": "http://arxiv.org/abs/2609.21747v1",
-      "published_at": "2026-09-18T13:24:01Z",
-      "summary": "We develop single-loop stochastic projected damped extragradient methods for stochastic nonconvex--(strongly) concave minimax optimization, with complexity guarantees for both game stationarity (GS) and optimization stationarity (OS). Our approach combines a stochastic projected damped extragradient (SPDE) method with a recursive variance-reduced variant, VR-SPDE, both of which retain a single-loop structure. Under an unbiased stochastic gradient oracle with uniformly bounded variance, SPDE finds an $\\varepsilon$-game-stationary point with stochastic first-order oracle (SFO) complexities of $O(κ\\varepsilon^{-4})$ and $O(\\varepsilon^{-5})$ in the nonconvex--strongly concave and nonconvex--concave settings, respectively, where $κ=L/μ$. Under an additional mean-square Lipschitz condition on the stochastic gradients, VR-SPDE improves these GS complexities to $O(κ^{3/2}\\varepsilon^{-3})$ and $O(\\varepsilon^{-9/2})$, respectively. For an $\\varepsilon$-optimization-stationary point, SPDE achieves SFO complexities of $O(κ\\varepsilon^{-4})$ and $O(\\varepsilon^{-6})$, while VR-SPDE achieves $O(κ^{3/2}\\varepsilon^{-3})$ and $O(\\varepsilon^{-6})$, in the two settings, respectively. These OS gu",
-      "authors": [
-        "Huiling Zhang",
-        "Minhao Zhang",
-        "Zi Xu"
-      ],
-      "tags": [
-        "math.OC",
-        "cs.LG",
-        "stat.ML"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.21748v1",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "World Modeling in Transformers",
-      "url": "http://arxiv.org/abs/2609.21748v1",
-      "published_at": "2026-09-18T13:24:18Z",
-      "summary": "Behavioral failures can make a transformer appear to lack a world model even when it has learned faithful representations of its environment. We demonstrate this in TaxiGPT, a transformer trained on random walks through Manhattan whose failures have been interpreted as evidence of an incoherent internal map. Through mechanistic analysis and causal interventions, we show that the model represents intersections and streets, tracks its position, and uses a goal compass to navigate. We trace its failures to interference between superposed intersection features, which disrupts localization within the internal map. Affordance packing, which groups representations of intersections with the same legal moves, helps limit the consequences of these errors. Finally, we propose mechanistic indicators that we use to compare models and show that world-modeling capacities emerge at different stages of training. Our findings motivate a shift from asking whether a model has a world model to mechanistically studying its world modeling: the interacting capacities through which it represents its environment and uses those representations to guide behavior.",
-      "authors": [
-        "Pierre Beckmann",
-        "Matthieu Queloz",
-        "Andre Freitas"
-      ],
-      "tags": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "multimodal-3d"
-      ]
-    },
     {
       "id": "arxiv:2609.21749v1",
       "source_id": "arxiv",
@@ -3424,6 +2852,45 @@
       "theme_ids": []
     },
     {
+      "id": "github:1377510956",
+      "source_id": "github",
+      "source_type": "repository",
+      "title": "NSStudent/JevSwiftSDK",
+      "url": "https://github.com/NSStudent/JevSwiftSDK",
+      "published_at": "2026-09-19T18:50:16Z",
+      "summary": "An independent, type-safe Swift SDK for TypeSafe Jev, with async/await, batching, retries, and SPM support.",
+      "authors": [
+        "NSStudent"
+      ],
+      "tags": [
+        "api-client",
+        "artificial-intelligence",
+        "async-await",
+        "ios",
+        "jev",
+        "linux",
+        "machine-learning",
+        "macos",
+        "sdk",
+        "server-side-swift",
+        "spm",
+        "structured-output",
+        "swift",
+        "swift-concurrency",
+        "swift-package-manager",
+        "swift-sdk",
+        "swift6",
+        "type-safe",
+        "typesafe",
+        "typesafe-ai"
+      ],
+      "projects": [
+        "NSStudent/JevSwiftSDK"
+      ],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
       "id": "hn:49770157",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -3523,7 +2990,7 @@
       "id": "hn:49772961",
       "source_id": "hacker-news",
       "source_type": "community",
-      "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+      "title": "Spain orders blocks on Archive.today and its mirrors",
       "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
       "published_at": "2026-09-20T06:16:42+00:00",
       "summary": "",
@@ -3779,7 +3246,7 @@
       "id": "hn:49777106",
       "source_id": "hacker-news",
       "source_type": "community",
-      "title": "Laya (OS Jev) on Mac M4 CoreML Offline (45 decisions per second)",
+      "title": "Laya on Mac M4 CoreML Offline",
       "url": "https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0",
       "published_at": "2026-09-20T15:58:52+00:00",
       "summary": "",
@@ -4115,7 +3582,7 @@
       "id": "hn:49779329",
       "source_id": "hacker-news",
       "source_type": "community",
-      "title": "Why MCP Was Always a Bad Idea?",
+      "title": "MCP was always a bad idea?",
       "url": "https://maharship.com/blog/why-mcp-was-always-a-bad-idea/",
       "published_at": "2026-09-20T19:44:40+00:00",
       "summary": "",
@@ -4773,7 +4240,7 @@
       "id": "hn:49781693",
       "source_id": "hacker-news",
       "source_type": "community",
-      "title": "Why back propagation goes backward",
+      "title": "Why Backprop Goes Backward (2018)",
       "url": "https://gregorygundersen.com/blog/2018/04/15/backprop/",
       "published_at": "2026-09-21T00:42:14+00:00",
       "summary": "",
@@ -4853,7 +4320,7 @@
       "id": "hn:49782775",
       "source_id": "hacker-news",
       "source_type": "community",
-      "title": "Winning the Visa Lottery",
+      "title": "Winning the visa lottery",
       "url": "https://www.aeaweb.org/research/immigration-restrictions-firms-workers",
       "published_at": "2026-09-21T03:37:02+00:00",
       "summary": "",
@@ -4907,6 +4374,22 @@
       "summary": "",
       "authors": [
         "1vuio0pswjnm7"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783133",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Mini-AGI – dynamic continual learning model trained from scratch on 8GB VRAM",
+      "url": "https://github.com/volotat/mini-AGI/",
+      "published_at": "2026-09-21T04:42:37+00:00",
+      "summary": "",
+      "authors": [
+        "volotat"
       ],
       "tags": [],
       "projects": [],
@@ -5428,6 +4911,408 @@
       "theme_ids": [
         "coding-agents"
       ]
+    },
+    {
+      "id": "hn:49783793",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Do Artifacts Have Politics? (1980)",
+      "url": "https://www.jstor.org/stable/20024652?seq=1",
+      "published_at": "2026-09-21T06:41:50+00:00",
+      "summary": "",
+      "authors": [
+        "shinryuu"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783806",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Replacing an agentic classification loop with Jev: 7x faster",
+      "url": "https://blog.r6i.it/typesafe-jev-vs-agentic-loop.html",
+      "published_at": "2026-09-21T06:43:14+00:00",
+      "summary": "",
+      "authors": [
+        "sammy_rulez"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783809",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Shopify CEO says employees' `slop grenades` making more work for everyone else",
+      "url": "https://fortune.com/2026/09/17/shopify-tobias-lutke-ai-slop-grenades/",
+      "published_at": "2026-09-21T06:43:40+00:00",
+      "summary": "",
+      "authors": [
+        "theanonymousone"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783816",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Rosenbjerg/local-review: Minimal webapp for local code review of branches",
+      "url": "https://github.com/rosenbjerg/local-review",
+      "published_at": "2026-09-21T06:44:58+00:00",
+      "summary": "",
+      "authors": [
+        "bhubert"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783849",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Raspberry Pi 5 EEPROM update now blocks manual RAM upgrades",
+      "url": "https://www.reddit.com/r/selfhosted/comments/1wkxjwg/raspberry_pi_5_eeprom_update_now_blocks_manual/",
+      "published_at": "2026-09-21T06:50:15+00:00",
+      "summary": "",
+      "authors": [
+        "csmantle"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783865",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Ask HN: My recent show HN post got flagged need guidance",
+      "url": "https://news.ycombinator.com/item?id=49783865",
+      "published_at": "2026-09-21T06:53:28+00:00",
+      "summary": "hi recently i shared my work which is an opensource platform i made and yesterday i shared its details and its repo link on hackernews under show hn it gained good traffic reaching 16 points under 1 hour but got flagged now i need help understanding why this happened and how can i unflag it or how i can share my work with HN community",
+      "authors": [
+        "theguysudo"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783880",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "WWYD with 10k engineers and unlimited compute?",
+      "url": "https://www.reddit.com/r/NoemaSI/comments/1wm4yme/what_would_you_do_with_10k_engineers_and/",
+      "published_at": "2026-09-21T06:54:30+00:00",
+      "summary": "",
+      "authors": [
+        "chrisMyzel"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783918",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Socrates on the Invention of Writing and the Relationship of Writing to Memory",
+      "url": "https://www.historyofinformation.com/detail.php?id=3439",
+      "published_at": "2026-09-21T06:59:21+00:00",
+      "summary": "",
+      "authors": [
+        "Bluestein"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783925",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "The Vasari Graph",
+      "url": "https://medium.com/counterarts/the-vasari-graph-89cc69ea54ce",
+      "published_at": "2026-09-21T07:00:14+00:00",
+      "summary": "",
+      "authors": [
+        "cadeos"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783932",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Sublime Text Build 4213",
+      "url": "https://www.sublimetext.com/blog/articles/sublime-text-4213",
+      "published_at": "2026-09-21T07:01:38+00:00",
+      "summary": "",
+      "authors": [
+        "konz"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783941",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Where Do Chatbots Come From? What I Wish Everyone Knew About AI in 2026",
+      "url": "https://www.lesswrong.com/posts/dww6cpbo2XoKbsxyw/where-do-chatbots-come-from-what-i-wish-everyone-knew-about",
+      "published_at": "2026-09-21T07:02:32+00:00",
+      "summary": "",
+      "authors": [
+        "joozio"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783949",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "One researcher published the 'System 1 AI' idea in 2025",
+      "url": "https://www.youtube.com/watch?v=fyx7xz-vtMY",
+      "published_at": "2026-09-21T07:03:29+00:00",
+      "summary": "",
+      "authors": [
+        "frag"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783978",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "State of Engineering Is Horribleium",
+      "url": "https://twitter.com/v0xium/status/2101526107128529120",
+      "published_at": "2026-09-21T07:08:12+00:00",
+      "summary": "",
+      "authors": [
+        "abrbhat"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783990",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Effective Altruism Is Evil",
+      "url": "https://twitter.com/thetreygoff/status/2101520207223173611",
+      "published_at": "2026-09-21T07:10:14+00:00",
+      "summary": "",
+      "authors": [
+        "pr337h4m"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49783999",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+      "url": "https://github.com/jaredpalmer/kev/tree/main",
+      "published_at": "2026-09-21T07:11:55+00:00",
+      "summary": "",
+      "authors": [
+        "tosh"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784023",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Apple Fitness+ Layoffs Reported Ahead of Potential 'Major' Changes",
+      "url": "https://www.macrumors.com/2026/09/20/apple-fitness-plus-layoffs-reported/",
+      "published_at": "2026-09-21T07:14:48+00:00",
+      "summary": "",
+      "authors": [
+        "mgh2"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784037",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Methods, Provenance and Limitations Documentation for Asteroid Approach Reports",
+      "url": "https://zenodo.org/records/22868834",
+      "published_at": "2026-09-21T07:17:06+00:00",
+      "summary": "",
+      "authors": [
+        "UniverseToday"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "assurance-infrastructure"
+      ]
+    },
+    {
+      "id": "hn:49784087",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: A global music video channel like 90s MTV Select",
+      "url": "https://selectm.tv",
+      "published_at": "2026-09-21T07:24:05+00:00",
+      "summary": "",
+      "authors": [
+        "cvgellhorn"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784099",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+      "url": "https://www.latent.space/p/good-start-labs",
+      "published_at": "2026-09-21T07:26:51+00:00",
+      "summary": "",
+      "authors": [
+        "james_mir"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784110",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Phineas Gage",
+      "url": "https://en.wikipedia.org/wiki/Phineas_Gage",
+      "published_at": "2026-09-21T07:27:33+00:00",
+      "summary": "",
+      "authors": [
+        "LolWolf"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784121",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "How Big Tech Runs Tech Projects and the Curious Absence of Scrum (2021)",
+      "url": "https://newsletter.pragmaticengineer.com/p/project-management-in-tech",
+      "published_at": "2026-09-21T07:29:12+00:00",
+      "summary": "",
+      "authors": [
+        "tosh"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784126",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Ask HN: Tutorial/Book on Building a Desktop Windowing System",
+      "url": "https://news.ycombinator.com/item?id=49784126",
+      "published_at": "2026-09-21T07:29:35+00:00",
+      "summary": "Can people please suggest a good tutorial (or even book) on building a simple Desktop Windowing System, preferably coded in a high level language such as C with small pieces of assembly where necessary.<p>The sort of thing I have in mind is something like GEM or the early MS Windows, which runs on top of an existing shell.",
+      "authors": [
+        "ADavison2560"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784144",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Running cloud credit management locally through notifications",
+      "url": "https://github.com/Astralchemist/creditwatch",
+      "published_at": "2026-09-21T07:31:59+00:00",
+      "summary": "",
+      "authors": [
+        "akashi_dev"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784180",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Commodore Phone Update",
+      "url": "https://commodore.net/commodore-callback-8020-updates/",
+      "published_at": "2026-09-21T07:35:45+00:00",
+      "summary": "",
+      "authors": [
+        "andsoitis"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49784194",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Exploring the scalable matrix extension of the Apple M4 processor",
+      "url": "https://github.com/tzakharko/m4-sme-exploration",
+      "published_at": "2026-09-21T07:37:03+00:00",
+      "summary": "",
+      "authors": [
+        "tosh"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
     }
   ],
   "projects": [],
@@ -5470,6 +5355,27 @@
     {
       "id": "sequoia-essays",
       "name": "Sequoia essays",
+      "channel": "investor-essay",
+      "source_quality": "high",
+      "commercial_bias": "disclosed"
+    },
+    {
+      "id": "menlo-ventures",
+      "name": "Menlo Ventures perspectives",
+      "channel": "investor-essay",
+      "source_quality": "high",
+      "commercial_bias": "disclosed"
+    },
+    {
+      "id": "greylock-essays",
+      "name": "Greylock essays",
+      "channel": "investor-essay",
+      "source_quality": "high",
+      "commercial_bias": "disclosed"
+    },
+    {
+      "id": "radical-ventures",
+      "name": "Radical Ventures insights",
       "channel": "investor-essay",
       "source_quality": "high",
       "commercial_bias": "disclosed"

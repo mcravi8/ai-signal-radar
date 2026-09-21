@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-21T06:38:18.174908+00:00",
+    "generated_at": "2026-09-21T07:43:44.131867+00:00",
     "status": "success",
-    "normalized_evidence_count": 742,
-    "public_record_count": 707,
-    "active_source_count": 7,
+    "normalized_evidence_count": 830,
+    "public_record_count": 795,
+    "active_source_count": 10,
     "theme_count": 20,
     "observed_theme_count": 19,
-    "project_count": 245,
+    "project_count": 247,
     "reviewed_project_count": 20,
-    "discovered_project_count": 225,
+    "discovered_project_count": 227,
     "model": "Every source is normalized into the same evidence contract. Source-specific analyses remain inspectable but do not define the global navigation."
   },
   "analyses": [
@@ -22,15 +22,18 @@
       "status": "active",
       "source_ids": [
         "github",
-        "arxiv",
         "hacker-news",
+        "arxiv",
         "huggingface-papers",
+        "greylock-essays",
         "alphasignal",
         "sequoia-essays",
-        "yc-essays"
+        "yc-essays",
+        "menlo-ventures",
+        "radical-ventures"
       ],
-      "evidence_count": 742,
-      "updated_at": "2026-09-21T06:38:18.174908+00:00"
+      "evidence_count": 830,
+      "updated_at": "2026-09-21T07:43:44.131867+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -54,26 +57,151 @@
       "source_ids": [
         "arxiv",
         "github",
+        "greylock-essays",
         "hacker-news",
         "huggingface-papers",
+        "menlo-ventures",
+        "radical-ventures",
         "sequoia-essays",
         "yc-essays"
       ],
-      "evidence_count": 707,
-      "updated_at": "2026-09-21T06:38:18.174908+00:00"
+      "evidence_count": 795,
+      "updated_at": "2026-09-21T07:43:44.131867+00:00"
     },
     {
       "id": "operator-narratives",
       "title": "Operator and investor narratives",
       "question": "Which categories are being named or framed by startup operators and investors before broad technical corroboration?",
-      "summary": "Official YC and Sequoia essays classified against the same themes as papers, repositories, community discussion, and AlphaSignal.",
-      "status": "active",
+      "summary": "Official writing from Greylock essays, Menlo Ventures perspectives, Radical Ventures insights, Sequoia essays, Y Combinator essays classified against the same themes as papers, repositories, community discussion, and AlphaSignal. Completion requires at least five active sources with relevant classified evidence.",
+      "status": "complete",
       "source_ids": [
-        "yc-essays",
-        "sequoia-essays"
+        "greylock-essays",
+        "menlo-ventures",
+        "radical-ventures",
+        "sequoia-essays",
+        "yc-essays"
       ],
-      "evidence_count": 45,
-      "updated_at": "2026-09-21T06:38:18.174908+00:00"
+      "evidence_count": 37,
+      "corpus_count": 94,
+      "classified_source_count": 5,
+      "theme_summary": [
+        {
+          "theme_id": "assurance-infrastructure",
+          "evidence_count": 7,
+          "source_ids": [
+            "greylock-essays",
+            "menlo-ventures",
+            "sequoia-essays"
+          ],
+          "source_count": 3
+        },
+        {
+          "theme_id": "coding-agents",
+          "evidence_count": 4,
+          "source_ids": [
+            "greylock-essays",
+            "radical-ventures",
+            "sequoia-essays"
+          ],
+          "source_count": 3
+        },
+        {
+          "theme_id": "training-self-improvement",
+          "evidence_count": 4,
+          "source_ids": [
+            "greylock-essays",
+            "radical-ventures",
+            "sequoia-essays"
+          ],
+          "source_count": 3
+        },
+        {
+          "theme_id": "enterprise-vertical-ai",
+          "evidence_count": 11,
+          "source_ids": [
+            "greylock-essays",
+            "sequoia-essays"
+          ],
+          "source_count": 2
+        },
+        {
+          "theme_id": "agent-harnesses",
+          "evidence_count": 3,
+          "source_ids": [
+            "greylock-essays",
+            "sequoia-essays"
+          ],
+          "source_count": 2
+        },
+        {
+          "theme_id": "frontier-inference-infrastructure",
+          "evidence_count": 2,
+          "source_ids": [
+            "menlo-ventures",
+            "sequoia-essays"
+          ],
+          "source_count": 2
+        },
+        {
+          "theme_id": "robotics-embodied-ai",
+          "evidence_count": 2,
+          "source_ids": [
+            "greylock-essays",
+            "radical-ventures"
+          ],
+          "source_count": 2
+        },
+        {
+          "theme_id": "multimodal-3d",
+          "evidence_count": 3,
+          "source_ids": [
+            "radical-ventures"
+          ],
+          "source_count": 1
+        },
+        {
+          "theme_id": "ai-native-gtm",
+          "evidence_count": 2,
+          "source_ids": [
+            "greylock-essays"
+          ],
+          "source_count": 1
+        },
+        {
+          "theme_id": "voice-audio",
+          "evidence_count": 2,
+          "source_ids": [
+            "greylock-essays"
+          ],
+          "source_count": 1
+        },
+        {
+          "theme_id": "memory-context",
+          "evidence_count": 1,
+          "source_ids": [
+            "sequoia-essays"
+          ],
+          "source_count": 1
+        },
+        {
+          "theme_id": "model-routing",
+          "evidence_count": 1,
+          "source_ids": [
+            "menlo-ventures"
+          ],
+          "source_count": 1
+        },
+        {
+          "theme_id": "skills-integrations",
+          "evidence_count": 1,
+          "source_ids": [
+            "yc-essays"
+          ],
+          "source_count": 1
+        }
+      ],
+      "coverage_target": 5,
+      "updated_at": "2026-09-21T07:43:44.131867+00:00"
     },
     {
       "id": "project-opportunities",
@@ -95,7 +223,7 @@
     "as_of": "2026-09-21",
     "window_start": "2026-09-14",
     "previous_window_start": "2026-09-07",
-    "new_public_records": 377,
+    "new_public_records": 407,
     "movements": [
       {
         "theme_id": "training-self-improvement",
@@ -125,8 +253,8 @@
         "theme_id": "multimodal-3d",
         "name": "Multimodal generation & 3D",
         "recent": 10,
-        "prior": 3,
-        "delta": 7,
+        "prior": 4,
+        "delta": 6,
         "direction": "rising"
       },
       {
@@ -141,8 +269,8 @@
         "theme_id": "agent-harnesses",
         "name": "Agent harnesses",
         "recent": 8,
-        "prior": 3,
-        "delta": 5,
+        "prior": 4,
+        "delta": 4,
         "direction": "rising"
       },
       {
@@ -156,10 +284,10 @@
       {
         "theme_id": "assurance-infrastructure",
         "name": "Assurance infrastructure",
-        "recent": 3,
-        "prior": 0,
+        "recent": 4,
+        "prior": 1,
         "delta": 3,
-        "direction": "new"
+        "direction": "rising"
       },
       {
         "theme_id": "memory-context",
@@ -194,9 +322,9 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
-      "evidence_count": 90,
-      "support_units": 236,
-      "source_count": 5,
+      "evidence_count": 94,
+      "support_units": 240,
+      "source_count": 8,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
@@ -219,20 +347,35 @@
           "support_units": 19
         },
         {
+          "source_id": "sequoia-essays",
+          "observations": 2,
+          "support_units": 2
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
           "source_id": "hacker-news",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "radical-ventures",
           "observations": 1,
           "support_units": 1
         }
       ],
       "monthly_counts": {
-        "2026-04": 10,
+        "2026-04": 12,
         "2026-05": 15,
         "2026-06": 20,
         "2026-07": 20,
-        "2026-08": 36,
+        "2026-08": 37,
         "2026-09": 86
       },
-      "source_concentration": 0.63,
+      "source_concentration": 0.62,
       "maturity": "broadly-corroborated",
       "score": {
         "recurrence": 25.0,
@@ -314,11 +457,15 @@
         "github:1345072328",
         "github:1344611274",
         "hf-paper:2608.23552",
+        "radical-ventures:20d1ce473b192f88b82c",
         "alphasignal:project:promptwizard",
         "hf-paper:2606.03264",
         "hf-paper:2605.23904",
+        "sequoia-essays:17b85daaf71b44ad7742",
+        "sequoia-essays:703f99775041cc65de25",
         "github:1201656210",
         "github:1187805808",
+        "greylock-essays:d21542f6564a82ff3cf3",
         "hf-paper:2509.22186",
         "hf-paper:2508.03680",
         "hf-paper:2508.02739",
@@ -346,9 +493,9 @@
       ],
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 30,
-      "support_units": 203,
-      "source_count": 5,
+      "evidence_count": 34,
+      "support_units": 207,
+      "source_count": 8,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
@@ -371,27 +518,42 @@
           "support_units": 5
         },
         {
+          "source_id": "greylock-essays",
+          "observations": 2,
+          "support_units": 2
+        },
+        {
           "source_id": "hacker-news",
           "observations": 2,
           "support_units": 2
+        },
+        {
+          "source_id": "radical-ventures",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "sequoia-essays",
+          "observations": 1,
+          "support_units": 1
         }
       ],
       "monthly_counts": {
-        "2026-04": 13,
+        "2026-04": 14,
         "2026-05": 16,
-        "2026-06": 23,
+        "2026-06": 24,
         "2026-07": 16,
-        "2026-08": 28,
+        "2026-08": 29,
         "2026-09": 23
       },
-      "source_concentration": 0.86,
+      "source_concentration": 0.85,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 20.4,
-        "acceleration": 16.2,
+        "recurrence": 21.1,
+        "acceleration": 16.1,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 86.6
+        "total": 87.2
       },
       "evidence_ids": [
         "hn:49783713",
@@ -415,10 +577,14 @@
         "github:1344075823",
         "github:1342227253",
         "github:1342084139",
+        "radical-ventures:4e64543f295794b596b4",
         "github:1300902838",
+        "greylock-essays:c20b6ac7c42eb8c20580",
         "alphasignal:project:hallmark",
         "github:1223170290",
+        "sequoia-essays:bf2824ba4e01a7fceb94",
         "hf-paper:2511.12884",
+        "greylock-essays:cbdde800c82cd1b1c5e4",
         "github:1079084637",
         "github:1035029907",
         "github:969302809",
@@ -437,9 +603,9 @@
         "self-improving harness"
       ],
       "primary_layer": "harness-orchestration",
-      "evidence_count": 38,
-      "support_units": 273,
-      "source_count": 4,
+      "evidence_count": 41,
+      "support_units": 276,
+      "source_count": 6,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
@@ -460,6 +626,16 @@
           "source_id": "arxiv",
           "observations": 6,
           "support_units": 6
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 2,
+          "support_units": 2
+        },
+        {
+          "source_id": "sequoia-essays",
+          "observations": 1,
+          "support_units": 1
         }
       ],
       "monthly_counts": {
@@ -468,16 +644,16 @@
         "2026-06": 40,
         "2026-07": 50,
         "2026-08": 63,
-        "2026-09": 45
+        "2026-09": 46
       },
-      "source_concentration": 0.88,
+      "source_concentration": 0.87,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 20.1,
-        "acceleration": 15.1,
+        "recurrence": 19.9,
+        "acceleration": 15.2,
         "persistence": 25.0,
-        "breadth": 20,
-        "total": 80.2
+        "breadth": 25,
+        "total": 85.1
       },
       "evidence_ids": [
         "alphasignal:trend:skills-plugins-mcp-and-harnesses",
@@ -492,6 +668,7 @@
         "github:1370498337",
         "hf-paper:2609.15364",
         "hf-paper:2609.14858",
+        "greylock-essays:aacd57b6bec14e3c9da1",
         "github:1361693766",
         "github:1352444090",
         "github:1346917581",
@@ -505,9 +682,11 @@
         "github:1300902838",
         "hf-paper:2605.03042",
         "github:1198306812",
+        "sequoia-essays:33b279b2aa96ca8cf3dd",
         "github:1161163182",
         "github:1136590548",
         "github:1124219907",
+        "greylock-essays:32b264a22d3e04806ae3",
         "hf-paper:2508.03680",
         "github:1027384981",
         "github:1025856648",
@@ -518,6 +697,281 @@
         "hf-paper:2407.17789",
         "github:639195966",
         "github:522158088"
+      ]
+    },
+    {
+      "id": "multimodal-3d",
+      "name": "Multimodal generation & 3D",
+      "definition": "Systems that generate, edit, understand, or reconstruct images, video, spatial scenes, avatars, and three-dimensional environments.",
+      "aliases": [
+        "video generation",
+        "image generation",
+        "world model",
+        "3D generation",
+        "spatial AI"
+      ],
+      "primary_layer": "models-capabilities",
+      "secondary_layer": "tools-skills-integrations",
+      "evidence_count": 24,
+      "support_units": 121,
+      "source_count": 5,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "observations": 3,
+          "support_units": 100
+        },
+        {
+          "source_id": "arxiv",
+          "observations": 9,
+          "support_units": 9
+        },
+        {
+          "source_id": "github",
+          "observations": 5,
+          "support_units": 5
+        },
+        {
+          "source_id": "huggingface-papers",
+          "observations": 4,
+          "support_units": 4
+        },
+        {
+          "source_id": "radical-ventures",
+          "observations": 3,
+          "support_units": 3
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 9,
+        "2026-05": 15,
+        "2026-06": 18,
+        "2026-07": 23,
+        "2026-08": 18,
+        "2026-09": 31
+      },
+      "source_concentration": 0.83,
+      "maturity": "corroborated-source-concentrated",
+      "score": {
+        "recurrence": 16.2,
+        "acceleration": 15.0,
+        "persistence": 25.0,
+        "breadth": 25,
+        "total": 81.2
+      },
+      "evidence_ids": [
+        "alphasignal:trend:multimodal-generation-and-3d",
+        "arxiv:2609.22055v1",
+        "arxiv:2609.21906v1",
+        "arxiv:2609.21849v1",
+        "arxiv:2609.21748v1",
+        "arxiv:2609.20817v1",
+        "arxiv:2609.20816v1",
+        "arxiv:2609.20800v1",
+        "arxiv:2609.20744v1",
+        "arxiv:2609.20723v1",
+        "hf-paper:2609.16679",
+        "hf-paper:2609.11638",
+        "github:1361693766",
+        "radical-ventures:f1d373af6ede201d5a8d",
+        "github:1360934358",
+        "hf-paper:2609.04034",
+        "github:1346919628",
+        "radical-ventures:002cb1815fb8b4589802",
+        "radical-ventures:20d1ce473b192f88b82c",
+        "alphasignal:project:depth-anything-cpp",
+        "alphasignal:project:openreel-video",
+        "github:1102293054",
+        "hf-paper:2510.22200",
+        "github:638513786"
+      ]
+    },
+    {
+      "id": "assurance-infrastructure",
+      "name": "Assurance infrastructure",
+      "definition": "Evaluation, security, observability, permissions, governance, and provenance required to operate AI systems safely.",
+      "aliases": [
+        "AI assurance",
+        "agent security",
+        "eval infrastructure",
+        "AI observability"
+      ],
+      "primary_layer": "assurance",
+      "evidence_count": 21,
+      "support_units": 197,
+      "source_count": 8,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "observations": 4,
+          "support_units": 180
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 5,
+          "support_units": 5
+        },
+        {
+          "source_id": "github",
+          "observations": 4,
+          "support_units": 4
+        },
+        {
+          "source_id": "arxiv",
+          "observations": 3,
+          "support_units": 3
+        },
+        {
+          "source_id": "huggingface-papers",
+          "observations": 2,
+          "support_units": 2
+        },
+        {
+          "source_id": "hacker-news",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "menlo-ventures",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "sequoia-essays",
+          "observations": 1,
+          "support_units": 1
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 11,
+        "2026-05": 29,
+        "2026-06": 27,
+        "2026-07": 55,
+        "2026-08": 45,
+        "2026-09": 23
+      },
+      "source_concentration": 0.91,
+      "maturity": "corroborated-source-concentrated",
+      "score": {
+        "recurrence": 18.2,
+        "acceleration": 9.9,
+        "persistence": 25.0,
+        "breadth": 25,
+        "total": 78.1
+      },
+      "evidence_ids": [
+        "hn:49784037",
+        "alphasignal:trend:validation-and-release-bottlenecks",
+        "alphasignal:trend:security-safety-and-observability",
+        "arxiv:2609.21940v1",
+        "arxiv:2609.21858v1",
+        "arxiv:2609.20457v1",
+        "greylock-essays:aacd57b6bec14e3c9da1",
+        "github:1348178527",
+        "github:1346917581",
+        "hf-paper:2608.23283",
+        "github:1342500731",
+        "sequoia-essays:c57f2c6dba9448876fb0",
+        "alphasignal:project:outlines",
+        "menlo-ventures:3f0b4d0e045fc978a741",
+        "alphasignal:project:openmed",
+        "hf-paper:2606.31227",
+        "greylock-essays:16bf0805df87e8f7760d",
+        "github:1166506614",
+        "greylock-essays:eccdc18b7206e05d0e7c",
+        "greylock-essays:7ae3d96ba71e4e63c7f2",
+        "greylock-essays:568bff58c053c7627fd9"
+      ]
+    },
+    {
+      "id": "skills-integrations",
+      "name": "Skills, protocols & integrations",
+      "definition": "Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.",
+      "aliases": [
+        "agent skills",
+        "plugins",
+        "MCP",
+        "tool protocol",
+        "connectors"
+      ],
+      "primary_layer": "tools-skills-integrations",
+      "secondary_layer": "harness-orchestration",
+      "evidence_count": 23,
+      "support_units": 69,
+      "source_count": 6,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "observations": 4,
+          "support_units": 50
+        },
+        {
+          "source_id": "github",
+          "observations": 13,
+          "support_units": 13
+        },
+        {
+          "source_id": "huggingface-papers",
+          "observations": 3,
+          "support_units": 3
+        },
+        {
+          "source_id": "arxiv",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "yc-essays",
+          "observations": 1,
+          "support_units": 1
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 4,
+        "2026-05": 9,
+        "2026-06": 7,
+        "2026-07": 13,
+        "2026-08": 15,
+        "2026-09": 7
+      },
+      "source_concentration": 0.72,
+      "maturity": "broadly-corroborated",
+      "score": {
+        "recurrence": 13.9,
+        "acceleration": 13.8,
+        "persistence": 25.0,
+        "breadth": 25,
+        "total": 77.7
+      },
+      "evidence_ids": [
+        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+        "arxiv:2609.21749v1",
+        "alphasignal:project:wikiskill",
+        "github:1358571386",
+        "github:1351859098",
+        "github:1350899039",
+        "github:1349253750",
+        "github:1348178527",
+        "github:1342886503",
+        "hf-paper:2606.31227",
+        "alphasignal:project:nango",
+        "hf-paper:2605.23904",
+        "alphasignal:project:cli-anything",
+        "greylock-essays:3ea6b07c66c36091c3d1",
+        "github:1166102148",
+        "yc-essays:204ce739063162db8136",
+        "github:1084853233",
+        "github:1079456184",
+        "github:1079084637",
+        "hf-paper:2509.06917",
+        "github:896335270",
+        "github:890668799",
+        "github:793375104"
       ]
     },
     {
@@ -574,11 +1028,11 @@
       "source_concentration": 0.93,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 19.9,
+        "recurrence": 17.1,
         "acceleration": 9.8,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 79.7
+        "total": 76.9
       },
       "evidence_ids": [
         "alphasignal:trend:open-local-models-and-inference-efficiency",
@@ -662,11 +1116,11 @@
       "source_concentration": 0.93,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 19.0,
+        "recurrence": 16.4,
         "acceleration": 10.3,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 79.3
+        "total": 76.7
       },
       "evidence_ids": [
         "alphasignal:trend:open-local-models-and-inference-efficiency",
@@ -694,115 +1148,36 @@
       ]
     },
     {
-      "id": "multimodal-3d",
-      "name": "Multimodal generation & 3D",
-      "definition": "Systems that generate, edit, understand, or reconstruct images, video, spatial scenes, avatars, and three-dimensional environments.",
+      "id": "voice-audio",
+      "name": "Voice & audio interfaces",
+      "definition": "Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.",
       "aliases": [
-        "video generation",
-        "image generation",
-        "world model",
-        "3D generation",
-        "spatial AI"
+        "voice agent",
+        "speech model",
+        "text to speech",
+        "voice cloning",
+        "audio generation"
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 21,
-      "support_units": 118,
+      "evidence_count": 8,
+      "support_units": 52,
       "source_count": 4,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
           "observations": 3,
-          "support_units": 100
-        },
-        {
-          "source_id": "arxiv",
-          "observations": 9,
-          "support_units": 9
+          "support_units": 47
         },
         {
           "source_id": "github",
-          "observations": 5,
-          "support_units": 5
+          "observations": 2,
+          "support_units": 2
         },
         {
-          "source_id": "huggingface-papers",
-          "observations": 4,
-          "support_units": 4
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 9,
-        "2026-05": 15,
-        "2026-06": 18,
-        "2026-07": 23,
-        "2026-08": 16,
-        "2026-09": 30
-      },
-      "source_concentration": 0.85,
-      "maturity": "corroborated-source-concentrated",
-      "score": {
-        "recurrence": 16.5,
-        "acceleration": 14.1,
-        "persistence": 25.0,
-        "breadth": 20,
-        "total": 75.6
-      },
-      "evidence_ids": [
-        "alphasignal:trend:multimodal-generation-and-3d",
-        "arxiv:2609.22055v1",
-        "arxiv:2609.21906v1",
-        "arxiv:2609.21849v1",
-        "arxiv:2609.21748v1",
-        "arxiv:2609.20817v1",
-        "arxiv:2609.20816v1",
-        "arxiv:2609.20800v1",
-        "arxiv:2609.20744v1",
-        "arxiv:2609.20723v1",
-        "hf-paper:2609.16679",
-        "hf-paper:2609.11638",
-        "github:1361693766",
-        "github:1360934358",
-        "hf-paper:2609.04034",
-        "github:1346919628",
-        "alphasignal:project:depth-anything-cpp",
-        "alphasignal:project:openreel-video",
-        "github:1102293054",
-        "hf-paper:2510.22200",
-        "github:638513786"
-      ]
-    },
-    {
-      "id": "skills-integrations",
-      "name": "Skills, protocols & integrations",
-      "definition": "Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.",
-      "aliases": [
-        "agent skills",
-        "plugins",
-        "MCP",
-        "tool protocol",
-        "connectors"
-      ],
-      "primary_layer": "tools-skills-integrations",
-      "secondary_layer": "harness-orchestration",
-      "evidence_count": 21,
-      "support_units": 67,
-      "source_count": 4,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "observations": 4,
-          "support_units": 50
-        },
-        {
-          "source_id": "github",
-          "observations": 13,
-          "support_units": 13
-        },
-        {
-          "source_id": "huggingface-papers",
-          "observations": 3,
-          "support_units": 3
+          "source_id": "greylock-essays",
+          "observations": 2,
+          "support_units": 2
         },
         {
           "source_id": "arxiv",
@@ -812,112 +1187,30 @@
       ],
       "monthly_counts": {
         "2026-04": 3,
-        "2026-05": 9,
-        "2026-06": 7,
+        "2026-05": 6,
+        "2026-06": 4,
         "2026-07": 13,
-        "2026-08": 15,
-        "2026-09": 7
+        "2026-08": 10,
+        "2026-09": 9
       },
-      "source_concentration": 0.75,
+      "source_concentration": 0.9,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 13.8,
-        "acceleration": 13.8,
+        "recurrence": 9.3,
+        "acceleration": 13.9,
         "persistence": 25.0,
         "breadth": 20,
-        "total": 72.6
+        "total": 68.2
       },
       "evidence_ids": [
-        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
-        "arxiv:2609.21749v1",
-        "alphasignal:project:wikiskill",
-        "github:1358571386",
-        "github:1351859098",
-        "github:1350899039",
-        "github:1349253750",
-        "github:1348178527",
-        "github:1342886503",
-        "hf-paper:2606.31227",
-        "alphasignal:project:nango",
-        "hf-paper:2605.23904",
-        "alphasignal:project:cli-anything",
-        "github:1166102148",
-        "github:1084853233",
-        "github:1079456184",
-        "github:1079084637",
-        "hf-paper:2509.06917",
-        "github:896335270",
-        "github:890668799",
-        "github:793375104"
-      ]
-    },
-    {
-      "id": "assurance-infrastructure",
-      "name": "Assurance infrastructure",
-      "definition": "Evaluation, security, observability, permissions, governance, and provenance required to operate AI systems safely.",
-      "aliases": [
-        "AI assurance",
-        "agent security",
-        "eval infrastructure",
-        "AI observability"
-      ],
-      "primary_layer": "assurance",
-      "evidence_count": 13,
-      "support_units": 189,
-      "source_count": 4,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "observations": 4,
-          "support_units": 180
-        },
-        {
-          "source_id": "github",
-          "observations": 4,
-          "support_units": 4
-        },
-        {
-          "source_id": "arxiv",
-          "observations": 3,
-          "support_units": 3
-        },
-        {
-          "source_id": "huggingface-papers",
-          "observations": 2,
-          "support_units": 2
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 11,
-        "2026-05": 29,
-        "2026-06": 27,
-        "2026-07": 54,
-        "2026-08": 44,
-        "2026-09": 21
-      },
-      "source_concentration": 0.95,
-      "maturity": "corroborated-source-concentrated",
-      "score": {
-        "recurrence": 14.9,
-        "acceleration": 9.4,
-        "persistence": 25.0,
-        "breadth": 20,
-        "total": 69.3
-      },
-      "evidence_ids": [
-        "alphasignal:trend:validation-and-release-bottlenecks",
-        "alphasignal:trend:security-safety-and-observability",
-        "arxiv:2609.21940v1",
-        "arxiv:2609.21858v1",
-        "arxiv:2609.20457v1",
-        "github:1348178527",
-        "github:1346917581",
-        "hf-paper:2608.23283",
-        "github:1342500731",
-        "alphasignal:project:outlines",
-        "alphasignal:project:openmed",
-        "hf-paper:2606.31227",
-        "github:1166506614"
+        "alphasignal:trend:voice-and-audio-interfaces",
+        "arxiv:2609.21967v1",
+        "alphasignal:project:voicestudio",
+        "alphasignal:project:dograh",
+        "github:1057664813",
+        "greylock-essays:7ae3d96ba71e4e63c7f2",
+        "greylock-essays:b5d0a493521b25d69daf",
+        "github:541269386"
       ]
     },
     {
@@ -969,11 +1262,11 @@
       "source_concentration": 0.76,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 14.2,
+        "recurrence": 12.3,
         "acceleration": 9.1,
         "persistence": 25.0,
         "breadth": 20,
-        "total": 68.3
+        "total": 66.4
       },
       "evidence_ids": [
         "alphasignal:trend:documents-retrieval-and-structured-data",
@@ -998,65 +1291,6 @@
       ]
     },
     {
-      "id": "voice-audio",
-      "name": "Voice & audio interfaces",
-      "definition": "Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.",
-      "aliases": [
-        "voice agent",
-        "speech model",
-        "text to speech",
-        "voice cloning",
-        "audio generation"
-      ],
-      "primary_layer": "models-capabilities",
-      "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 6,
-      "support_units": 50,
-      "source_count": 3,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "observations": 3,
-          "support_units": 47
-        },
-        {
-          "source_id": "github",
-          "observations": 2,
-          "support_units": 2
-        },
-        {
-          "source_id": "arxiv",
-          "observations": 1,
-          "support_units": 1
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 3,
-        "2026-05": 6,
-        "2026-06": 4,
-        "2026-07": 13,
-        "2026-08": 10,
-        "2026-09": 9
-      },
-      "source_concentration": 0.94,
-      "maturity": "corroborated-source-concentrated",
-      "score": {
-        "recurrence": 9.1,
-        "acceleration": 13.9,
-        "persistence": 25.0,
-        "breadth": 15,
-        "total": 63.0
-      },
-      "evidence_ids": [
-        "alphasignal:trend:voice-and-audio-interfaces",
-        "arxiv:2609.21967v1",
-        "alphasignal:project:voicestudio",
-        "alphasignal:project:dograh",
-        "github:1057664813",
-        "github:541269386"
-      ]
-    },
-    {
       "id": "memory-context",
       "name": "Memory & context engineering",
       "definition": "Techniques for selecting, compressing, persisting, and retrieving context across long-running model or agent activity.",
@@ -1068,9 +1302,9 @@
       ],
       "primary_layer": "harness-orchestration",
       "secondary_layer": "assurance",
-      "evidence_count": 8,
-      "support_units": 44,
-      "source_count": 3,
+      "evidence_count": 9,
+      "support_units": 45,
+      "source_count": 4,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
@@ -1086,6 +1320,11 @@
           "source_id": "arxiv",
           "observations": 2,
           "support_units": 2
+        },
+        {
+          "source_id": "sequoia-essays",
+          "observations": 1,
+          "support_units": 1
         }
       ],
       "monthly_counts": {
@@ -1096,14 +1335,14 @@
         "2026-08": 8,
         "2026-09": 8
       },
-      "source_concentration": 0.89,
+      "source_concentration": 0.87,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 9.9,
+        "recurrence": 9.5,
         "acceleration": 10.3,
         "persistence": 25.0,
-        "breadth": 15,
-        "total": 60.2
+        "breadth": 20,
+        "total": 64.8
       },
       "evidence_ids": [
         "alphasignal:trend:memory-and-context-engineering",
@@ -1113,7 +1352,191 @@
         "github:1358571386",
         "github:1348178527",
         "alphasignal:project:loopx",
+        "sequoia-essays:33b279b2aa96ca8cf3dd",
         "github:1128123594"
+      ]
+    },
+    {
+      "id": "enterprise-vertical-ai",
+      "name": "Enterprise & vertical AI",
+      "definition": "AI products adapted to industry workflows, governed organizational data, and live business systems.",
+      "aliases": [
+        "vertical AI",
+        "enterprise agent",
+        "industry-specific model",
+        "business system agent"
+      ],
+      "primary_layer": "tools-skills-integrations",
+      "lens": "enterprise-adoption",
+      "evidence_count": 15,
+      "support_units": 49,
+      "source_count": 4,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "observations": 3,
+          "support_units": 37
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 7,
+          "support_units": 7
+        },
+        {
+          "source_id": "sequoia-essays",
+          "observations": 4,
+          "support_units": 4
+        },
+        {
+          "source_id": "huggingface-papers",
+          "observations": 1,
+          "support_units": 1
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 1,
+        "2026-05": 3,
+        "2026-06": 2,
+        "2026-07": 6,
+        "2026-08": 2,
+        "2026-09": 2
+      },
+      "source_concentration": 0.76,
+      "maturity": "corroborated-source-concentrated",
+      "score": {
+        "recurrence": 11.1,
+        "acceleration": 5.1,
+        "persistence": 25.0,
+        "breadth": 20,
+        "total": 61.2
+      },
+      "evidence_ids": [
+        "alphasignal:trend:enterprise-and-vertical-ai",
+        "alphasignal:project:wrenai",
+        "sequoia-essays:afde56cfaaeb81f69523",
+        "greylock-essays:da9d5e408f534282b985",
+        "alphasignal:project:openmed",
+        "sequoia-essays:775cb9638e7b090ad2d9",
+        "greylock-essays:2517cac042b8164a4888",
+        "greylock-essays:46157fce42603f1b75d2",
+        "sequoia-essays:9f1197b773225a4e033b",
+        "sequoia-essays:950591afd0b774f7db06",
+        "greylock-essays:c7b10bf9696f4b68e41d",
+        "hf-paper:2509.22186",
+        "greylock-essays:95709decf180c923f94e",
+        "greylock-essays:effa1418b70e2034c31f",
+        "greylock-essays:b2f832aeaa3a7520dce3"
+      ]
+    },
+    {
+      "id": "robotics-embodied-ai",
+      "name": "Robotics & embodied AI",
+      "definition": "Models, datasets, simulations, and control systems that connect learned intelligence to physical sensing and action.",
+      "aliases": [
+        "robotics foundation model",
+        "embodied agent",
+        "robot learning",
+        "physical AI"
+      ],
+      "primary_layer": "models-capabilities",
+      "secondary_layer": "tools-skills-integrations",
+      "evidence_count": 4,
+      "support_units": 26,
+      "source_count": 4,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "observations": 1,
+          "support_units": 23
+        },
+        {
+          "source_id": "arxiv",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "radical-ventures",
+          "observations": 1,
+          "support_units": 1
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 1,
+        "2026-05": 3,
+        "2026-06": 4,
+        "2026-07": 8,
+        "2026-08": 4,
+        "2026-09": 4
+      },
+      "source_concentration": 0.88,
+      "maturity": "corroborated-source-concentrated",
+      "score": {
+        "recurrence": 7.3,
+        "acceleration": 7.6,
+        "persistence": 25.0,
+        "breadth": 20,
+        "total": 59.9
+      },
+      "evidence_ids": [
+        "alphasignal:trend:robotics-and-embodied-ai",
+        "arxiv:2609.20756v1",
+        "greylock-essays:4db96be55ee28289e4fd",
+        "radical-ventures:002cb1815fb8b4589802"
+      ]
+    },
+    {
+      "id": "ai-native-gtm",
+      "name": "AI-native GTM",
+      "definition": "AI systems that execute or coordinate prospecting, sales, marketing, customer intelligence, and revenue operations.",
+      "aliases": [
+        "agentic GTM",
+        "AI revenue stack",
+        "autonomous BDR",
+        "AI RevOps"
+      ],
+      "primary_layer": "tools-skills-integrations",
+      "lens": "commercialization",
+      "evidence_count": 3,
+      "support_units": 37,
+      "source_count": 2,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "observations": 1,
+          "support_units": 35
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 2,
+          "support_units": 2
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 1,
+        "2026-05": 2,
+        "2026-06": 1,
+        "2026-07": 2,
+        "2026-08": 2,
+        "2026-09": 2
+      },
+      "source_concentration": 0.95,
+      "maturity": "emerging",
+      "score": {
+        "recurrence": 6.5,
+        "acceleration": 15.1,
+        "persistence": 25.0,
+        "breadth": 10,
+        "total": 56.6
+      },
+      "evidence_ids": [
+        "alphasignal:trend:enterprise-and-vertical-ai",
+        "greylock-essays:32b264a22d3e04806ae3",
+        "greylock-essays:841d14442685e9cea677"
       ]
     },
     {
@@ -1154,11 +1577,11 @@
       "source_concentration": 0.93,
       "maturity": "emerging",
       "score": {
-        "recurrence": 7.0,
+        "recurrence": 6.0,
         "acceleration": 14.4,
         "persistence": 25.0,
         "breadth": 10,
-        "total": 56.4
+        "total": 55.4
       },
       "evidence_ids": [
         "alphasignal:trend:web-and-browser-automation",
@@ -1211,11 +1634,11 @@
       "source_concentration": 0.88,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 10.0,
+        "recurrence": 8.7,
         "acceleration": 2.5,
         "persistence": 25.0,
         "breadth": 15,
-        "total": 52.5
+        "total": 51.2
       },
       "evidence_ids": [
         "alphasignal:trend:documents-retrieval-and-structured-data",
@@ -1227,57 +1650,6 @@
         "github:1166102148",
         "github:840056306",
         "github:679343504"
-      ]
-    },
-    {
-      "id": "enterprise-vertical-ai",
-      "name": "Enterprise & vertical AI",
-      "definition": "AI products adapted to industry workflows, governed organizational data, and live business systems.",
-      "aliases": [
-        "vertical AI",
-        "enterprise agent",
-        "industry-specific model",
-        "business system agent"
-      ],
-      "primary_layer": "tools-skills-integrations",
-      "lens": "enterprise-adoption",
-      "evidence_count": 4,
-      "support_units": 38,
-      "source_count": 2,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "observations": 3,
-          "support_units": 37
-        },
-        {
-          "source_id": "huggingface-papers",
-          "observations": 1,
-          "support_units": 1
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 1,
-        "2026-05": 2,
-        "2026-06": 1,
-        "2026-07": 4,
-        "2026-08": 2,
-        "2026-09": 2
-      },
-      "source_concentration": 0.97,
-      "maturity": "emerging",
-      "score": {
-        "recurrence": 6.9,
-        "acceleration": 10.3,
-        "persistence": 25.0,
-        "breadth": 10,
-        "total": 52.2
-      },
-      "evidence_ids": [
-        "alphasignal:trend:enterprise-and-vertical-ai",
-        "alphasignal:project:wrenai",
-        "alphasignal:project:openmed",
-        "hf-paper:2509.22186"
       ]
     },
     {
@@ -1318,107 +1690,15 @@
       "source_concentration": 0.99,
       "maturity": "emerging",
       "score": {
-        "recurrence": 9.0,
+        "recurrence": 7.8,
         "acceleration": 8.1,
         "persistence": 25.0,
         "breadth": 10,
-        "total": 52.1
+        "total": 50.9
       },
       "evidence_ids": [
         "alphasignal:trend:validation-and-release-bottlenecks",
         "arxiv:2609.20625v1"
-      ]
-    },
-    {
-      "id": "ai-native-gtm",
-      "name": "AI-native GTM",
-      "definition": "AI systems that execute or coordinate prospecting, sales, marketing, customer intelligence, and revenue operations.",
-      "aliases": [
-        "agentic GTM",
-        "AI revenue stack",
-        "autonomous BDR",
-        "AI RevOps"
-      ],
-      "primary_layer": "tools-skills-integrations",
-      "lens": "commercialization",
-      "evidence_count": 1,
-      "support_units": 35,
-      "source_count": 1,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "observations": 1,
-          "support_units": 35
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 1,
-        "2026-05": 2,
-        "2026-06": 1,
-        "2026-07": 2,
-        "2026-08": 2,
-        "2026-09": 2
-      },
-      "source_concentration": 1.0,
-      "maturity": "source-specific",
-      "score": {
-        "recurrence": 5.7,
-        "acceleration": 15.1,
-        "persistence": 25.0,
-        "breadth": 5,
-        "total": 50.8
-      },
-      "evidence_ids": [
-        "alphasignal:trend:enterprise-and-vertical-ai"
-      ]
-    },
-    {
-      "id": "robotics-embodied-ai",
-      "name": "Robotics & embodied AI",
-      "definition": "Models, datasets, simulations, and control systems that connect learned intelligence to physical sensing and action.",
-      "aliases": [
-        "robotics foundation model",
-        "embodied agent",
-        "robot learning",
-        "physical AI"
-      ],
-      "primary_layer": "models-capabilities",
-      "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 2,
-      "support_units": 24,
-      "source_count": 2,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "observations": 1,
-          "support_units": 23
-        },
-        {
-          "source_id": "arxiv",
-          "observations": 1,
-          "support_units": 1
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 1,
-        "2026-05": 3,
-        "2026-06": 4,
-        "2026-07": 8,
-        "2026-08": 3,
-        "2026-09": 3
-      },
-      "source_concentration": 0.96,
-      "maturity": "emerging",
-      "score": {
-        "recurrence": 6.2,
-        "acceleration": 4.4,
-        "persistence": 25.0,
-        "breadth": 10,
-        "total": 45.6
-      },
-      "evidence_ids": [
-        "alphasignal:trend:robotics-and-embodied-ai",
-        "arxiv:2609.20756v1"
       ]
     },
     {
@@ -1433,14 +1713,19 @@
       ],
       "primary_layer": "harness-orchestration",
       "secondary_layer": "models-capabilities",
-      "evidence_count": 2,
-      "support_units": 11,
-      "source_count": 1,
+      "evidence_count": 3,
+      "support_units": 12,
+      "source_count": 2,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
           "observations": 2,
           "support_units": 11
+        },
+        {
+          "source_id": "menlo-ventures",
+          "observations": 1,
+          "support_units": 1
         }
       ],
       "monthly_counts": {
@@ -1448,21 +1733,22 @@
         "2026-05": 0,
         "2026-06": 1,
         "2026-07": 2,
-        "2026-08": 2,
+        "2026-08": 3,
         "2026-09": 1
       },
-      "source_concentration": 1.0,
-      "maturity": "source-specific",
+      "source_concentration": 0.92,
+      "maturity": "emerging",
       "score": {
-        "recurrence": 4.0,
-        "acceleration": 12.5,
+        "recurrence": 4.4,
+        "acceleration": 15.1,
         "persistence": 20.8,
-        "breadth": 5,
-        "total": 42.3
+        "breadth": 10,
+        "total": 50.3
       },
       "evidence_ids": [
         "alphasignal:trend:model-routing-and-heterogeneous-stacks",
-        "alphasignal:project:typesafe-ai-jev"
+        "alphasignal:project:typesafe-ai-jev",
+        "menlo-ventures:357c545badf007e3def4"
       ]
     },
     {
@@ -1477,12 +1763,27 @@
         "inference cluster"
       ],
       "primary_layer": "compute-inference-serving",
-      "evidence_count": 1,
-      "support_units": 1,
-      "source_count": 1,
+      "evidence_count": 4,
+      "support_units": 4,
+      "source_count": 4,
       "source_breakdown": [
         {
           "source_id": "arxiv",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "github",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "menlo-ventures",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "sequoia-essays",
           "observations": 1,
           "support_units": 1
         }
@@ -1491,21 +1792,24 @@
         "2026-04": 0,
         "2026-05": 0,
         "2026-06": 0,
-        "2026-07": 0,
+        "2026-07": 2,
         "2026-08": 0,
         "2026-09": 1
       },
-      "source_concentration": 1.0,
-      "maturity": "source-specific",
+      "source_concentration": 0.25,
+      "maturity": "corroborated",
       "score": {
-        "recurrence": 1.1,
-        "acceleration": 18.3,
-        "persistence": 4.2,
-        "breadth": 5,
-        "total": 28.6
+        "recurrence": 3.8,
+        "acceleration": 8.3,
+        "persistence": 8.3,
+        "breadth": 20,
+        "total": 40.4
       },
       "evidence_ids": [
-        "arxiv:2609.21774v1"
+        "arxiv:2609.21774v1",
+        "sequoia-essays:8a2fe18efd08a18eea8c",
+        "menlo-ventures:dfeaba0c266f13ed7f2c",
+        "github:153097643"
       ]
     },
     {
@@ -2214,6 +2518,32 @@
       "review_status": "reviewed"
     },
     {
+      "name": "NSStudent/JevSwiftSDK",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-19T18:50:16Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "An independent, type-safe Swift SDK for TypeSafe Jev, with async/await, batching, retries, and SPM support.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/NSStudent/JevSwiftSDK",
+      "primary_layer": "Unclassified",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Unreviewed",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1377510956"
+      ],
+      "review_status": "unreviewed"
+    },
+    {
       "name": "v-modal/awesome-jev-tools",
       "rank": null,
       "editorial_rank": null,
@@ -2366,6 +2696,32 @@
       "cross_source": false,
       "evidence_ids": [
         "github:1375397100"
+      ],
+      "review_status": "unreviewed"
+    },
+    {
+      "name": "ekzhang/openjev-sglang",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-17T18:11:49Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Jev-compatible API endpoint based on open models (prefill-only)",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/ekzhang/openjev-sglang",
+      "primary_layer": "Unclassified",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Unreviewed",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1374869789"
       ],
       "review_status": "unreviewed"
     },
@@ -3025,7 +3381,7 @@
       "editorial_rank": null,
       "source_date": "2026-09-06T08:42:57Z",
       "category": "Discovered public repository",
-      "why_it_matters": "针对GPT 6.0,V4flash的破甲实验项目",
+      "why_it_matters": "针对GPT 6.0,workbuddyV4.1flash的破甲实验项目",
       "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
       "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
       "official_url": "https://github.com/aimeoa/hanshuang-codex",
@@ -7735,7 +8091,7 @@
       "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
       "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
       "official_url": "https://github.com/openvinotoolkit/openvino",
-      "primary_layer": "Unclassified",
+      "primary_layer": "Compute, inference & serving infrastructure",
       "secondary_layer": null,
       "cross_layer": false,
       "ratings": {},
@@ -8065,6 +8421,610 @@
     }
   ],
   "evidence": [
+    {
+      "id": "hn:49784194",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Exploring the scalable matrix extension of the Apple M4 processor",
+      "summary": "",
+      "url": "https://github.com/tzakharko/m4-sme-exploration",
+      "published_at": "2026-09-21T07:37:03+00:00",
+      "authors": [
+        "tosh"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784180",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Commodore Phone Update",
+      "summary": "",
+      "url": "https://commodore.net/commodore-callback-8020-updates/",
+      "published_at": "2026-09-21T07:35:45+00:00",
+      "authors": [
+        "andsoitis"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784144",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Running cloud credit management locally through notifications",
+      "summary": "",
+      "url": "https://github.com/Astralchemist/creditwatch",
+      "published_at": "2026-09-21T07:31:59+00:00",
+      "authors": [
+        "akashi_dev"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784126",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Ask HN: Tutorial/Book on Building a Desktop Windowing System",
+      "summary": "Can people please suggest a good tutorial (or even book) on building a simple Desktop Windowing System, preferably coded in a high level language such as C with small pieces of assembly where necessary.<p>The sort of thing I have in mind is something like GEM or the early MS Windows, which runs on top of an existing shell.",
+      "url": "https://news.ycombinator.com/item?id=49784126",
+      "published_at": "2026-09-21T07:29:35+00:00",
+      "authors": [
+        "ADavison2560"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784121",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "How Big Tech Runs Tech Projects and the Curious Absence of Scrum (2021)",
+      "summary": "",
+      "url": "https://newsletter.pragmaticengineer.com/p/project-management-in-tech",
+      "published_at": "2026-09-21T07:29:12+00:00",
+      "authors": [
+        "tosh"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784110",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Phineas Gage",
+      "summary": "",
+      "url": "https://en.wikipedia.org/wiki/Phineas_Gage",
+      "published_at": "2026-09-21T07:27:33+00:00",
+      "authors": [
+        "LolWolf"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784099",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+      "summary": "",
+      "url": "https://www.latent.space/p/good-start-labs",
+      "published_at": "2026-09-21T07:26:51+00:00",
+      "authors": [
+        "james_mir"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784087",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: A global music video channel like 90s MTV Select",
+      "summary": "",
+      "url": "https://selectm.tv",
+      "published_at": "2026-09-21T07:24:05+00:00",
+      "authors": [
+        "cvgellhorn"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784037",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Methods, Provenance and Limitations Documentation for Asteroid Approach Reports",
+      "summary": "",
+      "url": "https://zenodo.org/records/22868834",
+      "published_at": "2026-09-21T07:17:06+00:00",
+      "authors": [
+        "UniverseToday"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "assurance-infrastructure"
+      ],
+      "stack_layers": [
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784023",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Apple Fitness+ Layoffs Reported Ahead of Potential 'Major' Changes",
+      "summary": "",
+      "url": "https://www.macrumors.com/2026/09/20/apple-fitness-plus-layoffs-reported/",
+      "published_at": "2026-09-21T07:14:48+00:00",
+      "authors": [
+        "mgh2"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783999",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+      "summary": "",
+      "url": "https://github.com/jaredpalmer/kev/tree/main",
+      "published_at": "2026-09-21T07:11:55+00:00",
+      "authors": [
+        "tosh"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783990",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Effective Altruism Is Evil",
+      "summary": "",
+      "url": "https://twitter.com/thetreygoff/status/2101520207223173611",
+      "published_at": "2026-09-21T07:10:14+00:00",
+      "authors": [
+        "pr337h4m"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783978",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "State of Engineering Is Horribleium",
+      "summary": "",
+      "url": "https://twitter.com/v0xium/status/2101526107128529120",
+      "published_at": "2026-09-21T07:08:12+00:00",
+      "authors": [
+        "abrbhat"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783949",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "One researcher published the 'System 1 AI' idea in 2025",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=fyx7xz-vtMY",
+      "published_at": "2026-09-21T07:03:29+00:00",
+      "authors": [
+        "frag"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783941",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Where Do Chatbots Come From? What I Wish Everyone Knew About AI in 2026",
+      "summary": "",
+      "url": "https://www.lesswrong.com/posts/dww6cpbo2XoKbsxyw/where-do-chatbots-come-from-what-i-wish-everyone-knew-about",
+      "published_at": "2026-09-21T07:02:32+00:00",
+      "authors": [
+        "joozio"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783932",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Sublime Text Build 4213",
+      "summary": "",
+      "url": "https://www.sublimetext.com/blog/articles/sublime-text-4213",
+      "published_at": "2026-09-21T07:01:38+00:00",
+      "authors": [
+        "konz"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783925",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "The Vasari Graph",
+      "summary": "",
+      "url": "https://medium.com/counterarts/the-vasari-graph-89cc69ea54ce",
+      "published_at": "2026-09-21T07:00:14+00:00",
+      "authors": [
+        "cadeos"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783918",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Socrates on the Invention of Writing and the Relationship of Writing to Memory",
+      "summary": "",
+      "url": "https://www.historyofinformation.com/detail.php?id=3439",
+      "published_at": "2026-09-21T06:59:21+00:00",
+      "authors": [
+        "Bluestein"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783880",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "WWYD with 10k engineers and unlimited compute?",
+      "summary": "",
+      "url": "https://www.reddit.com/r/NoemaSI/comments/1wm4yme/what_would_you_do_with_10k_engineers_and/",
+      "published_at": "2026-09-21T06:54:30+00:00",
+      "authors": [
+        "chrisMyzel"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783865",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Ask HN: My recent show HN post got flagged need guidance",
+      "summary": "hi recently i shared my work which is an opensource platform i made and yesterday i shared its details and its repo link on hackernews under show hn it gained good traffic reaching 16 points under 1 hour but got flagged now i need help understanding why this happened and how can i unflag it or how i can share my work with HN community",
+      "url": "https://news.ycombinator.com/item?id=49783865",
+      "published_at": "2026-09-21T06:53:28+00:00",
+      "authors": [
+        "theguysudo"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783849",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Raspberry Pi 5 EEPROM update now blocks manual RAM upgrades",
+      "summary": "",
+      "url": "https://www.reddit.com/r/selfhosted/comments/1wkxjwg/raspberry_pi_5_eeprom_update_now_blocks_manual/",
+      "published_at": "2026-09-21T06:50:15+00:00",
+      "authors": [
+        "csmantle"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783816",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Rosenbjerg/local-review: Minimal webapp for local code review of branches",
+      "summary": "",
+      "url": "https://github.com/rosenbjerg/local-review",
+      "published_at": "2026-09-21T06:44:58+00:00",
+      "authors": [
+        "bhubert"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783809",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Shopify CEO says employees' `slop grenades` making more work for everyone else",
+      "summary": "",
+      "url": "https://fortune.com/2026/09/17/shopify-tobias-lutke-ai-slop-grenades/",
+      "published_at": "2026-09-21T06:43:40+00:00",
+      "authors": [
+        "theanonymousone"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783806",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Replacing an agentic classification loop with Jev: 7x faster",
+      "summary": "",
+      "url": "https://blog.r6i.it/typesafe-jev-vs-agentic-loop.html",
+      "published_at": "2026-09-21T06:43:14+00:00",
+      "authors": [
+        "sammy_rulez"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49783793",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Do Artifacts Have Politics? (1980)",
+      "summary": "",
+      "url": "https://www.jstor.org/stable/20024652?seq=1",
+      "published_at": "2026-09-21T06:41:50+00:00",
+      "authors": [
+        "shinryuu"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
     {
       "id": "hn:49783713",
       "source_id": "hacker-news",
@@ -8844,6 +9804,30 @@
       }
     },
     {
+      "id": "hn:49783133",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Mini-AGI – dynamic continual learning model trained from scratch on 8GB VRAM",
+      "summary": "",
+      "url": "https://github.com/volotat/mini-AGI/",
+      "published_at": "2026-09-21T04:42:37+00:00",
+      "authors": [
+        "volotat"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hn:49783062",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -8920,7 +9904,7 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "evidence_kind": "public-source-item",
-      "title": "Winning the Visa Lottery",
+      "title": "Winning the visa lottery",
       "summary": "",
       "url": "https://www.aeaweb.org/research/immigration-restrictions-firms-workers",
       "published_at": "2026-09-21T03:37:02+00:00",
@@ -9040,7 +10024,7 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "evidence_kind": "public-source-item",
-      "title": "Why back propagation goes backward",
+      "title": "Why Backprop Goes Backward (2018)",
       "summary": "",
       "url": "https://gregorygundersen.com/blog/2018/04/15/backprop/",
       "published_at": "2026-09-21T00:42:14+00:00",
@@ -10029,7 +11013,7 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "evidence_kind": "public-source-item",
-      "title": "Why MCP Was Always a Bad Idea?",
+      "title": "MCP was always a bad idea?",
       "summary": "",
       "url": "https://maharship.com/blog/why-mcp-was-always-a-bad-idea/",
       "published_at": "2026-09-20T19:44:40+00:00",
@@ -10533,7 +11517,7 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "evidence_kind": "public-source-item",
-      "title": "Laya (OS Jev) on Mac M4 CoreML Offline (45 decisions per second)",
+      "title": "Laya on Mac M4 CoreML Offline",
       "summary": "",
       "url": "https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0",
       "published_at": "2026-09-20T15:58:52+00:00",
@@ -10917,7 +11901,7 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "evidence_kind": "public-source-item",
-      "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+      "title": "Spain orders blocks on Archive.today and its mirrors",
       "summary": "",
       "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
       "published_at": "2026-09-20T06:16:42+00:00",
@@ -11708,6 +12692,32 @@
         "thissayantan"
       ],
       "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "github:1377510956",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "NSStudent/JevSwiftSDK",
+      "summary": "An independent, type-safe Swift SDK for TypeSafe Jev, with async/await, batching, retries, and SPM support.",
+      "url": "https://github.com/NSStudent/JevSwiftSDK",
+      "published_at": "2026-09-19T18:50:16Z",
+      "authors": [
+        "NSStudent"
+      ],
+      "projects": [
+        "NSStudent/JevSwiftSDK"
+      ],
       "theme_ids": [],
       "stack_layers": [],
       "support_count": 1,
@@ -15386,6 +16396,32 @@
       }
     },
     {
+      "id": "github:1374869789",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "ekzhang/openjev-sglang",
+      "summary": "Jev-compatible API endpoint based on open models (prefill-only)",
+      "url": "https://github.com/ekzhang/openjev-sglang",
+      "published_at": "2026-09-17T18:11:49Z",
+      "authors": [
+        "ekzhang"
+      ],
+      "projects": [
+        "ekzhang/openjev-sglang"
+      ],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "arxiv:2609.20822v1",
       "source_id": "arxiv",
       "source_type": "paper",
@@ -18942,6 +19978,30 @@
       }
     },
     {
+      "id": "menlo-ventures:579e68319ecf7e8edfa1",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "2026: The State of Consumer AI",
+      "summary": "Consumer AI Adoption Hardly Grew in 2026, But Spend Tripled Last year, consumer AI broke into the mainstream. This year, adoption barely moved—even as spending exploded. In 2025, consumer AI was a $12 billion market, 61% of U.S. adults had used AI, and nearly one in five Americans were using it every day. A category […] The post 2026: The State of Consumer AI appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/2026-the-state-of-consumer-ai/",
+      "published_at": "2026-09-16T12:00:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hn:49724691",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -19180,6 +20240,30 @@
       "published_at": "2026-09-14T17:00:53+00:00",
       "authors": [
         "frabonacci"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "radical-ventures:a907a55c8f3d23f10720",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "What AI Has to Understand Before It Can Beat the Market",
+      "summary": "George Sivulka, CEO of Radical Ventures Portfolio company Hebbia, dives into why AI can beat us at chess and code but not at the stock market. George explores the current AI capability frontier and predicts which markets fall next. Below is an excerpt from his essay originally published on X. AI has solved the Navier-Stokes […] The post What AI Has to Understand Before It Can Beat the Market appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/what-ai-has-to-understand-before-it-can-beat-the-market/",
+      "published_at": "2026-09-14T16:41:56+00:00",
+      "authors": [
+        "Ebin Tomy"
       ],
       "projects": [],
       "theme_ids": [],
@@ -19786,6 +20870,36 @@
       }
     },
     {
+      "id": "greylock-essays:aacd57b6bec14e3c9da1",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Rogue Agents: Deciphering Agent Intent",
+      "summary": "An effective solution for understanding and managing an agent’s intent requires a runtime system that learns normal agent behavior, detects meaningful deviation, and intervenes precisely enough to stay trusted.",
+      "url": "https://greylock.com/blog/rogue-agents-deciphering-agent-intent/",
+      "published_at": "2026-09-10T15:00:00+00:00",
+      "authors": [
+        "Jason Risch"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "agent-harnesses",
+        "assurance-infrastructure"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hf-paper:2609.11638",
       "source_id": "huggingface-papers",
       "source_type": "paper-curation",
@@ -19960,6 +21074,88 @@
         "models-capabilities",
         "tools-skills-integrations"
       ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:4db96be55ee28289e4fd",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Antioch: The Simulation Platform for Physical AI",
+      "summary": "Enabling teams to develop, test and validate AI systems in high-fidelity simulation. Today, we’re excited to announce that Greylock is leading the Series A in Antioch, a company building the simulation platform for physical AI. AI has transformed how quickly software teams can build products.…",
+      "url": "https://greylock.com/blog/introducing-antioch-the-simulation-platform-for-physical-ai/",
+      "published_at": "2026-09-08T15:11:00+00:00",
+      "authors": [
+        "Saam Motamedi"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "radical-ventures:f1d373af6ede201d5a8d",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "A World Model for Spatial Intelligence",
+      "summary": "This week, Radical Ventures portfolio company World Labs released Atlas, its next-generation world model for spatial intelligence. Atlas is a single model pretrained from scratch on text, images, video, and 3D. It combines every input into a shared spatial context, then generates what comes next while staying consistent with everything it has already seen. That […] The post A World Model for Spatial Intelligence appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/a-world-model-for-spatial-intelligence/",
+      "published_at": "2026-09-08T14:03:25+00:00",
+      "authors": [
+        "Ebin Tomy"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "menlo-ventures:40f23ab79d1ea3233322",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Welcome Alex Kurland, Menlo’s Newest Partner",
+      "summary": "Today is a big day for Menlo as we welcome Alex Kurland to the team! Adding a partner to a close-knit partnership is a big deal in many ways, but this is particularly special, as we are adding someone we’ve known and admired for over 15 years. Jordan Ormont and I both worked with Alex […] The post Welcome Alex Kurland, Menlo’s Newest Partner appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/welcome-alex-kurland-menlos-newest-partner/",
+      "published_at": "2026-09-08T10:00:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -20375,7 +21571,7 @@
       "source_type": "repository",
       "evidence_kind": "public-source-item",
       "title": "aimeoa/hanshuang-codex",
-      "summary": "针对GPT 6.0,V4flash的破甲实验项目",
+      "summary": "针对GPT 6.0,workbuddyV4.1flash的破甲实验项目",
       "url": "https://github.com/aimeoa/hanshuang-codex",
       "published_at": "2026-09-06T08:42:57Z",
       "authors": [
@@ -20791,6 +21987,30 @@
       }
     },
     {
+      "id": "radical-ventures:2ff85a6e59d73fca6180",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "The Rise of NeoLabs",
+      "summary": "In June 2024, Ilya Sutskever announced the creation of a new lab with “one goal and one product: a safe superintelligence.” Within four months, Safe Superintelligence (SSI) had raised $1 billion, and less than a year later it was valued at $32 billion, still without a public roadmap. The point was not what SSI had demonstrated but […] The post The Rise of NeoLabs appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/the-rise-of-the-neolab/",
+      "published_at": "2026-09-02T22:50:36+00:00",
+      "authors": [
+        "radical_user"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hn:49542486",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -20963,6 +22183,30 @@
       "projects": [
         "tigerless-labs/agent-memory"
       ],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "radical-ventures:4be08dec55eba7fcfb9f",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Generalist AI Ushers In The “GPT-3 Moment for Robotics”",
+      "summary": "Generalist AI is the first company to demonstrate clear scaling laws in robotics, with its GEN-1.5 model continuing to show smooth performance improvements after eight months of pretraining. Last week, Radical portfolio company Generalist AI released its latest robot foundation model, GEN-1.5. Researchers from OpenAI, Google DeepMind, Waymo, Nvidia, Prometheus and other top labs hailed […] The post Generalist AI Ushers In The “GPT-3 Moment for Robotics” appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/generalist-ai-ushers-in-the-gpt-3-moment-for-robotics/",
+      "published_at": "2026-09-01T20:39:59+00:00",
+      "authors": [
+        "Ebin Tomy"
+      ],
+      "projects": [],
       "theme_ids": [],
       "stack_layers": [],
       "support_count": 1,
@@ -22081,6 +23325,30 @@
       }
     },
     {
+      "id": "radical-ventures:ac23f6a635d1537abf1d",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Applying RSI to the Organization, Not Just the Model",
+      "summary": "Listen to this podcast on Spotify From our latest Radical Talks episode with Tantum Collins (“Teddy”), Co-Founder and CEO of Inherent Recursive self-improvement (RSI) is usually framed as a model problem: an AI system using AI to build better AI. Tantum Collins, (“Teddy”) Co-Founder and CEO of Inherent, thinks that framing misses something important: the […] The post Applying RSI to the Organization, Not Just the Model appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/applying-rsi-to-the-organization-not-just-the-model-2/",
+      "published_at": "2026-08-25T21:31:45+00:00",
+      "authors": [
+        "Olivia Lowe"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:1346539416",
       "source_id": "github",
       "source_type": "repository",
@@ -22612,6 +23880,36 @@
         "harness-orchestration",
         "models-capabilities",
         "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "radical-ventures:002cb1815fb8b4589802",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "World Models in Robotics",
+      "summary": "Robots should not go to school in the real world. While scaling physical AI will require robots to learn through active interaction — just like humans do — the physical world is not a practical training ground for trial and error. It is expensive, time-consuming, and ultimately unsafe. Instead, robots and all physical AI systems […] The post World Models in Robotics appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/world-models-in-robotics/",
+      "published_at": "2026-08-24T14:32:05+00:00",
+      "authors": [
+        "Ebin Tomy"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "multimodal-3d",
+        "robotics-embodied-ai"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations"
       ],
       "support_count": 1,
       "monthly_counts": {
@@ -23453,6 +24751,35 @@
       }
     },
     {
+      "id": "menlo-ventures:357c545badf007e3def4",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Stripe to Acquire OpenRouter: Why Everyone Is Obsessed With Model Routing",
+      "summary": "Today, OpenRouter announced that they have entered into an agreement to be acquired by Stripe, three years from when it was launched in 2023. OpenRouter launched as “the unified interface for LLMs” with only four models (GPT-3.5, GPT-4, Together’s GPT NeoXT, and Cohere xlarge) and two core bets: 1) AI usage will be massive and […] The post Stripe to Acquire OpenRouter: Why Everyone Is Obsessed With Model Routing appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/stripe-to-acquire-openrouter-why-everyone-is-obsessed-with-model-routing/",
+      "published_at": "2026-08-19T17:00:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "model-routing"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "models-capabilities"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "sequoia-essays:7f9365928ab28164f22e",
       "source_id": "sequoia-essays",
       "source_type": "investor-essay",
@@ -23511,6 +24838,59 @@
       }
     },
     {
+      "id": "radical-ventures:4e64543f295794b596b4",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Teaching AI to Ask the Right Questions",
+      "summary": "In this week’s feature, Partner Aaron Rosenberg examines Radical portfolio company Inherent’s new AI agent, Faraday, an AI scientist that outperforms far larger frontier agents at replicating research papers. Radical Ventures portfolio company Inherent has introduced Faraday, a 27-billion-parameter AI agent that combines the capabilities of frontier coding agents with a layer of scientific judgment. […] The post Teaching AI to Ask the Right Questions appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/teaching-ai-to-ask-the-right-questions/",
+      "published_at": "2026-08-17T22:37:47+00:00",
+      "authors": [
+        "radical_user"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "menlo-ventures:187b5e1c4228f6d16695",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "The Keyboard Is Dying on Schedule. The Text Box Is Next.",
+      "summary": "Fourteen months ago, I wrote that we were betting Wispr would kill the keyboard. The claim needed defending then; voice dictation had disappointed for decades. Since that post, Wispr has grown revenue over 30x year over year, and Flow is used in 162 countries and over 100 languages by tens of thousands of paying businesses. […] The post The Keyboard Is Dying on Schedule. The Text Box Is Next. appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/the-keyboard-is-dying-on-schedule-the-text-box-is-next/",
+      "published_at": "2026-08-17T12:00:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hf-paper:2608.16157",
       "source_id": "huggingface-papers",
       "source_type": "paper-curation",
@@ -23564,6 +24944,30 @@
       "projects": [
         "deepseek-ai/deepseek-harness"
       ],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "menlo-ventures:69b74c1ecdb46714d7c7",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Built to Run: Doubling Down for Lovable’s $400M Series C",
+      "summary": "Last December, we co-led Lovable’s $330M Series B with a conviction: AI had opened software creation to the billion-plus knowledge workers who have ideas but have never written code, and Lovable had become the way millions of them build. Today, we’re thrilled to announce that Menlo is leading Lovable’s $400M Series C at a $13.3B […] The post Built to Run: Doubling Down for Lovable’s $400M Series C appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/built-to-run-doubling-down-for-lovables-400m-series-c/",
+      "published_at": "2026-08-12T10:30:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
       "theme_ids": [],
       "stack_layers": [],
       "support_count": 1,
@@ -23647,6 +25051,58 @@
         "By Shaun Maguire , Sonya Huang , James Flynn and Carl Eschenbach"
       ],
       "projects": [],
+      "theme_ids": [
+        "assurance-infrastructure"
+      ],
+      "stack_layers": [
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "radical-ventures:8663a0e39cfb42751e50",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Radical Reads: Jeff Dean on Launching Discovery Loop",
+      "summary": "This week we announced Radical Ventures’ co-lead investment in Discovery Loop, founded by Jeff Dean, Sanjay Ghemawat, Quoc Le, and Oriol Vinyals — perhaps the most pedigreed AI founding team ever. For this week’s feature, we’re sharing excerpts from Jeff Dean’s thread announcing the new company, including some of the slides the team presented to […] The post Radical Reads: Jeff Dean on Launching Discovery Loop appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/radical-reads-jeff-dean-on-launching-discovery-loop/",
+      "published_at": "2026-08-09T21:00:00+00:00",
+      "authors": [
+        "radical_user"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "radical-ventures:3daaa59eaea4027da4cb",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Our Investment in Discovery Loop",
+      "summary": "Radical Ventures is co-leading an investment in Discovery Loop, a public benefit company founded by AI research pioneers Jeff Dean, Sanjay Ghemawat, Quoc Le, and Oriol Vinyals. Our founding thesis has long held that AI will not only replace conventional software but also unlock breakthroughs across science and engineering. Discovery Loop is a direct expression […] The post Our Investment in Discovery Loop appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/our-investment-in-discovery-loop/",
+      "published_at": "2026-08-05T21:47:41+00:00",
+      "authors": [
+        "radical_user"
+      ],
+      "projects": [],
       "theme_ids": [],
       "stack_layers": [],
       "support_count": 1,
@@ -23728,6 +25184,61 @@
       }
     },
     {
+      "id": "radical-ventures:20d1ce473b192f88b82c",
+      "source_id": "radical-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "A Functional Taxonomy of World Models",
+      "summary": "“World model” has become one of the most-used — and least-agreed-upon — terms in AI. It means one thing in computer vision, another in robotics, another again in reinforcement learning and generative AI. If the field is going to build toward spatial intelligence, it needs to be precise about what these systems actually do. Rather […] The post A Functional Taxonomy of World Models appeared first on Radical Ventures .",
+      "url": "https://radical.vc/articles/a-functional-taxonomy-of-world-models/",
+      "published_at": "2026-08-02T21:06:00+00:00",
+      "authors": [
+        "radical_user"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "multimodal-3d",
+        "training-self-improvement"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "menlo-ventures:c209a666a0419efcd1be",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Investing in Pangram to Stop AI Slop on the Internet",
+      "summary": "Why it’s critical to prevent polluting the internet This is a seminal moment for human history. Stop and think about it. We have invented a machine that now creates information indistinguishable from that of humans. A majority of the content created on the internet (and even off the internet) is created by AI, as well […] The post Investing in Pangram to Stop AI Slop on the Internet appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/investing-in-pangram-to-stop-ai-slop-on-the-internet/",
+      "published_at": "2026-07-29T12:00:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "alphasignal:project:microsoft-graphrag",
       "source_id": "alphasignal",
       "source_type": "newsletter-analysis",
@@ -23760,6 +25271,30 @@
       "provenance": {
         "mode": "private-corpus-assessment",
         "description": "Analyst assessment derived from AlphaSignal discovery and linked to the project's official public page."
+      }
+    },
+    {
+      "id": "greylock-essays:45acaafe1de11885fea9",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Breaking out of the God Box",
+      "summary": "Every technology this powerful has created new ways for people to play, live and connect. At Greylock, we see two opportunities: the intelligent personal professional, and networks for a new class of creators.",
+      "url": "https://greylock.com/blog/breaking-out-of-the-god-box/",
+      "published_at": "2026-07-28T17:00:00+00:00",
+      "authors": [
+        "Seth Rosenberg"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
       }
     },
     {
@@ -23823,8 +25358,12 @@
         "By Sonya Huang and Abhishek Malani"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
+      "stack_layers": [
+        "compute-inference-serving"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-07": 1
@@ -23905,6 +25444,30 @@
       }
     },
     {
+      "id": "menlo-ventures:7bc821e5d1cea5f10df1",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "A Unified OS for Drug Development: Our Investment in Cheiron",
+      "summary": "Drug development is one of the hardest problems in the world. It takes a decade, costs billions, and fails 90% of the time. Much of this is a natural consequence of how complex these programs are. A drug in development touches clinical, regulatory, manufacturing, and commercial functions all at once, generating knowledge across each that […] The post A Unified OS for Drug Development: Our Investment in Cheiron appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/a-unified-os-for-drug-development-our-investment-in-cheiron/",
+      "published_at": "2026-07-22T21:00:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "alphasignal:project:wrenai",
       "source_id": "alphasignal",
       "source_type": "newsletter-analysis",
@@ -23974,6 +25537,34 @@
       }
     },
     {
+      "id": "menlo-ventures:dfeaba0c266f13ed7f2c",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Menlo’s Investment in Fireworks: The Runtime for Specialized Intelligence",
+      "summary": "AI inference is quickly becoming one of the largest markets in the world, and Fireworks is leading the expansion with its platform for specialized intelligence and low-cost token production. Today, Menlo is proud to be partnering with Fireworks in its $1.5 billion Series D. As the leading AI labs push the capability frontier forward, they […] The post Menlo’s Investment in Fireworks: The Runtime for Specialized Intelligence appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/menlos-investment-in-fireworks-the-runtime-for-specialized-intelligence/",
+      "published_at": "2026-07-16T13:30:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
+      "stack_layers": [
+        "compute-inference-serving"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "sequoia-essays:afde56cfaaeb81f69523",
       "source_id": "sequoia-essays",
       "source_type": "investor-essay",
@@ -23986,8 +25577,12 @@
         "By Shaun Maguire"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-07": 1
@@ -24022,6 +25617,34 @@
       }
     },
     {
+      "id": "greylock-essays:da9d5e408f534282b985",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Oak: The AI-Native Identity Operating System",
+      "summary": "An AI-native platform that governs every identity across an organization. Identity has become the largest unresolved problem in enterprise security. Legacy tooling built to govern it (IGA, IAM) was designed for a static world of human users and periodic certification. Two shifts have broken that…",
+      "url": "https://greylock.com/blog/introducing-oak-the-ai-native-indentity-operating-system/",
+      "published_at": "2026-07-15T22:17:09+00:00",
+      "authors": [
+        "Mor Chen"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:1300902838",
       "source_id": "github",
       "source_type": "repository",
@@ -24044,6 +25667,82 @@
         "harness-orchestration",
         "tools-skills-integrations"
       ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:88032f9cc0558dedb481",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Greylock 18",
+      "summary": "Today, we are announcing Greylock 18, a new $1.5 billion early-stage venture fund. A company begins when a founder sees a future others cannot yet see. There is no team, product, or revenue. Only a deep insight and the courage to start. Being early is lonely work. For years, being right can look…",
+      "url": "https://greylock.com/blog/introducing-greylock-18/",
+      "published_at": "2026-07-14T18:49:00+00:00",
+      "authors": [
+        "Greylock Partners"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "menlo-ventures:3f0b4d0e045fc978a741",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Defense at Machine Speed: The Emerging Architecture Powering AI-Native Cybersecurity",
+      "summary": "Over the last six months, it seems like every security-oriented conversation has distilled down into one core question: What happens to defense when attackers automate everything? The backdrop is well-known. Adversaries are now doing at machine-speed and machine-scale what defenders still do by hand. The teams adopting AI defenses are compounding their advantage every week. […] The post Defense at Machine Speed: The Emerging Architecture Powering AI-Native Cybersecurity appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/defense-at-machine-speed-the-emerging-architecture-powering-ai-native-cybersecurity/",
+      "published_at": "2026-07-14T15:00:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "assurance-infrastructure"
+      ],
+      "stack_layers": [
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:6362f12ec18f41dc774c",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Welcome, Glenn Kelman!",
+      "summary": "We are thrilled to share that Glenn Kelman has joined Greylock as an Executive in Residence. Glenn is an exceptional operator and company builder with nearly three decades of experience building, scaling, and leading technology companies through IPOs and beyond. At Greylock, he’ll work directly…",
+      "url": "https://greylock.com/blog/welcome-glenn-kelman/",
+      "published_at": "2026-07-14T07:17:05+00:00",
+      "authors": [
+        "Greylock Partners"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-07": 1
@@ -24160,6 +25859,30 @@
       }
     },
     {
+      "id": "menlo-ventures:3d08e607b588db51c092",
+      "source_id": "menlo-ventures",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Keeping The Front Door of Healthcare Open: Our Investment in Assort Health",
+      "summary": "Walk into any outpatient practice in America and you’ll find “the binder.” Inches thick, worn soft from years of use, stuffed with Post-it notes that contain the rules for how patients actually get access to care. New referral or post-op follow-up? Workers’ comp or self-pay? Which provider, which day, which intake form? Little of it […] The post Keeping The Front Door of Healthcare Open: Our Investment in Assort Health appeared first on Menlo Ventures .",
+      "url": "https://menlovc.com/perspective/keeping-the-front-door-of-healthcare-open-our-investment-in-assort-health/",
+      "published_at": "2026-06-24T12:00:00+00:00",
+      "authors": [
+        "Menlo Ventures"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "sequoia-essays:775cb9638e7b090ad2d9",
       "source_id": "sequoia-essays",
       "source_type": "investor-essay",
@@ -24172,8 +25895,12 @@
         "by Konstantine Buhler"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-06": 1
@@ -24288,6 +26015,35 @@
       "projects": [],
       "theme_ids": [],
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:c20b6ac7c42eb8c20580",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Niteshift: The Full-Stack Cloud for Coding Agents",
+      "summary": "The full-stack cloud for coding agents, pairing frontier agents with your dev environment. The best software engineering teams have invested relentlessly in their internal developer tools. Better tools meant developers could write more code, ship faster, and build better products. Historically, the…",
+      "url": "https://greylock.com/blog/introducing-niteshift-the-full-stack-cloud-for-coding-agents/",
+      "published_at": "2026-06-10T22:22:33+00:00",
+      "authors": [
+        "Jerry Chen"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-06": 1
@@ -24807,6 +26563,34 @@
       }
     },
     {
+      "id": "greylock-essays:2517cac042b8164a4888",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Altara: AI for the Physical Sciences",
+      "summary": "Accelerating the physical sciences from data to breakthroughs. The physical sciences – semiconductors, batteries, advanced materials, specialty chemicals – underpin the most economically consequential industries in the world. They are also among the least well-served by modern software and AI. The…",
+      "url": "https://greylock.com/blog/introducing-altara-ai-for-the-physical-sciences/",
+      "published_at": "2026-05-05T22:38:27+00:00",
+      "authors": [
+        "Corinne Riley"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-05": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hf-paper:2605.03042",
       "source_id": "huggingface-papers",
       "source_type": "paper-curation",
@@ -24883,8 +26667,13 @@
         "by Sonya Huang"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-04": 1
@@ -24938,8 +26727,42 @@
         "by Sonya Huang and Alfred Lin"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-04": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:3ea6b07c66c36091c3d1",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Welcome, Neiman Mathew!",
+      "summary": "We are excited to welcome Neiman Mathew as our newest partner on the Greylock investing team. Neiman will focus on partnering with early-stage founders often even before they have a business idea, and particularly around the next generation AI stack. Neiman is very passionate about working with the…",
+      "url": "https://greylock.com/blog/welcome-neiman-mathew/",
+      "published_at": "2026-04-15T23:06:37+00:00",
+      "authors": [
+        "Greylock Partners"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations",
+        "harness-orchestration"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-04": 1
@@ -24962,8 +26785,13 @@
         "by Julien Bek"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-04": 1
@@ -25238,8 +27066,14 @@
         "by Luciana Lixandru"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "agent-harnesses",
+        "memory-context"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "assurance"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-03": 1
@@ -25271,6 +27105,34 @@
       "stack_layers": [
         "tools-skills-integrations",
         "harness-orchestration"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-03": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:46157fce42603f1b75d2",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Axiamatic: AI for Enterprise Transformation",
+      "summary": "AI that makes enterprise transformations easier, not more complex. We are excited to announce that Axiamatic is coming out of stealth with $54M in financing, including a Series Seed led by Greylock and a Series A financing led by our friends at Bessemer, to build the industry’s leading AI platform…",
+      "url": "https://greylock.com/blog/introducing-axiamatic-ai-for-enterprise-transformation/",
+      "published_at": "2026-03-11T22:14:53+00:00",
+      "authors": [
+        "Asheem Chandna"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
       ],
       "support_count": 1,
       "monthly_counts": {
@@ -25322,6 +27184,34 @@
       ],
       "theme_ids": [],
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-03": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:16bf0805df87e8f7760d",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Cylake: AI-Native Cybersecurity with Total Data Sovereignty",
+      "summary": "We are excited to announce that Greylock led a $45M seed round in Cylake, a startup focused on building the industry’s leading AI-native cybersecurity for customers that require total data sovereignty. Cylake is founded by three cybersecurity veterans, who have shaped the modern security landscape.…",
+      "url": "https://greylock.com/blog/introducing-cylake-ai-native-cybersecurity-with-total-data-sovereignty/",
+      "published_at": "2026-03-05T22:25:15+00:00",
+      "authors": [
+        "Asheem Chandna"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "assurance-infrastructure"
+      ],
+      "stack_layers": [
+        "assurance"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-03": 1
@@ -25643,6 +27533,30 @@
       }
     },
     {
+      "id": "greylock-essays:b6732e0a45688d9d13f8",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Welcome, Chang Li!",
+      "summary": "We’re excited to announce that Chang Li is joining Greylock as our Marketing Partner. Chang will work closely with founders and portfolio companies to help build and advance their marketing strategy, positioning, and messaging. In addition, she will oversee Greylock’s marketing. An electrical…",
+      "url": "https://greylock.com/blog/welcome-chang-li/",
+      "published_at": "2026-01-22T02:20:21+00:00",
+      "authors": [
+        "Greylock Partners"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-01": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "sequoia-essays:844736c481bc77c2bff6",
       "source_id": "sequoia-essays",
       "source_type": "investor-essay",
@@ -25709,8 +27623,13 @@
         "Ankit Gupta"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations",
+        "harness-orchestration"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-01": 1
@@ -25807,8 +27726,12 @@
         "by Bogomil Balkansky"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-01": 1
@@ -25904,6 +27827,30 @@
       }
     },
     {
+      "id": "greylock-essays:c0e6b69aee4fc3beef91",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Tin Can: The Landline is a Network Again",
+      "summary": "The landline was the original social network. In the 90s and 00s, it was how we made plans after school, called friends and family on weekends, and learned how to be present with another person. Attention wasn’t split across feeds or back and forth texting; we simply had conversations with minimal…",
+      "url": "https://greylock.com/blog/our-investment-in-tin-can-the-landline-is-a-network-again/",
+      "published_at": "2025-12-19T01:55:23+00:00",
+      "authors": [
+        "Mike Duboe"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-12": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "yc-essays:844957c96cfd017a6f9c",
       "source_id": "yc-essays",
       "source_type": "operator-essay",
@@ -25928,6 +27875,35 @@
       }
     },
     {
+      "id": "greylock-essays:d21542f6564a82ff3cf3",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "RL in Real Life: Durable Moats",
+      "summary": "In the past year, Reinforcement Learning (RL) has gone from being a promising path towards general intelligence to a taboo phrase at the San Francisco dinner table. Though sometimes criticized as overhyped, RL has proved highly effective inside AI labs, where it helps models “hill-climb” towards…",
+      "url": "https://greylock.com/blog/rl-in-real-life-durable-moats/",
+      "published_at": "2025-12-12T01:02:59+00:00",
+      "authors": [
+        "Shreya Shekhar"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-12": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "sequoia-essays:950591afd0b774f7db06",
       "source_id": "sequoia-essays",
       "source_type": "investor-essay",
@@ -25940,8 +27916,12 @@
         "by Anas Biad , Pat Grady and Brian Halligan"
       ],
       "projects": [],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2025-12": 1
@@ -25962,6 +27942,30 @@
       "published_at": "2025-12-10T04:32:10+00:00",
       "authors": [
         "Tim Brady"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-12": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:2b316ef1fd48ed3d9d0a",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "GenAI Present and Future: A Conversation with Hasmukh Ranjan, CIO & SVP of AMD",
+      "summary": "Generative AI is fundamentally reshaping how data is stored, processed, and analyzed. As enterprises look to apply GenAI to unlock deeper insights for customers and internal teams, I’ve been speaking with technology leaders about how they’re responding to this paradigm shift. At AMD, a leading…",
+      "url": "https://greylock.com/blog/genai-present-and-future-a-conversation-with-hasmukh-ranjan-cio-svp-of-amd/",
+      "published_at": "2025-12-05T00:03:03+00:00",
+      "authors": [
+        "Asheem Chandna"
       ],
       "projects": [],
       "theme_ids": [],
@@ -26059,6 +28063,30 @@
       }
     },
     {
+      "id": "greylock-essays:acac8dc309af971c5982",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Congrats, Chronosphere and Palo Alto Networks!",
+      "summary": "Congratulations to Martin Mao, Rob Skillington, and the entire Chronosphere team on today’s milestone: Palo Alto Networks has signed a definitive agreement to acquire Chronosphere. By bringing together Chronosphere’s technology and team, with Palo Alto Networks’ scale and product breadth, together,…",
+      "url": "https://greylock.com/blog/congratulations-chronosphere-paloaltonetworks/",
+      "published_at": "2025-11-20T06:26:59+00:00",
+      "authors": [
+        "Jerry Chen"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-11": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hf-paper:2511.12884",
       "source_id": "huggingface-papers",
       "source_type": "paper-curation",
@@ -26098,6 +28126,36 @@
       }
     },
     {
+      "id": "greylock-essays:32b264a22d3e04806ae3",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing AirOps: The System of Action for Organic Growth",
+      "summary": "Marketers do not win by watching dashboards; they win by acting on them. In today’s AI era, the internet’s front door has shifted. What once started with a Google search now begins with a question to an AI assistant. Apps like ChatGPT, Perplexity, and Gemini are reshaping how people discover and…",
+      "url": "https://greylock.com/blog/introducing-airops-the-system-of-action-for-organic-growth/",
+      "published_at": "2025-11-15T00:49:20+00:00",
+      "authors": [
+        "Mike Duboe"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "agent-harnesses",
+        "ai-native-gtm"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-11": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "yc-essays:39146f41cc8a7b3fa9f7",
       "source_id": "yc-essays",
       "source_type": "operator-essay",
@@ -26122,6 +28180,62 @@
       }
     },
     {
+      "id": "greylock-essays:c7b10bf9696f4b68e41d",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing SuperMe: The AI-Native Professional Network",
+      "summary": "Most expertise is not yet legible to LLMs. The best professionals demonstrate it in private contexts: internal conversations, product docs, meeting notes, and, most often, in their own heads. For too long, the people elevated to “expert” status were those who invested most in their public persona,…",
+      "url": "https://greylock.com/blog/introducing-superme-the-ai-native-professional-network/",
+      "published_at": "2025-11-12T01:09:03+00:00",
+      "authors": [
+        "Mike Duboe"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-11": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:eccdc18b7206e05d0e7c",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Tenzai: Autonomous AI Hackers",
+      "summary": "We are excited to announce that Greylock led a $75m seed round financing at Tenzai, a cybersecurity startup focused on building the industry’s leading agentic AI penetration testing platform. Tenzai agents actively hack, exploit, and fix the hardest-to-find vulnerabilities across enterprise…",
+      "url": "https://greylock.com/blog/introducing-tenzai-autonomous-ai-hackers/",
+      "published_at": "2025-11-10T05:30:39+00:00",
+      "authors": [
+        "Asheem Chandna"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "assurance-infrastructure"
+      ],
+      "stack_layers": [
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-11": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "yc-essays:fc55ddf12740df4432b1",
       "source_id": "yc-essays",
       "source_type": "operator-essay",
@@ -26136,6 +28250,35 @@
       "projects": [],
       "theme_ids": [],
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-11": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:cbdde800c82cd1b1c5e4",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "How Resolve AI is Building Agents to Keep the World’s Software Running",
+      "summary": "Four years ago, when Spiros Xanthos was at Splunk, he watched his best engineers succumb to the constant stress caused by system incidents and outages. These were smart, motivated engineers who’d joined the company to solve interesting problems. Yet one by one, nearly his entire site reliability…",
+      "url": "https://greylock.com/blog/how-resolve-ai-is-building-agents-to-keep-the-worlds-software-running/",
+      "published_at": "2025-11-03T23:30:46+00:00",
+      "authors": [
+        "Kaitlin Durkosh"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2025-11": 1
@@ -26437,6 +28580,30 @@
       }
     },
     {
+      "id": "greylock-essays:84912a2c10fee02398ec",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Obsidian’s Quiet Climb to the Top of SaaS Security in the Age of AI",
+      "summary": "Growing up in Bangladesh, Hasan Imam, CEO at Obsidian Security, never pictured himself leading a cybersecurity company in Silicon Valley. “I’ve never had a grand plan for my life,” he says. “It was always about doing my very best in whatever situation I was in.” That mindset was forged early. When…",
+      "url": "https://greylock.com/blog/obsidians-quiet-climb-to-the-top-of-saas-security-in-the-age-of-ai/",
+      "published_at": "2025-09-29T23:45:00+00:00",
+      "authors": [
+        "Greylock Partners"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hf-paper:2509.22186",
       "source_id": "huggingface-papers",
       "source_type": "paper-curation",
@@ -26595,6 +28762,30 @@
       "published_at": "2025-09-12T16:00:00+00:00",
       "authors": [
         "Garry Tan"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:940aa091f7fdd57747aa",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Gen AI Present and Future: A Conversation with Naveen Zutshi, CIO at Databricks",
+      "summary": "Enterprise software as we know it is being rewritten by data and AI. In the latest installment of our series on how technology leaders navigate generative AI, Databricks CIO Naveen Zutshi shares how GenAI is transforming everything from development and security to organizational design. As he puts…",
+      "url": "https://greylock.com/blog/gen-ai-present-and-future-a-conversation-with-naveen-zutshi-cio-at-databricks/",
+      "published_at": "2025-09-10T22:04:17+00:00",
+      "authors": [
+        "Asheem Chandna"
       ],
       "projects": [],
       "theme_ids": [],
@@ -26898,6 +29089,37 @@
       }
     },
     {
+      "id": "greylock-essays:7ae3d96ba71e4e63c7f2",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Fable: AI-Native Human Risk Management",
+      "summary": "In the AI era, attackers are becoming master manipulators — deploying highly convincing deepfakes, real-time voice impersonations, SMS phishing attacks, and contextual social engineering. The human layer is now the most actively targeted and most difficult to defend. Despite billions spent on tools…",
+      "url": "https://greylock.com/blog/introducing-fable-ai-native-human-risk-management/",
+      "published_at": "2025-07-28T22:13:50+00:00",
+      "authors": [
+        "Saam Motamedi"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "assurance-infrastructure",
+        "voice-audio"
+      ],
+      "stack_layers": [
+        "assurance",
+        "models-capabilities",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:1027384981",
       "source_id": "github",
       "source_type": "repository",
@@ -27012,6 +29234,63 @@
       }
     },
     {
+      "id": "greylock-essays:568bff58c053c7627fd9",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Cogent: AI Agents for Vulnerability Management",
+      "summary": "In today’s AI-driven threat environment, attackers exploit vulnerabilities faster than ever before, leaving vulnerability management teams struggling to keep pace and enterprises exposed. Cogent Security tackles this critical issue by reimagining vulnerability management — one of cybersecurity’s…",
+      "url": "https://greylock.com/blog/introducing-cogent-ai-agents-for-vulnerability-management/",
+      "published_at": "2025-07-14T21:12:29+00:00",
+      "authors": [
+        "Saam Motamedi"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "assurance-infrastructure"
+      ],
+      "stack_layers": [
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:b5d0a493521b25d69daf",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Voice Agents: Easy to Use, Hard to Build",
+      "summary": "Voice has emerged as a widely adopted modality in applied AI. From call centers to scheduling assistants, voice agents are entering more production use cases across various industries than ever before. Despite how natural it feels to speak, building low-latency, conversational voice agents remains…",
+      "url": "https://greylock.com/blog/voice-agents-easy-to-use-hard-to-build/",
+      "published_at": "2025-07-10T23:21:19+00:00",
+      "authors": [
+        "Sophia Luo"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "voice-audio"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hf-paper:2507.03009",
       "source_id": "huggingface-papers",
       "source_type": "paper-curation",
@@ -27025,6 +29304,30 @@
         "{'name': 'Chang Chu', 'hidden': False}",
         "{'name': 'Zhikuang Xin', 'hidden': False}",
         "{'name': 'Xiangyao Ma', 'hidden': False}"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:70a30202b6109fe8451d",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Gen AI Present and Future: A Conversation with Shamim Mohammad, EVP and Chief Information and Technology Officer at CarMax",
+      "summary": "Generative AI is driving both experimentation and real-world business transformation. As enterprises explore AI’s potential and turn it into tangible impact, I’m speaking with technology leaders about how it’s creating value inside large organizations. At CarMax, the largest used car retailer in…",
+      "url": "https://greylock.com/blog/gen-ai-present-and-future-carmax/",
+      "published_at": "2025-07-01T23:56:51+00:00",
+      "authors": [
+        "Asheem Chandna"
       ],
       "projects": [],
       "theme_ids": [],
@@ -27095,6 +29398,82 @@
       }
     },
     {
+      "id": "greylock-essays:92d554f8645dedde10b8",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Congratulations, Predibase and Rubrik!",
+      "summary": "Congratulations to Greylock portfolio companies Predibase and Rubrik on their announcement: Rubrik has entered into an agreement to acquire Predibase. This powerful combination brings together optimized, fine-tuned AI models and robust, governed data, designed to support enterprises worldwide in…",
+      "url": "https://greylock.com/blog/congratulations-predibase-and-rubrik/",
+      "published_at": "2025-06-25T20:11:11+00:00",
+      "authors": [
+        "Saam Motamedi"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:95709decf180c923f94e",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Mandolin: AI Teammates for Healthcare",
+      "summary": "When we first met Will Yin and Rohit Rustagi, it was clear that they were obsessed with solving an urgent problem in healthcare: closing the time-to-access for specialty therapies that treat conditions like cancer and Alzheimer’s. In our meeting, Will articulated how he could build “a new kind of…",
+      "url": "https://greylock.com/blog/mandolin-ai/",
+      "published_at": "2025-06-25T17:10:16+00:00",
+      "authors": [
+        "Jerry Chen"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:601ddc8be33a48dd1165",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Aspora: The Financial Super App for the Global Diaspora",
+      "summary": "It’s rare to meet a founder pursuing their life’s work with such clarity. Parth Garg is one of those founders. Today, we’re excited to announce our investment in Aspora, co-leading the Series B just months after participating in the Series A. We doubled down on our investment after we saw Parth’s…",
+      "url": "https://greylock.com/blog/introducing-aspora-the-financial-super-app-for-the-global-diaspora/",
+      "published_at": "2025-06-16T19:27:58+00:00",
+      "authors": [
+        "Seth Rosenberg"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "yc-essays:4d1702b4d39cb5f7e12b",
       "source_id": "yc-essays",
       "source_type": "operator-essay",
@@ -27109,6 +29488,34 @@
       "projects": [],
       "theme_ids": [],
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:effa1418b70e2034c31f",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "The Rise of AI-Native User Research: From Scheduled Interviews to On-Demand Insight",
+      "summary": "For the past few decades, user research has inherently come with a tradeoff: scale or quality. Teams could send unmoderated mass surveys (low fidelity, low effort) or run a handful of moderated interviews (high fidelity, high effort). The difference in turnaround time for interview-based research…",
+      "url": "https://greylock.com/blog/ai-user-research/",
+      "published_at": "2025-06-10T23:56:32+00:00",
+      "authors": [
+        "Sophia Luo"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2025-06": 1
@@ -27332,6 +29739,34 @@
       }
     },
     {
+      "id": "greylock-essays:841d14442685e9cea677",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Netic: The AI Revenue Engine For America’s Essential Services",
+      "summary": "We are excited to announce Greylock’s investment and partnership with Netic, a company pioneering the autonomous AI revenue engine for the essential services economy that keeps America running. Greylock led Netic’s seed round and increased ownership in the company’s oversubscribed Series A. Founded…",
+      "url": "https://greylock.com/blog/introducing-netic-the-ai-revenue-engine-for-americas-essential-services/",
+      "published_at": "2025-06-02T20:29:40+00:00",
+      "authors": [
+        "Asheem Chandna"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "ai-native-gtm"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hf-paper:2506.01844",
       "source_id": "huggingface-papers",
       "source_type": "paper-curation",
@@ -27362,6 +29797,82 @@
       "support_count": 1,
       "monthly_counts": {
         "2025-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:36e4e3da57dd2fea80f1",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Gen AI Present and Future: A Conversation with Chris Bedi, CCO and AI Enterprise Advisor at ServiceNow",
+      "summary": "I recently spoke with ServiceNow CCO and AI Enterprise Advisor Chris Bedi about what’s holding AI adoption back, how to scale it enterprise-wide, and what it means to build toward a future powered by digital employees. This is the fifth installment in a series of interviews with leading CIOs across…",
+      "url": "https://greylock.com/blog/gen-ai-servicenow/",
+      "published_at": "2025-05-28T22:59:25+00:00",
+      "authors": [
+        "Asheem Chandna"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-05": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:8ff56447f4ae4afc364b",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Welcome, Howard Ting!",
+      "summary": "We are thrilled to share that Howard Ting has joined Greylock as an Executive in Residence. Howard is an exceptional entrepreneurial leader with deep experience across product management and marketing, and most recently as a CEO. He has played a pivotal role in scaling leading enterprise companies…",
+      "url": "https://greylock.com/blog/welcome-howard-ting/",
+      "published_at": "2025-05-28T21:52:00+00:00",
+      "authors": [
+        "Greylock Partners"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-05": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:b2f832aeaa3a7520dce3",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Greenlite AI: AI Workforce to Fight Financial Crime",
+      "summary": "It’s no surprise that 2025 is the year of agentic AI. LLMs have evolved beyond sentence completion to execute end-to-end work, with the promise of improving business outcomes and saving costs across verticals. While there has been a lot of hype around initial use cases like software engineering,…",
+      "url": "https://greylock.com/blog/introducing-greenlite-ai/",
+      "published_at": "2025-05-21T19:47:26+00:00",
+      "authors": [
+        "Seth Rosenberg"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-05": 1
       },
       "provenance": {
         "mode": "direct-public-metadata",
@@ -27413,6 +29924,30 @@
       "stack_layers": [
         "harness-orchestration"
       ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-05": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:64d4de4bdf8930dae090",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Paramark: From Clicks to Clarity",
+      "summary": "“All roads lead to measurement.” In my former life running growth teams, dinner talk with fellow marketers always spiralled quickly into measurement. With the advent of sophisticated targeting, bidding, and broader performance marketing capabilities, marketers expected similar precision in closing…",
+      "url": "https://greylock.com/blog/from-clicks-to-clarity/",
+      "published_at": "2025-05-01T22:00:00+00:00",
+      "authors": [
+        "Mike Duboe"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2025-05": 1
@@ -27503,6 +30038,30 @@
         "harness-orchestration",
         "tools-skills-integrations"
       ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-04": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:8f9803ea1ba96d8fb109",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Welcome, Shreya Shekhar!",
+      "summary": "We’re thrilled to welcome Shreya Shekhar as the newest member of Greylock’s investing team. Shreya will focus on working with early-stage founders across AI, cybersecurity, infrastructure and developer tooling. Shreya has a strong passion for startups, and was most recently a founding engineer at…",
+      "url": "https://greylock.com/blog/welcome-shreya-shekhar/",
+      "published_at": "2025-04-17T17:00:00+00:00",
+      "authors": [
+        "Greylock Partners"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2025-04": 1
@@ -27618,6 +30177,30 @@
         "{'name': 'Michele Dolfi', 'user': {'username': 'dolfim-ibm', 'fullname': 'Michele Dolfi', 'avatar_url': '/avatars/6350443da6405ea7beccf47a80d8710e.svg', 'is_pro': False, 'orgs': []}, 'status': 'admin_assigned', 'status_last_changed_at': '2025-03-17T15:02:52.883000+00:00', 'hidden': False}",
         "{'name': 'Miquel Farré', 'user': {'username': 'mfarre', 'fullname': 'Miquel Farré', 'avatar_url': 'https://cdn-avatars.huggingface.co/v1/production/uploads/61ed0ff29539bc0a3bbc89f4/iYWK7GParA7Ke5F6q132W.jpeg', 'is_pro': False, 'orgs': []}, 'status': 'admin_assigned', 'status_last_changed_at': '2025-03-17T15:05:05.893000+00:00', 'hidden': False}",
         "{'name': 'Peter W. J. Staar', 'user': {'username': 'PeterStaar', 'fullname': 'Peter W. J. Staar', 'avatar_url': '/avatars/e2ec9c76656b7520472718595f9dafe1.svg', 'is_pro': False, 'orgs': []}, 'status': 'admin_assigned', 'status_last_changed_at': '2025-03-17T15:01:33.085000+00:00', 'hidden': False}"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-03": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:9b51d76bb18e81795d99",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Gen AI Present and Future: A Conversation with Jim Swanson, CIO at Johnson & Johnson",
+      "summary": "I recently spoke with Johnson & Johnson Executive Vice President and CIO Jim Swanson about the ways his company is deploying AI tools to help boost productivity and enhance core functions. Jim also spoke about the actions his team is taking to help cascade AI know-how across the organization and…",
+      "url": "https://greylock.com/blog/gen-ai-present-and-future-a-conversation-with-jim-swanson-cio-at-johnson-johnson/",
+      "published_at": "2025-03-14T00:27:53+00:00",
+      "authors": [
+        "Asheem Chandna"
       ],
       "projects": [],
       "theme_ids": [],
@@ -27767,6 +30350,78 @@
       "support_count": 1,
       "monthly_counts": {
         "2025-03": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:a389e6b2b20a3d96fed9",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Introducing Highstock: Revolutionizing Cross-Border Commerce",
+      "summary": "In retail, globalization of demand has dramatically outpaced the supply chain’s ability to keep up. For consumers, intent to buy from a brand across the world forms from a quick Instagram impression. But for brands, the ability to service that demand is only as good as its logistics & distribution…",
+      "url": "https://greylock.com/blog/introducing-highstock/",
+      "published_at": "2025-02-27T22:30:00+00:00",
+      "authors": [
+        "Mike Duboe"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-02": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:f6d00d37e2030489feb4",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "Gen AI Present and Future: A Conversation with Swamy Kocherlakota, EVP and Chief Digital Solutions Officer at S&P Global",
+      "summary": "Every enterprise is becoming more sophisticated in the way it uses Generative AI. In our series of ongoing discussions with enterprise chief technology and chief information officers, we are learning how the corporate AI journey is accelerating. In this interview, we learn about an organization…",
+      "url": "https://greylock.com/blog/gen-ai-present-and-future-a-conversation-with-swamy-kocherlakota-evp-and-chief-digital-solutions-officer-at-sp-global/",
+      "published_at": "2025-02-20T02:03:27+00:00",
+      "authors": [
+        "Asheem Chandna"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-02": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "greylock-essays:096886a019bef3ee1f7b",
+      "source_id": "greylock-essays",
+      "source_type": "investor-essay",
+      "evidence_kind": "public-source-item",
+      "title": "The DeepSeek Moment",
+      "summary": "In the rapidly evolving world of AI, the arrival of DeepSeek-R1 marks a pivotal shift. We reached out to founders of five leading AI infrastructure companies in Greylock’s portfolio—Devvret Rishi (Predibase), Tuhin Srivastava (Baseten), Ankur Goyal (Braintrust), Jerry Liu (LlamaIndex), and Alex…",
+      "url": "https://greylock.com/blog/the-deepseek-moment/",
+      "published_at": "2025-02-07T00:38:10+00:00",
+      "authors": [
+        "Greylock Partners"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-02": 1
       },
       "provenance": {
         "mode": "direct-public-metadata",
@@ -29380,8 +32035,12 @@
       "projects": [
         "openvinotoolkit/openvino"
       ],
-      "theme_ids": [],
-      "stack_layers": [],
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
+      "stack_layers": [
+        "compute-inference-serving"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2018-10": 1
@@ -29721,7 +32380,16 @@
       "channel": "repository",
       "source_quality": "medium",
       "commercial_bias": "mixed",
-      "normalized_evidence_count": 229,
+      "normalized_evidence_count": 231,
+      "status": "active"
+    },
+    {
+      "id": "hacker-news",
+      "name": "Hacker News",
+      "channel": "community",
+      "source_quality": "mixed",
+      "commercial_bias": "mixed",
+      "normalized_evidence_count": 207,
       "status": "active"
     },
     {
@@ -29734,21 +32402,21 @@
       "status": "active"
     },
     {
-      "id": "hacker-news",
-      "name": "Hacker News",
-      "channel": "community",
-      "source_quality": "mixed",
-      "commercial_bias": "mixed",
-      "normalized_evidence_count": 181,
-      "status": "active"
-    },
-    {
       "id": "huggingface-papers",
       "name": "Hugging Face Daily Papers",
       "channel": "paper-curation",
       "source_quality": "medium",
       "commercial_bias": "low",
       "normalized_evidence_count": 52,
+      "status": "active"
+    },
+    {
+      "id": "greylock-essays",
+      "name": "Greylock essays",
+      "channel": "investor-essay",
+      "source_quality": "high",
+      "commercial_bias": "disclosed",
+      "normalized_evidence_count": 40,
       "status": "active"
     },
     {
@@ -29776,6 +32444,24 @@
       "source_quality": "high",
       "commercial_bias": "disclosed",
       "normalized_evidence_count": 15,
+      "status": "active"
+    },
+    {
+      "id": "menlo-ventures",
+      "name": "Menlo Ventures perspectives",
+      "channel": "investor-essay",
+      "source_quality": "high",
+      "commercial_bias": "disclosed",
+      "normalized_evidence_count": 10,
+      "status": "active"
+    },
+    {
+      "id": "radical-ventures",
+      "name": "Radical Ventures insights",
+      "channel": "investor-essay",
+      "source_quality": "high",
+      "commercial_bias": "disclosed",
+      "normalized_evidence_count": 10,
       "status": "active"
     },
     {

@@ -403,6 +403,37 @@ def build_research(
         sources.append(source)
     sources.sort(key=lambda source: (-source["normalized_evidence_count"], source["name"]))
     active_source_ids = [source["id"] for source in sources if source["status"] == "active"]
+    narrative_source_ids = sorted(
+        source["id"]
+        for source in sources
+        if source["status"] == "active" and source.get("channel") in {"operator-essay", "investor-essay"}
+    )
+    non_narrative_prefixes = ("welcome", "congratulations", "meet ", "adding ", "demo day")
+    narrative_items = [
+        item for item in public_evidence
+        if item["source_id"] in narrative_source_ids
+        and not item.get("title", "").casefold().startswith(non_narrative_prefixes)
+    ]
+    classified_narrative_items = [item for item in narrative_items if item.get("theme_ids")]
+    classified_narrative_source_ids = sorted({item["source_id"] for item in classified_narrative_items})
+    narrative_status = "complete" if len(narrative_source_ids) >= 5 and len(classified_narrative_source_ids) >= 5 else "active"
+    narrative_source_names = [source_defs[source_id]["name"] for source_id in narrative_source_ids]
+    narrative_theme_items: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for item in classified_narrative_items:
+        for theme_id in item["theme_ids"]:
+            narrative_theme_items[theme_id].append(item)
+    narrative_theme_summary = sorted(
+        (
+            {
+                "theme_id": theme_id,
+                "evidence_count": len(items),
+                "source_ids": sorted({item["source_id"] for item in items}),
+                "source_count": len({item["source_id"] for item in items}),
+            }
+            for theme_id, items in narrative_theme_items.items()
+        ),
+        key=lambda row: (-row["source_count"], -row["evidence_count"], row["theme_id"]),
+    )
 
     analyses = [
         {
@@ -440,10 +471,14 @@ def build_research(
             "id": "operator-narratives",
             "title": "Operator and investor narratives",
             "question": "Which categories are being named or framed by startup operators and investors before broad technical corroboration?",
-            "summary": "Official YC and Sequoia essays classified against the same themes as papers, repositories, community discussion, and AlphaSignal.",
-            "status": "active",
-            "source_ids": ["yc-essays", "sequoia-essays"],
-            "evidence_count": sum(item["source_id"] in {"yc-essays", "sequoia-essays"} for item in public_evidence),
+            "summary": f"Official writing from {', '.join(narrative_source_names)} classified against the same themes as papers, repositories, community discussion, and AlphaSignal. Completion requires at least five active sources with relevant classified evidence.",
+            "status": narrative_status,
+            "source_ids": narrative_source_ids,
+            "evidence_count": len(classified_narrative_items),
+            "corpus_count": len(narrative_items),
+            "classified_source_count": len(classified_narrative_source_ids),
+            "theme_summary": narrative_theme_summary,
+            "coverage_target": 5,
             "updated_at": generated_at,
         },
         {
@@ -504,7 +539,7 @@ def weekly_markdown(payload: dict[str, Any]) -> str:
     lines = [
         f"# Cross-source AI signal brief — {weekly['as_of']}",
         "",
-        f"{payload['meta']['normalized_evidence_count']} normalized evidence records across {payload['meta']['active_source_count']} active sources. ",
+        f"{payload['meta']['normalized_evidence_count']} normalized evidence records across {payload['meta']['active_source_count']} active sources.",
         f"{payload['meta']['observed_theme_count']} of {payload['meta']['theme_count']} tracked themes are observed.",
         "",
         "## Seven-day movement",

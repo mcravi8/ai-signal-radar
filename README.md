@@ -92,4 +92,4 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 ## Current status
 
-The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, Y Combinator essays, and Sequoia essays. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.
+The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.
