@@ -83,16 +83,19 @@ def collect(
     sitemap_url: str,
     include_prefixes: list[str],
     limit: int = 30,
+    include_patterns: list[str] | None = None,
 ) -> list[SourceItem]:
     records, child_sitemaps = parse(_fetch(sitemap_url))
     for child_url in child_sitemaps:
         child_records, _ = parse(_fetch(child_url))
         records.extend(child_records)
 
+    compiled_patterns = [re.compile(pattern) for pattern in include_patterns or []]
     candidates = [
         (url, updated)
         for url, updated in records
         if any(url.startswith(prefix) and url.rstrip("/") != prefix.rstrip("/") for prefix in include_prefixes)
+        and (not compiled_patterns or any(pattern.search(url) for pattern in compiled_patterns))
     ]
     candidates.sort(key=lambda record: (record[1], record[0]), reverse=True)
 

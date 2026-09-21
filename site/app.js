@@ -50,7 +50,12 @@ function label(value) {
 }
 
 function channelLabel(value) {
-  return value === "first-party-lab" ? "Official lab" : label(value);
+  return ({
+    "first-party-lab": "Official lab",
+    "expert-newsletter": "Expert newsletter",
+    "curated-newsletter": "Curated newsletter",
+    "practitioner-blog": "Practitioner blog",
+  })[value] || label(value);
 }
 
 function compactAssessment(value) {

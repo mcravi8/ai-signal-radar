@@ -57,7 +57,7 @@ Open `http://localhost:8000`.
 
 ## Automation
 
-- `collect-daily.yml` collects free public metadata from first-party AI labs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds.
+- `collect-daily.yml` collects free public metadata from first-party AI labs, expert newsletters, practitioner blogs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds.
 - `synthesize-weekly.yml` normalizes every source, classifies evidence, recalculates cross-source scores, and produces a weekly brief.
 - `deploy-dashboard.yml` validates the public boundary and deploys the static site to GitHub Pages.
 
@@ -92,4 +92,4 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 ## Current status
 
-The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.
+The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert interpretation is labeled separately from curated roundups and first-party claims. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.

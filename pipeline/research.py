@@ -583,8 +583,8 @@ def build_research(
         {
             "id": "public-signal-monitor",
             "title": "Public signal monitor",
-            "question": "What is appearing across first-party labs, papers, repositories, essays, and technical discussion?",
-            "summary": "Continuously collected public metadata and official first-party publications, classified with the same taxonomy as the newsletter research.",
+            "question": "What is appearing across first-party labs, expert newsletters, practitioner writing, papers, repositories, essays, and technical discussion?",
+            "summary": "Continuously collected public metadata, first-party claims, expert interpretation, and curated roundups classified with the same taxonomy as the newsletter research.",
             "status": public_payload["meta"]["status"],
             "source_ids": sorted({item["source_id"] for item in public_evidence}),
             "evidence_count": len(public_evidence),
@@ -654,6 +654,7 @@ def build_research(
                 "AlphaSignal contributes aggregate mention counts; public sources contribute individual records.",
                 "Source concentration is shown because a high score can still be dominated by one source.",
                 "First-party lab publications establish what an organization announced or claimed; they do not independently validate performance or adoption.",
+                "Expert newsletters and practitioner blogs contribute interpretation. Curated roundups can repeat announcements already present elsewhere: they add attention breadth, but do not independently validate technical claims.",
                 "Hugging Face may curate papers also present on arXiv; the source breakdown makes this visible.",
                 "Keyword classification is deterministic and inspectable but can miss unusual language or create false positives.",
                 "Seven-day movement excludes month-level AlphaSignal aggregates because their dates are not equally precise.",

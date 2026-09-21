@@ -70,6 +70,7 @@ def collect() -> None:
                     source["sitemap_url"],
                     source.get("include_prefixes", []),
                     source.get("limit", 30),
+                    source.get("include_patterns", []),
                 ),
             )
 

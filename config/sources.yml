@@ -173,6 +173,136 @@ sources:
     source_quality: high
     commercial_bias: first-party
 
+  - id: latent-space
+    name: Latent Space
+    channel: expert-newsletter
+    homepage_url: https://www.latent.space/
+    logo_url: https://www.latent.space/favicon.ico
+    enabled: true
+    collection: rss
+    feed_url: https://www.latent.space/feed
+    limit: 30
+    publisher_id: latent-space
+    evidence_role: expert-interpretation
+    source_quality: high
+    commercial_bias: disclosed-and-mixed
+
+  - id: import-ai
+    name: Import AI
+    channel: expert-newsletter
+    homepage_url: https://importai.substack.com/
+    logo_url: https://importai.substack.com/favicon.ico
+    enabled: true
+    collection: rss
+    feed_url: https://importai.substack.com/feed
+    limit: 30
+    publisher_id: import-ai
+    evidence_role: expert-interpretation
+    source_quality: high
+    commercial_bias: disclosed-and-mixed
+
+  - id: the-batch
+    name: The Batch
+    channel: curated-newsletter
+    homepage_url: https://www.deeplearning.ai/the-batch
+    logo_url: https://www.deeplearning.ai/favicon.ico
+    enabled: true
+    collection: sitemap
+    sitemap_url: https://www.deeplearning.ai/sitemap.xml
+    include_prefixes:
+      - https://www.deeplearning.ai/the-batch/
+    include_patterns:
+      - ^https://www\.deeplearning\.ai/the-batch/issue-\d+/?$
+    limit: 30
+    publisher_id: deeplearning-ai
+    evidence_role: curated-roundup
+    source_quality: high
+    commercial_bias: disclosed-and-mixed
+
+  - id: interconnects
+    name: Interconnects
+    channel: expert-newsletter
+    homepage_url: https://www.interconnects.ai/
+    logo_url: https://www.interconnects.ai/favicon.ico
+    enabled: true
+    collection: rss
+    feed_url: https://www.interconnects.ai/feed
+    limit: 30
+    publisher_id: interconnects
+    evidence_role: expert-interpretation
+    source_quality: high
+    commercial_bias: disclosed-and-mixed
+
+  - id: last-week-in-ai
+    name: Last Week in AI
+    channel: curated-newsletter
+    homepage_url: https://lastweekin.ai/
+    logo_url: https://lastweekin.ai/favicon.ico
+    enabled: true
+    collection: rss
+    feed_url: https://lastweekin.ai/feed
+    limit: 30
+    publisher_id: last-week-in-ai
+    evidence_role: curated-roundup
+    source_quality: medium
+    commercial_bias: disclosed-and-mixed
+
+  - id: simon-willison
+    name: Simon Willison's Weblog
+    channel: practitioner-blog
+    homepage_url: https://simonwillison.net/
+    logo_url: https://simonwillison.net/favicon.ico
+    enabled: true
+    collection: rss
+    feed_url: https://simonwillison.net/atom/everything/
+    limit: 30
+    publisher_id: simon-willison
+    evidence_role: expert-interpretation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: chip-huyen
+    name: Chip Huyen
+    channel: practitioner-blog
+    homepage_url: https://huyenchip.com/
+    logo_url: https://huyenchip.com/favicon.ico
+    enabled: true
+    collection: rss
+    feed_url: https://huyenchip.com/feed.xml
+    limit: 30
+    publisher_id: chip-huyen
+    evidence_role: expert-interpretation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: eugene-yan
+    name: Eugene Yan
+    channel: practitioner-blog
+    homepage_url: https://eugeneyan.com/
+    logo_url: https://avatars.githubusercontent.com/eugeneyan
+    enabled: true
+    collection: rss
+    feed_url: https://eugeneyan.com/rss/
+    limit: 30
+    publisher_id: eugene-yan
+    evidence_role: expert-interpretation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: lilian-weng
+    name: Lilian Weng
+    channel: practitioner-blog
+    homepage_url: https://lilianweng.github.io/
+    logo_url: https://avatars.githubusercontent.com/lilianweng
+    enabled: true
+    collection: rss
+    feed_url: https://lilianweng.github.io/index.xml
+    limit: 30
+    publisher_id: lilian-weng
+    evidence_role: expert-interpretation
+    source_quality: high
+    commercial_bias: authorial
+
   - id: yc-essays
     name: Y Combinator essays
     channel: operator-essay

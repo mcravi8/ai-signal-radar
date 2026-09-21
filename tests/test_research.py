@@ -19,13 +19,15 @@ class CrossSourceResearchTests(unittest.TestCase):
             "id", "source_id", "source_type", "evidence_kind", "title", "published_at",
             "theme_ids", "stack_layers", "support_count", "monthly_counts", "provenance",
         }
-        self.assertGreaterEqual(self.payload["meta"]["active_source_count"], 19)
+        self.assertGreaterEqual(self.payload["meta"]["active_source_count"], 28)
         expected_sources = {
             "alphasignal", "arxiv", "huggingface-papers", "github", "hacker-news",
             "yc-essays", "sequoia-essays", "menlo-ventures", "greylock-essays", "radical-ventures",
             "openai-news", "anthropic-news-research", "deepmind-blog", "microsoft-research-blog",
             "nvidia-developer-blog", "mistral-news", "huggingface-blog", "aws-machine-learning-blog",
             "cloudflare-ai-blog",
+            "latent-space", "import-ai", "the-batch", "interconnects", "last-week-in-ai",
+            "simon-willison", "chip-huyen", "eugene-yan", "lilian-weng",
         }
         self.assertTrue(expected_sources.issubset({item["source_id"] for item in self.payload["evidence"]}))
         for item in self.payload["evidence"]:
@@ -99,6 +101,17 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertTrue(all(source["normalized_evidence_count"] > 0 for source in labs))
         self.assertTrue(all(source["commercial_bias"] == "first-party" for source in labs))
         self.assertTrue(all(source["evidence_role"] == "first-party-claim" for source in labs))
+
+    def test_public_newsletters_and_practitioner_feeds_are_typed(self):
+        channels = {"expert-newsletter", "curated-newsletter", "practitioner-blog"}
+        sources = [source for source in self.payload["sources"] if source.get("channel") in channels]
+        self.assertEqual(len(sources), 9)
+        self.assertTrue(all(source["status"] == "active" for source in sources))
+        self.assertTrue(all(source["normalized_evidence_count"] > 0 for source in sources))
+        roles = {source["evidence_role"] for source in sources}
+        self.assertEqual(roles, {"expert-interpretation", "curated-roundup"})
+        roundups = [source for source in sources if source["evidence_role"] == "curated-roundup"]
+        self.assertEqual({source["id"] for source in roundups}, {"the-batch", "last-week-in-ai"})
 
 
 if __name__ == "__main__":

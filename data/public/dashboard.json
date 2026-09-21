@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-21T18:25:14.464814+00:00",
+    "generated_at": "2026-09-21T18:41:47.734056+00:00",
     "status": "success",
-    "source_count": 18,
-    "evidence_count": 1142,
+    "source_count": 27,
+    "evidence_count": 1374,
     "warnings": []
   },
   "weekly": {
@@ -14,7 +14,7 @@
       "agent-harnesses",
       "coding-agents",
       "open-local-inference",
-      "skills-integrations"
+      "small-specialized-models"
     ]
   },
   "themes": [
@@ -56,20 +56,23 @@
       ],
       "primary_layer": "models-capabilities",
       "maturity": "emerging",
-      "evidence_count": 20,
+      "evidence_count": 26,
       "source_types": [
         "community",
+        "curated-newsletter",
+        "expert-newsletter",
         "first-party-lab",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
         "recurrence": 25.0,
         "acceleration": 25.0,
-        "persistence": 20.0,
+        "persistence": 25.0,
         "breadth": 25.0,
-        "total": 95.0
+        "total": 100.0
       }
     },
     {
@@ -157,13 +160,15 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 62,
+      "evidence_count": 65,
       "source_types": [
         "community",
+        "curated-newsletter",
         "first-party-lab",
         "investor-essay",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
@@ -186,13 +191,14 @@
       ],
       "primary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 20,
+      "evidence_count": 21,
       "source_types": [
         "community",
         "first-party-lab",
         "investor-essay",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
@@ -217,9 +223,11 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 28,
+      "evidence_count": 32,
       "source_types": [
         "community",
+        "curated-newsletter",
+        "expert-newsletter",
         "first-party-lab",
         "paper",
         "paper-curation",
@@ -246,16 +254,17 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "models-capabilities",
       "maturity": "watchlist",
-      "evidence_count": 1,
+      "evidence_count": 2,
       "source_types": [
-        "investor-essay"
+        "investor-essay",
+        "practitioner-blog"
       ],
       "score": {
-        "recurrence": 2.5,
+        "recurrence": 5.0,
         "acceleration": 0.0,
-        "persistence": 5.0,
-        "breadth": 5.0,
-        "total": 12.5
+        "persistence": 10.0,
+        "breadth": 10.0,
+        "total": 25.0
       }
     },
     {
@@ -272,13 +281,16 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 110,
+      "evidence_count": 121,
       "source_types": [
         "community",
+        "curated-newsletter",
+        "expert-newsletter",
         "first-party-lab",
         "investor-essay",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
@@ -302,13 +314,15 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 38,
+      "evidence_count": 46,
       "source_types": [
         "community",
+        "curated-newsletter",
         "first-party-lab",
         "investor-essay",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
@@ -358,19 +372,21 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 22,
+      "evidence_count": 26,
       "source_types": [
+        "curated-newsletter",
         "investor-essay",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
         "recurrence": 25.0,
         "acceleration": 25.0,
         "persistence": 25.0,
-        "breadth": 20.0,
-        "total": 95.0
+        "breadth": 25.0,
+        "total": 100.0
       }
     },
     {
@@ -387,20 +403,21 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 8,
+      "evidence_count": 9,
       "source_types": [
         "community",
         "first-party-lab",
         "investor-essay",
         "paper",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
-        "recurrence": 20.0,
-        "acceleration": 16.0,
+        "recurrence": 22.5,
+        "acceleration": 20.0,
         "persistence": 25.0,
         "breadth": 25.0,
-        "total": 86.0
+        "total": 92.5
       }
     },
     {
@@ -417,8 +434,9 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 23,
+      "evidence_count": 24,
       "source_types": [
+        "community",
         "first-party-lab",
         "investor-essay",
         "operator-essay",
@@ -573,406 +591,6 @@
   ],
   "evidence": [
     {
-      "id": "hn:49776910",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Ifso.io – Personal finance simulator with no sign up required",
-      "url": "https://ifso.io/try",
-      "published_at": "2026-09-20T15:37:30+00:00",
-      "summary": "Hey all!<p>I&#x27;ve been building Ifso.io, it&#x27;s a personal finance simulator that lets you configure and play out life decisions.<p>The main philosophy that I built Ifso around is decision-making. I personally wanted to see what it would look like if I made some key financial decisions (ex: what would it look like if I paid extra on my mortgage principal for just a few years versus putting that money into taxable investments). The existing tools were a bit frustrating however, I felt like I wanted to just tell the simulators &quot;here&#x27;s what I want to do, how does it end up for me?&quot;, but none of the tools really allowed for that. They felt a bit over-complicated for something that I felt should be a bit more straightforward, which is why I ended up building Ifso out.<p>You start off with entering where your finances are right now, and you configure your plan by listing out your various decisions to see how it all plays out and if your financial plan works or not.<p>The list of decisions you can make could include the more obvious things like retiring, buying a home, upgrading your car, etc. You can also simulate what it&#x27;s like to convert a property into a rent",
-      "authors": [
-        "timer_interrupt"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49776960",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Custom home server built from spare parts",
-      "url": "https://asmat.ca/blog/i-went-bananas/",
-      "published_at": "2026-09-20T15:43:32+00:00",
-      "summary": "",
-      "authors": [
-        "sotilrac"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777057",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: jevc – compile policy prompts into deterministic verdict programs",
-      "url": "https://github.com/doronp/jevc",
-      "published_at": "2026-09-20T15:52:40+00:00",
-      "summary": "",
-      "authors": [
-        "doronp"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777106",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Laya on Mac M4 CoreML Offline",
-      "url": "https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0",
-      "published_at": "2026-09-20T15:58:52+00:00",
-      "summary": "",
-      "authors": [
-        "putna"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777111",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Prompts aren’t Real",
-      "url": "https://evaluation.club",
-      "published_at": "2026-09-20T15:59:25+00:00",
-      "summary": "",
-      "authors": [
-        "mcfunley"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777136",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Swarm, an offline family tree app for macOS",
-      "url": "https://github.com/samoilev/swarm",
-      "published_at": "2026-09-20T16:01:48+00:00",
-      "summary": "Hi HN! My wife and I got deep into our family genealogy and wanted to map out all our relatives - but keep the data on our own Macs instead of uploading it to a genealogy service. Nothing we found did that, so we built Swarm, a native macOS app in Swift.<p>It&#x27;s built on GEDCOM 5.5.1, the universal genealogy file standard, so your tree exports cleanly to other ancestry apps if you ever want out. Example trees of famous historical families are included to play with.<p>Features: multiple ancestry views (tree, fan, world map), media files, GEDCOM import&#x2F;export, PDF export, tree merging, and kinship naming.<p>Fully open source, no AI in the app, no internet connection required, no account required. Would appreciate any feedback!",
-      "authors": [
-        "samoilev"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777181",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: OpensourceDB Tamper-evident,checksum-backed decision and session replay",
-      "url": "https://github.com/ZIZKA-AI-SL/ZizkaDB",
-      "published_at": "2026-09-20T16:07:23+00:00",
-      "summary": "Audit Trail to make EU AI ACT 12,26 And 50 Compliant Agentic Ai Systems",
-      "authors": [
-        "Arshad-Talpur"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777234",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Diablo 4 on Ubuntu?",
-      "url": "https://news.ycombinator.com/item?id=49777234",
-      "published_at": "2026-09-20T16:14:03+00:00",
-      "summary": "Has anyone here got it to reliably work? Please let me know how?<p>So many different guides &#x2F; tutorials online, but sadly every one I try comes up short in some way.<p>I really don’t want to have to dual boot Windows.<p>Kinda hoping there’s an HNer that figured out.<p>Thanks.",
-      "authors": [
-        "herodoturtle"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777467",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "I am often wrong",
-      "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
-      "published_at": "2026-09-20T16:41:46+00:00",
-      "summary": "",
-      "authors": [
-        "bcherny"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777539",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Radius – A Meetup.com Alternative",
-      "url": "https://radius.to/",
-      "published_at": "2026-09-20T16:51:26+00:00",
-      "summary": "Hello HN!<p>I&#x27;m relaunching Radius [1] - far too long after the original Show HN [2] (I&#x27;ll blame the day job for that).<p>Radius started out from my frustration with not knowing what was going on around me. The initial plan was to &quot;show all and every type of event&quot; from big to small, but over time I narrowed the focus to communities, groups, events, and helping people connect through them.<p>The initial Show HN gave me 150+ comments (surprising, looking back, given how terrible the plain Bootstrap UI was...) with a huge amount of useful feedback and feature requests. I&#x27;ve spent the time since then working through that, along with additional requests from groups using Radius, and it finally feels ready for a proper relaunch.<p>I&#x27;ve also recently added &quot;Activities&quot; [3] - which are lightweight events, independent of groups, intended to help people find others to do things with - for example:<p>&gt; John is going for a cycle and a coffee in New York at 10am<p>People can join and vote for a time that works for them.<p>I&#x27;ve got a bunch of ideas for where to go next with this, including things like open sourcing and federation, but those are fo",
-      "authors": [
-        "radius89"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777691",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Jev filters large HN discussions",
-      "url": "https://www.hazumi.news/best",
-      "published_at": "2026-09-20T17:07:03+00:00",
-      "summary": "",
-      "authors": [
-        "jrhey"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777820",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: MidiSlayer, a desktop sight-reading trainer for MIDI keyboards",
-      "url": "https://midislayer.com/",
-      "published_at": "2026-09-20T17:18:15+00:00",
-      "summary": "",
-      "authors": [
-        "monoglyph"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49777913",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Trying the Software Factory Pattern",
-      "url": "https://lethain.com/software-factory-experiment/",
-      "published_at": "2026-09-20T17:27:11+00:00",
-      "summary": "",
-      "authors": [
-        "gpi"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778022",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Resident Evil 4 (GameCube) – complete byte-identical decompilation to C/C++",
-      "url": "https://github.com/adonis-singh/re4",
-      "published_at": "2026-09-20T17:38:27+00:00",
-      "summary": "",
-      "authors": [
-        "metrofun"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778029",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
-      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
-      "published_at": "2026-09-20T17:38:50+00:00",
-      "summary": "",
-      "authors": [
-        "giuliomagnifico"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778087",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Scrolling Text Generator – marquee, ticker and credits in the browser",
-      "url": "https://scrollingtextgenerator.space",
-      "published_at": "2026-09-20T17:44:27+00:00",
-      "summary": "",
-      "authors": [
-        "liweipt"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778137",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: TetherPHP – a small PHP framework designed for agents and humans",
-      "url": "https://tetherphp.com/",
-      "published_at": "2026-09-20T17:49:11+00:00",
-      "summary": "",
-      "authors": [
-        "dillonsmartdev"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778162",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "I turned Jev into a (lousy) chatbot",
-      "url": "https://github.com/kyle-pena-nlp/jevchat/",
-      "published_at": "2026-09-20T17:51:27+00:00",
-      "summary": "",
-      "authors": [
-        "kp1197"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778185",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: I inadvertently built an English to Bash transpiler",
-      "url": "https://github.com/gioblu/NPC-Forge/blob/main/npcs/termy/README.md",
-      "published_at": "2026-09-20T17:54:30+00:00",
-      "summary": "",
-      "authors": [
-        "gioscarab"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778191",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Testing a non-generative decision model on 5,500 CLINC150 inputs",
-      "url": "https://github.com/chr-kelly/jev-cookbook",
-      "published_at": "2026-09-20T17:55:21+00:00",
-      "summary": "",
-      "authors": [
-        "tgdhtdujeytd"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778195",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "A Necessary History of the Oddest Letter: W",
-      "url": "https://lithub.com/a-necessary-history-of-the-oddest-letter-w/",
-      "published_at": "2026-09-20T17:55:57+00:00",
-      "summary": "",
-      "authors": [
-        "NaOH"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778268",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Judge Jev – Can you convince Jev of your innocence?",
-      "url": "https://judge-jev.com/",
-      "published_at": "2026-09-20T18:03:49+00:00",
-      "summary": "This is just a simple game with procedurally generated legal scenarios where you are accused of a crime and are given 5 pieces of evidence associated with said* crime. You then have 3 minutes to mount a defense to convince Judge Jev you didn&#x27;t commit the crime. Sometimes the evidence has glaring gaps, other times not so much. I made this little game initially as an experiment for Jevs logical abilities, but I actually had a lot of fun and decided it was worth sharing.",
-      "authors": [
-        "theRealestAEP"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49778670",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Software sandboxing: The basics (2025)",
-      "url": "https://blog.emilua.org/2025/01/12/software-sandboxing-basics/",
-      "published_at": "2026-09-20T18:42:47+00:00",
-      "summary": "",
-      "authors": [
-        "mococa"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49779253",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The Hierarchy of Money",
-      "url": "https://gregorygundersen.com/blog/2026/09/20/hierarchy-of-money/",
-      "published_at": "2026-09-20T19:37:43+00:00",
-      "summary": "",
-      "authors": [
-        "gwgundersen"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49779329",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "MCP was always a bad idea?",
-      "url": "https://maharship.com/blog/why-mcp-was-always-a-bad-idea/",
-      "published_at": "2026-09-20T19:44:40+00:00",
-      "summary": "",
-      "authors": [
-        "maharshi365"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
       "id": "hn:49780022",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -999,6 +617,20 @@
       "authors": [
         "Muhammad523"
       ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "simon-willison:c8aee9fb8db23a5bf412",
+      "source_id": "simon-willison",
+      "source_type": "practitioner-blog",
+      "title": "Quoting voxium",
+      "url": "https://simonwillison.net/2026/Sep/20/voxium/",
+      "published_at": "2026-09-20T21:06:43+00:00",
+      "summary": "It has been half a month since I started a new role at a big company. Nobody knows anything here. The specs, code, tests, PRDs, tickets, resolution of those tickets, reports, etc., everything is made by Claude Code. Nobody on my team likes this. They are being forced to ship as much as they can. I have heard multiple times from higher management that pushing code is not a bottleneck, so why are we slow? People are working 12 to 13 hours a day just to press enter. Nobody is reading anything. Everyone, literally everyone, from an L1 to an L7 engineer here is doing the same thing. Talk to Claude. — voxium Tags: ai-misuse , llms , ai , generative-ai",
+      "authors": [],
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
@@ -2671,22 +2303,6 @@
       "theme_ids": []
     },
     {
-      "id": "hn:49784099",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
-      "url": "https://www.latent.space/p/good-start-labs",
-      "published_at": "2026-09-21T07:26:51+00:00",
-      "summary": "",
-      "authors": [
-        "james_mir"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
       "id": "hn:49784110",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -2913,6 +2529,22 @@
       ]
     },
     {
+      "id": "interconnects:43bf4602833d95a55b19",
+      "source_id": "interconnects",
+      "source_type": "expert-newsletter",
+      "title": "The current balance of power in open models",
+      "url": "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
+      "published_at": "2026-09-21T11:56:56+00:00",
+      "summary": "The expanded form of a testimony I prepared for Congress.",
+      "authors": [
+        "Nathan Lambert"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
       "id": "openai-news:08ffdb24bebd9aa2ffda",
       "source_id": "openai-news",
       "source_type": "first-party-lab",
@@ -3048,6 +2680,22 @@
       "summary": "",
       "authors": [
         "undecidabot"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "import-ai:c5cf7b0af1c9700a73b6",
+      "source_id": "import-ai",
+      "source_type": "expert-newsletter",
+      "title": "Import AI 473: The US's superintelligence strategy; human brain in a mouse skull; and machine hermeneutics",
+      "url": "https://importai.substack.com/p/import-ai-473-the-uss-superintelligence",
+      "published_at": "2026-09-21T12:31:04+00:00",
+      "summary": "Is the wall AI is hitting in the room with us right now?",
+      "authors": [
+        "Jack Clark"
       ],
       "tags": [],
       "projects": [],
@@ -4581,6 +4229,380 @@
       "projects": [],
       "sponsor_status": "unknown",
       "theme_ids": []
+    },
+    {
+      "id": "hn:49791228",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "MCPJam – MCP server testing, debugging and evals",
+      "url": "https://www.mcpjam.com",
+      "published_at": "2026-09-21T18:23:22+00:00",
+      "summary": "",
+      "authors": [
+        "todsacerdoti"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "skills-integrations"
+      ]
+    },
+    {
+      "id": "hn:49791231",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "A new O(log N) algorithm for the egg-dropping problem",
+      "url": "https://arxiv.org/abs/2602.22870",
+      "published_at": "2026-09-21T18:23:42+00:00",
+      "summary": "",
+      "authors": [
+        "tuluvit"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791242",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Is This Houston Strip-Mall Joint the Busiest Restaurant?",
+      "url": "https://www.nytimes.com/2026/09/21/dining/agas-houston-uber-eats-indian-pakistani-food.html",
+      "published_at": "2026-09-21T18:24:41+00:00",
+      "summary": "",
+      "authors": [
+        "jbredeche"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791246",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "U.S. Small Biz Can't Ship to the EU Anymore",
+      "url": "https://glog.glennf.com/blog/2026/09/17/u-s-small-biz-cant-ship-to-the-eu-anymore/",
+      "published_at": "2026-09-21T18:25:04+00:00",
+      "summary": "",
+      "authors": [
+        "alsetmusic"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791250",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Predicting the Present",
+      "url": "https://kevinkelly.substack.com/p/predicting-the-present",
+      "published_at": "2026-09-21T18:25:18+00:00",
+      "summary": "",
+      "authors": [
+        "thm"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791255",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Twenty-Five Years Upstream",
+      "url": "https://www.igalia.com/2026/09/21/Twenty-Five-Years-Upstream.html",
+      "published_at": "2026-09-21T18:25:45+00:00",
+      "summary": "",
+      "authors": [
+        "Tomte"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791296",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Conway's Game of Life running from a 512-byte x86 boot sector",
+      "url": "https://github.com/0xAX/BootLife",
+      "published_at": "2026-09-21T18:28:20+00:00",
+      "summary": "Hello HN!<p>On these weekends, I was sitting and thinking about where our industry is going, and how fun it was earlier, when we wrote more code than chat messages. The thoughts quickly turned into a wish to build something like we did earlier. In my case, it ended up as something much &quot;earlier&quot; than I had in mind initially...<p>So, Conway&#x27;s Game of Life running from a 512-byte x86 boot sector. Maybe you will find it interesting. I tried to comment the code as much as possible, which might be especially useful if you are learning assembly.<p>Have fun!",
+      "authors": [
+        "0xAX"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791312",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Paramount settles with US states in big step towards closing Warner Bros merger",
+      "url": "https://www.reuters.com/legal/litigation/paramount-settles-with-california-other-states-clearing-major-hurdle-warner-bros-2026-09-21/",
+      "published_at": "2026-09-21T18:29:51+00:00",
+      "summary": "",
+      "authors": [
+        "JumpCrisscross"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791317",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "SnoozeOps – Scheduled sleep for AWS and GCP dev environments",
+      "url": "https://snoozeops.io",
+      "published_at": "2026-09-21T18:30:02+00:00",
+      "summary": "",
+      "authors": [
+        "tiagotemporin"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791321",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Boomers love making AI images of their grandkids. Millennial parents hate it",
+      "url": "https://www.businessinsider.com/grandparents-ai-images-grandkids-privacy-parents-2026-9",
+      "published_at": "2026-09-21T18:30:05+00:00",
+      "summary": "",
+      "authors": [
+        "randycupertino"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "aws-machine-learning-blog:16b9772b96509775d2ea",
+      "source_id": "aws-machine-learning-blog",
+      "source_type": "first-party-lab",
+      "title": "xAI’s Grok 4.6 is now available in Amazon Bedrock",
+      "url": "https://aws.amazon.com/blogs/machine-learning/xais-grok-4-6-is-now-available-in-amazon-bedrock/",
+      "published_at": "2026-09-21T18:30:34+00:00",
+      "summary": "xAI's Grok 4.6 is now available in Amazon Bedrock: a frontier model for long-running agents, coding, and knowledge work, with a 500K token context window and four reasoning effort levels. It runs on both the bedrock-mantle and bedrock-runtime endpoints, with Converse API and cross-Region inference support.",
+      "authors": [
+        "Suheel Farooq"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "agent-harnesses"
+      ]
+    },
+    {
+      "id": "hn:49791338",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Windows Exploitation Techniques: Dangling COM Object Registrations",
+      "url": "https://projectzero.google/2026/09/windows-dangling-com.html",
+      "published_at": "2026-09-21T18:31:10+00:00",
+      "summary": "",
+      "authors": [
+        "dimonomid"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791343",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: MicroLLM lab – try small LMs in browser, see tok/s and accuracy",
+      "url": "https://github.com/robss2020/microllm-lab",
+      "published_at": "2026-09-21T18:31:34+00:00",
+      "summary": "I saw some great results from really tiny LLM&#x27;s, and ended up making a little benchmark so I could test them in the browser. Chrome, Firefox, Safari and Edge are all supported via web-GPU. I got very fast speeds 30-40 tok&#x2F;sec even on limited hardware. Let me know what you think!",
+      "authors": [
+        "logicallee"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "training-self-improvement"
+      ]
+    },
+    {
+      "id": "hn:49791350",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "No protocol fees. No investors",
+      "url": "https://basicswapdex.com/donations",
+      "published_at": "2026-09-21T18:32:04+00:00",
+      "summary": "",
+      "authors": [
+        "dRK-U"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791366",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Right-sizing Databricks job clusters, automatically",
+      "url": "https://altimate.ai/blog/right-sizing-databricks-job-clusters-automatically",
+      "published_at": "2026-09-21T18:33:05+00:00",
+      "summary": "",
+      "authors": [
+        "frasermarlow"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791378",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Why Does an NPM Math Library Need an Encrypted Loader?",
+      "url": "https://safedep.io/mathmain-encrypted-loader/",
+      "published_at": "2026-09-21T18:33:44+00:00",
+      "summary": "",
+      "authors": [
+        "abhisek"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791380",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Help 404 Media Find Out How Your Local Police Are Surveiling You",
+      "url": "https://www.404media.co/is-your-city-using-axon-license-plate-cameras-we-need-your-help/",
+      "published_at": "2026-09-21T18:33:45+00:00",
+      "summary": "",
+      "authors": [
+        "paimapi"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791384",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Anthropic, OpenAI et al. face antitrust suit for agreeing to slow AI development",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/anthropic-openai-spacexai-and-google-face-antitrust-lawsuit-for-agreeing-to-slow-ai-development-plaintiffs-say-plan-has-been-in-motion-for-months-before-calls-agreement-self-serving",
+      "published_at": "2026-09-21T18:33:56+00:00",
+      "summary": "",
+      "authors": [
+        "MC995"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791397",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "How to Limit What Apple's New Siri AI Can Access in iOS 27",
+      "url": "https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27",
+      "published_at": "2026-09-21T18:34:26+00:00",
+      "summary": "",
+      "authors": [
+        "paimapi"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791398",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: VisionOS 27, iOS 27 object tracking demo – placing objects eyes closed",
+      "url": "https://github.com/robomex/visionOS-27-iOS-27-Object-Tracking-Demo",
+      "published_at": "2026-09-21T18:34:28+00:00",
+      "summary": "I was very excited when visionOS 2 added object tracking two years ago, but there was significant lag that made it unsuitable for real-time placement of objects to match targets.<p>With this year&#x27;s visionOS 27 and iOS 27 object tracking updates (primarily high frame rate tracking and more accurate tracking via extended mode training), I put together an open source demo so I can place objects on target with my eyes closed.",
+      "authors": [
+        "robomex"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791429",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Mullet of Log Processing: Determinism in the Front, AI at the Back (Expanso/Jev)",
+      "url": "https://expanso.io/blog/log-triage-expanso-jev/",
+      "published_at": "2026-09-21T18:35:55+00:00",
+      "summary": "",
+      "authors": [
+        "TheIronYuppie"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791442",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Robot Relations Departments: The New Corporate Reality",
+      "url": "https://www.techbuzz.ai/articles/robot-relations-departments-the-new-corporate-reality",
+      "published_at": "2026-09-21T18:36:36+00:00",
+      "summary": "",
+      "authors": [
+        "Vaslo"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791468",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Gravity Linux Alpha Release: Linux on the M4 Mac Mini with GPU and DCP Support",
+      "url": "https://gravitylinux.org/blog/early-alpha-m4-mac-mini/",
+      "published_at": "2026-09-21T18:38:19+00:00",
+      "summary": "",
+      "authors": [
+        "ADevWithAnIdea"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
     }
   ],
   "projects": [],
@@ -4719,6 +4741,105 @@
       "evidence_role": "first-party-claim",
       "homepage_url": "https://blog.cloudflare.com/tag/ai/",
       "logo_url": "https://avatars.githubusercontent.com/u/314135?v=4"
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "channel": "expert-newsletter",
+      "source_quality": "high",
+      "commercial_bias": "disclosed-and-mixed",
+      "publisher_id": "latent-space",
+      "evidence_role": "expert-interpretation",
+      "homepage_url": "https://www.latent.space/",
+      "logo_url": "https://www.latent.space/favicon.ico"
+    },
+    {
+      "id": "import-ai",
+      "name": "Import AI",
+      "channel": "expert-newsletter",
+      "source_quality": "high",
+      "commercial_bias": "disclosed-and-mixed",
+      "publisher_id": "import-ai",
+      "evidence_role": "expert-interpretation",
+      "homepage_url": "https://importai.substack.com/",
+      "logo_url": "https://importai.substack.com/favicon.ico"
+    },
+    {
+      "id": "the-batch",
+      "name": "The Batch",
+      "channel": "curated-newsletter",
+      "source_quality": "high",
+      "commercial_bias": "disclosed-and-mixed",
+      "publisher_id": "deeplearning-ai",
+      "evidence_role": "curated-roundup",
+      "homepage_url": "https://www.deeplearning.ai/the-batch",
+      "logo_url": "https://www.deeplearning.ai/favicon.ico"
+    },
+    {
+      "id": "interconnects",
+      "name": "Interconnects",
+      "channel": "expert-newsletter",
+      "source_quality": "high",
+      "commercial_bias": "disclosed-and-mixed",
+      "publisher_id": "interconnects",
+      "evidence_role": "expert-interpretation",
+      "homepage_url": "https://www.interconnects.ai/",
+      "logo_url": "https://www.interconnects.ai/favicon.ico"
+    },
+    {
+      "id": "last-week-in-ai",
+      "name": "Last Week in AI",
+      "channel": "curated-newsletter",
+      "source_quality": "medium",
+      "commercial_bias": "disclosed-and-mixed",
+      "publisher_id": "last-week-in-ai",
+      "evidence_role": "curated-roundup",
+      "homepage_url": "https://lastweekin.ai/",
+      "logo_url": "https://lastweekin.ai/favicon.ico"
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison's Weblog",
+      "channel": "practitioner-blog",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "simon-willison",
+      "evidence_role": "expert-interpretation",
+      "homepage_url": "https://simonwillison.net/",
+      "logo_url": "https://simonwillison.net/favicon.ico"
+    },
+    {
+      "id": "chip-huyen",
+      "name": "Chip Huyen",
+      "channel": "practitioner-blog",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "chip-huyen",
+      "evidence_role": "expert-interpretation",
+      "homepage_url": "https://huyenchip.com/",
+      "logo_url": "https://huyenchip.com/favicon.ico"
+    },
+    {
+      "id": "eugene-yan",
+      "name": "Eugene Yan",
+      "channel": "practitioner-blog",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "eugene-yan",
+      "evidence_role": "expert-interpretation",
+      "homepage_url": "https://eugeneyan.com/",
+      "logo_url": "https://avatars.githubusercontent.com/eugeneyan"
+    },
+    {
+      "id": "lilian-weng",
+      "name": "Lilian Weng",
+      "channel": "practitioner-blog",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "lilian-weng",
+      "evidence_role": "expert-interpretation",
+      "homepage_url": "https://lilianweng.github.io/",
+      "logo_url": "https://avatars.githubusercontent.com/lilianweng"
     },
     {
       "id": "yc-essays",
