@@ -31,7 +31,7 @@ Recovery promise: failed or partial runs preserve the previous valid public snap
 1. **Overview:** what changed, strongest cross-source themes, and collection coverage.
 2. **Analyses:** research questions and source-specific studies, including AlphaSignal.
 3. **Themes:** durable category dossiers with score inputs, source contribution, and evidence.
-4. **Projects:** concrete tools, testing value, risk, and corroboration.
+4. **Projects:** reviewed tools default to a decision-oriented assessment: why the project matters, the workflow it unlocks, its caveat, testing value, risk, and corroboration. Unreviewed discoveries remain separately filterable and never inherit analyst judgment.
 5. **Evidence:** one filterable normalized corpus across every source.
 6. **Method:** scoring, provenance, privacy boundaries, and limitations.
 

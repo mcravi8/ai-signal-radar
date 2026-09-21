@@ -7,6 +7,7 @@ const state = {
   themeSearch: "",
   themeStatus: "",
   projectSearch: "",
+  projectReview: "reviewed",
   projectAction: "",
   projectSource: "",
   evidenceSearch: "",
@@ -383,28 +384,34 @@ function renderProjects() {
   const projects = state.research.projects.filter((project) => {
     const searchable = [project.name, project.category, project.why_it_matters, project.workflow_opportunity].join(" ").toLowerCase();
     const sourceMatch = !state.projectSource || (state.projectSource === "cross-source" ? project.cross_source : !project.cross_source);
-    return (!query || searchable.includes(query)) && (!state.projectAction || project.action === state.projectAction) && sourceMatch;
+    return (!query || searchable.includes(query)) && (!state.projectReview || project.review_status === state.projectReview) && (!state.projectAction || project.action === state.projectAction) && sourceMatch;
   });
-  $("#project-count").textContent = `${projects.length} of ${state.research.projects.length}`;
+  const reviewedCount = state.research.projects.filter((project) => project.review_status === "reviewed").length;
+  const discoveryCount = state.research.projects.length - reviewedCount;
+  $("#project-count").textContent = `${projects.length} shown · ${reviewedCount} reviewed / ${discoveryCount} discoveries`;
   const body = $("#project-body");
   body.replaceChildren();
   for (const project of projects) {
     const projectSlug = project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
     const detailId = `project-detail-${project.review_status}-${project.rank ?? projectSlug}`;
     const row = node("tr", "primary-row");
-    const rank = node("td", "rank-cell tabular");
-    const toggle = node("button", "detail-toggle", "+");
+    const rank = node("td", "rank-cell number-cell tabular", project.rank === null ? "—" : String(project.rank).padStart(2, "0"));
+    const toggle = node("button", "detail-toggle", project.review_status === "reviewed" ? "Open assessment" : "Inspect evidence");
     toggle.type = "button";
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-controls", detailId);
-    rank.append(toggle, document.createTextNode(project.rank === null ? "—" : String(project.rank).padStart(2, "0")));
+    toggle.dataset.collapsedLabel = toggle.textContent;
+    toggle.dataset.expandedLabel = "Close";
     const subject = node("td", "subject-cell");
     const link = node("a", "", project.name);
     link.href = project.official_url;
     link.target = "_blank";
     link.rel = "noreferrer";
     subject.append(link, node("small", "", project.category));
-    row.append(rank, subject, node("td", "score-cell tabular", project.opportunity_score === null ? "N/O" : String(project.opportunity_score)), node("td", "", project.action), node("td", "", project.hype_risk), node("td", "tabular", String(project.source_ids.length)), node("td", "", project.primary_layer));
+    const why = node("p", `project-why ${project.review_status === "reviewed" ? "" : "project-why-unreviewed"}`);
+    why.append(node("strong", "", project.review_status === "reviewed" ? "Why it matters: " : "Status: "), document.createTextNode(project.review_status === "reviewed" ? project.why_it_matters : "Not yet assessed; showing source facts only."));
+    subject.append(why, toggle);
+    row.append(rank, subject, node("td", "score-cell tabular", project.opportunity_score === null ? "N/O" : String(project.opportunity_score)), node("td", "", project.action), node("td", "", project.hype_risk), node("td", "number-cell tabular", String(project.source_ids.length)), node("td", "", project.primary_layer));
 
     const detailRow = node("tr", "detail-row");
     detailRow.id = detailId;
@@ -551,7 +558,7 @@ function toggleDetail(button) {
   if (!target) return;
   const expanded = button.getAttribute("aria-expanded") === "true";
   button.setAttribute("aria-expanded", String(!expanded));
-  button.textContent = expanded ? "+" : "−";
+  button.textContent = expanded ? button.dataset.collapsedLabel : button.dataset.expandedLabel;
   target.hidden = expanded;
 }
 
@@ -560,6 +567,7 @@ function bindControls() {
   $("#theme-search").addEventListener("input", (event) => { state.themeSearch = event.target.value; renderThemes(); });
   $("#theme-status").addEventListener("change", (event) => { state.themeStatus = event.target.value; renderThemes(); });
   $("#project-search").addEventListener("input", (event) => { state.projectSearch = event.target.value; renderProjects(); });
+  $("#project-review").addEventListener("change", (event) => { state.projectReview = event.target.value; renderProjects(); });
   $("#project-action").addEventListener("change", (event) => { state.projectAction = event.target.value; renderProjects(); });
   $("#project-source").addEventListener("change", (event) => { state.projectSource = event.target.value; renderProjects(); });
   $("#evidence-search").addEventListener("input", (event) => { state.evidenceSearch = event.target.value; renderEvidence(); });

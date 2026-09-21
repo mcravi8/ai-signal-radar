@@ -43,12 +43,12 @@
 
           <section class="content-block" aria-labelledby="movement-heading">
             <header class="block-header"><div><span class="block-number">A</span><h3 id="movement-heading">Seven-day movement</h3></div><p id="weekly-window">Date-level public evidence compared with the preceding week.</p></header>
-            <div class="table-shell"><table class="data-table movement-table"><thead><tr><th>Theme</th><th>Current</th><th>Previous</th><th>Change</th><th>Direction</th></tr></thead><tbody id="movement-body"><tr><td colspan="5" class="table-message">Loading weekly movement…</td></tr></tbody></table></div>
+            <div class="table-shell"><table class="data-table movement-table"><thead><tr><th>Theme</th><th class="numeric-header">Current</th><th class="numeric-header">Previous</th><th class="numeric-header">Change</th><th>Direction</th></tr></thead><tbody id="movement-body"><tr><td colspan="5" class="table-message">Loading weekly movement…</td></tr></tbody></table></div>
           </section>
 
           <section class="content-block" aria-labelledby="overview-themes-heading">
             <header class="block-header"><div><span class="block-number">B</span><h3 id="overview-themes-heading">Strongest cross-source themes</h3></div><p>Scores combine recurrence, acceleration, persistence, and source breadth. Concentration remains separate.</p></header>
-            <div class="table-shell"><table class="data-table theme-summary-table"><thead><tr><th>Theme</th><th>Score</th><th>Sources</th><th>Support</th><th>Concentration</th><th>Assessment</th></tr></thead><tbody id="overview-theme-body"><tr><td colspan="6" class="table-message">Loading theme assessments…</td></tr></tbody></table></div>
+            <div class="table-shell"><table class="data-table theme-summary-table"><thead><tr><th>Theme</th><th class="numeric-header">Score</th><th class="numeric-header">Sources</th><th class="numeric-header">Support</th><th class="numeric-header">Concentration</th><th>Assessment</th></tr></thead><tbody id="overview-theme-body"><tr><td colspan="6" class="table-message">Loading theme assessments…</td></tr></tbody></table></div>
           </section>
 
           <section class="content-block" aria-labelledby="coverage-heading">
@@ -79,14 +79,15 @@
         </section>
 
         <section class="view" id="view-projects" data-view="projects" aria-labelledby="projects-heading" hidden>
-          <div class="view-intro"><div><h2 id="projects-heading">Project opportunities</h2><p>Specific tools ranked for testing value. Opportunity score is independent from theme strength; public corroboration is shown separately.</p></div></div>
+          <div class="view-intro"><div><h2 id="projects-heading">Project opportunities</h2><p>Reviewed projects explain why a tool matters, the workflow it unlocks, and its caveat. Unreviewed public discoveries remain available, but never inherit analyst judgment.</p></div></div>
           <div class="table-tools">
             <label><span>Search</span><input id="project-search" type="search" placeholder="Project, category, or workflow" autocomplete="off" /></label>
+            <label><span>Review status</span><select id="project-review"><option value="reviewed">Reviewed assessments</option><option value="">All projects</option><option value="unreviewed">Unreviewed discoveries</option></select></label>
             <label><span>Action</span><select id="project-action"><option value="">All actions</option></select></label>
             <label><span>Evidence</span><select id="project-source"><option value="">All projects</option><option value="cross-source">Cross-source only</option><option value="single-source">Single-source only</option></select></label>
             <output id="project-count">—</output>
           </div>
-          <div class="table-shell"><table class="data-table project-table"><thead><tr><th>Rank</th><th>Project</th><th>Opportunity</th><th>Action</th><th>Risk</th><th>Sources</th><th>Layer</th></tr></thead><tbody id="project-body"><tr><td colspan="7" class="table-message">Loading project research…</td></tr></tbody></table></div>
+          <div class="table-shell"><table class="data-table project-table"><thead><tr><th class="numeric-header">Rank</th><th>Project and assessment</th><th class="numeric-header">Opportunity</th><th>Action</th><th>Risk</th><th class="numeric-header">Sources</th><th>Layer</th></tr></thead><tbody id="project-body"><tr><td colspan="7" class="table-message">Loading project research…</td></tr></tbody></table></div>
         </section>
 
         <section class="view" id="view-evidence" data-view="evidence" aria-labelledby="evidence-heading" hidden>
@@ -97,7 +98,7 @@
             <label><span>Theme</span><select id="evidence-theme"><option value="">All themes</option></select></label>
             <output id="evidence-count">—</output>
           </div>
-          <div class="table-shell"><table class="data-table evidence-table"><thead><tr><th>Date</th><th>Source</th><th>Evidence</th><th>Kind</th><th>Support</th><th>Themes</th></tr></thead><tbody id="evidence-body"><tr><td colspan="6" class="table-message">Loading normalized evidence…</td></tr></tbody></table></div>
+          <div class="table-shell"><table class="data-table evidence-table"><thead><tr><th>Date</th><th>Source</th><th>Evidence</th><th>Kind</th><th class="numeric-header">Support</th><th>Themes</th></tr></thead><tbody id="evidence-body"><tr><td colspan="6" class="table-message">Loading normalized evidence…</td></tr></tbody></table></div>
           <div class="result-limit" id="evidence-limit"></div>
         </section>
 

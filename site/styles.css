@@ -87,6 +87,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .data-table tbody tr:last-child td { border-bottom: 0; }
 .primary-row:hover td { background: #fafbfc; }
 .number-cell, .score-cell { text-align: right; }
+.numeric-header { text-align: right !important; }
 .score-cell { color: var(--navy); font-weight: 760; }
 .date-cell { color: var(--muted); }
 .table-message { padding: 1.4rem !important; color: var(--muted); text-align: center !important; }
@@ -137,7 +138,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .inline-notice, .empty-state { padding: .85rem; background: var(--wash); color: var(--muted); font-size: .73rem; }
 
 .theme-toolbar, .table-tools { display: grid; grid-template-columns: minmax(240px, 1fr) 240px auto; gap: .7rem; align-items: end; margin-bottom: 1rem; }
-.table-tools { grid-template-columns: minmax(240px, 1fr) 190px 190px auto; }
+.table-tools { grid-template-columns: minmax(240px, 1fr) 170px 170px 170px auto; }
 .theme-toolbar label, .table-tools label { display: grid; gap: .3rem; color: var(--muted); font: 700 .6rem var(--mono); text-transform: uppercase; }
 .theme-toolbar input, .theme-toolbar select, .table-tools input, .table-tools select { width: 100%; min-height: 38px; padding: .5rem .6rem; border: 1px solid var(--line-dark); border-radius: 0; background: white; color: var(--ink); font-family: var(--sans); font-size: .75rem; text-transform: none; }
 .theme-toolbar output, .table-tools output { align-self: center; min-width: 100px; color: var(--muted); font: .65rem var(--mono); text-align: right; }
@@ -170,18 +171,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .evidence-list-item a:hover { color: var(--blue); text-decoration: underline; }
 .evidence-list-item span { color: var(--muted); font: .59rem var(--mono); }
 
-.project-table { min-width: 1060px; }
-.project-table th:nth-child(1), .project-table td:nth-child(1) { width: 76px; }
-.project-table th:nth-child(2), .project-table td:nth-child(2) { width: 28%; }
+.project-table { min-width: 1080px; }
+.project-table th:nth-child(1), .project-table td:nth-child(1) { width: 58px; }
+.project-table th:nth-child(2), .project-table td:nth-child(2) { width: 36%; }
 .project-table th:nth-child(3), .project-table td:nth-child(3) { width: 105px; }
 .project-table th:nth-child(4), .project-table td:nth-child(4) { width: 125px; }
 .project-table th:nth-child(5), .project-table td:nth-child(5) { width: 80px; }
 .project-table th:nth-child(6), .project-table td:nth-child(6) { width: 75px; }
-.project-table th:nth-child(7), .project-table td:nth-child(7) { width: 190px; }
+.project-table th:nth-child(7), .project-table td:nth-child(7) { width: 170px; }
 .rank-cell { white-space: nowrap; color: var(--muted); }
-.detail-toggle { width: 22px; height: 22px; margin-right: .45rem; padding: 0; border: 1px solid var(--line-dark); border-radius: 0; background: white; color: var(--navy); font: 700 .8rem/1 var(--mono); cursor: pointer; }
+.detail-toggle { min-height: 26px; margin-top: .45rem; padding: .26rem .45rem; border: 1px solid var(--line-dark); border-radius: 0; background: white; color: var(--navy); font: 700 .58rem/1.15 var(--mono); cursor: pointer; }
+.detail-toggle:hover { border-color: var(--navy); background: var(--wash); }
 .subject-cell > a, .subject-cell > strong { display: block; margin-bottom: .2rem; color: var(--ink); font-size: .78rem; font-weight: 700; }
 .subject-cell small { display: -webkit-box; overflow: hidden; color: var(--muted); font-size: .67rem; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.project-why { display: -webkit-box; overflow: hidden; margin: .42rem 0 0; color: var(--muted); font-size: .68rem; line-height: 1.4; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.project-why strong { color: var(--ink); font-size: .61rem; font-family: var(--mono); text-transform: uppercase; }
+.project-why-unreviewed { color: var(--faint); }
 .detail-row td { padding: 0; background: #f8fafb; }
 .project-detail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 2rem; padding: 1.2rem 1rem 1.35rem 4.7rem; border-bottom: 1px solid var(--line-dark); }
 .project-detail p { margin: .3rem 0 0; color: var(--muted); font-size: .71rem; }
