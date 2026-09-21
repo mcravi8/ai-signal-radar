@@ -1,6 +1,6 @@
 # AI Signal Radar
 
-AI Signal Radar is one cross-source research system for AI newsletters, papers, repositories, public essays, and technical discussion.
+AI Signal Radar is one cross-source research system for first-party AI labs, newsletters, papers, repositories, public essays, and technical discussion.
 
 Every source enters the same evidence contract. The public site is organized around analyses, theme dossiers, project opportunities, and inspectable evidence—not around a privileged newsletter or a blog feed.
 
@@ -9,7 +9,7 @@ Every source enters the same evidence contract. The public site is organized aro
 - Collection and scoring code
 - Public-source metadata and links
 - Sanitized AlphaSignal-derived trend and project research
-- Official YC and Sequoia essay feeds
+- Official AI lab, operator, and investor publication feeds
 - Themes, aliases, projects, claims, and evidence relationships
 - Weekly reports and historical scores
 - The static dashboard
@@ -57,7 +57,7 @@ Open `http://localhost:8000`.
 
 ## Automation
 
-- `collect-daily.yml` collects free public metadata from arXiv, Hugging Face, GitHub, Hacker News, YC, and Sequoia.
+- `collect-daily.yml` collects free public metadata from first-party AI labs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds.
 - `synthesize-weekly.yml` normalizes every source, classifies evidence, recalculates cross-source scores, and produces a weekly brief.
 - `deploy-dashboard.yml` validates the public boundary and deploys the static site to GitHub Pages.
 
@@ -65,7 +65,7 @@ Gmail ingestion is intentionally local. `pipeline.collectors.email_import` accep
 
 ## Cross-source contract
 
-`data/public/research.json` is the frontend's primary dataset. Papers, repositories, community discussions, essays, AlphaSignal trend aggregates, and AlphaSignal project assessments all expose the same core fields:
+`data/public/research.json` is the frontend's primary dataset. First-party lab publications, papers, repositories, community discussions, essays, AlphaSignal trend aggregates, and AlphaSignal project assessments all expose the same core fields:
 
 - source and source type;
 - evidence kind and publication date;
@@ -92,4 +92,4 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 ## Current status
 
-The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.
+The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.

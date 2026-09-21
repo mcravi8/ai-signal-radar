@@ -50,4 +50,4 @@ Promotion is never based on engagement alone.
 
 ## Compute boundary
 
-GitHub-hosted runners collect public metadata and official essay feeds, compute deterministic scores, build the site, and publish sanitized results. Mailbox access and optional local-model enrichment stay on the owner's machine.
+GitHub-hosted runners collect public metadata, first-party AI lab publications, and official essay feeds, compute deterministic scores, build the site, and publish sanitized results. Mailbox access and optional local-model enrichment stay on the owner's machine.

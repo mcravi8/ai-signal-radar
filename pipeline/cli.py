@@ -24,7 +24,7 @@ def _yaml(path: Path) -> dict:
 
 
 def collect() -> None:
-    from .collectors import arxiv, github, hackernews, huggingface, rss
+    from .collectors import arxiv, github, hackernews, huggingface, rss, sitemap
 
     source_config = _yaml(ROOT / "config/sources.yml")["sources"]
     enabled = {source["id"]: source for source in source_config if source.get("enabled")}
@@ -58,6 +58,17 @@ def collect() -> None:
                     source_id,
                     source.get("channel", "essay"),
                     source["feed_url"],
+                    source.get("limit", 30),
+                ),
+            )
+        elif source.get("collection") == "sitemap":
+            attempt(
+                source_id,
+                lambda source_id=source_id, source=source: sitemap.collect(
+                    source_id,
+                    source.get("channel", "first-party-lab"),
+                    source["sitemap_url"],
+                    source.get("include_prefixes", []),
                     source.get("limit", 30),
                 ),
             )
@@ -121,7 +132,7 @@ def synthesize() -> None:
         "evidence": public_items[-250:],
         "projects": [],
         "sources": [
-            {key: source[key] for key in ("id", "name", "channel", "source_quality", "commercial_bias", "homepage_url", "logo_url") if key in source}
+            {key: source[key] for key in ("id", "name", "channel", "source_quality", "commercial_bias", "publisher_id", "evidence_role", "homepage_url", "logo_url") if key in source}
             for source in _yaml(ROOT / "config/sources.yml")["sources"]
         ],
     }

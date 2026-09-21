@@ -49,6 +49,10 @@ function label(value) {
   return String(value || "N/O").replaceAll("-", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function channelLabel(value) {
+  return value === "first-party-lab" ? "Official lab" : label(value);
+}
+
 function compactAssessment(value) {
   return ({
     "broadly-corroborated": "Broadly corroborated",
@@ -225,7 +229,7 @@ function renderOverview() {
   sourceGrid.replaceChildren();
   for (const source of sources) {
     const item = node("article", `source-item ${source.status === "configured" ? "source-muted" : ""}`);
-    item.append(node("span", "source-channel", source.channel), sourceIdentity(source), node("span", "tabular", formatNumber(source.normalized_evidence_count)), node("small", "", source.status));
+    item.append(node("span", "source-channel", channelLabel(source.channel)), sourceIdentity(source), node("span", "tabular", formatNumber(source.normalized_evidence_count)), node("small", "", source.status));
     sourceGrid.append(item);
   }
 }
@@ -308,7 +312,7 @@ function renderAnalysisDetail() {
     const rows = node("div", "compact-rows");
     for (const source of state.research.sources.filter((item) => item.id !== "alphasignal")) {
       const row = node("div", "compact-row");
-      row.append(sourceIdentity(source), node("span", "", source.channel), node("span", "tabular", formatNumber(source.normalized_evidence_count)));
+      row.append(sourceIdentity(source), node("span", "", channelLabel(source.channel)), node("span", "tabular", formatNumber(source.normalized_evidence_count)));
       rows.append(row);
     }
     section.append(rows);
@@ -463,7 +467,7 @@ function renderThemeDossier() {
 
   const metrics = node("div", "dossier-metrics");
   metrics.append(
-    metric("Sources", String(theme.source_count), "Independent channels observed"),
+    metric("Sources", String(theme.source_count), "Distinct source streams observed"),
     metric("Evidence records", formatNumber(theme.evidence_count), "Normalized observations"),
     metric("Support units", formatNumber(theme.support_units), "Source attention, not adoption"),
     metric("Largest-source share", theme.source_concentration === null ? "N/O" : `${Math.round(theme.source_concentration * 100)}%`, "Reported outside the score"),
@@ -625,7 +629,7 @@ function renderMethod() {
   sources.replaceChildren();
   for (const source of state.research.sources) {
     const row = node("div", "method-source");
-    row.append(sourceIdentity(source), node("span", "", `${source.channel} · ${source.source_quality || "unknown quality"}`), node("span", "tabular", `${formatNumber(source.normalized_evidence_count)} records`));
+    row.append(sourceIdentity(source), node("span", "", `${channelLabel(source.channel)} · ${source.source_quality || "unknown quality"}`), node("span", "tabular", `${formatNumber(source.normalized_evidence_count)} records`));
     sources.append(row);
   }
 }
