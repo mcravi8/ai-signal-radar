@@ -49,6 +49,17 @@ function label(value) {
   return String(value || "N/O").replaceAll("-", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function compactAssessment(value) {
+  return ({
+    "broadly-corroborated": "Broadly corroborated",
+    "corroborated-source-concentrated": "Source-concentrated",
+    corroborated: "Corroborated",
+    emerging: "Emerging",
+    "source-specific": "Single-source",
+    unobserved: "Unobserved",
+  })[value] || label(value);
+}
+
 function sourceName(sourceId) {
   return state.research?.sources.find((source) => source.id === sourceId)?.name || sourceId;
 }
@@ -100,17 +111,21 @@ function themeButton(theme, compact = false) {
 
 function renderOverview() {
   const { meta, weekly, themes, sources } = state.research;
+  const structuralTrendCount = state.alpha?.trends.filter((trend) => trend.score?.tier === "Structural").length;
+  const emergingCategoryCount = themes.filter((theme) => theme.maturity === "source-specific").length;
   $("#overview-metrics").replaceChildren(
     metric("Normalized evidence", formatNumber(meta.normalized_evidence_count), `${formatNumber(meta.public_record_count)} direct public records`),
     metric("Active sources", formatNumber(meta.active_source_count), "One shared evidence contract"),
-    metric("Observed themes", `${meta.observed_theme_count}/${meta.theme_count}`, `${meta.theme_count - meta.observed_theme_count} explicitly unobserved`),
-    metric("Project catalog", formatNumber(meta.project_count), `${meta.reviewed_project_count} reviewed · ${meta.discovered_project_count} discovered`),
+    metric("Structural trends", structuralTrendCount === undefined ? "N/O" : formatNumber(structuralTrendCount), "Reviewed AlphaSignal corpus"),
+    metric("Emerging categories", formatNumber(emergingCategoryCount), "Single-source candidates to validate"),
+    metric("Reviewed projects", formatNumber(meta.reviewed_project_count), `${meta.discovered_project_count} discoveries await review`),
+    metric("Analyses", formatNumber(state.research.analyses.length), "Cross-source and source-specific"),
   );
 
-  $("#weekly-window").textContent = `${formatDate(weekly.window_start)} through ${formatDate(weekly.as_of)} versus the preceding seven days. ${weekly.note}`;
+  $("#weekly-window").textContent = `${formatDate(weekly.window_start)} through ${formatDate(weekly.as_of)} versus the preceding seven days. Public date-level evidence only.`;
   const movementBody = $("#movement-body");
   movementBody.replaceChildren();
-  for (const movement of weekly.movements) {
+  for (const movement of weekly.movements.slice(0, 5)) {
     const row = node("tr");
     const theme = state.research.themes.find((item) => item.id === movement.theme_id);
     const themeCell = node("td");
@@ -119,9 +134,9 @@ function renderOverview() {
     row.append(
       themeCell,
       node("td", "number-cell tabular", String(movement.recent)),
-      node("td", "number-cell tabular", String(movement.prior)),
       node("td", `number-cell tabular delta-${movement.delta > 0 ? "up" : movement.delta < 0 ? "down" : "flat"}`, delta),
-      node("td", "", label(movement.direction)),
+      node("td", "number-cell tabular", String(theme.source_count)),
+      node("td", "", compactAssessment(theme.maturity)),
     );
     movementBody.append(row);
   }
@@ -148,6 +163,24 @@ function renderOverview() {
       node("td", "", label(theme.maturity)),
     );
     themeBody.append(row);
+  }
+
+  const analysisBody = $("#overview-analysis-body");
+  analysisBody.replaceChildren();
+  for (const analysis of state.research.analyses) {
+    const row = node("tr");
+    const titleCell = node("td", "analysis-summary-title");
+    const link = node("a", "", analysis.title);
+    link.href = `#analyses/${analysis.id}`;
+    titleCell.append(link);
+    row.append(
+      titleCell,
+      node("td", "analysis-question", analysis.question),
+      node("td", "number-cell tabular", formatNumber(analysis.evidence_count)),
+      node("td", "number-cell tabular", String(analysis.source_ids.length)),
+      node("td", "", label(analysis.status)),
+    );
+    analysisBody.append(row);
   }
 
   const sourceGrid = $("#overview-sources");

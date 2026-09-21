@@ -21,6 +21,7 @@ class AlphaSignalPublicDatasetTests(unittest.TestCase):
         self.assertEqual(len(self.payload["findings"]), 5)
         self.assertEqual(len(self.payload["trends"]), 15)
         self.assertEqual(len(self.payload["projects"]), 20)
+        self.assertEqual(sum(trend["score"]["tier"] == "Structural" for trend in self.payload["trends"]), 5)
 
     def test_scores_remain_separate(self):
         self.assertIn("score", self.payload["trends"][0])

@@ -28,7 +28,7 @@ Recovery promise: failed or partial runs preserve the previous valid public snap
 
 ## Information hierarchy
 
-1. **Overview:** what changed, strongest cross-source themes, and collection coverage.
+1. **Overview:** research inventory, five important weekly changes, strongest cross-source themes, an analyses index, and collection coverage.
 2. **Analyses:** research questions and source-specific studies, including AlphaSignal.
 3. **Themes:** durable category dossiers with score inputs, source contribution, and evidence.
 4. **Projects:** reviewed tools default to a decision-oriented assessment: why the project matters, the workflow it unlocks, its caveat, testing value, risk, and corroboration. Unreviewed discoveries remain separately filterable and never inherit analyst judgment.

@@ -43,6 +43,10 @@ class CrossSourceResearchTests(unittest.TestCase):
             self.assertIsNone(theme["score"])
             self.assertEqual(theme["support_units"], 0)
 
+    def test_source_specific_category_watchlist_has_three_candidates(self):
+        candidates = [theme for theme in self.payload["themes"] if theme["maturity"] == "source-specific"]
+        self.assertEqual(len(candidates), 3)
+
     def test_project_catalog_combines_reviewed_and_discovered_projects(self):
         reviewed = [project for project in self.payload["projects"] if project["review_status"] == "reviewed"]
         discovered = [project for project in self.payload["projects"] if project["review_status"] == "unreviewed"]
