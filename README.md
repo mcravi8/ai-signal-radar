@@ -77,6 +77,8 @@ The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only 
 
 Theme scores use recurrence, acceleration, persistence, and source breadth. Raw source concentration is reported separately: a large volume from AlphaSignal or any other single source cannot masquerade as independent corroboration. Themes without evidence have a `null` score and appear as `N/O`.
 
+The Early Signal Tracker is a separate inference layer. Each directional hypothesis requires an evidence record to connect at least two constituent themes, then assigns a stage from independent source-family breadth inside a rolling 90-day window. Its stages describe how widely a hypothesis is appearing across different kinds of evidence; they are not forecasts of adoption, market size, or technical correctness.
+
 ## AlphaSignal research
 
 The tracked `data/public/alphasignal-research.json` is a derivative, public-safe research artifact built from the private local corpus. It currently covers 130 received emails, 129 substantive issues, 912 extracted signal records, 899 unique catalog records, 15 analyzed trends, and 20 ranked projects from April 14 through September 21, 2026.

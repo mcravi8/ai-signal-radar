@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-21T20:14:42.440710+00:00",
+    "generated_at": "2026-09-21T23:27:05.571718+00:00",
     "status": "success",
     "normalized_evidence_count": 1593,
     "public_record_count": 1558,
@@ -59,7 +59,7 @@
         "bluesky-karpathy"
       ],
       "evidence_count": 1593,
-      "updated_at": "2026-09-21T20:14:42.440710+00:00"
+      "updated_at": "2026-09-21T23:27:05.571718+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -118,7 +118,372 @@
         "yc-essays"
       ],
       "evidence_count": 1558,
-      "updated_at": "2026-09-21T20:14:42.440710+00:00"
+      "updated_at": "2026-09-21T23:27:05.571718+00:00"
+    },
+    {
+      "id": "early-signal-tracker",
+      "title": "Early Signal Tracker",
+      "question": "Where does the combined evidence suggest the AI industry is heading before the direction becomes an established signal?",
+      "summary": "Directional hypotheses connect weak signals across experts, engineering artifacts, research, first-party builders, and operator or investor narratives without presenting attention as adoption.",
+      "status": "active",
+      "source_ids": [
+        "alphasignal",
+        "arxiv",
+        "github",
+        "greylock-essays",
+        "huggingface-papers",
+        "radical-ventures",
+        "simon-willison",
+        "the-batch"
+      ],
+      "evidence_count": 23,
+      "direction_count": 6,
+      "directions": [
+        {
+          "id": "operational-context",
+          "domain": "Enterprise systems",
+          "title": "Enterprise context is evolving from document retrieval into an operational ontology",
+          "hypothesis": "Agents need governed business objects, relationships, permissions, and actions—not only retrieved text—to operate reliably inside companies.",
+          "interpretation": "Memory and retrieval solve what the system can recall. Operational ontologies extend that layer with shared meanings, live state, rules, and allowed actions across systems of record.",
+          "why_it_matters": "The enabling product may be a semantic control layer that lets many agents understand and manipulate the same organization without rebuilding context for every workflow.",
+          "next_confirmation": "Open schemas, context graphs, or enterprise platforms demonstrating permission-aware actions across several business systems and agent vendors.",
+          "counter_signal": "Workflow-specific retrieval and direct SaaS integrations remain sufficient, making a shared semantic layer too costly to maintain.",
+          "theme_ids": [
+            "document-knowledge-systems",
+            "enterprise-vertical-ai",
+            "memory-context",
+            "operational-ontology"
+          ],
+          "stage": "forming",
+          "confidence": "low",
+          "window_days": 90,
+          "evidence_count": 4,
+          "source_ids": [
+            "alphasignal",
+            "arxiv"
+          ],
+          "source_count": 2,
+          "source_families": [
+            {
+              "id": "attention",
+              "name": "Market attention",
+              "source_ids": [
+                "alphasignal"
+              ],
+              "source_count": 1,
+              "evidence_count": 3
+            },
+            {
+              "id": "research",
+              "name": "Research",
+              "source_ids": [
+                "arxiv"
+              ],
+              "source_count": 1,
+              "evidence_count": 1
+            }
+          ],
+          "family_count": 2,
+          "technical_family_count": 1,
+          "first_observed": "2023-08-16",
+          "last_observed": "2026-09-21",
+          "evidence_ids": [
+            "alphasignal:trend:documents-retrieval-and-structured-data",
+            "arxiv:2609.21667v1",
+            "alphasignal:project:microsoft-graphrag",
+            "alphasignal:project:wrenai"
+          ]
+        },
+        {
+          "id": "heterogeneous-inference",
+          "domain": "Inference architecture",
+          "title": "Heterogeneous model portfolios are becoming the default inference architecture",
+          "hypothesis": "Teams will combine frontier, small, open, local, and specialized models through routing and purpose-built serving rather than standardizing on one endpoint.",
+          "interpretation": "Cost, latency, privacy, and task fit are becoming first-class architectural constraints. The emerging control plane chooses the model and runtime per request instead of treating inference as homogeneous.",
+          "why_it_matters": "Routing, evaluation, caching, capacity planning, and fallback logic can become durable infrastructure even as the best individual model changes.",
+          "next_confirmation": "Production benchmarks showing sustained quality and unit-economic gains from routing across model sizes, vendors, or specialized inference hardware.",
+          "counter_signal": "Frontier APIs become cheap, fast, private, and reliable enough that routing complexity produces little operational benefit.",
+          "theme_ids": [
+            "frontier-inference-infrastructure",
+            "model-routing",
+            "open-local-inference",
+            "small-specialized-models",
+            "specialized-inference-silicon"
+          ],
+          "stage": "forming",
+          "confidence": "low",
+          "window_days": 90,
+          "evidence_count": 4,
+          "source_ids": [
+            "alphasignal",
+            "arxiv"
+          ],
+          "source_count": 2,
+          "source_families": [
+            {
+              "id": "attention",
+              "name": "Market attention",
+              "source_ids": [
+                "alphasignal"
+              ],
+              "source_count": 1,
+              "evidence_count": 3
+            },
+            {
+              "id": "research",
+              "name": "Research",
+              "source_ids": [
+                "arxiv"
+              ],
+              "source_count": 1,
+              "evidence_count": 1
+            }
+          ],
+          "family_count": 2,
+          "technical_family_count": 1,
+          "first_observed": "2026-08-12",
+          "last_observed": "2026-09-21",
+          "evidence_ids": [
+            "alphasignal:trend:open-local-models-and-inference-efficiency",
+            "arxiv:2609.20441v1",
+            "alphasignal:project:typesafe-ai-jev",
+            "alphasignal:project:unsloth-desktop"
+          ]
+        },
+        {
+          "id": "workflow-ownership",
+          "domain": "Product architecture",
+          "title": "AI products are moving from assistance toward bounded workflow ownership",
+          "hypothesis": "The important product boundary is shifting from generating an answer to carrying a well-defined task from trigger to verified outcome.",
+          "interpretation": "Operator language around systems of action, AI workforces, and vertical agents points toward products measured by completed work and exception handling rather than chat quality.",
+          "why_it_matters": "This creates room for products that own narrow operational loops, integrate with systems of record, and charge against measurable outcomes.",
+          "next_confirmation": "Case studies reporting cycle-time, intervention-rate, or business-outcome improvements from agents operating a complete workflow.",
+          "counter_signal": "Most deployments remain drafting tools that require people to coordinate every handoff and execute every consequential action.",
+          "theme_ids": [
+            "agent-harnesses",
+            "ai-native-gtm",
+            "enterprise-vertical-ai"
+          ],
+          "stage": "forming",
+          "confidence": "low",
+          "window_days": 90,
+          "evidence_count": 1,
+          "source_ids": [
+            "alphasignal"
+          ],
+          "source_count": 1,
+          "source_families": [
+            {
+              "id": "attention",
+              "name": "Market attention",
+              "source_ids": [
+                "alphasignal"
+              ],
+              "source_count": 1,
+              "evidence_count": 1
+            }
+          ],
+          "family_count": 1,
+          "technical_family_count": 0,
+          "first_observed": "2025-11-15",
+          "last_observed": "2026-09-21",
+          "evidence_ids": [
+            "alphasignal:trend:enterprise-and-vertical-ai"
+          ]
+        },
+        {
+          "id": "simulation-first-physical-ai",
+          "domain": "Physical AI",
+          "title": "Simulation is becoming the development environment for physical AI",
+          "hypothesis": "World models, synthetic environments, and evaluation loops will mature before broadly deployed autonomous physical systems.",
+          "interpretation": "Research and investor narratives increasingly connect spatial models with scalable training and validation environments, where rare failures can be generated and replayed before physical deployment.",
+          "why_it_matters": "Simulation, data generation, and safety evaluation may be nearer-term infrastructure opportunities than betting on one general-purpose robot application.",
+          "next_confirmation": "Evidence that simulation-generated experience transfers reliably into deployed systems and materially reduces physical testing cost or failure rates.",
+          "counter_signal": "Sim-to-real transfer remains weak enough that domain-specific physical data collection continues to dominate progress.",
+          "theme_ids": [
+            "assurance-infrastructure",
+            "multimodal-3d",
+            "robotics-embodied-ai"
+          ],
+          "stage": "forming",
+          "confidence": "low",
+          "window_days": 90,
+          "evidence_count": 1,
+          "source_ids": [
+            "radical-ventures"
+          ],
+          "source_count": 1,
+          "source_families": [
+            {
+              "id": "narratives",
+              "name": "Operator & capital narratives",
+              "source_ids": [
+                "radical-ventures"
+              ],
+              "source_count": 1,
+              "evidence_count": 1
+            }
+          ],
+          "family_count": 1,
+          "technical_family_count": 0,
+          "first_observed": "2026-08-24",
+          "last_observed": "2026-08-24",
+          "evidence_ids": [
+            "radical-ventures:002cb1815fb8b4589802"
+          ]
+        },
+        {
+          "id": "modular-agent-stack",
+          "domain": "Agent engineering",
+          "title": "The agent stack is separating into modular operating layers",
+          "hypothesis": "Models are becoming replaceable components inside a larger system of harnesses, reusable skills, execution environments, and assurance controls.",
+          "interpretation": "Independent work is accumulating above the model API: orchestration controls execution, skills package repeatable actions, and assurance governs whether those actions can be trusted.",
+          "why_it_matters": "Value and defensibility may shift from exclusive model access toward the infrastructure that makes changing models reliable inside real workflows.",
+          "next_confirmation": "More production systems publishing interchangeable model adapters, portable skill interfaces, and assurance telemetry as separate components.",
+          "counter_signal": "Application stacks continue to remain tightly coupled to one model vendor, with little reuse across runtimes or tools.",
+          "theme_ids": [
+            "agent-harnesses",
+            "assurance-infrastructure",
+            "skills-integrations"
+          ],
+          "stage": "taking-shape",
+          "confidence": "moderate",
+          "window_days": 90,
+          "evidence_count": 6,
+          "source_ids": [
+            "alphasignal",
+            "github",
+            "greylock-essays",
+            "huggingface-papers"
+          ],
+          "source_count": 4,
+          "source_families": [
+            {
+              "id": "attention",
+              "name": "Market attention",
+              "source_ids": [
+                "alphasignal"
+              ],
+              "source_count": 1,
+              "evidence_count": 1
+            },
+            {
+              "id": "engineering",
+              "name": "Open engineering",
+              "source_ids": [
+                "github"
+              ],
+              "source_count": 1,
+              "evidence_count": 3
+            },
+            {
+              "id": "narratives",
+              "name": "Operator & capital narratives",
+              "source_ids": [
+                "greylock-essays"
+              ],
+              "source_count": 1,
+              "evidence_count": 1
+            },
+            {
+              "id": "research",
+              "name": "Research",
+              "source_ids": [
+                "huggingface-papers"
+              ],
+              "source_count": 1,
+              "evidence_count": 1
+            }
+          ],
+          "family_count": 4,
+          "technical_family_count": 2,
+          "first_observed": "2026-06-30",
+          "last_observed": "2026-09-21",
+          "evidence_ids": [
+            "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+            "greylock-essays:aacd57b6bec14e3c9da1",
+            "github:1348178527",
+            "hf-paper:2606.31227",
+            "github:1346917581",
+            "github:1342500731"
+          ]
+        },
+        {
+          "id": "validation-as-release",
+          "domain": "Assurance engineering",
+          "title": "Validation is becoming the release gate for AI-generated work",
+          "hypothesis": "As agents produce code and operational changes, evaluation, observability, security, and reversible deployment become one continuous release discipline.",
+          "interpretation": "The bottleneck is moving from whether an agent can produce an output to whether the system can test, constrain, trace, and safely ship that output under real conditions.",
+          "why_it_matters": "A reusable release layer could govern many agent workflows and become more durable than any individual agent interface.",
+          "next_confirmation": "Teams publishing intervention rates, rollback data, policy violations, and production-quality evals as standard agent deployment metrics.",
+          "counter_signal": "Model reliability improves enough that conventional testing and access control absorb agent-specific assurance requirements.",
+          "theme_ids": [
+            "assurance-infrastructure",
+            "coding-agents",
+            "training-self-improvement",
+            "validation-release"
+          ],
+          "stage": "taking-shape",
+          "confidence": "moderate",
+          "window_days": 90,
+          "evidence_count": 7,
+          "source_ids": [
+            "alphasignal",
+            "arxiv",
+            "huggingface-papers",
+            "simon-willison",
+            "the-batch"
+          ],
+          "source_count": 5,
+          "source_families": [
+            {
+              "id": "attention",
+              "name": "Market attention",
+              "source_ids": [
+                "alphasignal",
+                "the-batch"
+              ],
+              "source_count": 2,
+              "evidence_count": 2
+            },
+            {
+              "id": "research",
+              "name": "Research",
+              "source_ids": [
+                "arxiv",
+                "huggingface-papers"
+              ],
+              "source_count": 2,
+              "evidence_count": 4
+            },
+            {
+              "id": "experts",
+              "name": "Expert interpretation",
+              "source_ids": [
+                "simon-willison"
+              ],
+              "source_count": 1,
+              "evidence_count": 1
+            }
+          ],
+          "family_count": 3,
+          "technical_family_count": 1,
+          "first_observed": "2024-07-23",
+          "last_observed": "2026-09-21",
+          "evidence_ids": [
+            "alphasignal:trend:validation-and-release-bottlenecks",
+            "arxiv:2609.22068v1",
+            "simon-willison:6533bdcc0f6c39c58db7",
+            "hf-paper:2609.14858",
+            "the-batch:2622ee409c0a925f8cee",
+            "arxiv:2609.20625v1",
+            "hf-paper:2609.05571"
+          ]
+        }
+      ],
+      "executive_summary": "The current corpus points toward a more modular and operational AI industry: agents own bounded workflows; models are selected inside heterogeneous inference systems; governed context connects agents to live business state; and assurance becomes part of the release path. Physical AI is earlier, with simulation and validation emerging as the enabling layer. These are hypotheses to monitor, not forecasts of adoption.",
+      "interpretation_note": "A direction's stage is based on evidence that connects at least two constituent themes and on independent source-family breadth inside a rolling 90-day window. It measures whether a compound hypothesis is appearing in different kinds of evidence—not market size, technical correctness, or inevitability. Supporting links are selected for source diversity rather than popularity.",
+      "updated_at": "2026-09-21T23:27:05.571718+00:00"
     },
     {
       "id": "expert-pulse",
@@ -246,7 +611,7 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-09-21T20:14:42.440710+00:00"
+      "updated_at": "2026-09-21T23:27:05.571718+00:00"
     },
     {
       "id": "operator-narratives",
@@ -563,7 +928,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-21T20:14:42.440710+00:00"
+      "updated_at": "2026-09-21T23:27:05.571718+00:00"
     },
     {
       "id": "project-opportunities",
@@ -585,7 +950,7 @@
     "as_of": "2026-09-21",
     "window_start": "2026-09-14",
     "previous_window_start": "2026-09-07",
-    "new_public_records": 667,
+    "new_public_records": 664,
     "movements": [
       {
         "theme_id": "training-self-improvement",

@@ -298,7 +298,8 @@ function renderAnalysisIndex() {
     const button = node("button", `analysis-item ${analysis.id === state.selectedAnalysis ? "selected" : ""}`);
     button.type = "button";
     button.dataset.analysisId = analysis.id;
-    button.append(node("span", "analysis-status", label(analysis.status)), node("strong", "", analysis.title), node("p", "", analysis.question), node("small", "tabular", `${formatNumber(analysis.evidence_count)} evidence records · ${analysis.source_ids.length} sources`));
+    const sourceCount = analysis.source_ids.length;
+    button.append(node("span", "analysis-status", label(analysis.status)), node("strong", "", analysis.title), node("p", "", analysis.question), node("small", "tabular", `${formatNumber(analysis.evidence_count)} evidence records · ${sourceCount} ${sourceCount === 1 ? "source" : "sources"}`));
     container.append(button);
   }
 }
@@ -326,7 +327,7 @@ function renderAnalysisDetail() {
   const analysis = state.research.analyses.find((item) => item.id === state.selectedAnalysis) || state.research.analyses[0];
   state.selectedAnalysis = analysis.id;
   const detail = $("#analysis-detail");
-  detail.replaceChildren(analysisHeader(analysis, analysis.id !== "operator-narratives"));
+  detail.replaceChildren(analysisHeader(analysis, !["operator-narratives", "early-signal-tracker"].includes(analysis.id)));
 
   if (analysis.id === "alphasignal-corpus") {
     if (!state.alpha) {
@@ -374,6 +375,93 @@ function renderAnalysisDetail() {
     }
     section.append(rows);
     detail.append(section);
+  } else if (analysis.id === "early-signal-tracker") {
+    const synthesis = node("section", "detail-section narrative-synthesis signal-synthesis");
+    synthesis.append(node("h3", "", "Current directional read"), node("p", "synthesis-lead", analysis.executive_summary));
+    if (analysis.interpretation_note) synthesis.append(node("p", "interpretation-note", analysis.interpretation_note));
+
+    const stages = node("section", "detail-section");
+    stages.append(node("h3", "", "Signal stages"));
+    const stageGrid = node("div", "signal-stage-grid");
+    for (const [stage, description] of [
+      ["Forming", "One or two evidence families; direction is plausible but fragile."],
+      ["Taking shape", "Several independent families now point in the same direction."],
+      ["Corroborating", "The direction spans technical, builder, and interpretive evidence."],
+      ["Watch", "Named hypothesis with insufficient observed support."],
+    ]) {
+      const item = node("div", "signal-stage-key");
+      item.append(node("strong", `signal-stage signal-stage-${stage.toLowerCase().replaceAll(" ", "-")}`, stage), node("span", "", description));
+      stageGrid.append(item);
+    }
+    stages.append(stageGrid);
+
+    const findings = node("section", "detail-section");
+    findings.append(node("h3", "", "Directional hypotheses"));
+    const directionList = node("div", "signal-directions");
+    const evidenceById = new Map(state.research.evidence.map((item) => [item.id, item]));
+    for (const [index, direction] of (analysis.directions || []).entries()) {
+      const article = node("article", "signal-direction");
+      const head = node("div", "signal-direction-head");
+      const title = node("div", "signal-direction-title");
+      title.append(node("span", "finding-label", direction.domain), node("h4", "", direction.title));
+      const status = node("div", "signal-direction-status");
+      status.append(
+        node("strong", `signal-stage signal-stage-${direction.stage}`, label(direction.stage)),
+        node("span", "tabular", `${direction.source_count} ${direction.source_count === 1 ? "source" : "sources"} · ${direction.family_count} ${direction.family_count === 1 ? "family" : "families"}`),
+      );
+      head.append(node("span", "finding-index tabular", String(index + 1).padStart(2, "0")), title, status);
+
+      const body = node("div", "signal-direction-body");
+      body.append(node("p", "signal-hypothesis", direction.hypothesis));
+      const reading = node("div", "signal-reading-grid");
+      for (const [heading, copy] of [
+        ["Interpretation", direction.interpretation],
+        ["Why it matters", direction.why_it_matters],
+        ["What would confirm it", direction.next_confirmation],
+        ["Counter-signal", direction.counter_signal],
+      ]) {
+        const item = node("div", "finding-implication");
+        item.append(node("strong", "", heading), node("p", "", copy));
+        reading.append(item);
+      }
+      body.append(reading);
+
+      const evidenceMap = node("div", "signal-evidence-map");
+      evidenceMap.append(node("strong", "", "Observed across"));
+      for (const family of direction.source_families || []) {
+        evidenceMap.append(node("span", "signal-family", `${family.name} · ${family.source_count}`));
+      }
+      body.append(evidenceMap);
+
+      const themes = node("div", "signal-theme-links");
+      themes.append(node("strong", "", "Connected themes"));
+      for (const themeId of direction.theme_ids || []) {
+        const theme = state.research.themes.find((item) => item.id === themeId);
+        if (theme) themes.append(themeButton(theme, true));
+      }
+      body.append(themes);
+
+      const citedEvidence = (direction.evidence_ids || []).map((id) => evidenceById.get(id)).filter(Boolean);
+      if (citedEvidence.length) {
+        const details = node("details", "finding-evidence");
+        details.append(node("summary", "", `${citedEvidence.length} diverse supporting records`));
+        const rows = node("div", "evidence-list");
+        for (const item of citedEvidence) {
+          const row = node("article", "evidence-list-item");
+          row.append(linkOrText(item), node("span", "", `${sourceName(item.source_id)} · ${formatDate(item.published_at)}`));
+          rows.append(row);
+        }
+        details.append(rows);
+        body.append(details);
+      }
+      const observed = node("p", "signal-observed tabular", `First observed ${formatDate(direction.first_observed)} · latest ${formatDate(direction.last_observed)} · ${direction.evidence_count} ${direction.evidence_count === 1 ? "record" : "records"} in the current ${direction.window_days}-day window`);
+      body.append(observed);
+      article.append(head, body);
+      directionList.append(article);
+    }
+    if (!directionList.children.length) directionList.append(node("p", "empty-state", "No directional hypothesis has enough evidence to display yet."));
+    findings.append(directionList);
+    detail.append(synthesis, stages, findings);
   } else if (analysis.id === "expert-pulse") {
     if (analysis.interpretation_note) detail.append(node("p", "interpretation-note", analysis.interpretation_note));
     const themes = node("section", "detail-section");

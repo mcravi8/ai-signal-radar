@@ -17,6 +17,92 @@ LAYER_IDS = {
 }
 
 
+EARLY_SIGNAL_DIRECTIONS = [
+    {
+        "id": "modular-agent-stack",
+        "domain": "Agent engineering",
+        "title": "The agent stack is separating into modular operating layers",
+        "hypothesis": "Models are becoming replaceable components inside a larger system of harnesses, reusable skills, execution environments, and assurance controls.",
+        "theme_ids": {"agent-harnesses", "skills-integrations", "assurance-infrastructure"},
+        "interpretation": "Independent work is accumulating above the model API: orchestration controls execution, skills package repeatable actions, and assurance governs whether those actions can be trusted.",
+        "why_it_matters": "Value and defensibility may shift from exclusive model access toward the infrastructure that makes changing models reliable inside real workflows.",
+        "next_confirmation": "More production systems publishing interchangeable model adapters, portable skill interfaces, and assurance telemetry as separate components.",
+        "counter_signal": "Application stacks continue to remain tightly coupled to one model vendor, with little reuse across runtimes or tools.",
+    },
+    {
+        "id": "workflow-ownership",
+        "domain": "Product architecture",
+        "title": "AI products are moving from assistance toward bounded workflow ownership",
+        "hypothesis": "The important product boundary is shifting from generating an answer to carrying a well-defined task from trigger to verified outcome.",
+        "theme_ids": {"agent-harnesses", "enterprise-vertical-ai", "ai-native-gtm"},
+        "interpretation": "Operator language around systems of action, AI workforces, and vertical agents points toward products measured by completed work and exception handling rather than chat quality.",
+        "why_it_matters": "This creates room for products that own narrow operational loops, integrate with systems of record, and charge against measurable outcomes.",
+        "next_confirmation": "Case studies reporting cycle-time, intervention-rate, or business-outcome improvements from agents operating a complete workflow.",
+        "counter_signal": "Most deployments remain drafting tools that require people to coordinate every handoff and execute every consequential action.",
+    },
+    {
+        "id": "heterogeneous-inference",
+        "domain": "Inference architecture",
+        "title": "Heterogeneous model portfolios are becoming the default inference architecture",
+        "hypothesis": "Teams will combine frontier, small, open, local, and specialized models through routing and purpose-built serving rather than standardizing on one endpoint.",
+        "theme_ids": {"small-specialized-models", "model-routing", "open-local-inference", "frontier-inference-infrastructure", "specialized-inference-silicon"},
+        "interpretation": "Cost, latency, privacy, and task fit are becoming first-class architectural constraints. The emerging control plane chooses the model and runtime per request instead of treating inference as homogeneous.",
+        "why_it_matters": "Routing, evaluation, caching, capacity planning, and fallback logic can become durable infrastructure even as the best individual model changes.",
+        "next_confirmation": "Production benchmarks showing sustained quality and unit-economic gains from routing across model sizes, vendors, or specialized inference hardware.",
+        "counter_signal": "Frontier APIs become cheap, fast, private, and reliable enough that routing complexity produces little operational benefit.",
+    },
+    {
+        "id": "operational-context",
+        "domain": "Enterprise systems",
+        "title": "Enterprise context is evolving from document retrieval into an operational ontology",
+        "hypothesis": "Agents need governed business objects, relationships, permissions, and actions—not only retrieved text—to operate reliably inside companies.",
+        "theme_ids": {"operational-ontology", "memory-context", "document-knowledge-systems", "enterprise-vertical-ai"},
+        "interpretation": "Memory and retrieval solve what the system can recall. Operational ontologies extend that layer with shared meanings, live state, rules, and allowed actions across systems of record.",
+        "why_it_matters": "The enabling product may be a semantic control layer that lets many agents understand and manipulate the same organization without rebuilding context for every workflow.",
+        "next_confirmation": "Open schemas, context graphs, or enterprise platforms demonstrating permission-aware actions across several business systems and agent vendors.",
+        "counter_signal": "Workflow-specific retrieval and direct SaaS integrations remain sufficient, making a shared semantic layer too costly to maintain.",
+    },
+    {
+        "id": "validation-as-release",
+        "domain": "Assurance engineering",
+        "title": "Validation is becoming the release gate for AI-generated work",
+        "hypothesis": "As agents produce code and operational changes, evaluation, observability, security, and reversible deployment become one continuous release discipline.",
+        "theme_ids": {"assurance-infrastructure", "validation-release", "training-self-improvement", "coding-agents"},
+        "interpretation": "The bottleneck is moving from whether an agent can produce an output to whether the system can test, constrain, trace, and safely ship that output under real conditions.",
+        "why_it_matters": "A reusable release layer could govern many agent workflows and become more durable than any individual agent interface.",
+        "next_confirmation": "Teams publishing intervention rates, rollback data, policy violations, and production-quality evals as standard agent deployment metrics.",
+        "counter_signal": "Model reliability improves enough that conventional testing and access control absorb agent-specific assurance requirements.",
+    },
+    {
+        "id": "simulation-first-physical-ai",
+        "domain": "Physical AI",
+        "title": "Simulation is becoming the development environment for physical AI",
+        "hypothesis": "World models, synthetic environments, and evaluation loops will mature before broadly deployed autonomous physical systems.",
+        "theme_ids": {"robotics-embodied-ai", "multimodal-3d", "assurance-infrastructure"},
+        "interpretation": "Research and investor narratives increasingly connect spatial models with scalable training and validation environments, where rare failures can be generated and replayed before physical deployment.",
+        "why_it_matters": "Simulation, data generation, and safety evaluation may be nearer-term infrastructure opportunities than betting on one general-purpose robot application.",
+        "next_confirmation": "Evidence that simulation-generated experience transfers reliably into deployed systems and materially reduces physical testing cost or failure rates.",
+        "counter_signal": "Sim-to-real transfer remains weak enough that domain-specific physical data collection continues to dominate progress.",
+    },
+]
+
+
+SOURCE_FAMILIES = {
+    "first-party-lab": ("builders", "First-party builders"),
+    "paper": ("research", "Research"),
+    "paper-curation": ("research", "Research"),
+    "repository": ("engineering", "Open engineering"),
+    "expert-social": ("experts", "Expert interpretation"),
+    "expert-newsletter": ("experts", "Expert interpretation"),
+    "practitioner-blog": ("experts", "Expert interpretation"),
+    "operator-essay": ("narratives", "Operator & capital narratives"),
+    "investor-essay": ("narratives", "Operator & capital narratives"),
+    "community": ("attention", "Market attention"),
+    "newsletter": ("attention", "Market attention"),
+    "curated-newsletter": ("attention", "Market attention"),
+}
+
+
 def _parse_date(value: str) -> datetime | None:
     try:
         parsed = datetime.fromisoformat((value or "").replace("Z", "+00:00"))
@@ -366,6 +452,121 @@ def _projects(
     return projects
 
 
+def _early_signal_directions(
+    evidence: list[dict[str, Any]],
+    source_defs: dict[str, dict[str, Any]],
+    as_of: datetime,
+) -> list[dict[str, Any]]:
+    """Turn cross-source observations into explicitly bounded directional hypotheses."""
+    window_start = as_of - timedelta(days=90)
+    directions = []
+
+    for definition in EARLY_SIGNAL_DIRECTIONS:
+        theme_ids = definition["theme_ids"]
+        # A compound hypothesis needs evidence connecting at least two of its
+        # constituent themes; otherwise one broad theme can create false breadth.
+        all_items = [
+            item for item in evidence
+            if len(theme_ids.intersection(item.get("theme_ids", []))) >= 2
+        ]
+        window_items = [
+            item for item in all_items
+            if (published := _parse_date(item.get("published_at", ""))) and window_start <= published <= as_of
+        ]
+        active_items = window_items
+        family_items: dict[str, list[dict[str, Any]]] = defaultdict(list)
+        family_names: dict[str, str] = {}
+        for item in active_items:
+            source = source_defs.get(item["source_id"], {})
+            channel = source.get("channel", item.get("source_type", "unknown"))
+            family_id, family_name = SOURCE_FAMILIES.get(channel, (channel, channel.replace("-", " ").title()))
+            family_items[family_id].append(item)
+            family_names[family_id] = family_name
+
+        source_ids = sorted({item["source_id"] for item in active_items})
+        technical_family_count = len({"builders", "research", "engineering"}.intersection(family_items))
+        family_count = len(family_items)
+        if not active_items:
+            stage = "watch"
+            confidence = "unobserved"
+        elif technical_family_count == 0 or family_count <= 2:
+            stage = "forming"
+            confidence = "low"
+        elif family_count <= 4 or len(source_ids) < 6:
+            stage = "taking-shape"
+            confidence = "moderate"
+        else:
+            stage = "corroborating"
+            confidence = "strong"
+
+        family_summary = [
+            {
+                "id": family_id,
+                "name": family_names[family_id],
+                "source_ids": sorted({item["source_id"] for item in items}),
+                "source_count": len({item["source_id"] for item in items}),
+                "evidence_count": len(items),
+            }
+            for family_id, items in sorted(
+                family_items.items(),
+                key=lambda pair: (-len({item["source_id"] for item in pair[1]}), pair[0]),
+            )
+        ]
+
+        # Cite recent evidence while maximizing source-family and publisher diversity.
+        candidates = sorted(
+            active_items,
+            key=lambda item: (item.get("published_at", ""), item["id"]),
+            reverse=True,
+        )
+        selected: list[dict[str, Any]] = []
+        selected_families: set[str] = set()
+        selected_sources: set[str] = set()
+        for item in candidates:
+            source = source_defs.get(item["source_id"], {})
+            channel = source.get("channel", item.get("source_type", "unknown"))
+            family_id = SOURCE_FAMILIES.get(channel, (channel, ""))[0]
+            if family_id not in selected_families or item["source_id"] not in selected_sources:
+                selected.append(item)
+                selected_families.add(family_id)
+                selected_sources.add(item["source_id"])
+            if len(selected) == 8:
+                break
+        if len(selected) < 8:
+            selected_ids = {item["id"] for item in selected}
+            selected.extend(item for item in candidates if item["id"] not in selected_ids)
+
+        dated = [
+            (published, item)
+            for item in all_items
+            if (published := _parse_date(item.get("published_at", "")))
+        ]
+        directions.append(
+            {
+                **{key: value for key, value in definition.items() if key != "theme_ids"},
+                "theme_ids": sorted(theme_ids),
+                "stage": stage,
+                "confidence": confidence,
+                "window_days": 90,
+                "evidence_count": len(active_items),
+                "source_ids": source_ids,
+                "source_count": len(source_ids),
+                "source_families": family_summary,
+                "family_count": family_count,
+                "technical_family_count": technical_family_count,
+                "first_observed": min((published for published, _ in dated), default=None).date().isoformat() if dated else None,
+                "last_observed": max((published for published, _ in dated), default=None).date().isoformat() if dated else None,
+                "evidence_ids": [item["id"] for item in selected[:8]],
+            }
+        )
+
+    stage_order = {"forming": 0, "taking-shape": 1, "corroborating": 2, "watch": 3}
+    return sorted(
+        directions,
+        key=lambda item: (stage_order[item["stage"]], -item["family_count"], -item["source_count"], item["title"]),
+    )
+
+
 def build_research(
     public_payload: dict[str, Any],
     alpha: dict[str, Any],
@@ -581,6 +782,10 @@ def build_research(
         },
     ]
 
+    early_directions = _early_signal_directions(evidence, source_defs, as_of)
+    early_evidence_ids = sorted({evidence_id for direction in early_directions for evidence_id in direction["evidence_ids"]})
+    early_source_ids = sorted({source_id for direction in early_directions for source_id in direction["source_ids"]})
+
     analyses = [
         {
             "id": "cross-source-landscape",
@@ -615,6 +820,20 @@ def build_research(
             "status": public_payload["meta"]["status"],
             "source_ids": sorted({item["source_id"] for item in public_evidence}),
             "evidence_count": len(public_evidence),
+            "updated_at": generated_at,
+        },
+        {
+            "id": "early-signal-tracker",
+            "title": "Early Signal Tracker",
+            "question": "Where does the combined evidence suggest the AI industry is heading before the direction becomes an established signal?",
+            "summary": "Directional hypotheses connect weak signals across experts, engineering artifacts, research, first-party builders, and operator or investor narratives without presenting attention as adoption.",
+            "status": "active" if early_evidence_ids else "configured",
+            "source_ids": early_source_ids,
+            "evidence_count": len(early_evidence_ids),
+            "direction_count": len(early_directions),
+            "directions": early_directions,
+            "executive_summary": "The current corpus points toward a more modular and operational AI industry: agents own bounded workflows; models are selected inside heterogeneous inference systems; governed context connects agents to live business state; and assurance becomes part of the release path. Physical AI is earlier, with simulation and validation emerging as the enabling layer. These are hypotheses to monitor, not forecasts of adoption.",
+            "interpretation_note": "A direction's stage is based on evidence that connects at least two constituent themes and on independent source-family breadth inside a rolling 90-day window. It measures whether a compound hypothesis is appearing in different kinds of evidence—not market size, technical correctness, or inevitability. Supporting links are selected for source diversity rather than popularity.",
             "updated_at": generated_at,
         },
         {

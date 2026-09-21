@@ -126,6 +126,26 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertTrue(all(source["evidence_role"] == "expert-observation" for source in bluesky_sources))
         self.assertTrue(all("bsky.social/about/brand-assets/" in source["logo_url"] for source in bluesky_sources))
 
+    def test_early_signal_tracker_separates_inference_from_evidence(self):
+        analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}
+        tracker = analyses["early-signal-tracker"]
+        self.assertEqual(tracker["status"], "active")
+        self.assertGreaterEqual(tracker["direction_count"], 5)
+        self.assertIn("not forecasts", tracker["executive_summary"].casefold())
+        self.assertIn("source-family breadth", tracker["interpretation_note"].casefold())
+        evidence_ids = {item["id"] for item in self.payload["evidence"]}
+        required = {
+            "hypothesis", "interpretation", "why_it_matters", "next_confirmation",
+            "counter_signal", "stage", "confidence", "source_families", "evidence_ids",
+        }
+        for direction in tracker["directions"]:
+            self.assertTrue(required.issubset(direction), direction["id"])
+            self.assertIn(direction["stage"], {"watch", "forming", "taking-shape", "corroborating"})
+            self.assertTrue(set(direction["evidence_ids"]).issubset(evidence_ids))
+            self.assertLessEqual(len(direction["evidence_ids"]), 8)
+            self.assertEqual(direction["family_count"], len(direction["source_families"]))
+            self.assertTrue(all(family["source_count"] > 0 for family in direction["source_families"]))
+
 
 if __name__ == "__main__":
     unittest.main()
