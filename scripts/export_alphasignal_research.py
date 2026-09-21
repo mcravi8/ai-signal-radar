@@ -98,10 +98,10 @@ OPPORTUNITY_LAYERS = {
 }
 
 LAYER_COUNTS = {
-    "Models & capabilities": 213,
-    "Harness & orchestration": 299,
-    "Tools, skills & integrations": 185,
-    "Assurance layer": 191,
+    "Models & capabilities": 217,
+    "Harness & orchestration": 300,
+    "Tools, skills & integrations": 188,
+    "Assurance layer": 194,
 }
 
 LAYER_DEFINITIONS = {
@@ -243,7 +243,7 @@ def build_payload(source: dict) -> dict:
         "meta": {
             "title": "AlphaSignal corpus analysis",
             "source": "AlphaSignal newsletter",
-            "analysis_date": "2026-09-20",
+            "analysis_date": "2026-09-21",
             "coverage_start": meta["period_start"],
             "coverage_end": meta["period_end"],
             "email_count": meta["email_count"],

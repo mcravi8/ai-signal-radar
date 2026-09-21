@@ -16,12 +16,12 @@ class AlphaSignalPublicDatasetTests(unittest.TestCase):
 
     def test_reviewed_corpus_is_present(self):
         meta = self.payload["meta"]
-        self.assertEqual(meta["email_count"], 129)
-        self.assertEqual(meta["unique_catalog_records"], 888)
+        self.assertEqual(meta["email_count"], 130)
+        self.assertEqual(meta["unique_catalog_records"], 899)
         self.assertEqual(len(self.payload["findings"]), 5)
         self.assertEqual(len(self.payload["trends"]), 15)
         self.assertEqual(len(self.payload["projects"]), 20)
-        self.assertEqual(sum(trend["score"]["tier"] == "Structural" for trend in self.payload["trends"]), 5)
+        self.assertEqual(sum(trend["score"]["tier"] == "Structural" for trend in self.payload["trends"]), 6)
 
     def test_scores_remain_separate(self):
         self.assertIn("score", self.payload["trends"][0])

@@ -2,14 +2,14 @@
   "meta": {
     "title": "AlphaSignal corpus analysis",
     "source": "AlphaSignal newsletter",
-    "analysis_date": "2026-09-20",
+    "analysis_date": "2026-09-21",
     "coverage_start": "2026-04-14",
-    "coverage_end": "2026-09-20",
-    "email_count": 129,
-    "substantive_email_count": 128,
-    "raw_signal_records": 901,
-    "unique_catalog_records": 888,
-    "sponsored_records": 62,
+    "coverage_end": "2026-09-21",
+    "email_count": 130,
+    "substantive_email_count": 129,
+    "raw_signal_records": 912,
+    "unique_catalog_records": 899,
+    "sponsored_records": 65,
     "trend_count": 15,
     "project_count": 20,
     "publication_boundary": "Derivative analysis only. No email addresses, mailbox links, message identifiers, private headers, or full newsletter text are included."
@@ -17,22 +17,22 @@
   "layers": [
     {
       "name": "Models & capabilities",
-      "catalog_records": 213,
+      "catalog_records": 217,
       "definition": "Foundation models, specialized models, multimodal capabilities, and local inference."
     },
     {
       "name": "Harness & orchestration",
-      "catalog_records": 299,
+      "catalog_records": 300,
       "definition": "Agent loops, state, memory, routing, sandboxes, and execution control."
     },
     {
       "name": "Tools, skills & integrations",
-      "catalog_records": 185,
+      "catalog_records": 188,
       "definition": "Reusable capabilities, data access, application connectors, and workflow components."
     },
     {
       "name": "Assurance layer",
-      "catalog_records": 191,
+      "catalog_records": 194,
       "definition": "Evaluation, validation, security, governance, and observability."
     }
   ],
@@ -61,7 +61,7 @@
   "trends": [
     {
       "name": "Training, evaluation and self-improvement",
-      "mentions": 147,
+      "mentions": 149,
       "direction": "Broad rise through August",
       "finding": "More systems learned from failures, generated training environments, optimized prompts or exposed stronger evaluation methods.",
       "examples": [
@@ -78,7 +78,7 @@
         "2026-06": 19,
         "2026-07": 19,
         "2026-08": 29,
-        "2026-09": 22
+        "2026-09": 23
       },
       "score": {
         "recurrence": 22,
@@ -91,7 +91,7 @@
     },
     {
       "name": "Agent orchestration and autonomy",
-      "mentions": 190,
+      "mentions": 192,
       "direction": "Accelerating into Aug-Sep",
       "finding": "Agents moved from single-session assistants toward parallel, cloud-hosted and long-running work.",
       "examples": [
@@ -108,7 +108,7 @@
         "2026-06": 34,
         "2026-07": 36,
         "2026-08": 44,
-        "2026-09": 30
+        "2026-09": 31
       },
       "score": {
         "recurrence": 23,
@@ -121,7 +121,7 @@
     },
     {
       "name": "Open/local models and inference efficiency",
-      "mentions": 270,
+      "mentions": 273,
       "direction": "Dominant; peak in July",
       "finding": "Open weights, MoE, quantization, local and on-device inference repeatedly reduced cost and deployment constraints.",
       "examples": [
@@ -140,20 +140,20 @@
         "2026-06": 40,
         "2026-07": 63,
         "2026-08": 39,
-        "2026-09": 30
+        "2026-09": 33
       },
       "score": {
         "recurrence": 25,
-        "acceleration": 9,
+        "acceleration": 10,
         "persistence": 25,
         "breadth": 25,
-        "total": 84,
+        "total": 85,
         "tier": "Structural"
       }
     },
     {
       "name": "Validation and release bottlenecks",
-      "mentions": 141,
+      "mentions": 142,
       "direction": "Peak in July",
       "finding": "As agents generated more output, testing, review, observability and trustworthy deployment became the limiting layer.",
       "examples": [
@@ -170,7 +170,7 @@
         "2026-06": 23,
         "2026-07": 44,
         "2026-08": 31,
-        "2026-09": 17
+        "2026-09": 18
       },
       "score": {
         "recurrence": 22,
@@ -183,7 +183,7 @@
     },
     {
       "name": "Coding agents and developer tooling",
-      "mentions": 174,
+      "mentions": 176,
       "direction": "Persistent; peak in June",
       "finding": "Coding remained the newsletter's largest applied domain, with growing emphasis on repo search, validation and release flow.",
       "examples": [
@@ -201,7 +201,7 @@
         "2026-06": 23,
         "2026-07": 15,
         "2026-08": 21,
-        "2026-09": 10
+        "2026-09": 11
       },
       "score": {
         "recurrence": 23,
@@ -214,7 +214,7 @@
     },
     {
       "name": "Multimodal generation and 3D",
-      "mentions": 98,
+      "mentions": 99,
       "direction": "High and sustained",
       "finding": "Video, image, avatar and 3D systems became faster, more editable and increasingly local or real time.",
       "examples": [
@@ -231,20 +231,20 @@
         "2026-06": 18,
         "2026-07": 22,
         "2026-08": 15,
-        "2026-09": 16
+        "2026-09": 17
       },
       "score": {
         "recurrence": 21,
-        "acceleration": 12,
+        "acceleration": 13,
         "persistence": 25,
         "breadth": 21,
-        "total": 79,
-        "tier": "Strong"
+        "total": 80,
+        "tier": "Structural"
       }
     },
     {
       "name": "Voice and audio interfaces",
-      "mentions": 45,
+      "mentions": 46,
       "direction": "Rising since July",
       "finding": "Low-latency speech, multilingual cloning and self-hosted voice-agent stacks turned voice into a practical workflow interface.",
       "examples": [
@@ -261,20 +261,20 @@
         "2026-06": 4,
         "2026-07": 13,
         "2026-08": 10,
-        "2026-09": 7
+        "2026-09": 8
       },
       "score": {
         "recurrence": 17,
-        "acceleration": 16,
+        "acceleration": 17,
         "persistence": 25,
         "breadth": 17,
-        "total": 75,
+        "total": 76,
         "tier": "Strong"
       }
     },
     {
       "name": "Skills, plugins, MCP and harnesses",
-      "mentions": 47,
+      "mentions": 49,
       "direction": "Surged in July",
       "finding": "Reusable capabilities and interoperable tool layers became a distinct platform layer around models.",
       "examples": [
@@ -305,7 +305,7 @@
     },
     {
       "name": "Security, safety and observability",
-      "mentions": 37,
+      "mentions": 38,
       "direction": "Sharp August spike",
       "finding": "Agent permissions, prompt injection, malicious skills, monitoring and red-teaming moved into the core stack.",
       "examples": [
@@ -366,7 +366,7 @@
     },
     {
       "name": "Memory and context engineering",
-      "mentions": 37,
+      "mentions": 38,
       "direction": "Built through July",
       "finding": "Context pruning, disk spill, persistent memory and skill-based compression addressed long-running-agent cost and drift.",
       "examples": [
@@ -396,7 +396,7 @@
     },
     {
       "name": "Documents, retrieval and structured data",
-      "mentions": 41,
+      "mentions": 42,
       "direction": "Strong July cluster",
       "finding": "Document parsing, OCR routing, GraphRAG and constrained outputs improved the reliability of knowledge workflows.",
       "examples": [
@@ -414,14 +414,14 @@
         "2026-06": 5,
         "2026-07": 9,
         "2026-08": 3,
-        "2026-09": 3
+        "2026-09": 4
       },
       "score": {
         "recurrence": 17,
-        "acceleration": 8,
+        "acceleration": 10,
         "persistence": 21,
-        "breadth": 14,
-        "total": 60,
+        "breadth": 15,
+        "total": 63,
         "tier": "Emerging"
       }
     },
@@ -487,7 +487,7 @@
     },
     {
       "name": "Model routing and heterogeneous stacks",
-      "mentions": 10,
+      "mentions": 11,
       "direction": "Emerged Jun-Aug",
       "finding": "Teams increasingly treated models as interchangeable components selected by cost, speed and task fit.",
       "examples": [

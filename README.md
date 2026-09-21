@@ -77,7 +77,7 @@ Theme scores use recurrence, acceleration, persistence, and source breadth. Raw 
 
 ## AlphaSignal research
 
-The tracked `data/public/alphasignal-research.json` is a derivative, public-safe research artifact built from the private local corpus. It currently covers 129 received emails, 128 substantive issues, 901 extracted signal records, 888 unique catalog records, 15 analyzed trends, and 20 ranked projects from April 14 through September 20, 2026.
+The tracked `data/public/alphasignal-research.json` is a derivative, public-safe research artifact built from the private local corpus. It currently covers 130 received emails, 129 substantive issues, 912 extracted signal records, 899 unique catalog records, 15 analyzed trends, and 20 ranked projects from April 14 through September 21, 2026.
 
 It publishes aggregate counts, analyst findings, monthly theme frequencies, the four-layer stack classification, score components, project assessments, and official project URLs. It does **not** publish raw email bodies, Gmail links, message IDs, account addresses, private headers, or the newsletter's full text.
 

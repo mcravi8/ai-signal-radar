@@ -573,7 +573,11 @@ def build_research(
             "id": "alphasignal-corpus",
             "title": "AlphaSignal corpus",
             "question": "What capabilities, projects, and stack shifts recurred across the private newsletter archive?",
-            "summary": "Reviewed analysis of 129 emails and 888 unique catalog records; published as aggregates and project assessments.",
+            "summary": (
+                f"Reviewed analysis of {alpha['meta']['email_count']} emails and "
+                f"{alpha['meta']['unique_catalog_records']} unique catalog records; "
+                "published as aggregates and project assessments."
+            ),
             "status": "complete",
             "source_ids": ["alphasignal"],
             "evidence_count": len(alpha_evidence),
