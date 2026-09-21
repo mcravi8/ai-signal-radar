@@ -13,6 +13,7 @@ const state = {
   evidenceSearch: "",
   evidenceSource: "",
   evidenceTheme: "",
+  sourceType: "",
 };
 
 const routes = new Set(["overview", "analyses", "themes", "projects", "evidence", "method"]);
@@ -24,6 +25,22 @@ const routeTitles = {
   evidence: ["Normalized corpus", "Evidence"],
   method: ["Trust and provenance", "Method"],
 };
+
+const sourceChannelOrder = [
+  "first-party-lab",
+  "paper",
+  "paper-curation",
+  "repository",
+  "expert-newsletter",
+  "curated-newsletter",
+  "practitioner-blog",
+  "expert-social",
+  "operator-essay",
+  "investor-essay",
+  "newsletter",
+  "community",
+  "mixed",
+];
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -232,10 +249,45 @@ function renderOverview() {
 
   const sourceGrid = $("#overview-sources");
   sourceGrid.replaceChildren();
-  for (const source of sources) {
-    const item = node("article", `source-item ${source.status === "configured" ? "source-muted" : ""}`);
-    item.append(node("span", "source-channel", channelLabel(source.channel)), sourceIdentity(source), node("span", "tabular", formatNumber(source.normalized_evidence_count)), node("small", "", source.status));
-    sourceGrid.append(item);
+  const filteredSources = sources.filter((source) => !state.sourceType || source.channel === state.sourceType);
+  const activeCount = filteredSources.filter((source) => source.status === "active").length;
+  $("#source-count").textContent = `${filteredSources.length} ${filteredSources.length === 1 ? "source" : "sources"} · ${activeCount} active`;
+
+  const grouped = new Map();
+  for (const source of filteredSources) {
+    if (!grouped.has(source.channel)) grouped.set(source.channel, []);
+    grouped.get(source.channel).push(source);
+  }
+  const channels = [...grouped.keys()].sort((left, right) => {
+    const leftIndex = sourceChannelOrder.indexOf(left);
+    const rightIndex = sourceChannelOrder.indexOf(right);
+    return (leftIndex < 0 ? sourceChannelOrder.length : leftIndex) - (rightIndex < 0 ? sourceChannelOrder.length : rightIndex)
+      || channelLabel(left).localeCompare(channelLabel(right));
+  });
+  for (const channel of channels) {
+    const groupSources = grouped.get(channel).sort((left, right) => left.name.localeCompare(right.name));
+    const group = node("section", "source-group");
+    const head = node("header", "source-group-head");
+    const recordCount = groupSources.reduce((total, source) => total + source.normalized_evidence_count, 0);
+    head.append(
+      node("h4", "", channelLabel(channel)),
+      node("span", "tabular", `${groupSources.length} ${groupSources.length === 1 ? "source" : "sources"} · ${formatNumber(recordCount)} records`),
+    );
+    const grid = node("div", "source-grid");
+    for (const source of groupSources) {
+      const item = node("article", `source-item ${source.status === "configured" ? "source-muted" : ""}`);
+      item.append(
+        sourceIdentity(source),
+        node("span", "source-record-count tabular", `${formatNumber(source.normalized_evidence_count)} records`),
+        node("small", "", source.status),
+      );
+      grid.append(item);
+    }
+    group.append(head, grid);
+    sourceGrid.append(group);
+  }
+  if (!channels.length) {
+    sourceGrid.append(node("p", "empty-state", "No sources match this type."));
   }
 }
 
@@ -669,6 +721,24 @@ function renderMethod() {
 }
 
 function populateFilters() {
+  const sourceType = $("#source-type");
+  const baseType = node("option", "", "All source types");
+  baseType.value = "";
+  sourceType.replaceChildren(baseType);
+  const channels = [...new Set(state.research.sources.map((source) => source.channel))].sort((left, right) => {
+    const leftIndex = sourceChannelOrder.indexOf(left);
+    const rightIndex = sourceChannelOrder.indexOf(right);
+    return (leftIndex < 0 ? sourceChannelOrder.length : leftIndex) - (rightIndex < 0 ? sourceChannelOrder.length : rightIndex)
+      || channelLabel(left).localeCompare(channelLabel(right));
+  });
+  for (const channel of channels) {
+    const option = node("option", "", channelLabel(channel));
+    option.value = channel;
+    sourceType.append(option);
+  }
+  if (channels.includes(state.sourceType)) sourceType.value = state.sourceType;
+  else state.sourceType = "";
+
   const projectAction = $("#project-action");
   const baseAction = node("option", "", "All actions");
   baseAction.value = "";
@@ -748,6 +818,7 @@ function bindControls() {
   $("#evidence-search").addEventListener("input", (event) => { state.evidenceSearch = event.target.value; renderEvidence(); });
   $("#evidence-source").addEventListener("change", (event) => { state.evidenceSource = event.target.value; renderEvidence(); });
   $("#evidence-theme").addEventListener("change", (event) => { state.evidenceTheme = event.target.value; renderEvidence(); });
+  $("#source-type").addEventListener("change", (event) => { state.sourceType = event.target.value; renderOverview(); });
   $("#retry-load").addEventListener("click", load);
   document.addEventListener("click", (event) => {
     const theme = event.target.closest("[data-theme-id]");

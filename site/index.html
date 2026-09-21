@@ -6,7 +6,7 @@
     <meta name="description" content="Cross-source AI research across first-party labs, newsletters, papers, repositories, public essays, and technical discussion." />
     <title>AI Signal Radar — Cross-source research</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 12h48v8H8zm0 16h48v8H8zm0 16h48v8H8z' fill='%2317354d'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260921.10" />
+    <link rel="stylesheet" href="./styles.css?v=20260921.11" />
   </head>
   <body>
     <a class="skip-link" href="#workspace">Skip to research</a>
@@ -58,7 +58,11 @@
 
           <section class="content-block" aria-labelledby="coverage-heading">
             <header class="block-header"><div><span class="block-number">D</span><h3 id="coverage-heading">Source coverage</h3></div><p>Collection volume is shown for transparency, not as a quality ranking.</p></header>
-            <div class="source-grid" id="overview-sources"></div>
+            <div class="source-toolbar">
+              <label for="source-type"><span>Source type</span><select id="source-type"><option value="">All source types</option></select></label>
+              <output id="source-count" aria-live="polite">Loading sources…</output>
+            </div>
+            <div class="source-groups" id="overview-sources"><p class="empty-state">Loading source coverage…</p></div>
           </section>
         </section>
 
@@ -120,6 +124,6 @@
         <section class="load-failure" id="load-failure" hidden aria-live="assertive"><strong>Research data could not be loaded.</strong><span id="failure-detail"></span><button type="button" id="retry-load">Retry</button></section>
       </main>
     </div>
-    <script src="./app.js?v=20260921.10" defer></script>
+    <script src="./app.js?v=20260921.11" defer></script>
   </body>
 </html>

@@ -14,6 +14,11 @@ class SiteBuildTests(unittest.TestCase):
         self.assertTrue((ROOT / "dist/data/dashboard.json").exists())
         self.assertTrue((ROOT / "dist/data/alphasignal-research.json").exists())
         self.assertTrue((ROOT / "dist/data/research.json").exists())
+        html = (ROOT / "dist/index.html").read_text(encoding="utf-8")
+        app = (ROOT / "dist/app.js").read_text(encoding="utf-8")
+        self.assertIn('id="source-type"', html)
+        self.assertIn("sourceChannelOrder", app)
+        self.assertIn("source-group", app)
 
 
 if __name__ == "__main__":

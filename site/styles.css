@@ -110,10 +110,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .theme-link span { color: var(--navy); font-family: var(--mono); }
 .theme-link:hover strong { color: var(--blue); text-decoration: underline; text-underline-offset: .18em; }
 
+.source-toolbar { display: flex; justify-content: space-between; gap: 1rem; align-items: end; margin-bottom: 1.35rem; }
+.source-toolbar label { display: grid; gap: .3rem; width: min(260px, 100%); color: var(--muted); font: 700 .6rem var(--mono); text-transform: uppercase; }
+.source-toolbar select { min-height: 38px; padding: .5rem .6rem; border: 1px solid var(--line-dark); border-radius: 0; background: white; color: var(--ink); font-family: var(--sans); font-size: .75rem; text-transform: none; }
+.source-toolbar output { color: var(--muted); font: .65rem var(--mono); }
+.source-groups { display: grid; gap: 1.55rem; }
+.source-group-head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; margin-bottom: .5rem; }
+.source-group-head h4 { margin: 0; color: var(--ink); font: 700 .68rem var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+.source-group-head span { color: var(--muted); font-size: .62rem; }
 .source-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); }
-.source-item { display: grid; grid-template-columns: 1fr auto; gap: .25rem 1rem; min-height: 92px; padding: .85rem .9rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.source-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .3rem 1rem; min-height: 75px; padding: .8rem .9rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .source-item:nth-child(3n) { border-right: 0; }
-.source-channel { grid-column: 1 / -1; color: var(--muted); font: .59rem var(--mono); text-transform: uppercase; }
 .source-identity { display: inline-flex; gap: .5rem; align-items: center; min-width: 0; color: inherit; text-decoration: none; }
 .source-identity strong { overflow-wrap: anywhere; }
 .source-identity[href]:hover strong { color: var(--blue); text-decoration: underline; text-underline-offset: .16em; }
@@ -121,7 +128,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .source-icon-alphasignal { border-color: var(--navy); background: var(--navy); }
 .source-logo { display: block; max-width: 19px; max-height: 19px; object-fit: contain; }
 .source-monogram { color: var(--navy); font: 700 .56rem var(--mono); letter-spacing: -.03em; }
-.source-item > span.tabular { color: var(--navy); font-weight: 700; }
+.source-record-count { align-self: center; color: var(--navy); font-size: .64rem; font-weight: 700; white-space: nowrap; }
 .source-item small { grid-column: 1 / -1; color: var(--faint); font-size: .64rem; text-transform: capitalize; }
 .source-muted { opacity: .58; }
 
@@ -295,6 +302,7 @@ a.evidence-title:hover { color: var(--blue); text-decoration: underline; }
   .metric:nth-last-child(-n+2) { border-bottom: 0; }
   .metric:nth-child(2n+1) { padding-left: 0; }
   .block-header { grid-template-columns: 1fr; gap: .45rem; }
+  .source-toolbar { align-items: start; }
   .source-grid { grid-template-columns: 1fr 1fr; }
   .source-item:nth-child(3n) { border-right: 1px solid var(--line); }
   .source-item:nth-child(2n) { border-right: 0; }
@@ -318,6 +326,7 @@ a.evidence-title:hover { color: var(--blue); text-decoration: underline; }
 }
 
 @media (max-width: 520px) {
+  .source-toolbar, .source-group-head { display: grid; }
   .source-grid { grid-template-columns: 1fr; }
   .source-item, .source-item:nth-child(2n), .source-item:nth-child(3n) { border-right: 0; }
 }
@@ -328,7 +337,7 @@ a.evidence-title:hover { color: var(--blue); text-decoration: underline; }
 }
 
 @media print {
-  .sidebar, .workspace-header, .theme-toolbar, .table-tools, .detail-toggle, .load-failure { display: none !important; }
+  .sidebar, .workspace-header, .theme-toolbar, .table-tools, .source-toolbar, .detail-toggle, .load-failure { display: none !important; }
   .workspace { margin: 0; }
   .view { max-width: none; padding: 0; }
   .view[hidden] { display: none !important; }
