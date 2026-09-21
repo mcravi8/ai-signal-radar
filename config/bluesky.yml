@@ -35,6 +35,7 @@ include_terms:
   - mistral
   - qwen
   - hugging face
+  - gpt
 
 artifact_domains:
   - arxiv.org
@@ -110,10 +111,10 @@ accounts:
   - source_id: bluesky-margaret-mitchell
     publisher_id: margaret-mitchell
     display_name: Margaret Mitchell
-    handle: margaretmitchell.bsky.social
-    did: did:plc:zy4pox66w4ecb7guf2fjkjix
+    handle: mmitchell.bsky.social
+    did: did:plc:3tmaleaxipegsectvamyrkyi
     focus: Responsible AI engineering, evaluation, datasets, and system impacts.
-    identity_confidence: profile-match
+    identity_confidence: verified
 
   - source_id: bluesky-emily-bender
     publisher_id: emily-bender

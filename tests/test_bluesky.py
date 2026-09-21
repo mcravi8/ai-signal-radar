@@ -1,7 +1,13 @@
 import unittest
+from pathlib import Path
+
+import yaml
 
 from pipeline.collectors.bluesky import Account, parse_feed
 from pipeline.export_public import sanitize_item, validate_public_payload
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class BlueskyCollectorTests(unittest.TestCase):
@@ -82,6 +88,19 @@ class BlueskyCollectorTests(unittest.TestCase):
         post["post"]["author"]["did"] = "did:plc:impostor"
 
         self.assertEqual(parse_feed({"feed": [post]}, self.account, self.terms, self.domains), [])
+
+    def test_curated_identity_and_gpt_vocabulary_regressions(self):
+        config = yaml.safe_load((ROOT / "config/bluesky.yml").read_text(encoding="utf-8"))
+        accounts = {account["source_id"]: account for account in config["accounts"]}
+        margaret = accounts["bluesky-margaret-mitchell"]
+        self.assertEqual(margaret["handle"], "mmitchell.bsky.social")
+        self.assertEqual(margaret["did"], "did:plc:3tmaleaxipegsectvamyrkyi")
+        self.assertEqual(margaret["identity_confidence"], "verified")
+        self.assertIn("gpt", config["include_terms"])
+
+        gpt_post = self.post("gpt", "A useful GPT-4 capability observation")
+        items = parse_feed({"feed": [gpt_post]}, self.account, config["include_terms"], set(config["artifact_domains"]))
+        self.assertEqual(len(items), 1)
 
 
 if __name__ == "__main__":
