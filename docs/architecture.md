@@ -3,7 +3,7 @@
 ## Data flow
 
 ```text
-official public collectors + local sanitized email analysis
+official public collectors + weekly sanitized newsletter ingestion
                          ↓
            common normalized evidence contract
                          ↓
@@ -28,7 +28,7 @@ official public collectors + local sanitized email analysis
 
 JSONL is used for transparent early-stage storage. The contracts are intentionally compatible with a later move to SQLite or DuckDB.
 
-AlphaSignal is normalized at the public boundary as aggregate trend evidence and project assessments. Its private catalog remains local. Aggregate records and direct public records share source, date, theme, stack-layer, support, and provenance fields, while `evidence_kind` and `provenance.mode` preserve their differences.
+AlphaSignal is normalized at the public boundary as aggregate trend evidence, project assessments, and sanitized records from new AgentMail issues. Its historical private catalog remains local. Aggregate records and direct public records share source, date, theme, stack-layer, support, and provenance fields, while `evidence_kind` and `provenance.mode` preserve their differences.
 
 ## Cross-source scoring
 
@@ -50,4 +50,4 @@ Promotion is never based on engagement alone.
 
 ## Compute boundary
 
-GitHub-hosted runners collect public metadata, first-party AI lab publications, and official essay feeds, compute deterministic scores, build the site, and publish sanitized results. Mailbox access and optional local-model enrichment stay on the owner's machine.
+GitHub-hosted runners collect public metadata, first-party AI lab publications, and official essay feeds, then retrieve subscribed newsletters from a dedicated AgentMail inbox once per week. Newsletter bodies are reduced to allowlisted derivative records in memory and are never committed or uploaded as artifacts. Gmail access and optional local-model enrichment stay on the owner's machine.

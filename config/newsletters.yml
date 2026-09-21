@@ -1,0 +1,7 @@
+newsletters:
+  - source_id: alphasignal
+    source_type: newsletter
+    sender_domains:
+      - alphasignal.ai
+    parser: alphasignal
+    enabled: true

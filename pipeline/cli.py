@@ -9,7 +9,7 @@ from pathlib import Path
 from .classify import classify_text
 from .cluster import group_by_theme
 from .deduplicate import deduplicate
-from .export_public import validate_public_payload, write_public_dashboard
+from .export_public import sanitize_item, validate_public_payload, write_public_dashboard
 from .research import build_research, write_weekly_report
 from .score import score_theme
 from .storage import merge_items, read_jsonl, write_jsonl
@@ -81,6 +81,38 @@ def collect() -> None:
     (snapshot.parent / "status.json").write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
     if not collected and errors:
         raise SystemExit("All enabled collectors failed")
+
+
+def collect_newsletters() -> None:
+    from .collectors import agentmail
+
+    api_key = os.getenv("AGENTMAIL_API_KEY", "").strip()
+    require_agentmail = os.getenv("AI_RADAR_REQUIRE_AGENTMAIL") == "1"
+    if not api_key:
+        if require_agentmail:
+            raise SystemExit("AGENTMAIL_API_KEY is required for newsletter ingestion")
+        print("agentmail: skipped (AGENTMAIL_API_KEY is not configured)")
+        return
+
+    inbox_id = os.getenv("AGENTMAIL_INBOX_ID", "ai-signal-radar@agentmail.to").strip()
+    cursor_path = ROOT / "data/state/agentmail.json"
+    after = agentmail.read_after(cursor_path)
+    definitions = agentmail.load_definitions(ROOT / "config/newsletters.yml")
+    result = agentmail.collect(api_key, inbox_id, definitions, after=after)
+
+    sanitized = [sanitize_item(item.to_dict()) for item in result.items]
+    validate_public_payload({"items": sanitized})
+    added = merge_items(ROOT / "data/processed/items.jsonl", result.items)
+    if sanitized:
+        snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "newsletter-items.jsonl"
+        write_jsonl(snapshot, sanitized)
+
+    if result.next_after and result.next_after != after:
+        agentmail.write_after(cursor_path, result.next_after)
+    print(
+        f"agentmail: saw {result.messages_seen} messages, matched {result.messages_matched}, "
+        f"extracted {len(result.items)} sanitized records, added {added}"
+    )
 
 
 def synthesize() -> None:
@@ -162,10 +194,12 @@ def validate_public() -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(prog="ai-signal-radar")
-    parser.add_argument("command", choices=["collect", "synthesize", "validate-public"])
+    parser.add_argument("command", choices=["collect", "collect-newsletters", "synthesize", "validate-public"])
     args = parser.parse_args()
     if args.command == "collect":
         collect()
+    elif args.command == "collect-newsletters":
+        collect_newsletters()
     elif args.command == "synthesize":
         synthesize()
     else:

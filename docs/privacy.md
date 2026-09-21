@@ -28,3 +28,4 @@ Public records may contain:
 3. `validate-public` scans serialized public data for blocked keys and sensitive patterns.
 4. Tests exercise known leakage cases.
 5. Deployment stops if validation fails; the last valid Pages deployment remains available.
+6. AgentMail processing happens in runner memory. The workflow persists only sanitized source items and a timestamp cursor, and the API key is stored as an encrypted GitHub Actions secret.

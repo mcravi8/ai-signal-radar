@@ -368,9 +368,8 @@ sources:
     channel: newsletter
     homepage_url: https://alphasignal.ai/
     logo_url: https://alphasignal.ai/images/logo_alpha_signal_icon.svg
-    enabled: false
-    local_only: true
-    collection: sanitized-local-export
+    enabled: true
+    collection: agentmail-sanitized
     source_quality: medium
     commercial_bias: disclosed-and-mixed
 

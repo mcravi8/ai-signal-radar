@@ -58,10 +58,12 @@ Open `http://localhost:8000`.
 ## Automation
 
 - `collect-daily.yml` collects free public metadata from first-party AI labs, expert newsletters, practitioner blogs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds.
-- `synthesize-weekly.yml` normalizes every source, classifies evidence, recalculates cross-source scores, and produces a weekly brief.
+- `synthesize-weekly.yml` retrieves new AgentMail newsletters, immediately reduces them to sanitized evidence, normalizes every source, recalculates cross-source scores, and produces a weekly brief.
 - `deploy-dashboard.yml` validates the public boundary and deploys the static site to GitHub Pages.
 
-Gmail ingestion is intentionally local. `pipeline.collectors.email_import` accepts only a previously sanitized export.
+Gmail ingestion remains local. Future subscribed newsletters arrive in the dedicated AgentMail inbox and are ingested weekly with a read-only API key. Raw bodies exist only in AgentMail and runner memory; only allowlisted derivative records enter Git. `pipeline.collectors.email_import` still accepts previously sanitized local exports.
+
+The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only inbox and message permissions. The public cursor in `data/state/agentmail.json` stores only the last processed timestamp—never mailbox or message identifiers.
 
 ## Cross-source contract
 
