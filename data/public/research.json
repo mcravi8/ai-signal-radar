@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-21T07:43:44.131867+00:00",
+    "generated_at": "2026-09-21T15:41:11.263207+00:00",
     "status": "success",
-    "normalized_evidence_count": 830,
-    "public_record_count": 795,
+    "normalized_evidence_count": 875,
+    "public_record_count": 840,
     "active_source_count": 10,
     "theme_count": 20,
     "observed_theme_count": 19,
-    "project_count": 247,
+    "project_count": 251,
     "reviewed_project_count": 20,
-    "discovered_project_count": 227,
+    "discovered_project_count": 231,
     "model": "Every source is normalized into the same evidence contract. Source-specific analyses remain inspectable but do not define the global navigation."
   },
   "analyses": [
@@ -21,8 +21,8 @@
       "summary": "Combined theme assessments across newsletter analysis, papers, repositories, and technical discussion.",
       "status": "active",
       "source_ids": [
-        "github",
         "hacker-news",
+        "github",
         "arxiv",
         "huggingface-papers",
         "greylock-essays",
@@ -32,8 +32,8 @@
         "menlo-ventures",
         "radical-ventures"
       ],
-      "evidence_count": 830,
-      "updated_at": "2026-09-21T07:43:44.131867+00:00"
+      "evidence_count": 875,
+      "updated_at": "2026-09-21T15:41:11.263207+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -65,8 +65,8 @@
         "sequoia-essays",
         "yc-essays"
       ],
-      "evidence_count": 795,
-      "updated_at": "2026-09-21T07:43:44.131867+00:00"
+      "evidence_count": 840,
+      "updated_at": "2026-09-21T15:41:11.263207+00:00"
     },
     {
       "id": "operator-narratives",
@@ -201,7 +201,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-21T07:43:44.131867+00:00"
+      "updated_at": "2026-09-21T15:41:11.263207+00:00"
     },
     {
       "id": "project-opportunities",
@@ -223,14 +223,14 @@
     "as_of": "2026-09-21",
     "window_start": "2026-09-14",
     "previous_window_start": "2026-09-07",
-    "new_public_records": 407,
+    "new_public_records": 448,
     "movements": [
       {
         "theme_id": "training-self-improvement",
         "name": "Training, evaluation & self-improvement",
-        "recent": 52,
+        "recent": 53,
         "prior": 8,
-        "delta": 44,
+        "delta": 45,
         "direction": "rising"
       },
       {
@@ -242,35 +242,35 @@
         "direction": "rising"
       },
       {
-        "theme_id": "open-local-inference",
-        "name": "Open, local & efficient inference",
+        "theme_id": "coding-agents",
+        "name": "Coding agents & developer tooling",
         "recent": 11,
         "prior": 1,
         "delta": 10,
         "direction": "rising"
       },
       {
-        "theme_id": "multimodal-3d",
-        "name": "Multimodal generation & 3D",
-        "recent": 10,
-        "prior": 4,
-        "delta": 6,
+        "theme_id": "open-local-inference",
+        "name": "Open, local & efficient inference",
+        "recent": 11,
+        "prior": 2,
+        "delta": 9,
         "direction": "rising"
       },
       {
-        "theme_id": "coding-agents",
-        "name": "Coding agents & developer tooling",
-        "recent": 9,
-        "prior": 1,
-        "delta": 8,
+        "theme_id": "multimodal-3d",
+        "name": "Multimodal generation & 3D",
+        "recent": 10,
+        "prior": 5,
+        "delta": 5,
         "direction": "rising"
       },
       {
         "theme_id": "agent-harnesses",
         "name": "Agent harnesses",
-        "recent": 8,
+        "recent": 9,
         "prior": 4,
-        "delta": 4,
+        "delta": 5,
         "direction": "rising"
       },
       {
@@ -322,8 +322,8 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
-      "evidence_count": 94,
-      "support_units": 240,
+      "evidence_count": 96,
+      "support_units": 242,
       "source_count": 8,
       "source_breakdown": [
         {
@@ -338,13 +338,18 @@
         },
         {
           "source_id": "huggingface-papers",
-          "observations": 20,
-          "support_units": 20
+          "observations": 21,
+          "support_units": 21
         },
         {
           "source_id": "github",
           "observations": 19,
           "support_units": 19
+        },
+        {
+          "source_id": "hacker-news",
+          "observations": 2,
+          "support_units": 2
         },
         {
           "source_id": "sequoia-essays",
@@ -353,11 +358,6 @@
         },
         {
           "source_id": "greylock-essays",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "hacker-news",
           "observations": 1,
           "support_units": 1
         },
@@ -373,9 +373,9 @@
         "2026-06": 20,
         "2026-07": 20,
         "2026-08": 37,
-        "2026-09": 86
+        "2026-09": 88
       },
-      "source_concentration": 0.62,
+      "source_concentration": 0.61,
       "maturity": "broadly-corroborated",
       "score": {
         "recurrence": 25.0,
@@ -385,6 +385,7 @@
         "total": 100.0
       },
       "evidence_ids": [
+        "hn:49786635",
         "hn:49783224",
         "alphasignal:trend:training-evaluation-and-self-improvement",
         "arxiv:2609.22086v1",
@@ -445,6 +446,7 @@
         "hf-paper:2609.10522",
         "hf-paper:2609.08936",
         "hf-paper:2609.08183",
+        "hf-paper:2609.08084",
         "github:1360150242",
         "github:1357390407",
         "github:1355507861",
@@ -493,8 +495,8 @@
       ],
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 34,
-      "support_units": 207,
+      "evidence_count": 37,
+      "support_units": 210,
       "source_count": 8,
       "source_breakdown": [
         {
@@ -514,16 +516,16 @@
         },
         {
           "source_id": "huggingface-papers",
-          "observations": 5,
-          "support_units": 5
-        },
-        {
-          "source_id": "greylock-essays",
-          "observations": 2,
-          "support_units": 2
+          "observations": 6,
+          "support_units": 6
         },
         {
           "source_id": "hacker-news",
+          "observations": 4,
+          "support_units": 4
+        },
+        {
+          "source_id": "greylock-essays",
           "observations": 2,
           "support_units": 2
         },
@@ -542,24 +544,26 @@
         "2026-04": 14,
         "2026-05": 16,
         "2026-06": 24,
-        "2026-07": 16,
+        "2026-07": 17,
         "2026-08": 29,
-        "2026-09": 23
+        "2026-09": 25
       },
-      "source_concentration": 0.85,
+      "source_concentration": 0.83,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 21.1,
-        "acceleration": 16.1,
+        "recurrence": 21.4,
+        "acceleration": 16.3,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 87.2
+        "total": 87.7
       },
       "evidence_ids": [
+        "hn:49785853",
         "hn:49783713",
         "hn:49781554",
         "alphasignal:trend:coding-agents-and-developer-tooling",
         "arxiv:2609.22068v1",
+        "hn:49744416",
         "arxiv:2609.20822v1",
         "arxiv:2609.20812v1",
         "arxiv:2609.20804v1",
@@ -579,6 +583,7 @@
         "github:1342084139",
         "radical-ventures:4e64543f295794b596b4",
         "github:1300902838",
+        "hf-paper:2607.08448",
         "greylock-essays:c20b6ac7c42eb8c20580",
         "alphasignal:project:hallmark",
         "github:1223170290",
@@ -603,9 +608,9 @@
         "self-improving harness"
       ],
       "primary_layer": "harness-orchestration",
-      "evidence_count": 41,
-      "support_units": 276,
-      "source_count": 6,
+      "evidence_count": 42,
+      "support_units": 277,
+      "source_count": 7,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
@@ -633,6 +638,11 @@
           "support_units": 2
         },
         {
+          "source_id": "hacker-news",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
           "source_id": "sequoia-essays",
           "observations": 1,
           "support_units": 1
@@ -644,18 +654,19 @@
         "2026-06": 40,
         "2026-07": 50,
         "2026-08": 63,
-        "2026-09": 46
+        "2026-09": 47
       },
-      "source_concentration": 0.87,
+      "source_concentration": 0.86,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 19.9,
-        "acceleration": 15.2,
+        "recurrence": 20.3,
+        "acceleration": 15.3,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 85.1
+        "total": 85.6
       },
       "evidence_ids": [
+        "hn:49785562",
         "alphasignal:trend:skills-plugins-mcp-and-harnesses",
         "alphasignal:trend:agent-orchestration-and-autonomy",
         "arxiv:2609.21944v1",
@@ -712,8 +723,8 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 24,
-      "support_units": 121,
+      "evidence_count": 25,
+      "support_units": 122,
       "source_count": 5,
       "source_breakdown": [
         {
@@ -733,8 +744,8 @@
         },
         {
           "source_id": "huggingface-papers",
-          "observations": 4,
-          "support_units": 4
+          "observations": 5,
+          "support_units": 5
         },
         {
           "source_id": "radical-ventures",
@@ -748,13 +759,13 @@
         "2026-06": 18,
         "2026-07": 23,
         "2026-08": 18,
-        "2026-09": 31
+        "2026-09": 32
       },
-      "source_concentration": 0.83,
+      "source_concentration": 0.82,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 16.2,
-        "acceleration": 15.0,
+        "recurrence": 16.0,
+        "acceleration": 15.2,
         "persistence": 25.0,
         "breadth": 25,
         "total": 81.2
@@ -775,6 +786,7 @@
         "github:1361693766",
         "radical-ventures:f1d373af6ede201d5a8d",
         "github:1360934358",
+        "hf-paper:2609.08084",
         "hf-paper:2609.04034",
         "github:1346919628",
         "radical-ventures:002cb1815fb8b4589802",
@@ -853,11 +865,11 @@
       "source_concentration": 0.91,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 18.2,
+        "recurrence": 17.7,
         "acceleration": 9.9,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 78.1
+        "total": 77.6
       },
       "evidence_ids": [
         "hn:49784037",
@@ -942,11 +954,11 @@
       "source_concentration": 0.72,
       "maturity": "broadly-corroborated",
       "score": {
-        "recurrence": 13.9,
+        "recurrence": 13.5,
         "acceleration": 13.8,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 77.7
+        "total": 77.3
       },
       "evidence_ids": [
         "alphasignal:trend:skills-plugins-mcp-and-harnesses",
@@ -987,8 +999,8 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
-      "evidence_count": 26,
-      "support_units": 295,
+      "evidence_count": 27,
+      "support_units": 296,
       "source_count": 5,
       "source_breakdown": [
         {
@@ -1008,8 +1020,8 @@
         },
         {
           "source_id": "huggingface-papers",
-          "observations": 4,
-          "support_units": 4
+          "observations": 5,
+          "support_units": 5
         },
         {
           "source_id": "hacker-news",
@@ -1023,16 +1035,16 @@
         "2026-06": 40,
         "2026-07": 64,
         "2026-08": 43,
-        "2026-09": 43
+        "2026-09": 44
       },
-      "source_concentration": 0.93,
+      "source_concentration": 0.92,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 17.1,
-        "acceleration": 9.8,
+        "recurrence": 17.0,
+        "acceleration": 10.0,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 76.9
+        "total": 77.0
       },
       "evidence_ids": [
         "alphasignal:trend:open-local-models-and-inference-efficiency",
@@ -1048,6 +1060,7 @@
         "hn:49736660",
         "hf-paper:2609.18063",
         "hf-paper:2609.15364",
+        "hf-paper:2609.08084",
         "alphasignal:project:voicestudio",
         "github:1349285058",
         "github:1346919628",
@@ -1116,11 +1129,11 @@
       "source_concentration": 0.93,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 16.4,
+        "recurrence": 16.0,
         "acceleration": 10.3,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 76.7
+        "total": 76.3
       },
       "evidence_ids": [
         "alphasignal:trend:open-local-models-and-inference-efficiency",
@@ -1145,6 +1158,84 @@
         "alphasignal:project:unsloth-desktop",
         "hf-paper:2605.31264",
         "github:797465563"
+      ]
+    },
+    {
+      "id": "enterprise-vertical-ai",
+      "name": "Enterprise & vertical AI",
+      "definition": "AI products adapted to industry workflows, governed organizational data, and live business systems.",
+      "aliases": [
+        "vertical AI",
+        "enterprise agent",
+        "industry-specific model",
+        "business system agent"
+      ],
+      "primary_layer": "tools-skills-integrations",
+      "lens": "enterprise-adoption",
+      "evidence_count": 16,
+      "support_units": 50,
+      "source_count": 5,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "observations": 3,
+          "support_units": 37
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 7,
+          "support_units": 7
+        },
+        {
+          "source_id": "sequoia-essays",
+          "observations": 4,
+          "support_units": 4
+        },
+        {
+          "source_id": "github",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "huggingface-papers",
+          "observations": 1,
+          "support_units": 1
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 1,
+        "2026-05": 3,
+        "2026-06": 2,
+        "2026-07": 6,
+        "2026-08": 2,
+        "2026-09": 3
+      },
+      "source_concentration": 0.74,
+      "maturity": "corroborated",
+      "score": {
+        "recurrence": 11.7,
+        "acceleration": 7.4,
+        "persistence": 25.0,
+        "breadth": 25,
+        "total": 69.1
+      },
+      "evidence_ids": [
+        "alphasignal:trend:enterprise-and-vertical-ai",
+        "github:1355117708",
+        "alphasignal:project:wrenai",
+        "sequoia-essays:afde56cfaaeb81f69523",
+        "greylock-essays:da9d5e408f534282b985",
+        "alphasignal:project:openmed",
+        "sequoia-essays:775cb9638e7b090ad2d9",
+        "greylock-essays:2517cac042b8164a4888",
+        "greylock-essays:46157fce42603f1b75d2",
+        "sequoia-essays:9f1197b773225a4e033b",
+        "sequoia-essays:950591afd0b774f7db06",
+        "greylock-essays:c7b10bf9696f4b68e41d",
+        "hf-paper:2509.22186",
+        "greylock-essays:95709decf180c923f94e",
+        "greylock-essays:effa1418b70e2034c31f",
+        "greylock-essays:b2f832aeaa3a7520dce3"
       ]
     },
     {
@@ -1196,11 +1287,11 @@
       "source_concentration": 0.9,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 9.3,
+        "recurrence": 9.1,
         "acceleration": 13.9,
         "persistence": 25.0,
         "breadth": 20,
-        "total": 68.2
+        "total": 68.0
       },
       "evidence_ids": [
         "alphasignal:trend:voice-and-audio-interfaces",
@@ -1262,11 +1353,11 @@
       "source_concentration": 0.76,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 12.3,
+        "recurrence": 12.0,
         "acceleration": 9.1,
         "persistence": 25.0,
         "breadth": 20,
-        "total": 66.4
+        "total": 66.1
       },
       "evidence_ids": [
         "alphasignal:trend:documents-retrieval-and-structured-data",
@@ -1338,11 +1429,11 @@
       "source_concentration": 0.87,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 9.5,
+        "recurrence": 9.2,
         "acceleration": 10.3,
         "persistence": 25.0,
         "breadth": 20,
-        "total": 64.8
+        "total": 64.5
       },
       "evidence_ids": [
         "alphasignal:trend:memory-and-context-engineering",
@@ -1354,78 +1445,6 @@
         "alphasignal:project:loopx",
         "sequoia-essays:33b279b2aa96ca8cf3dd",
         "github:1128123594"
-      ]
-    },
-    {
-      "id": "enterprise-vertical-ai",
-      "name": "Enterprise & vertical AI",
-      "definition": "AI products adapted to industry workflows, governed organizational data, and live business systems.",
-      "aliases": [
-        "vertical AI",
-        "enterprise agent",
-        "industry-specific model",
-        "business system agent"
-      ],
-      "primary_layer": "tools-skills-integrations",
-      "lens": "enterprise-adoption",
-      "evidence_count": 15,
-      "support_units": 49,
-      "source_count": 4,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "observations": 3,
-          "support_units": 37
-        },
-        {
-          "source_id": "greylock-essays",
-          "observations": 7,
-          "support_units": 7
-        },
-        {
-          "source_id": "sequoia-essays",
-          "observations": 4,
-          "support_units": 4
-        },
-        {
-          "source_id": "huggingface-papers",
-          "observations": 1,
-          "support_units": 1
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 1,
-        "2026-05": 3,
-        "2026-06": 2,
-        "2026-07": 6,
-        "2026-08": 2,
-        "2026-09": 2
-      },
-      "source_concentration": 0.76,
-      "maturity": "corroborated-source-concentrated",
-      "score": {
-        "recurrence": 11.1,
-        "acceleration": 5.1,
-        "persistence": 25.0,
-        "breadth": 20,
-        "total": 61.2
-      },
-      "evidence_ids": [
-        "alphasignal:trend:enterprise-and-vertical-ai",
-        "alphasignal:project:wrenai",
-        "sequoia-essays:afde56cfaaeb81f69523",
-        "greylock-essays:da9d5e408f534282b985",
-        "alphasignal:project:openmed",
-        "sequoia-essays:775cb9638e7b090ad2d9",
-        "greylock-essays:2517cac042b8164a4888",
-        "greylock-essays:46157fce42603f1b75d2",
-        "sequoia-essays:9f1197b773225a4e033b",
-        "sequoia-essays:950591afd0b774f7db06",
-        "greylock-essays:c7b10bf9696f4b68e41d",
-        "hf-paper:2509.22186",
-        "greylock-essays:95709decf180c923f94e",
-        "greylock-essays:effa1418b70e2034c31f",
-        "greylock-essays:b2f832aeaa3a7520dce3"
       ]
     },
     {
@@ -1476,11 +1495,11 @@
       "source_concentration": 0.88,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 7.3,
+        "recurrence": 7.1,
         "acceleration": 7.6,
         "persistence": 25.0,
         "breadth": 20,
-        "total": 59.9
+        "total": 59.7
       },
       "evidence_ids": [
         "alphasignal:trend:robotics-and-embodied-ai",
@@ -1527,11 +1546,11 @@
       "source_concentration": 0.95,
       "maturity": "emerging",
       "score": {
-        "recurrence": 6.5,
+        "recurrence": 6.3,
         "acceleration": 15.1,
         "persistence": 25.0,
         "breadth": 10,
-        "total": 56.6
+        "total": 56.4
       },
       "evidence_ids": [
         "alphasignal:trend:enterprise-and-vertical-ai",
@@ -1577,11 +1596,11 @@
       "source_concentration": 0.93,
       "maturity": "emerging",
       "score": {
-        "recurrence": 6.0,
+        "recurrence": 5.9,
         "acceleration": 14.4,
         "persistence": 25.0,
         "breadth": 10,
-        "total": 55.4
+        "total": 55.3
       },
       "evidence_ids": [
         "alphasignal:trend:web-and-browser-automation",
@@ -1634,11 +1653,11 @@
       "source_concentration": 0.88,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 8.7,
+        "recurrence": 8.4,
         "acceleration": 2.5,
         "persistence": 25.0,
         "breadth": 15,
-        "total": 51.2
+        "total": 50.9
       },
       "evidence_ids": [
         "alphasignal:trend:documents-retrieval-and-structured-data",
@@ -1690,11 +1709,11 @@
       "source_concentration": 0.99,
       "maturity": "emerging",
       "score": {
-        "recurrence": 7.8,
+        "recurrence": 7.6,
         "acceleration": 8.1,
         "persistence": 25.0,
         "breadth": 10,
-        "total": 50.9
+        "total": 50.7
       },
       "evidence_ids": [
         "alphasignal:trend:validation-and-release-bottlenecks",
@@ -1739,11 +1758,11 @@
       "source_concentration": 0.92,
       "maturity": "emerging",
       "score": {
-        "recurrence": 4.4,
+        "recurrence": 4.3,
         "acceleration": 15.1,
         "persistence": 20.8,
         "breadth": 10,
-        "total": 50.3
+        "total": 50.2
       },
       "evidence_ids": [
         "alphasignal:trend:model-routing-and-heterogeneous-stacks",
@@ -1799,11 +1818,11 @@
       "source_concentration": 0.25,
       "maturity": "corroborated",
       "score": {
-        "recurrence": 3.8,
+        "recurrence": 3.7,
         "acceleration": 8.3,
         "persistence": 8.3,
         "breadth": 20,
-        "total": 40.4
+        "total": 40.3
       },
       "evidence_ids": [
         "arxiv:2609.21774v1",
@@ -2648,6 +2667,32 @@
       "review_status": "unreviewed"
     },
     {
+      "name": "wh000wh000/awesome-jev-live",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-18T13:37:03Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Awesome Jev — evidence-graded index of TypeSafe System One: SDKs, MCP tools, agents, apps and open models. 20 languages, rebuilt every 2 hours.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/wh000wh000/awesome-jev-live",
+      "primary_layer": "Unclassified",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Unreviewed",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1375922101"
+      ],
+      "review_status": "unreviewed"
+    },
+    {
       "name": "cobanov/awesome-jev",
       "rank": null,
       "editorial_rank": null,
@@ -2670,6 +2715,32 @@
       "cross_source": false,
       "evidence_ids": [
         "github:1375694187"
+      ],
+      "review_status": "unreviewed"
+    },
+    {
+      "name": "logicrw/awesome-jev-projects",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-18T06:41:50Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Awesome Jev: source-backed open-source ecosystem radar, plain-language project discovery, and automatic GitHub sync",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/logicrw/awesome-jev-projects",
+      "primary_layer": "Unclassified",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Unreviewed",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1375482713"
       ],
       "review_status": "unreviewed"
     },
@@ -3632,6 +3703,32 @@
       "cross_source": false,
       "evidence_ids": [
         "github:1355304204"
+      ],
+      "review_status": "unreviewed"
+    },
+    {
+      "name": "markfulton/ai-employees",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-02T18:47:36Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Open source AI Employees. 8 scheduled business roles, 60 routines, on Claude Code and 10 other harnesses. They drive your browser the way you do and improve every run. You own the files.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/markfulton/ai-employees",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Unreviewed",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1355117708"
       ],
       "review_status": "unreviewed"
     },
@@ -7952,6 +8049,32 @@
       "review_status": "unreviewed"
     },
     {
+      "name": "huggingface/tokenizers",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2019-11-01T17:52:20Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "💥 Fast State-of-the-Art Tokenizers optimized for Research and Production",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/huggingface/tokenizers",
+      "primary_layer": "Unclassified",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Unreviewed",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:219035799"
+      ],
+      "review_status": "unreviewed"
+    },
+    {
       "name": "emmabostian/developer-portfolios",
       "rank": null,
       "editorial_rank": null,
@@ -8421,6 +8544,884 @@
     }
   ],
   "evidence": [
+    {
+      "id": "hn:49786659",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "A Doomsday Scenario for American AI",
+      "summary": "",
+      "url": "https://www.thefp.com/p/tyler-cowen-a-doomsday-scenario-for",
+      "published_at": "2026-09-21T12:51:51+00:00",
+      "authors": [
+        "chrisseldo"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786645",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "SpaceX Restricts Airspace over McGregor Facility Ahead of Tesla Roadster Event",
+      "summary": "",
+      "url": "https://driveteslacanada.ca/news/spacex-mcgregor-tfr-roadster-event/",
+      "published_at": "2026-09-21T12:50:38+00:00",
+      "authors": [
+        "bookofjoe"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786644",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Stanford, Silicon Valley, and the pursuit of power [video]",
+      "summary": "",
+      "url": "https://www.youtube.com/watch?v=XsfJTbdVFo0",
+      "published_at": "2026-09-21T12:50:32+00:00",
+      "authors": [
+        "thm"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786643",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "A build graph that rolls dice",
+      "summary": "",
+      "url": "https://fzakaria.com/2026/09/20/a-build-graph-that-rolls-dice",
+      "published_at": "2026-09-21T12:50:13+00:00",
+      "authors": [
+        "ingve"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786635",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "JevBench: Benchmark for Jev-Class Models",
+      "summary": "",
+      "url": "https://benchmarkheaven.com/jev-models",
+      "published_at": "2026-09-21T12:49:30+00:00",
+      "authors": [
+        "oscarfr"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786634",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "A functional test cannot be failed on biological grounds",
+      "summary": "",
+      "url": "https://leoferres.blog/a-functional-test-cannot-be-failed-on-biological-grounds/",
+      "published_at": "2026-09-21T12:49:29+00:00",
+      "authors": [
+        "leoferres"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786609",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Ask HN: Is it impossible to disable Siri on macOS 27?",
+      "summary": "I disabled Siri in the Settings app, and then further disabled Siri and its extensions in Settings &gt; Screen Time.<p>Next, I disabled all Siri-related and Apple Intelligence-related services as per https:&#x2F;&#x2F;github.com&#x2F;OleksandrKrupko&#x2F;mac-os-debloat<p>But after restarting, I could still see a &quot;Siri&quot; process running in Activity Monitor. Upon further inspection, I found that it is the &quot;Siri AI.app&quot;.<p>These &quot;features&quot;, together with Apple&#x27;s Personal Context sound very similar to Microsoft&#x27;s Recall.<p>Does anyone have the same experience? Is it really impossible to fully turn off Siri, Siri AI, Apple Intelligence and all related services and features on macOS 27?",
+      "url": "https://news.ycombinator.com/item?id=49786609",
+      "published_at": "2026-09-21T12:47:05+00:00",
+      "authors": [
+        "semidror"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786578",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: JevGeni, the fruit-fly claw machine overator",
+      "summary": "just some fun with jev and whisper",
+      "url": "https://jevgeni.vercel.app",
+      "published_at": "2026-09-21T12:43:55+00:00",
+      "authors": [
+        "deemkeen"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786569",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Planly",
+      "summary": "",
+      "url": "https://github.com/drkokorev/Planly",
+      "published_at": "2026-09-21T12:42:21+00:00",
+      "authors": [
+        "hy4hy"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786559",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "There is no way to get ChatGPT to stop injecting your location in context",
+      "summary": "",
+      "url": "https://chatgpt.com/share/6ab11f30-4c08-83eb-a82d-6673219f8cc4",
+      "published_at": "2026-09-21T12:41:49+00:00",
+      "authors": [
+        "GodelNumbering"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786558",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "OpenAI Codex Is Retiring the Last Model That Behaves Like an Assistant",
+      "summary": "",
+      "url": "https://www.vincentschmalbach.com/gpt-5-5-retirement-codex/",
+      "published_at": "2026-09-21T12:41:48+00:00",
+      "authors": [
+        "vincent_s"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786546",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "The Campaign for North Africa",
+      "summary": "",
+      "url": "https://en.wikipedia.org/wiki/The_Campaign_for_North_Africa",
+      "published_at": "2026-09-21T12:41:08+00:00",
+      "authors": [
+        "thunderbong"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786538",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Disney Hires Character.ai Chief to Drive Its Technology Push",
+      "summary": "",
+      "url": "https://www.nytimes.com/2026/09/18/business/media/disney-ai-technology-karandeep-anand.html",
+      "published_at": "2026-09-21T12:40:29+00:00",
+      "authors": [
+        "bookofjoe"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786531",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "The Destruction of the Scottish Canon",
+      "summary": "",
+      "url": "https://asteriskmag.com/issues/15/the-destruction-of-the-scottish-canon",
+      "published_at": "2026-09-21T12:40:04+00:00",
+      "authors": [
+        "surprisetalk"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786524",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "AI is becoming too interconnected to fail",
+      "summary": "",
+      "url": "https://www.axios.com/2026/09/21/ai-finance-credit-circular",
+      "published_at": "2026-09-21T12:39:48+00:00",
+      "authors": [
+        "meep_meep_meep"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786506",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Callwitness – record what your AI agent's tools return",
+      "summary": "",
+      "url": "https://github.com/AditiChaudharyy14/callwitness",
+      "published_at": "2026-09-21T12:37:17+00:00",
+      "authors": [
+        "aditichaudharyy"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786497",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: M0saic – deterministic video compiler (CLI, web, desktop)",
+      "summary": "Hi HN! <a href=\"https:&#x2F;&#x2F;m0saic.io&#x2F;go&#x2F;hn-make-hello\" rel=\"nofollow\">https:&#x2F;&#x2F;m0saic.io&#x2F;go&#x2F;hn-make-hello</a><p>I&#x27;m Quentin. I&#x27;ve just published my longterm project - excited to share! m0saic is a video compiler. Typescript programs define an explicit spatial layout via a string DSL (m0), and configure what goes into each independent rect over a shared timeline. This media intent IR gets lowered to a series of ffmpeg invocations, which produce the intended media artifact deterministically.<p>I got interested in this originally when I was younger and made Call of Duty montages on YouTube. I made compilations and whatnot and found it tedious to do some of the &quot;structural&quot; work I suppose (like making a 2x2 layout, other effects). I had saved project files to help me make similar style content over time, but found myself wanting more control. Around then sometime I stumbled into ffmpeg and got into media production and automation as a hobby.<p>I later designed a string DSL for layout, answering roughly how could I represent any arbitrary set of rectangles in an arbitrary canvas in one blob? This led to the m0 DSL. If interested, b",
+      "url": "https://m0saic.io",
+      "published_at": "2026-09-21T12:36:26+00:00",
+      "authors": [
+        "m0saic-dev"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786485",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Is JEV just clever rule-based programming?",
+      "summary": "Expert Systems AI was based on Charles Forgy&#x27;s RETE pattern match algorithm.<p>It seems to me that JEV is RETE with more generic pattern matching.",
+      "url": "https://news.ycombinator.com/item?id=49786485",
+      "published_at": "2026-09-21T12:35:04+00:00",
+      "authors": [
+        "daly"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786480",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "ChatGPT Plus and Pro Will Get Ads in 2027",
+      "summary": "",
+      "url": "https://www.vincentschmalbach.com/chatgpt-plus-and-pro-will-get-ads-in-2027/",
+      "published_at": "2026-09-21T12:34:28+00:00",
+      "authors": [
+        "vincent_s"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786478",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "What I believe about the future of software development",
+      "summary": "",
+      "url": "https://thorstenball.com/blog/2026/09/19/what-i-believe-about-the-future-of-software-development/",
+      "published_at": "2026-09-21T12:34:16+00:00",
+      "authors": [
+        "misternugget"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786471",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Recreate Eliza Using JEV?",
+      "summary": "Would it be possible to recreate ELIZA using JEV?<p>It seems like this should be possible. You would need to ask questions about what the person brought up in a sentence, e.g. &quot;My MOM calls all the time&quot;.<p>Then you write JEV &quot;rules&quot; to construct a reply based on various probabilities.",
+      "url": "https://news.ycombinator.com/item?id=49786471",
+      "published_at": "2026-09-21T12:33:30+00:00",
+      "authors": [
+        "daly"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786462",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Edit command line tool – DOS Edit is back",
+      "summary": "",
+      "url": "https://learn.microsoft.com/en-us/windows/edit/",
+      "published_at": "2026-09-21T12:32:45+00:00",
+      "authors": [
+        "noworld"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786448",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "RFC-0285: The Magma GPU open-source project",
+      "summary": "",
+      "url": "https://fuchsia.dev/fuchsia-src/contribute/governance/rfcs/0285_magma_gpu_open_source_project",
+      "published_at": "2026-09-21T12:30:50+00:00",
+      "authors": [
+        "undecidabot"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786446",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Tannakian Reconstruction in a Yoneda Equipment",
+      "summary": "",
+      "url": "https://bartoszmilewski.com/2026/09/21/tannakian-reconstruction-in-a-yoneda-equipment/",
+      "published_at": "2026-09-21T12:30:42+00:00",
+      "authors": [
+        "ibobev"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786435",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Creating a Blog in Gemini",
+      "summary": "",
+      "url": "https://brennan.day/creating-a-blog-in-gemini/",
+      "published_at": "2026-09-21T12:29:37+00:00",
+      "authors": [
+        "ibobev"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786433",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Do you use:visited on links?",
+      "summary": "",
+      "url": "https://kevquirk.com/do-you-use-visited-on-links",
+      "published_at": "2026-09-21T12:29:15+00:00",
+      "authors": [
+        "ibobev"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786425",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "NATS second glitch this month causes more disruption",
+      "summary": "",
+      "url": "https://www.bbc.co.uk/news/live/cq4g5r4e949jt",
+      "published_at": "2026-09-21T12:28:59+00:00",
+      "authors": [
+        "librasteve"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786419",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Lossless-memory – a personal AI memory that never summarizes",
+      "summary": "",
+      "url": "https://github.com/aru-labs/lossless-memory",
+      "published_at": "2026-09-21T12:28:17+00:00",
+      "authors": [
+        "aru-labs"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786401",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: SQLBraid – Write SQL directly in TypeScript without a query-builder DSL",
+      "summary": "",
+      "url": "https://github.com/Clickin/SQLBraid",
+      "published_at": "2026-09-21T12:25:37+00:00",
+      "authors": [
+        "Clickin"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49786379",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "The Roadmap to Mastering LLM Inference Optimization",
+      "summary": "",
+      "url": "https://machinelearningmastery.com/the-roadmap-to-mastering-llm-inference-optimization/",
+      "published_at": "2026-09-21T12:23:19+00:00",
+      "authors": [
+        "eigenBasis"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49785853",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Local-coder – Build a team of coding agents with local models",
+      "summary": "",
+      "url": "https://github.com/gmarland/local-coder",
+      "published_at": "2026-09-21T11:29:18+00:00",
+      "authors": [
+        "gamerdrome"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49785562",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Maki, an open-source multi-agent LLM framework (local or hosted)",
+      "summary": "",
+      "url": "https://github.com/BowlOfData/maki",
+      "published_at": "2026-09-21T10:52:31+00:00",
+      "authors": [
+        "bowlofdata"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "stack_layers": [
+        "harness-orchestration"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49785429",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "ZuckOff Know when a camera is in the room",
+      "summary": "",
+      "url": "https://zuckoff.app/",
+      "published_at": "2026-09-21T10:33:14+00:00",
+      "authors": [
+        "Bluestein"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49785397",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "ZuckOff Is a Free App That Sees Meta Glasses Before They See You",
+      "summary": "",
+      "url": "https://www.wired.me/story/meta-smart-glasses-detector-app-zuckoff",
+      "published_at": "2026-09-21T10:27:50+00:00",
+      "authors": [
+        "choult"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784706",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Jev-Leftpad",
+      "summary": "",
+      "url": "https://github.com/f/jev-leftpad",
+      "published_at": "2026-09-21T08:39:32+00:00",
+      "authors": [
+        "fka"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49784336",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Disney+: New user agreement allows ads before movies in all subscriptions",
+      "summary": "",
+      "url": "https://consumerrights.wiki/w/Disney%2B_ad_policy_change",
+      "published_at": "2026-09-21T07:55:28+00:00",
+      "authors": [
+        "DeepLogin"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
     {
       "id": "hn:49784194",
       "source_id": "hacker-news",
@@ -9828,6 +10829,30 @@
       }
     },
     {
+      "id": "hn:49783101",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Heretic removes restrictions from language models",
+      "summary": "",
+      "url": "https://heretic-project.org/",
+      "published_at": "2026-09-21T04:35:22+00:00",
+      "authors": [
+        "Bluestein"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hn:49783062",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -9886,6 +10911,30 @@
       "published_at": "2026-09-21T04:01:08+00:00",
       "authors": [
         "init0"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49782878",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Less Prompts, More Guardrails",
+      "summary": "",
+      "url": "https://yasyf.com/writing/less-prompts-more-guardrails/",
+      "published_at": "2026-09-21T03:54:44+00:00",
+      "authors": [
+        "yasyfm"
       ],
       "projects": [],
       "theme_ids": [],
@@ -15431,6 +16480,32 @@
       }
     },
     {
+      "id": "github:1375922101",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "wh000wh000/awesome-jev-live",
+      "summary": "Awesome Jev — evidence-graded index of TypeSafe System One: SDKs, MCP tools, agents, apps and open models. 20 languages, rebuilt every 2 hours.",
+      "url": "https://github.com/wh000wh000/awesome-jev-live",
+      "published_at": "2026-09-18T13:37:03Z",
+      "authors": [
+        "wh000wh000"
+      ],
+      "projects": [
+        "wh000wh000/awesome-jev-live"
+      ],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "arxiv:2609.21763v1",
       "source_id": "arxiv",
       "source_type": "paper",
@@ -16259,6 +17334,32 @@
       }
     },
     {
+      "id": "github:1375482713",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "logicrw/awesome-jev-projects",
+      "summary": "Awesome Jev: source-backed open-source ecosystem radar, plain-language project discovery, and automatic GitHub sync",
+      "url": "https://github.com/logicrw/awesome-jev-projects",
+      "published_at": "2026-09-18T06:41:50Z",
+      "authors": [
+        "logicrw"
+      ],
+      "projects": [
+        "logicrw/awesome-jev-projects"
+      ],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:1375397100",
       "source_id": "github",
       "source_type": "repository",
@@ -16412,6 +17513,35 @@
       ],
       "theme_ids": [],
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49744416",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Ax-check.com – Can agents use your product?",
+      "summary": "I&#x27;m the co-founder of Gauge, and I built ax-check.com to quickly test how well coding agents can onboard to your product.<p>You&#x27;ll get a scorecard, specific suggested fixes, and three full coding sessions that show how agents read your site and use your product.<p>I built this because similar checks were too noisy. Most suggested obscure technical changes that don&#x27;t actually make a difference in agent experience (or AX, hence ax-check.com).<p>This check starts by using DeepSeek 4.1 Flash to try to find key information about your product, starting from the homepage. In actual agent traffic data, we&#x27;ve seen that the key pages are the homepage, llms.txt, pricing, and the docs site (by traffic volume, and by influence), so we focus on those and ignore the rest. We also find that content negotiation for Markdown is legitimately helpful for agents to complete tasks faster and find what they&#x27;re looking for, so the scan tests that your key pages can serve Markdown.<p>The other key piece is that we run actual coding agents in sandboxes, and have them try to onboard to your product. You can see the full trace and watch it happen live (we kick it off fresh when you en",
+      "url": "https://www.ax-check.com/",
+      "published_at": "2026-09-17T18:08:02+00:00",
+      "authors": [
+        "0x63_Problems"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -21324,6 +22454,47 @@
       }
     },
     {
+      "id": "hf-paper:2609.08084",
+      "source_id": "huggingface-papers",
+      "source_type": "paper-curation",
+      "evidence_kind": "public-source-item",
+      "title": "Marigold V2: Revisiting Diffusion Transformers for Monocular Depth Estimation",
+      "summary": "Monocular depth estimation is a ubiquitous yet highly ill-posed computer vision task, with downstream applications in scene reconstruction, computational photography, and robotics, among others. Despite the field's maturity, recent models still struggle to generalize to out-of-distribution inputs and to produce sharp and detailed depth maps. In this paper, we revisit Marigold, a set of techniques for repurposing modern image generation and editing models, powered by the diffusion transformer (DiT) architecture, into state-of-the-art monocular depth estimators. Our recipes target single-step inference from pretrained multi-step flow-matching models, with quantization where needed, preserving model capacity while remaining cheap to run. We analyze the artifacts of naive training and identify two effective remedies: aligning the model's internal representations with semantic features extracted from ground-truth, and adopting a 2-stage fine-tuning protocol built around a novel Sinkhorn-based loss. The results are crisper, cleaner depth maps that generalize well out-of-distribution, with 16-26% improvement in AbsRel over the previous best on KITTI and ETH3D. Qualitatively, our model res",
+      "url": "https://huggingface.co/papers/2609.08084",
+      "published_at": "2026-09-08T00:00:00+00:00",
+      "authors": [
+        "{'name': 'Igor Pavlovic', 'hidden': False}",
+        "{'name': 'Thiemo Wandel', 'user': {'username': 'thiemo-wandel', 'fullname': 'Thiemo Wandel', 'avatar_url': '/avatars/da22b5cebd02532a1c03583b02baf358.svg', 'is_pro': False, 'orgs': []}, 'status': 'claimed_verified', 'status_last_changed_at': '2026-09-09T16:45:04.542000+00:00', 'hidden': False}",
+        "{'name': 'Anton Obukhov', 'user': {'username': 'toshas', 'fullname': 'Anton Obukhov', 'avatar_url': 'https://cdn-avatars.huggingface.co/v1/production/uploads/62f93abbc4817cfc0756b6f8/2TUC739huKDji_fKwykuh.jpeg', 'is_pro': True, 'orgs': []}, 'status': 'claimed_verified', 'status_last_changed_at': '2026-09-09T08:45:04.817000+00:00', 'hidden': False}",
+        "{'name': 'Luca Bartolomei', 'hidden': False}",
+        "{'name': 'Andrey Davydov', 'hidden': False}",
+        "{'name': 'Fabio Tosi', 'hidden': False}",
+        "{'name': 'Matteo Poggi', 'hidden': False}",
+        "{'name': 'Sabine Süsstrunk', 'hidden': False}",
+        "{'name': 'Dengxin Dai', 'hidden': False}"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "multimodal-3d",
+        "open-local-inference",
+        "training-self-improvement"
+      ],
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations",
+        "compute-inference-serving",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:1360627135",
       "source_id": "github",
       "source_type": "repository",
@@ -22025,6 +23196,36 @@
       "projects": [],
       "theme_ids": [],
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "github:1355117708",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "markfulton/ai-employees",
+      "summary": "Open source AI Employees. 8 scheduled business roles, 60 routines, on Claude Code and 10 other harnesses. They drive your browser the way you do and improve every run. You own the files.",
+      "url": "https://github.com/markfulton/ai-employees",
+      "published_at": "2026-09-02T18:47:36Z",
+      "authors": [
+        "markfulton"
+      ],
+      "projects": [
+        "markfulton/ai-employees"
+      ],
+      "theme_ids": [
+        "enterprise-vertical-ai"
+      ],
+      "stack_layers": [
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -25743,6 +26944,50 @@
       "projects": [],
       "theme_ids": [],
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hf-paper:2607.08448",
+      "source_id": "huggingface-papers",
+      "source_type": "paper-curation",
+      "evidence_kind": "public-source-item",
+      "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+      "summary": "Language-conditioned manipulation requires both precise contact-rich control and robust reasoning over language, scenes, and long horizons. End-to-end Vision-Language-Action (VLA) models provide strong local visuomotor skills, but they are trained on in-distribution task trajectories and often fail under deployment perturbations such as semantic retargeting, goal re-binding, spatial-layout shifts, and unstable local contacts. LLM coding agents provide complementary semantic and compositional reasoning, but purely analytic primitives struggle with irregular grasping, constrained placement, and articulated-object interaction. We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small fixed library of analytic primitives for grounding, staging, transport, navigation, and release. Rather than expanding the skill library, the harness learns the operating range of these fixed primitives from task-specific execution traces, global success rules, and failure models. By lifting semantic re-grounding, non-contact execution, and VLA re-staging to the planner while reserving the frozen VLA for local ",
+      "url": "https://huggingface.co/papers/2607.08448",
+      "published_at": "2026-07-09T00:00:00+00:00",
+      "authors": [
+        "{'name': 'Yixian Zhang', 'user': {'username': 'Elessar123', 'fullname': 'Yixian Zhang', 'avatar_url': '/avatars/610cf2394f2028cf3f2d1cef978a7b45.svg', 'is_pro': False, 'orgs': []}, 'status': 'claimed_verified', 'status_last_changed_at': '2026-09-06T08:45:04.165000+00:00', 'hidden': False}",
+        "{'name': 'Huanming Zhang', 'hidden': False}",
+        "{'name': 'Feng Gao', 'hidden': False}",
+        "{'name': 'Xiao Li', 'hidden': False}",
+        "{'name': 'Zhihao Liu', 'hidden': False}",
+        "{'name': 'Chunyang Zhu', 'hidden': False}",
+        "{'name': 'Jiaxing Qiu', 'hidden': False}",
+        "{'name': 'Yuchen Yan', 'hidden': False}",
+        "{'name': 'Jiyuan Liu', 'hidden': False}",
+        "{'name': 'Wenhao Tang', 'hidden': False}",
+        "{'name': 'Zhengru Fang', 'hidden': False}",
+        "{'name': 'Yi Nie', 'hidden': False}",
+        "{'name': 'Changxu Wei', 'hidden': False}",
+        "{'name': 'Yu Wang', 'hidden': False}",
+        "{'name': 'Wenbo Ding', 'hidden': False}",
+        "{'name': 'Chao Yu', 'hidden': False}"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-07": 1
@@ -31841,6 +33086,32 @@
       }
     },
     {
+      "id": "github:219035799",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "huggingface/tokenizers",
+      "summary": "💥 Fast State-of-the-Art Tokenizers optimized for Research and Production",
+      "url": "https://github.com/huggingface/tokenizers",
+      "published_at": "2019-11-01T17:52:20Z",
+      "authors": [
+        "huggingface"
+      ],
+      "projects": [
+        "huggingface/tokenizers"
+      ],
+      "theme_ids": [],
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2019-11": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hf-paper:1910.03771",
       "source_id": "huggingface-papers",
       "source_type": "paper-curation",
@@ -32375,21 +33646,21 @@
   ],
   "sources": [
     {
-      "id": "github",
-      "name": "GitHub",
-      "channel": "repository",
-      "source_quality": "medium",
-      "commercial_bias": "mixed",
-      "normalized_evidence_count": 231,
-      "status": "active"
-    },
-    {
       "id": "hacker-news",
       "name": "Hacker News",
       "channel": "community",
       "source_quality": "mixed",
       "commercial_bias": "mixed",
-      "normalized_evidence_count": 207,
+      "normalized_evidence_count": 246,
+      "status": "active"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "channel": "repository",
+      "source_quality": "medium",
+      "commercial_bias": "mixed",
+      "normalized_evidence_count": 235,
       "status": "active"
     },
     {
@@ -32407,7 +33678,7 @@
       "channel": "paper-curation",
       "source_quality": "medium",
       "commercial_bias": "low",
-      "normalized_evidence_count": 52,
+      "normalized_evidence_count": 54,
       "status": "active"
     },
     {
