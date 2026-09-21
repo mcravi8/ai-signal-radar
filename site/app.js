@@ -60,8 +60,44 @@ function compactAssessment(value) {
   })[value] || label(value);
 }
 
+function sourceRecord(sourceId) {
+  return state.research?.sources.find((source) => source.id === sourceId);
+}
+
 function sourceName(sourceId) {
-  return state.research?.sources.find((source) => source.id === sourceId)?.name || sourceId;
+  return sourceRecord(sourceId)?.name || sourceId;
+}
+
+function sourceIcon(source) {
+  const channel = source?.channel || "mixed";
+  const family = channel.includes("paper") ? "paper"
+    : channel === "repository" ? "code"
+      : channel === "community" ? "discussion"
+        : channel === "newsletter" ? "mail"
+          : channel.includes("essay") ? "essay"
+            : "collection";
+  const drawings = {
+    paper: '<path d="M7 3.5h7l3 3V20H7z"/><path d="M14 3.5V7h3M9.5 11h5M9.5 14h5M9.5 17h3.5"/>',
+    code: '<path d="M9 7 4.5 12 9 17M15 7l4.5 5-4.5 5M13 5l-2 14"/>',
+    discussion: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>',
+    mail: '<rect x="3.5" y="5" width="17" height="14" rx="1"/><path d="m4 7 8 6 8-6"/>',
+    essay: '<path d="M6 4h12v16H6zM9 8h6M9 11h6M9 14h4"/><path d="m15.5 17.5 3-3"/>',
+    collection: '<rect x="5" y="5" width="12" height="12"/><path d="M8 2h12v12M2 8v12h12"/>',
+  };
+  const icon = node("span", `source-icon source-icon-${family}`);
+  icon.title = `${label(channel)} source`;
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("aria-hidden", "true");
+  svg.innerHTML = drawings[family];
+  icon.append(svg);
+  return icon;
+}
+
+function sourceIdentity(source) {
+  const identity = node("span", "source-identity");
+  identity.append(sourceIcon(source), node("strong", "", source?.name || "Unknown source"));
+  return identity;
 }
 
 function themeName(themeId) {
@@ -187,7 +223,7 @@ function renderOverview() {
   sourceGrid.replaceChildren();
   for (const source of sources) {
     const item = node("article", `source-item ${source.status === "configured" ? "source-muted" : ""}`);
-    item.append(node("span", "source-channel", source.channel), node("strong", "", source.name), node("span", "tabular", formatNumber(source.normalized_evidence_count)), node("small", "", source.status));
+    item.append(node("span", "source-channel", source.channel), sourceIdentity(source), node("span", "tabular", formatNumber(source.normalized_evidence_count)), node("small", "", source.status));
     sourceGrid.append(item);
   }
 }
@@ -270,7 +306,7 @@ function renderAnalysisDetail() {
     const rows = node("div", "compact-rows");
     for (const source of state.research.sources.filter((item) => item.id !== "alphasignal")) {
       const row = node("div", "compact-row");
-      row.append(node("strong", "", source.name), node("span", "", source.channel), node("span", "tabular", formatNumber(source.normalized_evidence_count)));
+      row.append(sourceIdentity(source), node("span", "", source.channel), node("span", "tabular", formatNumber(source.normalized_evidence_count)));
       rows.append(row);
     }
     section.append(rows);
@@ -452,7 +488,8 @@ function renderThemeDossier() {
   const sourceRows = node("div", "compact-rows");
   for (const source of theme.source_breakdown) {
     const row = node("div", "compact-row");
-    row.append(node("strong", "", sourceName(source.source_id)), node("span", "tabular", `${source.observations} records`), node("span", "tabular", `${formatNumber(source.support_units)} support`));
+    const record = sourceRecord(source.source_id) || { name: sourceName(source.source_id), channel: "mixed" };
+    row.append(sourceIdentity(record), node("span", "tabular", `${source.observations} records`), node("span", "tabular", `${formatNumber(source.support_units)} support`));
     sourceRows.append(row);
   }
   if (!theme.source_breakdown.length) sourceRows.append(node("p", "empty-state", "No source currently supports this theme."));
@@ -586,7 +623,7 @@ function renderMethod() {
   sources.replaceChildren();
   for (const source of state.research.sources) {
     const row = node("div", "method-source");
-    row.append(node("strong", "", source.name), node("span", "", `${source.channel} · ${source.source_quality || "unknown quality"}`), node("span", "tabular", `${formatNumber(source.normalized_evidence_count)} records`));
+    row.append(sourceIdentity(source), node("span", "", `${source.channel} · ${source.source_quality || "unknown quality"}`), node("span", "tabular", `${formatNumber(source.normalized_evidence_count)} records`));
     sources.append(row);
   }
 }
