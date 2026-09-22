@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-22T01:51:20.346910+00:00",
+    "generated_at": "2026-09-22T01:54:10.399651+00:00",
     "status": "success",
     "source_count": 35,
     "evidence_count": 1563,
@@ -611,6 +611,22 @@
     }
   ],
   "evidence": [
+    {
+      "id": "hn:49781032",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Lightspeed, build real time apps the Laravel way (+asteroids demo)",
+      "url": "https://news.ycombinator.com/item?id=49781032",
+      "published_at": "2026-09-20T23:02:28+00:00",
+      "summary": "Hi HN!<p>Laravel has worked with websockets for years but generally speaking it&#x27;s a one way push architecture (i.e. http in, sockets out).<p>Lightspeed is kind of like node in that it&#x27;s a single server that serves your http and your websockets all under one roof. Auth runs in 0.03ms (a Redis read, no database). Your Laravel handler runs inside the full container and the reply comes back down the same socket. I think this could be really cool for creating new ways of working with Laravel.<p>Anyway, I put together a live demo to show it in action. Basically a cross between slither.io and Asteroids.<p>Game here:<p><a href=\"https:&#x2F;&#x2F;innerloop.works&#x2F;lightspeed\" rel=\"nofollow\">https:&#x2F;&#x2F;innerloop.works&#x2F;lightspeed</a><p>Repo here:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;innerloop-dev&#x2F;lightspeed\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;innerloop-dev&#x2F;lightspeed</a><p>Note: This is 0.1.0, the API may change before 1.0. It needs the Swoole extension and Redis. MIT.",
+      "authors": [
+        "jv22222"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
     {
       "id": "hn:49781102",
       "source_id": "hacker-news",
@@ -4687,39 +4703,6 @@
       "projects": [],
       "sponsor_status": "not-applicable",
       "theme_ids": []
-    },
-    {
-      "id": "arxiv:2609.16305",
-      "source_id": "arxiv",
-      "source_type": "paper",
-      "title": "BLINDSPOT: A Benchmark for Safety and Refusal Calibration in Long-Horizon Tool-Using Agents",
-      "url": "https://arxiv.org/abs/2609.16305",
-      "published_at": "2026-09-14T20:12:27Z",
-      "summary": "Introduces a trajectory-level benchmark for long-horizon tool-using agents, measuring safe completion, correct refusal, unsafe completion, over-refusal, indeterminate outcomes, and failures that emerge only after multiple stateful steps.",
-      "authors": [
-        "Sadia Asif",
-        "Mohammad Mohammadi Amiri",
-        "Momin Abbas",
-        "Tejaswini Pedapati",
-        "Prasanna Sattigeri"
-      ],
-      "tags": [
-        "agent safety",
-        "safety benchmark",
-        "refusal calibration",
-        "tool use",
-        "long-running agents"
-      ],
-      "projects": [
-        "sadia-sigma-lab/BLINDSPOT"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "agent-harnesses",
-        "assurance-infrastructure",
-        "skills-integrations",
-        "training-self-improvement"
-      ]
     }
   ],
   "projects": [],
