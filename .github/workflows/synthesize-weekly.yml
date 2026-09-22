@@ -10,10 +10,12 @@ on:
       - config/evidence-policy-calibration.yml
       - config/evidence-policy.yml
       - config/keywords.yml
+      - config/newsletters.yml
       - config/project-reviews.yml
       - config/source-theme-mappings.yml
       - config/taxonomy.yml
       - data/manual/**
+      - pipeline/collectors/agentmail.py
       - pipeline/collectors/bluesky.py
       - pipeline/cli.py
       - pipeline/evidence_policy.py
