@@ -1,0 +1,22 @@
+audit:
+  id: classification-audit-2026-09-21
+  audited_at: "2026-09-21"
+  baseline_unclassified_records: 1162
+  baseline_classification_coverage: 0.256
+  sample_size: 120
+  sample_source_count: 35
+  sample_method: Deterministic stratified sample of the unclassified public corpus, with at least one record per represented source and the remaining sample allocated proportionally by source backlog.
+  sample_newly_classified: 12
+  sample_remaining_for_review: 108
+  newly_classified_records: 110
+  post_audit_unclassified_records: 1052
+  post_audit_classification_coverage: 0.327
+  findings:
+    - title: Specific technical vocabulary was missing
+      conclusion: Post-training, RLHF and GRPO, KV-cache and model-serving terms, open-model language, refusal calibration, MCP, VLM/VLA, and several robotics phrases mapped cleanly to existing themes.
+    - title: Substring matching was unsafe
+      conclusion: Short terms such as MCP, VLM, VLA, SLM, and TTS now require word boundaries, preventing accidental matches inside unrelated words.
+    - title: Most of the backlog should remain unresolved
+      conclusion: The remainder includes broad commentary, company announcements, adjacent scientific applications, duplicates, and off-topic community posts. It should not be forced into the engineering taxonomy.
+  next_step: Review recurring unmatched clusters before adding vocabulary or proposing a new theme; prefer precise phrases with inspected examples over generic words such as agent, model, or evaluation.
+  limitation: This was a taxonomy-gap audit, not a relevance judgment on all 1,162 records. The 108 sampled records left unresolved require further review or an explicit discard policy.

@@ -1,0 +1,23 @@
+items:
+  - id: arxiv:2609.16305
+    source_id: arxiv
+    source_type: paper
+    title: "BLINDSPOT: A Benchmark for Safety and Refusal Calibration in Long-Horizon Tool-Using Agents"
+    url: https://arxiv.org/abs/2609.16305
+    published_at: "2026-09-14T20:12:27Z"
+    summary: Introduces a trajectory-level benchmark for long-horizon tool-using agents, measuring safe completion, correct refusal, unsafe completion, over-refusal, indeterminate outcomes, and failures that emerge only after multiple stateful steps.
+    authors:
+      - Sadia Asif
+      - Mohammad Mohammadi Amiri
+      - Momin Abbas
+      - Tejaswini Pedapati
+      - Prasanna Sattigeri
+    tags:
+      - agent safety
+      - safety benchmark
+      - refusal calibration
+      - tool use
+      - long-running agents
+    projects:
+      - sadia-sigma-lab/BLINDSPOT
+    sponsor_status: unknown

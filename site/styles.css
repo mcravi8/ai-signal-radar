@@ -243,6 +243,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .evidence-list-item span { color: var(--muted); font: .59rem var(--mono); }
 
 .engineering-health { grid-template-columns: repeat(4, 1fr); }
+.classification-audit-section { margin-top: 0; }
+.audit-summary { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line-dark); }
+.audit-findings { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line-dark); }
+.audit-finding { min-height: 112px; padding: .85rem .9rem; border-right: 1px solid var(--line); }
+.audit-finding:last-child { border-right: 0; }
+.audit-finding strong { font-size: .72rem; }
+.audit-finding p, .audit-boundary { color: var(--muted); font-size: .68rem; line-height: 1.5; }
+.audit-finding p { margin: .45rem 0 0; }
+.audit-boundary { margin: 0; padding: .7rem .9rem; background: var(--wash); }
 .engineering-concepts-section { margin-top: 0; }
 .concept-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
 .concept-card { display: grid; align-content: start; min-height: 170px; padding: .85rem .9rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -270,6 +279,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .detail-row td { padding: 0; background: #f8fafb; }
 .project-detail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 2rem; padding: 1.2rem 1rem 1.35rem 4.7rem; border-bottom: 1px solid var(--line-dark); }
 .project-detail p { margin: .3rem 0 0; color: var(--muted); font-size: .71rem; }
+.review-basis { margin: .4rem 0 0; padding-left: 1rem; color: var(--muted); font-size: .66rem; line-height: 1.5; }
+.review-basis li + li { margin-top: .16rem; }
 .detail-label { color: var(--ink); font: 700 .6rem var(--mono); letter-spacing: .03em; text-transform: uppercase; }
 .project-provenance { grid-column: 1 / -1; padding-top: .65rem; border-top: 1px solid var(--line); }
 
@@ -341,6 +352,9 @@ a.evidence-title:hover { color: var(--blue); text-decoration: underline; }
   .source-item:nth-child(3n) { border-right: 1px solid var(--line); }
   .source-item:nth-child(2n) { border-right: 0; }
   .concept-grid { grid-template-columns: 1fr 1fr; }
+  .audit-summary { grid-template-columns: 1fr 1fr; }
+  .audit-findings { grid-template-columns: 1fr; }
+  .audit-finding { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .analysis-layout, .theme-layout { grid-template-columns: 1fr; }
   .analysis-index, .theme-index { max-height: 310px; overflow-y: auto; }
   .analysis-detail, .theme-dossier { padding: 1.15rem 1rem; }

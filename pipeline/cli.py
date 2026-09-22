@@ -134,7 +134,8 @@ def collect_bluesky() -> None:
 
 
 def synthesize() -> None:
-    rows = deduplicate(read_jsonl(ROOT / "data/processed/items.jsonl"))
+    manual_rows = _yaml(ROOT / "data/manual/items.yml").get("items", [])
+    rows = deduplicate([*read_jsonl(ROOT / "data/processed/items.jsonl"), *manual_rows])
     keywords = _yaml(ROOT / "config/keywords.yml").get("themes", {})
     taxonomy = _yaml(ROOT / "config/taxonomy.yml")
     theme_defs = {theme["id"]: theme for theme in taxonomy.get("seed_themes", [])}
@@ -193,8 +194,17 @@ def synthesize() -> None:
     if alpha_path.exists():
         alpha = json.loads(alpha_path.read_text(encoding="utf-8"))
         mappings = _yaml(ROOT / "config/source-theme-mappings.yml")
+        project_reviews = _yaml(ROOT / "config/project-reviews.yml").get("reviews", {})
+        classification_audit = _yaml(ROOT / "config/classification-audit.yml").get("audit", {})
         research_input = {**payload, "evidence": public_items}
-        research = build_research(research_input, alpha, taxonomy, mappings)
+        research = build_research(
+            research_input,
+            alpha,
+            taxonomy,
+            mappings,
+            project_reviews,
+            classification_audit,
+        )
         write_public_dashboard(ROOT / "data/public/research.json", research)
         report_date = research["weekly"]["as_of"]
         write_weekly_report(ROOT / "reports/weekly" / f"{report_date}.md", research)

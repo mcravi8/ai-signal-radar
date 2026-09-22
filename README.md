@@ -93,6 +93,8 @@ The Atlas also reports source freshness from the newest dated evidence seen for 
 
 The Expert Pulse analysis turns classified Bluesky observations into bounded findings with a stated interpretation, why it matters, a workflow opportunity, caveat, and inspectable supporting posts. Social engagement is never treated as corroboration.
 
+The Engineering Atlas publishes the latest classification audit next to the registry. The September 21 audit sampled 120 records across 35 sources, added precise missing vocabulary, replaced substring matching with term boundaries, and moved 110 records from `classification-review` into supported themes. Unresolved records remain visible rather than being assigned a convenient category.
+
 ## AlphaSignal research
 
 The tracked `data/public/alphasignal-research.json` is a derivative, public-safe research artifact built from the private local corpus. It currently covers 130 received emails, 129 substantive issues, 912 extracted signal records, 899 unique catalog records, 15 analyzed trends, and 20 ranked projects from April 14 through September 21, 2026.

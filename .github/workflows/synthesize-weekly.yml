@@ -6,9 +6,12 @@ on:
     paths:
       - .github/workflows/synthesize-weekly.yml
       - config/bluesky.yml
+      - config/classification-audit.yml
       - config/keywords.yml
+      - config/project-reviews.yml
       - config/source-theme-mappings.yml
       - config/taxonomy.yml
+      - data/manual/**
       - pipeline/collectors/bluesky.py
       - pipeline/cli.py
       - pipeline/research.py

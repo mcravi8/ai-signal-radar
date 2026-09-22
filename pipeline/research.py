@@ -389,6 +389,7 @@ def _projects(
     public_evidence: list[dict[str, Any]],
     project_evidence_ids: dict[str, str],
     layer_names: dict[str, str],
+    project_reviews: dict[str, dict[str, Any]],
 ) -> list[dict[str, Any]]:
     projects = []
     matched_public_ids: set[str] = set()
@@ -419,39 +420,41 @@ def _projects(
     ]
     for item in repository_items:
         project_name = (item.get("projects") or [item["title"]])[0]
+        review = project_reviews.get(project_name)
         project_url = canonical_url(item.get("url", ""))
         related = [
             candidate for candidate in public_evidence
             if candidate["id"] == item["id"]
             or (project_url and canonical_url(candidate.get("url", "")) == project_url)
+            or project_name in candidate.get("projects", [])
         ]
         source_ids = sorted({candidate["source_id"] for candidate in related})
         primary_layer_id = item.get("stack_layers", [""])[0] if item.get("stack_layers") else ""
-        projects.append(
-            {
-                "name": project_name,
-                "rank": None,
-                "editorial_rank": None,
-                "source_date": item.get("published_at", ""),
-                "category": "Discovered public repository",
-                "why_it_matters": item.get("summary") or "Public repository discovered by the configured GitHub queries.",
-                "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-                "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-                "official_url": item.get("url", ""),
-                "primary_layer": layer_names.get(primary_layer_id, "Unclassified"),
-                "secondary_layer": None,
-                "cross_layer": False,
-                "ratings": {},
-                "opportunity_score": None,
-                "action": "Unreviewed",
-                "hype_risk": "N/O",
-                "source_ids": source_ids,
-                "cross_source": len(source_ids) > 1,
-                "evidence_ids": [candidate["id"] for candidate in related],
-                "review_status": "unreviewed",
-            }
-        )
-    projects[20:] = sorted(projects[20:], key=lambda project: (project["source_date"], project["name"]), reverse=True)
+        project_record = {
+            "name": project_name,
+            "rank": None,
+            "editorial_rank": None,
+            "source_date": item.get("published_at", ""),
+            "category": "Discovered public repository",
+            "why_it_matters": item.get("summary") or "Public repository discovered by the configured GitHub queries.",
+            "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+            "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+            "official_url": item.get("url", ""),
+            "primary_layer": layer_names.get(primary_layer_id, "Unclassified"),
+            "secondary_layer": None,
+            "cross_layer": False,
+            "ratings": {},
+            "opportunity_score": None,
+            "action": "Unreviewed",
+            "hype_risk": "N/O",
+            "source_ids": source_ids,
+            "cross_source": len(source_ids) > 1,
+            "evidence_ids": [candidate["id"] for candidate in related],
+            "review_status": "reviewed" if review else "unreviewed",
+        }
+        if review:
+            project_record.update(review)
+        projects.append(project_record)
     return projects
 
 
@@ -575,6 +578,8 @@ def build_research(
     alpha: dict[str, Any],
     taxonomy: dict[str, Any],
     mappings: dict[str, Any],
+    project_reviews: dict[str, dict[str, Any]] | None = None,
+    classification_audit: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     generated_at = public_payload["meta"]["generated_at"]
     as_of = _parse_date(generated_at) or datetime.now(timezone.utc)
@@ -585,14 +590,18 @@ def build_research(
     alpha_evidence, project_ids = _normalize_alpha_evidence(alpha, theme_by_id, mappings)
     evidence = sorted(public_evidence + alpha_evidence, key=lambda item: (item.get("published_at", ""), item["id"]), reverse=True)
     themes = _theme_analyses(evidence, theme_defs, as_of)
-    projects = _projects(alpha, public_evidence, project_ids, layer_names)
+    projects = _projects(alpha, public_evidence, project_ids, layer_names, project_reviews or {})
     evidence_by_id = {item["id"]: item for item in evidence}
     for project in projects:
         linked = [evidence_by_id[evidence_id] for evidence_id in project["evidence_ids"] if evidence_id in evidence_by_id]
         project["theme_ids"] = sorted({theme_id for item in linked for theme_id in item.get("theme_ids", [])})
         if project["review_status"] == "reviewed":
             project["review_priority"] = project.get("opportunity_score")
-            project["review_reason"] = "Reviewed assessment with an explicit opportunity score."
+            project["review_reason"] = (
+                f"{project.get('verification_level')} completed {project.get('reviewed_at')}."
+                if project.get("verification_level") and project.get("reviewed_at")
+                else "Reviewed assessment with an explicit opportunity score."
+            )
             continue
         published = _parse_date(project.get("source_date", ""))
         age_days = (as_of - published).days if published else 9999
@@ -640,8 +649,14 @@ def build_research(
         else:
             project["review_status"] = "discovered"
             project["action"] = "Discovered"
-    projects[20:] = sorted(
-        projects[20:],
+    reviewed_projects = sorted(
+        (project for project in projects if project["review_status"] == "reviewed"),
+        key=lambda project: (-(project.get("opportunity_score") or 0), project["name"]),
+    )
+    for rank, project in enumerate(reviewed_projects, start=1):
+        project["rank"] = rank
+    non_reviewed_projects = sorted(
+        (project for project in projects if project["review_status"] != "reviewed"),
         key=lambda project: (
             0 if project["review_status"] == "queued" else 1,
             -(project.get("review_priority") or 0),
@@ -649,7 +664,7 @@ def build_research(
             project["name"],
         ),
     )
-    reviewed_projects = [project for project in projects if project["review_status"] == "reviewed"]
+    projects = reviewed_projects + non_reviewed_projects
     queued_projects = [project for project in projects if project["review_status"] == "queued"]
     discovered_projects = [project for project in projects if project["review_status"] == "discovered"]
 
@@ -991,6 +1006,13 @@ def build_research(
     recent_source_count = sum(source.get("freshness") == "recent" for source in sources)
     aging_source_count = sum(source.get("freshness") == "aging" for source in sources)
     historical_source_count = sum(source.get("freshness") == "historical" for source in sources)
+    published_classification_audit = None
+    if classification_audit:
+        published_classification_audit = {
+            **classification_audit,
+            "current_unclassified_records": len(public_evidence) - classified_public_count,
+            "current_classification_coverage": classification_coverage,
+        }
     engineering_atlas = {
         "title": "Engineering Atlas",
         "summary": "A connected registry of engineering concepts, reviewed tools, and public repository discoveries. Discovery is not endorsement; judgment appears only after review.",
@@ -1007,6 +1029,7 @@ def build_research(
             "queued_projects": len(queued_projects),
             "discovered_projects": len(discovered_projects),
         },
+        "classification_audit": published_classification_audit,
         "freshness_note": "Freshness is based on the latest dated evidence observed for each source, not a direct collector-uptime check. Recent means 30 days or less; aging means 31–90 days; historical means more than 90 days.",
     }
 

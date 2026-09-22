@@ -6,7 +6,7 @@
     <meta name="description" content="Cross-source AI research across first-party labs, newsletters, papers, repositories, public essays, and technical discussion." />
     <title>AI Signal Radar — Cross-source research</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 12h48v8H8zm0 16h48v8H8zm0 16h48v8H8z' fill='%2317354d'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260921.12" />
+    <link rel="stylesheet" href="./styles.css?v=20260921.13" />
   </head>
   <body>
     <a class="skip-link" href="#workspace">Skip to research</a>
@@ -90,12 +90,16 @@
         <section class="view" id="view-projects" data-view="projects" aria-labelledby="projects-heading" hidden>
           <div class="view-intro"><div><h2 id="projects-heading">Engineering Atlas</h2><p>Connect engineering concepts to reviewed tools and public repository discoveries. Every item keeps its review state: discovery is never presented as endorsement.</p></div><div class="system-rule"><strong>Registry boundary</strong><span>Concept evidence, tool assessment, and repository activity remain separate facts.</span></div></div>
           <div class="metric-strip engineering-health" id="engineering-health"><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div></div>
+          <section class="content-block classification-audit-section" aria-labelledby="classification-audit-heading">
+            <header class="block-header"><div><span class="block-number">A</span><h3 id="classification-audit-heading">Classification audit</h3></div><p>A sampled taxonomy review: precise gaps are fixed; unresolved records remain visible.</p></header>
+            <div id="classification-audit"><p class="empty-state">Loading the latest audit…</p></div>
+          </section>
           <section class="content-block engineering-concepts-section" aria-labelledby="engineering-concepts-heading">
-            <header class="block-header"><div><span class="block-number">A</span><h3 id="engineering-concepts-heading">Engineering concepts</h3></div><p>Reusable architectures and implementation patterns linked to concrete tools and source evidence.</p></header>
+            <header class="block-header"><div><span class="block-number">B</span><h3 id="engineering-concepts-heading">Engineering concepts</h3></div><p>Reusable architectures and implementation patterns linked to concrete tools and source evidence.</p></header>
             <div class="concept-grid" id="engineering-concepts"><p class="empty-state">Loading engineering concepts…</p></div>
           </section>
           <section class="content-block" aria-labelledby="engineering-tools-heading">
-          <header class="block-header"><div><span class="block-number">B</span><h3 id="engineering-tools-heading">Tools and repository registry</h3></div><p>Reviewed assessments first, then a bounded queue, followed by unreviewed discoveries.</p></header>
+          <header class="block-header"><div><span class="block-number">C</span><h3 id="engineering-tools-heading">Tools and repository registry</h3></div><p>Reviewed assessments first, then a bounded queue, followed by unreviewed discoveries.</p></header>
           <div class="table-tools">
             <label><span>Search</span><input id="project-search" type="search" placeholder="Tool, concept, category, or workflow" autocomplete="off" /></label>
             <label><span>Review status</span><select id="project-review"><option value="reviewed">Reviewed assessments</option><option value="queued">Review queue</option><option value="discovered">Unreviewed discoveries</option><option value="">All registry items</option></select></label>
@@ -132,6 +136,6 @@
         <section class="load-failure" id="load-failure" hidden aria-live="assertive"><strong>Research data could not be loaded.</strong><span id="failure-detail"></span><button type="button" id="retry-load">Retry</button></section>
       </main>
     </div>
-    <script src="./app.js?v=20260921.12" defer></script>
+    <script src="./app.js?v=20260921.13" defer></script>
   </body>
 </html>

@@ -11,24 +11,33 @@ themes:
   small-specialized-models:
     - small language model
     - small model
+    - small models
+    - slms
     - slm
     - compact model
     - distilled model
     - distillation
     - task-specific model
+    - task-specific models
     - on-device model
+    - on-device models
     - system one model
     - system-one model
     - decision model
+    - decision models
     - typed decision
     - calibrated decision
     - non-autoregressive decision
     - jev
+    - jevc
+    - jevlang
   operational-ontology:
     - operational ontology
     - enterprise ontology
     - context graph
+    - context graphs
     - knowledge graph
+    - knowledge graphs
     - semantic layer
     - company brain
   frontier-inference-infrastructure:
@@ -41,14 +50,29 @@ themes:
     - inference machine
     - inference runtime
     - frontier cluster
+    - kv cache
+    - kv-cache
+    - pagedattention
+    - paged attention
+    - speculative decoding
+    - model serving
+    - inference engine
+    - prefill-decode
+    - disaggregated serving
+    - nvlink
+    - high bandwidth memory
+    - hbm
   specialized-inference-silicon:
     - language processing unit
     - inference asic
     - wafer-scale
     - inference chip
     - fpga inference
+    - fpga
+    - edge ai accelerator
   agent-harnesses:
     - agent harness
+    - agent harnesses
     - agent runtime
     - agent scaffolding
     - orchestration layer
@@ -56,6 +80,8 @@ themes:
     - multi-agent
     - multi agent
     - long-running agent
+    - long-running agents
+    - long-running agentic
     - autonomous agent
     - system of action
     - runtime system
@@ -75,6 +101,7 @@ themes:
     - permission control
     - ai-native cybersecurity
     - autonomous ai hacker
+    - autonomous ai hackers
     - vulnerability management
     - defensive cybersecurity
     - agent intent
@@ -84,19 +111,36 @@ themes:
     - tool call guardrail
     - action classifier
     - dangerous action
+    - guardrail
+    - guardrails
+    - safeguards
+    - refusal calibration
+    - over-refusal
+    - alignment assessment
+    - safety benchmark
+    - cybersecurity evals
+    - agent observability
+    - runtime monitor
   open-local-inference:
     - open weights
     - open-weight
+    - open-weights
     - open source model
+    - open source models
     - open-source model
+    - open-source models
     - local inference
     - on-device inference
     - quantization
     - quantized
     - mixture of experts
+    - mixture-of-experts
     - moe model
+    - moe models
     - llama.cpp
     - gguf
+    - open model
+    - open models
   model-routing:
     - model router
     - model routing
@@ -111,18 +155,36 @@ themes:
     - fine-tuning
     - fine tuning
     - reinforcement learning
+    - reinforcement-learning
+    - reinforcement learning from human feedback
     - synthetic training
     - training environment
     - self-improving
     - self improving
     - prompt optimization
     - benchmark
+    - benchmarks
+    - benchmarking
     - evaluation method
     - superlearner
     - training general intelligence
+    - post-training
+    - post training
+    - rlhf
+    - grpo
+    - dpo
+    - ppo
+    - lora
+    - peft
+    - reward model
+    - model pruning
+    - model evals
+    - product evals
   coding-agents:
     - coding agent
+    - coding agents
     - code agent
+    - code agents
     - software engineering agent
     - repository agent
     - repo agent
@@ -131,6 +193,11 @@ themes:
     - swe-bench
     - software implementation
     - software running
+    - coding assistant
+    - coding assistants
+    - code assistant
+    - code assistants
+    - developer tooling
   validation-release:
     - runtime validation
     - release bottleneck
@@ -147,11 +214,21 @@ themes:
     - text-to-image
     - text to image
     - world model
+    - world models
+    - joint embedding predictive architecture
+    - joint embedding predictive architectures
+    - joint-embedding predictive architecture
+    - joint-embedding predictive architectures
     - 3d generation
+    - 3d articulation
     - point cloud
     - spatial ai
+    - vision-language model
+    - vision language model
+    - vlm
   voice-audio:
     - voice agent
+    - voice agents
     - speech model
     - text-to-speech
     - text to speech
@@ -160,8 +237,13 @@ themes:
     - audio generation
     - realtime voice
     - real-time voice
+    - automatic speech recognition
+    - speech recognition
+    - speech synthesis
+    - tts
   skills-integrations:
     - agent skill
+    - agent skills
     - model context protocol
     - mcp server
     - tool protocol
@@ -169,6 +251,10 @@ themes:
     - api integration
     - connector framework
     - ai stack
+    - mcp
+    - function calling
+    - tool use
+    - tool-use
   document-knowledge-systems:
     - retrieval augmented generation
     - retrieval-augmented generation
@@ -180,6 +266,7 @@ themes:
     - optical character recognition
     - structured generation
     - structured output
+    - ocr
   memory-context:
     - agent memory
     - persistent memory
@@ -189,13 +276,19 @@ themes:
     - context pruning
     - long context
     - context for agents
+    - context window
+    - context caching
   enterprise-vertical-ai:
     - vertical ai
     - enterprise ai
     - enterprise agent
+    - enterprise agents
     - industry-specific
     - domain-specific model
     - business system
+    - business systems
+    - ai employee
+    - ai employees
     - salesforce
     - healthcare ai
     - legal ai
@@ -208,7 +301,6 @@ themes:
     - ai for enterprise
     - ai for the trades
     - ai for the physical sciences
-    - ai employee
     - ai-native professional
   web-browser-automation:
     - browser agent
@@ -223,5 +315,10 @@ themes:
     - robot learning
     - robotics foundation model
     - physical ai
+    - vision-language-action
+    - vision language action
+    - vla
+    - robotic manipulation
     - humanoid robot
+    - world action model
     - robot policy

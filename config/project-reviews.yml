@@ -1,0 +1,125 @@
+reviews:
+  okf-memory/okf-agent-memory:
+    category: Git-native agent memory
+    why_it_matters: Separates compact always-on operating rules from selectively retrieved project knowledge, while keeping the memory inspectable and versioned as ordinary files.
+    workflow_opportunity: Pilot it in one coding repository to preserve architectural decisions, constraints, and runbooks across agent sessions; compare retrieval precision and prompt size against the current AGENTS.md-only workflow.
+    caveat: The repository is young and its latency and token-reduction benchmarks are maintainer-produced. Lexical BM25 retrieval and a developing OKF convention should be tested on the user's own corpus before adoption.
+    primary_layer: Harness & orchestration
+    secondary_layer: Tools, skills & integrations
+    cross_layer: true
+    ratings:
+      leverage: 4
+      maturity: 3
+      composability: 5
+      cost_accessibility: 5
+      ease: 4
+      relevance: 5
+    opportunity_score: 86
+    action: Test now
+    hype_risk: High
+    verification_level: Documentation review
+    reviewed_at: "2026-09-21"
+    review_basis:
+      - Official repository documentation and architecture
+      - MIT license, tagged releases, and continuous-integration configuration
+      - Repository test and benchmark artifacts; performance claims were not independently reproduced
+
+  JordyZomer/lemmalog:
+    category: Deductive agent memory
+    why_it_matters: Treats agent memory as a provenance-bearing deductive database, enabling explicit rules, retractions, proof trees, temporal facts, and inspectable derived knowledge rather than retrieval alone.
+    workflow_opportunity: Prototype a shared operations memory in which agents assert sourced facts and deterministic rules, then test whether proof trees and contradiction handling improve decisions across long-running tasks.
+    caveat: It is a new, technically ambitious Rust project without tagged releases or repository CI. The maintainer reports extensive tests and benchmark results, but integration complexity and extraction quality remain material risks.
+    primary_layer: Harness & orchestration
+    secondary_layer: Assurance
+    cross_layer: true
+    ratings:
+      leverage: 4
+      maturity: 3
+      composability: 4
+      cost_accessibility: 5
+      ease: 3
+      relevance: 5
+    opportunity_score: 79
+    action: Pilot / watch
+    hype_risk: High
+    verification_level: Documentation review
+    reviewed_at: "2026-09-21"
+    review_basis:
+      - Official repository architecture, installation guide, and benchmark disclosures
+      - MIT license and visible Rust test suite
+      - No tagged release or repository CI; benchmark claims were not independently reproduced
+
+  sadia-sigma-lab/BLINDSPOT:
+    category: Long-horizon agent safety evaluation
+    why_it_matters: Evaluates complete stateful tool-use trajectories, including authorization history and over-refusal, rather than reducing agent safety to a single response or attack-success number.
+    workflow_opportunity: Adapt a small set of its scenario, policy, and outcome structures to regression-test one real agent workflow across safe completion, correct refusal, unsafe completion, and excessive refusal.
+    caveat: The public paper is a first arXiv version and reports a smaller benchmark than the evolving repository. Dataset generation and adjudication depend on model-driven components, while full regeneration requires AWS Bedrock credentials.
+    primary_layer: Assurance layer
+    secondary_layer: Harness & orchestration
+    cross_layer: true
+    ratings:
+      leverage: 5
+      maturity: 3
+      composability: 4
+      cost_accessibility: 4
+      ease: 3
+      relevance: 5
+    opportunity_score: 81
+    action: Pilot / watch
+    hype_risk: Medium
+    verification_level: Documentation and paper review
+    reviewed_at: "2026-09-21"
+    review_basis:
+      - Official repository, packaged dataset, schemas, and unit-test tree
+      - arXiv:2609.16305 version 1
+      - MIT license; benchmark results and adjudication were not independently reproduced
+
+  Vincentwei1021/anything2explainer:
+    category: Agent-authored explainer video workflow
+    why_it_matters: Packages a complete research-to-video production method as an agent skill, combining sourced research, narration, deterministic Remotion scenes, checkpoints, and chapter-level quality control.
+    workflow_opportunity: Use it for one internal technical explainer where provenance and editable source code matter more than rapid generative footage; evaluate factual traceability, revision cost, and final production time.
+    caveat: The workflow is opinionated, limited to one landscape visual system and English or Chinese, and has no automated test or CI surface. The toolkit is noncommercial unless separate authorization is obtained.
+    primary_layer: Tools, skills & integrations
+    secondary_layer: Harness & orchestration
+    cross_layer: true
+    ratings:
+      leverage: 4
+      maturity: 3
+      composability: 4
+      cost_accessibility: 3
+      ease: 3
+      relevance: 4
+    opportunity_score: 71
+    action: Selective
+    hype_risk: Medium
+    verification_level: Documentation review
+    reviewed_at: "2026-09-21"
+    review_basis:
+      - Official repository workflow, example artifacts, and stated limitations
+      - PolyForm Noncommercial license and dependency requirements
+      - No tagged release, automated tests, or repository CI; output quality was not independently reproduced
+
+  Agenta-AI/awesome-ai-agent-platforms:
+    category: Agent-platform landscape reference
+    why_it_matters: Provides a compact, license-aware map of open-source agent platforms across coworkers, frameworks, automation, browser agents, and coding agents.
+    workflow_opportunity: Use it as a discovery checklist when comparing platform categories, then verify shortlisted tools in their own repositories before adding them to the radar or choosing a stack.
+    caveat: This is a curated directory, not executable infrastructure or an independent product evaluation. It is maintained by Agenta and includes Agenta, so inclusion and category choices may reflect curator perspective.
+    primary_layer: Tools, skills & integrations
+    secondary_layer: null
+    cross_layer: false
+    ratings:
+      leverage: 3
+      maturity: 3
+      composability: 2
+      cost_accessibility: 5
+      ease: 5
+      relevance: 4
+    opportunity_score: 70
+    action: Research only
+    hype_risk: Low
+    verification_level: Documentation review
+    reviewed_at: "2026-09-21"
+    review_basis:
+      - Official repository entries, selection criteria, and update workflow
+      - CC0 license and published license/hosting notes
+      - Directory entries were not independently re-verified project by project

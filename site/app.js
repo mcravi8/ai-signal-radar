@@ -749,6 +749,29 @@ function renderProjects() {
     metric("Reviewed tools", formatNumber(quality.reviewed_projects), `${quality.discovered_projects} additional discoveries`),
   );
 
+  const auditRoot = $("#classification-audit");
+  auditRoot.replaceChildren();
+  const audit = atlas.classification_audit;
+  if (audit) {
+    const summary = node("div", "audit-summary");
+    summary.append(
+      metric("Sample", formatNumber(audit.sample_size), `${audit.sample_source_count} represented sources`),
+      metric("Reclassified", formatNumber(audit.newly_classified_records), "Previously unresolved records"),
+      metric("Coverage", `${Math.round(audit.post_audit_classification_coverage * 1000) / 10}%`, `from ${Math.round(audit.baseline_classification_coverage * 1000) / 10}%`),
+      metric("After audit", formatNumber(audit.post_audit_unclassified_records), "Unresolved records at completion"),
+    );
+    const findings = node("div", "audit-findings");
+    for (const finding of audit.findings || []) {
+      const item = node("article", "audit-finding");
+      item.append(node("strong", "", finding.title), node("p", "", finding.conclusion));
+      findings.append(item);
+    }
+    const boundary = node("p", "audit-boundary", audit.limitation);
+    auditRoot.append(summary, findings, boundary);
+  } else {
+    auditRoot.append(node("p", "empty-state", "No classification audit has been published yet."));
+  }
+
   const conceptGrid = $("#engineering-concepts");
   conceptGrid.replaceChildren();
   for (const concept of atlas.concepts) {
@@ -816,6 +839,19 @@ function renderProjects() {
     const provenance = node("div", "project-provenance");
     provenance.append(node("strong", "detail-label", "Evidence sources"), node("p", "", project.source_ids.map(sourceName).join(" · ")));
     panel.append(provenance);
+    if (project.verification_level || project.reviewed_at) {
+      const verification = node("div", "project-provenance");
+      verification.append(
+        node("strong", "detail-label", "Review status"),
+        node("p", "", [project.verification_level, project.reviewed_at ? `completed ${formatDate(project.reviewed_at)}` : ""].filter(Boolean).join(" · ")),
+      );
+      if (project.review_basis?.length) {
+        const basis = node("ul", "review-basis");
+        for (const item of project.review_basis) basis.append(node("li", "", item));
+        verification.append(basis);
+      }
+      panel.append(verification);
+    }
     const concepts = node("div", "project-provenance");
     concepts.append(node("strong", "detail-label", "Engineering concepts"));
     const conceptLinks = node("div", "signal-theme-links");

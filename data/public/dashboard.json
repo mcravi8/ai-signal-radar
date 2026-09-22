@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-22T01:07:09.602723+00:00",
+    "generated_at": "2026-09-22T01:51:20.346910+00:00",
     "status": "success",
     "source_count": 35,
-    "evidence_count": 1562,
+    "evidence_count": 1563,
     "warnings": []
   },
   "weekly": {
@@ -11,10 +11,10 @@
     "summary": "Cross-source evidence is grouped into inspectable themes. Open a theme to review the underlying public sources.",
     "signals": [
       "training-self-improvement",
-      "agent-harnesses",
+      "open-local-inference",
+      "skills-integrations",
       "small-specialized-models",
-      "coding-agents",
-      "open-local-inference"
+      "coding-agents"
     ]
   },
   "themes": [
@@ -56,7 +56,7 @@
       ],
       "primary_layer": "models-capabilities",
       "maturity": "emerging",
-      "evidence_count": 68,
+      "evidence_count": 66,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -90,18 +90,17 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 7,
+      "evidence_count": 6,
       "source_types": [
         "paper",
-        "paper-curation",
         "repository"
       ],
       "score": {
-        "recurrence": 17.5,
-        "acceleration": 16.0,
+        "recurrence": 15.0,
+        "acceleration": 12.0,
         "persistence": 25.0,
-        "breadth": 15.0,
-        "total": 73.5
+        "breadth": 10.0,
+        "total": 62.0
       }
     },
     {
@@ -117,19 +116,21 @@
       ],
       "primary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 6,
+      "evidence_count": 27,
       "source_types": [
+        "curated-newsletter",
         "first-party-lab",
         "investor-essay",
         "paper",
+        "paper-curation",
         "repository"
       ],
       "score": {
-        "recurrence": 15.0,
-        "acceleration": 20.0,
-        "persistence": 15.0,
-        "breadth": 20.0,
-        "total": 70.0
+        "recurrence": 25.0,
+        "acceleration": 25.0,
+        "persistence": 25.0,
+        "breadth": 25.0,
+        "total": 100.0
       }
     },
     {
@@ -144,10 +145,19 @@
         "AI accelerator"
       ],
       "primary_layer": "compute-inference-serving",
-      "maturity": "watchlist",
-      "evidence_count": 0,
-      "source_types": [],
-      "score": null
+      "maturity": "emerging",
+      "evidence_count": 3,
+      "source_types": [
+        "community",
+        "paper"
+      ],
+      "score": {
+        "recurrence": 7.5,
+        "acceleration": 20.0,
+        "persistence": 5.0,
+        "breadth": 10.0,
+        "total": 42.5
+      }
     },
     {
       "id": "agent-harnesses",
@@ -161,7 +171,7 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 69,
+      "evidence_count": 48,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -193,7 +203,7 @@
       ],
       "primary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 22,
+      "evidence_count": 39,
       "source_types": [
         "community",
         "expert-social",
@@ -226,7 +236,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 33,
+      "evidence_count": 82,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -285,7 +295,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 127,
+      "evidence_count": 150,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -319,7 +329,7 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 47,
+      "evidence_count": 51,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -378,7 +388,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 27,
+      "evidence_count": 39,
       "source_types": [
         "curated-newsletter",
         "expert-social",
@@ -410,9 +420,10 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 9,
+      "evidence_count": 15,
       "source_types": [
         "community",
+        "curated-newsletter",
         "first-party-lab",
         "investor-essay",
         "paper",
@@ -420,11 +431,11 @@
         "repository"
       ],
       "score": {
-        "recurrence": 22.5,
-        "acceleration": 20.0,
+        "recurrence": 25.0,
+        "acceleration": 24.0,
         "persistence": 25.0,
         "breadth": 25.0,
-        "total": 92.5
+        "total": 99.0
       }
     },
     {
@@ -441,14 +452,16 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 24,
+      "evidence_count": 67,
       "source_types": [
         "community",
+        "expert-social",
         "first-party-lab",
         "investor-essay",
         "operator-essay",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
@@ -473,9 +486,8 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 15,
+      "evidence_count": 18,
       "source_types": [
-        "first-party-lab",
         "paper",
         "paper-curation",
         "repository"
@@ -484,8 +496,8 @@
         "recurrence": 25.0,
         "acceleration": 25.0,
         "persistence": 25.0,
-        "breadth": 20.0,
-        "total": 95.0
+        "breadth": 15.0,
+        "total": 90.0
       }
     },
     {
@@ -501,18 +513,20 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 6,
+      "evidence_count": 9,
       "source_types": [
+        "first-party-lab",
         "investor-essay",
         "paper",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
-        "recurrence": 15.0,
-        "acceleration": 24.0,
+        "recurrence": 22.5,
+        "acceleration": 25.0,
         "persistence": 20.0,
-        "breadth": 15.0,
-        "total": 74.0
+        "breadth": 25.0,
+        "total": 92.5
       }
     },
     {
@@ -528,19 +542,18 @@
       "primary_layer": "tools-skills-integrations",
       "lens": "enterprise-adoption",
       "maturity": "emerging",
-      "evidence_count": 15,
+      "evidence_count": 14,
       "source_types": [
         "first-party-lab",
         "investor-essay",
-        "paper-curation",
         "repository"
       ],
       "score": {
         "recurrence": 25.0,
         "acceleration": 20.0,
         "persistence": 25.0,
-        "breadth": 20.0,
-        "total": 90.0
+        "breadth": 15.0,
+        "total": 85.0
       }
     },
     {
@@ -556,16 +569,16 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "watchlist",
-      "evidence_count": 2,
+      "evidence_count": 1,
       "source_types": [
         "repository"
       ],
       "score": {
-        "recurrence": 5.0,
-        "acceleration": 16.0,
-        "persistence": 10.0,
+        "recurrence": 2.5,
+        "acceleration": 12.0,
+        "persistence": 5.0,
         "breadth": 5.0,
-        "total": 36.0
+        "total": 24.5
       }
     },
     {
@@ -581,38 +594,23 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 4,
+      "evidence_count": 12,
       "source_types": [
         "first-party-lab",
         "investor-essay",
-        "paper"
+        "paper",
+        "paper-curation"
       ],
       "score": {
-        "recurrence": 10.0,
-        "acceleration": 24.0,
-        "persistence": 10.0,
-        "breadth": 15.0,
-        "total": 59.0
+        "recurrence": 25.0,
+        "acceleration": 25.0,
+        "persistence": 20.0,
+        "breadth": 20.0,
+        "total": 90.0
       }
     }
   ],
   "evidence": [
-    {
-      "id": "hn:49781032",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Lightspeed, build real time apps the Laravel way (+asteroids demo)",
-      "url": "https://news.ycombinator.com/item?id=49781032",
-      "published_at": "2026-09-20T23:02:28+00:00",
-      "summary": "Hi HN!<p>Laravel has worked with websockets for years but generally speaking it&#x27;s a one way push architecture (i.e. http in, sockets out).<p>Lightspeed is kind of like node in that it&#x27;s a single server that serves your http and your websockets all under one roof. Auth runs in 0.03ms (a Redis read, no database). Your Laravel handler runs inside the full container and the reply comes back down the same socket. I think this could be really cool for creating new ways of working with Laravel.<p>Anyway, I put together a live demo to show it in action. Basically a cross between slither.io and Asteroids.<p>Game here:<p><a href=\"https:&#x2F;&#x2F;innerloop.works&#x2F;lightspeed\" rel=\"nofollow\">https:&#x2F;&#x2F;innerloop.works&#x2F;lightspeed</a><p>Repo here:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;innerloop-dev&#x2F;lightspeed\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;innerloop-dev&#x2F;lightspeed</a><p>Note: This is 0.1.0, the API may change before 1.0. It needs the Swoole extension and Redis. MIT.",
-      "authors": [
-        "jv22222"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
     {
       "id": "hn:49781102",
       "source_id": "hacker-news",
@@ -1254,7 +1252,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "assurance-infrastructure"
+      ]
     },
     {
       "id": "hn:49782912",
@@ -2406,7 +2406,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "open-local-inference"
+      ]
     },
     {
       "id": "openai-news:08ffdb24bebd9aa2ffda",
@@ -2439,7 +2441,9 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [
+        "open-local-inference"
+      ]
     },
     {
       "id": "hn:49786379",
@@ -3094,7 +3098,9 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [
+        "open-local-inference"
+      ]
     },
     {
       "id": "hn:49787404",
@@ -3585,7 +3591,6 @@
       "projects": [],
       "sponsor_status": "unknown",
       "theme_ids": [
-        "assurance-infrastructure",
         "small-specialized-models"
       ]
     },
@@ -4106,7 +4111,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "skills-integrations"
+      ]
     },
     {
       "id": "hn:49791101",
@@ -4384,7 +4391,8 @@
       "projects": [],
       "sponsor_status": "unknown",
       "theme_ids": [
-        "agent-harnesses"
+        "agent-harnesses",
+        "memory-context"
       ]
     },
     {
@@ -4679,6 +4687,39 @@
       "projects": [],
       "sponsor_status": "not-applicable",
       "theme_ids": []
+    },
+    {
+      "id": "arxiv:2609.16305",
+      "source_id": "arxiv",
+      "source_type": "paper",
+      "title": "BLINDSPOT: A Benchmark for Safety and Refusal Calibration in Long-Horizon Tool-Using Agents",
+      "url": "https://arxiv.org/abs/2609.16305",
+      "published_at": "2026-09-14T20:12:27Z",
+      "summary": "Introduces a trajectory-level benchmark for long-horizon tool-using agents, measuring safe completion, correct refusal, unsafe completion, over-refusal, indeterminate outcomes, and failures that emerge only after multiple stateful steps.",
+      "authors": [
+        "Sadia Asif",
+        "Mohammad Mohammadi Amiri",
+        "Momin Abbas",
+        "Tejaswini Pedapati",
+        "Prasanna Sattigeri"
+      ],
+      "tags": [
+        "agent safety",
+        "safety benchmark",
+        "refusal calibration",
+        "tool use",
+        "long-running agents"
+      ],
+      "projects": [
+        "sadia-sigma-lab/BLINDSPOT"
+      ],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "agent-harnesses",
+        "assurance-infrastructure",
+        "skills-integrations",
+        "training-self-improvement"
+      ]
     }
   ],
   "projects": [],

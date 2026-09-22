@@ -29,6 +29,18 @@ class ClassificationRegressionTests(unittest.TestCase):
         )
         self.assertTrue({"small-specialized-models", "model-routing", "agent-harnesses", "assurance-infrastructure"}.issubset(themes))
 
+    def test_short_terms_use_word_boundaries(self):
+        self.assertIn("skills-integrations", classify_text("An MCP server exposes tools.", self.keywords))
+        self.assertNotIn("skills-integrations", classify_text("A compliance report was published.", self.keywords))
+        self.assertIn("robotics-embodied-ai", classify_text("A VLA policy controls a robot.", self.keywords))
+        self.assertNotIn("robotics-embodied-ai", classify_text("The novel argument was accepted.", self.keywords))
+
+    def test_gap_vocabulary_maps_to_specific_themes(self):
+        text = "Post-training uses GRPO; the served model relies on a KV cache and speculative decoding."
+        themes = classify_text(text, self.keywords)
+        self.assertIn("training-self-improvement", themes)
+        self.assertIn("frontier-inference-infrastructure", themes)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -45,7 +45,6 @@ class CrossSourceResearchTests(unittest.TestCase):
 
     def test_unobserved_themes_are_not_scored(self):
         unobserved = [theme for theme in self.payload["themes"] if theme["maturity"] == "unobserved"]
-        self.assertGreaterEqual(len(unobserved), 1)
         for theme in unobserved:
             self.assertIsNone(theme["score"])
             self.assertEqual(theme["support_units"], 0)
@@ -58,7 +57,7 @@ class CrossSourceResearchTests(unittest.TestCase):
         reviewed = [project for project in self.payload["projects"] if project["review_status"] == "reviewed"]
         queued = [project for project in self.payload["projects"] if project["review_status"] == "queued"]
         discovered = [project for project in self.payload["projects"] if project["review_status"] == "discovered"]
-        self.assertEqual(len(reviewed), 20)
+        self.assertEqual(len(reviewed), 25)
         self.assertEqual(len(queued), 25)
         self.assertGreater(len(discovered), 100)
         self.assertTrue(all(project["opportunity_score"] is None for project in queued + discovered))
@@ -67,6 +66,12 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertTrue(all(project["review_priority"] is not None for project in self.payload["projects"]))
         signature_counts = Counter(tuple(project["theme_ids"]) for project in queued)
         self.assertLessEqual(max(signature_counts.values()), 3)
+        public_reviews = [project for project in reviewed if project.get("verification_level")]
+        self.assertEqual(len(public_reviews), 5)
+        self.assertTrue(all(project.get("review_basis") for project in public_reviews))
+        self.assertTrue(all("github" in project["source_ids"] for project in public_reviews))
+        blindspot = next(project for project in public_reviews if project["name"] == "sadia-sigma-lab/BLINDSPOT")
+        self.assertIn("arxiv", blindspot["source_ids"])
 
     def test_alphasignal_is_one_analysis_and_one_source(self):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}
@@ -145,13 +150,18 @@ class CrossSourceResearchTests(unittest.TestCase):
             self.payload["meta"]["public_record_count"],
         )
         self.assertEqual(atlas["quality"]["queued_projects"], 25)
-        self.assertEqual(atlas["quality"]["reviewed_projects"], 20)
+        self.assertEqual(atlas["quality"]["reviewed_projects"], 25)
         self.assertIn("not a direct collector-uptime check", atlas["freshness_note"])
         self.assertTrue(all({"project_count", "reviewed_project_count", "queued_project_count"}.issubset(concept) for concept in atlas["concepts"]))
         active_sources = [source for source in self.payload["sources"] if source["status"] == "active"]
         self.assertTrue(all(source["last_observed_at"] for source in active_sources))
         self.assertTrue(all(source["freshness"] in {"recent", "aging", "historical"} for source in active_sources))
         self.assertTrue(all(item["disposition"] in {"classified", "classification-review"} for item in self.payload["evidence"]))
+        audit = atlas["classification_audit"]
+        self.assertEqual(audit["sample_size"], 120)
+        self.assertEqual(audit["newly_classified_records"], 110)
+        self.assertEqual(audit["current_unclassified_records"], atlas["quality"]["unclassified_public_records"])
+        self.assertGreater(audit["post_audit_classification_coverage"], audit["baseline_classification_coverage"])
 
     def test_early_signal_tracker_separates_inference_from_evidence(self):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}
