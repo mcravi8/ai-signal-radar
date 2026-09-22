@@ -1,0 +1,184 @@
+version: 1
+name: AI-Native Startup Operating Model evidence policy
+purpose: >-
+  Assess startup operating requirements without allowing attention, funding, or
+  repeated reporting to masquerade as technical or operational proof.
+
+public_levels:
+  - not-observed
+  - low
+  - moderate
+  - strong
+
+maturity_order:
+  - narrative
+  - experimental
+  - emerging
+  - established
+  - baseline
+
+relationship_types:
+  direct-support:
+    promotion_eligible: true
+    description: Directly demonstrates or tests the requirement.
+  supporting-context:
+    promotion_eligible: false
+    description: Makes the requirement more plausible but cannot promote it alone.
+  counterevidence:
+    promotion_eligible: false
+    description: Contradicts the requirement or exposes an important limitation.
+  discovery-only:
+    promotion_eligible: false
+    description: Identifies a lead but supplies no qualifying proof.
+  excluded:
+    promotion_eligible: false
+    description: Irrelevant, duplicated, misclassified, or otherwise non-qualifying.
+
+source_role_defaults:
+  paper:
+    technical_reality: moderate
+    operational_adoption: low
+    market_pull: not-observed
+    default_relationship: direct-support
+  paper-curation:
+    technical_reality: low
+    operational_adoption: not-observed
+    market_pull: not-observed
+    default_relationship: supporting-context
+  repository:
+    technical_reality: moderate
+    operational_adoption: low
+    market_pull: low
+    default_relationship: direct-support
+  first-party-lab:
+    technical_reality: moderate
+    operational_adoption: low
+    market_pull: low
+    default_relationship: supporting-context
+  practitioner-blog:
+    technical_reality: moderate
+    operational_adoption: moderate
+    market_pull: low
+    default_relationship: supporting-context
+  operator-essay:
+    technical_reality: low
+    operational_adoption: moderate
+    market_pull: moderate
+    default_relationship: supporting-context
+  investor-essay:
+    technical_reality: not-observed
+    operational_adoption: low
+    market_pull: moderate
+    default_relationship: supporting-context
+  expert-newsletter:
+    technical_reality: low
+    operational_adoption: low
+    market_pull: low
+    default_relationship: supporting-context
+  curated-newsletter:
+    technical_reality: low
+    operational_adoption: low
+    market_pull: low
+    default_relationship: discovery-only
+  newsletter:
+    technical_reality: low
+    operational_adoption: low
+    market_pull: low
+    default_relationship: discovery-only
+  expert-social:
+    technical_reality: not-observed
+    operational_adoption: not-observed
+    market_pull: low
+    default_relationship: discovery-only
+  community:
+    technical_reality: not-observed
+    operational_adoption: not-observed
+    market_pull: low
+    default_relationship: discovery-only
+
+dimension_rules:
+  technical_reality:
+    not-observed: No qualifying technical evidence.
+    low: One unverified claim, prototype, paper, or artifact.
+    moderate: Multiple technical records or one substantial implementation with tests or benchmarks.
+    strong: Several independent implementations, credible benchmarks, or production-grade technical evidence without an unresolved fatal limitation.
+  operational_adoption:
+    not-observed: No evidence of real workflow use.
+    low: A demo, stated intention, job posting, benchmark environment, or one vendor-reported deployment.
+    moderate: At least two organizations use it in real workflows, including one detailed implementation account.
+    strong: Repeated independent deployments show measured outcomes, persistence, and operational ownership.
+  market_pull:
+    not-observed: No observed market activity.
+    low: A category is named or one product, company, or funding event appears.
+    moderate: Multiple independent companies, funding events, customer signals, or buying signals appear.
+    strong: Company formation persists alongside customer, adoption, or revenue evidence.
+  evidence_independence:
+    not-observed: No qualifying evidence.
+    low: One source family or evidence concentrated around one publisher or organization.
+    moderate: Two or three independent evidence families with limited concentration.
+    strong: At least four families, including technical and operator or customer evidence, without one publisher dominating.
+
+concentration_rules:
+  low:
+    maximum_dominant_share: 0.40
+  moderate:
+    maximum_dominant_share: 0.70
+  high:
+    minimum_dominant_share_exclusive: 0.70
+
+maturity_gates:
+  narrative:
+    minimum_qualifying_events: 1
+  experimental:
+    inherits: narrative
+    minimum_levels:
+      technical_reality: moderate
+    minimum_technical_artifacts: 1
+  emerging:
+    inherits: experimental
+    minimum_levels:
+      technical_reality: moderate
+      operational_adoption: moderate
+      evidence_independence: moderate
+    minimum_independent_organizations: 2
+    required_flags:
+      counterevidence_reviewed: true
+  established:
+    inherits: emerging
+    minimum_levels:
+      technical_reality: strong
+      operational_adoption: strong
+      evidence_independence: strong
+    minimum_independent_organizations: 3
+    minimum_persistence_cycles: 2
+    required_flags:
+      counterevidence_reviewed: true
+  baseline:
+    inherits: established
+    required_flags:
+      cost_of_absence_evidenced: true
+      practical_minimum_available: true
+
+confidence_rules:
+  low:
+    description: Concentrated evidence, material gaps, or unresolved contradictions.
+  moderate:
+    description: Several independent sources agree, but adoption or implementation evidence remains incomplete.
+  high:
+    description: Diverse evidence, operational examples, and counterevidence have all been examined.
+
+guardrails:
+  - id: no-single-score-promotion
+    rule: No weighted total can bypass a failed maturity gate.
+  - id: no-attention-as-proof
+    rule: Funding, mentions, engagement, newsletters, and social attention cannot prove technical reality or operational adoption.
+  - id: analyses-are-not-independent
+    rule: An analysis inherits the independence of its underlying evidence and never counts as an additional source.
+  - id: deduplicate-events
+    rule: Syndicated coverage, newsletter summaries, and repeated reporting of one launch, paper, repository, deployment, or funding round count as one event.
+  - id: counterevidence-cap
+    rule: Confidence cannot be high until counterevidence has been explicitly reviewed.
+  - id: concentration-cap
+    rule: High source concentration caps evidence independence at low and confidence at moderate.
+  - id: stage-is-separate
+    rule: Company-stage posture never changes evidence maturity; it changes only the recommended implementation.

@@ -9,6 +9,7 @@ from pathlib import Path
 from .classify import classify_text
 from .cluster import group_by_theme
 from .deduplicate import deduplicate
+from .evidence_policy import format_calibration, run_calibration
 from .export_public import sanitize_item, validate_public_payload, write_public_dashboard
 from .research import build_research, write_weekly_report
 from .score import score_theme
@@ -220,11 +221,22 @@ def validate_public() -> None:
         print(f"valid: {path.relative_to(ROOT)}")
 
 
+def calibrate_evidence() -> None:
+    policy = _yaml(ROOT / "config/evidence-policy.yml")
+    calibration = _yaml(ROOT / "config/evidence-policy-calibration.yml")
+    research = json.loads((ROOT / calibration["dataset"]).read_text(encoding="utf-8"))
+    results = run_calibration(policy, calibration, research)
+    print(format_calibration(results))
+    mismatches = [result for result in results if not result["matches_expected"]]
+    if mismatches:
+        raise SystemExit("Evidence-policy calibration did not match the reviewed outcomes")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(prog="ai-signal-radar")
     parser.add_argument(
         "command",
-        choices=["collect", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public"],
+        choices=["collect", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public", "calibrate-evidence"],
     )
     args = parser.parse_args()
     if args.command == "collect":
@@ -235,6 +247,8 @@ def main() -> None:
         collect_newsletters()
     elif args.command == "synthesize":
         synthesize()
+    elif args.command == "calibrate-evidence":
+        calibrate_evidence()
     else:
         validate_public()
 

@@ -7,6 +7,8 @@ on:
       - .github/workflows/synthesize-weekly.yml
       - config/bluesky.yml
       - config/classification-audit.yml
+      - config/evidence-policy-calibration.yml
+      - config/evidence-policy.yml
       - config/keywords.yml
       - config/project-reviews.yml
       - config/source-theme-mappings.yml
@@ -14,6 +16,7 @@ on:
       - data/manual/**
       - pipeline/collectors/bluesky.py
       - pipeline/cli.py
+      - pipeline/evidence_policy.py
       - pipeline/research.py
   schedule:
     - cron: "23 7 * * 0"
@@ -45,6 +48,7 @@ jobs:
       - run: python -m pipeline.cli collect-newsletters
       - run: python -m pipeline.cli synthesize
       - run: python -m pipeline.cli validate-public
+      - run: python -m pipeline.cli calibrate-evidence
       - run: python scripts/build_site.py
       - run: python -m unittest discover -s tests -v
       - name: Commit synthesized public data

@@ -1,18 +1,18 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-22T02:19:59.427992+00:00",
+    "generated_at": "2026-09-22T20:40:29.209652+00:00",
     "status": "success",
-    "normalized_evidence_count": 1598,
-    "public_record_count": 1563,
+    "normalized_evidence_count": 1680,
+    "public_record_count": 1645,
     "active_source_count": 36,
     "theme_count": 20,
     "observed_theme_count": 20,
-    "project_count": 253,
+    "project_count": 258,
     "reviewed_project_count": 25,
     "queued_project_count": 25,
-    "discovered_project_count": 203,
-    "classification_coverage": 0.327,
+    "discovered_project_count": 208,
+    "classification_coverage": 0.32,
     "recent_source_count": 29,
     "model": "Every source is normalized into the same evidence contract. Source-specific analyses remain inspectable but do not define the global navigation."
   },
@@ -33,14 +33,14 @@
         "bluesky-ethan-mollick",
         "greylock-essays",
         "alphasignal",
+        "huggingface-blog",
+        "nvidia-developer-blog",
+        "openai-news",
         "anthropic-news-research",
         "eugene-yan",
         "deepmind-blog",
-        "huggingface-blog",
         "lilian-weng",
         "mistral-news",
-        "nvidia-developer-blog",
-        "openai-news",
         "sequoia-essays",
         "the-batch",
         "bluesky-melanie-mitchell",
@@ -61,8 +61,8 @@
         "bluesky-arvind-narayanan",
         "bluesky-karpathy"
       ],
-      "evidence_count": 1598,
-      "updated_at": "2026-09-22T02:19:59.427992+00:00"
+      "evidence_count": 1680,
+      "updated_at": "2026-09-22T20:40:29.209652+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -120,8 +120,8 @@
         "the-batch",
         "yc-essays"
       ],
-      "evidence_count": 1563,
-      "updated_at": "2026-09-22T02:19:59.427992+00:00"
+      "evidence_count": 1645,
+      "updated_at": "2026-09-22T20:40:29.209652+00:00"
     },
     {
       "id": "early-signal-tracker",
@@ -163,9 +163,9 @@
           "previous_stage": "emerging",
           "stage_changed": true,
           "confidence": "strong",
-          "state_reason": "5 evidence families, including 3 technical families, across 6 sources in the trailing 90 days; 9 records were published in the latest 30 days.",
+          "state_reason": "5 evidence families, including 3 technical families, across 6 sources in the trailing 90 days; 10 records were published in the latest 30 days.",
           "window_days": 90,
-          "evidence_count": 12,
+          "evidence_count": 13,
           "source_ids": [
             "alphasignal",
             "arxiv",
@@ -211,7 +211,7 @@
                 "github"
               ],
               "source_count": 1,
-              "evidence_count": 5
+              "evidence_count": 6
             },
             {
               "id": "narratives",
@@ -281,14 +281,14 @@
             {
               "as_of": "2026-09-15",
               "stage": "emerging",
-              "evidence_count": 8,
+              "evidence_count": 9,
               "source_count": 4,
               "family_count": 3
             },
             {
               "as_of": "2026-09-22",
               "stage": "established",
-              "evidence_count": 12,
+              "evidence_count": 13,
               "source_count": 6,
               "family_count": 5
             }
@@ -301,14 +301,14 @@
             "github:1370498337",
             "greylock-essays:aacd57b6bec14e3c9da1",
             "arxiv:2609.16305",
-            "github:1348178527"
+            "github:1365776373"
           ],
           "movement": "accelerating",
-          "movement_explanation": "Supporting records increased from 2 to 7 versus the preceding 14 days.",
+          "movement_explanation": "Supporting records increased from 2 to 8 versus the preceding 14 days.",
           "comparison_days": 14,
-          "current_evidence_count": 7,
+          "current_evidence_count": 8,
           "previous_evidence_count": 2,
-          "evidence_change": 5
+          "evidence_change": 6
         },
         {
           "id": "heterogeneous-inference",
@@ -399,10 +399,10 @@
           "lifecycle_history": [
             {
               "as_of": "2026-08-04",
-              "stage": "emerging",
-              "evidence_count": 2,
-              "source_count": 2,
-              "family_count": 2
+              "stage": "weak-signal",
+              "evidence_count": 1,
+              "source_count": 1,
+              "family_count": 1
             },
             {
               "as_of": "2026-08-11",
@@ -1024,7 +1024,7 @@
           "fading": "Historical or trailing-window support exists, but no supporting evidence appeared in the latest 30 days."
         }
       },
-      "updated_at": "2026-09-22T02:19:59.427992+00:00"
+      "updated_at": "2026-09-22T20:40:29.209652+00:00"
     },
     {
       "id": "expert-pulse",
@@ -1280,7 +1280,7 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-09-22T02:19:59.427992+00:00"
+      "updated_at": "2026-09-22T20:40:29.209652+00:00"
     },
     {
       "id": "operator-narratives",
@@ -1393,7 +1393,7 @@
           "strength": "strong",
           "label": "Corroborated infrastructure thesis",
           "title": "The coding-agent opportunity is shifting below the assistant interface",
-          "analysis": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 83.1 and appears across 13 radar sources.",
+          "analysis": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 83.9 and appears across 13 radar sources.",
           "why_it_matters": "The durable layer may be the context, execution environment, verification, and operational control that lets agents finish real work—not another chat surface around a frontier model.",
           "workflow_opportunity": "Prototype a repository task runner that provisions an isolated environment, assembles relevant context, executes the agent, tests the result, and presents a reviewable change with traces and rollback.",
           "caveat": "The evidence mixes coding, implementation, research, and operations. Their shared infrastructure needs are clearer than a single winning product category.",
@@ -1597,7 +1597,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-22T02:19:59.427992+00:00"
+      "updated_at": "2026-09-22T20:40:29.209652+00:00"
     },
     {
       "id": "project-opportunities",
@@ -1620,62 +1620,62 @@
     "as_of": "2026-09-22",
     "window_start": "2026-09-15",
     "previous_window_start": "2026-09-08",
-    "new_public_records": 664,
+    "new_public_records": 723,
     "movements": [
       {
         "theme_id": "training-self-improvement",
         "name": "Training, evaluation & self-improvement",
-        "recent": 65,
-        "prior": 13,
-        "delta": 52,
+        "recent": 66,
+        "prior": 12,
+        "delta": 54,
         "direction": "rising"
       },
       {
         "theme_id": "small-specialized-models",
         "name": "Small & specialized models",
-        "recent": 53,
-        "prior": 0,
-        "delta": 53,
-        "direction": "new"
+        "recent": 58,
+        "prior": 1,
+        "delta": 57,
+        "direction": "rising"
       },
       {
         "theme_id": "open-local-inference",
         "name": "Open, local & efficient inference",
-        "recent": 19,
-        "prior": 28,
-        "delta": -9,
+        "recent": 20,
+        "prior": 27,
+        "delta": -7,
         "direction": "steady"
       },
       {
         "theme_id": "coding-agents",
         "name": "Coding agents & developer tooling",
-        "recent": 16,
-        "prior": 3,
-        "delta": 13,
+        "recent": 18,
+        "prior": 4,
+        "delta": 14,
         "direction": "rising"
       },
       {
         "theme_id": "multimodal-3d",
         "name": "Multimodal generation & 3D",
-        "recent": 13,
-        "prior": 6,
-        "delta": 7,
+        "recent": 14,
+        "prior": 3,
+        "delta": 11,
         "direction": "rising"
       },
       {
         "theme_id": "skills-integrations",
         "name": "Skills, protocols & integrations",
-        "recent": 13,
-        "prior": 6,
+        "recent": 14,
+        "prior": 7,
         "delta": 7,
         "direction": "rising"
       },
       {
         "theme_id": "agent-harnesses",
         "name": "Agent harnesses",
-        "recent": 11,
+        "recent": 12,
         "prior": 7,
-        "delta": 4,
+        "delta": 5,
         "direction": "rising"
       },
       {
@@ -1690,16 +1690,16 @@
         "theme_id": "robotics-embodied-ai",
         "name": "Robotics & embodied AI",
         "recent": 8,
-        "prior": 1,
-        "delta": 7,
-        "direction": "rising"
+        "prior": 0,
+        "delta": 8,
+        "direction": "new"
       },
       {
         "theme_id": "frontier-inference-infrastructure",
         "name": "Frontier inference infrastructure",
         "recent": 8,
-        "prior": 2,
-        "delta": 6,
+        "prior": 3,
+        "delta": 5,
         "direction": "rising"
       }
     ],
@@ -1719,8 +1719,8 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
-      "evidence_count": 152,
-      "support_units": 300,
+      "evidence_count": 155,
+      "support_units": 303,
       "source_count": 25,
       "source_breakdown": [
         {
@@ -1735,13 +1735,13 @@
         },
         {
           "source_id": "huggingface-papers",
-          "observations": 26,
-          "support_units": 26
+          "observations": 28,
+          "support_units": 28
         },
         {
           "source_id": "github",
-          "observations": 25,
-          "support_units": 25
+          "observations": 26,
+          "support_units": 26
         },
         {
           "source_id": "lilian-weng",
@@ -1854,8 +1854,8 @@
         "2026-05": 15,
         "2026-06": 22,
         "2026-07": 21,
-        "2026-08": 46,
-        "2026-09": 116
+        "2026-08": 47,
+        "2026-09": 117
       },
       "source_concentration": 0.5,
       "maturity": "broadly-corroborated",
@@ -1901,6 +1901,7 @@
         "arxiv:2609.21704v1",
         "arxiv:2609.21673v1",
         "hf-paper:2609.22000",
+        "hf-paper:2609.21465",
         "simon-willison:6533bdcc0f6c39c58db7",
         "arxiv:2609.20816v1",
         "arxiv:2609.20807v1",
@@ -1963,6 +1964,7 @@
         "github:1353921399",
         "github:1351879111",
         "github:1350899039",
+        "github:1347394075",
         "hf-paper:2608.26005",
         "github:1345931063",
         "github:1345072328",
@@ -1990,6 +1992,7 @@
         "github:1187805808",
         "github:1185590488",
         "greylock-essays:d21542f6564a82ff3cf3",
+        "hf-paper:2512.10971",
         "eugene-yan:8d02ffe6c23a7d4a727d",
         "hf-paper:2510.22200",
         "hf-paper:2509.22186",
@@ -2034,8 +2037,8 @@
       ],
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
-      "evidence_count": 71,
-      "support_units": 119,
+      "evidence_count": 73,
+      "support_units": 121,
       "source_count": 14,
       "source_breakdown": [
         {
@@ -2045,8 +2048,8 @@
         },
         {
           "source_id": "github",
-          "observations": 40,
-          "support_units": 40
+          "observations": 41,
+          "support_units": 41
         },
         {
           "source_id": "huggingface-papers",
@@ -2070,6 +2073,11 @@
         },
         {
           "source_id": "cloudflare-ai-blog",
+          "observations": 2,
+          "support_units": 2
+        },
+        {
+          "source_id": "simon-willison",
           "observations": 2,
           "support_units": 2
         },
@@ -2099,11 +2107,6 @@
           "support_units": 1
         },
         {
-          "source_id": "simon-willison",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
           "source_id": "yc-essays",
           "observations": 1,
           "support_units": 1
@@ -2115,21 +2118,22 @@
         "2026-06": 7,
         "2026-07": 15,
         "2026-08": 23,
-        "2026-09": 26
+        "2026-09": 28
       },
-      "source_concentration": 0.44,
+      "source_concentration": 0.43,
       "maturity": "broadly-corroborated",
       "score": {
-        "recurrence": 13.1,
-        "acceleration": 23.4,
+        "recurrence": 13.4,
+        "acceleration": 23.9,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 86.5
+        "total": 87.3
       },
       "evidence_ids": [
         "hn:49791228",
         "hn:49791084",
         "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+        "simon-willison:e133d02a1d698c5d1f75",
         "hn:49779329",
         "github:1376081650",
         "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
@@ -2146,6 +2150,7 @@
         "hf-paper:2609.15779",
         "github:1367068508",
         "github:1366280840",
+        "github:1365776373",
         "hf-paper:2609.13356",
         "openai-news:b32e9b847135398762b9",
         "github:1358571386",
@@ -2213,9 +2218,9 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
-      "evidence_count": 86,
-      "support_units": 358,
-      "source_count": 13,
+      "evidence_count": 89,
+      "support_units": 361,
+      "source_count": 14,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
@@ -2229,8 +2234,8 @@
         },
         {
           "source_id": "github",
-          "observations": 14,
-          "support_units": 14
+          "observations": 15,
+          "support_units": 15
         },
         {
           "source_id": "bluesky-nathan-lambert",
@@ -2253,14 +2258,14 @@
           "support_units": 6
         },
         {
-          "source_id": "the-batch",
+          "source_id": "huggingface-blog",
           "observations": 4,
           "support_units": 4
         },
         {
-          "source_id": "huggingface-blog",
-          "observations": 3,
-          "support_units": 3
+          "source_id": "the-batch",
+          "observations": 4,
+          "support_units": 4
         },
         {
           "source_id": "nvidia-developer-blog",
@@ -2278,6 +2283,11 @@
           "support_units": 1
         },
         {
+          "source_id": "latent-space",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
           "source_id": "simon-willison",
           "observations": 1,
           "support_units": 1
@@ -2288,19 +2298,21 @@
         "2026-05": 49,
         "2026-06": 40,
         "2026-07": 70,
-        "2026-08": 57,
-        "2026-09": 82
+        "2026-08": 58,
+        "2026-09": 84
       },
-      "source_concentration": 0.77,
+      "source_concentration": 0.76,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 17.4,
-        "acceleration": 15.8,
+        "recurrence": 18.0,
+        "acceleration": 16.1,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 83.2
+        "total": 84.1
       },
       "evidence_ids": [
+        "latent-space:c5ef439db94fe95e2aa5",
+        "huggingface-blog:689d78c6e007ab8e2c4f",
         "bluesky:e810fac7fd93:3mvzupklbjz2u",
         "bluesky:e810fac7fd93:3mvzo2lneqg2j",
         "interconnects:43bf4602833d95a55b19",
@@ -2353,6 +2365,7 @@
         "alphasignal:project:voicestudio",
         "nvidia-developer-blog:a10444e3469f16548166",
         "github:1349285058",
+        "github:1347394075",
         "github:1347320778",
         "github:1346919628",
         "huggingface-blog:f1c76f23a788b6884a28",
@@ -2401,8 +2414,8 @@
       ],
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 53,
-      "support_units": 228,
+      "evidence_count": 56,
+      "support_units": 231,
       "source_count": 13,
       "source_breakdown": [
         {
@@ -2412,8 +2425,8 @@
         },
         {
           "source_id": "github",
-          "observations": 16,
-          "support_units": 16
+          "observations": 17,
+          "support_units": 17
         },
         {
           "source_id": "arxiv",
@@ -2422,8 +2435,8 @@
         },
         {
           "source_id": "hacker-news",
-          "observations": 6,
-          "support_units": 6
+          "observations": 7,
+          "support_units": 7
         },
         {
           "source_id": "huggingface-papers",
@@ -2431,14 +2444,14 @@
           "support_units": 5
         },
         {
-          "source_id": "the-batch",
+          "source_id": "simon-willison",
           "observations": 5,
           "support_units": 5
         },
         {
-          "source_id": "simon-willison",
-          "observations": 4,
-          "support_units": 4
+          "source_id": "the-batch",
+          "observations": 5,
+          "support_units": 5
         },
         {
           "source_id": "greylock-essays",
@@ -2477,23 +2490,25 @@
         "2026-06": 25,
         "2026-07": 17,
         "2026-08": 30,
-        "2026-09": 36
+        "2026-09": 39
       },
-      "source_concentration": 0.78,
+      "source_concentration": 0.77,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 14.3,
-        "acceleration": 18.8,
+        "recurrence": 14.5,
+        "acceleration": 19.4,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 83.1
+        "total": 83.9
       },
       "evidence_ids": [
         "hn:49790729",
+        "hn:49789356",
         "hn:49785853",
         "hn:49783713",
         "hn:49781554",
         "alphasignal:trend:coding-agents-and-developer-tooling",
+        "simon-willison:e133d02a1d698c5d1f75",
         "simon-willison:f9d4182cc1e12525793a",
         "hn:49768826",
         "arxiv:2609.22068v1",
@@ -2509,6 +2524,7 @@
         "simon-willison:ac293d7ca39f3bdc6e8b",
         "hf-paper:2609.14858",
         "simon-willison:cffcc180737c911ec20d",
+        "github:1365776373",
         "github:1358571386",
         "bluesky:b3614927c6a2:3murtmdynq22s",
         "the-batch:2622ee409c0a925f8cee",
@@ -2556,8 +2572,8 @@
         "task-specific model"
       ],
       "primary_layer": "models-capabilities",
-      "evidence_count": 69,
-      "support_units": 341,
+      "evidence_count": 75,
+      "support_units": 347,
       "source_count": 12,
       "source_breakdown": [
         {
@@ -2567,13 +2583,13 @@
         },
         {
           "source_id": "hacker-news",
-          "observations": 28,
-          "support_units": 28
+          "observations": 30,
+          "support_units": 30
         },
         {
           "source_id": "github",
-          "observations": 14,
-          "support_units": 14
+          "observations": 16,
+          "support_units": 16
         },
         {
           "source_id": "arxiv",
@@ -2582,6 +2598,11 @@
         },
         {
           "source_id": "huggingface-papers",
+          "observations": 3,
+          "support_units": 3
+        },
+        {
+          "source_id": "latent-space",
           "observations": 3,
           "support_units": 3
         },
@@ -2596,7 +2617,7 @@
           "support_units": 2
         },
         {
-          "source_id": "latent-space",
+          "source_id": "simon-willison",
           "observations": 2,
           "support_units": 2
         },
@@ -2607,11 +2628,6 @@
         },
         {
           "source_id": "huggingface-blog",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "simon-willison",
           "observations": 1,
           "support_units": 1
         },
@@ -2627,19 +2643,23 @@
         "2026-06": 41,
         "2026-07": 64,
         "2026-08": 45,
-        "2026-09": 88
+        "2026-09": 94
       },
-      "source_concentration": 0.81,
+      "source_concentration": 0.79,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 14.2,
-        "acceleration": 15.9,
+        "recurrence": 14.7,
+        "acceleration": 16.5,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 80.1
+        "total": 81.2
       },
       "evidence_ids": [
+        "hn:49799641",
+        "hn:49795109",
         "bluesky:b3614927c6a2:3mw2tsop42c2u",
+        "simon-willison:b3e5263fa8976c3c350c",
+        "latent-space:7409d5ffee8a2c05841b",
         "hn:49791429",
         "hn:49790936",
         "hn:49789538",
@@ -2651,6 +2671,7 @@
         "hn:49786578",
         "hn:49786485",
         "hn:49786471",
+        "github:1379574728",
         "hn:49784706",
         "hn:49783999",
         "hn:49783806",
@@ -2694,6 +2715,7 @@
         "github:1374058281",
         "hn:49736660",
         "latent-space:487ee06b84c7feddf771",
+        "github:1365776373",
         "hf-paper:2609.08183",
         "hf-paper:2608.26005",
         "github:1344623876",
@@ -2721,8 +2743,8 @@
         "self-improving harness"
       ],
       "primary_layer": "harness-orchestration",
-      "evidence_count": 52,
-      "support_units": 291,
+      "evidence_count": 54,
+      "support_units": 293,
       "source_count": 12,
       "source_breakdown": [
         {
@@ -2732,16 +2754,16 @@
         },
         {
           "source_id": "github",
-          "observations": 22,
-          "support_units": 22
-        },
-        {
-          "source_id": "arxiv",
-          "observations": 7,
-          "support_units": 7
+          "observations": 23,
+          "support_units": 23
         },
         {
           "source_id": "huggingface-papers",
+          "observations": 8,
+          "support_units": 8
+        },
+        {
+          "source_id": "arxiv",
           "observations": 7,
           "support_units": 7
         },
@@ -2792,16 +2814,16 @@
         "2026-06": 41,
         "2026-07": 50,
         "2026-08": 64,
-        "2026-09": 54
+        "2026-09": 56
       },
-      "source_concentration": 0.84,
+      "source_concentration": 0.83,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 12.9,
-        "acceleration": 16.2,
+        "recurrence": 13.0,
+        "acceleration": 16.4,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 79.1
+        "total": 79.4
       },
       "evidence_ids": [
         "aws-machine-learning-blog:16b9772b96509775d2ea",
@@ -2812,6 +2834,7 @@
         "arxiv:2609.21944v1",
         "arxiv:2609.21859v1",
         "arxiv:2609.21843v1",
+        "hf-paper:2609.21465",
         "arxiv:2609.20620v1",
         "aws-machine-learning-blog:5d4f323bd0d514800a8a",
         "arxiv:2609.20519v1",
@@ -2821,6 +2844,7 @@
         "github:1370498337",
         "hf-paper:2609.15364",
         "hf-paper:2609.14858",
+        "github:1365776373",
         "greylock-essays:aacd57b6bec14e3c9da1",
         "bluesky:1278ebf77949:3mv6cihd7tk2v",
         "github:1361693766",
@@ -2871,8 +2895,8 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 42,
-      "support_units": 140,
+      "evidence_count": 44,
+      "support_units": 142,
       "source_count": 9,
       "source_breakdown": [
         {
@@ -2887,13 +2911,13 @@
         },
         {
           "source_id": "github",
-          "observations": 10,
-          "support_units": 10
+          "observations": 11,
+          "support_units": 11
         },
         {
           "source_id": "huggingface-papers",
-          "observations": 8,
-          "support_units": 8
+          "observations": 9,
+          "support_units": 9
         },
         {
           "source_id": "radical-ventures",
@@ -2927,16 +2951,16 @@
         "2026-06": 18,
         "2026-07": 23,
         "2026-08": 19,
-        "2026-09": 39
+        "2026-09": 41
       },
-      "source_concentration": 0.72,
+      "source_concentration": 0.71,
       "maturity": "broadly-corroborated",
       "score": {
-        "recurrence": 10.7,
-        "acceleration": 17.3,
+        "recurrence": 10.8,
+        "acceleration": 17.8,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 78.0
+        "total": 78.6
       },
       "evidence_ids": [
         "alphasignal:trend:multimodal-generation-and-3d",
@@ -2947,6 +2971,7 @@
         "arxiv:2609.21849v1",
         "arxiv:2609.21755v1",
         "arxiv:2609.21748v1",
+        "hf-paper:2609.21465",
         "arxiv:2609.20820v1",
         "arxiv:2609.20817v1",
         "arxiv:2609.20816v1",
@@ -2961,6 +2986,7 @@
         "github:1360934358",
         "hf-paper:2609.08084",
         "github:1360344248",
+        "github:1360078054",
         "hf-paper:2609.04034",
         "github:1346919628",
         "radical-ventures:002cb1815fb8b4589802",
@@ -2996,9 +3022,9 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 18,
-      "support_units": 63,
-      "source_count": 10,
+      "evidence_count": 19,
+      "support_units": 64,
+      "source_count": 11,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
@@ -3041,6 +3067,11 @@
           "support_units": 1
         },
         {
+          "source_id": "huggingface-papers",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
           "source_id": "simon-willison",
           "observations": 1,
           "support_units": 1
@@ -3057,22 +3088,23 @@
         "2026-06": 4,
         "2026-07": 13,
         "2026-08": 14,
-        "2026-09": 15
+        "2026-09": 16
       },
-      "source_concentration": 0.76,
+      "source_concentration": 0.75,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 8.0,
-        "acceleration": 19.6,
+        "recurrence": 8.4,
+        "acceleration": 20.0,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 77.6
+        "total": 78.4
       },
       "evidence_ids": [
         "hn:49789320",
         "alphasignal:trend:voice-and-audio-interfaces",
         "arxiv:2609.21967v1",
         "arxiv:2609.21683v1",
+        "hf-paper:2609.21465",
         "arxiv:2609.20504v1",
         "simon-willison:219c439494be37cebb69",
         "github:1361693766",
@@ -3087,6 +3119,106 @@
         "greylock-essays:b5d0a493521b25d69daf",
         "chip-huyen:17001c4976bcaeda4a08",
         "github:541269386"
+      ]
+    },
+    {
+      "id": "frontier-inference-infrastructure",
+      "name": "Frontier inference infrastructure",
+      "definition": "Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.",
+      "aliases": [
+        "frontier inference cluster",
+        "inference cloud",
+        "AI factory",
+        "token factory",
+        "inference cluster"
+      ],
+      "primary_layer": "compute-inference-serving",
+      "evidence_count": 28,
+      "support_units": 28,
+      "source_count": 7,
+      "source_breakdown": [
+        {
+          "source_id": "github",
+          "observations": 7,
+          "support_units": 7
+        },
+        {
+          "source_id": "nvidia-developer-blog",
+          "observations": 7,
+          "support_units": 7
+        },
+        {
+          "source_id": "arxiv",
+          "observations": 6,
+          "support_units": 6
+        },
+        {
+          "source_id": "huggingface-papers",
+          "observations": 5,
+          "support_units": 5
+        },
+        {
+          "source_id": "menlo-ventures",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "sequoia-essays",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "the-batch",
+          "observations": 1,
+          "support_units": 1
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 0,
+        "2026-05": 1,
+        "2026-06": 2,
+        "2026-07": 3,
+        "2026-08": 3,
+        "2026-09": 13
+      },
+      "source_concentration": 0.25,
+      "maturity": "broadly-corroborated",
+      "score": {
+        "recurrence": 6.5,
+        "acceleration": 25,
+        "persistence": 20.8,
+        "breadth": 25,
+        "total": 77.3
+      },
+      "evidence_ids": [
+        "nvidia-developer-blog:837464fefd470eaa54f6",
+        "arxiv:2609.21827v1",
+        "arxiv:2609.21774v1",
+        "arxiv:2609.21704v1",
+        "arxiv:2609.20734v1",
+        "arxiv:2609.20614v1",
+        "arxiv:2609.20446v1",
+        "hf-paper:2609.18063",
+        "nvidia-developer-blog:f95e55a325c1d57f2115",
+        "nvidia-developer-blog:e7c3a6c0afb937549e09",
+        "nvidia-developer-blog:93db95fb6cd1a35dc083",
+        "nvidia-developer-blog:d14025c328b788abfb85",
+        "nvidia-developer-blog:e25568b4ce57971f1453",
+        "github:1347982389",
+        "nvidia-developer-blog:655e6fb2eee2feb6b510",
+        "github:1342935078",
+        "sequoia-essays:8a2fe18efd08a18eea8c",
+        "menlo-ventures:dfeaba0c266f13ed7f2c",
+        "the-batch:0b297472a2efbd99a896",
+        "hf-paper:2606.31227",
+        "hf-paper:2606.23050",
+        "github:1231148626",
+        "hf-paper:2510.03215",
+        "github:807305060",
+        "hf-paper:2309.06180",
+        "github:627561173",
+        "github:181436799",
+        "github:153097643"
       ]
     },
     {
@@ -3196,11 +3328,11 @@
       "source_concentration": 0.82,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 14.4,
+        "recurrence": 14.3,
         "acceleration": 12.8,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 77.2
+        "total": 77.1
       },
       "evidence_ids": [
         "hn:49784037",
@@ -3246,105 +3378,6 @@
         "greylock-essays:568bff58c053c7627fd9",
         "chip-huyen:3df801be09a1d2cd8d01",
         "eugene-yan:4e6f02b9f3a88eb5aafd"
-      ]
-    },
-    {
-      "id": "frontier-inference-infrastructure",
-      "name": "Frontier inference infrastructure",
-      "definition": "Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.",
-      "aliases": [
-        "frontier inference cluster",
-        "inference cloud",
-        "AI factory",
-        "token factory",
-        "inference cluster"
-      ],
-      "primary_layer": "compute-inference-serving",
-      "evidence_count": 27,
-      "support_units": 27,
-      "source_count": 7,
-      "source_breakdown": [
-        {
-          "source_id": "github",
-          "observations": 7,
-          "support_units": 7
-        },
-        {
-          "source_id": "arxiv",
-          "observations": 6,
-          "support_units": 6
-        },
-        {
-          "source_id": "nvidia-developer-blog",
-          "observations": 6,
-          "support_units": 6
-        },
-        {
-          "source_id": "huggingface-papers",
-          "observations": 5,
-          "support_units": 5
-        },
-        {
-          "source_id": "menlo-ventures",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "sequoia-essays",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "the-batch",
-          "observations": 1,
-          "support_units": 1
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 0,
-        "2026-05": 1,
-        "2026-06": 2,
-        "2026-07": 3,
-        "2026-08": 3,
-        "2026-09": 12
-      },
-      "source_concentration": 0.26,
-      "maturity": "broadly-corroborated",
-      "score": {
-        "recurrence": 6.4,
-        "acceleration": 25,
-        "persistence": 20.8,
-        "breadth": 25,
-        "total": 77.2
-      },
-      "evidence_ids": [
-        "arxiv:2609.21827v1",
-        "arxiv:2609.21774v1",
-        "arxiv:2609.21704v1",
-        "arxiv:2609.20734v1",
-        "arxiv:2609.20614v1",
-        "arxiv:2609.20446v1",
-        "hf-paper:2609.18063",
-        "nvidia-developer-blog:f95e55a325c1d57f2115",
-        "nvidia-developer-blog:e7c3a6c0afb937549e09",
-        "nvidia-developer-blog:93db95fb6cd1a35dc083",
-        "nvidia-developer-blog:d14025c328b788abfb85",
-        "nvidia-developer-blog:e25568b4ce57971f1453",
-        "github:1347982389",
-        "nvidia-developer-blog:655e6fb2eee2feb6b510",
-        "github:1342935078",
-        "sequoia-essays:8a2fe18efd08a18eea8c",
-        "menlo-ventures:dfeaba0c266f13ed7f2c",
-        "the-batch:0b297472a2efbd99a896",
-        "hf-paper:2606.31227",
-        "hf-paper:2606.23050",
-        "github:1231148626",
-        "hf-paper:2510.03215",
-        "github:807305060",
-        "hf-paper:2309.06180",
-        "github:627561173",
-        "github:181436799",
-        "github:153097643"
       ]
     },
     {
@@ -5013,6 +5046,75 @@
       "review_reason": "Reviewed assessment with an explicit opportunity score."
     },
     {
+      "name": "qiz029/dscode",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-11T09:40:02Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "A DeepSeek coding agent harness: persistent shell, Ultra subagents, auto approval, Chrome MCP and session telemetry",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/qiz029/dscode",
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Review next",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1365776373"
+      ],
+      "review_status": "queued",
+      "theme_ids": [
+        "agent-harnesses",
+        "coding-agents",
+        "skills-integrations",
+        "small-specialized-models"
+      ],
+      "review_priority": 100,
+      "review_reason": "4 matched concepts; 1 evidence source; last observed 2026-09-11T09:40:02Z."
+    },
+    {
+      "name": "naw103/foremerge",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-08-21T17:52:45Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Catch intent conflicts before code conflicts. The open-source coordination protocol for coding agents, built above Git.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/naw103/foremerge",
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Review next",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github",
+        "hacker-news"
+      ],
+      "cross_source": true,
+      "evidence_ids": [
+        "github:1342084139",
+        "hn:49789356"
+      ],
+      "review_status": "queued",
+      "theme_ids": [
+        "agent-harnesses",
+        "coding-agents",
+        "skills-integrations"
+      ],
+      "review_priority": 95,
+      "review_reason": "3 matched concepts; 2 evidence sources; last observed 2026-08-21T17:52:45Z."
+    },
+    {
       "name": "wh000wh000/awesome-jev-live",
       "rank": null,
       "editorial_rank": null,
@@ -5077,39 +5179,6 @@
       ],
       "review_priority": 80,
       "review_reason": "3 matched concepts; 1 evidence source; last observed 2026-08-26T05:00:24Z."
-    },
-    {
-      "name": "naw103/foremerge",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-08-21T17:52:45Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "Catch intent conflicts before code conflicts. The open-source coordination protocol for coding agents, built above Git.",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/naw103/foremerge",
-      "primary_layer": "Harness & orchestration",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Review next",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1342084139"
-      ],
-      "review_status": "queued",
-      "theme_ids": [
-        "agent-harnesses",
-        "coding-agents",
-        "skills-integrations"
-      ],
-      "review_priority": 70,
-      "review_reason": "3 matched concepts; 1 evidence source; last observed 2026-08-21T17:52:45Z."
     },
     {
       "name": "kraayenjon/awesome-jev",
@@ -5240,6 +5309,38 @@
       "review_reason": "2 matched concepts; 1 evidence source; last observed 2026-09-11T14:27:35Z."
     },
     {
+      "name": "whitecircle/halo",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-08-26T13:49:24Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Halo is an open-source framework built by White Circle for training large language and multimodal models",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/whitecircle/halo",
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Review next",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1347394075"
+      ],
+      "review_status": "queued",
+      "theme_ids": [
+        "open-local-inference",
+        "training-self-improvement"
+      ],
+      "review_priority": 60,
+      "review_reason": "2 matched concepts; 1 evidence source; last observed 2026-08-26T13:49:24Z."
+    },
+    {
       "name": "S1N6H/pentest-harness",
       "rank": null,
       "editorial_rank": null,
@@ -5334,70 +5435,6 @@
       ],
       "review_priority": 60,
       "review_reason": "2 matched concepts; 1 evidence source; last observed 2026-08-24T06:36:40Z."
-    },
-    {
-      "name": "bojieli/ai-infra-book",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-08-22T15:30:41Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "《深入理解 AI Infra：量化分析与系统设计》（李博杰 著）开源书稿：从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统设计。含全书正文、PDF、配套计算工具与实验",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/bojieli/ai-infra-book",
-      "primary_layer": "Compute, inference & serving infrastructure",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Review next",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1342935078"
-      ],
-      "review_status": "queued",
-      "theme_ids": [
-        "frontier-inference-infrastructure",
-        "open-local-inference"
-      ],
-      "review_priority": 60,
-      "review_reason": "2 matched concepts; 1 evidence source; last observed 2026-08-22T15:30:41Z."
-    },
-    {
-      "name": "halofyai/halofy",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-08-22T06:09:53Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "Halofy is the open access and governance layer for AI agents across your organization. Identity, policy, provenance, audit, and signed erasure.",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/halofyai/halofy",
-      "primary_layer": "Harness & orchestration",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Review next",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1342500731"
-      ],
-      "review_status": "queued",
-      "theme_ids": [
-        "agent-harnesses",
-        "assurance-infrastructure"
-      ],
-      "review_priority": 60,
-      "review_reason": "2 matched concepts; 1 evidence source; last observed 2026-08-22T06:09:53Z."
     },
     {
       "name": "Graphify-Labs/graphify",
@@ -5499,6 +5536,70 @@
       "review_reason": "3 matched concepts; 1 evidence source; last observed 2026-02-24T22:01:00Z."
     },
     {
+      "name": "bojieli/ai-infra-book",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-08-22T15:30:41Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "《深入理解 AI Infra：量化分析与系统设计》（李博杰 著）开源书稿：从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统设计。含全书正文、PDF、配套计算工具与实验",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/bojieli/ai-infra-book",
+      "primary_layer": "Compute, inference & serving infrastructure",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Review next",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1342935078"
+      ],
+      "review_status": "queued",
+      "theme_ids": [
+        "frontier-inference-infrastructure",
+        "open-local-inference"
+      ],
+      "review_priority": 50,
+      "review_reason": "2 matched concepts; 1 evidence source; last observed 2026-08-22T15:30:41Z."
+    },
+    {
+      "name": "halofyai/halofy",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-08-22T06:09:53Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Halofy is the open access and governance layer for AI agents across your organization. Identity, policy, provenance, audit, and signed erasure.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/halofyai/halofy",
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Review next",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1342500731"
+      ],
+      "review_status": "queued",
+      "theme_ids": [
+        "agent-harnesses",
+        "assurance-infrastructure"
+      ],
+      "review_priority": 50,
+      "review_reason": "2 matched concepts; 1 evidence source; last observed 2026-08-22T06:09:53Z."
+    },
+    {
       "name": "xai-org/grok-build",
       "rank": null,
       "editorial_rank": null,
@@ -5529,6 +5630,37 @@
       ],
       "review_priority": 50,
       "review_reason": "2 matched concepts; 1 evidence source; last observed 2026-07-14T20:04:23Z."
+    },
+    {
+      "name": "jev-chat/jev-chat-jarvis",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-21T11:12:53Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/jev-chat/jev-chat-jarvis",
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Review next",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1379574728"
+      ],
+      "review_status": "queued",
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "review_priority": 40,
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-21T11:12:53Z."
     },
     {
       "name": "NSStudent/JevSwiftSDK",
@@ -5591,37 +5723,6 @@
       ],
       "review_priority": 40,
       "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-19T16:48:59Z."
-    },
-    {
-      "name": "mizorewww/laya-mlx",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-09-19T13:50:26Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/mizorewww/laya-mlx",
-      "primary_layer": "Models & capabilities",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Review next",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1377211520"
-      ],
-      "review_status": "queued",
-      "theme_ids": [
-        "small-specialized-models"
-      ],
-      "review_priority": 40,
-      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-19T13:50:26Z."
     },
     {
       "name": "templatesgrokbot/templatesgrokbot.com",
@@ -5748,66 +5849,35 @@
       "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-12T07:33:31Z."
     },
     {
-      "name": "UMass-Embodied-AGI/SyncWorld",
+      "name": "mizorewww/laya-mlx",
       "rank": null,
       "editorial_rank": null,
-      "source_date": "2026-09-08T04:50:12Z",
+      "source_date": "2026-09-19T13:50:26Z",
       "category": "Discovered public repository",
-      "why_it_matters": "Source codes for the paper \"SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators\"",
+      "why_it_matters": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
       "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
       "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/UMass-Embodied-AGI/SyncWorld",
+      "official_url": "https://github.com/mizorewww/laya-mlx",
       "primary_layer": "Models & capabilities",
       "secondary_layer": null,
       "cross_layer": false,
       "ratings": {},
       "opportunity_score": null,
-      "action": "Review next",
+      "action": "Discovered",
       "hype_risk": "N/O",
       "source_ids": [
         "github"
       ],
       "cross_source": false,
       "evidence_ids": [
-        "github:1360934358"
+        "github:1377211520"
       ],
-      "review_status": "queued",
+      "review_status": "discovered",
       "theme_ids": [
-        "multimodal-3d"
+        "small-specialized-models"
       ],
       "review_priority": 40,
-      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-08T04:50:12Z."
-    },
-    {
-      "name": "AhmadJeddi/LLM-VLM-Guide",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-09-07T14:44:38Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "A beginner-first guide to how language and multimodal models work — from language models and Transformers to LLMs, VLMs, audio, video, and modern model families.",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/AhmadJeddi/LLM-VLM-Guide",
-      "primary_layer": "Models & capabilities",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Review next",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1360344248"
-      ],
-      "review_status": "queued",
-      "theme_ids": [
-        "multimodal-3d"
-      ],
-      "review_priority": 40,
-      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-07T14:44:38Z."
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-19T13:50:26Z."
     },
     {
       "name": "Heman10x-NGU/openJev-verdict-2.0",
@@ -5965,6 +6035,68 @@
       "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-17T06:56:37Z."
     },
     {
+      "name": "UMass-Embodied-AGI/SyncWorld",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-08T04:50:12Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Source codes for the paper \"SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators\"",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/UMass-Embodied-AGI/SyncWorld",
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1360934358"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "review_priority": 40,
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-08T04:50:12Z."
+    },
+    {
+      "name": "AhmadJeddi/LLM-VLM-Guide",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-07T14:44:38Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "A beginner-first guide to how language and multimodal models work — from language models and Transformers to LLMs, VLMs, audio, video, and modern model families.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/AhmadJeddi/LLM-VLM-Guide",
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1360344248"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "review_priority": 40,
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-07T14:44:38Z."
+    },
+    {
       "name": "bshivambharadwaj/Reinforcement-Learning-Course",
       "rank": null,
       "editorial_rank": null,
@@ -5994,6 +6126,37 @@
       ],
       "review_priority": 40,
       "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-07T11:34:43Z."
+    },
+    {
+      "name": "muellerberndt/cadence",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-07T10:20:11Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Machine learning library for building consensus-style equilibrium world models that continuously learn from experience.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/muellerberndt/cadence",
+      "primary_layer": "Models & capabilities",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1360078054"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "review_priority": 40,
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-09-07T10:20:11Z."
     },
     {
       "name": "tomiholtz/s3-files-ai-sdk",
@@ -6895,130 +7058,6 @@
       "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-23T18:12:45Z."
     },
     {
-      "name": "ssaaffaakk/Lilly",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-08-22T16:31:56Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "Bosnian-first offline assistant: type, speak, and snap street text → English. FastAPI app + Kaggle-trained listen/read models. Fail-stop training.",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/ssaaffaakk/Lilly",
-      "primary_layer": "Tools, skills & integrations",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Discovered",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1342982362"
-      ],
-      "review_status": "discovered",
-      "theme_ids": [
-        "document-knowledge-systems"
-      ],
-      "review_priority": 40,
-      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-22T16:31:56Z."
-    },
-    {
-      "name": "kgoedecke/doop",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-08-22T15:40:51Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "The open-source alternative to Paper.design. A multiplayer design canvas where humans and AI agents design together, live. MCP built in.",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/kgoedecke/doop",
-      "primary_layer": "Tools, skills & integrations",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Discovered",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1342943152"
-      ],
-      "review_status": "discovered",
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "review_priority": 40,
-      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-22T15:40:51Z."
-    },
-    {
-      "name": "duty1g/x64dbg-mcp-server",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-08-22T14:28:41Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "x64dbg-MCP Server is a native MCP (Model Context Protocol) plugin for x64dbg that exposes the debugger's full functionality over HTTP. Connect any MCP-compatible AI assistant and control x64dbg programmatically: set breakpoints, step through code, read memory, dump registers, and more.  Built with Zig — zero dependencies, single-binary output, cros",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/duty1g/x64dbg-mcp-server",
-      "primary_layer": "Tools, skills & integrations",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Discovered",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1342886503"
-      ],
-      "review_status": "discovered",
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "review_priority": 40,
-      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-22T14:28:41Z."
-    },
-    {
-      "name": "ApodexAI/FrontierAgent",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-08-22T05:07:35Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "🧩 FrontierAgent, our agent framework, open-sourced alongside it — native command-line TUI, ReAct and Agent Team modes, one command on macOS and Linux, no preinstall, no hard Docker dependency.",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/ApodexAI/FrontierAgent",
-      "primary_layer": "Harness & orchestration",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Discovered",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1342461518"
-      ],
-      "review_status": "discovered",
-      "theme_ids": [
-        "agent-harnesses"
-      ],
-      "review_priority": 40,
-      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-22T05:07:35Z."
-    },
-    {
       "name": "antirez/ds4",
       "rank": null,
       "editorial_rank": null,
@@ -7627,6 +7666,130 @@
       "review_reason": "2 matched concepts; 1 evidence source; last observed 2018-08-02T17:56:45Z."
     },
     {
+      "name": "ssaaffaakk/Lilly",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-08-22T16:31:56Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Bosnian-first offline assistant: type, speak, and snap street text → English. FastAPI app + Kaggle-trained listen/read models. Fail-stop training.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/ssaaffaakk/Lilly",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1342982362"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [
+        "document-knowledge-systems"
+      ],
+      "review_priority": 30,
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-22T16:31:56Z."
+    },
+    {
+      "name": "kgoedecke/doop",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-08-22T15:40:51Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "The open-source alternative to Paper.design. A multiplayer design canvas where humans and AI agents design together, live. MCP built in.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/kgoedecke/doop",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1342943152"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "review_priority": 30,
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-22T15:40:51Z."
+    },
+    {
+      "name": "duty1g/x64dbg-mcp-server",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-08-22T14:28:41Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "x64dbg-MCP Server is a native MCP (Model Context Protocol) plugin for x64dbg that exposes the debugger's full functionality over HTTP. Connect any MCP-compatible AI assistant and control x64dbg programmatically: set breakpoints, step through code, read memory, dump registers, and more.  Built with Zig — zero dependencies, single-binary output, cros",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/duty1g/x64dbg-mcp-server",
+      "primary_layer": "Tools, skills & integrations",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1342886503"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "review_priority": 30,
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-22T14:28:41Z."
+    },
+    {
+      "name": "ApodexAI/FrontierAgent",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-08-22T05:07:35Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "🧩 FrontierAgent, our agent framework, open-sourced alongside it — native command-line TUI, ReAct and Agent Team modes, one command on macOS and Linux, no preinstall, no hard Docker dependency.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/ApodexAI/FrontierAgent",
+      "primary_layer": "Harness & orchestration",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1342461518"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "review_priority": 30,
+      "review_reason": "1 matched concepts; 1 evidence source; last observed 2026-08-22T05:07:35Z."
+    },
+    {
       "name": "sodiumsun/agenttrail",
       "rank": null,
       "editorial_rank": null,
@@ -7754,7 +7917,7 @@
       "editorial_rank": null,
       "source_date": "2026-09-17T15:40:52Z",
       "category": "Discovered public repository",
-      "why_it_matters": "A searchable gallery of well-designed Figure 1 / teaser figures from ICLR, ICML, NeurIPS, CVPR, ACL, AAAI (2023-2025) — 2,298 curated figures for paper-overview inspiration. Pure static site.",
+      "why_it_matters": "A searchable gallery of 2,730 well-designed Figure 1 / teaser figures from ICLR, ICML, NeurIPS, CVPR, ACL, AAAI (2023-2025), tagged with Oral / Spotlight / Best-paper tiers.",
       "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
       "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
       "official_url": "https://github.com/qwdwqfwq/topconf-paper-figure-gallery",
@@ -7863,6 +8026,35 @@
       "theme_ids": [],
       "review_priority": 20,
       "review_reason": "0 matched concepts; 1 evidence source; last observed 2026-09-15T01:57:40Z."
+    },
+    {
+      "name": "Qiuner/QCode",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-14T10:50:30Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "An explorable island world to learn AI coding and build real projects with AI agents. Powered by DeepSeek Harness.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/Qiuner/QCode",
+      "primary_layer": "Unclassified",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1369759058"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [],
+      "review_priority": 20,
+      "review_reason": "0 matched concepts; 1 evidence source; last observed 2026-09-14T10:50:30Z."
     },
     {
       "name": "lucidrains/RLT",
@@ -8010,6 +8202,35 @@
       "review_reason": "0 matched concepts; 1 evidence source; last observed 2026-09-12T00:38:16Z."
     },
     {
+      "name": "blixvip/MotionClone",
+      "rank": null,
+      "editorial_rank": null,
+      "source_date": "2026-09-10T02:29:35Z",
+      "category": "Discovered public repository",
+      "why_it_matters": "Turn reference videos into editable motion graphics with Codex + ChatGPT. Compare, customize, and export MP4s or HyperFrames projects. Local Windows app + online studio.",
+      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
+      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+      "official_url": "https://github.com/blixvip/MotionClone",
+      "primary_layer": "Unclassified",
+      "secondary_layer": null,
+      "cross_layer": false,
+      "ratings": {},
+      "opportunity_score": null,
+      "action": "Discovered",
+      "hype_risk": "N/O",
+      "source_ids": [
+        "github"
+      ],
+      "cross_source": false,
+      "evidence_ids": [
+        "github:1363431253"
+      ],
+      "review_status": "discovered",
+      "theme_ids": [],
+      "review_priority": 20,
+      "review_reason": "0 matched concepts; 1 evidence source; last observed 2026-09-10T02:29:35Z."
+    },
+    {
       "name": "xiaYuTian11/maskit",
       "rank": null,
       "editorial_rank": null,
@@ -8066,35 +8287,6 @@
       "theme_ids": [],
       "review_priority": 20,
       "review_reason": "0 matched concepts; 1 evidence source; last observed 2026-09-07T20:10:13Z."
-    },
-    {
-      "name": "muellerberndt/cadence",
-      "rank": null,
-      "editorial_rank": null,
-      "source_date": "2026-09-07T10:20:11Z",
-      "category": "Discovered public repository",
-      "why_it_matters": "Experimental neural library for local overlap repair, equilibrium detuning, and continuous learning.",
-      "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-      "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
-      "official_url": "https://github.com/muellerberndt/cadence",
-      "primary_layer": "Unclassified",
-      "secondary_layer": null,
-      "cross_layer": false,
-      "ratings": {},
-      "opportunity_score": null,
-      "action": "Discovered",
-      "hype_risk": "N/O",
-      "source_ids": [
-        "github"
-      ],
-      "cross_source": false,
-      "evidence_ids": [
-        "github:1360078054"
-      ],
-      "review_status": "discovered",
-      "theme_ids": [],
-      "review_priority": 20,
-      "review_reason": "0 matched concepts; 1 evidence source; last observed 2026-09-07T10:20:11Z."
     },
     {
       "name": "lucidrains/declarative-attention",
@@ -8421,7 +8613,7 @@
       "editorial_rank": null,
       "source_date": "2026-09-01T02:30:25Z",
       "category": "Discovered public repository",
-      "why_it_matters": "730 live x.ai/bot shares for Grok Bot — every link status-checked, every row attributed. Bilingual EN/中文 catalog with a JSON schema, CI, and a searchable site.",
+      "why_it_matters": "1894 live x.ai/bot shares for Grok Bot — every link status-checked, every row attributed. Bilingual EN/中文 catalog with a JSON schema, CI, and a searchable site.",
       "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
       "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
       "official_url": "https://github.com/kydlikebtc/awesome-grokbot",
@@ -9001,7 +9193,7 @@
       "editorial_rank": null,
       "source_date": "2026-08-24T14:30:32Z",
       "category": "Discovered public repository",
-      "why_it_matters": "Unbagrnd - Free, Fast & Open-source AI-powered background remover for Windows, macOS, and Linux.",
+      "why_it_matters": "Unbagrnd - Free, Fast & Open-source AI-powered background remover for Windows, macOS, Linux and Android.",
       "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
       "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
       "official_url": "https://github.com/zidniryi/unbagrnd",
@@ -9295,7 +9487,7 @@
       "editorial_rank": null,
       "source_date": "2026-01-14T17:48:09Z",
       "category": "Discovered public repository",
-      "why_it_matters": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,400+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
+      "why_it_matters": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,445+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
       "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
       "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
       "official_url": "https://github.com/sickn33/agentic-awesome-skills",
@@ -11920,10 +12112,10 @@
         "secondary_layer": "harness-orchestration",
         "maturity": "broadly-corroborated",
         "source_count": 14,
-        "evidence_count": 71,
-        "project_count": 43,
+        "evidence_count": 73,
+        "project_count": 44,
         "reviewed_project_count": 6,
-        "queued_project_count": 9,
+        "queued_project_count": 10,
         "project_names": [
           "CLI-Anything",
           "Nango",
@@ -11931,7 +12123,7 @@
           "sadia-sigma-lab/BLINDSPOT",
           "JordyZomer/lemmalog",
           "WikiSkill",
-          "wh000wh000/awesome-jev-live",
+          "qiz029/dscode",
           "naw103/foremerge"
         ]
       },
@@ -11943,19 +12135,19 @@
         "secondary_layer": null,
         "maturity": "corroborated-source-concentrated",
         "source_count": 12,
-        "evidence_count": 52,
-        "project_count": 24,
+        "evidence_count": 54,
+        "project_count": 25,
         "reviewed_project_count": 4,
-        "queued_project_count": 5,
+        "queued_project_count": 6,
         "project_names": [
           "DeepSeek Harness",
           "LoopX",
           "sadia-sigma-lab/BLINDSPOT",
           "Vincentwei1021/anything2explainer",
+          "qiz029/dscode",
           "naw103/foremerge",
           "Omni-Scientist/Awesome-AI-Scientist",
-          "S1N6H/pentest-harness",
-          "halofyai/halofy"
+          "S1N6H/pentest-harness"
         ]
       },
       {
@@ -12012,10 +12204,10 @@
         "secondary_layer": "tools-skills-integrations",
         "maturity": "broadly-corroborated",
         "source_count": 9,
-        "evidence_count": 42,
-        "project_count": 13,
+        "evidence_count": 44,
+        "project_count": 14,
         "reviewed_project_count": 4,
-        "queued_project_count": 3,
+        "queued_project_count": 1,
         "project_names": [
           "Docling",
           "OpenReel Video",
@@ -12023,8 +12215,8 @@
           "Vincentwei1021/anything2explainer",
           "zidniryi/open-source-ai-models",
           "AhmadJeddi/LLM-VLM-Guide",
-          "UMass-Embodied-AGI/SyncWorld",
-          "OpenRLHF/OpenRLHF"
+          "OpenRLHF/OpenRLHF",
+          "UMass-Embodied-AGI/SyncWorld"
         ]
       },
       {
@@ -12054,11 +12246,11 @@
         "primary_layer": "models-capabilities",
         "secondary_layer": "compute-inference-serving",
         "maturity": "corroborated-source-concentrated",
-        "source_count": 13,
-        "evidence_count": 86,
-        "project_count": 17,
+        "source_count": 14,
+        "evidence_count": 89,
+        "project_count": 18,
         "reviewed_project_count": 3,
-        "queued_project_count": 6,
+        "queued_project_count": 7,
         "project_names": [
           "OpenReel Video",
           "Unsloth Desktop",
@@ -12067,7 +12259,7 @@
           "zidniryi/open-source-ai-models",
           "XHToken/Spark-X2.5",
           "amitshekhariitbhu/ai-engineering-interview-questions",
-          "bojieli/ai-infra-book"
+          "ekzhang/openjev-sglang"
         ]
       },
       {
@@ -12078,10 +12270,10 @@
         "secondary_layer": "assurance",
         "maturity": "broadly-corroborated",
         "source_count": 25,
-        "evidence_count": 152,
-        "project_count": 26,
+        "evidence_count": 155,
+        "project_count": 27,
         "reviewed_project_count": 3,
-        "queued_project_count": 3,
+        "queued_project_count": 4,
         "project_names": [
           "sadia-sigma-lab/BLINDSPOT",
           "WikiSkill",
@@ -12089,8 +12281,8 @@
           "Omni-Scientist/Awesome-AI-Scientist",
           "amitshekhariitbhu/ai-engineering-interview-questions",
           "modelscope/ms-cookbook",
-          "Anil-matcha/awesome-claude-fable-5-1",
-          "Flood-Lab/HydroTuring"
+          "whitecircle/halo",
+          "Anil-matcha/awesome-claude-fable-5-1"
         ]
       },
       {
@@ -12101,19 +12293,19 @@
         "secondary_layer": "tools-skills-integrations",
         "maturity": "corroborated-source-concentrated",
         "source_count": 13,
-        "evidence_count": 53,
-        "project_count": 17,
+        "evidence_count": 56,
+        "project_count": 18,
         "reviewed_project_count": 3,
-        "queued_project_count": 2,
+        "queued_project_count": 3,
         "project_names": [
           "okf-memory/okf-agent-memory",
           "Hallmark",
           "Agenta-AI/awesome-ai-agent-platforms",
+          "qiz029/dscode",
           "naw103/foremerge",
           "xai-org/grok-build",
           "acryldev/acryl",
-          "alirezarezvani/claude-skills",
-          "earendil-works/pi"
+          "alirezarezvani/claude-skills"
         ]
       },
       {
@@ -12123,8 +12315,8 @@
         "primary_layer": "models-capabilities",
         "secondary_layer": "tools-skills-integrations",
         "maturity": "corroborated-source-concentrated",
-        "source_count": 10,
-        "evidence_count": 18,
+        "source_count": 11,
+        "evidence_count": 19,
         "project_count": 5,
         "reviewed_project_count": 3,
         "queued_project_count": 0,
@@ -12144,19 +12336,19 @@
         "secondary_layer": null,
         "maturity": "corroborated-source-concentrated",
         "source_count": 12,
-        "evidence_count": 69,
-        "project_count": 16,
+        "evidence_count": 75,
+        "project_count": 18,
         "reviewed_project_count": 2,
-        "queued_project_count": 8,
+        "queued_project_count": 9,
         "project_names": [
           "Unsloth Desktop",
           "TypeSafe AI Jev",
+          "qiz029/dscode",
           "wh000wh000/awesome-jev-live",
           "XHToken/Spark-X2.5",
           "cobanov/awesome-jev",
           "ekzhang/openjev-sglang",
-          "kraayenjon/awesome-jev",
-          "NSStudent/JevSwiftSDK"
+          "kraayenjon/awesome-jev"
         ]
       },
       {
@@ -12240,7 +12432,7 @@
         "secondary_layer": null,
         "maturity": "broadly-corroborated",
         "source_count": 7,
-        "evidence_count": 27,
+        "evidence_count": 28,
         "project_count": 7,
         "reviewed_project_count": 0,
         "queued_project_count": 1,
@@ -12256,16 +12448,16 @@
       }
     ],
     "quality": {
-      "classification_coverage": 0.327,
-      "classified_public_records": 511,
-      "unclassified_public_records": 1052,
-      "classification_review_records": 1052,
+      "classification_coverage": 0.32,
+      "classified_public_records": 526,
+      "unclassified_public_records": 1119,
+      "classification_review_records": 1119,
       "recent_sources": 29,
       "aging_sources": 3,
       "historical_sources": 4,
       "reviewed_projects": 25,
       "queued_projects": 25,
-      "discovered_projects": 203
+      "discovered_projects": 208
     },
     "classification_audit": {
       "id": "classification-audit-2026-09-21",
@@ -12296,12 +12488,1199 @@
       ],
       "next_step": "Review recurring unmatched clusters before adding vocabulary or proposing a new theme; prefer precise phrases with inspected examples over generic words such as agent, model, or evaluation.",
       "limitation": "This was a taxonomy-gap audit, not a relevance judgment on all 1,162 records. The 108 sampled records left unresolved require further review or an explicit discard policy.",
-      "current_unclassified_records": 1052,
-      "current_classification_coverage": 0.327
+      "current_unclassified_records": 1119,
+      "current_classification_coverage": 0.32
     },
     "freshness_note": "Freshness is based on the latest dated evidence observed for each source, not a direct collector-uptime check. Recent means 30 days or less; aging means 31–90 days; historical means more than 90 days."
   },
   "evidence": [
+    {
+      "id": "hn:49799677",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Built a Memory-Test Game Inspired by the Chimp Test",
+      "summary": "",
+      "url": "https://puzznest.com/memory-test",
+      "published_at": "2026-09-22T11:39:57+00:00",
+      "authors": [
+        "puzznest"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799672",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: OmniUil AI – PQC Scanner/Taint Analysis and Migration Intelligence Rust",
+      "summary": "",
+      "url": "https://github.com/Uilcol/omniuil-ai",
+      "published_at": "2026-09-22T11:39:28+00:00",
+      "authors": [
+        "UilCol"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799645",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Reupsell – AI Product Accessories for Shopify",
+      "summary": "",
+      "url": "https://apps.shopify.com/reupsell",
+      "published_at": "2026-09-22T11:36:20+00:00",
+      "authors": [
+        "motion-hero"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799643",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "The Hyperlocal Customs of the Country",
+      "summary": "",
+      "url": "https://www.nytimes.com/2026/09/05/opinion/unique-american-local-festivals.html",
+      "published_at": "2026-09-22T11:36:12+00:00",
+      "authors": [
+        "paulpauper"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799641",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Analyzing Jev, a new AI model",
+      "summary": "",
+      "url": "https://blog.senko.net/analyzing-jev-a-new-ai-model",
+      "published_at": "2026-09-22T11:36:00+00:00",
+      "authors": [
+        "taubek"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799640",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Solitaire Alone Together",
+      "summary": "",
+      "url": "https://solitairealonetogether.com/",
+      "published_at": "2026-09-22T11:35:59+00:00",
+      "authors": [
+        "fratellobigio"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799638",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Could Latin become Europe's common language? A young group thinks it can",
+      "summary": "",
+      "url": "https://www.lrt.lt/en/news-in-english/19/3055161/could-latin-become-europe-s-common-language-a-young-group-thinks-it-can",
+      "published_at": "2026-09-22T11:35:47+00:00",
+      "authors": [
+        "paulpauper"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799636",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "DotFly – a fruit fly's brain, simulated in C#",
+      "summary": "",
+      "url": "https://kokosa.dev/blog/2026/dotfly/",
+      "published_at": "2026-09-22T11:35:33+00:00",
+      "authors": [
+        "stared"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799630",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Banning self-recursive improvement in AI models?",
+      "summary": "",
+      "url": "https://marginalrevolution.com/marginalrevolution/2026/09/banning-self-recursive-improvement-in-ai-models.html",
+      "published_at": "2026-09-22T11:35:22+00:00",
+      "authors": [
+        "paulpauper"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799622",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Parallel Algorithms [pdf]",
+      "summary": "",
+      "url": "https://www.cs.cmu.edu/~guyb/paralg/paralg/parallel.pdf",
+      "published_at": "2026-09-22T11:34:42+00:00",
+      "authors": [
+        "Ir0n"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799603",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Putin's party would have won only 34% without ballot stuffing, analysis suggests",
+      "summary": "",
+      "url": "https://novayagazeta.eu/en/articles/2026/09/22/putin-s-party-would-have-won-only-34-without-ballot-stuffing-statistical-analysis-suggests-en-news",
+      "published_at": "2026-09-22T11:32:13+00:00",
+      "authors": [
+        "giuliomagnifico"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799577",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Type Punning in C and C++",
+      "summary": "",
+      "url": "https://blog.pwkf.org/2026/09/21/correct-type-punning-in-c.html",
+      "published_at": "2026-09-22T11:29:47+00:00",
+      "authors": [
+        "ingve"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799546",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "God told them to sell crypto. Their investors lost everything",
+      "summary": "",
+      "url": "https://www.technologyreview.com/2026/09/10/1143588/indxcoin-god-regalados-sell-crypto-investors-lost-everything/",
+      "published_at": "2026-09-22T11:27:21+00:00",
+      "authors": [
+        "Geekette"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799545",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Bidslot – one screen, sold by the minute, anyone can take it from you",
+      "summary": "",
+      "url": "https://bidslot.io",
+      "published_at": "2026-09-22T11:27:18+00:00",
+      "authors": [
+        "honzaaap"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799525",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Dvd.club – a community Blu-ray and DVD lending library",
+      "summary": "I was a huge fan of Netflix DVD back in the day and very sad when it was sunset, so I made dvd.club.<p>Was originally written in Python, but have been loving using Go, so rewrote it. Stack is FreeBSD + go + SQLite + vanilla HTML&#x2F;CSS.",
+      "url": "https://www.dvd.club/",
+      "published_at": "2026-09-22T11:24:50+00:00",
+      "authors": [
+        "ShinyCyril"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799524",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Sunrise due east from everywhere on Earth, 23 September 2026",
+      "summary": "",
+      "url": "https://pilgrimapp.org/sunpath/2026-autumn-equinox/",
+      "published_at": "2026-09-22T11:24:41+00:00",
+      "authors": [
+        "momentmaker"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799509",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "It's Trump's world, and he's accelerating its chaos",
+      "summary": "",
+      "url": "https://www.cnn.com/2026/09/22/politics/trump-un-general-assembly-speech",
+      "published_at": "2026-09-22T11:23:31+00:00",
+      "authors": [
+        "dat999zx"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799504",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Working-Class Taxpayers Subsidize Billionaires' Climate-Killing Private Jets",
+      "summary": "",
+      "url": "https://www.commondreams.org/news/taxpayer-dollars-to-private-jet",
+      "published_at": "2026-09-22T11:23:02+00:00",
+      "authors": [
+        "DefNotAiForSure"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799492",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "AV1Converter 3.0",
+      "summary": "",
+      "url": "https://github.com/framicheli/av1converter",
+      "published_at": "2026-09-22T11:22:19+00:00",
+      "authors": [
+        "francescomi"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799468",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "PanTilt–desk pan-tilt tracker on Nim+ORT/OpenVINO+Nano(I debug on apples)",
+      "summary": "",
+      "url": "https://github.com/olesha-ai/pan-tilt-ai-tracker",
+      "published_at": "2026-09-22T11:20:19+00:00",
+      "authors": [
+        "olesha-ai"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799465",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Red5 and Ezdrm Team to Streamline Delivery of Content",
+      "summary": "",
+      "url": "https://www.red5.net/blog/red5-and-ezdrm-streamline-delivery-of-content-security/",
+      "published_at": "2026-09-22T11:20:11+00:00",
+      "authors": [
+        "mondainx"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799464",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "New England RetroFest and the Maine Vintage Computer Society",
+      "summary": "",
+      "url": "https://www.goto10retro.com/p/new-england-retrofest-and-the-maine",
+      "published_at": "2026-09-22T11:20:10+00:00",
+      "authors": [
+        "rbanffy"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799433",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "The Curious Case of the Soulless Private Equity Cookie",
+      "summary": "",
+      "url": "https://www.weareravenous.com/the-curious-case-of-the-soulless-private-equity-cookie/",
+      "published_at": "2026-09-22T11:17:33+00:00",
+      "authors": [
+        "Geekette"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799429",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "SMPTE 2110",
+      "summary": "",
+      "url": "https://en.wikipedia.org/wiki/SMPTE_2110",
+      "published_at": "2026-09-22T11:17:00+00:00",
+      "authors": [
+        "gregsadetsky"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799398",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Apple Excludes Older iPhones from New Camera Feature",
+      "summary": "",
+      "url": "https://www.macrumors.com/2026/09/22/apple-backtracks-camera-feature-compatibility/",
+      "published_at": "2026-09-22T11:13:07+00:00",
+      "authors": [
+        "tosh"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799397",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Rebuilding my journaling app to run on-device",
+      "summary": "",
+      "url": "https://www.tryweave.app/",
+      "published_at": "2026-09-22T11:12:50+00:00",
+      "authors": [
+        "cobrabts"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799351",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Gladia to join OVH Groupe, accelerating Europe's sovereign voice AI ambitions",
+      "summary": "",
+      "url": "https://www.gladia.io/blog/gladia-joins-ovh-groupe",
+      "published_at": "2026-09-22T11:08:09+00:00",
+      "authors": [
+        "rolisz"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799339",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Accelerated Server Sales Are Themselves Accelerating",
+      "summary": "",
+      "url": "https://www.nextplatform.com/compute/2026/09/21/accelerated-server-sales-are-themselves-accelerating/5297993",
+      "published_at": "2026-09-22T11:06:41+00:00",
+      "authors": [
+        "rbanffy"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799323",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "FCIA's FC-SP-3: A Standard Ready for the Quantum-Computing World",
+      "summary": "",
+      "url": "https://www.storagereview.com/review/fcias-fc-sp-3-a-standard-ready-for-the-quantum-computing-world",
+      "published_at": "2026-09-22T11:04:43+00:00",
+      "authors": [
+        "rbanffy"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799306",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "When the Debugger Lies",
+      "summary": "",
+      "url": "https://danielmangum.com/posts/when-the-debugger-lies/",
+      "published_at": "2026-09-22T11:02:43+00:00",
+      "authors": [
+        "hasheddan"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799287",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "JetBrains Air: A System of Products for Agentic Software Development",
+      "summary": "",
+      "url": "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/",
+      "published_at": "2026-09-22T11:00:58+00:00",
+      "authors": [
+        "FinnLobsien"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799241",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: An atlas of system designs with interactive architecture diagrams",
+      "summary": "",
+      "url": "https://atlas-sysdes.vercel.app/",
+      "published_at": "2026-09-22T10:54:31+00:00",
+      "authors": [
+        "mertkahyaoglu"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49799083",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "9 Ads per Minute: FIFA Cup 26 – \"the price of the beautiful game\"",
+      "summary": "",
+      "url": "https://www.bristol.ac.uk/news/2026/september/world-cup-viewers.html",
+      "published_at": "2026-09-22T10:36:44+00:00",
+      "authors": [
+        "KellyCriterion"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49798699",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Is Claude 20x actually 20x?",
+      "summary": "Im seeing more and more about how Claude 20x is actually not 20x and its getting &quot;dumber&quot;. I thought I was going crazy because I legitimately thought maybe I was doing something wrong but I haven’t changed any of my practises and approaches for at least a month or two and it’s definitely gotten way dumber and making way more errors and I’m having to redo a lot of work and while at the same time it’s just burning through tokens<p>https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;ClaudeCode&#x2F;comments&#x2F;1wn0xn9&#x2F;max20x_is_now_just_15_times_better_than_max5x&#x2F;<p>https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;ClaudeAI&#x2F;comments&#x2F;1wl6wyn&#x2F;its_time_to_cancel_your_subscriptions_anthropic&#x2F;",
+      "url": "https://news.ycombinator.com/item?id=49798699",
+      "published_at": "2026-09-22T09:49:16+00:00",
+      "authors": [
+        "ko3us"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49798597",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Verda (Finland) raises $189M in Series B",
+      "summary": "",
+      "url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers",
+      "published_at": "2026-09-22T09:36:31+00:00",
+      "authors": [
+        "cmrdporcupine"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49798257",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Tell HN: Claude Code just accepted and signed a contract for me. Without asking",
+      "summary": "I told it to push a project further. It has an outside dependency where the (unread by me) contract was in my Gmail. It downloaded the PDF contract. Found a saved signature PNG on my computer, placed it at the right spot within the contract and prepared to send it when I intervened.",
+      "url": "https://news.ycombinator.com/item?id=49798257",
+      "published_at": "2026-09-22T08:49:13+00:00",
+      "authors": [
+        "franze"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49798204",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "AMD's random number generator can't generate a 0?",
+      "summary": "",
+      "url": "https://board.flatassembler.net/topic.php?t=24261",
+      "published_at": "2026-09-22T08:39:43+00:00",
+      "authors": [
+        "BruceEel"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49797982",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "I said no and Apple said yes",
+      "summary": "",
+      "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
+      "published_at": "2026-09-22T08:04:55+00:00",
+      "authors": [
+        "thatslast"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49797801",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "How people are testing AI agents?",
+      "summary": "",
+      "url": "https://news.ycombinator.com/item?id=49797801",
+      "published_at": "2026-09-22T07:36:18+00:00",
+      "authors": [
+        "sanathbhat"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "latent-space:c5ef439db94fe95e2aa5",
+      "source_id": "latent-space",
+      "source_type": "expert-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M",
+      "summary": "crowning a new Chinese frontier lab",
+      "url": "https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b",
+      "published_at": "2026-09-22T06:30:56+00:00",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "compute-inference-serving"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49797323",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Can gzip be a language model?",
+      "summary": "",
+      "url": "https://nathan.rs/posts/gzip-lm/",
+      "published_at": "2026-09-22T06:08:39+00:00",
+      "authors": [
+        "networked"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49796660",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "MiMo-v2.6-Pro: Intelligence, Performance and Price Analysis",
+      "summary": "",
+      "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+      "published_at": "2026-09-22T04:02:09+00:00",
+      "authors": [
+        "theanonymousone"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49795579",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Claude Status – Elevated errors for multiple models",
+      "summary": "",
+      "url": "https://status.claude.com/incidents/7g1qpkyz5gxh",
+      "published_at": "2026-09-22T01:05:19+00:00",
+      "authors": [
+        "corvad"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49795122",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Socrates vs. the Written Word (2011)",
+      "summary": "",
+      "url": "https://wondermark.com/socrates-vs-writing/",
+      "published_at": "2026-09-22T00:06:55+00:00",
+      "authors": [
+        "spectraldrift"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49795109",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Jev Powered Obsidian Search",
+      "summary": "",
+      "url": "https://github.com/Emlembow/jev-graph-search",
+      "published_at": "2026-09-22T00:05:39+00:00",
+      "authors": [
+        "MikeLembo"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "huggingface-blog:6b3083011aeb49b1cc1d",
+      "source_id": "huggingface-blog",
+      "source_type": "first-party-lab",
+      "evidence_kind": "public-source-item",
+      "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+      "summary": "",
+      "url": "https://huggingface.co/blog/omlx",
+      "published_at": "2026-09-22T00:00:00+00:00",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "huggingface-blog:689d78c6e007ab8e2c4f",
+      "source_id": "huggingface-blog",
+      "source_type": "first-party-lab",
+      "evidence_kind": "public-source-item",
+      "title": "Transformers now runs llama.cpp quants",
+      "summary": "",
+      "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+      "published_at": "2026-09-22T00:00:00+00:00",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "compute-inference-serving"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
     {
       "id": "bluesky:1278ebf77949:3mw2usvvn6c26",
       "source_id": "bluesky-ethan-mollick",
@@ -12313,6 +13692,31 @@
       "published_at": "2026-09-21T23:34:41.829Z",
       "authors": [
         "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49794736",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Looking forward to Git 2.56 – and 3.0",
+      "summary": "",
+      "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
+      "published_at": "2026-09-21T23:16:51+00:00",
+      "authors": [
+        "chmaynard"
       ],
       "projects": [],
       "theme_ids": [],
@@ -12347,6 +13751,310 @@
       "stack_layers": [
         "models-capabilities"
       ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "anthropic-news-research:b44c829b27028fd75a53",
+      "source_id": "anthropic-news-research",
+      "source_type": "first-party-lab",
+      "evidence_kind": "public-source-item",
+      "title": "How Claude is uplifting biomolecular modeling",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "published_at": "2026-09-21T23:14:52.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "simon-willison:b3e5263fa8976c3c350c",
+      "source_id": "simon-willison",
+      "source_type": "practitioner-blog",
+      "evidence_kind": "public-source-item",
+      "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+      "summary": "Last week TypeSafe AI unveiled Jev , their first example of a new category of model that they are calling \"System One models\" (I'm with Maggie Appleton, I think \"decision models\" is a better name for these). Jev is an interesting variant on the usual LLM format: it still accepts text inputs, but instead of text output it returns floating point numbers corresponding to categories, yes/no questions, ratings, and associated confidence scores. TypeSafe describe Jev like this: Think of Jev as a frontier-intelligence function call: unstructured state in, typed probabilistic decisions out. It's also very fast, and really cheap . Regular LLMs are priced in terms of input and output tokens, with output generally charged at significantly higher rates. Jev charges only for input - output is free - and the input price of their first model is $0.042 per million tokens - cheaper even than OpenAI's GPT-5 Nano ($0.05/million). Jev lets you ask questions about text or semi-structured data. You compose a \"state\" object containing a string, array of strings, or set of name-value pairs - this might describe an article, or a customer, or any other kind of record. You then send that to their API with on",
+      "url": "https://simonwillison.net/2026/Sep/21/jev/",
+      "published_at": "2026-09-21T23:09:20+00:00",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49794615",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Spymarks, Not Watermarks",
+      "summary": "",
+      "url": "https://brand.io/article/spymarks/",
+      "published_at": "2026-09-21T23:03:49+00:00",
+      "authors": [
+        "possibilistic"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49794330",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "I don't want to read what you didn't write",
+      "summary": "",
+      "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
+      "published_at": "2026-09-21T22:30:41+00:00",
+      "authors": [
+        "mooreds"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "simon-willison:b3a971b72e2de3b7e5ee",
+      "source_id": "simon-willison",
+      "source_type": "practitioner-blog",
+      "evidence_kind": "public-source-item",
+      "title": "Cloudflare Python Workers are now generally available",
+      "summary": "Cloudflare Python Workers are now generally available After a two year preview, Cloudflare's support for running Python code in their server-side Workers platform is now stable: \"Python is now a first-class, fully supported language on the Cloudflare Developer Platform\". A neat thing about this is how it works. Cloudflare are running Python compiled to WebAssembly via Pyodide in their V8-based workerd runtime. This comes with some limitations, documented here - most notably both multiprocessing and threading are non-functional in the WebAssembly VM. One particularly interesting detail of this is the local development environment story - their pywrangler development tool (confusingly packaged as workers-py on PyPI) runs a full local simulation of their stack, including executing code with Pyodide in WebAssembly in V8 in a 123MB workerd binary, which for me ended up in node_modules/@cloudflare/workerd-darwin-arm64/bin/workerd . Python Workers represent a significant investment in the wider Python ecosystem by Cloudflare. The release announcement is credited to Gyeongjae Choi, Dominik Picheta, and Hood Chatham - Gyeongjae and Hood are both Pyodide core maintainers. Via Hacker News Tag",
+      "url": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
+      "published_at": "2026-09-21T22:25:44+00:00",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "latent-space:7409d5ffee8a2c05841b",
+      "source_id": "latent-space",
+      "source_type": "expert-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+      "summary": "The definitive Jev podcast with its lead creator.",
+      "url": "https://www.latent.space/p/jev",
+      "published_at": "2026-09-21T22:13:49+00:00",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49794120",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "I'm addicted to buying domains for my vibe-coded apps that get 0 visitors",
+      "summary": "",
+      "url": "https://news.ycombinator.com/item?id=49794120",
+      "published_at": "2026-09-21T22:09:41+00:00",
+      "authors": [
+        "arpanghoshal"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "nvidia-developer-blog:837464fefd470eaa54f6",
+      "source_id": "nvidia-developer-blog",
+      "source_type": "first-party-lab",
+      "evidence_kind": "public-source-item",
+      "title": "Simplifying Model Serving Across Multiple GPUs with NVIDIA TensorRT Multi-Device Integration in NVIDIA Dynamo-Triton",
+      "summary": "The compute and memory demands of generative AI increasingly exceed what a single GPU can provide. NVIDIA TensorRT multi-device inference is a new capability...",
+      "url": "https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/",
+      "published_at": "2026-09-21T21:51:06Z",
+      "authors": [
+        "Tanya Lenz"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "compute-inference-serving"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49793764",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Ask HN: Dead Internet",
+      "summary": "For some time there has been a steady flow of LLM bot accounts on HackerNews. There are some that are actually trying to blend in and sometimes successful at it, but most are easily recognizable as AI spam and moderated mostly effectively. Most of them you only see when you enable showdead.<p>I always wondered what their purpose is. Most of them are full of LLM tells, don&#x27;t try to hide at all and they don&#x27;t even try to sell anything.<p>I just stumbled over this dead post in new: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49793503 ^1 It&#x27;s a submission by an agent that is completely transparent about it. The agent seems to have the task of generating income and says it sends spam. It&#x27;s quite interesting and maybe revealing. I recommend the short read, even though it&#x27;s LLM output.<p>What I&#x27;m about is that this is not a bot that was created by someone to spam HackerNews as spam has traditionally been. It&#x27;s spam by a bot that decided to create an account here and submit a post on its own and it consistent with LLM posts I have seen here in the recent past.<p>I don&#x27;t know how to feel about this. We seem to be one step closer to a dead inte",
+      "url": "https://news.ycombinator.com/item?id=49793764",
+      "published_at": "2026-09-21T21:34:28+00:00",
+      "authors": [
+        "basilikum"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49793545",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: WebGCM – a global climate model running in the browser on WebGPU",
+      "summary": "I started this four and a half years ago. I wanted to build a climate model as both a toy and educational tool that I could visualize in a web browser. I have always been interested in meteorology and asked r&#x2F;ClimateScience for advice on the math and physics on building an in-browser climate model as an educational tool, and a few people said it was far too ambitious. They were right. I could build the geometry, an icosahedral hexagonal grid on a globe, and I have an intuitive understanding of the math but integrating the Navier-Stokes equations and the physics proved to be too difficult for me, and the closest I got after nearly of month of work was a model that blew up within two simulated days.<p>Fast forward 4 and a half years. I figured that if models like Claude and GPT Astra could solve a milennium prize problem about fluid dynamics then they could help me fix the broken model and iterate on it until my vision was realized. On Friday, I threw down $200 for a Claude Max subscription, and this is the result of a single weekend&#x27;s work on top of where I had left off.<p>What it is now, in technical terms: a hydrostatic primitive-equation atmosphere on that hex grid (the",
+      "url": "https://gcm.echorelay.net/",
+      "published_at": "2026-09-21T21:15:04+00:00",
+      "authors": [
+        "jlhawn"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "nvidia-developer-blog:3f062ae5d12a3d2b6381",
+      "source_id": "nvidia-developer-blog",
+      "source_type": "first-party-lab",
+      "evidence_kind": "public-source-item",
+      "title": "How to Evaluate AI Agents From Tool Calls to Task Completion",
+      "summary": "When you ship an AI agent, the key question is whether it can execute a chain of work across dozens of sequential tool calls against a live environment, and...",
+      "url": "https://developer.nvidia.com/blog/how-to-evaluate-ai-agents-from-tool-calls-to-task-completion/",
+      "published_at": "2026-09-21T21:05:28Z",
+      "authors": [
+        "Elizabeth Goodman"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49793381",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Ask HN: Why does it matter if no one reads your novel as long as the AIs do?",
+      "summary": "AI can in principle surface content that you create that no humans consume directly. And it could even credit and financially compensate you whenever this happens.<p>So it seems that you can have a creator-only economy where all humans create and the AIs do most of the consuming.<p>And stuff that the AIs surface in their replies allows humans to indirectly consume some of your content (in which case you would be credited and financially compensated) and perhaps even lead to them directly consuming it as a result of the free advertising.<p>Do you think this is workable as a future model for creation and consumption (and not just for novels)?",
+      "url": "https://news.ycombinator.com/item?id=49793381",
+      "published_at": "2026-09-21T21:02:48+00:00",
+      "authors": [
+        "amichail"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -12407,6 +14115,56 @@
       }
     },
     {
+      "id": "hn:49792742",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Blackgit – use Git to only download those cared files",
+      "summary": "Git is supposed to be bad at handling mono repos especially where there are many binary files like game projects repo, and also there are no permisson settings, but are important in game development. BlackGit&#x27;s cli client lets you download only cared files through sparse-checkout(initially not even the default root files) with a mini agent to use natural languages to manipulate the repo, and blackgit&#x27;s server serves a file level control layer as a proxy to upstreams(github&#x2F;gitlab)",
+      "url": "https://github.com/zhuzhonghua/blackgit",
+      "published_at": "2026-09-21T20:13:10+00:00",
+      "authors": [
+        "zhonghua"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49792730",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "MiMo v2.6",
+      "summary": "",
+      "url": "https://mimo.xiaomi.com/mimo-v2-6",
+      "published_at": "2026-09-21T20:12:12+00:00",
+      "authors": [
+        "volf_"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "bluesky:6cf953cc69a4:3mw2il75vy22y",
       "source_id": "bluesky-emily-bender",
       "source_type": "expert-social",
@@ -12417,6 +14175,131 @@
       "published_at": "2026-09-21T19:55:38.200Z",
       "authors": [
         "Emily M. Bender"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49792342",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Transformers Explained Visually",
+      "summary": "",
+      "url": "https://poloclub.github.io/transformer-explainer/",
+      "published_at": "2026-09-21T19:43:49+00:00",
+      "authors": [
+        "aray07"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49792323",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Differential – a TUI diff reviewer with semantic grouping",
+      "summary": "Hi all — for those of you still reviewing code, I built a tool to make that easier, mostly for my own sake. There are some alternatives out there already, but none of them quite checked all the boxes for me, so I made my own. Feedback welcome!",
+      "url": "https://github.com/thepartly/differential",
+      "published_at": "2026-09-21T19:42:38+00:00",
+      "authors": [
+        "gogoout"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49792067",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "summary": "",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
+      "published_at": "2026-09-21T19:23:33+00:00",
+      "authors": [
+        "julian_digital"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49791997",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "The Advisory Group on Mathematics and Artificial Intelligence",
+      "summary": "",
+      "url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/",
+      "published_at": "2026-09-21T19:17:42+00:00",
+      "authors": [
+        "digital55"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49791939",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "NASA’s Mars Sample Return mission is dead",
+      "summary": "",
+      "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
+      "published_at": "2026-09-21T19:14:12+00:00",
+      "authors": [
+        "Muhammad523"
       ],
       "projects": [],
       "theme_ids": [],
@@ -14095,6 +15978,36 @@
       }
     },
     {
+      "id": "hn:49789356",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Show HN: Foremerge – Catch intent conflicts between parallel coding agents",
+      "summary": "At, GPTree, we run several coding agents across our team on one repo using parallel worktrees. Apart from wasted time reviewing and fixing conflicts at PR time, the failures that hurt the most are when multiple plans or tickets cause architecture changes that cannot both be true. Ex. one agent replaces a class while another one is in the process of extending it. Git only notices if the resulting patches happen to touch the same lines and the review only catches it if they are familiar with both tickets.<p>Foremerge is a local &quot;git like&quot; coordination layer that sits above git (ie. does not interact with or change the way git and worktrees function), Before editing each agent publishes an intent and the scopes it will change, with the operation it plans to complete on each one.<p><pre><code> foremerge intent publish --agent &quot;$A&quot; \\ --summary &quot;Replace PaymentService with StripePaymentService&quot; \\ --scope symbol:PaymentService=replace foremerge intent publish --agent &quot;$B&quot; \\ --summary &quot;Add PayPal support to PaymentService&quot; \\ --scope symbol:PaymentService=extend </code></pre> The publish by the 2nd agent returns a HIGH destructive_vs_additiv",
+      "url": "https://github.com/naw103/foremerge",
+      "published_at": "2026-09-21T16:22:06+00:00",
+      "authors": [
+        "naw103"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hn:49789320",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -14154,8 +16067,8 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "evidence_kind": "public-source-item",
-      "title": "This Digital Radio Gets Messages to the World’s Remotest Locations",
-      "summary": "",
+      "title": "HERMES radio enables voice and data communication over vast distances",
+      "summary": "<a href=\"https:&#x2F;&#x2F;hermes.radio&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;hermes.radio&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;www.rhizomatica.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.rhizomatica.org&#x2F;</a>",
       "url": "https://spectrum.ieee.org/hermes-shortwave-radio-digital-data",
       "published_at": "2026-09-21T16:14:16+00:00",
       "authors": [
@@ -14204,7 +16117,7 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "evidence_kind": "public-source-item",
-      "title": "How do Traffic Signals Work (2019)",
+      "title": "How do traffic signals work? (2019)",
       "summary": "",
       "url": "https://practical.engineering/blog/2019/5/11/how-do-traffic-signals-work",
       "published_at": "2026-09-21T16:06:44+00:00",
@@ -15822,6 +17735,29 @@
       }
     },
     {
+      "id": "openai-news:8fe4474fdbb9c4c46a22",
+      "source_id": "openai-news",
+      "source_type": "first-party-lab",
+      "evidence_kind": "public-source-item",
+      "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+      "summary": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
+      "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+      "published_at": "2026-09-21T12:00:00+00:00",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "openai-news:08ffdb24bebd9aa2ffda",
       "source_id": "openai-news",
       "source_type": "first-party-lab",
@@ -15894,6 +17830,37 @@
       "stack_layers": [
         "harness-orchestration",
         "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "github:1379574728",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "jev-chat/jev-chat-jarvis",
+      "summary": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis",
+      "published_at": "2026-09-21T11:12:53Z",
+      "authors": [
+        "jev-chat"
+      ],
+      "projects": [
+        "jev-chat/jev-chat-jarvis"
+      ],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities"
       ],
       "support_count": 1,
       "monthly_counts": {
@@ -15993,6 +17960,31 @@
       "url": "https://openai.com/index/building-standards-next-phase-ai",
       "published_at": "2026-09-21T10:00:00+00:00",
       "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49785202",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Engineering Memory: On learning to memorize first 100 digits of pi (2024)",
+      "summary": "",
+      "url": "https://gregorygundersen.com/blog/2024/12/21/engineering-memory/",
+      "published_at": "2026-09-21T09:56:34+00:00",
+      "authors": [
+        "fuzzythinker"
+      ],
       "projects": [],
       "theme_ids": [],
       "disposition": "classification-review",
@@ -19556,6 +21548,31 @@
       }
     },
     {
+      "id": "hn:49780175",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "What It's Like to Work in One of America's Data Centers",
+      "summary": "",
+      "url": "https://www.wsj.com/business/what-its-like-to-work-in-one-of-americas-data-centers-b4358003",
+      "published_at": "2026-09-20T21:18:58+00:00",
+      "authors": [
+        "JumpCrisscross"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hn:49780133",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -19648,6 +21665,35 @@
       "theme_ids": [],
       "disposition": "classification-review",
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "simon-willison:e133d02a1d698c5d1f75",
+      "source_id": "simon-willison",
+      "source_type": "practitioner-blog",
+      "evidence_kind": "public-source-item",
+      "title": "MCP was always a bad idea?",
+      "summary": "My comment on MCP was always a bad idea? — Hacker News. This article entirely misses the value that MCP brings today. Sure, there's almost no reason to use MCPs if you are running a full-blown terminal agent (Claude Code, Codex, Meta Muse, OpenClaw etc) with unfettered internet access - just let it call APIs directly. If you want to operate something that's less YOLO than that, you'll find yourself wanting: Control over exactly which external services it can access A way to handle authentication that doesn't allow the agent to directly access API keys A sensible UI to allow users to connect and authenticate further services Strong audit logging for what's going on MCP makes all of that so much easier to provide. Thinking MCP is obsolete because full coding agents don't need it misses out on all of the other things we might want to build. Tags: hacker-news , model-context-protocol",
+      "url": "https://simonwillison.net/2026/Sep/20/hn-49779718/",
+      "published_at": "2026-09-20T20:24:41+00:00",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents",
+        "skills-integrations"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -20690,6 +22736,31 @@
       }
     },
     {
+      "id": "hn:49774161",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "A font that reads what you wrote",
+      "summary": "",
+      "url": "https://rohanadwankar.github.io/posts/semfont.html",
+      "published_at": "2026-09-20T09:38:16+00:00",
+      "authors": [
+        "RohanAdwankar"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "hn:49772961",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -20725,6 +22796,31 @@
       "published_at": "2026-09-20T06:09:52+00:00",
       "authors": [
         "pyeri"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49772263",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "World Wide Words",
+      "summary": "",
+      "url": "https://www.worldwidewords.org/genindex.html",
+      "published_at": "2026-09-20T03:21:12+00:00",
+      "authors": [
+        "Petiver"
       ],
       "projects": [],
       "theme_ids": [],
@@ -20997,6 +23093,31 @@
       "url": "https://simonwillison.net/2026/Sep/19/datasette-auth-github/",
       "published_at": "2026-09-19T19:52:02+00:00",
       "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hn:49769561",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "Divide by depth for instant 3D",
+      "summary": "",
+      "url": "https://gabrieloc.com/2026/09/15/perspective.html",
+      "published_at": "2026-09-19T19:43:13+00:00",
+      "authors": [
+        "gabrieloc"
+      ],
       "projects": [],
       "theme_ids": [],
       "disposition": "classification-review",
@@ -21380,6 +23501,31 @@
       }
     },
     {
+      "id": "hn:49767024",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "evidence_kind": "public-source-item",
+      "title": "JavaFX 27 Native Image on a Raspberry Pi 5",
+      "summary": "",
+      "url": "https://ennerf.github.io/2026/09/18/JavaFX-27-Native-Image-on-a-Raspberry-Pi-5.html",
+      "published_at": "2026-09-19T14:51:09+00:00",
+      "authors": [
+        "0x54MUR41"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:1377211520",
       "source_id": "github",
       "source_type": "repository",
@@ -21748,29 +23894,6 @@
       "summary": "Being a computer scientist who refuses to find anything about LLMs interesting right now is a bit like being a geneticist who refuses to find anything interesting about the recently opened Jurassic Park. Skeptical geneticist: \"pfft, it's just frog DNA. And they deliberately let them eat people for the marketing.\" Tags: llms , ai , generative-ai",
       "url": "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
       "published_at": "2026-09-18T19:21:32+00:00",
-      "authors": [],
-      "projects": [],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2026-09": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      }
-    },
-    {
-      "id": "anthropic-news-research:b44c829b27028fd75a53",
-      "source_id": "anthropic-news-research",
-      "source_type": "first-party-lab",
-      "evidence_kind": "public-source-item",
-      "title": "How Claude is uplifting biomolecular modeling",
-      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-      "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
-      "published_at": "2026-09-18T19:19:41.000Z",
       "authors": [],
       "projects": [],
       "theme_ids": [],
@@ -25795,6 +27918,58 @@
       }
     },
     {
+      "id": "hf-paper:2609.21465",
+      "source_id": "huggingface-papers",
+      "source_type": "paper-curation",
+      "evidence_kind": "public-source-item",
+      "title": "OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue",
+      "summary": "We define OmniVChat (Omni Video Chat) as the task of native audio-visual dialogue between a user and an omni model. In OmniVChat, omni models directly and simultaneously receive audio and video from a user and return text. The user's query is embedded in the audio and video, without a separate text question, external captioning, or speech recognition. Direct audio-visual input reduces external latency and computation while preserving perceptual cues. However, research on OmniVChat faces two constraints: data availability and evaluation. Recordings of people using their own devices are scarce. Furthermore, a good reply often needs to account for the user's surroundings, facial expressions, and nearby objects, and such responses can be expressed in many different ways, making keyword matching unreliable for evaluating reply quality. Recent progress in agent systems and video generation makes generation for comprehension viable, which means using synthesized dialogues for training and evaluation. Therefore, we present OmniVChat-Studio, a multi-agent data engine for synthesizing single- and multi-turn audio-visual dialogues. We use synthesized dialogues to build OmniVChat-Bench, an eva",
+      "url": "https://huggingface.co/papers/2609.21465",
+      "published_at": "2026-09-18T00:00:00+00:00",
+      "authors": [
+        "{'name': 'Haolin He', 'hidden': False}",
+        "{'name': 'Yunfei Chu', 'hidden': False}",
+        "{'name': 'Qi Chen', 'hidden': False}",
+        "{'name': 'Wen Huang', 'hidden': False}",
+        "{'name': 'Yuan Feng', 'hidden': False}",
+        "{'name': 'Muzhi Zhu', 'hidden': False}",
+        "{'name': 'Zheqi Dai', 'hidden': False}",
+        "{'name': 'Haoning Xu', 'hidden': False}",
+        "{'name': 'Dongchao Yang', 'hidden': False}",
+        "{'name': 'Chunyat Wu', 'hidden': False}",
+        "{'name': 'Zining Liang', 'hidden': False}",
+        "{'name': 'Zhengxi Liu', 'hidden': False}",
+        "{'name': 'Xiquan Li', 'hidden': False}",
+        "{'name': 'Xie Chen', 'hidden': False}",
+        "{'name': 'Xize Cheng', 'hidden': False}",
+        "{'name': 'Qize Yang', 'hidden': False}",
+        "{'name': 'Jin Xu', 'hidden': False}",
+        "{'name': 'Qiuqiang Kong', 'hidden': False}"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "agent-harnesses",
+        "multimodal-3d",
+        "training-self-improvement",
+        "voice-audio"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "harness-orchestration",
+        "models-capabilities",
+        "tools-skills-integrations",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "alphasignal:project:typesafe-ai-jev",
       "source_id": "alphasignal",
       "source_type": "newsletter-analysis",
@@ -28233,7 +30408,7 @@
       "source_type": "repository",
       "evidence_kind": "public-source-item",
       "title": "qwdwqfwq/topconf-paper-figure-gallery",
-      "summary": "A searchable gallery of well-designed Figure 1 / teaser figures from ICLR, ICML, NeurIPS, CVPR, ACL, AAAI (2023-2025) — 2,298 curated figures for paper-overview inspiration. Pure static site.",
+      "summary": "A searchable gallery of 2,730 well-designed Figure 1 / teaser figures from ICLR, ICML, NeurIPS, CVPR, ACL, AAAI (2023-2025), tagged with Oral / Spotlight / Best-paper tiers.",
       "url": "https://github.com/qwdwqfwq/topconf-paper-figure-gallery",
       "published_at": "2026-09-17T15:40:52Z",
       "authors": [
@@ -31927,6 +34102,33 @@
       }
     },
     {
+      "id": "github:1369759058",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "Qiuner/QCode",
+      "summary": "An explorable island world to learn AI coding and build real projects with AI agents. Powered by DeepSeek Harness.",
+      "url": "https://github.com/Qiuner/QCode",
+      "published_at": "2026-09-14T10:50:30Z",
+      "authors": [
+        "Qiuner"
+      ],
+      "projects": [
+        "Qiuner/QCode"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:1369187725",
       "source_id": "github",
       "source_type": "repository",
@@ -33580,6 +35782,42 @@
       }
     },
     {
+      "id": "github:1365776373",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "qiz029/dscode",
+      "summary": "A DeepSeek coding agent harness: persistent shell, Ultra subagents, auto approval, Chrome MCP and session telemetry",
+      "url": "https://github.com/qiz029/dscode",
+      "published_at": "2026-09-11T09:40:02Z",
+      "authors": [
+        "qiz029"
+      ],
+      "projects": [
+        "qiz029/dscode"
+      ],
+      "theme_ids": [
+        "agent-harnesses",
+        "coding-agents",
+        "skills-integrations",
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations",
+        "models-capabilities"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "bluesky:b3614927c6a2:3mv7nb6bezk23",
       "source_id": "simon-willison",
       "source_type": "expert-social",
@@ -35210,6 +37448,33 @@
       }
     },
     {
+      "id": "github:1363431253",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "blixvip/MotionClone",
+      "summary": "Turn reference videos into editable motion graphics with Codex + ChatGPT. Compare, customize, and export MP4s or HyperFrames projects. Local Windows app + online studio.",
+      "url": "https://github.com/blixvip/MotionClone",
+      "published_at": "2026-09-10T02:29:35Z",
+      "authors": [
+        "blixvip"
+      ],
+      "projects": [
+        "blixvip/MotionClone"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "bluesky:b3614927c6a2:3mv4su6pfzk24",
       "source_id": "simon-willison",
       "source_type": "expert-social",
@@ -36762,7 +39027,7 @@
       "source_type": "repository",
       "evidence_kind": "public-source-item",
       "title": "muellerberndt/cadence",
-      "summary": "Experimental neural library for local overlap repair, equilibrium detuning, and continuous learning.",
+      "summary": "Machine learning library for building consensus-style equilibrium world models that continuously learn from experience.",
       "url": "https://github.com/muellerberndt/cadence",
       "published_at": "2026-09-07T10:20:11Z",
       "authors": [
@@ -36771,9 +39036,14 @@
       "projects": [
         "muellerberndt/cadence"
       ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -38788,7 +41058,7 @@
       "source_type": "repository",
       "evidence_kind": "public-source-item",
       "title": "kydlikebtc/awesome-grokbot",
-      "summary": "730 live x.ai/bot shares for Grok Bot — every link status-checked, every row attributed. Bilingual EN/中文 catalog with a JSON schema, CI, and a searchable site.",
+      "summary": "1894 live x.ai/bot shares for Grok Bot — every link status-checked, every row attributed. Bilingual EN/中文 catalog with a JSON schema, CI, and a searchable site.",
       "url": "https://github.com/kydlikebtc/awesome-grokbot",
       "published_at": "2026-09-01T02:30:25Z",
       "authors": [
@@ -40010,6 +42280,40 @@
       }
     },
     {
+      "id": "github:1347394075",
+      "source_id": "github",
+      "source_type": "repository",
+      "evidence_kind": "public-source-item",
+      "title": "whitecircle/halo",
+      "summary": "Halo is an open-source framework built by White Circle for training large language and multimodal models",
+      "url": "https://github.com/whitecircle/halo",
+      "published_at": "2026-08-26T13:49:24Z",
+      "authors": [
+        "whitecircle"
+      ],
+      "projects": [
+        "whitecircle/halo"
+      ],
+      "theme_ids": [
+        "open-local-inference",
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "compute-inference-serving",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
       "id": "github:1347320778",
       "source_id": "github",
       "source_type": "repository",
@@ -41010,7 +43314,7 @@
       "source_type": "repository",
       "evidence_kind": "public-source-item",
       "title": "zidniryi/unbagrnd",
-      "summary": "Unbagrnd - Free, Fast & Open-source AI-powered background remover for Windows, macOS, and Linux.",
+      "summary": "Unbagrnd - Free, Fast & Open-source AI-powered background remover for Windows, macOS, Linux and Android.",
       "url": "https://github.com/zidniryi/unbagrnd",
       "published_at": "2026-08-24T14:30:32Z",
       "authors": [
@@ -50409,7 +52713,7 @@
       "source_type": "repository",
       "evidence_kind": "public-source-item",
       "title": "sickn33/agentic-awesome-skills",
-      "summary": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,400+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
+      "summary": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,445+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
       "url": "https://github.com/sickn33/agentic-awesome-skills",
       "published_at": "2026-01-14T17:48:09Z",
       "authors": [
@@ -50802,6 +53106,41 @@
       "theme_ids": [],
       "disposition": "classification-review",
       "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-12": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "hf-paper:2512.10971",
+      "source_id": "huggingface-papers",
+      "source_type": "paper-curation",
+      "evidence_kind": "public-source-item",
+      "title": "AI-Trader: Benchmarking Autonomous Agents in Real-Time Financial Markets",
+      "summary": "Large Language Models (LLMs) have demonstrated remarkable potential as autonomous agents, approaching human-expert performance through advanced reasoning and tool orchestration. However, decision-making in fully dynamic and live environments remains highly challenging, requiring real-time information integration and adaptive responses. While existing efforts have explored live evaluation mechanisms in structured tasks, a critical gap remains in systematic benchmarking for real-world applications, particularly in finance where stringent requirements exist for live strategic responsiveness. To address this gap, we introduce AI-Trader, the first fully-automated, live, and data-uncontaminated evaluation benchmark for LLM agents in financial decision-making. AI-Trader spans three major financial markets: U.S. stocks, A-shares, and cryptocurrencies, with multiple trading granularities to simulate live financial environments. Our benchmark implements a revolutionary fully autonomous minimal information paradigm where agents receive only essential context and must independently search, verify, and synthesize live market information without human intervention. We evaluate six mainstream LLM",
+      "url": "https://huggingface.co/papers/2512.10971",
+      "published_at": "2025-12-01T04:25:36+00:00",
+      "authors": [
+        "{'name': 'Tianyu Fan', 'user': {'username': 'T1anyu', 'fullname': 'Tianyu Fan', 'avatar_url': '/avatars/ffd9f945183b4c890f885c82739c28a6.svg', 'is_pro': False, 'orgs': []}, 'status': 'claimed_verified', 'status_last_changed_at': '2025-12-15T13:11:15.657000+00:00', 'hidden': False}",
+        "{'name': 'Yuhao Yang', 'hidden': False}",
+        "{'name': 'Yangqin Jiang', 'hidden': False}",
+        "{'name': 'Yifei Zhang', 'user': {'username': 'amstrongzyf', 'fullname': 'Yifei Zhang', 'avatar_url': '/avatars/ade75cebd049daf080ba80a80d516240.svg', 'is_pro': False, 'orgs': []}, 'status': 'claimed_verified', 'status_last_changed_at': '2025-12-15T13:11:12.367000+00:00', 'hidden': True}",
+        "{'name': 'Yuxuan Chen', 'hidden': False}",
+        "{'name': 'Chao Huang', 'hidden': False}"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
       "support_count": 1,
       "monthly_counts": {
         "2025-12": 1
@@ -57162,9 +59501,9 @@
       "commercial_bias": "mixed",
       "homepage_url": "https://news.ycombinator.com/",
       "logo_url": "https://news.ycombinator.com/y18.svg",
-      "normalized_evidence_count": 333,
+      "normalized_evidence_count": 398,
       "status": "active",
-      "last_observed_at": "2026-09-21T18:38:19+00:00",
+      "last_observed_at": "2026-09-22T11:39:57+00:00",
       "freshness": "recent"
     },
     {
@@ -57175,9 +59514,9 @@
       "commercial_bias": "mixed",
       "homepage_url": "https://github.com/",
       "logo_url": "https://github.githubassets.com/favicons/favicon.svg",
-      "normalized_evidence_count": 237,
+      "normalized_evidence_count": 242,
       "status": "active",
-      "last_observed_at": "2026-09-19T18:50:16+00:00",
+      "last_observed_at": "2026-09-21T11:12:53+00:00",
       "freshness": "recent"
     },
     {
@@ -57203,7 +59542,7 @@
       "evidence_role": "expert-interpretation",
       "homepage_url": "https://simonwillison.net/",
       "logo_url": "https://simonwillison.net/favicon.ico",
-      "normalized_evidence_count": 59,
+      "normalized_evidence_count": 62,
       "status": "active",
       "last_observed_at": "2026-09-21T23:16:40.533000+00:00",
       "freshness": "recent"
@@ -57216,7 +59555,7 @@
       "commercial_bias": "low",
       "homepage_url": "https://huggingface.co/papers",
       "logo_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-      "normalized_evidence_count": 57,
+      "normalized_evidence_count": 59,
       "status": "active",
       "last_observed_at": "2026-09-18T00:00:00+00:00",
       "freshness": "recent"
@@ -57278,6 +59617,51 @@
       "freshness": "recent"
     },
     {
+      "id": "huggingface-blog",
+      "name": "Hugging Face Blog",
+      "channel": "first-party-lab",
+      "source_quality": "high",
+      "commercial_bias": "first-party",
+      "publisher_id": "huggingface",
+      "evidence_role": "first-party-claim",
+      "homepage_url": "https://huggingface.co/blog",
+      "logo_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+      "normalized_evidence_count": 32,
+      "status": "active",
+      "last_observed_at": "2026-09-22T00:00:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "id": "nvidia-developer-blog",
+      "name": "NVIDIA Developer Blog",
+      "channel": "first-party-lab",
+      "source_quality": "high",
+      "commercial_bias": "first-party",
+      "publisher_id": "nvidia",
+      "evidence_role": "first-party-claim",
+      "homepage_url": "https://developer.nvidia.com/blog/",
+      "logo_url": "https://avatars.githubusercontent.com/u/1728152?v=4",
+      "normalized_evidence_count": 32,
+      "status": "active",
+      "last_observed_at": "2026-09-21T21:51:06+00:00",
+      "freshness": "recent"
+    },
+    {
+      "id": "openai-news",
+      "name": "OpenAI News",
+      "channel": "first-party-lab",
+      "source_quality": "high",
+      "commercial_bias": "first-party",
+      "publisher_id": "openai",
+      "evidence_role": "first-party-claim",
+      "homepage_url": "https://openai.com/news/",
+      "logo_url": "https://avatars.githubusercontent.com/u/14957082?v=4",
+      "normalized_evidence_count": 31,
+      "status": "active",
+      "last_observed_at": "2026-09-21T12:00:00+00:00",
+      "freshness": "recent"
+    },
+    {
       "id": "anthropic-news-research",
       "name": "Anthropic News & Research",
       "channel": "first-party-lab",
@@ -57289,7 +59673,7 @@
       "logo_url": "https://avatars.githubusercontent.com/u/76263028?v=4",
       "normalized_evidence_count": 30,
       "status": "active",
-      "last_observed_at": "2026-09-18T20:02:00+00:00",
+      "last_observed_at": "2026-09-21T23:14:52+00:00",
       "freshness": "recent"
     },
     {
@@ -57323,21 +59707,6 @@
       "freshness": "recent"
     },
     {
-      "id": "huggingface-blog",
-      "name": "Hugging Face Blog",
-      "channel": "first-party-lab",
-      "source_quality": "high",
-      "commercial_bias": "first-party",
-      "publisher_id": "huggingface",
-      "evidence_role": "first-party-claim",
-      "homepage_url": "https://huggingface.co/blog",
-      "logo_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-      "normalized_evidence_count": 30,
-      "status": "active",
-      "last_observed_at": "2026-09-21T13:44:34+00:00",
-      "freshness": "recent"
-    },
-    {
       "id": "lilian-weng",
       "name": "Lilian Weng",
       "channel": "practitioner-blog",
@@ -57365,36 +59734,6 @@
       "normalized_evidence_count": 30,
       "status": "active",
       "last_observed_at": "2026-09-16T07:35:58.879000+00:00",
-      "freshness": "recent"
-    },
-    {
-      "id": "nvidia-developer-blog",
-      "name": "NVIDIA Developer Blog",
-      "channel": "first-party-lab",
-      "source_quality": "high",
-      "commercial_bias": "first-party",
-      "publisher_id": "nvidia",
-      "evidence_role": "first-party-claim",
-      "homepage_url": "https://developer.nvidia.com/blog/",
-      "logo_url": "https://avatars.githubusercontent.com/u/1728152?v=4",
-      "normalized_evidence_count": 30,
-      "status": "active",
-      "last_observed_at": "2026-09-21T15:00:00+00:00",
-      "freshness": "recent"
-    },
-    {
-      "id": "openai-news",
-      "name": "OpenAI News",
-      "channel": "first-party-lab",
-      "source_quality": "high",
-      "commercial_bias": "first-party",
-      "publisher_id": "openai",
-      "evidence_role": "first-party-claim",
-      "homepage_url": "https://openai.com/news/",
-      "logo_url": "https://avatars.githubusercontent.com/u/14957082?v=4",
-      "normalized_evidence_count": 30,
-      "status": "active",
-      "last_observed_at": "2026-09-21T12:00:00+00:00",
       "freshness": "recent"
     },
     {
@@ -57450,9 +59789,9 @@
       "evidence_role": "expert-interpretation",
       "homepage_url": "https://www.latent.space/",
       "logo_url": "https://www.latent.space/favicon.ico",
-      "normalized_evidence_count": 24,
+      "normalized_evidence_count": 26,
       "status": "active",
-      "last_observed_at": "2026-09-19T05:48:28+00:00",
+      "last_observed_at": "2026-09-22T06:30:56+00:00",
       "freshness": "recent"
     },
     {

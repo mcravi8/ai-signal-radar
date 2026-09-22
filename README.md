@@ -36,6 +36,7 @@ data/snapshots/       Compact public-source observations
 data/processed/       Normalized public-source records
 data/public/          Sanitized source-specific and unified frontend contracts
 reports/weekly/       Human-readable weekly briefs
+reports/calibration/  Evidence-policy calibration reports
 site/                 Zero-dependency static frontend
 scripts/              Build and safety utilities
 tests/                Privacy, scoring, and build tests
@@ -64,6 +65,18 @@ Open `http://localhost:8000`.
 Gmail ingestion remains local. Future subscribed newsletters arrive in the dedicated AgentMail inbox and are ingested weekly with a read-only API key. Raw bodies exist only in AgentMail and runner memory; only allowlisted derivative records enter Git. `pipeline.collectors.email_import` still accepts previously sanitized local exports.
 
 The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only inbox and message permissions. The public cursor in `data/state/agentmail.json` stores only the last processed timestamp—never mailbox or message identifiers.
+
+## Operating-model evidence policy
+
+`config/evidence-policy.yml` defines the formal evidence contract used to decide whether a proposed startup operating requirement is merely a `narrative`, is `experimental`, or has matured to `emerging`, `established`, or `baseline`. Each judgment reports technical reality, operational adoption, market pull, and evidence independence as `N/O`, `Low`, `Moderate`, or `Strong`. Maturity is gate-based: attention or a weighted score cannot compensate for missing operational proof.
+
+Three adjudicated cases in `config/evidence-policy-calibration.yml` test the rules against real Radar evidence. Run the calibration with:
+
+```bash
+python -m pipeline.cli calibrate-evidence
+```
+
+The current calibration rates evaluation/release gates and heterogeneous model routing as `experimental`, and AI-native GTM systems as `narrative`. The readable audit is in [reports/calibration/evidence-policy-2026-09-22.md](reports/calibration/evidence-policy-2026-09-22.md).
 
 ## Cross-source contract
 

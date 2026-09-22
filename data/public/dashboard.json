@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-22T02:19:59.427992+00:00",
+    "generated_at": "2026-09-22T20:40:29.209652+00:00",
     "status": "success",
     "source_count": 35,
-    "evidence_count": 1563,
+    "evidence_count": 1645,
     "warnings": []
   },
   "weekly": {
@@ -12,8 +12,8 @@
     "signals": [
       "training-self-improvement",
       "open-local-inference",
-      "skills-integrations",
       "small-specialized-models",
+      "skills-integrations",
       "coding-agents"
     ]
   },
@@ -56,7 +56,7 @@
       ],
       "primary_layer": "models-capabilities",
       "maturity": "emerging",
-      "evidence_count": 66,
+      "evidence_count": 72,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -116,7 +116,7 @@
       ],
       "primary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 27,
+      "evidence_count": 28,
       "source_types": [
         "curated-newsletter",
         "first-party-lab",
@@ -171,7 +171,7 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 48,
+      "evidence_count": 50,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -236,7 +236,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 82,
+      "evidence_count": 85,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -295,7 +295,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 150,
+      "evidence_count": 153,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -329,7 +329,7 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 51,
+      "evidence_count": 54,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -388,7 +388,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 39,
+      "evidence_count": 41,
       "source_types": [
         "curated-newsletter",
         "expert-social",
@@ -420,22 +420,23 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 15,
+      "evidence_count": 16,
       "source_types": [
         "community",
         "curated-newsletter",
         "first-party-lab",
         "investor-essay",
         "paper",
+        "paper-curation",
         "practitioner-blog",
         "repository"
       ],
       "score": {
         "recurrence": 25.0,
-        "acceleration": 24.0,
+        "acceleration": 25.0,
         "persistence": 25.0,
         "breadth": 25.0,
-        "total": 99.0
+        "total": 100.0
       }
     },
     {
@@ -452,7 +453,7 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 67,
+      "evidence_count": 69,
       "source_types": [
         "community",
         "expert-social",
@@ -611,1153 +612,6 @@
     }
   ],
   "evidence": [
-    {
-      "id": "hn:49781032",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Lightspeed, build real time apps the Laravel way (+asteroids demo)",
-      "url": "https://news.ycombinator.com/item?id=49781032",
-      "published_at": "2026-09-20T23:02:28+00:00",
-      "summary": "Hi HN!<p>Laravel has worked with websockets for years but generally speaking it&#x27;s a one way push architecture (i.e. http in, sockets out).<p>Lightspeed is kind of like node in that it&#x27;s a single server that serves your http and your websockets all under one roof. Auth runs in 0.03ms (a Redis read, no database). Your Laravel handler runs inside the full container and the reply comes back down the same socket. I think this could be really cool for creating new ways of working with Laravel.<p>Anyway, I put together a live demo to show it in action. Basically a cross between slither.io and Asteroids.<p>Game here:<p><a href=\"https:&#x2F;&#x2F;innerloop.works&#x2F;lightspeed\" rel=\"nofollow\">https:&#x2F;&#x2F;innerloop.works&#x2F;lightspeed</a><p>Repo here:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;innerloop-dev&#x2F;lightspeed\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;innerloop-dev&#x2F;lightspeed</a><p>Note: This is 0.1.0, the API may change before 1.0. It needs the Swoole extension and Redis. MIT.",
-      "authors": [
-        "jv22222"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781102",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Where Rust actually is in Windows 11",
-      "url": "https://hunterworks.software/teardowns/rust-in-windows-11",
-      "published_at": "2026-09-20T23:13:27+00:00",
-      "summary": "",
-      "authors": [
-        "10000000001"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781110",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The viewers ditching streaming 'rot' in favour of DVDs",
-      "url": "https://www.rnz.co.nz/life/screens/movies/the-viewers-ditching-streaming-rot-in-favour-of-dvds",
-      "published_at": "2026-09-20T23:14:35+00:00",
-      "summary": "",
-      "authors": [
-        "billybuckwheat"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781113",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Navier-Stokes, AI, Future of Mathematics with Martin Hairer (2014 Fields Medal) [video]",
-      "url": "https://www.youtube.com/watch?v=G8HMa_tgM34",
-      "published_at": "2026-09-20T23:15:34+00:00",
-      "summary": "",
-      "authors": [
-        "amichail"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781122",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "\"Reds of the Brick-Colored Road\"",
-      "url": "https://theinterposer.substack.com/p/reds-of-the-brick-colored-road",
-      "published_at": "2026-09-20T23:17:02+00:00",
-      "summary": "",
-      "authors": [
-        "headspreader"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781131",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "My AI Kept Pushing Me to Ship, So I Asked It Why",
-      "url": "https://www.oreilly.com/radar/my-ai-kept-pushing-me-to-ship-so-i-asked-it-why/",
-      "published_at": "2026-09-20T23:18:01+00:00",
-      "summary": "",
-      "authors": [
-        "Anon84"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781138",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "DAPO: An Open-Source RL System from ByteDance Seed and Tsinghua Air",
-      "url": "https://github.com/BytedTsinghua-SIA/DAPO",
-      "published_at": "2026-09-20T23:19:04+00:00",
-      "summary": "",
-      "authors": [
-        "the_arun"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781148",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "EkkoBSD",
-      "url": "https://ekkobsd.org/",
-      "published_at": "2026-09-20T23:19:39+00:00",
-      "summary": "",
-      "authors": [
-        "threemux"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "bluesky:6cf953cc69a4:3mvydkw23qw2c",
-      "source_id": "bluesky-emily-bender",
-      "source_type": "expert-social",
-      "title": "The number of people replying to this with \"but but but *I* found \"AI\" useful for ... \" Guys, that's not the point of this thread.",
-      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mvydkw23qw2c",
-      "published_at": "2026-09-20T23:20:40.363Z",
-      "summary": "Thinking about the selling point of \"AI\" supposedly \"freeing up time\" to do important things. Beyond devaluing the tasks that we can supposedly offload to so...",
-      "authors": [
-        "Emily M. Bender"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781166",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Popular European Games",
-      "url": "https://playfrom.eu/",
-      "published_at": "2026-09-20T23:21:49+00:00",
-      "summary": "",
-      "authors": [
-        "doener"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781170",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "How Anthropic CEO Dario Amodei's Writings Help Explain A.I. Fears",
-      "url": "https://www.nytimes.com/2026/09/17/technology/dario-amodei-anthropic-essays-ai.html",
-      "published_at": "2026-09-20T23:22:20+00:00",
-      "summary": "",
-      "authors": [
-        "gmays"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781171",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "KDE Goes to the Pyramids [video]",
-      "url": "https://media.ccc.de/v/kde2026-58-kde_goes_to_the_pyramids",
-      "published_at": "2026-09-20T23:22:21+00:00",
-      "summary": "",
-      "authors": [
-        "sho_hn"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781193",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The Crown of Creation",
-      "url": "https://mika.global/post/1789946288.html",
-      "published_at": "2026-09-20T23:26:32+00:00",
-      "summary": "",
-      "authors": [
-        "mika314"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781194",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The addiction of online sports gambling: \"Like crack in the '80s\"",
-      "url": "https://www.cbsnews.com/news/sports-betting-apps-gambling/",
-      "published_at": "2026-09-20T23:26:47+00:00",
-      "summary": "",
-      "authors": [
-        "dzonga"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781212",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "AI Netscape – 1997 Chrome, 2026 AI",
-      "url": "https://ainetscape.com/",
-      "published_at": "2026-09-20T23:28:55+00:00",
-      "summary": "",
-      "authors": [
-        "TStringham"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781246",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Turn curiosity into a map you can explore",
-      "url": "https://www.echohive.ai/experiments/drift",
-      "published_at": "2026-09-20T23:32:42+00:00",
-      "summary": "",
-      "authors": [
-        "echohive42"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781262",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Does Jev Have Politics? (Yes)",
-      "url": "https://idlerambling.substack.com/p/does-jev-have-politics-yes",
-      "published_at": "2026-09-20T23:34:58+00:00",
-      "summary": "",
-      "authors": [
-        "Sketchy_"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49781293",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Are we talking less? A Q&A with psychologist Matthias Mehl (March 2026)",
-      "url": "https://news.arizona.edu/news/are-we-talking-less-qa-psychologist-matthias-mehl",
-      "published_at": "2026-09-20T23:39:19+00:00",
-      "summary": "",
-      "authors": [
-        "BiraIgnacio"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781301",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Chronic stress may trigger hidden inflammation that damages the heart",
-      "url": "https://lms.mrc.ac.uk/chronic-stress-may-trigger-hidden-inflammation-that-damages-the-heart/",
-      "published_at": "2026-09-20T23:40:22+00:00",
-      "summary": "",
-      "authors": [
-        "doener"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781324",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "New startup to test psychedelic-like drug against Parkinson's symptom",
-      "url": "https://www.statnews.com/2026/09/17/biotech-news-ariadne-testing-psychedelic-like-drug-parkinsons-apathy/",
-      "published_at": "2026-09-20T23:42:47+00:00",
-      "summary": "",
-      "authors": [
-        "elo2000"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781332",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Tools to Prevent Dementia",
-      "url": "https://www.scmp.com/lifestyle/health-wellness/article/3368006/why-dementia-preventable-and-new-tools-can-reduce-your-risk",
-      "published_at": "2026-09-20T23:43:36+00:00",
-      "summary": "",
-      "authors": [
-        "elo2000"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781401",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Prototype of a Windows 11-inspired Web OS with autonomous IA agents",
-      "url": "https://github.com/davidpoliquin30-design/Prototype-autonom-ia-OS",
-      "published_at": "2026-09-20T23:52:57+00:00",
-      "summary": "",
-      "authors": [
-        "davidpoliquin"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781411",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Building an NBA stats warehouse without writing any of the code",
-      "url": "https://jeffknupp719305.substack.com/p/paul-reed-is-tenth",
-      "published_at": "2026-09-20T23:54:25+00:00",
-      "summary": "",
-      "authors": [
-        "jknupp"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781436",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Amiga Unix, Again",
-      "url": "https://amigaux.org/",
-      "published_at": "2026-09-20T23:57:10+00:00",
-      "summary": "",
-      "authors": [
-        "doener"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781439",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Spending on data centers and hardware now exceeds housing investment",
-      "url": "https://fortune.com/2026/09/20/us-economy-milestone-spending-data-centers-ai-boom-housing-residential-investment/",
-      "published_at": "2026-09-20T23:58:25+00:00",
-      "summary": "",
-      "authors": [
-        "rawgabbit"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781443",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Converting AVS audio viz to WebAssembly using GPT 5.6",
-      "url": "https://strlns.github.io/very-serious-vibecoding/AVS-Web-Native-Editor-Alpha/",
-      "published_at": "2026-09-20T23:58:55+00:00",
-      "summary": "Roast me, I hope I did not forget any substantial IP&#x2F;copyright caveats.<p>This is at an early stage and yes, I am a web dev unable to write CPP.<p>I just wanted to see how far Vibe Coding would get me here because I really loved Winamp&#x27;s AVS dearly as a kid.<p>I was not a preset contributor, and I am not affiliated with Justin, the owners of Winamp, or any of the preset authors. Hope I made that obvious.<p>Works on Desktop, if you are not on Chrome&#x2F;Chromium, which allows cross-tab audio sharing in the Screen Sharong API, I&#x27;d suggest to upload an mp3, that&#x27;s how I tested it.<p>It&#x27;s a stupid vibed Sunday afternoon project, not serious software.<p>APE is not supported at all here.",
-      "authors": [
-        "moritzwarhier"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "huggingface-blog:693b3130e25cc8808f58",
-      "source_id": "huggingface-blog",
-      "source_type": "first-party-lab",
-      "title": "tokenizers v1: encode, decode and scaling, measured",
-      "url": "https://huggingface.co/blog/tokenizers-v1",
-      "published_at": "2026-09-21T00:00:00+00:00",
-      "summary": "",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "openai-news:d2871d486c61275aa183",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "How V7 gives AI agents institutional memory",
-      "url": "https://openai.com/index/v7",
-      "published_at": "2026-09-21T00:00:00+00:00",
-      "summary": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781453",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "A CERN for AI-assisted science",
-      "url": "https://terrytao.wordpress.com/2026/09/17/a-cern-for-ai-assisted-science/",
-      "published_at": "2026-09-21T00:00:39+00:00",
-      "summary": "",
-      "authors": [
-        "andsoitis"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781458",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "ZCode: silently uploading your Git history to the cloud",
-      "url": "https://news.routley.io/posts/inside-zcode-silently-uploading-your-git-history-to-the-cloud.html",
-      "published_at": "2026-09-21T00:01:03+00:00",
-      "summary": "",
-      "authors": [
-        "fourfire"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781476",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "How I view LLMs as Sept 2026",
-      "url": "https://bhardwajrish.blogspot.com/2026/09/how-i-view-llms-as-sept-2026.html",
-      "published_at": "2026-09-21T00:04:09+00:00",
-      "summary": "",
-      "authors": [
-        "crearo"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781492",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "A refined phylochronology of the second plague pandemic in Western Eurasia",
-      "url": "https://www.pnas.org/doi/10.1073/pnas.2534899123",
-      "published_at": "2026-09-21T00:06:21+00:00",
-      "summary": "",
-      "authors": [
-        "Thevet"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781537",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Two similar AI judges fail together 7.7x more often than independence predicts",
-      "url": "https://github.com/LAWLESS1987/covenant",
-      "published_at": "2026-09-21T00:12:33+00:00",
-      "summary": "",
-      "authors": [
-        "Lawless1987"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781554",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Lain, a structural code graph and agent coordinator for coding agents",
-      "url": "https://github.com/spuentesp/lain",
-      "published_at": "2026-09-21T00:15:55+00:00",
-      "summary": "",
-      "authors": [
-        "spuentesp"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ]
-    },
-    {
-      "id": "hn:49781693",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Why Backprop Goes Backward (2018)",
-      "url": "https://gregorygundersen.com/blog/2018/04/15/backprop/",
-      "published_at": "2026-09-21T00:42:14+00:00",
-      "summary": "",
-      "authors": [
-        "andsoitis"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49781727",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Gdocs-me-up: a high-fidelity Google Docs exporter",
-      "url": "https://github.com/behdad/gdocs-me-up",
-      "published_at": "2026-09-21T00:46:42+00:00",
-      "summary": "Over the years I had written dozens of Google Docs documents, that I wanted to post to my website. Not only Google Docs&#x27;s publish feature is broken and incomplete, Google does not index Google Docs either. So I set out to fix it for myself using AI agents. Sharing here in case someone else finds it useful.",
-      "authors": [
-        "behdad"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49782220",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Deterministic Core, Non-Deterministic Shell",
-      "url": "https://outdata.net/blog/260803",
-      "published_at": "2026-09-21T02:02:45+00:00",
-      "summary": "",
-      "authors": [
-        "brandon_bot"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49782439",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Ambits – agentic grep/rg tool will history tracking",
-      "url": "https://github.com/joshLong145/ambits",
-      "published_at": "2026-09-21T02:37:25+00:00",
-      "summary": "",
-      "authors": [
-        "joshLong145"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49782528",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Hibi – An open-source obsidian alternative",
-      "url": "https://github.com/schmayterling/hibi",
-      "published_at": "2026-09-21T02:51:56+00:00",
-      "summary": "",
-      "authors": [
-        "ryanamay"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49782775",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Winning the visa lottery",
-      "url": "https://www.aeaweb.org/research/immigration-restrictions-firms-workers",
-      "published_at": "2026-09-21T03:37:02+00:00",
-      "summary": "",
-      "authors": [
-        "neehao"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49782878",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Less Prompts, More Guardrails",
-      "url": "https://yasyf.com/writing/less-prompts-more-guardrails/",
-      "published_at": "2026-09-21T03:54:44+00:00",
-      "summary": "",
-      "authors": [
-        "yasyfm"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "assurance-infrastructure"
-      ]
-    },
-    {
-      "id": "hn:49782912",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Mahabharata Characters – 307 figures with gunas and decision primitives",
-      "url": "https://huggingface.co/datasets/gnumanth/mahabharata-characters",
-      "published_at": "2026-09-21T04:01:08+00:00",
-      "summary": "",
-      "authors": [
-        "init0"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783039",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Knowledge Refresh for Production RAG",
-      "url": "https://news.ycombinator.com/item?id=49783039",
-      "published_at": "2026-09-21T04:26:08+00:00",
-      "summary": "https:&#x2F;&#x2F;www.knackline.com&#x2F;reports&#x2F;knowledge-refresh-service<p>Practical controls and outcomes for Production RAG teams past the demo.",
-      "authors": [
-        "rajkumarsamra"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783062",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "AI chatbots give wrong answers to financial queries 'most of the time'",
-      "url": "https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666",
-      "published_at": "2026-09-21T04:28:44+00:00",
-      "summary": "",
-      "authors": [
-        "1vuio0pswjnm7"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783101",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Heretic removes restrictions from language models",
-      "url": "https://heretic-project.org/",
-      "published_at": "2026-09-21T04:35:22+00:00",
-      "summary": "",
-      "authors": [
-        "Bluestein"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783133",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
-      "url": "https://github.com/volotat/mini-AGI/",
-      "published_at": "2026-09-21T04:42:37+00:00",
-      "summary": "Sorry for the pretentious name, I know, I know.. It just contains all the pieces I would like to see a AGI model to have, and I can&#x27;t stand the temptation. Before throwing rocks at me, please take a glance at the Readme, and I hope it will cover your mood a little bit.<p>So, first of all it does work and you can see the sample from the whole training run here: <a href=\"https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;volotat&#x2F;mini-AGI&#x2F;refs&#x2F;heads&#x2F;main&#x2F;runs&#x2F;samples.txt\" rel=\"nofollow\">https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;volotat&#x2F;mini-AGI&#x2F;refs&#x2F;head...</a><p>Here is the scaling law graph I have so far, and it looks very promising: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;volotat&#x2F;mini-AGI&#x2F;blob&#x2F;main&#x2F;assets&#x2F;scaling.png\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;volotat&#x2F;mini-AGI&#x2F;blob&#x2F;main&#x2F;assets&#x2F;scaling...</a><p>The model was built under my deep dissatisfaction so we cannot really train even moderately big models (1B+ scale) on the consumer&#x27;s hardware. We can inference and fine-tune them for sure, but I would like to have full control over what the model sees over th",
-      "authors": [
-        "volotat"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783224",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "OSS, security and Funding: libjpeg-turbo",
-      "url": "https://news.ycombinator.com/item?id=49783224",
-      "published_at": "2026-09-21T05:00:09+00:00",
-      "summary": "libjpeg-turbo is behind nearly every image you see on your computer, phone or any other digital screen.<p>I also use it during computer vision model training. Every image that goes through my model, should be decoded.<p>At some point I did a benchmark of python libraries that decode JPEG images https:&#x2F;&#x2F;github.com&#x2F;ternaus&#x2F;imread_benchmark<p>All top libraries use libjpeg-turbo.<p>The library is heavily optimized =&gt; I made a PR with a small improvement of 3%. Not groundbreaking, but small is better than nothing.<p>The PR was refused.<p>&gt; That is not compelling enough to justify the potential disruption. Huffman decoding and partial image decompression have been the source of a disproportionate number of security issues found in the library over the years.<p>&gt; Google contributed the partial image decompression feature in 2015, but I continue to have to spend unpaid hours fixing it 11 years later (including 18 unpaid hours fixing #915 a few weeks ago) while Google is ghosting me on a security patch rewards payment I earned six months ago.<p>&gt; Meanwhile, the libjpeg-turbo General Fund is so far in debt that it will take until 2028 before it is replenished ",
-      "authors": [
-        "ternaus"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "training-self-improvement"
-      ]
-    },
-    {
-      "id": "hn:49783406",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Far-left party wins Berlin election, pledging to nationalise housing",
-      "url": "https://www.reuters.com/world/far-left-party-wins-berlin-election-pledging-nationalise-housing-2026-09-20/",
-      "published_at": "2026-09-21T05:36:24+00:00",
-      "summary": "",
-      "authors": [
-        "theanonymousone"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783473",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Bull Beats Out HPE for Next-Gen Lumi AI Supercomputer",
-      "url": "https://www.nextplatform.com/hpc/2026/09/17/bull-beats-out-hpe-for-next-gen-lumi-ai-supercomputer/5297292",
-      "published_at": "2026-09-21T05:52:05+00:00",
-      "summary": "",
-      "authors": [
-        "rbanffy"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783474",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Bot-free self-hosted analytics with GoatCounter on NixOS",
-      "url": "https://vincent.bernat.ch/en/blog/2026-goatcounter",
-      "published_at": "2026-09-21T05:52:07+00:00",
-      "summary": "",
-      "authors": [
-        "zorrn"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783477",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "OpenAI Degrading Their Models, Also for Paid Users",
-      "url": "https://old.reddit.com/r/codex/comments/1wkwdfl/the_end_of_the_codex_era_ive_completely_lost/",
-      "published_at": "2026-09-21T05:52:36+00:00",
-      "summary": "",
-      "authors": [
-        "theanonymousone"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783495",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Grim Fandango Puzzle Document (1996) [pdf]",
-      "url": "http://gameshelf.jmac.org/2008/11/13/GrimPuzzleDoc_small.pdf",
-      "published_at": "2026-09-21T05:55:22+00:00",
-      "summary": "",
-      "authors": [
-        "kelseyfrog"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783502",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Find-jevable-code – audit a repo for Jev-replaceable decisions",
-      "url": "https://altslate-labs.github.io/jevable-code/",
-      "published_at": "2026-09-21T05:57:07+00:00",
-      "summary": "",
-      "authors": [
-        "ss_y2n"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49783513",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Postgres 19: What's new in monitoring?",
-      "url": "https://clickhouse.com/blog/postgres-19-monitoring-whats-new",
-      "published_at": "2026-09-21T05:59:37+00:00",
-      "summary": "",
-      "authors": [
-        "saisrirampur"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783527",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Understanding the European Cyber Resilience Act (CRA)",
-      "url": "https://openssf.org/cra-ebook/",
-      "published_at": "2026-09-21T06:02:08+00:00",
-      "summary": "",
-      "authors": [
-        "tapanjk"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783529",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Less Typing, More Work",
-      "url": "https://nicolasdular.com/blog/2026/09/20/less-typing-more-work/",
-      "published_at": "2026-09-21T06:02:13+00:00",
-      "summary": "",
-      "authors": [
-        "tosh"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783568",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Elektron Machinedrum in the Browser",
-      "url": "https://machinedrum-study.pages.dev/",
-      "published_at": "2026-09-21T06:07:52+00:00",
-      "summary": "",
-      "authors": [
-        "risktopark"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783571",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Kanye West: A Civil Rights Leader?",
-      "url": "https://medium.com/freedomofthought/kanye-west-a-civil-rights-leader-48174114ef3b",
-      "published_at": "2026-09-21T06:07:59+00:00",
-      "summary": "",
-      "authors": [
-        "raynchad"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783578",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Lightweight Markdown Viewer/Editor for Linux and Windows",
-      "url": "https://marklite.app",
-      "published_at": "2026-09-21T06:09:01+00:00",
-      "summary": "",
-      "authors": [
-        "mchilson"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783586",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The Toxicity of Sports Media",
-      "url": "https://medium.com/freedomofthought/the-toxicity-of-sports-media-ee6003e241ff",
-      "published_at": "2026-09-21T06:10:13+00:00",
-      "summary": "",
-      "authors": [
-        "raynchad"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783588",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Jev's Architecture Unmasked",
-      "url": "https://archerhume.com/posts/jevs-architecture-unmasked/",
-      "published_at": "2026-09-21T06:10:37+00:00",
-      "summary": "",
-      "authors": [
-        "nlpnerd"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49783614",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The big ideas and tiny details behind Amazon's new recyclable mailer (2019)",
-      "url": "https://www.aboutamazon.com/news/sustainability/the-big-ideas-and-tiny-details-behind-amazons-new-recyclable-mailer",
-      "published_at": "2026-09-21T06:16:39+00:00",
-      "summary": "",
-      "authors": [
-        "usaphp"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783619",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "iPhone 18 Pro Teardown: What Changed Inside? [video]",
-      "url": "https://www.youtube.com/watch?v=oS_HMre7vk0",
-      "published_at": "2026-09-21T06:17:12+00:00",
-      "summary": "",
-      "authors": [
-        "lisper"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783621",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "International Observe the Moon Night",
-      "url": "https://en.wikipedia.org/wiki/International_Observe_the_Moon_Night",
-      "published_at": "2026-09-21T06:17:26+00:00",
-      "summary": "",
-      "authors": [
-        "ButlerianJihad"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783622",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "A computer scientist-novelist reflects on AI and our understanding of maths",
-      "url": "https://scroll.in/article/1095809/how-ai-could-influence-our-understanding-of-mathematics-a-computer-scientist-novelists-reflections",
-      "published_at": "2026-09-21T06:17:26+00:00",
-      "summary": "",
-      "authors": [
-        "adityaathalye"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783639",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "BYD car was easily hacked by cybersecurity expert",
-      "url": "https://www.abc.net.au/news/2026-09-21/byd-hacked-by-cybersecurity-expert-vehicle-sabotage-surveillance/107139482",
-      "published_at": "2026-09-21T06:19:59+00:00",
-      "summary": "",
-      "authors": [
-        "Cadwhisker"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783662",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Why Are People Cancelling?",
-      "url": "https://bankstatementconverter.com/blog/posts/2026-09-21-why-are-people-canceling/",
-      "published_at": "2026-09-21T06:22:51+00:00",
-      "summary": "",
-      "authors": [
-        "4pkjai"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783665",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Perennial Technical Reads",
-      "url": "https://parallelprogrammer.substack.com/p/a-reading-list-for-metalheads",
-      "published_at": "2026-09-21T06:23:22+00:00",
-      "summary": "",
-      "authors": [
-        "signa11"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783671",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Evaluating Long-Term Memory for AI Agents: AML Cycle 2 Is Now Open",
-      "url": "https://twitter.com/AgentMemoryL/status/2101515447816663222",
-      "published_at": "2026-09-21T06:24:34+00:00",
-      "summary": "",
-      "authors": [
-        "IreneAI"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783675",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Infinitely Recursive of Game of Life",
-      "url": "https://oimo.io/works/life/",
-      "published_at": "2026-09-21T06:24:58+00:00",
-      "summary": "",
-      "authors": [
-        "helloplanets"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783679",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Slower than an SD card under heavy load: iPhone 18 Pro Max's QLC storage tested",
-      "url": "https://www.notebookcheck.net/Slower-than-an-SD-card-under-heavy-load-iPhone-18-Pro-Max-s-QLC-storage-gets-tested.1403886.0.html",
-      "published_at": "2026-09-21T06:25:25+00:00",
-      "summary": "",
-      "authors": [
-        "virgildotcodes"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
     {
       "id": "hn:49783692",
       "source_id": "hacker-news",
@@ -2327,6 +1181,22 @@
       "theme_ids": []
     },
     {
+      "id": "hn:49785202",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Engineering Memory: On learning to memorize first 100 digits of pi (2024)",
+      "url": "https://gregorygundersen.com/blog/2024/12/21/engineering-memory/",
+      "published_at": "2026-09-21T09:56:34+00:00",
+      "summary": "",
+      "authors": [
+        "fuzzythinker"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
       "id": "openai-news:10538c022345675d1abd",
       "source_id": "openai-news",
       "source_type": "first-party-lab",
@@ -2391,6 +1261,33 @@
       ]
     },
     {
+      "id": "github:1379574728",
+      "source_id": "github",
+      "source_type": "repository",
+      "title": "jev-chat/jev-chat-jarvis",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis",
+      "published_at": "2026-09-21T11:12:53Z",
+      "summary": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+      "authors": [
+        "jev-chat"
+      ],
+      "tags": [
+        "accessibility-service",
+        "android",
+        "chat-assistant",
+        "llm",
+        "qq",
+        "wechat"
+      ],
+      "projects": [
+        "jev-chat/jev-chat-jarvis"
+      ],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "small-specialized-models"
+      ]
+    },
+    {
       "id": "hn:49785853",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -2434,6 +1331,20 @@
       "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
       "published_at": "2026-09-21T12:00:00+00:00",
       "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "openai-news:8fe4474fdbb9c4c46a22",
+      "source_id": "openai-news",
+      "source_type": "first-party-lab",
+      "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+      "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+      "published_at": "2026-09-21T12:00:00+00:00",
+      "summary": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
       "authors": [],
       "tags": [],
       "projects": [],
@@ -3466,7 +2377,7 @@
       "id": "hn:49789081",
       "source_id": "hacker-news",
       "source_type": "community",
-      "title": "How do Traffic Signals Work (2019)",
+      "title": "How do traffic signals work? (2019)",
       "url": "https://practical.engineering/blog/2019/5/11/how-do-traffic-signals-work",
       "published_at": "2026-09-21T16:06:44+00:00",
       "summary": "",
@@ -3498,10 +2409,10 @@
       "id": "hn:49789228",
       "source_id": "hacker-news",
       "source_type": "community",
-      "title": "This Digital Radio Gets Messages to the World’s Remotest Locations",
+      "title": "HERMES radio enables voice and data communication over vast distances",
       "url": "https://spectrum.ieee.org/hermes-shortwave-radio-digital-data",
       "published_at": "2026-09-21T16:14:16+00:00",
-      "summary": "",
+      "summary": "<a href=\"https:&#x2F;&#x2F;hermes.radio&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;hermes.radio&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;www.rhizomatica.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.rhizomatica.org&#x2F;</a>",
       "authors": [
         "SamuraiLion"
       ],
@@ -3542,6 +2453,24 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "voice-audio"
+      ]
+    },
+    {
+      "id": "hn:49789356",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Foremerge – Catch intent conflicts between parallel coding agents",
+      "url": "https://github.com/naw103/foremerge",
+      "published_at": "2026-09-21T16:22:06+00:00",
+      "summary": "At, GPTree, we run several coding agents across our team on one repo using parallel worktrees. Apart from wasted time reviewing and fixing conflicts at PR time, the failures that hurt the most are when multiple plans or tickets cause architecture changes that cannot both be true. Ex. one agent replaces a class while another one is in the process of extending it. Git only notices if the resulting patches happen to touch the same lines and the review only catches it if they are familiar with both tickets.<p>Foremerge is a local &quot;git like&quot; coordination layer that sits above git (ie. does not interact with or change the way git and worktrees function), Before editing each agent publishes an intent and the scopes it will change, with the operation it plans to complete on each one.<p><pre><code> foremerge intent publish --agent &quot;$A&quot; \\ --summary &quot;Replace PaymentService with StripePaymentService&quot; \\ --scope symbol:PaymentService=replace foremerge intent publish --agent &quot;$B&quot; \\ --summary &quot;Add PayPal support to PaymentService&quot; \\ --scope symbol:PaymentService=extend </code></pre> The publish by the 2nd agent returns a HIGH destructive_vs_additiv",
+      "authors": [
+        "naw103"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "coding-agents"
       ]
     },
     {
@@ -4608,6 +3537,86 @@
       "theme_ids": []
     },
     {
+      "id": "hn:49791939",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "NASA’s Mars Sample Return mission is dead",
+      "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
+      "published_at": "2026-09-21T19:14:12+00:00",
+      "summary": "",
+      "authors": [
+        "Muhammad523"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49791997",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "The Advisory Group on Mathematics and Artificial Intelligence",
+      "url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/",
+      "published_at": "2026-09-21T19:17:42+00:00",
+      "summary": "",
+      "authors": [
+        "digital55"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49792067",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
+      "published_at": "2026-09-21T19:23:33+00:00",
+      "summary": "",
+      "authors": [
+        "julian_digital"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49792323",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Differential – a TUI diff reviewer with semantic grouping",
+      "url": "https://github.com/thepartly/differential",
+      "published_at": "2026-09-21T19:42:38+00:00",
+      "summary": "Hi all — for those of you still reviewing code, I built a tool to make that easier, mostly for my own sake. There are some alternatives out there already, but none of them quite checked all the boxes for me, so I made my own. Feedback welcome!",
+      "authors": [
+        "gogoout"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49792342",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Transformers Explained Visually",
+      "url": "https://poloclub.github.io/transformer-explainer/",
+      "published_at": "2026-09-21T19:43:49+00:00",
+      "summary": "",
+      "authors": [
+        "aray07"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
       "id": "bluesky:6cf953cc69a4:3mw2il75vy22y",
       "source_id": "bluesky-emily-bender",
       "source_type": "expert-social",
@@ -4624,6 +3633,38 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49792730",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "MiMo v2.6",
+      "url": "https://mimo.xiaomi.com/mimo-v2-6",
+      "published_at": "2026-09-21T20:12:12+00:00",
+      "summary": "",
+      "authors": [
+        "volf_"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49792742",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Blackgit – use Git to only download those cared files",
+      "url": "https://github.com/zhuzhonghua/blackgit",
+      "published_at": "2026-09-21T20:13:10+00:00",
+      "summary": "Git is supposed to be bad at handling mono repos especially where there are many binary files like game projects repo, and also there are no permisson settings, but are important in game development. BlackGit&#x27;s cli client lets you download only cared files through sparse-checkout(initially not even the default root files) with a mini agent to use natural languages to manipulate the repo, and blackgit&#x27;s server serves a file level control layer as a proxy to upstreams(github&#x2F;gitlab)",
+      "authors": [
+        "zhonghua"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
       "theme_ids": []
     },
     {
@@ -4665,6 +3706,196 @@
       "theme_ids": []
     },
     {
+      "id": "hn:49793381",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Ask HN: Why does it matter if no one reads your novel as long as the AIs do?",
+      "url": "https://news.ycombinator.com/item?id=49793381",
+      "published_at": "2026-09-21T21:02:48+00:00",
+      "summary": "AI can in principle surface content that you create that no humans consume directly. And it could even credit and financially compensate you whenever this happens.<p>So it seems that you can have a creator-only economy where all humans create and the AIs do most of the consuming.<p>And stuff that the AIs surface in their replies allows humans to indirectly consume some of your content (in which case you would be credited and financially compensated) and perhaps even lead to them directly consuming it as a result of the free advertising.<p>Do you think this is workable as a future model for creation and consumption (and not just for novels)?",
+      "authors": [
+        "amichail"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "nvidia-developer-blog:3f062ae5d12a3d2b6381",
+      "source_id": "nvidia-developer-blog",
+      "source_type": "first-party-lab",
+      "title": "How to Evaluate AI Agents From Tool Calls to Task Completion",
+      "url": "https://developer.nvidia.com/blog/how-to-evaluate-ai-agents-from-tool-calls-to-task-completion/",
+      "published_at": "2026-09-21T21:05:28Z",
+      "summary": "When you ship an AI agent, the key question is whether it can execute a chain of work across dozens of sequential tool calls against a live environment, and...",
+      "authors": [
+        "Elizabeth Goodman"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49793545",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: WebGCM – a global climate model running in the browser on WebGPU",
+      "url": "https://gcm.echorelay.net/",
+      "published_at": "2026-09-21T21:15:04+00:00",
+      "summary": "I started this four and a half years ago. I wanted to build a climate model as both a toy and educational tool that I could visualize in a web browser. I have always been interested in meteorology and asked r&#x2F;ClimateScience for advice on the math and physics on building an in-browser climate model as an educational tool, and a few people said it was far too ambitious. They were right. I could build the geometry, an icosahedral hexagonal grid on a globe, and I have an intuitive understanding of the math but integrating the Navier-Stokes equations and the physics proved to be too difficult for me, and the closest I got after nearly of month of work was a model that blew up within two simulated days.<p>Fast forward 4 and a half years. I figured that if models like Claude and GPT Astra could solve a milennium prize problem about fluid dynamics then they could help me fix the broken model and iterate on it until my vision was realized. On Friday, I threw down $200 for a Claude Max subscription, and this is the result of a single weekend&#x27;s work on top of where I had left off.<p>What it is now, in technical terms: a hydrostatic primitive-equation atmosphere on that hex grid (the",
+      "authors": [
+        "jlhawn"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49793764",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Ask HN: Dead Internet",
+      "url": "https://news.ycombinator.com/item?id=49793764",
+      "published_at": "2026-09-21T21:34:28+00:00",
+      "summary": "For some time there has been a steady flow of LLM bot accounts on HackerNews. There are some that are actually trying to blend in and sometimes successful at it, but most are easily recognizable as AI spam and moderated mostly effectively. Most of them you only see when you enable showdead.<p>I always wondered what their purpose is. Most of them are full of LLM tells, don&#x27;t try to hide at all and they don&#x27;t even try to sell anything.<p>I just stumbled over this dead post in new: https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49793503 ^1 It&#x27;s a submission by an agent that is completely transparent about it. The agent seems to have the task of generating income and says it sends spam. It&#x27;s quite interesting and maybe revealing. I recommend the short read, even though it&#x27;s LLM output.<p>What I&#x27;m about is that this is not a bot that was created by someone to spam HackerNews as spam has traditionally been. It&#x27;s spam by a bot that decided to create an account here and submit a post on its own and it consistent with LLM posts I have seen here in the recent past.<p>I don&#x27;t know how to feel about this. We seem to be one step closer to a dead inte",
+      "authors": [
+        "basilikum"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "nvidia-developer-blog:837464fefd470eaa54f6",
+      "source_id": "nvidia-developer-blog",
+      "source_type": "first-party-lab",
+      "title": "Simplifying Model Serving Across Multiple GPUs with NVIDIA TensorRT Multi-Device Integration in NVIDIA Dynamo-Triton",
+      "url": "https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/",
+      "published_at": "2026-09-21T21:51:06Z",
+      "summary": "The compute and memory demands of generative AI increasingly exceed what a single GPU can provide. NVIDIA TensorRT multi-device inference is a new capability...",
+      "authors": [
+        "Tanya Lenz"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ]
+    },
+    {
+      "id": "hn:49794120",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "I'm addicted to buying domains for my vibe-coded apps that get 0 visitors",
+      "url": "https://news.ycombinator.com/item?id=49794120",
+      "published_at": "2026-09-21T22:09:41+00:00",
+      "summary": "",
+      "authors": [
+        "arpanghoshal"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "latent-space:7409d5ffee8a2c05841b",
+      "source_id": "latent-space",
+      "source_type": "expert-newsletter",
+      "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+      "url": "https://www.latent.space/p/jev",
+      "published_at": "2026-09-21T22:13:49+00:00",
+      "summary": "The definitive Jev podcast with its lead creator.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "small-specialized-models"
+      ]
+    },
+    {
+      "id": "simon-willison:b3a971b72e2de3b7e5ee",
+      "source_id": "simon-willison",
+      "source_type": "practitioner-blog",
+      "title": "Cloudflare Python Workers are now generally available",
+      "url": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
+      "published_at": "2026-09-21T22:25:44+00:00",
+      "summary": "Cloudflare Python Workers are now generally available After a two year preview, Cloudflare's support for running Python code in their server-side Workers platform is now stable: \"Python is now a first-class, fully supported language on the Cloudflare Developer Platform\". A neat thing about this is how it works. Cloudflare are running Python compiled to WebAssembly via Pyodide in their V8-based workerd runtime. This comes with some limitations, documented here - most notably both multiprocessing and threading are non-functional in the WebAssembly VM. One particularly interesting detail of this is the local development environment story - their pywrangler development tool (confusingly packaged as workers-py on PyPI) runs a full local simulation of their stack, including executing code with Pyodide in WebAssembly in V8 in a 123MB workerd binary, which for me ended up in node_modules/@cloudflare/workerd-darwin-arm64/bin/workerd . Python Workers represent a significant investment in the wider Python ecosystem by Cloudflare. The release announcement is credited to Gyeongjae Choi, Dominik Picheta, and Hood Chatham - Gyeongjae and Hood are both Pyodide core maintainers. Via Hacker News Tag",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49794330",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "I don't want to read what you didn't write",
+      "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
+      "published_at": "2026-09-21T22:30:41+00:00",
+      "summary": "",
+      "authors": [
+        "mooreds"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49794615",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Spymarks, Not Watermarks",
+      "url": "https://brand.io/article/spymarks/",
+      "published_at": "2026-09-21T23:03:49+00:00",
+      "summary": "",
+      "authors": [
+        "possibilistic"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "simon-willison:b3e5263fa8976c3c350c",
+      "source_id": "simon-willison",
+      "source_type": "practitioner-blog",
+      "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+      "url": "https://simonwillison.net/2026/Sep/21/jev/",
+      "published_at": "2026-09-21T23:09:20+00:00",
+      "summary": "Last week TypeSafe AI unveiled Jev , their first example of a new category of model that they are calling \"System One models\" (I'm with Maggie Appleton, I think \"decision models\" is a better name for these). Jev is an interesting variant on the usual LLM format: it still accepts text inputs, but instead of text output it returns floating point numbers corresponding to categories, yes/no questions, ratings, and associated confidence scores. TypeSafe describe Jev like this: Think of Jev as a frontier-intelligence function call: unstructured state in, typed probabilistic decisions out. It's also very fast, and really cheap . Regular LLMs are priced in terms of input and output tokens, with output generally charged at significantly higher rates. Jev charges only for input - output is free - and the input price of their first model is $0.042 per million tokens - cheaper even than OpenAI's GPT-5 Nano ($0.05/million). Jev lets you ask questions about text or semi-structured data. You compose a \"state\" object containing a string, array of strings, or set of name-value pairs - this might describe an article, or a customer, or any other kind of record. You then send that to their API with on",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "small-specialized-models"
+      ]
+    },
+    {
+      "id": "anthropic-news-research:b44c829b27028fd75a53",
+      "source_id": "anthropic-news-research",
+      "source_type": "first-party-lab",
+      "title": "How Claude is uplifting biomolecular modeling",
+      "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "published_at": "2026-09-21T23:14:52.000Z",
+      "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
       "id": "bluesky:b3614927c6a2:3mw2tsop42c2u",
       "source_id": "simon-willison",
       "source_type": "expert-social",
@@ -4686,6 +3917,22 @@
       ]
     },
     {
+      "id": "hn:49794736",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Looking forward to Git 2.56 – and 3.0",
+      "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
+      "published_at": "2026-09-21T23:16:51+00:00",
+      "summary": "",
+      "authors": [
+        "chmaynard"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
       "id": "bluesky:1278ebf77949:3mw2usvvn6c26",
       "source_id": "bluesky-ethan-mollick",
       "source_type": "expert-social",
@@ -4702,6 +3949,760 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "huggingface-blog:689d78c6e007ab8e2c4f",
+      "source_id": "huggingface-blog",
+      "source_type": "first-party-lab",
+      "title": "Transformers now runs llama.cpp quants",
+      "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+      "published_at": "2026-09-22T00:00:00+00:00",
+      "summary": "",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "open-local-inference"
+      ]
+    },
+    {
+      "id": "huggingface-blog:6b3083011aeb49b1cc1d",
+      "source_id": "huggingface-blog",
+      "source_type": "first-party-lab",
+      "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+      "url": "https://huggingface.co/blog/omlx",
+      "published_at": "2026-09-22T00:00:00+00:00",
+      "summary": "",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49795109",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Jev Powered Obsidian Search",
+      "url": "https://github.com/Emlembow/jev-graph-search",
+      "published_at": "2026-09-22T00:05:39+00:00",
+      "summary": "",
+      "authors": [
+        "MikeLembo"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "small-specialized-models"
+      ]
+    },
+    {
+      "id": "hn:49795122",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Socrates vs. the Written Word (2011)",
+      "url": "https://wondermark.com/socrates-vs-writing/",
+      "published_at": "2026-09-22T00:06:55+00:00",
+      "summary": "",
+      "authors": [
+        "spectraldrift"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49795579",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Claude Status – Elevated errors for multiple models",
+      "url": "https://status.claude.com/incidents/7g1qpkyz5gxh",
+      "published_at": "2026-09-22T01:05:19+00:00",
+      "summary": "",
+      "authors": [
+        "corvad"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49796660",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "MiMo-v2.6-Pro: Intelligence, Performance and Price Analysis",
+      "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+      "published_at": "2026-09-22T04:02:09+00:00",
+      "summary": "",
+      "authors": [
+        "theanonymousone"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49797323",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Can gzip be a language model?",
+      "url": "https://nathan.rs/posts/gzip-lm/",
+      "published_at": "2026-09-22T06:08:39+00:00",
+      "summary": "",
+      "authors": [
+        "networked"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "latent-space:c5ef439db94fe95e2aa5",
+      "source_id": "latent-space",
+      "source_type": "expert-newsletter",
+      "title": "[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M",
+      "url": "https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b",
+      "published_at": "2026-09-22T06:30:56+00:00",
+      "summary": "crowning a new Chinese frontier lab",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "open-local-inference"
+      ]
+    },
+    {
+      "id": "hn:49797801",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "How people are testing AI agents?",
+      "url": "https://news.ycombinator.com/item?id=49797801",
+      "published_at": "2026-09-22T07:36:18+00:00",
+      "summary": "",
+      "authors": [
+        "sanathbhat"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49797982",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "I said no and Apple said yes",
+      "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
+      "published_at": "2026-09-22T08:04:55+00:00",
+      "summary": "",
+      "authors": [
+        "thatslast"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49798204",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "AMD's random number generator can't generate a 0?",
+      "url": "https://board.flatassembler.net/topic.php?t=24261",
+      "published_at": "2026-09-22T08:39:43+00:00",
+      "summary": "",
+      "authors": [
+        "BruceEel"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49798257",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Tell HN: Claude Code just accepted and signed a contract for me. Without asking",
+      "url": "https://news.ycombinator.com/item?id=49798257",
+      "published_at": "2026-09-22T08:49:13+00:00",
+      "summary": "I told it to push a project further. It has an outside dependency where the (unread by me) contract was in my Gmail. It downloaded the PDF contract. Found a saved signature PNG on my computer, placed it at the right spot within the contract and prepared to send it when I intervened.",
+      "authors": [
+        "franze"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49798597",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Verda (Finland) raises $189M in Series B",
+      "url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers",
+      "published_at": "2026-09-22T09:36:31+00:00",
+      "summary": "",
+      "authors": [
+        "cmrdporcupine"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49798699",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Is Claude 20x actually 20x?",
+      "url": "https://news.ycombinator.com/item?id=49798699",
+      "published_at": "2026-09-22T09:49:16+00:00",
+      "summary": "Im seeing more and more about how Claude 20x is actually not 20x and its getting &quot;dumber&quot;. I thought I was going crazy because I legitimately thought maybe I was doing something wrong but I haven’t changed any of my practises and approaches for at least a month or two and it’s definitely gotten way dumber and making way more errors and I’m having to redo a lot of work and while at the same time it’s just burning through tokens<p>https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;ClaudeCode&#x2F;comments&#x2F;1wn0xn9&#x2F;max20x_is_now_just_15_times_better_than_max5x&#x2F;<p>https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;ClaudeAI&#x2F;comments&#x2F;1wl6wyn&#x2F;its_time_to_cancel_your_subscriptions_anthropic&#x2F;",
+      "authors": [
+        "ko3us"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799083",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "9 Ads per Minute: FIFA Cup 26 – \"the price of the beautiful game\"",
+      "url": "https://www.bristol.ac.uk/news/2026/september/world-cup-viewers.html",
+      "published_at": "2026-09-22T10:36:44+00:00",
+      "summary": "",
+      "authors": [
+        "KellyCriterion"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799241",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: An atlas of system designs with interactive architecture diagrams",
+      "url": "https://atlas-sysdes.vercel.app/",
+      "published_at": "2026-09-22T10:54:31+00:00",
+      "summary": "",
+      "authors": [
+        "mertkahyaoglu"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799287",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "JetBrains Air: A System of Products for Agentic Software Development",
+      "url": "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/",
+      "published_at": "2026-09-22T11:00:58+00:00",
+      "summary": "",
+      "authors": [
+        "FinnLobsien"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799306",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "When the Debugger Lies",
+      "url": "https://danielmangum.com/posts/when-the-debugger-lies/",
+      "published_at": "2026-09-22T11:02:43+00:00",
+      "summary": "",
+      "authors": [
+        "hasheddan"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799323",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "FCIA's FC-SP-3: A Standard Ready for the Quantum-Computing World",
+      "url": "https://www.storagereview.com/review/fcias-fc-sp-3-a-standard-ready-for-the-quantum-computing-world",
+      "published_at": "2026-09-22T11:04:43+00:00",
+      "summary": "",
+      "authors": [
+        "rbanffy"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799339",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Accelerated Server Sales Are Themselves Accelerating",
+      "url": "https://www.nextplatform.com/compute/2026/09/21/accelerated-server-sales-are-themselves-accelerating/5297993",
+      "published_at": "2026-09-22T11:06:41+00:00",
+      "summary": "",
+      "authors": [
+        "rbanffy"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799351",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Gladia to join OVH Groupe, accelerating Europe's sovereign voice AI ambitions",
+      "url": "https://www.gladia.io/blog/gladia-joins-ovh-groupe",
+      "published_at": "2026-09-22T11:08:09+00:00",
+      "summary": "",
+      "authors": [
+        "rolisz"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799397",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Rebuilding my journaling app to run on-device",
+      "url": "https://www.tryweave.app/",
+      "published_at": "2026-09-22T11:12:50+00:00",
+      "summary": "",
+      "authors": [
+        "cobrabts"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799398",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Apple Excludes Older iPhones from New Camera Feature",
+      "url": "https://www.macrumors.com/2026/09/22/apple-backtracks-camera-feature-compatibility/",
+      "published_at": "2026-09-22T11:13:07+00:00",
+      "summary": "",
+      "authors": [
+        "tosh"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799429",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "SMPTE 2110",
+      "url": "https://en.wikipedia.org/wiki/SMPTE_2110",
+      "published_at": "2026-09-22T11:17:00+00:00",
+      "summary": "",
+      "authors": [
+        "gregsadetsky"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799433",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "The Curious Case of the Soulless Private Equity Cookie",
+      "url": "https://www.weareravenous.com/the-curious-case-of-the-soulless-private-equity-cookie/",
+      "published_at": "2026-09-22T11:17:33+00:00",
+      "summary": "",
+      "authors": [
+        "Geekette"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799464",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "New England RetroFest and the Maine Vintage Computer Society",
+      "url": "https://www.goto10retro.com/p/new-england-retrofest-and-the-maine",
+      "published_at": "2026-09-22T11:20:10+00:00",
+      "summary": "",
+      "authors": [
+        "rbanffy"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799465",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Red5 and Ezdrm Team to Streamline Delivery of Content",
+      "url": "https://www.red5.net/blog/red5-and-ezdrm-streamline-delivery-of-content-security/",
+      "published_at": "2026-09-22T11:20:11+00:00",
+      "summary": "",
+      "authors": [
+        "mondainx"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799468",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "PanTilt–desk pan-tilt tracker on Nim+ORT/OpenVINO+Nano(I debug on apples)",
+      "url": "https://github.com/olesha-ai/pan-tilt-ai-tracker",
+      "published_at": "2026-09-22T11:20:19+00:00",
+      "summary": "",
+      "authors": [
+        "olesha-ai"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799492",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "AV1Converter 3.0",
+      "url": "https://github.com/framicheli/av1converter",
+      "published_at": "2026-09-22T11:22:19+00:00",
+      "summary": "",
+      "authors": [
+        "francescomi"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799504",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Working-Class Taxpayers Subsidize Billionaires' Climate-Killing Private Jets",
+      "url": "https://www.commondreams.org/news/taxpayer-dollars-to-private-jet",
+      "published_at": "2026-09-22T11:23:02+00:00",
+      "summary": "",
+      "authors": [
+        "DefNotAiForSure"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799509",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "It's Trump's world, and he's accelerating its chaos",
+      "url": "https://www.cnn.com/2026/09/22/politics/trump-un-general-assembly-speech",
+      "published_at": "2026-09-22T11:23:31+00:00",
+      "summary": "",
+      "authors": [
+        "dat999zx"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799524",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Sunrise due east from everywhere on Earth, 23 September 2026",
+      "url": "https://pilgrimapp.org/sunpath/2026-autumn-equinox/",
+      "published_at": "2026-09-22T11:24:41+00:00",
+      "summary": "",
+      "authors": [
+        "momentmaker"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799525",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Dvd.club – a community Blu-ray and DVD lending library",
+      "url": "https://www.dvd.club/",
+      "published_at": "2026-09-22T11:24:50+00:00",
+      "summary": "I was a huge fan of Netflix DVD back in the day and very sad when it was sunset, so I made dvd.club.<p>Was originally written in Python, but have been loving using Go, so rewrote it. Stack is FreeBSD + go + SQLite + vanilla HTML&#x2F;CSS.",
+      "authors": [
+        "ShinyCyril"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799545",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: Bidslot – one screen, sold by the minute, anyone can take it from you",
+      "url": "https://bidslot.io",
+      "published_at": "2026-09-22T11:27:18+00:00",
+      "summary": "",
+      "authors": [
+        "honzaaap"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799546",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "God told them to sell crypto. Their investors lost everything",
+      "url": "https://www.technologyreview.com/2026/09/10/1143588/indxcoin-god-regalados-sell-crypto-investors-lost-everything/",
+      "published_at": "2026-09-22T11:27:21+00:00",
+      "summary": "",
+      "authors": [
+        "Geekette"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799577",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Type Punning in C and C++",
+      "url": "https://blog.pwkf.org/2026/09/21/correct-type-punning-in-c.html",
+      "published_at": "2026-09-22T11:29:47+00:00",
+      "summary": "",
+      "authors": [
+        "ingve"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799603",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Putin's party would have won only 34% without ballot stuffing, analysis suggests",
+      "url": "https://novayagazeta.eu/en/articles/2026/09/22/putin-s-party-would-have-won-only-34-without-ballot-stuffing-statistical-analysis-suggests-en-news",
+      "published_at": "2026-09-22T11:32:13+00:00",
+      "summary": "",
+      "authors": [
+        "giuliomagnifico"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799622",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Parallel Algorithms [pdf]",
+      "url": "https://www.cs.cmu.edu/~guyb/paralg/paralg/parallel.pdf",
+      "published_at": "2026-09-22T11:34:42+00:00",
+      "summary": "",
+      "authors": [
+        "Ir0n"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799630",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Banning self-recursive improvement in AI models?",
+      "url": "https://marginalrevolution.com/marginalrevolution/2026/09/banning-self-recursive-improvement-in-ai-models.html",
+      "published_at": "2026-09-22T11:35:22+00:00",
+      "summary": "",
+      "authors": [
+        "paulpauper"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799636",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "DotFly – a fruit fly's brain, simulated in C#",
+      "url": "https://kokosa.dev/blog/2026/dotfly/",
+      "published_at": "2026-09-22T11:35:33+00:00",
+      "summary": "",
+      "authors": [
+        "stared"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799638",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Could Latin become Europe's common language? A young group thinks it can",
+      "url": "https://www.lrt.lt/en/news-in-english/19/3055161/could-latin-become-europe-s-common-language-a-young-group-thinks-it-can",
+      "published_at": "2026-09-22T11:35:47+00:00",
+      "summary": "",
+      "authors": [
+        "paulpauper"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799640",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Solitaire Alone Together",
+      "url": "https://solitairealonetogether.com/",
+      "published_at": "2026-09-22T11:35:59+00:00",
+      "summary": "",
+      "authors": [
+        "fratellobigio"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799641",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Analyzing Jev, a new AI model",
+      "url": "https://blog.senko.net/analyzing-jev-a-new-ai-model",
+      "published_at": "2026-09-22T11:36:00+00:00",
+      "summary": "",
+      "authors": [
+        "taubek"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "small-specialized-models"
+      ]
+    },
+    {
+      "id": "hn:49799643",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "The Hyperlocal Customs of the Country",
+      "url": "https://www.nytimes.com/2026/09/05/opinion/unique-american-local-festivals.html",
+      "published_at": "2026-09-22T11:36:12+00:00",
+      "summary": "",
+      "authors": [
+        "paulpauper"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799645",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Reupsell – AI Product Accessories for Shopify",
+      "url": "https://apps.shopify.com/reupsell",
+      "published_at": "2026-09-22T11:36:20+00:00",
+      "summary": "",
+      "authors": [
+        "motion-hero"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799672",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Show HN: OmniUil AI – PQC Scanner/Taint Analysis and Migration Intelligence Rust",
+      "url": "https://github.com/Uilcol/omniuil-ai",
+      "published_at": "2026-09-22T11:39:28+00:00",
+      "summary": "",
+      "authors": [
+        "UilCol"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "hn:49799677",
+      "source_id": "hacker-news",
+      "source_type": "community",
+      "title": "Built a Memory-Test Game Inspired by the Chimp Test",
+      "url": "https://puzznest.com/memory-test",
+      "published_at": "2026-09-22T11:39:57+00:00",
+      "summary": "",
+      "authors": [
+        "puzznest"
+      ],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
       "theme_ids": []
     }
   ],
