@@ -17,6 +17,13 @@ themes:
     - distillation
     - task-specific model
     - on-device model
+    - system one model
+    - system-one model
+    - decision model
+    - typed decision
+    - calibrated decision
+    - non-autoregressive decision
+    - jev
   operational-ontology:
     - operational ontology
     - enterprise ontology
@@ -53,6 +60,9 @@ themes:
     - system of action
     - runtime system
     - agents at scale
+    - agent loop
+    - agent middleware
+    - harness middleware
   assurance-infrastructure:
     - agent security
     - ai observability
@@ -70,6 +80,10 @@ themes:
     - agent intent
     - human risk management
     - ai governance
+    - tool-call guardrail
+    - tool call guardrail
+    - action classifier
+    - dangerous action
   open-local-inference:
     - open weights
     - open-weight
@@ -91,6 +105,8 @@ themes:
     - model selector
     - heterogeneous models
     - mixture of agents
+    - semantic routing
+    - route requests
   training-self-improvement:
     - fine-tuning
     - fine tuning

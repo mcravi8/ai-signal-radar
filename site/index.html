@@ -6,7 +6,7 @@
     <meta name="description" content="Cross-source AI research across first-party labs, newsletters, papers, repositories, public essays, and technical discussion." />
     <title>AI Signal Radar — Cross-source research</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 12h48v8H8zm0 16h48v8H8zm0 16h48v8H8z' fill='%2317354d'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260921.11" />
+    <link rel="stylesheet" href="./styles.css?v=20260921.12" />
   </head>
   <body>
     <a class="skip-link" href="#workspace">Skip to research</a>
@@ -17,7 +17,7 @@
           <a href="#overview" data-route="overview"><span>01</span>Overview</a>
           <a href="#analyses" data-route="analyses"><span>02</span>Analyses</a>
           <a href="#themes" data-route="themes"><span>03</span>Themes</a>
-          <a href="#projects" data-route="projects"><span>04</span>Projects</a>
+          <a href="#projects" data-route="projects"><span>04</span>Engineering</a>
           <a href="#evidence" data-route="evidence"><span>05</span>Evidence</a>
           <a href="#method" data-route="method"><span>06</span>Method</a>
         </nav>
@@ -88,15 +88,23 @@
         </section>
 
         <section class="view" id="view-projects" data-view="projects" aria-labelledby="projects-heading" hidden>
-          <div class="view-intro"><div><h2 id="projects-heading">Project opportunities</h2><p>Reviewed projects explain why a tool matters, the workflow it unlocks, and its caveat. Unreviewed public discoveries remain available, but never inherit analyst judgment.</p></div></div>
+          <div class="view-intro"><div><h2 id="projects-heading">Engineering Atlas</h2><p>Connect engineering concepts to reviewed tools and public repository discoveries. Every item keeps its review state: discovery is never presented as endorsement.</p></div><div class="system-rule"><strong>Registry boundary</strong><span>Concept evidence, tool assessment, and repository activity remain separate facts.</span></div></div>
+          <div class="metric-strip engineering-health" id="engineering-health"><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div></div>
+          <section class="content-block engineering-concepts-section" aria-labelledby="engineering-concepts-heading">
+            <header class="block-header"><div><span class="block-number">A</span><h3 id="engineering-concepts-heading">Engineering concepts</h3></div><p>Reusable architectures and implementation patterns linked to concrete tools and source evidence.</p></header>
+            <div class="concept-grid" id="engineering-concepts"><p class="empty-state">Loading engineering concepts…</p></div>
+          </section>
+          <section class="content-block" aria-labelledby="engineering-tools-heading">
+          <header class="block-header"><div><span class="block-number">B</span><h3 id="engineering-tools-heading">Tools and repository registry</h3></div><p>Reviewed assessments first, then a bounded queue, followed by unreviewed discoveries.</p></header>
           <div class="table-tools">
-            <label><span>Search</span><input id="project-search" type="search" placeholder="Project, category, or workflow" autocomplete="off" /></label>
-            <label><span>Review status</span><select id="project-review"><option value="reviewed">Reviewed assessments</option><option value="">All projects</option><option value="unreviewed">Unreviewed discoveries</option></select></label>
+            <label><span>Search</span><input id="project-search" type="search" placeholder="Tool, concept, category, or workflow" autocomplete="off" /></label>
+            <label><span>Review status</span><select id="project-review"><option value="reviewed">Reviewed assessments</option><option value="queued">Review queue</option><option value="discovered">Unreviewed discoveries</option><option value="">All registry items</option></select></label>
             <label><span>Action</span><select id="project-action"><option value="">All actions</option></select></label>
             <label><span>Evidence</span><select id="project-source"><option value="">All projects</option><option value="cross-source">Cross-source only</option><option value="single-source">Single-source only</option></select></label>
             <output id="project-count">—</output>
           </div>
           <div class="table-shell"><table class="data-table project-table"><thead><tr><th class="numeric-header">Rank</th><th>Project and assessment</th><th class="numeric-header">Opportunity</th><th>Action</th><th>Risk</th><th class="numeric-header">Sources</th><th>Layer</th></tr></thead><tbody id="project-body"><tr><td colspan="7" class="table-message">Loading project research…</td></tr></tbody></table></div>
+          </section>
         </section>
 
         <section class="view" id="view-evidence" data-view="evidence" aria-labelledby="evidence-heading" hidden>
@@ -124,6 +132,6 @@
         <section class="load-failure" id="load-failure" hidden aria-live="assertive"><strong>Research data could not be loaded.</strong><span id="failure-detail"></span><button type="button" id="retry-load">Retry</button></section>
       </main>
     </div>
-    <script src="./app.js?v=20260921.11" defer></script>
+    <script src="./app.js?v=20260921.12" defer></script>
   </body>
 </html>

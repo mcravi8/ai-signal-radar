@@ -242,6 +242,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .evidence-list-item a:hover { color: var(--blue); text-decoration: underline; }
 .evidence-list-item span { color: var(--muted); font: .59rem var(--mono); }
 
+.engineering-health { grid-template-columns: repeat(4, 1fr); }
+.engineering-concepts-section { margin-top: 0; }
+.concept-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
+.concept-card { display: grid; align-content: start; min-height: 170px; padding: .85rem .9rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.concept-card-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .65rem; align-items: start; }
+.concept-card-head .badge { white-space: nowrap; }
+.concept-card p { margin: .65rem 0; color: var(--muted); font-size: .69rem; line-height: 1.5; }
+.concept-counts { margin-top: auto; padding-top: .55rem; border-top: 1px solid var(--line); color: var(--navy); font-size: .58rem; }
+.concept-card small { display: -webkit-box; overflow: hidden; margin-top: .4rem; color: var(--faint); font-size: .6rem; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .project-table { min-width: 1080px; }
 .project-table th:nth-child(1), .project-table td:nth-child(1) { width: 58px; }
 .project-table th:nth-child(2), .project-table td:nth-child(2) { width: 36%; }
@@ -331,6 +340,7 @@ a.evidence-title:hover { color: var(--blue); text-decoration: underline; }
   .source-grid { grid-template-columns: 1fr 1fr; }
   .source-item:nth-child(3n) { border-right: 1px solid var(--line); }
   .source-item:nth-child(2n) { border-right: 0; }
+  .concept-grid { grid-template-columns: 1fr 1fr; }
   .analysis-layout, .theme-layout { grid-template-columns: 1fr; }
   .analysis-index, .theme-index { max-height: 310px; overflow-y: auto; }
   .analysis-detail, .theme-dossier { padding: 1.15rem 1rem; }
@@ -361,6 +371,7 @@ a.evidence-title:hover { color: var(--blue); text-decoration: underline; }
   .source-toolbar, .source-group-head { display: grid; }
   .source-grid { grid-template-columns: 1fr; }
   .source-item, .source-item:nth-child(2n), .source-item:nth-child(3n) { border-right: 0; }
+  .concept-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

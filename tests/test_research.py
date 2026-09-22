@@ -1,5 +1,6 @@
 import json
 import unittest
+from collections import Counter
 from pathlib import Path
 
 from pipeline.export_public import validate_public_payload
@@ -55,11 +56,17 @@ class CrossSourceResearchTests(unittest.TestCase):
 
     def test_project_catalog_combines_reviewed_and_discovered_projects(self):
         reviewed = [project for project in self.payload["projects"] if project["review_status"] == "reviewed"]
-        discovered = [project for project in self.payload["projects"] if project["review_status"] == "unreviewed"]
+        queued = [project for project in self.payload["projects"] if project["review_status"] == "queued"]
+        discovered = [project for project in self.payload["projects"] if project["review_status"] == "discovered"]
         self.assertEqual(len(reviewed), 20)
+        self.assertEqual(len(queued), 25)
         self.assertGreater(len(discovered), 100)
-        self.assertTrue(all(project["opportunity_score"] is None for project in discovered))
+        self.assertTrue(all(project["opportunity_score"] is None for project in queued + discovered))
         self.assertTrue(all(project["source_ids"] for project in self.payload["projects"]))
+        self.assertTrue(all(project["theme_ids"] for project in queued))
+        self.assertTrue(all(project["review_priority"] is not None for project in self.payload["projects"]))
+        signature_counts = Counter(tuple(project["theme_ids"]) for project in queued)
+        self.assertLessEqual(max(signature_counts.values()), 3)
 
     def test_alphasignal_is_one_analysis_and_one_source(self):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}
@@ -118,6 +125,9 @@ class CrossSourceResearchTests(unittest.TestCase):
         pulse = analyses["expert-pulse"]
         self.assertIn(pulse["status"], {"configured", "active"})
         self.assertIn("engagement", pulse["interpretation_note"].casefold())
+        self.assertTrue(pulse["executive_summary"])
+        self.assertGreaterEqual(len(pulse["findings"]), 3)
+        self.assertTrue(all({"analysis", "why_it_matters", "workflow_opportunity", "caveat", "evidence_ids"}.issubset(finding) for finding in pulse["findings"]))
         bluesky_sources = [
             source for source in self.payload["sources"]
             if source.get("channel") == "expert-social"
@@ -125,6 +135,23 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertEqual(len(bluesky_sources), 8)
         self.assertTrue(all(source["evidence_role"] == "expert-observation" for source in bluesky_sources))
         self.assertTrue(all("bsky.social/about/brand-assets/" in source["logo_url"] for source in bluesky_sources))
+
+    def test_engineering_atlas_exposes_quality_and_review_states(self):
+        atlas = self.payload["engineering_atlas"]
+        self.assertGreaterEqual(len(atlas["concepts"]), 10)
+        self.assertGreater(atlas["quality"]["classification_coverage"], 0.2)
+        self.assertEqual(
+            atlas["quality"]["classified_public_records"] + atlas["quality"]["classification_review_records"],
+            self.payload["meta"]["public_record_count"],
+        )
+        self.assertEqual(atlas["quality"]["queued_projects"], 25)
+        self.assertEqual(atlas["quality"]["reviewed_projects"], 20)
+        self.assertIn("not a direct collector-uptime check", atlas["freshness_note"])
+        self.assertTrue(all({"project_count", "reviewed_project_count", "queued_project_count"}.issubset(concept) for concept in atlas["concepts"]))
+        active_sources = [source for source in self.payload["sources"] if source["status"] == "active"]
+        self.assertTrue(all(source["last_observed_at"] for source in active_sources))
+        self.assertTrue(all(source["freshness"] in {"recent", "aging", "historical"} for source in active_sources))
+        self.assertTrue(all(item["disposition"] in {"classified", "classification-review"} for item in self.payload["evidence"]))
 
     def test_early_signal_tracker_separates_inference_from_evidence(self):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}

@@ -151,6 +151,7 @@ def _normalize_public_evidence(row: dict[str, Any], themes: dict[str, dict[str, 
         "authors": row.get("authors", []),
         "projects": row.get("projects", []),
         "theme_ids": theme_ids,
+        "disposition": "classified" if theme_ids else "classification-review",
         "stack_layers": _stack_layers(theme_ids, themes),
         "support_count": 1,
         "monthly_counts": {month: 1} if month else {},
@@ -186,6 +187,7 @@ def _normalize_alpha_evidence(
                 "authors": [],
                 "projects": trend.get("examples", []),
                 "theme_ids": theme_ids,
+                "disposition": "classified" if theme_ids else "classification-review",
                 "stack_layers": _stack_layers(theme_ids, themes),
                 "support_count": trend["mentions"],
                 "monthly_counts": trend.get("monthly_mentions", {}),
@@ -220,6 +222,7 @@ def _normalize_alpha_evidence(
                 "authors": [],
                 "projects": [project["name"]],
                 "theme_ids": theme_ids,
+                "disposition": "classified" if theme_ids else "classification-review",
                 "stack_layers": _stack_layers(theme_ids, themes),
                 "support_count": 1,
                 "monthly_counts": {month: 1} if month else {},
@@ -583,7 +586,72 @@ def build_research(
     evidence = sorted(public_evidence + alpha_evidence, key=lambda item: (item.get("published_at", ""), item["id"]), reverse=True)
     themes = _theme_analyses(evidence, theme_defs, as_of)
     projects = _projects(alpha, public_evidence, project_ids, layer_names)
+    evidence_by_id = {item["id"]: item for item in evidence}
+    for project in projects:
+        linked = [evidence_by_id[evidence_id] for evidence_id in project["evidence_ids"] if evidence_id in evidence_by_id]
+        project["theme_ids"] = sorted({theme_id for item in linked for theme_id in item.get("theme_ids", [])})
+        if project["review_status"] == "reviewed":
+            project["review_priority"] = project.get("opportunity_score")
+            project["review_reason"] = "Reviewed assessment with an explicit opportunity score."
+            continue
+        published = _parse_date(project.get("source_date", ""))
+        age_days = (as_of - published).days if published else 9999
+        priority = 20 * len(project["theme_ids"]) + (25 if project["cross_source"] else 0)
+        priority += 20 if age_days <= 30 else 10 if age_days <= 90 else 0
+        project["review_priority"] = min(100, priority)
+        project["review_reason"] = (
+            f"{len(project['theme_ids'])} matched concepts; "
+            f"{len(project['source_ids'])} evidence source{'s' if len(project['source_ids']) != 1 else ''}; "
+            f"last observed {project.get('source_date') or 'N/O'}."
+        )
+
+    def project_recency(project: dict[str, Any]) -> float:
+        published = _parse_date(project.get("source_date", ""))
+        return published.timestamp() if published else 0
+
+    ranked_candidates = sorted(
+        (project for project in projects if project["review_status"] != "reviewed" and project["theme_ids"]),
+        key=lambda project: (-project["review_priority"], -project_recency(project), project["name"]),
+    )
+    queue_candidates: list[dict[str, Any]] = []
+    signature_counts: Counter[tuple[str, ...]] = Counter()
+    for project in ranked_candidates:
+        signature = tuple(project["theme_ids"])
+        if signature_counts[signature] >= 3:
+            continue
+        queue_candidates.append(project)
+        signature_counts[signature] += 1
+        if len(queue_candidates) == 25:
+            break
+    if len(queue_candidates) < 25:
+        queued_candidate_names = {project["name"] for project in queue_candidates}
+        queue_candidates.extend(
+            project for project in ranked_candidates
+            if project["name"] not in queued_candidate_names
+        )
+        queue_candidates = queue_candidates[:25]
+    queued_names = {project["name"] for project in queue_candidates}
+    for project in projects:
+        if project["review_status"] == "reviewed":
+            continue
+        if project["name"] in queued_names:
+            project["review_status"] = "queued"
+            project["action"] = "Review next"
+        else:
+            project["review_status"] = "discovered"
+            project["action"] = "Discovered"
+    projects[20:] = sorted(
+        projects[20:],
+        key=lambda project: (
+            0 if project["review_status"] == "queued" else 1,
+            -(project.get("review_priority") or 0),
+            -project_recency(project),
+            project["name"],
+        ),
+    )
     reviewed_projects = [project for project in projects if project["review_status"] == "reviewed"]
+    queued_projects = [project for project in projects if project["review_status"] == "queued"]
+    discovered_projects = [project for project in projects if project["review_status"] == "discovered"]
 
     source_defs = {source["id"]: dict(source) for source in public_payload.get("sources", [])}
     source_defs.setdefault(
@@ -597,10 +665,21 @@ def build_research(
         },
     )
     counts = Counter(item["source_id"] for item in evidence)
+    dates_by_source: dict[str, list[datetime]] = defaultdict(list)
+    for item in evidence:
+        if published := _parse_date(item.get("published_at", "")):
+            dates_by_source[item["source_id"]].append(published)
     sources = []
     for source_id, source in source_defs.items():
         source["normalized_evidence_count"] = counts[source_id]
         source["status"] = "active" if counts[source_id] else "configured"
+        latest = max(dates_by_source[source_id], default=None)
+        source["last_observed_at"] = latest.isoformat() if latest else None
+        if not latest:
+            source["freshness"] = "configured"
+        else:
+            age_days = max(0, (as_of - latest).days)
+            source["freshness"] = "recent" if age_days <= 30 else "aging" if age_days <= 90 else "historical"
         sources.append(source)
     sources.sort(key=lambda source: (-source["normalized_evidence_count"], source["name"]))
     active_source_ids = [source["id"] for source in sources if source["status"] == "active"]
@@ -627,6 +706,91 @@ def build_research(
         ),
         key=lambda row: (-row["source_count"], -row["evidence_count"], row["theme_id"]),
     )
+
+    def expert_subset(theme_ids: set[str]) -> list[dict[str, Any]]:
+        return [item for item in classified_expert_items if theme_ids.intersection(item["theme_ids"])]
+
+    def expert_evidence_ids(theme_ids: set[str], limit: int = 5) -> list[str]:
+        candidates = sorted(
+            expert_subset(theme_ids),
+            key=lambda item: (item.get("published_at", ""), item["id"]),
+            reverse=True,
+        )
+        selected: list[dict[str, Any]] = []
+        seen_sources: set[str] = set()
+        for item in candidates:
+            if item["source_id"] not in seen_sources:
+                selected.append(item)
+                seen_sources.add(item["source_id"])
+            if len(selected) == limit:
+                break
+        if len(selected) < limit:
+            selected_ids = {item["id"] for item in selected}
+            selected.extend(item for item in candidates if item["id"] not in selected_ids)
+        return [item["id"] for item in selected[:limit]]
+
+    def expert_stats(theme_ids: set[str]) -> tuple[int, int]:
+        items = expert_subset(theme_ids)
+        return len(items), len({item["source_id"] for item in items})
+
+    def expert_strength(expert_count: int) -> tuple[str, str]:
+        if expert_count >= 3:
+            return "strong", "Cross-expert pattern"
+        if expert_count == 2:
+            return "emerging", "Emerging agreement"
+        return "watch", "Source-specific watch"
+
+    evaluation_themes = {"training-self-improvement"}
+    agent_operations_themes = {"agent-harnesses", "coding-agents", "assurance-infrastructure"}
+    model_fit_themes = {"small-specialized-models", "open-local-inference", "model-routing"}
+    evaluation_count, evaluation_experts = expert_stats(evaluation_themes)
+    agent_count, agent_experts = expert_stats(agent_operations_themes)
+    model_fit_count, model_fit_experts = expert_stats(model_fit_themes)
+    evaluation_strength, evaluation_label = expert_strength(evaluation_experts)
+    agent_strength, agent_label = expert_strength(agent_experts)
+    model_fit_strength, model_fit_label = expert_strength(model_fit_experts)
+    expert_findings = [
+        {
+            "id": "evaluation-as-system-design",
+            "strength": evaluation_strength,
+            "label": evaluation_label,
+            "title": "Evaluation is moving from a final benchmark into the system-design loop",
+            "analysis": f"{evaluation_count} classified posts across {evaluation_experts} experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
+            "why_it_matters": "Agent quality depends on task-specific traces, failure categories, and feedback loops that reveal whether a change improves the complete system—not only the base model.",
+            "workflow_opportunity": "Capture representative workflow traces, label failure modes, and run the same evaluation set whenever prompts, models, tools, or harness logic change.",
+            "caveat": "The posts identify an engineering priority; they do not establish one accepted evaluation method or prove that self-improving systems are reliable.",
+            "theme_ids": sorted(evaluation_themes),
+            "evidence_ids": expert_evidence_ids(evaluation_themes),
+            "metrics": {"posts": evaluation_count, "experts": evaluation_experts},
+        },
+        {
+            "id": "agent-operating-layer",
+            "strength": agent_strength,
+            "label": agent_label,
+            "title": "Attention is shifting from agent demos to the operating layer around them",
+            "analysis": f"{agent_count} posts across {agent_experts} experts connect harness behavior, coding agents, or assurance. The common concern is not simply whether a model can act, but how its context, tools, permissions, and failure recovery are engineered.",
+            "why_it_matters": "The durable engineering surface may be the execution and control environment that makes many models dependable, inspectable, and replaceable.",
+            "workflow_opportunity": "Treat the harness as a product: log every decision, isolate execution, validate outputs, and preserve a human-readable recovery path for failed runs.",
+            "caveat": "This grouping joins adjacent observations from different experts. It is a directional synthesis, not evidence that they endorse an identical architecture.",
+            "theme_ids": sorted(agent_operations_themes),
+            "evidence_ids": expert_evidence_ids(agent_operations_themes),
+            "metrics": {"posts": agent_count, "experts": agent_experts},
+        },
+        {
+            "id": "task-shaped-models",
+            "strength": model_fit_strength,
+            "label": model_fit_label,
+            "title": "Task-shaped models are becoming an engineering alternative to universal-model calls",
+            "analysis": f"{model_fit_count} posts across {model_fit_experts} experts point toward small, open, local, or routed models selected for a specific decision. The emerging idea is to spend frontier-model reasoning only where the workflow actually requires it.",
+            "why_it_matters": "Separating routine decisions from open-ended reasoning can reduce latency and cost while making outputs easier to constrain and evaluate.",
+            "workflow_opportunity": "Profile an expensive agent loop, isolate repeated classification or routing decisions, and compare a specialized model against the frontier-model baseline on quality, latency, and cost.",
+            "caveat": "Current expert-social support is limited. Product announcements and repository activity elsewhere in the radar provide context, not additional expert agreement.",
+            "theme_ids": sorted(model_fit_themes),
+            "evidence_ids": expert_evidence_ids(model_fit_themes),
+            "metrics": {"posts": model_fit_count, "experts": model_fit_experts},
+        },
+    ]
+    expert_findings = [finding for finding in expert_findings if finding["metrics"]["posts"]]
     narrative_source_ids = sorted(
         source["id"]
         for source in sources
@@ -786,6 +950,66 @@ def build_research(
     early_evidence_ids = sorted({evidence_id for direction in early_directions for evidence_id in direction["evidence_ids"]})
     early_source_ids = sorted({source_id for direction in early_directions for source_id in direction["source_ids"]})
 
+    engineering_concepts = []
+    for theme in themes:
+        concept_projects = [project for project in projects if theme["id"] in project.get("theme_ids", [])]
+        if not concept_projects:
+            continue
+        concept_projects.sort(
+            key=lambda project: (
+                0 if project["review_status"] == "reviewed" else 1 if project["review_status"] == "queued" else 2,
+                -(project.get("opportunity_score") or project.get("review_priority") or 0),
+                project["name"],
+            )
+        )
+        engineering_concepts.append(
+            {
+                "id": theme["id"],
+                "name": theme["name"],
+                "definition": theme["definition"],
+                "primary_layer": theme.get("primary_layer"),
+                "secondary_layer": theme.get("secondary_layer"),
+                "maturity": theme["maturity"],
+                "source_count": theme["source_count"],
+                "evidence_count": theme["evidence_count"],
+                "project_count": len(concept_projects),
+                "reviewed_project_count": sum(project["review_status"] == "reviewed" for project in concept_projects),
+                "queued_project_count": sum(project["review_status"] == "queued" for project in concept_projects),
+                "project_names": [project["name"] for project in concept_projects[:8]],
+            }
+        )
+    engineering_concepts.sort(
+        key=lambda concept: (
+            -concept["reviewed_project_count"],
+            -concept["queued_project_count"],
+            -concept["project_count"],
+            concept["name"],
+        )
+    )
+    classified_public_count = sum(bool(item.get("theme_ids")) for item in public_evidence)
+    classification_coverage = round(classified_public_count / len(public_evidence), 3) if public_evidence else None
+    recent_source_count = sum(source.get("freshness") == "recent" for source in sources)
+    aging_source_count = sum(source.get("freshness") == "aging" for source in sources)
+    historical_source_count = sum(source.get("freshness") == "historical" for source in sources)
+    engineering_atlas = {
+        "title": "Engineering Atlas",
+        "summary": "A connected registry of engineering concepts, reviewed tools, and public repository discoveries. Discovery is not endorsement; judgment appears only after review.",
+        "concepts": engineering_concepts,
+        "quality": {
+            "classification_coverage": classification_coverage,
+            "classified_public_records": classified_public_count,
+            "unclassified_public_records": len(public_evidence) - classified_public_count,
+            "classification_review_records": len(public_evidence) - classified_public_count,
+            "recent_sources": recent_source_count,
+            "aging_sources": aging_source_count,
+            "historical_sources": historical_source_count,
+            "reviewed_projects": len(reviewed_projects),
+            "queued_projects": len(queued_projects),
+            "discovered_projects": len(discovered_projects),
+        },
+        "freshness_note": "Freshness is based on the latest dated evidence observed for each source, not a direct collector-uptime check. Recent means 30 days or less; aging means 31–90 days; historical means more than 90 days.",
+    }
+
     analyses = [
         {
             "id": "cross-source-landscape",
@@ -849,6 +1073,8 @@ def build_research(
             "evidence_count": len(classified_expert_items),
             "corpus_count": len(expert_social_items),
             "evidence_ids": [item["id"] for item in classified_expert_items],
+            "executive_summary": "The strongest shared expert signal is methodological: evaluation and feedback are becoming part of system design. A second cluster concerns the operating layer around agents—context, tools, permissions, execution, and recovery. Specialized and routed models are a plausible efficiency direction, but expert-social corroboration remains limited.",
+            "findings": expert_findings,
             "theme_summary": expert_theme_summary,
             "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
             "updated_at": generated_at,
@@ -895,13 +1121,17 @@ def build_research(
             "observed_theme_count": sum(theme["evidence_count"] > 0 for theme in themes),
             "project_count": len(projects),
             "reviewed_project_count": len(reviewed_projects),
-            "discovered_project_count": len(projects) - len(reviewed_projects),
+            "queued_project_count": len(queued_projects),
+            "discovered_project_count": len(discovered_projects),
+            "classification_coverage": classification_coverage,
+            "recent_source_count": recent_source_count,
             "model": "Every source is normalized into the same evidence contract. Source-specific analyses remain inspectable but do not define the global navigation.",
         },
         "analyses": analyses,
         "weekly": _weekly_summary(evidence, themes, as_of),
         "themes": themes,
         "projects": projects,
+        "engineering_atlas": engineering_atlas,
         "evidence": evidence,
         "sources": sources,
         "methodology": {

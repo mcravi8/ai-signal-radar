@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-21T23:27:05.571718+00:00",
+    "generated_at": "2026-09-22T01:06:25.133188+00:00",
     "status": "success",
     "source_count": 35,
     "evidence_count": 1558,
@@ -12,9 +12,9 @@
     "signals": [
       "training-self-improvement",
       "agent-harnesses",
+      "small-specialized-models",
       "coding-agents",
-      "open-local-inference",
-      "small-specialized-models"
+      "open-local-inference"
     ]
   },
   "themes": [
@@ -56,7 +56,7 @@
       ],
       "primary_layer": "models-capabilities",
       "maturity": "emerging",
-      "evidence_count": 27,
+      "evidence_count": 67,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -126,10 +126,10 @@
       ],
       "score": {
         "recurrence": 15.0,
-        "acceleration": 16.0,
+        "acceleration": 20.0,
         "persistence": 15.0,
         "breadth": 20.0,
-        "total": 66.0
+        "total": 70.0
       }
     },
     {
@@ -161,7 +161,7 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 68,
+      "evidence_count": 69,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -627,7 +627,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "bluesky:6cf953cc69a4:3mvybtcnffp2y",
@@ -937,7 +939,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49781293",
@@ -1513,7 +1517,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49783513",
@@ -1641,7 +1647,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49783614",
@@ -1947,7 +1955,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49783809",
@@ -2169,7 +2179,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49784023",
@@ -2347,7 +2359,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49785168",
@@ -2670,7 +2684,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49786478",
@@ -2718,7 +2734,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49786497",
@@ -2878,7 +2896,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49786609",
@@ -2927,6 +2947,7 @@
       "projects": [],
       "sponsor_status": "unknown",
       "theme_ids": [
+        "small-specialized-models",
         "training-self-improvement"
       ]
     },
@@ -3024,7 +3045,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "cloudflare-ai-blog:72906577a948ec62d50f",
@@ -3156,7 +3179,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49787436",
@@ -3334,7 +3359,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "microsoft-research-blog:44698b868b1f853c4868",
@@ -3430,7 +3457,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49789058",
@@ -3625,7 +3654,8 @@
       "projects": [],
       "sponsor_status": "unknown",
       "theme_ids": [
-        "assurance-infrastructure"
+        "assurance-infrastructure",
+        "small-specialized-models"
       ]
     },
     {
@@ -3951,7 +3981,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49790937",
@@ -4584,7 +4616,9 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "small-specialized-models"
+      ]
     },
     {
       "id": "hn:49791442",

@@ -2,7 +2,7 @@
 
 AI Signal Radar is one cross-source research system for first-party AI labs, newsletters, papers, repositories, public essays, expert social observations, and technical discussion.
 
-Every source enters the same evidence contract. The public site is organized around analyses, theme dossiers, project opportunities, and inspectable evidence—not around a privileged newsletter or a blog feed.
+Every source enters the same evidence contract. The public site is organized around analyses, theme dossiers, an engineering atlas, and inspectable evidence—not around a privileged newsletter or a blog feed.
 
 ## What is public
 
@@ -79,6 +79,20 @@ Theme scores use recurrence, acceleration, persistence, and source breadth. Raw 
 
 The Early Signal Tracker is a separate inference layer. Each directional hypothesis requires an evidence record to connect at least two constituent themes, then assigns a stage from independent source-family breadth inside a rolling 90-day window. Its stages describe how widely a hypothesis is appearing across different kinds of evidence; they are not forecasts of adoption, market size, or technical correctness.
 
+Each retained evidence record also has an explicit disposition: `classified` when it maps to one or more canonical themes, or `classification-review` when it remains in the visible taxonomy backlog. This prevents unclassified records from silently disappearing. Classification coverage is reported as a quality metric, not a success score.
+
+## Engineering Atlas
+
+The Engineering workspace connects canonical concepts to reviewed AlphaSignal projects and public repository discoveries. Its boundaries are deliberate:
+
+- **Reviewed** means a project has a written assessment and opportunity score.
+- **Queued** means a classified discovery is among the next 25 candidates for review, ranked by concept breadth, independent corroboration, and recency. Identical concept combinations are capped at three candidates so one activity burst cannot monopolize the queue.
+- **Discovered** means the tool or repository is retained as evidence but has not received an analyst judgment.
+
+The Atlas also reports source freshness from the newest dated evidence seen for each source. This is an evidence-recency signal, not a claim that every collector ran successfully. True collector uptime requires a separate run ledger.
+
+The Expert Pulse analysis turns classified Bluesky observations into bounded findings with a stated interpretation, why it matters, a workflow opportunity, caveat, and inspectable supporting posts. Social engagement is never treated as corroboration.
+
 ## AlphaSignal research
 
 The tracked `data/public/alphasignal-research.json` is a derivative, public-safe research artifact built from the private local corpus. It currently covers 130 received emails, 129 substantive issues, 912 extracted signal records, 899 unique catalog records, 15 analyzed trends, and 20 ranked projects from April 14 through September 21, 2026.
@@ -96,4 +110,4 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 ## Current status
 
-The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides six direct workspaces: Overview, Analyses, Themes, Projects, Evidence, and Method.
+The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides six direct workspaces: Overview, Analyses, Themes, Engineering, Evidence, and Method.

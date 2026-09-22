@@ -21,7 +21,7 @@ const routeTitles = {
   overview: ["Research system", "Overview"],
   analyses: ["Research library", "Analyses"],
   themes: ["Cross-source dossiers", "Themes"],
-  projects: ["Practical assessment", "Projects"],
+  projects: ["Engineering registry", "Engineering Atlas"],
   evidence: ["Normalized corpus", "Evidence"],
   method: ["Trust and provenance", "Method"],
 };
@@ -182,7 +182,7 @@ function renderOverview() {
     metric("Active sources", formatNumber(meta.active_source_count), "One shared evidence contract"),
     metric("Structural trends", structuralTrendCount === undefined ? "N/O" : formatNumber(structuralTrendCount), "Reviewed AlphaSignal corpus"),
     metric("Emerging categories", formatNumber(emergingCategoryCount), "Priority watchlist to validate"),
-    metric("Reviewed projects", formatNumber(meta.reviewed_project_count), `${meta.discovered_project_count} discoveries await review`),
+    metric("Reviewed projects", formatNumber(meta.reviewed_project_count), `${meta.queued_project_count} queued · ${meta.discovered_project_count} discovered`),
     metric("Analyses", formatNumber(state.research.analyses.length), "Cross-source and source-specific"),
   );
 
@@ -279,7 +279,7 @@ function renderOverview() {
       item.append(
         sourceIdentity(source),
         node("span", "source-record-count tabular", `${formatNumber(source.normalized_evidence_count)} records`),
-        node("small", "", source.status),
+        node("small", "", source.status === "active" ? `Active · ${label(source.freshness)} · latest ${formatDate(source.last_observed_at)}` : "Configured · no evidence observed"),
       );
       grid.append(item);
     }
@@ -327,7 +327,7 @@ function renderAnalysisDetail() {
   const analysis = state.research.analyses.find((item) => item.id === state.selectedAnalysis) || state.research.analyses[0];
   state.selectedAnalysis = analysis.id;
   const detail = $("#analysis-detail");
-  detail.replaceChildren(analysisHeader(analysis, !["operator-narratives", "early-signal-tracker"].includes(analysis.id)));
+  detail.replaceChildren(analysisHeader(analysis, !["operator-narratives", "early-signal-tracker", "expert-pulse"].includes(analysis.id)));
 
   if (analysis.id === "alphasignal-corpus") {
     if (!state.alpha) {
@@ -463,9 +463,52 @@ function renderAnalysisDetail() {
     findings.append(directionList);
     detail.append(synthesis, stages, findings);
   } else if (analysis.id === "expert-pulse") {
-    if (analysis.interpretation_note) detail.append(node("p", "interpretation-note", analysis.interpretation_note));
+    const synthesis = node("section", "detail-section narrative-synthesis");
+    synthesis.append(node("h3", "", "Executive synthesis"), node("p", "synthesis-lead", analysis.executive_summary || "No synthesis has been published yet."));
+    if (analysis.interpretation_note) synthesis.append(node("p", "interpretation-note", analysis.interpretation_note));
+
+    const findings = node("section", "detail-section");
+    findings.append(node("h3", "", "Research findings"));
+    const findingList = node("div", "research-findings");
+    const evidenceById = new Map(state.research.evidence.map((item) => [item.id, item]));
+    for (const [index, finding] of (analysis.findings || []).entries()) {
+      const article = node("article", `research-finding finding-${finding.strength || "watch"}`);
+      const head = node("div", "finding-head");
+      head.append(node("span", "finding-index tabular", String(index + 1).padStart(2, "0")));
+      const title = node("div", "finding-title");
+      title.append(node("span", "finding-label", finding.label), node("h4", "", finding.title));
+      head.append(title, node("span", "finding-metrics tabular", `${finding.metrics.posts} posts · ${finding.metrics.experts} ${finding.metrics.experts === 1 ? "expert" : "experts"}`));
+      const body = node("div", "finding-body");
+      body.append(node("p", "finding-analysis", finding.analysis));
+      const implications = node("div", "finding-implications");
+      for (const [heading, copy] of [["Why it matters", finding.why_it_matters], ["Workflow opportunity", finding.workflow_opportunity], ["Caveat", finding.caveat]]) {
+        const item = node("div", "finding-implication");
+        item.append(node("strong", "", heading), node("p", "", copy));
+        implications.append(item);
+      }
+      body.append(implications);
+      const citedEvidence = (finding.evidence_ids || []).map((id) => evidenceById.get(id)).filter(Boolean);
+      if (citedEvidence.length) {
+        const details = node("details", "finding-evidence");
+        details.append(node("summary", "", `${citedEvidence.length} supporting posts`));
+        const rows = node("div", "evidence-list");
+        for (const post of citedEvidence) {
+          const row = node("article", "evidence-list-item");
+          const author = (post.authors || []).join(", ") || sourceName(post.source_id);
+          row.append(linkOrText(post), node("span", "", `${author} · ${formatDate(post.published_at)}`));
+          rows.append(row);
+        }
+        details.append(rows);
+        body.append(details);
+      }
+      article.append(head, body);
+      findingList.append(article);
+    }
+    if (!findingList.children.length) findingList.append(node("p", "empty-state", "No expert findings have enough classified evidence yet."));
+    findings.append(findingList);
+
     const themes = node("section", "detail-section");
-    themes.append(node("h3", "", "Leading expert observations"));
+    themes.append(node("h3", "", "Category evidence counts"));
     const themeRows = node("div", "compact-rows");
     for (const summary of analysis.theme_summary || []) {
       const theme = state.research.themes.find((item) => item.id === summary.theme_id);
@@ -490,7 +533,9 @@ function renderAnalysisDetail() {
     }
     if (!evidenceRows.children.length) evidenceRows.append(node("p", "empty-state", "The weekly collector has not added any matching posts yet."));
     recent.append(evidenceRows);
-    detail.append(themes, recent);
+    const scope = node("section", "detail-section analysis-scope");
+    scope.append(node("h3", "", "Corpus scope"), analysisFacts(analysis));
+    detail.append(synthesis, findings, scope, themes, recent);
   } else if (analysis.id === "operator-narratives") {
     const synthesis = node("section", "detail-section narrative-synthesis");
     synthesis.append(node("h3", "", "Executive synthesis"), node("p", "synthesis-lead", analysis.executive_summary || "No synthesis has been published yet."));
@@ -695,22 +740,50 @@ function renderThemes() {
 }
 
 function renderProjects() {
+  const atlas = state.research.engineering_atlas;
+  const quality = atlas.quality;
+  $("#engineering-health").replaceChildren(
+    metric("Classification", quality.classification_coverage === null ? "N/O" : `${Math.round(quality.classification_coverage * 100)}%`, `${formatNumber(quality.unclassified_public_records)} public records remain unclassified`),
+    metric("Fresh sources", formatNumber(quality.recent_sources), `${quality.aging_sources} aging · ${quality.historical_sources} historical`),
+    metric("Review queue", formatNumber(quality.queued_projects), "Bounded set selected from public discoveries"),
+    metric("Reviewed tools", formatNumber(quality.reviewed_projects), `${quality.discovered_projects} additional discoveries`),
+  );
+
+  const conceptGrid = $("#engineering-concepts");
+  conceptGrid.replaceChildren();
+  for (const concept of atlas.concepts) {
+    const card = node("article", "concept-card");
+    const head = node("div", "concept-card-head");
+    const theme = state.research.themes.find((item) => item.id === concept.id);
+    if (theme) head.append(themeButton(theme, true));
+    head.append(badge(compactAssessment(concept.maturity), concept.maturity));
+    card.append(
+      head,
+      node("p", "", concept.definition),
+      node("div", "concept-counts tabular", `${concept.project_count} tools · ${concept.reviewed_project_count} reviewed · ${concept.queued_project_count} queued`),
+    );
+    if (concept.project_names.length) card.append(node("small", "", concept.project_names.slice(0, 4).join(" · ")));
+    conceptGrid.append(card);
+  }
+  if (!atlas.concepts.length) conceptGrid.append(node("p", "empty-state", "No concepts are connected to tools yet."));
+
   const query = state.projectSearch.trim().toLowerCase();
   const projects = state.research.projects.filter((project) => {
-    const searchable = [project.name, project.category, project.why_it_matters, project.workflow_opportunity].join(" ").toLowerCase();
+    const searchable = [project.name, project.category, project.why_it_matters, project.workflow_opportunity, ...(project.theme_ids || []).map(themeName)].join(" ").toLowerCase();
     const sourceMatch = !state.projectSource || (state.projectSource === "cross-source" ? project.cross_source : !project.cross_source);
     return (!query || searchable.includes(query)) && (!state.projectReview || project.review_status === state.projectReview) && (!state.projectAction || project.action === state.projectAction) && sourceMatch;
   });
   const reviewedCount = state.research.projects.filter((project) => project.review_status === "reviewed").length;
-  const discoveryCount = state.research.projects.length - reviewedCount;
-  $("#project-count").textContent = `${projects.length} shown · ${reviewedCount} reviewed / ${discoveryCount} discoveries`;
+  const queuedCount = state.research.projects.filter((project) => project.review_status === "queued").length;
+  const discoveryCount = state.research.projects.filter((project) => project.review_status === "discovered").length;
+  $("#project-count").textContent = `${projects.length} shown · ${reviewedCount} reviewed / ${queuedCount} queued / ${discoveryCount} discovered`;
   const body = $("#project-body");
   body.replaceChildren();
   for (const project of projects) {
     const projectSlug = project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
     const detailId = `project-detail-${project.review_status}-${project.rank ?? projectSlug}`;
     const row = node("tr", "primary-row");
-    const rank = node("td", "rank-cell number-cell tabular", project.rank === null ? "—" : String(project.rank).padStart(2, "0"));
+    const rank = node("td", "rank-cell number-cell tabular", project.rank === null ? (project.review_status === "queued" ? "Q" : "—") : String(project.rank).padStart(2, "0"));
     const toggle = node("button", "detail-toggle", project.review_status === "reviewed" ? "Open assessment" : "Inspect evidence");
     toggle.type = "button";
     toggle.setAttribute("aria-expanded", "false");
@@ -724,7 +797,8 @@ function renderProjects() {
     link.rel = "noreferrer";
     subject.append(link, node("small", "", project.category));
     const why = node("p", `project-why ${project.review_status === "reviewed" ? "" : "project-why-unreviewed"}`);
-    why.append(node("strong", "", project.review_status === "reviewed" ? "Why it matters: " : "Status: "), document.createTextNode(project.review_status === "reviewed" ? project.why_it_matters : "Not yet assessed; showing source facts only."));
+    const statusCopy = project.review_status === "queued" ? project.review_reason : "Not yet assessed; showing source facts only.";
+    why.append(node("strong", "", project.review_status === "reviewed" ? "Why it matters: " : project.review_status === "queued" ? "Why queued: " : "Status: "), document.createTextNode(project.review_status === "reviewed" ? project.why_it_matters : statusCopy));
     subject.append(why, toggle);
     row.append(rank, subject, node("td", "score-cell tabular", project.opportunity_score === null ? "N/O" : String(project.opportunity_score)), node("td", "", project.action), node("td", "", project.hype_risk), node("td", "number-cell tabular", String(project.source_ids.length)), node("td", "", project.primary_layer));
 
@@ -742,6 +816,16 @@ function renderProjects() {
     const provenance = node("div", "project-provenance");
     provenance.append(node("strong", "detail-label", "Evidence sources"), node("p", "", project.source_ids.map(sourceName).join(" · ")));
     panel.append(provenance);
+    const concepts = node("div", "project-provenance");
+    concepts.append(node("strong", "detail-label", "Engineering concepts"));
+    const conceptLinks = node("div", "signal-theme-links");
+    for (const themeId of project.theme_ids || []) {
+      const theme = state.research.themes.find((item) => item.id === themeId);
+      if (theme) conceptLinks.append(themeButton(theme, true));
+    }
+    if (!conceptLinks.children.length) conceptLinks.append(node("p", "", "Unclassified — no concept relationship assigned yet."));
+    concepts.append(conceptLinks);
+    panel.append(concepts);
     cell.append(panel);
     detailRow.append(cell);
     body.append(row, detailRow);
