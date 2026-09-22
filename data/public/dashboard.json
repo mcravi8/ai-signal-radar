@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-22T01:06:25.133188+00:00",
+    "generated_at": "2026-09-22T01:07:09.602723+00:00",
     "status": "success",
     "source_count": 35,
-    "evidence_count": 1558,
+    "evidence_count": 1562,
     "warnings": []
   },
   "weekly": {
@@ -56,7 +56,7 @@
       ],
       "primary_layer": "models-capabilities",
       "maturity": "emerging",
-      "evidence_count": 67,
+      "evidence_count": 68,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -597,75 +597,6 @@
     }
   ],
   "evidence": [
-    {
-      "id": "hn:49780820",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "What happened to the Snowden archive",
-      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
-      "published_at": "2026-09-20T22:35:49+00:00",
-      "summary": "",
-      "authors": [
-        "EXHades"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49780849",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: jevals – replacing LLM judges with typed Jev decisions",
-      "url": "https://github.com/openlayer-ai/jevals",
-      "published_at": "2026-09-20T22:39:47+00:00",
-      "summary": "",
-      "authors": [
-        "gbayomi"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "bluesky:6cf953cc69a4:3mvybtcnffp2y",
-      "source_id": "bluesky-emily-bender",
-      "source_type": "expert-social",
-      "title": "Thinking about the selling point of \"AI\" supposedly \"freeing up time\" to do important things. Beyond devaluing the tasks that we can supposedly offload to software systems, it occurs to me that thi...",
-      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mvybtcnffp2y",
-      "published_at": "2026-09-20T22:49:34.470Z",
-      "summary": "",
-      "authors": [
-        "Emily M. Bender"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49780980",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Try Omarchy for Windows – Full Omarchy Desktop on Windows",
-      "url": "https://github.com/omacom/try-omarchy-windows",
-      "published_at": "2026-09-20T22:56:44+00:00",
-      "summary": "No VM setup or configuration. Download TryOmarchy.exe, follow the prompts, and you&#x27;ll be booted into a full Omarchy desktop within minutes. No dual booting or repartitioning required.<p>Under the hood it uses QEMU + WHPX, with GPU acceleration where supported.",
-      "authors": [
-        "tsouth2"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
     {
       "id": "hn:49781032",
       "source_id": "hacker-news",
@@ -4662,6 +4593,84 @@
       "summary": "",
       "authors": [
         "Emily M. Bender"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mw2kwnye2y2c",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "title": "The word of the day is: \"unleash\" I've been seeing a lot of \"unleashing AI\", \"unleashing expertimentation (with AI)\", and even ostensibly critical \"OpenAI unleashed ChatGPT on the world with no one...",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mw2kwnye2y2c",
+      "published_at": "2026-09-21T20:37:50.181Z",
+      "summary": "",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mw2l5jyq7226",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "OpenAI \"has now resolved more than 100 long-standing open problems across most areas of mathematics,\" and is waiting to release them until after discussions with the math community The same thing w...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw2l5jyq7226",
+      "published_at": "2026-09-21T20:41:41.029Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:b3614927c6a2:3mw2tsop42c2u",
+      "source_id": "simon-willison",
+      "source_type": "expert-social",
+      "title": "Put together some notes on Jev and the new category of system one aka decision models simonwillison.net/2026/Sep/21/...",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mw2tsop42c2u",
+      "published_at": "2026-09-21T23:16:40.533Z",
+      "summary": "",
+      "authors": [
+        "Simon Willison"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [
+        "small-specialized-models"
+      ]
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mw2usvvn6c26",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "AI can be a really wonderful tool for exploring topics far from coding. I had Claude Fable 5.1 put together an annotated guide to Eliot's poem \"The Wasteland,\" with multiple pathways through the po...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw2usvvn6c26",
+      "published_at": "2026-09-21T23:34:41.829Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
       ],
       "tags": [
         "bluesky",

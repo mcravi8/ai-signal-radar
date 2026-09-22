@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-22T01:06:25.133188+00:00",
+    "generated_at": "2026-09-22T01:07:09.602723+00:00",
     "status": "success",
-    "normalized_evidence_count": 1593,
-    "public_record_count": 1558,
+    "normalized_evidence_count": 1597,
+    "public_record_count": 1562,
     "active_source_count": 36,
     "theme_count": 20,
     "observed_theme_count": 19,
@@ -30,8 +30,8 @@
         "simon-willison",
         "huggingface-papers",
         "bluesky-nathan-lambert",
-        "greylock-essays",
         "bluesky-ethan-mollick",
+        "greylock-essays",
         "alphasignal",
         "anthropic-news-research",
         "eugene-yan",
@@ -55,14 +55,14 @@
         "bluesky-margaret-mitchell",
         "radical-ventures",
         "chip-huyen",
+        "bluesky-emily-bender",
         "menlo-ventures",
         "microsoft-research-blog",
-        "bluesky-emily-bender",
         "bluesky-arvind-narayanan",
         "bluesky-karpathy"
       ],
-      "evidence_count": 1593,
-      "updated_at": "2026-09-22T01:06:25.133188+00:00"
+      "evidence_count": 1597,
+      "updated_at": "2026-09-22T01:07:09.602723+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -120,8 +120,8 @@
         "the-batch",
         "yc-essays"
       ],
-      "evidence_count": 1558,
-      "updated_at": "2026-09-22T01:06:25.133188+00:00"
+      "evidence_count": 1562,
+      "updated_at": "2026-09-22T01:07:09.602723+00:00"
     },
     {
       "id": "early-signal-tracker",
@@ -490,13 +490,13 @@
       ],
       "executive_summary": "The current corpus points toward a more modular and operational AI industry: agents own bounded workflows; models are selected inside heterogeneous inference systems; governed context connects agents to live business state; and assurance becomes part of the release path. Physical AI is earlier, with simulation and validation emerging as the enabling layer. These are hypotheses to monitor, not forecasts of adoption.",
       "interpretation_note": "A direction's stage is based on evidence that connects at least two constituent themes and on independent source-family breadth inside a rolling 90-day window. It measures whether a compound hypothesis is appearing in different kinds of evidence—not market size, technical correctness, or inevitability. Supporting links are selected for source diversity rather than popularity.",
-      "updated_at": "2026-09-22T01:06:25.133188+00:00"
+      "updated_at": "2026-09-22T01:07:09.602723+00:00"
     },
     {
       "id": "expert-pulse",
       "title": "Expert pulse",
       "question": "Which technical ideas, tools, and capability claims are appearing across curated AI experts on Bluesky?",
-      "summary": "14 relevant public posts from 10 curated experts, classified with the same taxonomy as the rest of the radar.",
+      "summary": "15 relevant public posts from 10 curated experts, classified with the same taxonomy as the rest of the radar.",
       "status": "active",
       "source_ids": [
         "bluesky-arvind-narayanan",
@@ -510,8 +510,8 @@
         "latent-space",
         "simon-willison"
       ],
-      "evidence_count": 14,
-      "corpus_count": 184,
+      "evidence_count": 15,
+      "corpus_count": 188,
       "evidence_ids": [
         "bluesky:e14dee24058c:3lbe443vxms2y",
         "bluesky:2a5707251144:3mkbfcbtlbs2n",
@@ -526,7 +526,8 @@
         "bluesky:1278ebf77949:3mv6cihd7tk2v",
         "bluesky:c2ef00c3e14c:3mvhyb2svuc2s",
         "bluesky:1278ebf77949:3mvneqxjm3s22",
-        "bluesky:1278ebf77949:3mvxrv6krzs22"
+        "bluesky:1278ebf77949:3mvxrv6krzs22",
+        "bluesky:b3614927c6a2:3mw2tsop42c2u"
       ],
       "executive_summary": "The strongest shared expert signal is methodological: evaluation and feedback are becoming part of system design. A second cluster concerns the operating layer around agents—context, tools, permissions, execution, and recovery. Specialized and routed models are a plausible efficiency direction, but expert-social corroboration remains limited.",
       "findings": [
@@ -585,7 +586,7 @@
           "strength": "emerging",
           "label": "Emerging agreement",
           "title": "Task-shaped models are becoming an engineering alternative to universal-model calls",
-          "analysis": "2 posts across 2 experts point toward small, open, local, or routed models selected for a specific decision. The emerging idea is to spend frontier-model reasoning only where the workflow actually requires it.",
+          "analysis": "3 posts across 2 experts point toward small, open, local, or routed models selected for a specific decision. The emerging idea is to spend frontier-model reasoning only where the workflow actually requires it.",
           "why_it_matters": "Separating routine decisions from open-ended reasoning can reduce latency and cost while making outputs easier to constrain and evaluate.",
           "workflow_opportunity": "Profile an expensive agent loop, isolate repeated classification or routing decisions, and compare a specialized model against the frontier-model baseline on quality, latency, and cost.",
           "caveat": "Current expert-social support is limited. Product announcements and repository activity elsewhere in the radar provide context, not additional expert agreement.",
@@ -595,11 +596,12 @@
             "small-specialized-models"
           ],
           "evidence_ids": [
+            "bluesky:b3614927c6a2:3mw2tsop42c2u",
             "bluesky:e810fac7fd93:3mtmlkcbuoc2x",
             "bluesky:b3614927c6a2:3mt2ynhrlk22z"
           ],
           "metrics": {
-            "posts": 2,
+            "posts": 3,
             "experts": 2
           }
         }
@@ -622,6 +624,19 @@
             "bluesky:b3614927c6a2:3mseqv5z4qk2z",
             "bluesky:2a5707251144:3mkbfcbtlbs2n",
             "bluesky:e14dee24058c:3lbe443vxms2y"
+          ]
+        },
+        {
+          "theme_id": "small-specialized-models",
+          "evidence_count": 2,
+          "source_ids": [
+            "bluesky-nathan-lambert",
+            "simon-willison"
+          ],
+          "source_count": 2,
+          "evidence_ids": [
+            "bluesky:b3614927c6a2:3mw2tsop42c2u",
+            "bluesky:e810fac7fd93:3mtmlkcbuoc2x"
           ]
         },
         {
@@ -680,21 +695,10 @@
           "evidence_ids": [
             "bluesky:b3614927c6a2:3mt2ynhrlk22z"
           ]
-        },
-        {
-          "theme_id": "small-specialized-models",
-          "evidence_count": 1,
-          "source_ids": [
-            "bluesky-nathan-lambert"
-          ],
-          "source_count": 1,
-          "evidence_ids": [
-            "bluesky:e810fac7fd93:3mtmlkcbuoc2x"
-          ]
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-09-22T01:06:25.133188+00:00"
+      "updated_at": "2026-09-22T01:07:09.602723+00:00"
     },
     {
       "id": "operator-narratives",
@@ -1011,7 +1015,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-22T01:06:25.133188+00:00"
+      "updated_at": "2026-09-22T01:07:09.602723+00:00"
     },
     {
       "id": "project-opportunities",
@@ -1033,7 +1037,7 @@
     "as_of": "2026-09-22",
     "window_start": "2026-09-15",
     "previous_window_start": "2026-09-08",
-    "new_public_records": 661,
+    "new_public_records": 665,
     "movements": [
       {
         "theme_id": "training-self-improvement",
@@ -1046,9 +1050,9 @@
       {
         "theme_id": "small-specialized-models",
         "name": "Small & specialized models",
-        "recent": 53,
+        "recent": 54,
         "prior": 1,
-        "delta": 52,
+        "delta": 53,
         "direction": "rising"
       },
       {
@@ -1728,9 +1732,9 @@
         "task-specific model"
       ],
       "primary_layer": "models-capabilities",
-      "evidence_count": 70,
-      "support_units": 342,
-      "source_count": 11,
+      "evidence_count": 71,
+      "support_units": 343,
+      "source_count": 12,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
@@ -1783,6 +1787,11 @@
           "support_units": 1
         },
         {
+          "source_id": "simon-willison",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
           "source_id": "the-batch",
           "observations": 1,
           "support_units": 1
@@ -1794,18 +1803,19 @@
         "2026-06": 41,
         "2026-07": 64,
         "2026-08": 45,
-        "2026-09": 89
+        "2026-09": 90
       },
       "source_concentration": 0.8,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 15.9,
-        "acceleration": 16.0,
+        "recurrence": 16.4,
+        "acceleration": 16.1,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 81.9
+        "total": 82.5
       },
       "evidence_ids": [
+        "bluesky:b3614927c6a2:3mw2tsop42c2u",
         "hn:49791429",
         "hn:49790936",
         "hn:49789538",
@@ -10994,8 +11004,8 @@
         "primary_layer": "models-capabilities",
         "secondary_layer": null,
         "maturity": "corroborated-source-concentrated",
-        "source_count": 11,
-        "evidence_count": 70,
+        "source_count": 12,
+        "evidence_count": 71,
         "project_count": 16,
         "reviewed_project_count": 2,
         "queued_project_count": 3,
@@ -11208,9 +11218,9 @@
     ],
     "quality": {
       "classification_coverage": 0.256,
-      "classified_public_records": 399,
-      "unclassified_public_records": 1159,
-      "classification_review_records": 1159,
+      "classified_public_records": 400,
+      "unclassified_public_records": 1162,
+      "classification_review_records": 1162,
       "recent_sources": 29,
       "aging_sources": 3,
       "historical_sources": 4,
@@ -11221,6 +11231,110 @@
     "freshness_note": "Freshness is based on the latest dated evidence observed for each source, not a direct collector-uptime check. Recent means 30 days or less; aging means 31–90 days; historical means more than 90 days."
   },
   "evidence": [
+    {
+      "id": "bluesky:1278ebf77949:3mw2usvvn6c26",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "AI can be a really wonderful tool for exploring topics far from coding. I had Claude Fable 5.1 put together an annotated guide to Eliot's poem \"The Wasteland,\" with multiple pathways through the po...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw2usvvn6c26",
+      "published_at": "2026-09-21T23:34:41.829Z",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:b3614927c6a2:3mw2tsop42c2u",
+      "source_id": "simon-willison",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Put together some notes on Jev and the new category of system one aka decision models simonwillison.net/2026/Sep/21/...",
+      "summary": "",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mw2tsop42c2u",
+      "published_at": "2026-09-21T23:16:40.533Z",
+      "authors": [
+        "Simon Willison"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mw2l5jyq7226",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "OpenAI \"has now resolved more than 100 long-standing open problems across most areas of mathematics,\" and is waiting to release them until after discussions with the math community The same thing w...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw2l5jyq7226",
+      "published_at": "2026-09-21T20:41:41.029Z",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mw2kwnye2y2c",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "The word of the day is: \"unleash\" I've been seeing a lot of \"unleashing AI\", \"unleashing expertimentation (with AI)\", and even ostensibly critical \"OpenAI unleashed ChatGPT on the world with no one...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mw2kwnye2y2c",
+      "published_at": "2026-09-21T20:37:50.181Z",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
     {
       "id": "bluesky:6cf953cc69a4:3mw2il75vy22y",
       "source_id": "bluesky-emily-bender",
@@ -55328,9 +55442,9 @@
       "evidence_role": "expert-interpretation",
       "homepage_url": "https://simonwillison.net/",
       "logo_url": "https://simonwillison.net/favicon.ico",
-      "normalized_evidence_count": 58,
+      "normalized_evidence_count": 59,
       "status": "active",
-      "last_observed_at": "2026-09-20T21:06:43+00:00",
+      "last_observed_at": "2026-09-21T23:16:40.533000+00:00",
       "freshness": "recent"
     },
     {
@@ -55362,6 +55476,21 @@
       "freshness": "recent"
     },
     {
+      "id": "bluesky-ethan-mollick",
+      "name": "Ethan Mollick on Bluesky",
+      "channel": "expert-social",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "ethan-mollick",
+      "evidence_role": "expert-observation",
+      "homepage_url": "https://bsky.app/profile/emollick.bsky.social",
+      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
+      "normalized_evidence_count": 40,
+      "status": "active",
+      "last_observed_at": "2026-09-21T23:34:41.829000+00:00",
+      "freshness": "recent"
+    },
+    {
       "id": "greylock-essays",
       "name": "Greylock essays",
       "channel": "investor-essay",
@@ -55372,21 +55501,6 @@
       "normalized_evidence_count": 40,
       "status": "active",
       "last_observed_at": "2026-09-10T15:00:00+00:00",
-      "freshness": "recent"
-    },
-    {
-      "id": "bluesky-ethan-mollick",
-      "name": "Ethan Mollick on Bluesky",
-      "channel": "expert-social",
-      "source_quality": "high",
-      "commercial_bias": "authorial",
-      "publisher_id": "ethan-mollick",
-      "evidence_role": "expert-observation",
-      "homepage_url": "https://bsky.app/profile/emollick.bsky.social",
-      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 38,
-      "status": "active",
-      "last_observed_at": "2026-09-21T13:53:44.800000+00:00",
       "freshness": "recent"
     },
     {
@@ -55727,6 +55841,21 @@
       "freshness": "historical"
     },
     {
+      "id": "bluesky-emily-bender",
+      "name": "Emily M. Bender on Bluesky",
+      "channel": "expert-social",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "emily-bender",
+      "evidence_role": "expert-observation",
+      "homepage_url": "https://bsky.app/profile/emilymbender.bsky.social",
+      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
+      "normalized_evidence_count": 10,
+      "status": "active",
+      "last_observed_at": "2026-09-21T20:37:50.181000+00:00",
+      "freshness": "recent"
+    },
+    {
       "id": "menlo-ventures",
       "name": "Menlo Ventures perspectives",
       "channel": "investor-essay",
@@ -55752,21 +55881,6 @@
       "normalized_evidence_count": 10,
       "status": "active",
       "last_observed_at": "2026-09-21T15:30:19+00:00",
-      "freshness": "recent"
-    },
-    {
-      "id": "bluesky-emily-bender",
-      "name": "Emily M. Bender on Bluesky",
-      "channel": "expert-social",
-      "source_quality": "high",
-      "commercial_bias": "authorial",
-      "publisher_id": "emily-bender",
-      "evidence_role": "expert-observation",
-      "homepage_url": "https://bsky.app/profile/emilymbender.bsky.social",
-      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 9,
-      "status": "active",
-      "last_observed_at": "2026-09-21T19:55:38.200000+00:00",
       "freshness": "recent"
     },
     {
