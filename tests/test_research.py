@@ -170,18 +170,31 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertGreaterEqual(tracker["direction_count"], 5)
         self.assertIn("not forecasts", tracker["executive_summary"].casefold())
         self.assertIn("source-family breadth", tracker["interpretation_note"].casefold())
+        self.assertEqual(tracker["method"]["evidence_window_days"], 90)
+        self.assertEqual(tracker["method"]["comparison_window_days"], 14)
+        self.assertEqual(len(tracker["important_changes"]), 5)
         evidence_ids = {item["id"] for item in self.payload["evidence"]}
         required = {
             "hypothesis", "interpretation", "why_it_matters", "next_confirmation",
-            "counter_signal", "stage", "confidence", "source_families", "evidence_ids",
+            "counter_signal", "stage", "previous_stage", "confidence", "source_families",
+            "evidence_ids", "movement", "current_evidence_count", "previous_evidence_count",
+            "evidence_change", "origin", "state_reason", "lifecycle_history",
         }
         for direction in tracker["directions"]:
             self.assertTrue(required.issubset(direction), direction["id"])
-            self.assertIn(direction["stage"], {"watch", "forming", "taking-shape", "corroborating"})
+            self.assertIn(direction["stage"], {"weak-signal", "emerging", "corroborating", "established", "fading", "unobserved"})
+            self.assertIn(direction["movement"], {"new", "accelerating", "resurfacing", "steady", "cooling", "fading"})
             self.assertTrue(set(direction["evidence_ids"]).issubset(evidence_ids))
             self.assertLessEqual(len(direction["evidence_ids"]), 8)
             self.assertEqual(direction["family_count"], len(direction["source_families"]))
             self.assertTrue(all(family["source_count"] > 0 for family in direction["source_families"]))
+            self.assertEqual(direction["evidence_change"], direction["current_evidence_count"] - direction["previous_evidence_count"])
+            self.assertEqual(len(direction["lifecycle_history"]), 8)
+            self.assertEqual(
+                [snapshot["as_of"] for snapshot in direction["lifecycle_history"]],
+                sorted(snapshot["as_of"] for snapshot in direction["lifecycle_history"]),
+            )
+        self.assertTrue(set(tracker["important_changes"]).issubset({direction["id"] for direction in tracker["directions"]}))
 
 
 if __name__ == "__main__":

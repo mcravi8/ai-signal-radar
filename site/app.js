@@ -62,6 +62,13 @@ function formatDate(value, time = false) {
   return new Intl.DateTimeFormat("en", time ? { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" } : { dateStyle: "medium", timeZone: "UTC" }).format(date);
 }
 
+function formatMonthDay(value) {
+  if (!value) return "N/O";
+  const date = new Date(value.length === 10 ? `${value}T12:00:00Z` : value);
+  if (Number.isNaN(date.valueOf())) return value;
+  return new Intl.DateTimeFormat("en", { month: "short", day: "numeric", timeZone: "UTC" }).format(date);
+}
+
 function label(value) {
   return String(value || "N/O").replaceAll("-", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
@@ -380,17 +387,58 @@ function renderAnalysisDetail() {
     synthesis.append(node("h3", "", "Current directional read"), node("p", "synthesis-lead", analysis.executive_summary));
     if (analysis.interpretation_note) synthesis.append(node("p", "interpretation-note", analysis.interpretation_note));
 
+    const signalMetrics = node("div", "metric-strip signal-metrics");
+    const accelerating = (analysis.movement_counts?.accelerating || 0) + (analysis.movement_counts?.new || 0);
+    const resurfacing = analysis.movement_counts?.resurfacing || 0;
+    const established = analysis.stage_counts?.established || 0;
+    const newestDate = (analysis.directions || []).map((item) => item.last_observed).filter(Boolean).sort().at(-1);
+    signalMetrics.append(
+      metric("Tracked directions", formatNumber(analysis.direction_count), "Explicit hypotheses, not generated topics"),
+      metric("Established", formatNumber(established), "Meets breadth and persistence thresholds"),
+      metric("Accelerating", formatNumber(accelerating), `${formatNumber(resurfacing)} resurfacing`),
+      metric("Newest evidence", formatDate(newestDate), "Most recent supporting record"),
+    );
+
+    const changes = node("section", "detail-section signal-changes");
+    changes.append(node("h3", "", "Important early changes"));
+    const changeShell = node("div", "table-shell");
+    const changeTable = node("table", "data-table signal-change-table");
+    const changeHead = document.createElement("thead");
+    const headRow = node("tr");
+    for (const heading of ["Direction", "Lifecycle", "Movement", "14-day evidence", "Change", "Families"]) headRow.append(node("th", heading === "14-day evidence" || heading === "Change" || heading === "Families" ? "numeric-header" : "", heading));
+    changeHead.append(headRow);
+    const changeBody = document.createElement("tbody");
+    const directionById = new Map((analysis.directions || []).map((item) => [item.id, item]));
+    for (const id of analysis.important_changes || []) {
+      const direction = directionById.get(id);
+      if (!direction) continue;
+      const row = node("tr");
+      const titleCell = node("td", "signal-change-title");
+      const jump = node("button", "signal-jump", direction.title);
+      jump.type = "button";
+      jump.dataset.signalId = direction.id;
+      titleCell.append(jump, node("small", "", direction.movement_explanation));
+      const delta = direction.evidence_change > 0 ? `+${direction.evidence_change}` : String(direction.evidence_change);
+      row.append(
+        titleCell,
+        node("td", "", label(direction.stage)),
+        node("td", `signal-movement signal-movement-${direction.movement}`, label(direction.movement)),
+        node("td", "number-cell tabular", formatNumber(direction.current_evidence_count)),
+        node("td", `number-cell tabular ${direction.evidence_change > 0 ? "delta-up" : direction.evidence_change < 0 ? "delta-down" : ""}`, delta),
+        node("td", "number-cell tabular", formatNumber(direction.family_count)),
+      );
+      changeBody.append(row);
+    }
+    changeTable.append(changeHead, changeBody);
+    changeShell.append(changeTable);
+    changes.append(changeShell);
+
     const stages = node("section", "detail-section");
-    stages.append(node("h3", "", "Signal stages"));
+    stages.append(node("h3", "", "Lifecycle rules"));
     const stageGrid = node("div", "signal-stage-grid");
-    for (const [stage, description] of [
-      ["Forming", "One or two evidence families; direction is plausible but fragile."],
-      ["Taking shape", "Several independent families now point in the same direction."],
-      ["Corroborating", "The direction spans technical, builder, and interpretive evidence."],
-      ["Watch", "Named hypothesis with insufficient observed support."],
-    ]) {
+    for (const [stage, description] of Object.entries(analysis.method?.states || {})) {
       const item = node("div", "signal-stage-key");
-      item.append(node("strong", `signal-stage signal-stage-${stage.toLowerCase().replaceAll(" ", "-")}`, stage), node("span", "", description));
+      item.append(node("strong", `signal-stage signal-stage-${stage}`, label(stage)), node("span", "", description));
       stageGrid.append(item);
     }
     stages.append(stageGrid);
@@ -401,18 +449,39 @@ function renderAnalysisDetail() {
     const evidenceById = new Map(state.research.evidence.map((item) => [item.id, item]));
     for (const [index, direction] of (analysis.directions || []).entries()) {
       const article = node("article", "signal-direction");
+      article.id = `signal-${direction.id}`;
+      article.tabIndex = -1;
       const head = node("div", "signal-direction-head");
       const title = node("div", "signal-direction-title");
       title.append(node("span", "finding-label", direction.domain), node("h4", "", direction.title));
       const status = node("div", "signal-direction-status");
       status.append(
         node("strong", `signal-stage signal-stage-${direction.stage}`, label(direction.stage)),
+        node("span", `signal-movement signal-movement-${direction.movement}`, label(direction.movement)),
         node("span", "tabular", `${direction.source_count} ${direction.source_count === 1 ? "source" : "sources"} · ${direction.family_count} ${direction.family_count === 1 ? "family" : "families"}`),
       );
       head.append(node("span", "finding-index tabular", String(index + 1).padStart(2, "0")), title, status);
 
       const body = node("div", "signal-direction-body");
       body.append(node("p", "signal-hypothesis", direction.hypothesis));
+      const stateRead = node("p", "signal-state-reason", direction.state_reason);
+      if (direction.stage_changed) stateRead.append(node("strong", "", ` Changed from ${label(direction.previous_stage)} in the prior comparison snapshot.`));
+      body.append(stateRead);
+      const lifecycle = node("div", "signal-history");
+      lifecycle.append(node("strong", "", "Eight-week path"));
+      const history = direction.lifecycle_history || [];
+      if (history.length) lifecycle.append(node("small", "", formatMonthDay(history[0].as_of)));
+      for (const snapshot of history) {
+        const point = node("span", `signal-history-point signal-history-${snapshot.stage}`, label(snapshot.stage));
+        const recordWord = snapshot.evidence_count === 1 ? "record" : "records";
+        const sourceWord = snapshot.source_count === 1 ? "source" : "sources";
+        const familyWord = snapshot.family_count === 1 ? "family" : "families";
+        point.title = `${formatDate(snapshot.as_of)} · ${snapshot.evidence_count} ${recordWord} · ${snapshot.source_count} ${sourceWord} · ${snapshot.family_count} ${familyWord}`;
+        point.setAttribute("aria-label", point.title);
+        lifecycle.append(point);
+      }
+      if (history.length) lifecycle.append(node("small", "", formatMonthDay(history.at(-1).as_of)));
+      body.append(lifecycle);
       const reading = node("div", "signal-reading-grid");
       for (const [heading, copy] of [
         ["Interpretation", direction.interpretation],
@@ -432,6 +501,14 @@ function renderAnalysisDetail() {
         evidenceMap.append(node("span", "signal-family", `${family.name} · ${family.source_count}`));
       }
       body.append(evidenceMap);
+
+      if (direction.origin) {
+        const origin = node("p", "signal-origin");
+        origin.append(node("strong", "", "Earliest observed: "));
+        const originEvidence = evidenceById.get(direction.origin.evidence_id) || direction.origin;
+        origin.append(linkOrText(originEvidence), document.createTextNode(` · ${sourceName(direction.origin.source_id)} · ${formatDate(direction.origin.published_at)}`));
+        body.append(origin);
+      }
 
       const themes = node("div", "signal-theme-links");
       themes.append(node("strong", "", "Connected themes"));
@@ -461,7 +538,7 @@ function renderAnalysisDetail() {
     }
     if (!directionList.children.length) directionList.append(node("p", "empty-state", "No directional hypothesis has enough evidence to display yet."));
     findings.append(directionList);
-    detail.append(synthesis, stages, findings);
+    detail.append(synthesis, signalMetrics, changes, stages, findings);
   } else if (analysis.id === "expert-pulse") {
     const synthesis = node("section", "detail-section narrative-synthesis");
     synthesis.append(node("h3", "", "Executive synthesis"), node("p", "synthesis-lead", analysis.executive_summary || "No synthesis has been published yet."));
@@ -1047,6 +1124,14 @@ function bindControls() {
     }
     const toggle = event.target.closest(".detail-toggle");
     if (toggle) toggleDetail(toggle);
+    const signalJump = event.target.closest("[data-signal-id]");
+    if (signalJump) {
+      const target = document.getElementById(`signal-${signalJump.dataset.signalId}`);
+      if (target) {
+        target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+        target.focus({ preventScroll: true });
+      }
+    }
   });
 }
 

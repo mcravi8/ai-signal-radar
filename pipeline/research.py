@@ -103,6 +103,141 @@ SOURCE_FAMILIES = {
 }
 
 
+SIGNAL_STATE_ORDER = {
+    "unobserved": 0,
+    "fading": 1,
+    "weak-signal": 2,
+    "emerging": 3,
+    "corroborating": 4,
+    "established": 5,
+}
+
+
+def _signal_snapshot(
+    items: list[dict[str, Any]],
+    source_defs: dict[str, dict[str, Any]],
+    end: datetime,
+) -> dict[str, Any]:
+    """Classify a directional hypothesis from reproducible breadth and recency rules."""
+    dated = [
+        (published, item)
+        for item in items
+        if (published := _parse_date(item.get("published_at", ""))) and published <= end
+    ]
+    trailing_start = end - timedelta(days=90)
+    recent_start = end - timedelta(days=30)
+    trailing = [item for published, item in dated if trailing_start < published <= end]
+    recent = [item for published, item in dated if recent_start < published <= end]
+
+    family_items: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    family_names: dict[str, str] = {}
+    for item in trailing:
+        source = source_defs.get(item["source_id"], {})
+        channel = source.get("channel", item.get("source_type", "unknown"))
+        family_id, family_name = SOURCE_FAMILIES.get(channel, (channel, channel.replace("-", " ").title()))
+        family_items[family_id].append(item)
+        family_names[family_id] = family_name
+
+    source_ids = sorted({item["source_id"] for item in trailing})
+    technical_family_count = len({"builders", "research", "engineering"}.intersection(family_items))
+    active_periods = sum(
+        any(end - timedelta(days=period_end) < published <= end - timedelta(days=period_start) for published, _ in dated)
+        for period_start, period_end in ((0, 30), (30, 60), (60, 90))
+    )
+    family_count = len(family_items)
+
+    if not dated:
+        stage = "unobserved"
+    elif not trailing or not recent:
+        stage = "fading"
+    elif family_count >= 5 and len(source_ids) >= 6 and technical_family_count >= 2 and active_periods >= 2:
+        stage = "established"
+    elif family_count >= 3 and len(source_ids) >= 5 and technical_family_count >= 2:
+        stage = "corroborating"
+    elif family_count >= 2 and len(source_ids) >= 2 and technical_family_count >= 1:
+        stage = "emerging"
+    else:
+        stage = "weak-signal"
+
+    confidence = {
+        "unobserved": "unobserved",
+        "fading": "low",
+        "weak-signal": "low",
+        "emerging": "moderate",
+        "corroborating": "strong",
+        "established": "strong",
+    }[stage]
+    family_summary = [
+        {
+            "id": family_id,
+            "name": family_names[family_id],
+            "source_ids": sorted({item["source_id"] for item in family_evidence}),
+            "source_count": len({item["source_id"] for item in family_evidence}),
+            "evidence_count": len(family_evidence),
+        }
+        for family_id, family_evidence in sorted(
+            family_items.items(),
+            key=lambda pair: (-len({item["source_id"] for item in pair[1]}), pair[0]),
+        )
+    ]
+    return {
+        "stage": stage,
+        "confidence": confidence,
+        "items": trailing,
+        "recent_items": recent,
+        "source_ids": source_ids,
+        "source_count": len(source_ids),
+        "source_families": family_summary,
+        "family_count": family_count,
+        "technical_family_count": technical_family_count,
+        "active_periods": active_periods,
+    }
+
+
+def _signal_movement(
+    dated: list[tuple[datetime, dict[str, Any]]],
+    as_of: datetime,
+    stage: str,
+) -> dict[str, Any]:
+    period_days = 14
+    current_start = as_of - timedelta(days=period_days)
+    previous_start = as_of - timedelta(days=period_days * 2)
+    current = [item for published, item in dated if current_start < published <= as_of]
+    previous = [item for published, item in dated if previous_start < published <= current_start]
+    change = len(current) - len(previous)
+    first_observed = min((published for published, _ in dated), default=None)
+
+    if stage == "fading":
+        movement = "fading"
+    elif first_observed and first_observed > current_start:
+        movement = "new"
+    elif change >= 2 and len(current) >= max(2, math.ceil(len(previous) * 1.5)):
+        movement = "accelerating"
+    elif current and not previous:
+        movement = "resurfacing"
+    elif change <= -2 and len(previous) >= max(2, math.ceil(len(current) * 1.5)):
+        movement = "cooling"
+    else:
+        movement = "steady"
+
+    explanations = {
+        "new": f"First supporting evidence appeared inside the latest {period_days}-day period.",
+        "resurfacing": f"Supporting evidence returned after no records in the preceding {period_days} days.",
+        "accelerating": f"Supporting records increased from {len(previous)} to {len(current)} versus the preceding {period_days} days.",
+        "cooling": f"Supporting records declined from {len(previous)} to {len(current)} versus the preceding {period_days} days.",
+        "fading": "The direction has historical support but no supporting record in the latest 30 days.",
+        "steady": f"Supporting volume is broadly unchanged versus the preceding {period_days} days.",
+    }
+    return {
+        "movement": movement,
+        "movement_explanation": explanations[movement],
+        "comparison_days": period_days,
+        "current_evidence_count": len(current),
+        "previous_evidence_count": len(previous),
+        "evidence_change": change,
+    }
+
+
 def _parse_date(value: str) -> datetime | None:
     try:
         parsed = datetime.fromisoformat((value or "").replace("Z", "+00:00"))
@@ -464,7 +599,6 @@ def _early_signal_directions(
     as_of: datetime,
 ) -> list[dict[str, Any]]:
     """Turn cross-source observations into explicitly bounded directional hypotheses."""
-    window_start = as_of - timedelta(days=90)
     directions = []
 
     for definition in EARLY_SIGNAL_DIRECTIONS:
@@ -475,53 +609,22 @@ def _early_signal_directions(
             item for item in evidence
             if len(theme_ids.intersection(item.get("theme_ids", []))) >= 2
         ]
-        window_items = [
-            item for item in all_items
-            if (published := _parse_date(item.get("published_at", ""))) and window_start <= published <= as_of
-        ]
-        active_items = window_items
-        family_items: dict[str, list[dict[str, Any]]] = defaultdict(list)
-        family_names: dict[str, str] = {}
-        for item in active_items:
-            source = source_defs.get(item["source_id"], {})
-            channel = source.get("channel", item.get("source_type", "unknown"))
-            family_id, family_name = SOURCE_FAMILIES.get(channel, (channel, channel.replace("-", " ").title()))
-            family_items[family_id].append(item)
-            family_names[family_id] = family_name
-
-        source_ids = sorted({item["source_id"] for item in active_items})
-        technical_family_count = len({"builders", "research", "engineering"}.intersection(family_items))
-        family_count = len(family_items)
-        if not active_items:
-            stage = "watch"
-            confidence = "unobserved"
-        elif technical_family_count == 0 or family_count <= 2:
-            stage = "forming"
-            confidence = "low"
-        elif family_count <= 4 or len(source_ids) < 6:
-            stage = "taking-shape"
-            confidence = "moderate"
-        else:
-            stage = "corroborating"
-            confidence = "strong"
-
-        family_summary = [
-            {
-                "id": family_id,
-                "name": family_names[family_id],
-                "source_ids": sorted({item["source_id"] for item in items}),
-                "source_count": len({item["source_id"] for item in items}),
-                "evidence_count": len(items),
-            }
-            for family_id, items in sorted(
-                family_items.items(),
-                key=lambda pair: (-len({item["source_id"] for item in pair[1]}), pair[0]),
-            )
-        ]
+        current = _signal_snapshot(all_items, source_defs, as_of)
+        previous = _signal_snapshot(all_items, source_defs, as_of - timedelta(days=14))
+        active_items = current["items"]
+        dated = sorted(
+            (
+                (published, item)
+                for item in all_items
+                if (published := _parse_date(item.get("published_at", ""))) and published <= as_of
+            ),
+            key=lambda pair: (pair[0], pair[1]["id"]),
+        )
+        movement = _signal_movement(dated, as_of, current["stage"])
 
         # Cite recent evidence while maximizing source-family and publisher diversity.
         candidates = sorted(
-            active_items,
+            active_items or [item for _, item in dated],
             key=lambda item: (item.get("published_at", ""), item["id"]),
             reverse=True,
         )
@@ -540,36 +643,73 @@ def _early_signal_directions(
                 break
         if len(selected) < 8:
             selected_ids = {item["id"] for item in selected}
-            selected.extend(item for item in candidates if item["id"] not in selected_ids)
+            selected.extend(item for item in candidates if item["id"] not in selected_ids and len(selected) < 8)
 
-        dated = [
-            (published, item)
-            for item in all_items
-            if (published := _parse_date(item.get("published_at", "")))
-        ]
+        origin = dated[0] if dated else None
+        lifecycle_history = []
+        for weeks_ago in reversed(range(8)):
+            snapshot_date = as_of - timedelta(days=weeks_ago * 7)
+            snapshot = _signal_snapshot(all_items, source_defs, snapshot_date)
+            lifecycle_history.append(
+                {
+                    "as_of": snapshot_date.date().isoformat(),
+                    "stage": snapshot["stage"],
+                    "evidence_count": len(snapshot["items"]),
+                    "source_count": snapshot["source_count"],
+                    "family_count": snapshot["family_count"],
+                }
+            )
+        family_word = "family" if current["family_count"] == 1 else "families"
+        technical_word = "family" if current["technical_family_count"] == 1 else "families"
+        source_word = "source" if current["source_count"] == 1 else "sources"
+        recent_word = "record was" if len(current["recent_items"]) == 1 else "records were"
+        state_reason = (
+            f"{current['family_count']} evidence {family_word}, including {current['technical_family_count']} technical {technical_word}, "
+            f"across {current['source_count']} {source_word} in the trailing 90 days; "
+            f"{len(current['recent_items'])} {recent_word} published in the latest 30 days."
+        )
         directions.append(
             {
                 **{key: value for key, value in definition.items() if key != "theme_ids"},
                 "theme_ids": sorted(theme_ids),
-                "stage": stage,
-                "confidence": confidence,
+                "stage": current["stage"],
+                "previous_stage": previous["stage"],
+                "stage_changed": current["stage"] != previous["stage"],
+                "confidence": current["confidence"],
+                "state_reason": state_reason,
                 "window_days": 90,
                 "evidence_count": len(active_items),
-                "source_ids": source_ids,
-                "source_count": len(source_ids),
-                "source_families": family_summary,
-                "family_count": family_count,
-                "technical_family_count": technical_family_count,
-                "first_observed": min((published for published, _ in dated), default=None).date().isoformat() if dated else None,
-                "last_observed": max((published for published, _ in dated), default=None).date().isoformat() if dated else None,
+                "source_ids": current["source_ids"],
+                "source_count": current["source_count"],
+                "source_families": current["source_families"],
+                "family_count": current["family_count"],
+                "technical_family_count": current["technical_family_count"],
+                "active_periods": current["active_periods"],
+                "first_observed": dated[0][0].date().isoformat() if dated else None,
+                "last_observed": dated[-1][0].date().isoformat() if dated else None,
+                "origin": {
+                    "evidence_id": origin[1]["id"],
+                    "source_id": origin[1]["source_id"],
+                    "published_at": origin[0].date().isoformat(),
+                    "title": origin[1].get("title", "Untitled evidence"),
+                    "url": origin[1].get("url", ""),
+                } if origin else None,
+                "lifecycle_history": lifecycle_history,
                 "evidence_ids": [item["id"] for item in selected[:8]],
+                **movement,
             }
         )
 
-    stage_order = {"forming": 0, "taking-shape": 1, "corroborating": 2, "watch": 3}
+    movement_order = {"new": 0, "accelerating": 1, "resurfacing": 2, "steady": 3, "cooling": 4, "fading": 5}
     return sorted(
         directions,
-        key=lambda item: (stage_order[item["stage"]], -item["family_count"], -item["source_count"], item["title"]),
+        key=lambda item: (
+            movement_order[item["movement"]],
+            -SIGNAL_STATE_ORDER[item["stage"]],
+            -item["family_count"],
+            -item["source_count"],
+            item["title"],
+        ),
     )
 
 
@@ -964,6 +1104,9 @@ def build_research(
     early_directions = _early_signal_directions(evidence, source_defs, as_of)
     early_evidence_ids = sorted({evidence_id for direction in early_directions for evidence_id in direction["evidence_ids"]})
     early_source_ids = sorted({source_id for direction in early_directions for source_id in direction["source_ids"]})
+    early_stage_counts = dict(Counter(direction["stage"] for direction in early_directions))
+    early_movement_counts = dict(Counter(direction["movement"] for direction in early_directions))
+    early_important_changes = [direction["id"] for direction in early_directions[:5]]
 
     engineering_concepts = []
     for theme in themes:
@@ -1079,8 +1222,23 @@ def build_research(
             "evidence_count": len(early_evidence_ids),
             "direction_count": len(early_directions),
             "directions": early_directions,
+            "stage_counts": early_stage_counts,
+            "movement_counts": early_movement_counts,
+            "important_changes": early_important_changes,
             "executive_summary": "The current corpus points toward a more modular and operational AI industry: agents own bounded workflows; models are selected inside heterogeneous inference systems; governed context connects agents to live business state; and assurance becomes part of the release path. Physical AI is earlier, with simulation and validation emerging as the enabling layer. These are hypotheses to monitor, not forecasts of adoption.",
-            "interpretation_note": "A direction's stage is based on evidence that connects at least two constituent themes and on independent source-family breadth inside a rolling 90-day window. It measures whether a compound hypothesis is appearing in different kinds of evidence—not market size, technical correctness, or inevitability. Supporting links are selected for source diversity rather than popularity.",
+            "interpretation_note": "A direction's lifecycle is computed from evidence that connects at least two constituent themes, independent source-family breadth, technical-family support, persistence, and recency inside a rolling 90-day window. Movement compares the latest 14 days with the preceding 14. These measures describe observed attention—not adoption, market size, technical correctness, or inevitability.",
+            "method": {
+                "evidence_window_days": 90,
+                "recent_window_days": 30,
+                "comparison_window_days": 14,
+                "states": {
+                    "weak-signal": "Recent support exists, but it does not yet span two independent evidence families with technical support.",
+                    "emerging": "At least two sources across two evidence families, including one technical family, support the direction.",
+                    "corroborating": "At least five sources across three evidence families, including two technical families, support the direction.",
+                    "established": "At least six sources across five evidence families, including two technical families, persist across at least two 30-day periods.",
+                    "fading": "Historical or trailing-window support exists, but no supporting evidence appeared in the latest 30 days.",
+                },
+            },
             "updated_at": generated_at,
         },
         {
