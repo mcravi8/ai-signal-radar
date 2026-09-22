@@ -1,0 +1,58 @@
+version: 1
+maximum_assessment_queue: 10
+minimum_priority_score: 45
+material_change_thresholds:
+  priority_score_delta: 5
+  evidence_count_delta: 2
+  source_count_delta: 1
+
+priority_components:
+  momentum: 25
+  source_breadth: 25
+  technical_support: 20
+  new_evidence: 20
+  operating_relevance: 10
+
+verification_families:
+  - id: company-formation
+    title: AI company formation
+    description: New AI companies in the official Y Combinator public directory provide a formation signal, not proof of adoption or durability.
+    source_ids: [yc-companies]
+    source_types: [company-directory]
+    dimension: market_pull
+    evidence_limit: 8
+  - id: funding-activity
+    title: Funding activity
+    description: First-party investor announcements show capital formation. They remain commercially biased and cannot establish technical or operational reality.
+    source_types: [investor-essay]
+    terms: [funding, funded, investment, invested, seed, series, portfolio]
+    dimension: market_pull
+    evidence_limit: 8
+  - id: customer-case-studies
+    title: Customer case studies
+    description: Named customer deployments can support operational adoption when the workflow, intervention boundary, and measured outcome are described.
+    source_types: [first-party-lab, operator-essay, practitioner-blog]
+    terms: [customer, case study, deployed, deployment, production, workflow, implementation]
+    dimension: operational_adoption
+    evidence_limit: 8
+  - id: job-postings
+    title: AI job postings
+    description: Public YC startup jobs reveal intended operational ownership. Hiring intent is supporting context, not evidence that a system is deployed.
+    source_ids: [yc-jobs]
+    source_types: [job-posting]
+    dimension: operational_adoption
+    evidence_limit: 8
+  - id: github-adoption
+    title: GitHub adoption proxies
+    description: Stars, forks, and recent pushes help prioritize engineering artifacts. Popularity is never treated as production adoption.
+    source_ids: [github]
+    source_types: [repository]
+    dimension: technical_reality
+    evidence_limit: 8
+  - id: production-architecture
+    title: Production architecture reports
+    description: Detailed architecture and deployment reports are the strongest public bridge between technical possibility and real operating use.
+    source_types: [first-party-lab, practitioner-blog, operator-essay]
+    terms: [architecture, production, deployed, deployment, platform, reliability, latency, scale]
+    dimension: operational_adoption
+    evidence_limit: 8

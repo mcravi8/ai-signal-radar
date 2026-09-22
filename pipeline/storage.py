@@ -27,6 +27,9 @@ def merge_items(path: Path, items: Iterable[SourceItem]) -> int:
     existing = {row["id"]: row for row in read_jsonl(path)}
     before = len(existing)
     for item in items:
-        existing[item.id] = item.to_dict()
+        row = item.to_dict()
+        if item.source_type == "company-directory" and existing.get(item.id, {}).get("published_at"):
+            row["published_at"] = existing[item.id]["published_at"]
+        existing[item.id] = row
     write_jsonl(path, sorted(existing.values(), key=lambda row: (row.get("published_at", ""), row["id"])))
     return len(existing) - before

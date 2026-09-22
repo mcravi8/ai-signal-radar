@@ -114,6 +114,15 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertTrue(all(source["commercial_bias"] == "first-party" for source in labs))
         self.assertTrue(all(source["evidence_role"] == "first-party-claim" for source in labs))
 
+    def test_verification_feeds_do_not_turn_first_observation_into_publication_recency(self):
+        yc_companies = [item for item in self.payload["evidence"] if item["source_id"] == "yc-companies"]
+        yc_jobs = [item for item in self.payload["evidence"] if item["source_id"] == "yc-jobs"]
+        self.assertEqual(len(yc_companies), 50)
+        self.assertTrue(yc_jobs)
+        self.assertTrue(all(not item["published_at"] and item["observed_at"] for item in yc_companies))
+        self.assertTrue(all(item["verification"]["date_basis"] == "first-observed" for item in yc_companies))
+        self.assertTrue(all(item["verification"]["date_basis"] == "approximate-public-age" for item in yc_jobs))
+
     def test_public_newsletters_and_practitioner_feeds_are_typed(self):
         channels = {"expert-newsletter", "curated-newsletter", "practitioner-blog"}
         sources = [source for source in self.payload["sources"] if source.get("channel") in channels]

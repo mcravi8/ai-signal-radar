@@ -100,6 +100,8 @@ SOURCE_FAMILIES = {
     "community": ("attention", "Market attention"),
     "newsletter": ("attention", "Market attention"),
     "curated-newsletter": ("attention", "Market attention"),
+    "company-directory": ("formation", "Company formation"),
+    "job-posting": ("operations", "Operating demand"),
 }
 
 
@@ -272,7 +274,10 @@ def _stack_layers(theme_ids: list[str], themes: dict[str, dict[str, Any]]) -> li
 
 
 def _normalize_public_evidence(row: dict[str, Any], themes: dict[str, dict[str, Any]]) -> dict[str, Any]:
-    month = _month(row.get("published_at", ""))
+    verification = row.get("verification", {})
+    first_observed_only = verification.get("date_basis") == "first-observed"
+    published_at = "" if first_observed_only else row.get("published_at", "")
+    month = _month(published_at)
     theme_ids = row.get("theme_ids", [])
     return {
         "id": row["id"],
@@ -282,7 +287,8 @@ def _normalize_public_evidence(row: dict[str, Any], themes: dict[str, dict[str, 
         "title": row.get("title", "Untitled evidence"),
         "summary": row.get("summary", ""),
         "url": row.get("url", ""),
-        "published_at": row.get("published_at", ""),
+        "published_at": published_at,
+        "observed_at": row.get("published_at", "") if first_observed_only else "",
         "authors": row.get("authors", []),
         "projects": row.get("projects", []),
         "theme_ids": theme_ids,
@@ -294,6 +300,7 @@ def _normalize_public_evidence(row: dict[str, Any], themes: dict[str, dict[str, 
             "mode": "direct-public-metadata",
             "description": "Normalized from the linked public source.",
         },
+        "verification": verification,
     }
 
 
@@ -822,7 +829,7 @@ def build_research(
     counts = Counter(item["source_id"] for item in evidence)
     dates_by_source: dict[str, list[datetime]] = defaultdict(list)
     for item in evidence:
-        if published := _parse_date(item.get("published_at", "")):
+        if published := _parse_date(item.get("observed_at") or item.get("published_at", "")):
             dates_by_source[item["source_id"]].append(published)
     sources = []
     for source_id, source in source_defs.items():

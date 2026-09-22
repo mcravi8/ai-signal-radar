@@ -11,7 +11,9 @@ official public collectors + weekly expert/social + newsletter ingestion
                          ↓
  cross-source trend score + separate opportunity score
                          ↓
-       allowlisted unified research JSON + weekly brief
+ candidate selection + formal evidence-policy review boundary
+                         ↓
+ unified research, weekly review, operating model + briefs
                          ↓
                   static GitHub Pages site
 ```
@@ -53,3 +55,11 @@ Promotion is never based on engagement alone.
 GitHub-hosted runners collect public metadata, first-party AI lab publications, and official essay feeds, then retrieve subscribed newsletters from a dedicated AgentMail inbox once per week. Newsletter bodies are reduced to allowlisted derivative records in memory and are never committed or uploaded as artifacts. Gmail access and optional local-model enrichment stay on the owner's machine.
 
 The weekly runner also reads public author feeds from Bluesky's unauthenticated AppView API. Accounts are pinned by DID so a changed or reused handle cannot silently redirect collection. Replies, repost-only activity, off-topic posts, and engagement counters are excluded. Simon Willison and swyx reuse their existing publisher IDs so cross-posting across social, blog, and newsletter channels cannot inflate source breadth.
+
+The same runner collects two official YC public surfaces without authentication: the AI company directory and recent startup jobs. Company formation and hiring intent are supporting verification signals only. GitHub popularity, funding announcements, case studies, and architecture reports are likewise kept inside their stated proof boundaries.
+
+## Weekly decision path
+
+The candidate pool is deliberately fixed to four current analytical surfaces: six Early Signal directions, three expert findings, six operator/investor findings, and twenty tracked themes. A transparent priority score ranks material changes using momentum, source breadth, technical support, new evidence, and Operating Model relevance. At most ten candidates enter the weekly assessment queue.
+
+The score never changes requirement maturity. Promotion or demotion requires an explicit edit to the calibrated case record followed by the formal evidence-policy gates. Same-day synthesis reruns preserve the already-published review when no evidence changed, avoiding an empty or unstable report caused by deployment regeneration.

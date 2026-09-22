@@ -13,13 +13,19 @@ on:
       - config/newsletters.yml
       - config/project-reviews.yml
       - config/source-theme-mappings.yml
+      - config/sources.yml
       - config/taxonomy.yml
+      - config/weekly-review.yml
       - data/manual/**
       - pipeline/collectors/agentmail.py
       - pipeline/collectors/bluesky.py
+      - pipeline/collectors/yc.py
       - pipeline/cli.py
       - pipeline/evidence_policy.py
+      - pipeline/export_public.py
       - pipeline/research.py
+      - pipeline/storage.py
+      - pipeline/weekly_review.py
   schedule:
     - cron: "23 7 * * 0"
   workflow_dispatch:
@@ -46,6 +52,7 @@ jobs:
           python-version: "3.13"
           cache: pip
       - run: python -m pip install -e .
+      - run: python -m pipeline.cli collect-verification
       - run: python -m pipeline.cli collect-bluesky
       - run: python -m pipeline.cli collect-newsletters
       - run: python -m pipeline.cli synthesize

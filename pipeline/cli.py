@@ -14,6 +14,7 @@ from .export_public import sanitize_item, validate_public_payload, write_public_
 from .research import build_research, write_weekly_report
 from .score import score_theme
 from .storage import merge_items, read_jsonl, write_jsonl
+from .weekly_review import build_weekly_review, write_weekly_review
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -25,7 +26,7 @@ def _yaml(path: Path) -> dict:
 
 
 def collect() -> None:
-    from .collectors import arxiv, github, hackernews, huggingface, rss, sitemap
+    from .collectors import arxiv, github, hackernews, huggingface, rss, sitemap, yc
 
     source_config = _yaml(ROOT / "config/sources.yml")["sources"]
     enabled = {source["id"]: source for source in source_config if source.get("enabled")}
@@ -74,6 +75,16 @@ def collect() -> None:
                     source.get("include_patterns", []),
                 ),
             )
+        elif source.get("collection") == "yc-directory":
+            attempt(
+                source_id,
+                lambda source=source: yc.collect_companies(source["directory_url"], source.get("limit", 50)),
+            )
+        elif source.get("collection") == "yc-jobs":
+            attempt(
+                source_id,
+                lambda source=source: yc.collect_jobs(source["jobs_url"], source.get("terms", []), source.get("limit", 50)),
+            )
 
     snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "items.jsonl"
     write_jsonl(snapshot, [item.to_dict() for item in collected])
@@ -82,6 +93,39 @@ def collect() -> None:
     (snapshot.parent / "status.json").write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
     if not collected and errors:
         raise SystemExit("All enabled collectors failed")
+
+
+def collect_verification() -> None:
+    from .collectors import yc
+
+    source_config = _yaml(ROOT / "config/sources.yml")["sources"]
+    enabled = {source["id"]: source for source in source_config if source.get("enabled")}
+    collected = []
+    errors: list[str] = []
+    for source_id in ("yc-companies", "yc-jobs"):
+        source = enabled.get(source_id)
+        if not source:
+            continue
+        try:
+            if source_id == "yc-companies":
+                rows = yc.collect_companies(source["directory_url"], source.get("limit", 50))
+            else:
+                rows = yc.collect_jobs(source["jobs_url"], source.get("terms", []), source.get("limit", 50))
+            collected.extend(rows)
+            print(f"{source_id}: collected {len(rows)}")
+        except Exception as exc:
+            errors.append(f"{source_id}: {exc}")
+            print(f"{source_id}: failed: {exc}")
+
+    sanitized = [sanitize_item(item.to_dict()) for item in collected]
+    validate_public_payload({"items": sanitized})
+    added = merge_items(ROOT / "data/processed/items.jsonl", collected)
+    if sanitized:
+        snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "verification-items.jsonl"
+        write_jsonl(snapshot, sanitized)
+    print(f"verification: extracted {len(collected)} public records, added {added}")
+    if not collected and errors:
+        raise SystemExit("All verification collectors failed")
 
 
 def collect_newsletters() -> None:
@@ -162,11 +206,7 @@ def synthesize() -> None:
             }
         )
 
-    public_items = []
-    for row in rows:
-        public_items.append({key: row[key] for key in (
-            "id", "source_id", "source_type", "title", "url", "published_at", "summary", "authors", "tags", "projects", "sponsor_status", "theme_ids"
-        ) if key in row})
+    public_items = [sanitize_item(row) for row in rows]
 
     payload = {
         "meta": {
@@ -209,10 +249,23 @@ def synthesize() -> None:
         write_public_dashboard(ROOT / "data/public/research.json", research)
         policy = _yaml(ROOT / "config/evidence-policy.yml")
         calibration = _yaml(ROOT / "config/evidence-policy-calibration.yml")
+        operating_path = ROOT / "data/public/operating-model.json"
+        weekly_review_path = ROOT / "data/public/weekly-review.json"
+        previous_operating_model = json.loads(operating_path.read_text(encoding="utf-8")) if operating_path.exists() else None
+        previous_weekly_review = json.loads(weekly_review_path.read_text(encoding="utf-8")) if weekly_review_path.exists() else None
         operating_model = build_operating_model(policy, calibration, research)
-        write_public_dashboard(ROOT / "data/public/operating-model.json", operating_model)
+        write_public_dashboard(operating_path, operating_model)
+        weekly_review = build_weekly_review(
+            research,
+            operating_model,
+            previous_operating_model,
+            previous_weekly_review,
+            _yaml(ROOT / "config/weekly-review.yml"),
+        )
+        write_public_dashboard(weekly_review_path, weekly_review)
         report_date = research["weekly"]["as_of"]
         write_weekly_report(ROOT / "reports/weekly" / f"{report_date}.md", research)
+        write_weekly_review(ROOT / "reports/weekly" / f"{report_date}-operating-model.md", weekly_review)
         print(
             f"research: {research['meta']['normalized_evidence_count']} normalized evidence records, "
             f"{research['meta']['observed_theme_count']} observed themes"
@@ -240,11 +293,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(prog="ai-signal-radar")
     parser.add_argument(
         "command",
-        choices=["collect", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public", "calibrate-evidence"],
+        choices=["collect", "collect-verification", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public", "calibrate-evidence"],
     )
     args = parser.parse_args()
     if args.command == "collect":
         collect()
+    elif args.command == "collect-verification":
+        collect_verification()
     elif args.command == "collect-bluesky":
         collect_bluesky()
     elif args.command == "collect-newsletters":

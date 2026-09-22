@@ -42,6 +42,35 @@ sources:
     source_quality: mixed
     commercial_bias: mixed
 
+  - id: yc-companies
+    name: Y Combinator AI companies
+    channel: company-directory
+    homepage_url: https://www.ycombinator.com/companies/industry/artificial-intelligence
+    logo_url: https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico
+    enabled: true
+    collection: yc-directory
+    directory_url: https://www.ycombinator.com/companies/industry/artificial-intelligence
+    limit: 50
+    publisher_id: y-combinator
+    evidence_role: company-formation
+    source_quality: high
+    commercial_bias: first-party-directory
+
+  - id: yc-jobs
+    name: Y Combinator startup jobs
+    channel: job-posting
+    homepage_url: https://www.ycombinator.com/jobs/role/all
+    logo_url: https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico
+    enabled: true
+    collection: yc-jobs
+    jobs_url: https://www.ycombinator.com/jobs/role/all
+    limit: 50
+    terms: [AI, artificial intelligence, machine learning, LLM, agent, inference, model, evaluation, robotics]
+    publisher_id: y-combinator
+    evidence_role: hiring-intent
+    source_quality: high
+    commercial_bias: first-party-job-board
+
   - id: openai-news
     name: OpenAI News
     channel: first-party-lab

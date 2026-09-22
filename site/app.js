@@ -2,6 +2,7 @@ const state = {
   research: null,
   alpha: null,
   operatingModel: null,
+  weeklyReview: null,
   route: "overview",
   selectedRequirement: "",
   selectedAnalysis: "cross-source-landscape",
@@ -18,9 +19,10 @@ const state = {
   sourceType: "",
 };
 
-const routes = new Set(["overview", "operating-model", "analyses", "themes", "projects", "evidence", "method"]);
+const routes = new Set(["overview", "weekly-review", "operating-model", "analyses", "themes", "projects", "evidence", "method"]);
 const routeTitles = {
   overview: ["Research system", "Overview"],
+  "weekly-review": ["Bounded evidence review", "Weekly Review"],
   "operating-model": ["Evidence-backed practice", "Operating Model"],
   analyses: ["Research library", "Analyses"],
   themes: ["Cross-source dossiers", "Themes"],
@@ -34,6 +36,8 @@ const sourceChannelOrder = [
   "paper",
   "paper-curation",
   "repository",
+  "company-directory",
+  "job-posting",
   "expert-newsletter",
   "curated-newsletter",
   "practitioner-blog",
@@ -321,6 +325,154 @@ function gateFailureLabel(value) {
   const [, field, actual, required] = match;
   if (field === "counterevidence_reviewed") return "Counterevidence has not been explicitly reviewed.";
   return `${label(field)} is ${label(actual)}; ${label(required)} is required.`;
+}
+
+function candidateHref(candidate) {
+  const [analysisId, childId] = candidate.source_analysis.split("/");
+  if (analysisId === "themes") return `#themes/${childId}`;
+  return `#analyses/${analysisId}`;
+}
+
+function renderWeeklyReview() {
+  const data = state.weeklyReview;
+  const metrics = $("#weekly-review-metrics");
+  const summary = $("#review-summary");
+  const changes = $("#requirement-changes");
+  const queue = $("#assessment-queue");
+  const verification = $("#verification-grid");
+  const policy = $("#selection-policy");
+
+  if (!data) {
+    metrics.replaceChildren(metric("Candidate pool", "N/O", "Dataset unavailable"));
+    summary.replaceChildren();
+    changes.replaceChildren(node("p", "empty-state", "The weekly review dataset is unavailable."));
+    queue.replaceChildren(node("p", "empty-state", "The assessment queue could not be loaded."));
+    verification.replaceChildren(node("p", "empty-state", "Verification coverage could not be loaded."));
+    policy.replaceChildren();
+    return;
+  }
+
+  const meaningfulChanges = data.requirement_changes.filter((item) => !["unchanged", "baseline"].includes(item.change_type));
+  const activeVerification = data.verification_families.filter((item) => item.status === "active").length;
+  const originCounts = data.meta.candidate_origin_counts || {};
+  const originSummary = `${originCounts["early-signal"] || 0} signals · ${originCounts["expert-finding"] || 0} expert findings · ${originCounts["operator-narrative"] || 0} narratives · ${originCounts["cross-source-theme"] || 0} themes`;
+  metrics.replaceChildren(
+    metric("Candidate pool", formatNumber(data.meta.candidate_pool_count), originSummary),
+    metric("Materially changed", formatNumber(data.meta.materially_changed_count), data.meta.baseline_cycle ? "First tracked baseline" : "Compared with prior weekly cycle"),
+    metric("Assessment queue", formatNumber(data.meta.assessment_queue_count), `Hard cap ${data.selection_policy.maximum_queue}`),
+    metric("Requirement changes", formatNumber(meaningfulChanges.length), "Human-reviewed policy outcomes"),
+    metric("Verification families", `${activeVerification}/${data.verification_families.length}`, "Active public evidence channels"),
+  );
+  summary.replaceChildren(
+    node("strong", "", data.summary.headline),
+    node("span", "", data.summary.interpretation),
+    node("small", "tabular", `Review date ${formatDate(data.meta.as_of)} · Policy v${data.meta.policy_version}`),
+  );
+
+  changes.replaceChildren();
+  const changeRows = node("div", "change-rows");
+  for (const item of data.requirement_changes) {
+    const row = node("article", `change-row change-${item.change_type}`);
+    const title = node("a", "", item.title);
+    title.href = `#operating-model/${item.id}`;
+    row.append(
+      badge(label(item.change_type), item.change_type),
+      title,
+      node("span", "tabular", item.previous_maturity && item.previous_maturity !== item.current_maturity ? `${label(item.previous_maturity)} → ${label(item.current_maturity)}` : label(item.current_maturity)),
+      node("p", "", item.explanation),
+    );
+    changeRows.append(row);
+  }
+  changes.append(changeRows);
+
+  queue.replaceChildren();
+  if (!data.assessment_queue.length) {
+    queue.append(node("p", "empty-state", "No candidate crossed the material-change review boundary this week. The empty queue is a valid result."));
+  }
+  for (const candidate of data.assessment_queue) {
+    const card = node("article", "queue-item");
+    const rank = node("span", "queue-rank tabular", String(candidate.queue_rank).padStart(2, "0"));
+    const head = node("div", "queue-head");
+    const title = node("a", "queue-title", candidate.title);
+    title.href = candidateHref(candidate);
+    head.append(
+      node("span", "queue-origin", label(candidate.origin)),
+      title,
+      node("p", "", candidate.description),
+    );
+    const decision = node("div", "queue-decision");
+    decision.append(
+      node("strong", "queue-score tabular", String(candidate.priority.total)),
+      node("small", "", "review priority"),
+      badge(label(candidate.review_action), candidate.linked_requirement ? "linked" : "new"),
+    );
+    const components = node("div", "priority-components");
+    for (const key of ["momentum", "source_breadth", "technical_support", "new_evidence", "operating_relevance"]) {
+      const component = node("span", "");
+      component.append(node("small", "", label(key)), node("strong", "tabular", String(candidate.priority[key])));
+      components.append(component);
+    }
+    const reasons = node("ul", "queue-reasons");
+    for (const reason of candidate.change_reasons) reasons.append(node("li", "", reason));
+    const footer = node("div", "queue-footer");
+    footer.append(
+      node("span", "tabular", `${candidate.metrics.evidence_count} evidence · ${candidate.metrics.source_count} sources · ${candidate.metrics.recent_evidence_count} recent`),
+    );
+    if (candidate.linked_requirement) {
+      const requirement = node("a", "", `Review ${candidate.linked_requirement.title} →`);
+      requirement.href = `#operating-model/${candidate.linked_requirement.id}`;
+      footer.append(requirement);
+    }
+    card.append(rank, head, decision, components, reasons, footer);
+    queue.append(card);
+  }
+
+  verification.replaceChildren();
+  const evidenceById = new Map(state.research.evidence.map((item) => [item.id, item]));
+  for (const family of data.verification_families) {
+    const card = node("article", `verification-card verification-${family.status}`);
+    const cardHead = node("div", "verification-head");
+    cardHead.append(node("span", "verification-dimension", label(family.dimension)), badge(label(family.status), family.status));
+    card.append(cardHead, node("h4", "", family.title), node("p", "", family.description));
+    const facts = node("div", "verification-facts");
+    facts.append(
+      node("strong", "tabular", `${formatNumber(family.record_count)} records`),
+      node("span", "tabular", `${formatNumber(family.source_count)} sources`),
+      node("span", "tabular", `${formatNumber(family.new_record_count)} new`),
+    );
+    card.append(facts);
+    const sourceList = node("div", "verification-sources");
+    for (const sourceId of family.source_ids.slice(0, 4)) {
+      const source = sourceRecord(sourceId);
+      if (source) sourceList.append(sourceIdentity(source));
+    }
+    if (family.source_ids.length > 4) sourceList.append(node("small", "", `+${family.source_ids.length - 4} more sources`));
+    card.append(sourceList);
+    const examples = node("details", "verification-examples");
+    examples.append(node("summary", "", "Inspect sample evidence"));
+    const list = node("ul", "");
+    for (const evidenceId of family.sample_evidence_ids.slice(0, 5)) {
+      const item = evidenceById.get(evidenceId);
+      if (!item) continue;
+      const li = node("li", "");
+      li.append(linkOrText(item));
+      list.append(li);
+    }
+    examples.append(list);
+    card.append(examples, node("small", "verification-boundary", family.boundary));
+    verification.append(card);
+  }
+
+  policy.replaceChildren();
+  const policyIntro = node("div", "policy-intro");
+  policyIntro.append(node("strong", "", "A score is a queueing device, not an evidence verdict."), node("p", "", data.selection_policy.commitment_boundary));
+  const componentGrid = node("div", "policy-components");
+  for (const [name, maximum] of Object.entries(data.selection_policy.components)) {
+    const item = node("div", "");
+    item.append(node("span", "", label(name)), node("strong", "tabular", `${maximum} max`));
+    componentGrid.append(item);
+  }
+  policy.append(policyIntro, componentGrid);
 }
 
 function renderOperatingModel() {
@@ -1223,6 +1375,7 @@ function populateFilters() {
 
 function renderAll() {
   renderOverview();
+  renderWeeklyReview();
   renderOperatingModel();
   renderAnalyses();
   if (!state.selectedTheme) state.selectedTheme = state.research.themes[0]?.id || "";
@@ -1248,6 +1401,7 @@ function routeFromHash() {
     if (route === "themes") renderThemes();
     if (route === "analyses") renderAnalyses();
     if (route === "operating-model") renderOperatingModel();
+    if (route === "weekly-review") renderWeeklyReview();
   }
   window.scrollTo(0, 0);
 }
@@ -1314,7 +1468,7 @@ function bindControls() {
 async function load() {
   $("#load-failure").hidden = true;
   $("#sidebar-state").textContent = "Loading research";
-  const [researchResult, alphaResult, operatingResult] = await Promise.allSettled([
+  const [researchResult, alphaResult, operatingResult, weeklyReviewResult] = await Promise.allSettled([
     fetch("./data/research.json", { cache: "no-store" }).then((response) => {
       if (!response.ok) throw new Error(`Cross-source dataset returned ${response.status}.`);
       return response.json();
@@ -1325,6 +1479,10 @@ async function load() {
     }),
     fetch("./data/operating-model.json", { cache: "no-store" }).then((response) => {
       if (!response.ok) throw new Error(`Operating model returned ${response.status}.`);
+      return response.json();
+    }),
+    fetch("./data/weekly-review.json", { cache: "no-store" }).then((response) => {
+      if (!response.ok) throw new Error(`Weekly review returned ${response.status}.`);
       return response.json();
     }),
   ]);
@@ -1338,6 +1496,7 @@ async function load() {
   state.research = researchResult.value;
   state.alpha = alphaResult.status === "fulfilled" ? alphaResult.value : null;
   state.operatingModel = operatingResult.status === "fulfilled" ? operatingResult.value : null;
+  state.weeklyReview = weeklyReviewResult.status === "fulfilled" ? weeklyReviewResult.value : null;
   populateFilters();
   renderAll();
   routeFromHash();

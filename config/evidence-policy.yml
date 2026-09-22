@@ -112,6 +112,16 @@ source_role_defaults:
     operational_adoption: not-observed
     market_pull: low
     default_relationship: discovery-only
+  company-directory:
+    technical_reality: not-observed
+    operational_adoption: not-observed
+    market_pull: low
+    default_relationship: supporting-context
+  job-posting:
+    technical_reality: not-observed
+    operational_adoption: low
+    market_pull: low
+    default_relationship: supporting-context
 
 dimension_rules:
   technical_reality:

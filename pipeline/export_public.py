@@ -24,7 +24,7 @@ SENSITIVE_PATTERNS = {
     "private key": re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
 }
 
-PUBLIC_ITEM_FIELDS = {
+PUBLIC_ITEM_FIELD_ORDER = (
     "id",
     "source_id",
     "source_type",
@@ -37,6 +37,15 @@ PUBLIC_ITEM_FIELDS = {
     "projects",
     "sponsor_status",
     "theme_ids",
+    "verification",
+)
+PUBLIC_ITEM_FIELDS = set(PUBLIC_ITEM_FIELD_ORDER)
+
+
+VERIFICATION_FIELDS = {
+    "repository": {"stars", "forks", "pushed_at", "license"},
+    "company-directory": {"batch", "status", "team_size", "location", "github_url", "date_basis"},
+    "job-posting": {"company", "batch", "role", "location", "created_at", "date_basis"},
 }
 
 
@@ -48,7 +57,13 @@ def sanitize_item(row: dict[str, Any]) -> dict[str, Any]:
     blocked = BLOCKED_KEYS.intersection(row)
     if blocked:
         raise PublicDataError(f"Blocked fields present: {', '.join(sorted(blocked))}")
-    return {key: row[key] for key in PUBLIC_ITEM_FIELDS if key in row}
+    clean = {key: row[key] for key in PUBLIC_ITEM_FIELD_ORDER if key in row}
+    allowed = VERIFICATION_FIELDS.get(row.get("source_type", ""), set())
+    metadata = row.get("metadata", {})
+    verification = {key: metadata[key] for key in allowed if metadata.get(key) is not None}
+    if verification:
+        clean["verification"] = verification
+    return clean
 
 
 def validate_public_payload(payload: Any) -> None:

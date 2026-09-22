@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-22T21:42:20.718093+00:00",
+    "generated_at": "2026-09-22T22:27:00.668066+00:00",
     "status": "success",
-    "source_count": 36,
-    "evidence_count": 1666,
+    "source_count": 38,
+    "evidence_count": 1729,
     "warnings": []
   },
   "weekly": {
@@ -116,8 +116,9 @@
       ],
       "primary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 28,
+      "evidence_count": 29,
       "source_types": [
+        "company-directory",
         "curated-newsletter",
         "first-party-lab",
         "investor-essay",
@@ -171,9 +172,10 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 50,
+      "evidence_count": 52,
       "source_types": [
         "community",
+        "company-directory",
         "curated-newsletter",
         "expert-social",
         "first-party-lab",
@@ -236,9 +238,10 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 86,
+      "evidence_count": 87,
       "source_types": [
         "community",
+        "company-directory",
         "curated-newsletter",
         "expert-newsletter",
         "expert-social",
@@ -296,14 +299,16 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 155,
+      "evidence_count": 158,
       "source_types": [
         "community",
+        "company-directory",
         "curated-newsletter",
         "expert-newsletter",
         "expert-social",
         "first-party-lab",
         "investor-essay",
+        "job-posting",
         "newsletter",
         "paper",
         "paper-curation",
@@ -331,9 +336,10 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 56,
+      "evidence_count": 60,
       "source_types": [
         "community",
+        "company-directory",
         "curated-newsletter",
         "expert-social",
         "first-party-lab",
@@ -391,8 +397,9 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 42,
+      "evidence_count": 43,
       "source_types": [
+        "company-directory",
         "curated-newsletter",
         "expert-social",
         "investor-essay",
@@ -424,9 +431,10 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 16,
+      "evidence_count": 17,
       "source_types": [
         "community",
+        "company-directory",
         "curated-newsletter",
         "first-party-lab",
         "investor-essay",
@@ -599,851 +607,25 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 12,
+      "evidence_count": 15,
       "source_types": [
+        "company-directory",
         "first-party-lab",
         "investor-essay",
+        "job-posting",
         "paper",
         "paper-curation"
       ],
       "score": {
         "recurrence": 25.0,
         "acceleration": 25.0,
-        "persistence": 20.0,
-        "breadth": 20.0,
-        "total": 90.0
+        "persistence": 25.0,
+        "breadth": 25.0,
+        "total": 100.0
       }
     }
   ],
   "evidence": [
-    {
-      "id": "hn:49783990",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Effective Altruism Is Evil",
-      "url": "https://twitter.com/thetreygoff/status/2101520207223173611",
-      "published_at": "2026-09-21T07:10:14+00:00",
-      "summary": "",
-      "authors": [
-        "pr337h4m"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783999",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
-      "url": "https://github.com/jaredpalmer/kev/tree/main",
-      "published_at": "2026-09-21T07:11:55+00:00",
-      "summary": "",
-      "authors": [
-        "tosh"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49784023",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Apple Fitness+ Layoffs Reported Ahead of Potential 'Major' Changes",
-      "url": "https://www.macrumors.com/2026/09/20/apple-fitness-plus-layoffs-reported/",
-      "published_at": "2026-09-21T07:14:48+00:00",
-      "summary": "",
-      "authors": [
-        "mgh2"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784037",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Methods, Provenance and Limitations Documentation for Asteroid Approach Reports",
-      "url": "https://zenodo.org/records/22868834",
-      "published_at": "2026-09-21T07:17:06+00:00",
-      "summary": "",
-      "authors": [
-        "UniverseToday"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "assurance-infrastructure"
-      ]
-    },
-    {
-      "id": "hn:49784087",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: A global music video channel like 90s MTV Select",
-      "url": "https://selectm.tv",
-      "published_at": "2026-09-21T07:24:05+00:00",
-      "summary": "",
-      "authors": [
-        "cvgellhorn"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784110",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Phineas Gage",
-      "url": "https://en.wikipedia.org/wiki/Phineas_Gage",
-      "published_at": "2026-09-21T07:27:33+00:00",
-      "summary": "",
-      "authors": [
-        "LolWolf"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784121",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "How Big Tech Runs Tech Projects and the Curious Absence of Scrum (2021)",
-      "url": "https://newsletter.pragmaticengineer.com/p/project-management-in-tech",
-      "published_at": "2026-09-21T07:29:12+00:00",
-      "summary": "",
-      "authors": [
-        "tosh"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784126",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Tutorial/Book on Building a Desktop Windowing System",
-      "url": "https://news.ycombinator.com/item?id=49784126",
-      "published_at": "2026-09-21T07:29:35+00:00",
-      "summary": "Can people please suggest a good tutorial (or even book) on building a simple Desktop Windowing System, preferably coded in a high level language such as C with small pieces of assembly where necessary.<p>The sort of thing I have in mind is something like GEM or the early MS Windows, which runs on top of an existing shell.",
-      "authors": [
-        "ADavison2560"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784144",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Running cloud credit management locally through notifications",
-      "url": "https://github.com/Astralchemist/creditwatch",
-      "published_at": "2026-09-21T07:31:59+00:00",
-      "summary": "",
-      "authors": [
-        "akashi_dev"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784180",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Commodore Phone Update",
-      "url": "https://commodore.net/commodore-callback-8020-updates/",
-      "published_at": "2026-09-21T07:35:45+00:00",
-      "summary": "",
-      "authors": [
-        "andsoitis"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784194",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Exploring the scalable matrix extension of the Apple M4 processor",
-      "url": "https://github.com/tzakharko/m4-sme-exploration",
-      "published_at": "2026-09-21T07:37:03+00:00",
-      "summary": "",
-      "authors": [
-        "tosh"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784336",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Disney+: New user agreement allows ads before movies in all subscriptions",
-      "url": "https://consumerrights.wiki/w/Disney%2B_ad_policy_change",
-      "published_at": "2026-09-21T07:55:28+00:00",
-      "summary": "",
-      "authors": [
-        "DeepLogin"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49784706",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Jev-Leftpad",
-      "url": "https://github.com/f/jev-leftpad",
-      "published_at": "2026-09-21T08:39:32+00:00",
-      "summary": "",
-      "authors": [
-        "fka"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49785168",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: A GUI for non programmers for Epic's version control system Lore",
-      "url": "https://www.anchorpoint.app/lore",
-      "published_at": "2026-09-21T09:50:25+00:00",
-      "summary": "Hey, it&#x27;s Matt from Anchorpoint. We released a free desktop client that you can use with Lore repositories. Lore is incredibly fast, so we wanted to make sure that the client is also fast when it comes to display revisions, branches and visual previews.<p>One of the highlights is that you can review binary files such as Unreal assets, 3D models, code, audio&amp;video and even PDFs with overlay and side-by-side comparisons. On 3D models you e.g. can quickly see if UV maps or the mesh has changed on a particular revision.<p>All the basic commands such as creating&#x2F;cloning a repository, committing, switching branches and reverting revisions are of course also supported. It is available for download on our website.<p>We will keep improving the application. The next step are adding Lore relevant features such as sub-repository links and file locking. It would be cool to get your opinions. Lore is still pretty new and we want that it&#x27;s ecosystem will grow, similar like it did for Git.",
-      "authors": [
-        "m_niedoba"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49785202",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Engineering Memory: On learning to memorize first 100 digits of pi (2024)",
-      "url": "https://gregorygundersen.com/blog/2024/12/21/engineering-memory/",
-      "published_at": "2026-09-21T09:56:34+00:00",
-      "summary": "",
-      "authors": [
-        "fuzzythinker"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "openai-news:10538c022345675d1abd",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "Building standards for the next phase of AI",
-      "url": "https://openai.com/index/building-standards-next-phase-ai",
-      "published_at": "2026-09-21T10:00:00+00:00",
-      "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49785397",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "ZuckOff is a free app that sees Meta glasses before they see you",
-      "url": "https://www.wired.me/story/meta-smart-glasses-detector-app-zuckoff",
-      "published_at": "2026-09-21T10:27:50+00:00",
-      "summary": "<a href=\"https:&#x2F;&#x2F;zuckoff.app&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;zuckoff.app&#x2F;</a>",
-      "authors": [
-        "choult"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49785429",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "ZuckOff Know when a camera is in the room",
-      "url": "https://zuckoff.app/",
-      "published_at": "2026-09-21T10:33:14+00:00",
-      "summary": "",
-      "authors": [
-        "Bluestein"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49785562",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Maki, an open-source multi-agent LLM framework (local or hosted)",
-      "url": "https://github.com/BowlOfData/maki",
-      "published_at": "2026-09-21T10:52:31+00:00",
-      "summary": "",
-      "authors": [
-        "bowlofdata"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "agent-harnesses"
-      ]
-    },
-    {
-      "id": "github:1379574728",
-      "source_id": "github",
-      "source_type": "repository",
-      "title": "jev-chat/jev-chat-jarvis",
-      "url": "https://github.com/jev-chat/jev-chat-jarvis",
-      "published_at": "2026-09-21T11:12:53Z",
-      "summary": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
-      "authors": [
-        "jev-chat"
-      ],
-      "tags": [
-        "accessibility-service",
-        "android",
-        "chat-assistant",
-        "llm",
-        "qq",
-        "wechat"
-      ],
-      "projects": [
-        "jev-chat/jev-chat-jarvis"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49785853",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Local-coder – Build a team of coding agents with local models",
-      "url": "https://github.com/gmarland/local-coder",
-      "published_at": "2026-09-21T11:29:18+00:00",
-      "summary": "",
-      "authors": [
-        "gamerdrome"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ]
-    },
-    {
-      "id": "interconnects:43bf4602833d95a55b19",
-      "source_id": "interconnects",
-      "source_type": "expert-newsletter",
-      "title": "The current balance of power in open models",
-      "url": "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
-      "published_at": "2026-09-21T11:56:56+00:00",
-      "summary": "The expanded form of a testimony I prepared for Congress.",
-      "authors": [
-        "Nathan Lambert"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "open-local-inference"
-      ]
-    },
-    {
-      "id": "openai-news:08ffdb24bebd9aa2ffda",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "Advisory Group on Mathematics and Artificial Intelligence",
-      "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
-      "published_at": "2026-09-21T12:00:00+00:00",
-      "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "openai-news:8fe4474fdbb9c4c46a22",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
-      "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
-      "published_at": "2026-09-21T12:00:00+00:00",
-      "summary": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "bluesky:e810fac7fd93:3mvzo2lneqg2j",
-      "source_id": "bluesky-nathan-lambert",
-      "source_type": "expert-social",
-      "title": "I was asked by Congressional staff to share my views on open models performance, adoption, and competition vis a vis China. Here’s my briefing with all our latest data and predictions for what come...",
-      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mvzo2lneqg2j",
-      "published_at": "2026-09-21T12:01:03.231Z",
-      "summary": "",
-      "authors": [
-        "Nathan Lambert"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [
-        "open-local-inference"
-      ]
-    },
-    {
-      "id": "hn:49786379",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The Roadmap to Mastering LLM Inference Optimization",
-      "url": "https://machinelearningmastery.com/the-roadmap-to-mastering-llm-inference-optimization/",
-      "published_at": "2026-09-21T12:23:19+00:00",
-      "summary": "",
-      "authors": [
-        "eigenBasis"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786401",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: SQLBraid – Write SQL directly in TypeScript without a query-builder DSL",
-      "url": "https://github.com/Clickin/SQLBraid",
-      "published_at": "2026-09-21T12:25:37+00:00",
-      "summary": "",
-      "authors": [
-        "Clickin"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786419",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Lossless-memory – a personal AI memory that never summarizes",
-      "url": "https://github.com/aru-labs/lossless-memory",
-      "published_at": "2026-09-21T12:28:17+00:00",
-      "summary": "",
-      "authors": [
-        "aru-labs"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786425",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "NATS second glitch this month causes more disruption",
-      "url": "https://www.bbc.co.uk/news/live/cq4g5r4e949jt",
-      "published_at": "2026-09-21T12:28:59+00:00",
-      "summary": "",
-      "authors": [
-        "librasteve"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786433",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Do you use:visited on links?",
-      "url": "https://kevquirk.com/do-you-use-visited-on-links",
-      "published_at": "2026-09-21T12:29:15+00:00",
-      "summary": "",
-      "authors": [
-        "ibobev"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786435",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Creating a Blog in Gemini",
-      "url": "https://brennan.day/creating-a-blog-in-gemini/",
-      "published_at": "2026-09-21T12:29:37+00:00",
-      "summary": "",
-      "authors": [
-        "ibobev"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786446",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Tannakian Reconstruction in a Yoneda Equipment",
-      "url": "https://bartoszmilewski.com/2026/09/21/tannakian-reconstruction-in-a-yoneda-equipment/",
-      "published_at": "2026-09-21T12:30:42+00:00",
-      "summary": "",
-      "authors": [
-        "ibobev"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786448",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "RFC-0285: The Magma GPU open-source project",
-      "url": "https://fuchsia.dev/fuchsia-src/contribute/governance/rfcs/0285_magma_gpu_open_source_project",
-      "published_at": "2026-09-21T12:30:50+00:00",
-      "summary": "",
-      "authors": [
-        "undecidabot"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "import-ai:c5cf7b0af1c9700a73b6",
-      "source_id": "import-ai",
-      "source_type": "expert-newsletter",
-      "title": "Import AI 473: The US's superintelligence strategy; human brain in a mouse skull; and machine hermeneutics",
-      "url": "https://importai.substack.com/p/import-ai-473-the-uss-superintelligence",
-      "published_at": "2026-09-21T12:31:04+00:00",
-      "summary": "Is the wall AI is hitting in the room with us right now?",
-      "authors": [
-        "Jack Clark"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786462",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Edit command line tool – DOS Edit is back",
-      "url": "https://learn.microsoft.com/en-us/windows/edit/",
-      "published_at": "2026-09-21T12:32:45+00:00",
-      "summary": "",
-      "authors": [
-        "noworld"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786471",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Recreate Eliza Using JEV?",
-      "url": "https://news.ycombinator.com/item?id=49786471",
-      "published_at": "2026-09-21T12:33:30+00:00",
-      "summary": "Would it be possible to recreate ELIZA using JEV?<p>It seems like this should be possible. You would need to ask questions about what the person brought up in a sentence, e.g. &quot;My MOM calls all the time&quot;.<p>Then you write JEV &quot;rules&quot; to construct a reply based on various probabilities.",
-      "authors": [
-        "daly"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49786478",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "What I believe about the future of software development",
-      "url": "https://thorstenball.com/blog/2026/09/19/what-i-believe-about-the-future-of-software-development/",
-      "published_at": "2026-09-21T12:34:16+00:00",
-      "summary": "",
-      "authors": [
-        "misternugget"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786480",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "ChatGPT Plus and Pro Will Get Ads in 2027",
-      "url": "https://www.vincentschmalbach.com/chatgpt-plus-and-pro-will-get-ads-in-2027/",
-      "published_at": "2026-09-21T12:34:28+00:00",
-      "summary": "",
-      "authors": [
-        "vincent_s"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786485",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Is JEV just clever rule-based programming?",
-      "url": "https://news.ycombinator.com/item?id=49786485",
-      "published_at": "2026-09-21T12:35:04+00:00",
-      "summary": "Expert Systems AI was based on Charles Forgy&#x27;s RETE pattern match algorithm.<p>It seems to me that JEV is RETE with more generic pattern matching.",
-      "authors": [
-        "daly"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49786497",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: M0saic – deterministic video compiler (CLI, web, desktop)",
-      "url": "https://m0saic.io",
-      "published_at": "2026-09-21T12:36:26+00:00",
-      "summary": "Hi HN! <a href=\"https:&#x2F;&#x2F;m0saic.io&#x2F;go&#x2F;hn-make-hello\" rel=\"nofollow\">https:&#x2F;&#x2F;m0saic.io&#x2F;go&#x2F;hn-make-hello</a><p>I&#x27;m Quentin. I&#x27;ve just published my longterm project - excited to share! m0saic is a video compiler. Typescript programs define an explicit spatial layout via a string DSL (m0), and configure what goes into each independent rect over a shared timeline. This media intent IR gets lowered to a series of ffmpeg invocations, which produce the intended media artifact deterministically.<p>I got interested in this originally when I was younger and made Call of Duty montages on YouTube. I made compilations and whatnot and found it tedious to do some of the &quot;structural&quot; work I suppose (like making a 2x2 layout, other effects). I had saved project files to help me make similar style content over time, but found myself wanting more control. Around then sometime I stumbled into ffmpeg and got into media production and automation as a hobby.<p>I later designed a string DSL for layout, answering roughly how could I represent any arbitrary set of rectangles in an arbitrary canvas in one blob? This led to the m0 DSL. If interested, b",
-      "authors": [
-        "m0saic-dev"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786506",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Callwitness – record what your AI agent's tools return",
-      "url": "https://github.com/AditiChaudharyy14/callwitness",
-      "published_at": "2026-09-21T12:37:17+00:00",
-      "summary": "",
-      "authors": [
-        "aditichaudharyy"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786524",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "AI is becoming too interconnected to fail",
-      "url": "https://www.axios.com/2026/09/21/ai-finance-credit-circular",
-      "published_at": "2026-09-21T12:39:48+00:00",
-      "summary": "",
-      "authors": [
-        "meep_meep_meep"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786531",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The Destruction of the Scottish Canon",
-      "url": "https://asteriskmag.com/issues/15/the-destruction-of-the-scottish-canon",
-      "published_at": "2026-09-21T12:40:04+00:00",
-      "summary": "",
-      "authors": [
-        "surprisetalk"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786538",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Disney Hires Character.ai Chief to Drive Its Technology Push",
-      "url": "https://www.nytimes.com/2026/09/18/business/media/disney-ai-technology-karandeep-anand.html",
-      "published_at": "2026-09-21T12:40:29+00:00",
-      "summary": "",
-      "authors": [
-        "bookofjoe"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786546",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The Campaign for North Africa",
-      "url": "https://en.wikipedia.org/wiki/The_Campaign_for_North_Africa",
-      "published_at": "2026-09-21T12:41:08+00:00",
-      "summary": "",
-      "authors": [
-        "thunderbong"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786558",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "OpenAI Codex Is Retiring the Last Model That Behaves Like an Assistant",
-      "url": "https://www.vincentschmalbach.com/gpt-5-5-retirement-codex/",
-      "published_at": "2026-09-21T12:41:48+00:00",
-      "summary": "",
-      "authors": [
-        "vincent_s"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786559",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "There is no way to get ChatGPT to stop injecting your location in context",
-      "url": "https://chatgpt.com/share/6ab11f30-4c08-83eb-a82d-6673219f8cc4",
-      "published_at": "2026-09-21T12:41:49+00:00",
-      "summary": "",
-      "authors": [
-        "GodelNumbering"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786569",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Planly",
-      "url": "https://github.com/drkokorev/Planly",
-      "published_at": "2026-09-21T12:42:21+00:00",
-      "summary": "",
-      "authors": [
-        "hy4hy"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49786578",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: JevGeni, the fruit-fly claw machine overator",
-      "url": "https://jevgeni.vercel.app",
-      "published_at": "2026-09-21T12:43:55+00:00",
-      "summary": "just some fun with jev and whisper",
-      "authors": [
-        "deemkeen"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49786609",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Is it impossible to disable Siri on macOS 27?",
-      "url": "https://news.ycombinator.com/item?id=49786609",
-      "published_at": "2026-09-21T12:47:05+00:00",
-      "summary": "I disabled Siri in the Settings app, and then further disabled Siri and its extensions in Settings &gt; Screen Time.<p>Next, I disabled all Siri-related and Apple Intelligence-related services as per https:&#x2F;&#x2F;github.com&#x2F;OleksandrKrupko&#x2F;mac-os-debloat<p>But after restarting, I could still see a &quot;Siri&quot; process running in Activity Monitor. Upon further inspection, I found that it is the &quot;Siri AI.app&quot;.<p>These &quot;features&quot;, together with Apple&#x27;s Personal Context sound very similar to Microsoft&#x27;s Recall.<p>Does anyone have the same experience? Is it really impossible to fully turn off Siri, Siri AI, Apple Intelligence and all related services and features on macOS 27?",
-      "authors": [
-        "semidror"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
     {
       "id": "hn:49786634",
       "source_id": "hacker-news",
@@ -3618,6 +2800,1479 @@
       "theme_ids": []
     },
     {
+      "id": "yc-company:1294",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Scale AI (S2016)",
+      "url": "https://www.ycombinator.com/companies/scale-ai",
+      "published_at": "2026-09-22",
+      "summary": "Data-centric infrastructure to accelerate the development of AI. Scale accelerates the development of AI within organizations of any size to deliver critical business insights and operational efficiency. Its data-centric infrastructure platform leverages RLHF (Reinforced Learning with Human Feedback) to help organizations build the strongest AI models that supercharge their business, with customers across industries including Meta, Microsoft, U.S. Army, DoD’s Defense Innovation Unit, Open AI, General Motors, Toyota Research Institute, Brex, Instacart and Flexport",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "machine-learning",
+        "yc-batch:s2016"
+      ],
+      "projects": [
+        "Scale AI"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "verification": {
+        "batch": "S2016",
+        "team_size": 500,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "https://github.com/scaleapi",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:30923",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Frontier Computing (S2026)",
+      "url": "https://www.ycombinator.com/companies/frontier-computing",
+      "published_at": "2026-09-22",
+      "summary": "Frontier grows scalable biological brains as an ML training substrate. Frontier is first to grow biological brains at scale, serving biological neural nets with substrate-level colocation of memory and compute, enabling highly cost effective training of large parameter count models. While academia has traditionally been limited to ~1M neurons in vitro, Frontier has built a pathway to scale to 100M+ neurons by circumventing traditional scaling challenges in biological culture, demonstrating this strategy's functionality by training a biological brain using this scaling primitive to play Frogger. Frontier is now growing exascale compute clusters to produce substrates capable of long-horizon language reasoning while operating at much higher sample efficiencies than traditional architectures, and collocating memory with compute to enable significantly larger parameter counts than would be tractable for training within traditional compute clusters",
+      "authors": [],
+      "tags": [
+        "hard-tech",
+        "hardware",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Frontier Computing"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 1,
+        "location": "London",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32124",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Erinys (S2026)",
+      "url": "https://www.ycombinator.com/companies/erinys",
+      "published_at": "2026-09-22",
+      "summary": "We help lawyers start and scale AI-native law firms.. Erinys provides the technology, intake, back office, and client acquisition needed to launch and scale an AI-native law firm. Lawyers own their firms and make every legal decision; Erinys handles everything around them",
+      "authors": [],
+      "tags": [
+        "legal",
+        "legaltech",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Erinys"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 3,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32136",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Palisade (S2026)",
+      "url": "https://www.ycombinator.com/companies/palisade",
+      "published_at": "2026-09-22",
+      "summary": "AI-native sales agents that run marketplaces. Palisade spins up a personal sales agent for every single visitor to your website. Marketplaces like trading card platforms, vintage stores, and short-term rental operators sell more when each customer works with a personal agent that remembers them",
+      "authors": [],
+      "tags": [
+        "marketplace",
+        "e-commerce",
+        "sales",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Palisade"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 1,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32162",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Studio (S2026)",
+      "url": "https://www.ycombinator.com/companies/studio",
+      "published_at": "2026-09-22",
+      "summary": "Accurately simulate market response at scale. Studio is a simulation lab studying how humans and societies respond to new ideas, and is building the first software models that can accurately predict that response. Instead of creating digital twins of survey respondents, Studio builds live market models of interconnected audience segments from real, traceable consumer-behavior data. Our simulations match live KPI outcomes like revenue and purchase behavior with over 97% accuracy for consumer-facing enterprises, higher than any synthetic panel, simulation lab, or traditional market research",
+      "authors": [],
+      "tags": [
+        "analytics",
+        "ai",
+        "artificial-intelligence",
+        "b2b",
+        "market-research",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Studio"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32172",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Jcode (S2026)",
+      "url": "https://www.ycombinator.com/companies/jcode",
+      "published_at": "2026-09-22",
+      "summary": "High performance coding agents. We produce the most capable, fast, and efficient coding agent harness. Our harness has 20k+ github stars, and $1m+/month of inference throughput",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "developer-tools",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Jcode"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "agent-harnesses",
+        "coding-agents"
+      ],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 1,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32188",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "IMPACT Drones (S2026)",
+      "url": "https://www.ycombinator.com/companies/impact-drones",
+      "published_at": "2026-09-22",
+      "summary": "Air Defense as a Service for Civilian Infrastructure.. IMPACT builds autonomous interceptor drones that ship in sealed containers. The box sits at the site it protects, data centers, power grids, airports, bases, with no crew on the pad. When sensors cue a hostile drone, an interceptor pierces its own frangible lid, launches, and rams the target, guided by onboard vision that keeps working when GPS is jammed. Legacy effectors cost $1M+ per shot against $30k threats; ours cost less than the threat and scale with the swarm, the same class of interceptor already downing Shahed drones over Ukraine. Sites subscribe to protection instead of buying missiles, hardware, reloads and monitoring included: Air Defense as a Service. 180M+ USD in signed letters of intent",
+      "authors": [],
+      "tags": [
+        "drones",
+        "artificial-intelligence",
+        "swarm-robotics",
+        "hardware",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "IMPACT Drones"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32201",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Mosaic (S2026)",
+      "url": "https://www.ycombinator.com/companies/mosaic-inc",
+      "published_at": "2026-09-22",
+      "summary": "Defining the frontier of multiplayer AI.. Mosaic gives teams and their coding agents shared memory across every session, so everyone can understand what happened, why decisions were made, and pick up where someone else left off. We started as a real-time coding environment where multiple people and their agents can work together live. It went viral, defined the multiplayer AI category, and inspired frontier labs like Anthropic. Together, we’re building the infrastructure for people and agents to share context and work together",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Mosaic"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32205",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Mochi (S2026)",
+      "url": "https://www.ycombinator.com/companies/mochi",
+      "published_at": "2026-09-22",
+      "summary": "Watch and create anime. Mochi is an app to watch and create anime microdramas: fast paced shows with a cliffhanger every minute. We produce originals with AI, collaborating with writers from Marvel, Cartoon Network, and Toei Animation, and our users can also create in app too - with over 500 episodes created each day from 3,000+ creators",
+      "authors": [],
+      "tags": [
+        "consumer",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Mochi"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 3,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32206",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "DeepReach Inc. (S2026)",
+      "url": "https://www.ycombinator.com/companies/deepreach-inc",
+      "published_at": "2026-09-22",
+      "summary": "Network for Physical AI Data Business. Physical AI — robots and world models — is bottlenecked on one thing: diverse, real-world data at massive scale showing how humans actually do work in the physical world. It was never written down, and you can't buy it, because no one has ever captured it. Only real local experts, the people who do this work every day, can produce data this authentic and valuable. DeepReach builds the network that reaches them. We design and manufacture wearable stereo capture devices, then place them with local data partners who run collection as their own business — in warehouses, workshops, farms, kitchens and repair shops. They own the local relationships; we supply the hardware, the software platform, the quality pipeline and the payments. Anyone can run a data business. That structure is what produces diversity. Instead of thousands of hours inside one environment, we deliver hours spread across thousands of environments — which is what actually makes robot policies generalize. 475 devices in the field and 100+ data partners are live across 7 countries, adding new partners every week. They've collected nearly 150,000 clips in the past three months, with ",
+      "authors": [],
+      "tags": [
+        "machine-learning",
+        "hardware",
+        "artificial-intelligence",
+        "robotics",
+        "computer-vision",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "DeepReach Inc."
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "multimodal-3d",
+        "robotics-embodied-ai"
+      ],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 6,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32221",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Grocalo (S2026)",
+      "url": "https://www.ycombinator.com/companies/grocalo",
+      "published_at": "2026-09-22",
+      "summary": "AI brain for creators that runs their social content. Grocalo (S26) is an AI brain that runs content for creators. We understand their audiences, using video understanding and deep platform analytics to bottle up the taste behind each creator and personalize and distribute content to creator specific audiences. Grocalo generated 2B views and gained 4M followers for our creators in the last 2 months. Some of our clients include Jimmy O. Yang (Comedian, 11M followers), King Bach (72M followers), Leenda Dong (28M followers), Steven He (30M followers), Sheena Melwani (18M followers), and Jeannie Mai (TV host, 6M followers). Content should be personalized and data-driven. We’ve developed the most advanced AI brain replicating viral content for any given audience",
+      "authors": [],
+      "tags": [
+        "entertainment",
+        "creator-economy",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Grocalo"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "Los Angeles",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32222",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Audun (S2026)",
+      "url": "https://www.ycombinator.com/companies/audun",
+      "published_at": "2026-09-22",
+      "summary": "AI-native debt collection company. Audun automates debt collection",
+      "authors": [],
+      "tags": [
+        "fintech",
+        "artificial-intelligence",
+        "ai",
+        "finance",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Audun"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 5,
+        "location": "Oslo, Norway",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32261",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Rasyn (S2026)",
+      "url": "https://www.ycombinator.com/companies/rasyn",
+      "published_at": "2026-09-22",
+      "summary": "Making chemicals 100,000x faster. We builds foundational AI models for chemistry. Almost nothing you buy is a single chemical. Products like datacenter coolant, GPU thermal paste, paint, and glue are formulations, which are mixtures of around ten ingredients each, and demand for them has grown quickly because of AI and EVs. Designing a new formulation is essentially a search problem, because there are more possible mixtures than anyone could ever test, and none of them can be predicted in advance. As a result, bringing a single formulation to market today takes three to five years of trial and error in a lab. Our models predict how a mixture will behave far faster than the standard methods used today, which lets us design new formulations in weeks rather than years, at a fraction of the cost. To prove this, we used them to invent three chemicals that never existed before, including a PFAS-free coolant for datacenters, and we have since synthesized and patented all three. We are already working with some of the largest manufacturers to design formulations for them, and we are building our own lab to generate the data that will train our next models",
+      "authors": [],
+      "tags": [
+        "manufacturing",
+        "artificial-intelligence",
+        "deep-learning",
+        "biotech",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Rasyn"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 3,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32618",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Click (S2026)",
+      "url": "https://www.ycombinator.com/companies/click",
+      "published_at": "2026-09-22",
+      "summary": "Research services for ChatGPT and Claude. Click builds useful services that meet users right inside ChatGPT and Claude. We're starting with a research service that provides external context that the built-in web search misses - like data from professional & social platforms, marketplaces, financials, and more. It makes research on people & companies even deeper with specialized, source-backed context beyond built-in web search, while enabling new tasks like comparing live flight fares right inside the chat",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "infrastructure",
+        "api",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Click"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 1,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "https://github.com/use-click/",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32623",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Omanta (S2026)",
+      "url": "https://www.ycombinator.com/companies/omanta",
+      "published_at": "2026-09-22",
+      "summary": "A research lab for one. Omanta is a personalized research lab for patients who have exhausted standard options, want to prepare proactively for recurrence, or are living with an unresolved diagnosis. We direct the full operational infrastructure, personnel, expertise, and technology of a large research program toward understanding and addressing the challenges of individual patients across oncology, rare disease, and undiagnosed conditions. For clinicians, we act as a collaborative partner, providing a living roadmap for ongoing patient care built on a rigorous and evolving scientific evidence base. We fully operationalize patient-specific research programs, covering tissue logistics, diagnostic follow-up, data integration, multiomic analysis, therapeutic strategy development, and more. Omanta brings context and clarity to complex cases, helping clinicians see more of the scientific picture as they decide how best to care for their patients",
+      "authors": [],
+      "tags": [
+        "healthcare",
+        "digital-health",
+        "oncology",
+        "health-&-wellness",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Omanta"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 6,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32625",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Qlo (S2026)",
+      "url": "https://www.ycombinator.com/companies/qlo",
+      "published_at": "2026-09-22",
+      "summary": "Legora for commercial insurance carriers. Qlo builds AI agents to run commercial insurance underwriting. We start by fully automating the operational work around risk decisions, become the system of record, and earn autonomy workflow by workflow toward the autonomous AI underwriter. We’re rebuilding underwriting infrastructure from the ground up so human underwriters and AI agents can share the same accounts, rules, documents, permissions, and workflow state. We believe every commercial insurance program will eventually be built and operated end to end by AI agents on Qlo",
+      "authors": [],
+      "tags": [
+        "insurance",
+        "artificial-intelligence",
+        "enterprise-software",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Qlo"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32627",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Tenor (S2026)",
+      "url": "https://www.ycombinator.com/companies/tenor",
+      "published_at": "2026-09-22",
+      "summary": "Infrastructure for building and scaling AI-native service businesses.. Tenor enables domain experts to build, run, and scale AI-native service businesses. The next generation of successful white-collar service businesses will be built and scaled around AI from the ground up. These companies need more than capable AI models. They need a company data layer, governed workflows that AI can execute, and harnesses that continuously improve based on outcomes and decision checkpoints. Tenor is building this infrastructure so millions of AI-native businesses don’t have to build it themselves",
+      "authors": [],
+      "tags": [
+        "b2b",
+        "automation",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Tenor"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 3,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32716",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Neuromorphic (S2026)",
+      "url": "https://www.ycombinator.com/companies/neuromorphic",
+      "published_at": "2026-09-22",
+      "summary": "Building robots to automate wetlabs. We are building robots that can work autonomously in existing wet labs. Unlike traditional lab automation, which requires dedicated equipment and fixed workflows, our robot moves between workstations, manipulates existing scientific equipment, transports lab materials, and executes experiments using the same lab infrastructure as a human technician. We make the robots easy to manage through natural interfaces like Slack, email, and phone. Our goal is to make deploying robots in wet labs as easy as onboarding a new employee, and to accelerate scientific research!",
+      "authors": [],
+      "tags": [
+        "robotics",
+        "artificial-intelligence",
+        "biotech",
+        "hard-tech",
+        "b2b",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Neuromorphic"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 3,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32749",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Arbital (S2026)",
+      "url": "https://www.ycombinator.com/companies/arbital",
+      "published_at": "2026-09-22",
+      "summary": "The social trading app for stocks, memes, and perps. Arbital lets you trade perps, memes, stocks, and run market-making strategies from one place. In our first 7 months, 2,700 traders have traded $1.35B in volume through Arbital, and we're now doing $435M/month. We're building towards a social, mobile-first trading app that brings tokenized equities, crypto, and perps to everyone",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "crypto-web3",
+        "trading",
+        "fintech",
+        "investing",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Arbital"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 3,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32752",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Moving Atoms (S2026)",
+      "url": "https://www.ycombinator.com/companies/moving-atoms",
+      "published_at": "2026-09-22",
+      "summary": "Virtual Reality for Training Robots. Our first model, Atom 1, pre-trained on the internets video, and fine tuned for physics. It has been action conditioned, so you can simulate robot actions within it. This lets Robot Labs train their robots using GPUs instead of relying on human collected manual data that is slow and expensive. In unseen and hard to replicate environments, this is the only path to getting ANY training data",
+      "authors": [],
+      "tags": [
+        "data-labeling",
+        "robotics",
+        "virtual-reality",
+        "artificial-intelligence",
+        "hard-tech",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Moving Atoms"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32948",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Waybill (S2026)",
+      "url": "https://www.ycombinator.com/companies/waybill",
+      "published_at": "2026-09-22",
+      "summary": "Agentic procurement & inventory for deep tech teams.. Hardware teams burn weeks on procurement. An engineer needs a part. Someone emails five distributors, chases quotes, gets an approval, wires the money, tracks a shipment across three carriers, clears customs, and then nobody knows where the box is or what's actually on the shelf. Waybill runs that entire loop. Send us a part, a spec, or a BOM. We source it, pull quotes, route approvals, pay the supplier, handle freight and customs, track it to your dock, and keep your stock count updated. Take your supply chain for granted. Built by a team that's seen it at LAT Aerospace and WareIQ (YC S20)",
+      "authors": [],
+      "tags": [
+        "logistics",
+        "procurement",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Waybill"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 3,
+        "location": "Gurugram, Haryana, India",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:32981",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Marengo (S2026)",
+      "url": "https://www.ycombinator.com/companies/marengo",
+      "published_at": "2026-09-22",
+      "summary": "AI-Native Engineering Firm designing Data Centers. Marengo is an AI-native engineering firm designing data centers in half the time and half the cost. We have $4M in design partnerships with two of the world's largest developers ($XB). Marengo is backed by YC, Exor, Future Planet Capital, undisclosed $2B AUM family office, and other top-tier investors. Our team includes the former President & CEO of Saipem America ($3B+ P&L), former President of Exyte's Advanced Technology Facilities GBU ($6B+ P&L) and more",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "construction",
+        "design",
+        "energy",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Marengo"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 5,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:33178",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "TovenAI (S2026)",
+      "url": "https://www.ycombinator.com/companies/tovenai",
+      "published_at": "2026-09-22",
+      "summary": "AI agents for compliance at institutional trading firms. TovenAI builds a platform of AI agents that handle manual, data-intensive work for compliance teams at institutional trading firms, with six agents currently live. Our customers range from specialist firms to large global institutions, with our agents supporting multiple compliance workflows at a top-10 institutional brokerage. With prebuilt connectors to more than 30 systems—including Bloomberg, Cloud9, and NICE Actimize—firms can onboard to our platform and evaluate results using their own data in less than a week",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "compliance",
+        "regtech",
+        "fintech",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "TovenAI"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:33250",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Agent FM (S2026)",
+      "url": "https://www.ycombinator.com/companies/agent-fm",
+      "published_at": "2026-09-22",
+      "summary": "One group chat to hear and steer your coding agents.. Agent FM is a desktop app that gives engineers one group chat to hear and steer their coding agents. Instead of manually bouncing between different claude code and codex sessions, and combing through walls of text to monitor agents, engineers just tune in to Agent FM. Agents share important progress updates, blockers, assumptions, and decisions in the group chat. Engineers get live text and audio updates and respond right from the chat",
+      "authors": [],
+      "tags": [
+        "developer-tools",
+        "productivity",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Agent FM"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:33278",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "PRINCEPS (S2026)",
+      "url": "https://www.ycombinator.com/companies/princeps",
+      "published_at": "2026-09-22",
+      "summary": "AI-native insurance company for the compute economy. PRINCEPS is the first purpose-built insurance company for the trillion-dollar compute buildout. We underwrite SLA, GPU residual value, and outage risk, and price the coverage that unlocks cheaper financing for data centers and neoclouds",
+      "authors": [],
+      "tags": [
+        "machine-learning",
+        "artificial-intelligence",
+        "insurance",
+        "fintech",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "PRINCEPS"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "London",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:33344",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Dawn Industries (S2026)",
+      "url": "https://www.ycombinator.com/companies/dawn-industries",
+      "published_at": "2026-09-22",
+      "summary": "Automatic Diagnosis & Fix for Industrial Automation Cells. VIM connects to the entire cell: PLCs, robots, CNC machines, sensors. When a cell faults, VIM finds the cause, stages the fix, and the operator approves with one click. When a part drifts, VIM catches it seconds after the cut, inside the machine, and recommends the correction. Recovery drops from 30 minutes to under two, saving more than $15,000 per fault in large factories",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Dawn Industries"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:33969",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "OpenTag (S2026)",
+      "url": "https://www.ycombinator.com/companies/opentag",
+      "published_at": "2026-09-22",
+      "summary": "Model Agnostic AI coworker in Slack. OpenTag is an AI coworker in your Slack with full context on your company. It answers questions and takes real work off your plate. It also keeps your wiki up to date automatically, so knowledge never goes stale",
+      "authors": [],
+      "tags": [
+        "workflow-automation",
+        "aiops",
+        "enterprise-software",
+        "b2b",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "OpenTag"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2026",
+        "team_size": 3,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:34464",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "herdr (F2026)",
+      "url": "https://www.ycombinator.com/companies/herdr",
+      "published_at": "2026-09-22",
+      "summary": "building the open agent runtime. Developers don't run one coding agent anymore. They run fleets of them — for hours, sometimes days — across laptops, servers, and sandboxes. Keeping track of that work is the new bottleneck: which agent is blocked, which one finished, which terminal is it in, and why did everything die when the laptop closed. Herdr is the open-source home for that work. A background server owns the agents' terminal sessions on each machine, so the work survives disconnects, closed lids, and dropped SSH. Herdr detects each agent and turns the chaos into an attention queue — working, blocked, done, across every project — so you look only when an agent needs you. Every client is just a view: the bundled terminal UI, SSH from another machine, your phone. Close one, open another; the work never stops. Software can drive it too: a CLI, a socket API, and a plugin marketplace that passed 500 community plugins in its first month. The runtime is Apache-2.0 and stays open. Four months after launch: 25k GitHub stars, 340k downloads",
+      "authors": [],
+      "tags": [
+        "ai-assistant",
+        "developer-tools",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "herdr"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "agent-harnesses",
+        "coding-agents"
+      ],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 1,
+        "location": "Ankara, Turkey",
+        "status": "Active",
+        "github_url": "https://github.com/herdrdev",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:34597",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Sentient OS (F2026)",
+      "url": "https://www.ycombinator.com/companies/sentient-os",
+      "published_at": "2026-09-22",
+      "summary": "On-device AI that knows your entire life and does your work overnight.. Nobody's built truly proactive AI, because it requires running inference on your entire life. In the cloud, that's insanely expensive and a privacy nightmare. But not on your own chip. Every night, Sentient's on-device LLM wakes your Mac and understands what's new in your life (email, messages, files, Granola transcripts...), entirely locally, and distills it into a knowledge base. You wake up to your work already prepared: the reply you forgot, drafted from your own context; the subscription you never use renewing tomorrow, caught; the report you promised in the group chat, ready to send. Everything is one click from firing through computer use, and nothing fires until you click. Or click your Mac notch anytime and say \"finish this for me.\" Sidekick takes over the thing you were doing with its own cursor while you move on. On-device inference at this scale was supposed to be impossible: devices too slow, and models too dumb. So we built the stack ourselves: a custom LiteRT-LM fork (KV-cache reuse, speculative decoding, custom k-quants) that runs nightly on 8 GB Macs. The user's hardware does ~90% of the comput",
+      "authors": [],
+      "tags": [
+        "ai",
+        "artificial-intelligence",
+        "productivity",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Sentient OS"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "frontier-inference-infrastructure",
+        "open-local-inference"
+      ],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:34761",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Veeza AI (F2026)",
+      "url": "https://www.ycombinator.com/companies/veeza-ai",
+      "published_at": "2026-09-22",
+      "summary": "AI travel agent for people with weak passports, starting with visas.. Billions of people need tourist visas to travel the world. We use AI agents to prepare applications, verify documents, secure appointments, and handle the visa process end to end",
+      "authors": [],
+      "tags": [
+        "consumer",
+        "aiops",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Veeza AI"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:34794",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Qokedas (F2026)",
+      "url": "https://www.ycombinator.com/companies/qokedas",
+      "published_at": "2026-09-22",
+      "summary": "Data for AI Science. Models are trained on the entire internet, but most of what happens on Earth is never written down. We turn those signals into training data so labs can make models better at science",
+      "authors": [],
+      "tags": [
+        "deep-learning",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Qokedas"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 3,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:34896",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Faraday (F2026)",
+      "url": "https://www.ycombinator.com/companies/faraday",
+      "published_at": "2026-09-22",
+      "summary": "Industrial aOS between humans, agents, and robots",
+      "authors": [],
+      "tags": [
+        "b2b",
+        "enterprise-software",
+        "robotics",
+        "artificial-intelligence",
+        "manufacturing",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Faraday"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35094",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Forward (F2026)",
+      "url": "https://www.ycombinator.com/companies/useforward",
+      "published_at": "2026-09-22",
+      "summary": "Unifying Global Private Credit. An AI platform that connects commercial debt advisors with mandate matching private credit funds",
+      "authors": [],
+      "tags": [
+        "fintech",
+        "b2b",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Forward"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 5,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35190",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Lantern AI (F2026)",
+      "url": "https://www.ycombinator.com/companies/lantern-ai",
+      "published_at": "2026-09-22",
+      "summary": "Turn Your Taste Into Hires. Lantern learns what exceptional looks like for your team, pressure-tests the role against the real talent market, then runs the hiring loop: sourcing, inbound applications, interviews, assessments, candidate communication, and offers",
+      "authors": [],
+      "tags": [
+        "talent-acquisition",
+        "artificial-intelligence",
+        "recruiting",
+        "hr-tech",
+        "human-resources",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Lantern AI"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 4,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35257",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Nodus Compute (F2026)",
+      "url": "https://www.ycombinator.com/companies/nodus-compute",
+      "published_at": "2026-09-22",
+      "summary": "Intelligent Cloud for AI workloads. Intelligent Cloud for AI workloads",
+      "authors": [],
+      "tags": [
+        "infrastructure",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Nodus Compute"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35258",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Mirrors (F2026)",
+      "url": "https://www.ycombinator.com/companies/mirrors",
+      "published_at": "2026-09-22",
+      "summary": "Catch and fix AI agent regressions before they reach production. Mirrors provides regression testing for AI agents. Teams shipping agents constantly change prompts, models, and tools, and there's no way to test any of it. Agents call bespoke internal tools and APIs no test framework can reproduce, so most teams ship on vibes. Mirrors rebuilds the tools your agent calls from your own production traces, then replays real sessions against every change before it merges. You see which tool calls changed, which arguments moved, and where state landed differently. And when something fails, we tell you whether your agent regressed or something upstream moved. Built for teams whose agents take irreversible actions. Refunds, record updates, outbound email. Runs in your CI on every PR",
+      "authors": [],
+      "tags": [
+        "developer-tools",
+        "saas",
+        "b2b",
+        "devops",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Mirrors"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35263",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "River (F2026)",
+      "url": "https://www.ycombinator.com/companies/rivereditor",
+      "published_at": "2026-09-22",
+      "summary": "The AI desktop.. AI made software engineers 100x more productive. We're bringing that same transformation to knowledge workers with the AI desktop",
+      "authors": [],
+      "tags": [
+        "productivity",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "River"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35265",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Hopper (F2026)",
+      "url": "https://www.ycombinator.com/companies/hopper",
+      "published_at": "2026-09-22",
+      "summary": "Fast inference for voice. Hopper post-trains STT, TTS, and speech LLMs on your production calls, then serves and improves them against your live traffic",
+      "authors": [],
+      "tags": [
+        "infrastructure",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Hopper"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "voice-audio"
+      ],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35355",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Invertix (F2026)",
+      "url": "https://www.ycombinator.com/companies/invertix",
+      "published_at": "2026-09-22",
+      "summary": "Energy Superintelligence, AI that operates critical infrastructure. The next constraint is not intelligence, it is the energy and operational cost of running it. We deploy custom AI models inside critical infrastructure companies that ingest SCADA data, work orders, human interventions, operational data no public model has seen, grounded in physics-informed neural networks and differentiable simulators. This creates a flywheel: more operator data → better process understanding → more efficient operations → cheaper energy → cheaper AI → more deployment → more data. https://www.youtube.com/watch?v=0uDH6pMn5OE AI compute doubles every 2.2 years. Data center demand grows from 415 to 945 TWh by 2030. Without near-zero energy cost, AI remains limited by human infrastructure. We are the layer that runs AI at zero energy cost. Energy is a $10 trillion market. The infrastructure layer doesn't exist yet. We are building it",
+      "authors": [],
+      "tags": [
+        "infrastructure",
+        "artificial-intelligence",
+        "solar-power",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Invertix"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 8,
+        "location": "Munich, Germany",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35395",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Workers IO (F2026)",
+      "url": "https://www.ycombinator.com/companies/workers-io",
+      "published_at": "2026-09-22",
+      "summary": "Simulation Environments for Verifying Mission Critical Software. Workers IO verifies your entire system across millions of interleaving, faults, and timings to find the exact conditions that break the software properties you care about. Built for teams where 99.99% uptime is table-stakes",
+      "authors": [],
+      "tags": [
+        "infrastructure",
+        "artificial-intelligence",
+        "developer-tools",
+        "b2b",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Workers IO"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35454",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Shepherd Robotics (F2026)",
+      "url": "https://www.ycombinator.com/companies/shepherd-robotics",
+      "published_at": "2026-09-22",
+      "summary": "Robots for high skilled labor powering AI infrastructure. Shepherd Robotics builds general purpose robots for skilled physical work across AI infrastructure and advanced manufacturing. Our robots are powered by robot foundation models and use modular, flexible hardware designed to adapt to different environments and tasks. We train our systems on a combination of real world and simulation data so they can learn complex manipulation skills and generalize across workflows. We are starting with tasks such as data center construction and operations, cable and wire manufacturing, wire harness assembly, kitting, and factory packaging, where traditional automation struggles with variability, dexterity, and changing environments",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "robotics",
+        "manufacturing",
+        "hardware",
+        "automation",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Shepherd Robotics"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 4,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35521",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "ORO AI (F2026)",
+      "url": "https://www.ycombinator.com/companies/oro-ai",
+      "published_at": "2026-09-22",
+      "summary": "Continuously improving evals for agentic commerce. We're building the open benchmark for commerce. Builders submit shopping agents. Independent validators run them against problems that change daily. The best agent earns the rewards, and every run becomes training data",
+      "authors": [],
+      "tags": [
+        "crypto-web3",
+        "consumer-products",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "ORO AI"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "Vancouver, BC, Canada",
+        "status": "Active",
+        "github_url": "https://github.com/oro-ai",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:35850",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Dreamscale Labs (F2026)",
+      "url": "https://www.ycombinator.com/companies/dreamscale-labs",
+      "published_at": "2026-09-22",
+      "summary": "Running robot brains in the cloud. Dreamscale Labs is building the fastest cloud inference platform for robotics. As complex physical AI models become difficult to fit on expensive on-robot GPUs, we let users offload inference to the cloud and serve them with real-time latency. So far, we've hit 40-50% lower latency than existing neoclouds",
+      "authors": [],
+      "tags": [
+        "robotics",
+        "infrastructure",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Dreamscale Labs"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 4,
+        "location": "San Francisco",
+        "status": "Active",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:37203",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Volaren Inc. (F2026)",
+      "url": "https://www.ycombinator.com/companies/volaren-inc",
+      "published_at": "2026-09-22",
+      "summary": "Volaren collapses the hedge fund model and making it accessible to…. Every great investment starts as an idea about the world. Institutions have teams of analysts turning those ideas into positions. Volaren is that team, processing data through fundamentals and quantitative models that can be personalized with AI. Turn your views into trades, portfolios, and back-testable frameworks and strategies, and Volaren stays with you from there, showing you what's actually driving each position and what it means for your next move",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "fintech",
+        "creator-economy",
+        "marketplace",
+        "finance",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Volaren Inc."
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 4,
+        "location": "New York City",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:37273",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Frontrunner (F2026)",
+      "url": "https://www.ycombinator.com/companies/frontrunner",
+      "published_at": "2026-09-22",
+      "summary": "Cursor for GTM. Build agents that research accounts, find prospects, run campaigns, update your CRM, qualify inbound, and more. Connect them to the systems you already use and let them work alongside your GTM team. Engineer your revenue factory on Frontrunner",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "sales",
+        "marketing",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Frontrunner"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:37566",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "The Agentic Data Co. (F2026)",
+      "url": "https://www.ycombinator.com/companies/the-agentic-data-co",
+      "published_at": "2026-09-22",
+      "summary": "Training Data For Speech Models.. We design and collect audio datasets for training speech models",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "conversational-ai",
+        "ml",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "The Agentic Data Co."
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "https://github.com/The-Agentic-Data-Co",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:37600",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Redoubt Insurance (F2026)",
+      "url": "https://www.ycombinator.com/companies/redoubt-insurance",
+      "published_at": "2026-09-22",
+      "summary": "Commercial insurance for small businesses. Redoubt is a commercial insurance agency for small businesses. We believe our customers are our most important business partners, and they deserve our full attention. Machines can already handle the boring parts, the next step is to continually learn from experience",
+      "authors": [],
+      "tags": [
+        "insurance",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Redoubt Insurance"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 0,
+        "location": "Salt Lake City, UT, USA",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:37601",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Lark (F2026)",
+      "url": "https://www.ycombinator.com/companies/lark-2",
+      "published_at": "2026-09-22",
+      "summary": "Lark - Specialized agents for wholesale distributors. Lark builds specialized AI agents that automate manual workflows for wholesale distributors. Our agents work with existing ERP systems, learning from each distributor’s historical data and the team’s decisions. Together, these agents can run a distributor’s entire operation",
+      "authors": [],
+      "tags": [
+        "b2b",
+        "supply-chain",
+        "artificial-intelligence",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Lark"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:37995",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Sintropix (F2026)",
+      "url": "https://www.ycombinator.com/companies/sintropix",
+      "published_at": "2026-09-22",
+      "summary": "Autonomous accounting platform for global companies. Autonomous accounting platform for global companies. We close your books and give you financial clarity while you run your business",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "fintech",
+        "b2b",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Sintropix"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "F2026",
+        "team_size": 2,
+        "location": "Santiago, Santiago Metropolitan Region, Chile",
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed"
+      }
+    },
+    {
+      "id": "yc-company:662",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Checkr (S2014)",
+      "url": "https://www.ycombinator.com/companies/checkr",
+      "published_at": "2026-09-22",
+      "summary": "People infrastructure for the future of work. Checkr builds people infrastructure for the future of work. And we believe everyone should have a fair chance to work. That's why we've designed a faster—and fairer—way to screen job seekers. For more information on our mission and products, visit https://checkr.com",
+      "authors": [],
+      "tags": [
+        "compliance",
+        "enterprise-software",
+        "api",
+        "hr-tech",
+        "artificial-intelligence",
+        "yc-batch:s2014"
+      ],
+      "projects": [
+        "Checkr"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "batch": "S2014",
+        "team_size": 800,
+        "location": "San Francisco",
+        "status": "Active",
+        "github_url": "https://github.com/checkr",
+        "date_basis": "first-observed"
+      }
+    },
+    {
       "id": "huggingface-blog:689d78c6e007ab8e2c4f",
       "source_id": "huggingface-blog",
       "source_type": "first-party-lab",
@@ -4752,6 +5407,28 @@
       "commercial_bias": "mixed",
       "homepage_url": "https://news.ycombinator.com/",
       "logo_url": "https://news.ycombinator.com/y18.svg"
+    },
+    {
+      "id": "yc-companies",
+      "name": "Y Combinator AI companies",
+      "channel": "company-directory",
+      "source_quality": "high",
+      "commercial_bias": "first-party-directory",
+      "publisher_id": "y-combinator",
+      "evidence_role": "company-formation",
+      "homepage_url": "https://www.ycombinator.com/companies/industry/artificial-intelligence",
+      "logo_url": "https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico"
+    },
+    {
+      "id": "yc-jobs",
+      "name": "Y Combinator startup jobs",
+      "channel": "job-posting",
+      "source_quality": "high",
+      "commercial_bias": "first-party-job-board",
+      "publisher_id": "y-combinator",
+      "evidence_role": "hiring-intent",
+      "homepage_url": "https://www.ycombinator.com/jobs/role/all",
+      "logo_url": "https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico"
     },
     {
       "id": "openai-news",
