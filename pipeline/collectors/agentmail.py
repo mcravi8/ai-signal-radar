@@ -203,7 +203,8 @@ def _overlap_after(value: str | None) -> str | None:
     if not value:
         return None
     parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    return (parsed - timedelta(minutes=5)).isoformat()
+    overlapped = (parsed - timedelta(minutes=5)).astimezone(timezone.utc)
+    return overlapped.isoformat(timespec="milliseconds").replace("+00:00", "Z")
 
 
 def parse_alphasignal(message: dict[str, Any], definition: NewsletterDefinition) -> list[SourceItem]:

@@ -92,11 +92,22 @@ class AgentMailCollectorTests(unittest.TestCase):
             after="2026-09-21T00:00:00Z",
             client=client,
         )
-        self.assertEqual(client.list_call, ("radar@agentmail.to", "2026-09-20T23:55:00+00:00"))
+        self.assertEqual(client.list_call, ("radar@agentmail.to", "2026-09-20T23:55:00.000Z"))
         self.assertEqual(result.messages_seen, 2)
         self.assertEqual(result.messages_matched, 1)
         self.assertEqual(len(result.items), 2)
         self.assertEqual(result.next_after, "2026-09-28T13:00:00Z")
+
+    def test_incremental_cursor_is_normalized_to_agentmail_utc_format(self):
+        client = FakeClient()
+        collect(
+            "unused-test-key",
+            "radar@agentmail.to",
+            [DEFINITION],
+            after="2026-09-22T15:32:33.000+00:00",
+            client=client,
+        )
+        self.assertEqual(client.list_call, ("radar@agentmail.to", "2026-09-22T15:27:33.000Z"))
 
     def test_cursor_contains_only_public_safe_timestamps(self):
         with tempfile.TemporaryDirectory() as directory:
