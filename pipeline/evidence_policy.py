@@ -104,6 +104,12 @@ def validate_calibration(
             raise ValueError(f"Invalid concentration in {case_id}")
 
         gate_inputs = case.get("gate_inputs", {})
+        has_counterevidence = any(
+            link.get("relationship") == "counterevidence"
+            for link in case.get("evidence_links", [])
+        )
+        if gate_inputs.get("counterevidence_reviewed") and not has_counterevidence:
+            raise ValueError(f"Counterevidence review requires a linked counterevidence record in {case_id}")
         if assessments["concentration"] == "high" and assessments["evidence_independence"] != "low":
             raise ValueError(f"High concentration must cap evidence independence at low in {case_id}")
         if assessments["concentration"] == "high" and assessments["confidence"] == "high":

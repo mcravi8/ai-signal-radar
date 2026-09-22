@@ -164,3 +164,200 @@ cases:
       - Customer or operator reports with attributable pipeline, revenue, or cycle-time outcomes.
       - Independent technical descriptions of the closed-loop system and its controls.
       - Evidence from publishers unrelated to the investor announcements.
+
+  - id: modular-agent-operating-stack
+    requirement: AI systems should separate models, orchestration, reusable skills, execution environments, and assurance controls into replaceable operating layers.
+    source_analysis: early-signal-tracker/modular-agent-stack
+    evidence_links:
+      - evidence_id: aws-machine-learning-blog:5d4f323bd0d514800a8a
+        event_id: wood-mackenzie-apex-platform
+        relationship: direct-support
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: aws-machine-learning-blog:2335ca1a4875d9c28b23
+        event_id: benchling-agentcore-isolation
+        relationship: direct-support
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: arxiv:2609.20519v1
+        event_id: sol-pi-agent-harness
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: hf-paper:2609.20519
+        event_id: sol-pi-agent-harness
+        relationship: discovery-only
+        dimensions: []
+      - evidence_id: arxiv:2609.20474v1
+        event_id: harness-value-experiments
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: github:1365776373
+        event_id: dscode-agent-harness
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: alphasignal:trend:skills-plugins-mcp-and-harnesses
+        event_id: alphasignal-modular-stack-synthesis
+        relationship: supporting-context
+        dimensions: [market_pull]
+      - evidence_id: greylock-essays:aacd57b6bec14e3c9da1
+        event_id: rogue-agent-runtime-narrative
+        relationship: supporting-context
+        dimensions: [operational_adoption, market_pull]
+      - evidence_id: hn:49779329
+        event_id: mcp-complexity-critique
+        relationship: counterevidence
+        dimensions: [technical_reality, operational_adoption]
+    assessments:
+      technical_reality: strong
+      operational_adoption: moderate
+      market_pull: moderate
+      evidence_independence: moderate
+      concentration: moderate
+      confidence: moderate
+    gate_inputs:
+      qualifying_events: 5
+      technical_artifacts: 5
+      independent_organizations: 4
+      persistence_cycles: 3
+      counterevidence_reviewed: true
+      cost_of_absence_evidenced: false
+      practical_minimum_available: true
+    expected_maturity: emerging
+    rationale: >-
+      Independent technical artifacts show that harness, skill, execution, and
+      assurance components can be separated, while Wood Mackenzie and Benchling
+      provide two detailed production deployments. Operational evidence is still
+      concentrated in AWS-published case studies, so adoption and independence do
+      not yet qualify as strong.
+    evidence_gaps:
+      - Production accounts published outside a single infrastructure vendor's channel.
+      - Comparative evidence on when modular interfaces reduce switching cost enough to offset orchestration complexity.
+      - Longer persistence showing that interfaces remain portable as models and runtimes change.
+
+  - id: shared-operational-context
+    requirement: AI systems operating across organizational data should use a shared semantic and operational context layer instead of rebuilding retrieval and schemas for every workflow.
+    source_analysis: early-signal-tracker/operational-context
+    evidence_links:
+      - evidence_id: arxiv:2609.20754v1
+        event_id: raft-stateful-troubleshooting
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: github:1370752473
+        event_id: evoontology
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: hf-paper:2609.15779
+        event_id: evoontology
+        relationship: discovery-only
+        dimensions: []
+      - evidence_id: github:840056306
+        event_id: graphiti-realtime-agent-graph
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: github:679343504
+        event_id: cognee-agent-memory-graph
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: github:778431525
+        event_id: microsoft-graphrag
+        relationship: supporting-context
+        dimensions: [technical_reality]
+      - evidence_id: alphasignal:project:wrenai
+        event_id: wrenai-semantic-layer
+        relationship: supporting-context
+        dimensions: [operational_adoption, market_pull]
+      - evidence_id: alphasignal:trend:documents-retrieval-and-structured-data
+        event_id: alphasignal-structured-context-synthesis
+        relationship: supporting-context
+        dimensions: [market_pull]
+      - evidence_id: arxiv:2609.21667v1
+        event_id: archival-publication-knowledge-graph
+        relationship: excluded
+        dimensions: []
+        exclusion_reason: The paper links scholarly publications to archived code; it does not demonstrate a shared operational context layer for AI workflows.
+    assessments:
+      technical_reality: strong
+      operational_adoption: low
+      market_pull: low
+      evidence_independence: moderate
+      concentration: moderate
+      confidence: moderate
+    gate_inputs:
+      qualifying_events: 4
+      technical_artifacts: 4
+      independent_organizations: 4
+      persistence_cycles: 2
+      counterevidence_reviewed: false
+      cost_of_absence_evidenced: false
+      practical_minimum_available: true
+    expected_maturity: experimental
+    rationale: >-
+      Stateful retrieval, evolving ontologies, real-time agent graphs, and persistent
+      graph memory make the shared-context pattern technically credible. The corpus
+      does not yet show two independent organizations using one context layer across
+      multiple production workflows with measured outcomes.
+    evidence_gaps:
+      - Production case studies spanning multiple agents or workflows over the same governed context layer.
+      - Measurements of maintenance cost, permission correctness, freshness, and task success versus workflow-specific RAG.
+      - Counterevidence from simpler retrieval systems that achieve comparable outcomes without a shared ontology.
+
+  - id: bounded-workflow-ownership
+    requirement: AI products should own bounded workflows with explicit completion states, exception routing, and outcome metrics.
+    source_analysis: operator-narratives/workflow-ownership
+    evidence_links:
+      - evidence_id: sequoia-essays:afde56cfaaeb81f69523
+        event_id: sable-ai-employee-investment
+        relationship: direct-support
+        dimensions: [market_pull]
+      - evidence_id: sequoia-essays:775cb9638e7b090ad2d9
+        event_id: probook-trades-automation-investment
+        relationship: direct-support
+        dimensions: [market_pull]
+      - evidence_id: github:1355117708
+        event_id: open-source-ai-employees
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: alphasignal:trend:enterprise-and-vertical-ai
+        event_id: alphasignal-enterprise-ai-synthesis
+        relationship: supporting-context
+        dimensions: [market_pull]
+      - evidence_id: greylock-essays:aacd57b6bec14e3c9da1
+        event_id: rogue-agent-runtime-narrative
+        relationship: supporting-context
+        dimensions: [operational_adoption]
+      - evidence_id: openai-news:333ccaae81484d3a4e17
+        event_id: openai-computer-use-capability
+        relationship: discovery-only
+        dimensions: []
+      - evidence_id: deepmind-blog:172fd12b4fe6c6e04c47
+        event_id: deepmind-computer-use-capability
+        relationship: discovery-only
+        dimensions: []
+      - evidence_id: greylock-essays:da9d5e408f534282b985
+        event_id: oak-identity-operating-system
+        relationship: excluded
+        dimensions: []
+        exclusion_reason: The product framing concerns identity governance and does not establish bounded end-to-end workflow ownership.
+    assessments:
+      technical_reality: low
+      operational_adoption: low
+      market_pull: moderate
+      evidence_independence: low
+      concentration: moderate
+      confidence: low
+    gate_inputs:
+      qualifying_events: 3
+      technical_artifacts: 1
+      independent_organizations: 3
+      persistence_cycles: 2
+      counterevidence_reviewed: false
+      cost_of_absence_evidenced: false
+      practical_minimum_available: false
+    expected_maturity: narrative
+    rationale: >-
+      Company formation, investment, and one open-source implementation show that
+      workflow ownership is a real product narrative. The evidence does not yet
+      demonstrate reliable completion, exception handling, or attributable business
+      outcomes in independent production environments.
+    evidence_gaps:
+      - Customer-controlled measurements of completed work, intervention rate, error cost, and business outcome.
+      - Technical implementations with explicit completion checks, exception routing, and systems-of-record writes.
+      - Counterevidence about workflows where assistance remains safer or more economical than autonomous ownership.

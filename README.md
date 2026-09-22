@@ -70,13 +70,13 @@ The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only 
 
 `config/evidence-policy.yml` defines the formal evidence contract used to decide whether a proposed startup operating requirement is merely a `narrative`, is `experimental`, or has matured to `emerging`, `established`, or `baseline`. Each judgment reports technical reality, operational adoption, market pull, and evidence independence as `N/O`, `Low`, `Moderate`, or `Strong`. Maturity is gate-based: attention or a weighted score cannot compensate for missing operational proof.
 
-Three adjudicated cases in `config/evidence-policy-calibration.yml` test the rules against real Radar evidence. Run the calibration with:
+Six adjudicated cases in `config/evidence-policy-calibration.yml` test the rules against real Radar evidence. Run the calibration with:
 
 ```bash
 python -m pipeline.cli calibrate-evidence
 ```
 
-The current calibration rates evaluation/release gates and heterogeneous model routing as `experimental`, and AI-native GTM systems as `narrative`. The readable audit is in [reports/calibration/evidence-policy-2026-09-22.md](reports/calibration/evidence-policy-2026-09-22.md).
+The current calibration rates the modular agent operating stack as `emerging`; evaluation/release gates, heterogeneous model routing, and shared operational context as `experimental`; and AI-native GTM and bounded workflow ownership as `narrative`. The readable audit is in [reports/calibration/evidence-policy-2026-09-22.md](reports/calibration/evidence-policy-2026-09-22.md).
 
 ## Cross-source contract
 

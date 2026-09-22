@@ -30,6 +30,9 @@ class EvidencePolicyTests(unittest.TestCase):
         self.assertEqual(self.results["evaluation-release-gates"]["maturity"], "experimental")
         self.assertEqual(self.results["heterogeneous-model-routing"]["maturity"], "experimental")
         self.assertEqual(self.results["ai-native-gtm"]["maturity"], "narrative")
+        self.assertEqual(self.results["modular-agent-operating-stack"]["maturity"], "emerging")
+        self.assertEqual(self.results["shared-operational-context"]["maturity"], "experimental")
+        self.assertEqual(self.results["bounded-workflow-ownership"]["maturity"], "narrative")
         self.assertTrue(all(result["matches_expected"] for result in self.results.values()))
 
     def test_operational_proof_blocks_premature_promotion(self):
@@ -48,6 +51,23 @@ class EvidencePolicyTests(unittest.TestCase):
         excluded = [link for link in routing_case["evidence_links"] if link["relationship"] == "excluded"]
         self.assertEqual([link["evidence_id"] for link in excluded], ["arxiv:2609.21774v1"])
         self.assertTrue(excluded[0]["exclusion_reason"])
+
+    def test_modular_stack_is_the_only_emerging_requirement(self):
+        emerging = [result["id"] for result in self.results.values() if result["maturity"] == "emerging"]
+        self.assertEqual(emerging, ["modular-agent-operating-stack"])
+        modular = self.results["modular-agent-operating-stack"]
+        self.assertFalse(modular["gate_results"]["established"]["passed"])
+        self.assertIn(
+            "operational_adoption is moderate; requires strong",
+            modular["gate_results"]["established"]["failures"],
+        )
+
+    def test_counterevidence_review_has_an_explicit_record(self):
+        modular_case = next(
+            case for case in self.calibration["cases"] if case["id"] == "modular-agent-operating-stack"
+        )
+        self.assertTrue(modular_case["gate_inputs"]["counterevidence_reviewed"])
+        self.assertTrue(any(link["relationship"] == "counterevidence" for link in modular_case["evidence_links"]))
 
 
 if __name__ == "__main__":
