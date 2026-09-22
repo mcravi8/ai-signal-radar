@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-22T20:40:29.209652+00:00",
+    "generated_at": "2026-09-22T20:42:17.560017+00:00",
     "status": "success",
-    "source_count": 35,
-    "evidence_count": 1645,
+    "source_count": 36,
+    "evidence_count": 1666,
     "warnings": []
   },
   "weekly": {
@@ -236,13 +236,14 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 85,
+      "evidence_count": 86,
       "source_types": [
         "community",
         "curated-newsletter",
         "expert-newsletter",
         "expert-social",
         "first-party-lab",
+        "newsletter",
         "paper",
         "paper-curation",
         "repository"
@@ -295,7 +296,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 153,
+      "evidence_count": 155,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -303,6 +304,7 @@
         "expert-social",
         "first-party-lab",
         "investor-essay",
+        "newsletter",
         "paper",
         "paper-curation",
         "practitioner-blog",
@@ -329,13 +331,14 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 54,
+      "evidence_count": 56,
       "source_types": [
         "community",
         "curated-newsletter",
         "expert-social",
         "first-party-lab",
         "investor-essay",
+        "newsletter",
         "paper",
         "paper-curation",
         "practitioner-blog",
@@ -388,11 +391,12 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 41,
+      "evidence_count": 42,
       "source_types": [
         "curated-newsletter",
         "expert-social",
         "investor-essay",
+        "newsletter",
         "paper",
         "paper-curation",
         "practitioner-blog",
@@ -612,344 +616,6 @@
     }
   ],
   "evidence": [
-    {
-      "id": "hn:49783692",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Simple and Efficient Row-Level Security",
-      "url": "https://acadia.engineering/blog/simple-and-efficient-row-level-security",
-      "published_at": "2026-09-21T06:27:40+00:00",
-      "summary": "",
-      "authors": [
-        "mfru"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783693",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Software Optimization Resources",
-      "url": "https://agner.org/optimize/",
-      "published_at": "2026-09-21T06:27:56+00:00",
-      "summary": "",
-      "authors": [
-        "andsoitis"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783694",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Models Watching Models",
-      "url": "https://www.southbridge.ai/blog/jev-watching-the-agents",
-      "published_at": "2026-09-21T06:28:19+00:00",
-      "summary": "",
-      "authors": [
-        "tosh"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783697",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Publications on Regality theory and cultural selection theory",
-      "url": "https://agner.org/cultsel/",
-      "published_at": "2026-09-21T06:28:32+00:00",
-      "summary": "",
-      "authors": [
-        "andsoitis"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783709",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Should you trust Al to deliver financial advice?",
-      "url": "https://www.saturnos.com/report/artificial-authority",
-      "published_at": "2026-09-21T06:31:04+00:00",
-      "summary": "",
-      "authors": [
-        "7777777phil"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783710",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "North Korean Hackers Posed as Recruiters.They Infected 30k Devices Worldwide",
-      "url": "https://www.inc.com/kevin-haynes/north-korean-hackers-posed-as-recruiters-infected-30000-devices-worldwide/91408222",
-      "published_at": "2026-09-21T06:31:09+00:00",
-      "summary": "",
-      "authors": [
-        "jnord"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783713",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Thoughts on a Typesafe Coding Agent",
-      "url": "https://docs.google.com/document/d/1G61uUB0FifUnmmrPzFQojZ3KpczYKmXGpgEXDJ2l_Zg/preview?pli=1&pru=AAABoOa1xL0*os6I2UIbeYVjT_MdKrbS1w&tab=t.0#",
-      "published_at": "2026-09-21T06:31:35+00:00",
-      "summary": "",
-      "authors": [
-        "tosh"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ]
-    },
-    {
-      "id": "hn:49783793",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Do Artifacts Have Politics? (1980)",
-      "url": "https://www.jstor.org/stable/20024652?seq=1",
-      "published_at": "2026-09-21T06:41:50+00:00",
-      "summary": "",
-      "authors": [
-        "shinryuu"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783806",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Replacing an agentic classification loop with Jev: 7x faster",
-      "url": "https://blog.r6i.it/typesafe-jev-vs-agentic-loop.html",
-      "published_at": "2026-09-21T06:43:14+00:00",
-      "summary": "",
-      "authors": [
-        "sammy_rulez"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49783809",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Shopify CEO says employees' `slop grenades` making more work for everyone else",
-      "url": "https://fortune.com/2026/09/17/shopify-tobias-lutke-ai-slop-grenades/",
-      "published_at": "2026-09-21T06:43:40+00:00",
-      "summary": "",
-      "authors": [
-        "theanonymousone"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783816",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Rosenbjerg/local-review: Minimal webapp for local code review of branches",
-      "url": "https://github.com/rosenbjerg/local-review",
-      "published_at": "2026-09-21T06:44:58+00:00",
-      "summary": "",
-      "authors": [
-        "bhubert"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783849",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Raspberry Pi 5 EEPROM update now blocks manual RAM upgrades",
-      "url": "https://www.reddit.com/r/selfhosted/comments/1wkxjwg/raspberry_pi_5_eeprom_update_now_blocks_manual/",
-      "published_at": "2026-09-21T06:50:15+00:00",
-      "summary": "",
-      "authors": [
-        "csmantle"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783865",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: My recent show HN post got flagged need guidance",
-      "url": "https://news.ycombinator.com/item?id=49783865",
-      "published_at": "2026-09-21T06:53:28+00:00",
-      "summary": "hi recently i shared my work which is an opensource platform i made and yesterday i shared its details and its repo link on hackernews under show hn it gained good traffic reaching 16 points under 1 hour but got flagged now i need help understanding why this happened and how can i unflag it or how i can share my work with HN community",
-      "authors": [
-        "theguysudo"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783880",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "WWYD with 10k engineers and unlimited compute?",
-      "url": "https://www.reddit.com/r/NoemaSI/comments/1wm4yme/what_would_you_do_with_10k_engineers_and/",
-      "published_at": "2026-09-21T06:54:30+00:00",
-      "summary": "",
-      "authors": [
-        "chrisMyzel"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783918",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Socrates on the Invention of Writing and the Relationship of Writing to Memory",
-      "url": "https://www.historyofinformation.com/detail.php?id=3439",
-      "published_at": "2026-09-21T06:59:21+00:00",
-      "summary": "",
-      "authors": [
-        "Bluestein"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "openai-news:2f8d9b98fc157bb338d3",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "Expanding OpenAI Academy with new learning paths",
-      "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
-      "published_at": "2026-09-21T07:00:00+00:00",
-      "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783925",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "The Vasari Graph",
-      "url": "https://medium.com/counterarts/the-vasari-graph-89cc69ea54ce",
-      "published_at": "2026-09-21T07:00:14+00:00",
-      "summary": "",
-      "authors": [
-        "cadeos"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783932",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Sublime Text Build 4213",
-      "url": "https://www.sublimetext.com/blog/articles/sublime-text-4213",
-      "published_at": "2026-09-21T07:01:38+00:00",
-      "summary": "",
-      "authors": [
-        "konz"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783941",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Where Do Chatbots Come From? What I Wish Everyone Knew About AI in 2026",
-      "url": "https://www.lesswrong.com/posts/dww6cpbo2XoKbsxyw/where-do-chatbots-come-from-what-i-wish-everyone-knew-about",
-      "published_at": "2026-09-21T07:02:32+00:00",
-      "summary": "",
-      "authors": [
-        "joozio"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783949",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "One researcher published the 'System 1 AI' idea in 2025",
-      "url": "https://www.youtube.com/watch?v=fyx7xz-vtMY",
-      "published_at": "2026-09-21T07:03:29+00:00",
-      "summary": "",
-      "authors": [
-        "frag"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49783978",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "State of Engineering Is Horribleium",
-      "url": "https://twitter.com/v0xium/status/2101526107128529120",
-      "published_at": "2026-09-21T07:08:12+00:00",
-      "summary": "",
-      "authors": [
-        "abrbhat"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
     {
       "id": "hn:49783990",
       "source_id": "hacker-news",
@@ -4703,6 +4369,349 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mw4btfedmg2y",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "title": "From @timnitgebru.blacksky.app and me on what we should take from the 2026 summer of AI hype: www.technologyreview.com/2026/09/22/1...",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mw4btfedmg2y",
+      "published_at": "2026-09-22T13:00:16.276Z",
+      "summary": "",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:e810fac7fd93:3mw4dzm7j7u2q",
+      "source_id": "bluesky-nathan-lambert",
+      "source_type": "expert-social",
+      "title": "Debating RSI, the US-China Gap, and Jaggedness with JS Denain of Epoch AI Podcast #19 Substack: www.interconnects.ai/p/debating-r... YouTube: youtu.be/mE0__1EfVxw?...",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mw4dzm7j7u2q",
+      "published_at": "2026-09-22T13:39:31.575Z",
+      "summary": "",
+      "authors": [
+        "Nathan Lambert"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mw4in3uyx226",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "For all the tension between AI and the arts, I have received enthusiastic receptions from the William Carlos Williams Society, the TS Eliot Society, and others about the AI interpretations of their...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw4in3uyx226",
+      "published_at": "2026-09-22T15:02:01.349Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw4jgfjqzk2z",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Hey Claude, what's up?",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw4jgfjqzk2z",
+      "published_at": "2026-09-22T15:16:10.327Z",
+      "summary": "Claude, how's my poop? www.kohler.com/en/products/...",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw4k4igwxc2z",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Trump tells the UN he is officially changing the name of Artificial Intelligence to \"Super Intelligence\" and says all US government documents will now be changed to refer to \"SI\"",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw4k4igwxc2z",
+      "published_at": "2026-09-22T15:28:31.577Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:1454af9586eaae4c2d8c",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Google rebuilds Kubernetes from scratch to run stateful AI agents",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:15d47f7fa52c1499f11e",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Y o u ' v e a d o p t e d A I . W h o ' s g o v e r n i n g i t ?",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:2b1feaa89cfde858d3b9",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "xAI ships Grok 4.7 with stronger reasoning and safety at the same price",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:46d0001edf2628fce6c2",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Qwen-Image-2.1 gets GGUF quantization for uncensored local image generation",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "multimodal-3d",
+        "open-local-inference"
+      ]
+    },
+    {
+      "id": "alphasignal:5fac7cf4af69b9bdfe97",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Nimble open-source AI search model matches closed API-only rival",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:82e85d9bb7da8782f712",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Qwen releases real-time translation model covering 60 languages with 0.5s faster lag",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:878cd92f8396df643edb",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Talking AI agents beat solo agents 4-to-1 on hard reasoning tasks",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:99ef41ba3a38c48b2cad",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Prior Labs: Your strongest baseline deserves a challenger. Run TabPFN-3.5 against the model you trust & compare using your own data",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:a0dafd2406b26182a588",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "GPT-6 pushed a simulated person off a ledge where Grok, Gemini, and Claude refused",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:cec6f55c7deff2c8dfc5",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Xiaomi turns open-source code into RL training data , boosting coding agents across five benchmarks",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "coding-agents",
+        "training-self-improvement"
+      ]
+    },
+    {
+      "id": "alphasignal:e15b8b8bb38c36aac506",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Your strongest baseline deserves a challenger. Run TabPFN-3.5 against the model you trust & compare using your own data",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:ed11042f47b8f05c3ace",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Xiaomi turns open-source code into RL training data, boosting coding agents across five benchmarks",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "coding-agents",
+        "training-self-improvement"
+      ]
+    },
+    {
+      "id": "alphasignal:f589934827be4c010ca7",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "G o o g l e C l o u d ' s E n t e r p r i s e A I A g e n t A r c h i t e c t u r e",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw4ndprwy22g",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Don't want to brag, but Claude told it was right for me to push.",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw4ndprwy22g",
+      "published_at": "2026-09-22T16:26:15.385Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw4nfn76oc2g",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Really surprised he didn't insist on renaming AI to the \"Gulf of American Intelligence\"",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw4nfn76oc2g",
+      "published_at": "2026-09-22T16:27:19.782Z",
+      "summary": "lol ok thehill.com/homenews/adm...",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mw4ssgedys2j",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "Opus 5.5 was a good model in my early use tests, it is the first non-Fable/Astra model to feel like a Fable-class model, and much cheaper, but still hasn't fully solved the dense/weird language iss...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw4ssgedys2j",
+      "published_at": "2026-09-22T18:03:57.527Z",
+      "summary": "Here is Fable 5.1's shader: \"create a visually interesting shader that can run in twigl, make it like an infinite city of neo-gothic towers partially drowned...",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
       "theme_ids": []
     }
   ],

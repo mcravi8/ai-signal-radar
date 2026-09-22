@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-22T20:40:29.209652+00:00",
+    "generated_at": "2026-09-22T20:42:17.560017+00:00",
     "status": "success",
-    "normalized_evidence_count": 1680,
-    "public_record_count": 1645,
+    "normalized_evidence_count": 1701,
+    "public_record_count": 1666,
     "active_source_count": 36,
     "theme_count": 20,
     "observed_theme_count": 20,
@@ -12,7 +12,7 @@
     "reviewed_project_count": 25,
     "queued_project_count": 25,
     "discovered_project_count": 208,
-    "classification_coverage": 0.32,
+    "classification_coverage": 0.318,
     "recent_source_count": 29,
     "model": "Every source is normalized into the same evidence contract. Source-specific analyses remain inspectable but do not define the global navigation."
   },
@@ -29,10 +29,10 @@
         "arxiv",
         "simon-willison",
         "huggingface-papers",
+        "alphasignal",
         "bluesky-nathan-lambert",
         "bluesky-ethan-mollick",
         "greylock-essays",
-        "alphasignal",
         "huggingface-blog",
         "nvidia-developer-blog",
         "openai-news",
@@ -45,24 +45,24 @@
         "the-batch",
         "bluesky-melanie-mitchell",
         "latent-space",
+        "bluesky-mark-riedl",
         "aws-machine-learning-blog",
         "cloudflare-ai-blog",
         "import-ai",
         "interconnects",
         "last-week-in-ai",
-        "bluesky-mark-riedl",
         "yc-essays",
         "bluesky-margaret-mitchell",
+        "bluesky-emily-bender",
         "radical-ventures",
         "chip-huyen",
-        "bluesky-emily-bender",
         "menlo-ventures",
         "microsoft-research-blog",
         "bluesky-arvind-narayanan",
         "bluesky-karpathy"
       ],
-      "evidence_count": 1680,
-      "updated_at": "2026-09-22T20:40:29.209652+00:00"
+      "evidence_count": 1701,
+      "updated_at": "2026-09-22T20:42:17.560017+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -84,6 +84,7 @@
       "summary": "Continuously collected public metadata, first-party claims, expert interpretation, and curated roundups classified with the same taxonomy as the newsletter research.",
       "status": "success",
       "source_ids": [
+        "alphasignal",
         "anthropic-news-research",
         "arxiv",
         "aws-machine-learning-blog",
@@ -120,8 +121,8 @@
         "the-batch",
         "yc-essays"
       ],
-      "evidence_count": 1645,
-      "updated_at": "2026-09-22T20:40:29.209652+00:00"
+      "evidence_count": 1666,
+      "updated_at": "2026-09-22T20:42:17.560017+00:00"
     },
     {
       "id": "early-signal-tracker",
@@ -142,7 +143,7 @@
         "radical-ventures",
         "the-batch"
       ],
-      "evidence_count": 29,
+      "evidence_count": 30,
       "direction_count": 6,
       "directions": [
         {
@@ -490,9 +491,9 @@
           "previous_stage": "emerging",
           "stage_changed": true,
           "confidence": "strong",
-          "state_reason": "3 evidence families, including 2 technical families, across 5 sources in the trailing 90 days; 9 records were published in the latest 30 days.",
+          "state_reason": "3 evidence families, including 2 technical families, across 5 sources in the trailing 90 days; 11 records were published in the latest 30 days.",
           "window_days": 90,
-          "evidence_count": 9,
+          "evidence_count": 11,
           "source_ids": [
             "alphasignal",
             "arxiv",
@@ -510,7 +511,7 @@
                 "the-batch"
               ],
               "source_count": 2,
-              "evidence_count": 2
+              "evidence_count": 4
             },
             {
               "id": "research",
@@ -536,7 +537,7 @@
           "technical_family_count": 2,
           "active_periods": 1,
           "first_observed": "2024-07-23",
-          "last_observed": "2026-09-21",
+          "last_observed": "2026-09-22",
           "origin": {
             "evidence_id": "hf-paper:2407.16741",
             "source_id": "huggingface-papers",
@@ -597,27 +598,27 @@
             {
               "as_of": "2026-09-22",
               "stage": "corroborating",
-              "evidence_count": 9,
+              "evidence_count": 11,
               "source_count": 5,
               "family_count": 3
             }
           ],
           "evidence_ids": [
-            "alphasignal:trend:validation-and-release-bottlenecks",
+            "alphasignal:ed11042f47b8f05c3ace",
             "arxiv:2609.22068v1",
             "github:1370498337",
             "hf-paper:2609.14858",
             "the-batch:2622ee409c0a925f8cee",
-            "arxiv:2609.21841v1",
-            "arxiv:2609.20625v1",
-            "arxiv:2609.16305"
+            "alphasignal:cec6f55c7deff2c8dfc5",
+            "alphasignal:trend:validation-and-release-bottlenecks",
+            "arxiv:2609.21841v1"
           ],
           "movement": "accelerating",
-          "movement_explanation": "Supporting records increased from 2 to 7 versus the preceding 14 days.",
+          "movement_explanation": "Supporting records increased from 2 to 9 versus the preceding 14 days.",
           "comparison_days": 14,
-          "current_evidence_count": 7,
+          "current_evidence_count": 9,
           "previous_evidence_count": 2,
-          "evidence_change": 5
+          "evidence_change": 7
         },
         {
           "id": "operational-context",
@@ -1024,7 +1025,7 @@
           "fading": "Historical or trailing-window support exists, but no supporting evidence appeared in the latest 30 days."
         }
       },
-      "updated_at": "2026-09-22T20:40:29.209652+00:00"
+      "updated_at": "2026-09-22T20:42:17.560017+00:00"
     },
     {
       "id": "expert-pulse",
@@ -1045,7 +1046,7 @@
         "simon-willison"
       ],
       "evidence_count": 31,
-      "corpus_count": 188,
+      "corpus_count": 196,
       "evidence_ids": [
         "bluesky:e14dee24058c:3lbe443vxms2y",
         "bluesky:2a5707251144:3mkbfcbtlbs2n",
@@ -1280,7 +1281,7 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-09-22T20:40:29.209652+00:00"
+      "updated_at": "2026-09-22T20:42:17.560017+00:00"
     },
     {
       "id": "operator-narratives",
@@ -1393,7 +1394,7 @@
           "strength": "strong",
           "label": "Corroborated infrastructure thesis",
           "title": "The coding-agent opportunity is shifting below the assistant interface",
-          "analysis": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 83.9 and appears across 13 radar sources.",
+          "analysis": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 84.3 and appears across 13 radar sources.",
           "why_it_matters": "The durable layer may be the context, execution environment, verification, and operational control that lets agents finish real work—not another chat surface around a frontier model.",
           "workflow_opportunity": "Prototype a repository task runner that provisions an isolated environment, assembles relevant context, executes the agent, tests the result, and presents a reviewable change with traces and rollback.",
           "caveat": "The evidence mixes coding, implementation, research, and operations. Their shared infrastructure needs are clearer than a single winning product category.",
@@ -1597,7 +1598,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-22T20:40:29.209652+00:00"
+      "updated_at": "2026-09-22T20:42:17.560017+00:00"
     },
     {
       "id": "project-opportunities",
@@ -1620,14 +1621,14 @@
     "as_of": "2026-09-22",
     "window_start": "2026-09-15",
     "previous_window_start": "2026-09-08",
-    "new_public_records": 723,
+    "new_public_records": 744,
     "movements": [
       {
         "theme_id": "training-self-improvement",
         "name": "Training, evaluation & self-improvement",
-        "recent": 66,
+        "recent": 68,
         "prior": 12,
-        "delta": 54,
+        "delta": 56,
         "direction": "rising"
       },
       {
@@ -1641,25 +1642,25 @@
       {
         "theme_id": "open-local-inference",
         "name": "Open, local & efficient inference",
-        "recent": 20,
+        "recent": 21,
         "prior": 27,
-        "delta": -7,
+        "delta": -6,
         "direction": "steady"
       },
       {
         "theme_id": "coding-agents",
         "name": "Coding agents & developer tooling",
-        "recent": 18,
+        "recent": 20,
         "prior": 4,
-        "delta": 14,
+        "delta": 16,
         "direction": "rising"
       },
       {
         "theme_id": "multimodal-3d",
         "name": "Multimodal generation & 3D",
-        "recent": 14,
+        "recent": 15,
         "prior": 3,
-        "delta": 11,
+        "delta": 12,
         "direction": "rising"
       },
       {
@@ -1719,14 +1720,14 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
-      "evidence_count": 155,
-      "support_units": 303,
+      "evidence_count": 157,
+      "support_units": 305,
       "source_count": 25,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
-          "observations": 2,
-          "support_units": 150
+          "observations": 4,
+          "support_units": 152
         },
         {
           "source_id": "arxiv",
@@ -1855,7 +1856,7 @@
         "2026-06": 22,
         "2026-07": 21,
         "2026-08": 47,
-        "2026-09": 117
+        "2026-09": 119
       },
       "source_concentration": 0.5,
       "maturity": "broadly-corroborated",
@@ -1867,6 +1868,8 @@
         "total": 100.0
       },
       "evidence_ids": [
+        "alphasignal:ed11042f47b8f05c3ace",
+        "alphasignal:cec6f55c7deff2c8dfc5",
         "hn:49791343",
         "hn:49788178",
         "hn:49786635",
@@ -2206,6 +2209,166 @@
       ]
     },
     {
+      "id": "coding-agents",
+      "name": "Coding agents & developer tooling",
+      "definition": "AI systems that search repositories, write and review code, run tools, validate changes, and participate in software delivery.",
+      "aliases": [
+        "coding agent",
+        "software engineering agent",
+        "repository agent",
+        "code generation"
+      ],
+      "primary_layer": "harness-orchestration",
+      "secondary_layer": "tools-skills-integrations",
+      "evidence_count": 58,
+      "support_units": 233,
+      "source_count": 13,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "observations": 4,
+          "support_units": 179
+        },
+        {
+          "source_id": "github",
+          "observations": 17,
+          "support_units": 17
+        },
+        {
+          "source_id": "arxiv",
+          "observations": 7,
+          "support_units": 7
+        },
+        {
+          "source_id": "hacker-news",
+          "observations": 7,
+          "support_units": 7
+        },
+        {
+          "source_id": "huggingface-papers",
+          "observations": 5,
+          "support_units": 5
+        },
+        {
+          "source_id": "simon-willison",
+          "observations": 5,
+          "support_units": 5
+        },
+        {
+          "source_id": "the-batch",
+          "observations": 5,
+          "support_units": 5
+        },
+        {
+          "source_id": "greylock-essays",
+          "observations": 3,
+          "support_units": 3
+        },
+        {
+          "source_id": "aws-machine-learning-blog",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "eugene-yan",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "huggingface-blog",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "radical-ventures",
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "sequoia-essays",
+          "observations": 1,
+          "support_units": 1
+        }
+      ],
+      "monthly_counts": {
+        "2026-04": 15,
+        "2026-05": 16,
+        "2026-06": 25,
+        "2026-07": 17,
+        "2026-08": 30,
+        "2026-09": 41
+      },
+      "source_concentration": 0.77,
+      "maturity": "corroborated-source-concentrated",
+      "score": {
+        "recurrence": 14.5,
+        "acceleration": 19.8,
+        "persistence": 25.0,
+        "breadth": 25,
+        "total": 84.3
+      },
+      "evidence_ids": [
+        "alphasignal:ed11042f47b8f05c3ace",
+        "alphasignal:cec6f55c7deff2c8dfc5",
+        "hn:49790729",
+        "hn:49789356",
+        "hn:49785853",
+        "hn:49783713",
+        "hn:49781554",
+        "alphasignal:trend:coding-agents-and-developer-tooling",
+        "simon-willison:e133d02a1d698c5d1f75",
+        "simon-willison:f9d4182cc1e12525793a",
+        "hn:49768826",
+        "arxiv:2609.22068v1",
+        "arxiv:2609.22049v1",
+        "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
+        "hn:49744416",
+        "arxiv:2609.20822v1",
+        "arxiv:2609.20812v1",
+        "arxiv:2609.20804v1",
+        "arxiv:2609.20519v1",
+        "arxiv:2609.20446v1",
+        "hf-paper:2609.20519",
+        "simon-willison:ac293d7ca39f3bdc6e8b",
+        "hf-paper:2609.14858",
+        "simon-willison:cffcc180737c911ec20d",
+        "github:1365776373",
+        "github:1358571386",
+        "bluesky:b3614927c6a2:3murtmdynq22s",
+        "the-batch:2622ee409c0a925f8cee",
+        "huggingface-blog:cdd1118267ee925c6328",
+        "hf-paper:2609.04034",
+        "github:1354991682",
+        "github:1352547997",
+        "github:1349818659",
+        "github:1346337331",
+        "github:1346230651",
+        "github:1344075823",
+        "github:1342227253",
+        "github:1342084139",
+        "github:1341986504",
+        "radical-ventures:4e64543f295794b596b4",
+        "github:1300902838",
+        "hf-paper:2607.08448",
+        "the-batch:ff7886a858eeca329050",
+        "greylock-essays:c20b6ac7c42eb8c20580",
+        "alphasignal:project:hallmark",
+        "github:1223170290",
+        "the-batch:0ae6e271b897f74804ad",
+        "sequoia-essays:bf2824ba4e01a7fceb94",
+        "the-batch:76f6a515bbe9cc803087",
+        "the-batch:6ec0884339d42bba5f03",
+        "greylock-essays:cbdde800c82cd1b1c5e4",
+        "github:1079084637",
+        "github:1035029907",
+        "github:969302809",
+        "greylock-essays:8f9803ea1ba96d8fb109",
+        "eugene-yan:fe4e3e7ef2dab960cf4f",
+        "hf-paper:2407.16741",
+        "github:666299222"
+      ]
+    },
+    {
       "id": "open-local-inference",
       "name": "Open, local & efficient inference",
       "definition": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
@@ -2218,14 +2381,14 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
-      "evidence_count": 89,
-      "support_units": 361,
+      "evidence_count": 90,
+      "support_units": 362,
       "source_count": 14,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
-          "observations": 4,
-          "support_units": 276
+          "observations": 5,
+          "support_units": 277
         },
         {
           "source_id": "mistral-news",
@@ -2299,18 +2462,19 @@
         "2026-06": 40,
         "2026-07": 70,
         "2026-08": 58,
-        "2026-09": 84
+        "2026-09": 85
       },
-      "source_concentration": 0.76,
+      "source_concentration": 0.77,
       "maturity": "corroborated-source-concentrated",
       "score": {
         "recurrence": 18.0,
-        "acceleration": 16.1,
+        "acceleration": 16.2,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 84.1
+        "total": 84.2
       },
       "evidence_ids": [
+        "alphasignal:46d0001edf2628fce6c2",
         "latent-space:c5ef439db94fe95e2aa5",
         "huggingface-blog:689d78c6e007ab8e2c4f",
         "bluesky:e810fac7fd93:3mvzupklbjz2u",
@@ -2400,164 +2564,6 @@
         "github:646410686",
         "github:201991558",
         "github:143328315"
-      ]
-    },
-    {
-      "id": "coding-agents",
-      "name": "Coding agents & developer tooling",
-      "definition": "AI systems that search repositories, write and review code, run tools, validate changes, and participate in software delivery.",
-      "aliases": [
-        "coding agent",
-        "software engineering agent",
-        "repository agent",
-        "code generation"
-      ],
-      "primary_layer": "harness-orchestration",
-      "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 56,
-      "support_units": 231,
-      "source_count": 13,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "observations": 2,
-          "support_units": 177
-        },
-        {
-          "source_id": "github",
-          "observations": 17,
-          "support_units": 17
-        },
-        {
-          "source_id": "arxiv",
-          "observations": 7,
-          "support_units": 7
-        },
-        {
-          "source_id": "hacker-news",
-          "observations": 7,
-          "support_units": 7
-        },
-        {
-          "source_id": "huggingface-papers",
-          "observations": 5,
-          "support_units": 5
-        },
-        {
-          "source_id": "simon-willison",
-          "observations": 5,
-          "support_units": 5
-        },
-        {
-          "source_id": "the-batch",
-          "observations": 5,
-          "support_units": 5
-        },
-        {
-          "source_id": "greylock-essays",
-          "observations": 3,
-          "support_units": 3
-        },
-        {
-          "source_id": "aws-machine-learning-blog",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "eugene-yan",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "huggingface-blog",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "radical-ventures",
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "sequoia-essays",
-          "observations": 1,
-          "support_units": 1
-        }
-      ],
-      "monthly_counts": {
-        "2026-04": 15,
-        "2026-05": 16,
-        "2026-06": 25,
-        "2026-07": 17,
-        "2026-08": 30,
-        "2026-09": 39
-      },
-      "source_concentration": 0.77,
-      "maturity": "corroborated-source-concentrated",
-      "score": {
-        "recurrence": 14.5,
-        "acceleration": 19.4,
-        "persistence": 25.0,
-        "breadth": 25,
-        "total": 83.9
-      },
-      "evidence_ids": [
-        "hn:49790729",
-        "hn:49789356",
-        "hn:49785853",
-        "hn:49783713",
-        "hn:49781554",
-        "alphasignal:trend:coding-agents-and-developer-tooling",
-        "simon-willison:e133d02a1d698c5d1f75",
-        "simon-willison:f9d4182cc1e12525793a",
-        "hn:49768826",
-        "arxiv:2609.22068v1",
-        "arxiv:2609.22049v1",
-        "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
-        "hn:49744416",
-        "arxiv:2609.20822v1",
-        "arxiv:2609.20812v1",
-        "arxiv:2609.20804v1",
-        "arxiv:2609.20519v1",
-        "arxiv:2609.20446v1",
-        "hf-paper:2609.20519",
-        "simon-willison:ac293d7ca39f3bdc6e8b",
-        "hf-paper:2609.14858",
-        "simon-willison:cffcc180737c911ec20d",
-        "github:1365776373",
-        "github:1358571386",
-        "bluesky:b3614927c6a2:3murtmdynq22s",
-        "the-batch:2622ee409c0a925f8cee",
-        "huggingface-blog:cdd1118267ee925c6328",
-        "hf-paper:2609.04034",
-        "github:1354991682",
-        "github:1352547997",
-        "github:1349818659",
-        "github:1346337331",
-        "github:1346230651",
-        "github:1344075823",
-        "github:1342227253",
-        "github:1342084139",
-        "github:1341986504",
-        "radical-ventures:4e64543f295794b596b4",
-        "github:1300902838",
-        "hf-paper:2607.08448",
-        "the-batch:ff7886a858eeca329050",
-        "greylock-essays:c20b6ac7c42eb8c20580",
-        "alphasignal:project:hallmark",
-        "github:1223170290",
-        "the-batch:0ae6e271b897f74804ad",
-        "sequoia-essays:bf2824ba4e01a7fceb94",
-        "the-batch:76f6a515bbe9cc803087",
-        "the-batch:6ec0884339d42bba5f03",
-        "greylock-essays:cbdde800c82cd1b1c5e4",
-        "github:1079084637",
-        "github:1035029907",
-        "github:969302809",
-        "greylock-essays:8f9803ea1ba96d8fb109",
-        "eugene-yan:fe4e3e7ef2dab960cf4f",
-        "hf-paper:2407.16741",
-        "github:666299222"
       ]
     },
     {
@@ -2895,14 +2901,14 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 44,
-      "support_units": 142,
+      "evidence_count": 45,
+      "support_units": 143,
       "source_count": 9,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
-          "observations": 3,
-          "support_units": 101
+          "observations": 4,
+          "support_units": 102
         },
         {
           "source_id": "arxiv",
@@ -2951,18 +2957,19 @@
         "2026-06": 18,
         "2026-07": 23,
         "2026-08": 19,
-        "2026-09": 41
+        "2026-09": 42
       },
       "source_concentration": 0.71,
       "maturity": "broadly-corroborated",
       "score": {
         "recurrence": 10.8,
-        "acceleration": 17.8,
+        "acceleration": 18.0,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 78.6
+        "total": 78.8
       },
       "evidence_ids": [
+        "alphasignal:46d0001edf2628fce6c2",
         "alphasignal:trend:multimodal-generation-and-3d",
         "arxiv:2609.22055v1",
         "arxiv:2609.22008v1",
@@ -12204,7 +12211,7 @@
         "secondary_layer": "tools-skills-integrations",
         "maturity": "broadly-corroborated",
         "source_count": 9,
-        "evidence_count": 44,
+        "evidence_count": 45,
         "project_count": 14,
         "reviewed_project_count": 4,
         "queued_project_count": 1,
@@ -12247,7 +12254,7 @@
         "secondary_layer": "compute-inference-serving",
         "maturity": "corroborated-source-concentrated",
         "source_count": 14,
-        "evidence_count": 89,
+        "evidence_count": 90,
         "project_count": 18,
         "reviewed_project_count": 3,
         "queued_project_count": 7,
@@ -12270,7 +12277,7 @@
         "secondary_layer": "assurance",
         "maturity": "broadly-corroborated",
         "source_count": 25,
-        "evidence_count": 155,
+        "evidence_count": 157,
         "project_count": 27,
         "reviewed_project_count": 3,
         "queued_project_count": 4,
@@ -12293,7 +12300,7 @@
         "secondary_layer": "tools-skills-integrations",
         "maturity": "corroborated-source-concentrated",
         "source_count": 13,
-        "evidence_count": 56,
+        "evidence_count": 58,
         "project_count": 18,
         "reviewed_project_count": 3,
         "queued_project_count": 3,
@@ -12448,10 +12455,10 @@
       }
     ],
     "quality": {
-      "classification_coverage": 0.32,
-      "classified_public_records": 526,
-      "unclassified_public_records": 1119,
-      "classification_review_records": 1119,
+      "classification_coverage": 0.318,
+      "classified_public_records": 529,
+      "unclassified_public_records": 1137,
+      "classification_review_records": 1137,
       "recent_sources": 29,
       "aging_sources": 3,
       "historical_sources": 4,
@@ -12488,12 +12495,534 @@
       ],
       "next_step": "Review recurring unmatched clusters before adding vocabulary or proposing a new theme; prefer precise phrases with inspected examples over generic words such as agent, model, or evaluation.",
       "limitation": "This was a taxonomy-gap audit, not a relevance judgment on all 1,162 records. The 108 sampled records left unresolved require further review or an explicit discard policy.",
-      "current_unclassified_records": 1119,
-      "current_classification_coverage": 0.32
+      "current_unclassified_records": 1137,
+      "current_classification_coverage": 0.318
     },
     "freshness_note": "Freshness is based on the latest dated evidence observed for each source, not a direct collector-uptime check. Recent means 30 days or less; aging means 31–90 days; historical means more than 90 days."
   },
   "evidence": [
+    {
+      "id": "bluesky:1278ebf77949:3mw4ssgedys2j",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Opus 5.5 was a good model in my early use tests, it is the first non-Fable/Astra model to feel like a Fable-class model, and much cheaper, but still hasn't fully solved the dense/weird language iss...",
+      "summary": "Here is Fable 5.1's shader: \"create a visually interesting shader that can run in twigl, make it like an infinite city of neo-gothic towers partially drowned...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw4ssgedys2j",
+      "published_at": "2026-09-22T18:03:57.527Z",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw4nfn76oc2g",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Really surprised he didn't insist on renaming AI to the \"Gulf of American Intelligence\"",
+      "summary": "lol ok thehill.com/homenews/adm...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw4nfn76oc2g",
+      "published_at": "2026-09-22T16:27:19.782Z",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw4ndprwy22g",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Don't want to brag, but Claude told it was right for me to push.",
+      "summary": "",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw4ndprwy22g",
+      "published_at": "2026-09-22T16:26:15.385Z",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:f589934827be4c010ca7",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "G o o g l e C l o u d ' s E n t e r p r i s e A I A g e n t A r c h i t e c t u r e",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:ed11042f47b8f05c3ace",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Xiaomi turns open-source code into RL training data, boosting coding agents across five benchmarks",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents",
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations",
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:e15b8b8bb38c36aac506",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Your strongest baseline deserves a challenger. Run TabPFN-3.5 against the model you trust & compare using your own data",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:cec6f55c7deff2c8dfc5",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Xiaomi turns open-source code into RL training data , boosting coding agents across five benchmarks",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "coding-agents",
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "harness-orchestration",
+        "tools-skills-integrations",
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:a0dafd2406b26182a588",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "GPT-6 pushed a simulated person off a ledge where Grok, Gemini, and Claude refused",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:99ef41ba3a38c48b2cad",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Prior Labs: Your strongest baseline deserves a challenger. Run TabPFN-3.5 against the model you trust & compare using your own data",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:878cd92f8396df643edb",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Talking AI agents beat solo agents 4-to-1 on hard reasoning tasks",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:82e85d9bb7da8782f712",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Qwen releases real-time translation model covering 60 languages with 0.5s faster lag",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:5fac7cf4af69b9bdfe97",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Nimble open-source AI search model matches closed API-only rival",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:46d0001edf2628fce6c2",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Qwen-Image-2.1 gets GGUF quantization for uncensored local image generation",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "multimodal-3d",
+        "open-local-inference"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations",
+        "compute-inference-serving"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:2b1feaa89cfde858d3b9",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "xAI ships Grok 4.7 with stronger reasoning and safety at the same price",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:15d47f7fa52c1499f11e",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Y o u ' v e a d o p t e d A I . W h o ' s g o v e r n i n g i t ?",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "alphasignal:1454af9586eaae4c2d8c",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Google rebuilds Kubernetes from scratch to run stateful AI agents",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
+      "published_at": "2026-09-22T15:32:33.000Z",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw4k4igwxc2z",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Trump tells the UN he is officially changing the name of Artificial Intelligence to \"Super Intelligence\" and says all US government documents will now be changed to refer to \"SI\"",
+      "summary": "",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw4k4igwxc2z",
+      "published_at": "2026-09-22T15:28:31.577Z",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw4jgfjqzk2z",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Hey Claude, what's up?",
+      "summary": "Claude, how's my poop? www.kohler.com/en/products/...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw4jgfjqzk2z",
+      "published_at": "2026-09-22T15:16:10.327Z",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mw4in3uyx226",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "For all the tension between AI and the arts, I have received enthusiastic receptions from the William Carlos Williams Society, the TS Eliot Society, and others about the AI interpretations of their...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw4in3uyx226",
+      "published_at": "2026-09-22T15:02:01.349Z",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:e810fac7fd93:3mw4dzm7j7u2q",
+      "source_id": "bluesky-nathan-lambert",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Debating RSI, the US-China Gap, and Jaggedness with JS Denain of Epoch AI Podcast #19 Substack: www.interconnects.ai/p/debating-r... YouTube: youtu.be/mE0__1EfVxw?...",
+      "summary": "",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mw4dzm7j7u2q",
+      "published_at": "2026-09-22T13:39:31.575Z",
+      "authors": [
+        "Nathan Lambert"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mw4btfedmg2y",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "From @timnitgebru.blacksky.app and me on what we should take from the 2026 summer of AI hype: www.technologyreview.com/2026/09/22/1...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mw4btfedmg2y",
+      "published_at": "2026-09-22T13:00:16.276Z",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      }
+    },
     {
       "id": "hn:49799677",
       "source_id": "hacker-news",
@@ -59561,6 +60090,19 @@
       "freshness": "recent"
     },
     {
+      "id": "alphasignal",
+      "name": "AlphaSignal",
+      "channel": "newsletter",
+      "source_quality": "medium",
+      "commercial_bias": "disclosed-and-mixed",
+      "homepage_url": "https://alphasignal.ai/",
+      "logo_url": "https://alphasignal.ai/images/logo_alpha_signal_icon.svg",
+      "normalized_evidence_count": 48,
+      "status": "active",
+      "last_observed_at": "2026-09-22T15:32:33+00:00",
+      "freshness": "recent"
+    },
+    {
       "id": "bluesky-nathan-lambert",
       "name": "Nathan Lambert on Bluesky",
       "channel": "expert-social",
@@ -59570,9 +60112,9 @@
       "evidence_role": "expert-observation",
       "homepage_url": "https://bsky.app/profile/natolambert.bsky.social",
       "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 42,
+      "normalized_evidence_count": 43,
       "status": "active",
-      "last_observed_at": "2026-09-21T14:00:09.526000+00:00",
+      "last_observed_at": "2026-09-22T13:39:31.575000+00:00",
       "freshness": "recent"
     },
     {
@@ -59585,9 +60127,9 @@
       "evidence_role": "expert-observation",
       "homepage_url": "https://bsky.app/profile/emollick.bsky.social",
       "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 40,
+      "normalized_evidence_count": 42,
       "status": "active",
-      "last_observed_at": "2026-09-21T23:34:41.829000+00:00",
+      "last_observed_at": "2026-09-22T18:03:57.527000+00:00",
       "freshness": "recent"
     },
     {
@@ -59601,19 +60143,6 @@
       "normalized_evidence_count": 40,
       "status": "active",
       "last_observed_at": "2026-09-10T15:00:00+00:00",
-      "freshness": "recent"
-    },
-    {
-      "id": "alphasignal",
-      "name": "AlphaSignal",
-      "channel": "newsletter",
-      "source_quality": "medium",
-      "commercial_bias": "disclosed-and-mixed",
-      "homepage_url": "https://alphasignal.ai/",
-      "logo_url": "https://alphasignal.ai/images/logo_alpha_signal_icon.svg",
-      "normalized_evidence_count": 35,
-      "status": "active",
-      "last_observed_at": "2026-09-21T00:00:00+00:00",
       "freshness": "recent"
     },
     {
@@ -59795,6 +60324,21 @@
       "freshness": "recent"
     },
     {
+      "id": "bluesky-mark-riedl",
+      "name": "Mark Riedl on Bluesky",
+      "channel": "expert-social",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "mark-riedl",
+      "evidence_role": "expert-observation",
+      "homepage_url": "https://bsky.app/profile/markriedl.bsky.social",
+      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
+      "normalized_evidence_count": 22,
+      "status": "active",
+      "last_observed_at": "2026-09-22T16:27:19.782000+00:00",
+      "freshness": "recent"
+    },
+    {
       "id": "aws-machine-learning-blog",
       "name": "AWS Machine Learning Blog",
       "channel": "first-party-lab",
@@ -59870,21 +60414,6 @@
       "freshness": "recent"
     },
     {
-      "id": "bluesky-mark-riedl",
-      "name": "Mark Riedl on Bluesky",
-      "channel": "expert-social",
-      "source_quality": "high",
-      "commercial_bias": "authorial",
-      "publisher_id": "mark-riedl",
-      "evidence_role": "expert-observation",
-      "homepage_url": "https://bsky.app/profile/markriedl.bsky.social",
-      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 18,
-      "status": "active",
-      "last_observed_at": "2026-09-20T02:04:30.199000+00:00",
-      "freshness": "recent"
-    },
-    {
       "id": "yc-essays",
       "name": "Y Combinator essays",
       "channel": "operator-essay",
@@ -59910,6 +60439,21 @@
       "normalized_evidence_count": 13,
       "status": "active",
       "last_observed_at": "2026-09-21T17:30:34.278000+00:00",
+      "freshness": "recent"
+    },
+    {
+      "id": "bluesky-emily-bender",
+      "name": "Emily M. Bender on Bluesky",
+      "channel": "expert-social",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "emily-bender",
+      "evidence_role": "expert-observation",
+      "homepage_url": "https://bsky.app/profile/emilymbender.bsky.social",
+      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
+      "normalized_evidence_count": 11,
+      "status": "active",
+      "last_observed_at": "2026-09-22T13:00:16.276000+00:00",
       "freshness": "recent"
     },
     {
@@ -59939,21 +60483,6 @@
       "status": "active",
       "last_observed_at": "2025-01-16T00:00:00+00:00",
       "freshness": "historical"
-    },
-    {
-      "id": "bluesky-emily-bender",
-      "name": "Emily M. Bender on Bluesky",
-      "channel": "expert-social",
-      "source_quality": "high",
-      "commercial_bias": "authorial",
-      "publisher_id": "emily-bender",
-      "evidence_role": "expert-observation",
-      "homepage_url": "https://bsky.app/profile/emilymbender.bsky.social",
-      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 10,
-      "status": "active",
-      "last_observed_at": "2026-09-21T20:37:50.181000+00:00",
-      "freshness": "recent"
     },
     {
       "id": "menlo-ventures",
