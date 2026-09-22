@@ -16,6 +16,7 @@ def validate_policy(policy: dict[str, Any]) -> None:
         "version",
         "public_levels",
         "maturity_order",
+        "maturity_definitions",
         "relationship_types",
         "source_role_defaults",
         "dimension_rules",
@@ -29,6 +30,11 @@ def validate_policy(policy: dict[str, Any]) -> None:
         raise ValueError("Public evidence levels must remain N/O, Low, Moderate, Strong")
     if policy["maturity_order"] != ["narrative", "experimental", "emerging", "established", "baseline"]:
         raise ValueError("Maturity order does not match the locked operating-model contract")
+    if set(policy["maturity_definitions"]) != set(policy["maturity_order"]):
+        raise ValueError("Every maturity state must have exactly one public definition")
+    for maturity, definition in policy["maturity_definitions"].items():
+        if not definition.get("description") or not definition.get("recommended_posture"):
+            raise ValueError(f"Maturity definition is incomplete: {maturity}")
     if set(policy["dimension_rules"]) != PUBLIC_DIMENSIONS:
         raise ValueError("Evidence dimensions do not match the locked operating-model contract")
     if set(policy["maturity_gates"]) != set(policy["maturity_order"]):
@@ -70,6 +76,11 @@ def validate_calibration(
             raise ValueError(f"Unknown source analysis for {case_id}: {case['source_analysis']}")
         if case.get("expected_maturity") not in maturity_values:
             raise ValueError(f"Unknown expected maturity for {case_id}")
+        for field in ("title", "requirement", "description", "applicable_to", "rationale"):
+            if not case.get(field):
+                raise ValueError(f"Calibration case {case_id} is missing {field}")
+        if len(case.get("what_it_looks_like", [])) < 2:
+            raise ValueError(f"Calibration case {case_id} needs concrete operating examples")
 
         seen_evidence: set[str] = set()
         direct_events: set[str] = set()
@@ -182,6 +193,95 @@ def run_calibration(
 ) -> list[dict[str, Any]]:
     validate_calibration(policy, calibration, research)
     return [evaluate_case(policy, case) for case in calibration["cases"]]
+
+
+def build_operating_model(
+    policy: dict[str, Any],
+    calibration: dict[str, Any],
+    research: dict[str, Any],
+) -> dict[str, Any]:
+    results = run_calibration(policy, calibration, research)
+    result_by_id = {result["id"]: result for result in results}
+    evidence_by_id = {item["id"]: item for item in research.get("evidence", [])}
+    source_by_id = {item["id"]: item for item in research.get("sources", [])}
+    maturity_counts = {maturity: 0 for maturity in policy["maturity_order"]}
+    requirements = []
+
+    for case in calibration["cases"]:
+        result = result_by_id[case["id"]]
+        maturity_counts[result["maturity"]] += 1
+        next_gate = next(
+            (
+                {"maturity": maturity, "failures": gate["failures"]}
+                for maturity, gate in result["gate_results"].items()
+                if not gate["passed"]
+            ),
+            None,
+        )
+        linked_evidence = []
+        for link in case["evidence_links"]:
+            item = evidence_by_id[link["evidence_id"]]
+            source = source_by_id.get(item.get("source_id"), {})
+            linked_evidence.append(
+                {
+                    "id": item["id"],
+                    "event_id": link["event_id"],
+                    "title": item.get("title", "Untitled evidence"),
+                    "summary": item.get("summary", ""),
+                    "url": item.get("url", ""),
+                    "published_at": item.get("published_at"),
+                    "source_id": item.get("source_id"),
+                    "source_name": source.get("name", item.get("source_id", "Unknown source")),
+                    "source_type": item.get("source_type", "unknown"),
+                    "relationship": link["relationship"],
+                    "dimensions": link.get("dimensions", []),
+                    "exclusion_reason": link.get("exclusion_reason"),
+                }
+            )
+        requirements.append(
+            {
+                "id": case["id"],
+                "title": case["title"],
+                "requirement": case["requirement"],
+                "description": case["description"],
+                "what_it_looks_like": case["what_it_looks_like"],
+                "applicable_to": case["applicable_to"],
+                "source_analysis": case["source_analysis"],
+                "maturity": result["maturity"],
+                "confidence": case["assessments"]["confidence"],
+                "concentration": case["assessments"]["concentration"],
+                "assessments": {
+                    dimension: case["assessments"][dimension]
+                    for dimension in sorted(PUBLIC_DIMENSIONS)
+                },
+                "rationale": case["rationale"],
+                "next_gate": next_gate,
+                "evidence_gaps": case.get("evidence_gaps", []),
+                "evidence": linked_evidence,
+                "gate_inputs": case["gate_inputs"],
+            }
+        )
+
+    maturity_rank = {name: index for index, name in enumerate(policy["maturity_order"])}
+    requirements.sort(key=lambda item: (-maturity_rank[item["maturity"]], item["title"]))
+    return {
+        "meta": {
+            "title": policy["name"],
+            "generated_at": research.get("meta", {}).get("generated_at"),
+            "as_of": calibration.get("as_of"),
+            "policy_version": policy["version"],
+            "requirement_count": len(requirements),
+            "maturity_counts": maturity_counts,
+        },
+        "purpose": policy["purpose"],
+        "maturity_order": policy["maturity_order"],
+        "maturity_definitions": policy["maturity_definitions"],
+        "dimension_rules": policy["dimension_rules"],
+        "relationship_types": policy["relationship_types"],
+        "guardrails": policy["guardrails"],
+        "requirements": requirements,
+        "boundary": "Early Signal Tracker states describe attention and corroboration. Operating requirement maturity describes whether technical, operational, market, and independent evidence justify action.",
+    }
 
 
 def format_calibration(results: list[dict[str, Any]]) -> str:

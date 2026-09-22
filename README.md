@@ -70,6 +70,8 @@ The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only 
 
 `config/evidence-policy.yml` defines the formal evidence contract used to decide whether a proposed startup operating requirement is merely a `narrative`, is `experimental`, or has matured to `emerging`, `established`, or `baseline`. Each judgment reports technical reality, operational adoption, market pull, and evidence independence as `N/O`, `Low`, `Moderate`, or `Strong`. Maturity is gate-based: attention or a weighted score cannot compensate for missing operational proof.
 
+The Operating Model workspace renders the public `data/public/operating-model.json` registry. Each requirement explains the concept, what it looks like in a startup, where it applies, its recommended posture, evidence dimensions, promotion blockers, verification gaps, and the disposition of every linked record.
+
 Six adjudicated cases in `config/evidence-policy-calibration.yml` test the rules against real Radar evidence. Run the calibration with:
 
 ```bash
@@ -125,4 +127,4 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 ## Current status
 
-The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides six direct workspaces: Overview, Analyses, Themes, Engineering, Evidence, and Method.
+The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, and an official narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides seven direct workspaces: Overview, Operating Model, Analyses, Themes, Engineering, Evidence, and Method.

@@ -6,7 +6,7 @@
     <meta name="description" content="Cross-source AI research across first-party labs, newsletters, papers, repositories, public essays, and technical discussion." />
     <title>AI Signal Radar — Cross-source research</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 12h48v8H8zm0 16h48v8H8zm0 16h48v8H8z' fill='%2317354d'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260921.14" />
+    <link rel="stylesheet" href="./styles.css?v=20260922.15" />
   </head>
   <body>
     <a class="skip-link" href="#workspace">Skip to research</a>
@@ -15,11 +15,12 @@
         <a class="brand" href="#overview"><span class="brand-mark">AS</span><span><strong>AI Signal Radar</strong><small>Cross-source research</small></span></a>
         <nav class="primary-nav" aria-label="Research navigation">
           <a href="#overview" data-route="overview"><span>01</span>Overview</a>
-          <a href="#analyses" data-route="analyses"><span>02</span>Analyses</a>
-          <a href="#themes" data-route="themes"><span>03</span>Themes</a>
-          <a href="#projects" data-route="projects"><span>04</span>Engineering</a>
-          <a href="#evidence" data-route="evidence"><span>05</span>Evidence</a>
-          <a href="#method" data-route="method"><span>06</span>Method</a>
+          <a href="#operating-model" data-route="operating-model"><span>02</span>Operating Model</a>
+          <a href="#analyses" data-route="analyses"><span>03</span>Analyses</a>
+          <a href="#themes" data-route="themes"><span>04</span>Themes</a>
+          <a href="#projects" data-route="projects"><span>05</span>Engineering</a>
+          <a href="#evidence" data-route="evidence"><span>06</span>Evidence</a>
+          <a href="#method" data-route="method"><span>07</span>Method</a>
         </nav>
         <div class="sidebar-status">
           <span class="status-dot" aria-hidden="true"></span>
@@ -64,6 +65,19 @@
             </div>
             <div class="source-groups" id="overview-sources"><p class="empty-state">Loading source coverage…</p></div>
           </section>
+        </section>
+
+        <section class="view" id="view-operating-model" data-view="operating-model" aria-labelledby="operating-model-heading" hidden>
+          <div class="view-intro">
+            <div><h2 id="operating-model-heading">What an AI-native startup requires now</h2><p>A cross-source requirement registry translating technical evidence, operating adoption, and market formation into bounded startup practices. It is a maturity assessment—not a universal checklist.</p></div>
+            <div class="system-rule"><strong>Decision rule</strong><span>Attention can identify a candidate. Only technical and operational evidence can turn it into a requirement.</span></div>
+          </div>
+          <div class="metric-strip operating-metrics" id="operating-metrics"><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div></div>
+          <div class="operating-boundary" id="operating-boundary"></div>
+          <div class="operating-layout">
+            <aside class="requirement-index" id="requirement-index" aria-label="Operating requirements"></aside>
+            <article class="requirement-detail" id="requirement-detail" tabindex="-1"><p class="empty-state">Loading operating requirements…</p></article>
+          </div>
         </section>
 
         <section class="view" id="view-analyses" data-view="analyses" aria-labelledby="analyses-heading" hidden>
@@ -136,6 +150,6 @@
         <section class="load-failure" id="load-failure" hidden aria-live="assertive"><strong>Research data could not be loaded.</strong><span id="failure-detail"></span><button type="button" id="retry-load">Retry</button></section>
       </main>
     </div>
-    <script src="./app.js?v=20260921.14" defer></script>
+    <script src="./app.js?v=20260922.15" defer></script>
   </body>
 </html>

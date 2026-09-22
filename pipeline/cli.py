@@ -9,7 +9,7 @@ from pathlib import Path
 from .classify import classify_text
 from .cluster import group_by_theme
 from .deduplicate import deduplicate
-from .evidence_policy import format_calibration, run_calibration
+from .evidence_policy import build_operating_model, format_calibration, run_calibration
 from .export_public import sanitize_item, validate_public_payload, write_public_dashboard
 from .research import build_research, write_weekly_report
 from .score import score_theme
@@ -207,6 +207,10 @@ def synthesize() -> None:
             classification_audit,
         )
         write_public_dashboard(ROOT / "data/public/research.json", research)
+        policy = _yaml(ROOT / "config/evidence-policy.yml")
+        calibration = _yaml(ROOT / "config/evidence-policy-calibration.yml")
+        operating_model = build_operating_model(policy, calibration, research)
+        write_public_dashboard(ROOT / "data/public/operating-model.json", operating_model)
         report_date = research["weekly"]["as_of"]
         write_weekly_report(ROOT / "reports/weekly" / f"{report_date}.md", research)
         print(

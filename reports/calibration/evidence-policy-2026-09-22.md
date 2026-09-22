@@ -25,6 +25,14 @@ Only the modular agent operating stack reaches `emerging`. It is the sole case w
 
 **Result:** `experimental`
 
+**What it means:** AI-generated work should not move directly from a model response into a consequential action. A separate release layer checks whether the result is correct enough, policy compliant, and safe to commit, send, publish, or execute. Routine work can pass automatically; uncertain or high-impact cases escalate to a person.
+
+**What it looks like in a startup:**
+
+- representative tasks, expected outcomes, and failure cases for every consequential workflow;
+- deterministic checks, model-based evaluations, and policy rules before external side effects;
+- evidence logs, rollback, and human escalation around release decisions.
+
 Three deduplicated technical events qualify: BLINDSPOT counts once despite having both a paper and repository, while Chronicle and EnterpriseVal are separate implementations. This makes the requirement technically real. The surrounding AlphaSignal, Hugging Face, and newsletter records provide context or discovery, not extra proof.
 
 Promotion to `emerging` is blocked because operational adoption and evidence independence are low, and counterevidence has not been reviewed. The current corpus does not yet show independent production deployments with attributable intervention, rollback, incident, or business-outcome data.
@@ -36,6 +44,14 @@ Promotion to `emerging` is blocked because operational adoption and evidence ind
 **Requirement:** AI systems should route work across heterogeneous models and inference paths.
 
 **Result:** `experimental`
+
+**What it means:** A routing layer selects the model, runtime, or deterministic path that best fits each task instead of treating one frontier model as the whole product architecture. The decision can account for quality, latency, privacy, capacity, and cost while retaining fallbacks.
+
+**What it looks like in a startup:**
+
+- task classes and service objectives determine which inference path is eligible;
+- models are compared using accepted-output quality, latency, and total cost per task class;
+- fallbacks, caching, capacity limits, and drift monitoring surround the routing decision.
 
 Edge0 and SpecQuant provide two independent technical demonstrations. The Jev ecosystem index, AlphaSignal synthesis, Interconnects, Bluesky, and Hacker News show adjacent activity or help discover the direction, but do not establish production adoption.
 
@@ -51,6 +67,14 @@ Promotion to `emerging` is blocked by low operational adoption and the absence o
 
 **Result:** `narrative`
 
+**What it means:** An AI-native go-to-market system would do more than generate sales or marketing content. It would observe demand signals, decide which action is appropriate, execute approved steps across revenue tools, and write the result back to the system of record with attribution and accountability.
+
+**What it looks like in a startup:**
+
+- one bounded motion, such as inbound qualification or content refresh, is automated first;
+- triggers, approval boundaries, CRM writes, and attribution are explicit;
+- pipeline contribution, cycle time, intervention rate, and false-action cost are measured.
+
 AirOps and Netic show company formation and investment activity, while AlphaSignal supplies related enterprise-AI context. The two primary observations, however, come from the same investor-publisher, and the corpus contains neither a qualifying technical implementation nor independent operating outcomes.
 
 Promotion to `experimental` is blocked because technical reality is not observed and no qualifying technical artifact exists.
@@ -62,6 +86,14 @@ Promotion to `experimental` is blocked because technical reality is not observed
 **Requirement:** AI systems should separate models, orchestration, reusable skills, execution environments, and assurance controls into replaceable operating layers.
 
 **Result:** `emerging`
+
+**What it means:** The model becomes one replaceable component inside a larger operating system. The harness controls the loop, skills package repeatable actions, sandboxes constrain execution, interfaces expose progress, and assurance controls decide what may proceed.
+
+**What it looks like in a startup:**
+
+- model adapters are separate from orchestration state and workflow control logic;
+- reusable skills and tool permissions are versioned independently from prompts and model releases;
+- actions run in bounded environments with traces, evaluations, approval gates, and rollback.
 
 SoL-Pi, the harness-value experiments, and dscode provide independent technical artifacts. Wood Mackenzie's shared platform and Benchling's isolated agent execution provide two production deployments. The Hugging Face listing of SoL-Pi is deduplicated from the paper rather than counted as another event.
 
@@ -77,6 +109,14 @@ Promotion to `established` is blocked because operational adoption and evidence 
 
 **Result:** `experimental`
 
+**What it means:** Multiple agents use a consistent understanding of the organization's entities, relationships, permissions, and current state. Retrieval is combined with governed semantics so each workflow does not invent a different definition of the same customer, contract, incident, or task.
+
+**What it looks like in a startup:**
+
+- important entities have stable identifiers, relationships, provenance, and permission rules;
+- current state is exposed through governed retrieval or tools instead of copied into every prompt;
+- freshness, writes, and conflicts are tracked so agents do not silently diverge.
+
 RAFT, EvoOntology, Graphiti, and Cognee make the pattern technically credible across stateful retrieval, evolving ontologies, real-time knowledge graphs, and persistent graph memory. GraphRAG and WrenAI supply supporting context but do not independently prove cross-workflow operational adoption.
 
 The software-archival knowledge-graph paper (`arxiv:2609.21667v1`) was excluded. It was selected through overlapping vocabulary but does not demonstrate an operational context layer for AI workflows.
@@ -90,6 +130,14 @@ Promotion to `emerging` is blocked because production adoption remains low and c
 **Requirement:** AI products should own bounded workflows with explicit completion states, exception routing, and outcome metrics.
 
 **Result:** `narrative`
+
+**What it means:** The product takes responsibility for moving a clearly defined piece of work from trigger to verified completion, rather than merely suggesting the next step in a chat. Ownership remains bounded by permitted actions, a terminal state, escalation conditions, and measurable outcomes.
+
+**What it looks like in a startup:**
+
+- every workflow defines its trigger, allowed actions, system-of-record writes, and terminal state;
+- retries are idempotent and exceptions or low-confidence cases go to a named human owner;
+- completed work, intervention rate, error cost, cycle time, and business outcomes are measured.
 
 Sable and Probook show company formation and investment around AI systems that perform work, while the open-source AI Employees repository provides one implementation. OpenAI and DeepMind computer-use releases are discovery signals: they demonstrate enabling capability, not reliable ownership of a completed business workflow.
 

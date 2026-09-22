@@ -4,7 +4,8 @@ from pathlib import Path
 
 import yaml
 
-from pipeline.evidence_policy import run_calibration, validate_policy
+from pipeline.evidence_policy import build_operating_model, run_calibration, validate_policy
+from pipeline.export_public import validate_public_payload
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -68,6 +69,23 @@ class EvidencePolicyTests(unittest.TestCase):
         )
         self.assertTrue(modular_case["gate_inputs"]["counterevidence_reviewed"])
         self.assertTrue(any(link["relationship"] == "counterevidence" for link in modular_case["evidence_links"]))
+
+    def test_public_operating_model_explains_the_practice(self):
+        payload = build_operating_model(self.policy, self.calibration, self.research)
+        validate_public_payload(payload)
+        self.assertEqual(payload["meta"]["requirement_count"], 6)
+        for requirement in payload["requirements"]:
+            self.assertGreater(len(requirement["description"]), 120)
+            self.assertGreaterEqual(len(requirement["what_it_looks_like"]), 3)
+            self.assertTrue(requirement["applicable_to"])
+            self.assertTrue(requirement["evidence"])
+
+    def test_tracked_public_artifact_matches_reviewed_cases(self):
+        payload = json.loads((ROOT / "data/public/operating-model.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            {item["id"] for item in payload["requirements"]},
+            {case["id"] for case in self.calibration["cases"]},
+        )
 
 
 if __name__ == "__main__":

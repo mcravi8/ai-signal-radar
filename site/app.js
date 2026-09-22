@@ -1,7 +1,9 @@
 const state = {
   research: null,
   alpha: null,
+  operatingModel: null,
   route: "overview",
+  selectedRequirement: "",
   selectedAnalysis: "cross-source-landscape",
   selectedTheme: "",
   themeSearch: "",
@@ -16,9 +18,10 @@ const state = {
   sourceType: "",
 };
 
-const routes = new Set(["overview", "analyses", "themes", "projects", "evidence", "method"]);
+const routes = new Set(["overview", "operating-model", "analyses", "themes", "projects", "evidence", "method"]);
 const routeTitles = {
   overview: ["Research system", "Overview"],
+  "operating-model": ["Evidence-backed practice", "Operating Model"],
   analyses: ["Research library", "Analyses"],
   themes: ["Cross-source dossiers", "Themes"],
   projects: ["Engineering registry", "Engineering Atlas"],
@@ -70,7 +73,7 @@ function formatMonthDay(value) {
 }
 
 function label(value) {
-  return String(value || "N/O").replaceAll("-", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
+  return String(value || "N/O").replace(/[-_]/g, " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
 function channelLabel(value) {
@@ -148,6 +151,10 @@ function metric(title, value, note = "") {
 
 function badge(text, tone = "") {
   return node("span", `badge ${tone ? `badge-${tone}` : ""}`, text);
+}
+
+function maturityBadge(value) {
+  return node("span", `maturity-badge maturity-${value}`, label(value));
 }
 
 function linkOrText(item) {
@@ -296,6 +303,165 @@ function renderOverview() {
   if (!channels.length) {
     sourceGrid.append(node("p", "empty-state", "No sources match this type."));
   }
+}
+
+function relationshipLabel(value) {
+  return ({
+    "direct-support": "Qualifying support",
+    "supporting-context": "Supporting context",
+    counterevidence: "Counterevidence",
+    "discovery-only": "Discovery only",
+    excluded: "Excluded",
+  })[value] || label(value);
+}
+
+function gateFailureLabel(value) {
+  const match = String(value).match(/^(.+) is (.+); requires (.+)$/);
+  if (!match) return label(value);
+  const [, field, actual, required] = match;
+  if (field === "counterevidence_reviewed") return "Counterevidence has not been explicitly reviewed.";
+  return `${label(field)} is ${label(actual)}; ${label(required)} is required.`;
+}
+
+function renderOperatingModel() {
+  const data = state.operatingModel;
+  const metrics = $("#operating-metrics");
+  const index = $("#requirement-index");
+  const detail = $("#requirement-detail");
+  const boundary = $("#operating-boundary");
+
+  if (!data) {
+    metrics.replaceChildren(metric("Operating requirements", "N/O", "Dataset unavailable"));
+    boundary.replaceChildren();
+    index.replaceChildren();
+    const message = node("div", "empty-state");
+    message.append(node("strong", "", "Operating model unavailable."), node("p", "", "The cross-source research loaded, but its requirement registry did not."));
+    const retry = node("button", "inline-retry", "Retry loading");
+    retry.type = "button";
+    retry.addEventListener("click", load);
+    message.append(retry);
+    detail.replaceChildren(message);
+    return;
+  }
+
+  const counts = data.meta.maturity_counts;
+  const actionable = (counts.emerging || 0) + (counts.established || 0) + (counts.baseline || 0);
+  const reviewedCounterevidence = data.requirements.filter((item) => item.gate_inputs.counterevidence_reviewed).length;
+  metrics.replaceChildren(
+    metric("Assessed requirements", formatNumber(data.meta.requirement_count), `Policy v${data.meta.policy_version}`),
+    metric("Emerging or stronger", formatNumber(actionable), "Selective adoption supported"),
+    metric("Experimental", formatNumber(counts.experimental), "Bounded testing only"),
+    metric("Narrative", formatNumber(counts.narrative), "Watch; do not standardize"),
+    metric("Counterevidence reviewed", formatNumber(reviewedCounterevidence), "Explicit opposing record required"),
+  );
+  boundary.replaceChildren(node("strong", "", "How to read this"), node("span", "", data.boundary));
+
+  if (!state.selectedRequirement || !data.requirements.some((item) => item.id === state.selectedRequirement)) {
+    state.selectedRequirement = data.requirements[0]?.id || "";
+  }
+  index.replaceChildren();
+  for (const requirement of data.requirements) {
+    const button = node("button", `requirement-item ${requirement.id === state.selectedRequirement ? "selected" : ""}`);
+    button.type = "button";
+    button.dataset.requirementId = requirement.id;
+    button.setAttribute("aria-current", requirement.id === state.selectedRequirement ? "true" : "false");
+    button.append(
+      maturityBadge(requirement.maturity),
+      node("strong", "", requirement.title),
+      node("p", "", requirement.requirement),
+      node("small", "tabular", `${label(requirement.confidence)} confidence · ${requirement.evidence.length} linked records`),
+    );
+    index.append(button);
+  }
+
+  const requirement = data.requirements.find((item) => item.id === state.selectedRequirement);
+  if (!requirement) {
+    detail.replaceChildren(node("p", "empty-state", "No operating requirements have been assessed yet."));
+    return;
+  }
+
+  const definition = data.maturity_definitions[requirement.maturity];
+  const head = node("header", "requirement-head");
+  const headCopy = node("div", "requirement-head-copy");
+  headCopy.append(
+    node("span", "detail-kicker", `Operating requirement · ${label(requirement.confidence)} confidence`),
+    node("h2", "", requirement.title),
+    node("p", "requirement-statement", requirement.requirement),
+  );
+  const maturity = node("div", "requirement-maturity");
+  maturity.append(maturityBadge(requirement.maturity), node("small", "", `Assessed ${formatDate(data.meta.as_of)}`));
+  head.append(headCopy, maturity);
+
+  const explanation = node("section", "requirement-explanation");
+  explanation.append(node("h3", "", "What this means"), node("p", "", requirement.description));
+  const posture = node("aside", "requirement-posture");
+  posture.append(node("strong", "", `${label(requirement.maturity)} posture`), node("p", "", definition.recommended_posture));
+  explanation.append(posture);
+
+  const practice = node("section", "requirement-practice");
+  const practiceList = node("ul", "practice-list");
+  for (const item of requirement.what_it_looks_like) practiceList.append(node("li", "", item));
+  const applicability = node("div", "applicability-note");
+  applicability.append(node("strong", "", "Where it applies"), node("p", "", requirement.applicable_to));
+  practice.append(node("h3", "", "What it looks like in a startup"), practiceList, applicability);
+
+  const dimensions = node("section", "requirement-section");
+  dimensions.append(node("h3", "", "Evidence assessment"));
+  const dimensionGrid = node("div", "dimension-grid");
+  const dimensionOrder = ["technical_reality", "operational_adoption", "market_pull", "evidence_independence"];
+  for (const dimension of dimensionOrder) {
+    const level = requirement.assessments[dimension];
+    const item = node("article", `dimension-item evidence-level-${level}`);
+    item.append(
+      node("span", "dimension-label", label(dimension)),
+      node("strong", "dimension-level", label(level)),
+      node("p", "", data.dimension_rules[dimension][level]),
+    );
+    dimensionGrid.append(item);
+  }
+  dimensions.append(dimensionGrid);
+
+  const judgment = node("section", "requirement-judgment");
+  const assessment = node("div", "judgment-column");
+  assessment.append(node("h3", "", "Why this maturity"), node("p", "", requirement.rationale));
+  if (requirement.next_gate) {
+    assessment.append(node("strong", "judgment-label", `Blocked at ${label(requirement.next_gate.maturity)}`));
+    const failures = node("ul", "compact-list");
+    for (const failure of requirement.next_gate.failures) failures.append(node("li", "", gateFailureLabel(failure)));
+    assessment.append(failures);
+  }
+  const verification = node("div", "judgment-column");
+  verification.append(node("h3", "", "What to verify next"));
+  const gaps = node("ul", "compact-list");
+  for (const gap of requirement.evidence_gaps) gaps.append(node("li", "", gap));
+  verification.append(gaps);
+  judgment.append(assessment, verification);
+
+  const sourceAnalysis = requirement.source_analysis.split("/")[0];
+  const analysisLink = node("a", "requirement-analysis-link", "Open the originating analysis →");
+  analysisLink.href = `#analyses/${sourceAnalysis}`;
+
+  const evidenceSection = node("section", "requirement-section");
+  evidenceSection.append(node("h3", "", "Evidence map"));
+  const evidenceBoundary = node("p", "section-note", "Qualifying support can promote maturity. Context and discovery records cannot. Counterevidence and exclusions stay visible.");
+  const evidenceList = node("div", "requirement-evidence-list");
+  for (const item of requirement.evidence) {
+    const row = node("article", `requirement-evidence evidence-${item.relationship}`);
+    const source = node("div", "requirement-evidence-source");
+    const sourceInfo = sourceRecord(item.source_id);
+    source.append(sourceIdentity(sourceInfo || { id: item.source_id, name: item.source_name }), node("small", "tabular", formatDate(item.published_at)));
+    const copy = node("div", "requirement-evidence-copy");
+    copy.append(linkOrText(item));
+    if (item.exclusion_reason) copy.append(node("p", "evidence-reason", item.exclusion_reason));
+    const disposition = node("div", "requirement-evidence-disposition");
+    disposition.append(badge(relationshipLabel(item.relationship), item.relationship));
+    if (item.dimensions.length) disposition.append(node("small", "", item.dimensions.map(label).join(" · ")));
+    row.append(source, copy, disposition);
+    evidenceList.append(row);
+  }
+  evidenceSection.append(evidenceBoundary, evidenceList, analysisLink);
+
+  detail.replaceChildren(head, explanation, practice, dimensions, judgment, evidenceSection);
 }
 
 function renderAnalysisIndex() {
@@ -1057,6 +1223,7 @@ function populateFilters() {
 
 function renderAll() {
   renderOverview();
+  renderOperatingModel();
   renderAnalyses();
   if (!state.selectedTheme) state.selectedTheme = state.research.themes[0]?.id || "";
   renderThemes();
@@ -1071,6 +1238,7 @@ function routeFromHash() {
   state.route = route;
   if (route === "themes" && parts[1]) state.selectedTheme = parts[1];
   if (route === "analyses" && parts[1]) state.selectedAnalysis = parts[1];
+  if (route === "operating-model" && parts[1]) state.selectedRequirement = parts[1];
   for (const view of document.querySelectorAll("[data-view]")) view.hidden = view.dataset.view !== route;
   for (const link of document.querySelectorAll("[data-route]")) link.setAttribute("aria-current", link.dataset.route === route ? "page" : "false");
   const [eyebrow, title] = routeTitles[route];
@@ -1079,6 +1247,7 @@ function routeFromHash() {
   if (state.research) {
     if (route === "themes") renderThemes();
     if (route === "analyses") renderAnalyses();
+    if (route === "operating-model") renderOperatingModel();
   }
   window.scrollTo(0, 0);
 }
@@ -1122,6 +1291,13 @@ function bindControls() {
       renderAnalyses();
       $("#analysis-detail").focus({ preventScroll: true });
     }
+    const requirement = event.target.closest("[data-requirement-id]");
+    if (requirement) {
+      state.selectedRequirement = requirement.dataset.requirementId;
+      history.replaceState(null, "", `#operating-model/${state.selectedRequirement}`);
+      renderOperatingModel();
+      $("#requirement-detail").focus({ preventScroll: true });
+    }
     const toggle = event.target.closest(".detail-toggle");
     if (toggle) toggleDetail(toggle);
     const signalJump = event.target.closest("[data-signal-id]");
@@ -1138,13 +1314,17 @@ function bindControls() {
 async function load() {
   $("#load-failure").hidden = true;
   $("#sidebar-state").textContent = "Loading research";
-  const [researchResult, alphaResult] = await Promise.allSettled([
+  const [researchResult, alphaResult, operatingResult] = await Promise.allSettled([
     fetch("./data/research.json", { cache: "no-store" }).then((response) => {
       if (!response.ok) throw new Error(`Cross-source dataset returned ${response.status}.`);
       return response.json();
     }),
     fetch("./data/alphasignal-research.json", { cache: "no-store" }).then((response) => {
       if (!response.ok) throw new Error(`AlphaSignal detail returned ${response.status}.`);
+      return response.json();
+    }),
+    fetch("./data/operating-model.json", { cache: "no-store" }).then((response) => {
+      if (!response.ok) throw new Error(`Operating model returned ${response.status}.`);
       return response.json();
     }),
   ]);
@@ -1157,6 +1337,7 @@ async function load() {
   }
   state.research = researchResult.value;
   state.alpha = alphaResult.status === "fulfilled" ? alphaResult.value : null;
+  state.operatingModel = operatingResult.status === "fulfilled" ? operatingResult.value : null;
   populateFilters();
   renderAll();
   routeFromHash();

@@ -17,6 +17,23 @@ maturity_order:
   - established
   - baseline
 
+maturity_definitions:
+  narrative:
+    description: A named operating idea with market or editorial attention, but insufficient technical and operational proof.
+    recommended_posture: Watch and investigate; do not standardize around it yet.
+  experimental:
+    description: The pattern is technically credible and can be prototyped, but repeatable production adoption is not established.
+    recommended_posture: Test it in a bounded workflow with explicit success and stop conditions.
+  emerging:
+    description: Technical evidence and independent operational use justify selective adoption, although important uncertainties remain.
+    recommended_posture: Adopt selectively, instrument outcomes, and preserve an exit path.
+  established:
+    description: Repeated independent deployments show persistent technical and operational value.
+    recommended_posture: Make it part of the standard operating stack unless the local context provides contrary evidence.
+  baseline:
+    description: The cost of absence is evidenced and a practical minimum implementation can be specified.
+    recommended_posture: Treat the minimum implementation as a default operating requirement.
+
 relationship_types:
   direct-support:
     promotion_eligible: true

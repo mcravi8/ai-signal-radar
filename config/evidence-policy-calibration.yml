@@ -4,7 +4,18 @@ dataset: data/public/research.json
 
 cases:
   - id: evaluation-release-gates
+    title: Evaluation and release gates
     requirement: Consequential AI workflows require evaluation and release gates.
+    description: >-
+      AI-generated work should not move directly from a model response into a consequential
+      action. A separate release layer checks whether the result is correct enough, policy
+      compliant, and safe to commit, send, publish, or execute. The gate can be automated for
+      routine work and escalate uncertain or high-impact cases to a person.
+    what_it_looks_like:
+      - Maintain representative tasks, expected outcomes, and failure cases for every consequential workflow.
+      - Run deterministic checks, model-based evaluations, and policy rules before external side effects.
+      - Log the evidence behind release decisions and retain rollback or human-escalation paths.
+    applicable_to: Startups deploying agents or generated outputs that can change code, data, money, customer communication, or production systems.
     source_analysis: early-signal-tracker/validation-as-release
     evidence_links:
       - evidence_id: arxiv:2609.16305
@@ -64,7 +75,18 @@ cases:
       - A systematic search for cases where conventional testing and access controls were sufficient.
 
   - id: heterogeneous-model-routing
+    title: Heterogeneous model routing
     requirement: AI systems should route work across heterogeneous models and inference paths.
+    description: >-
+      Instead of treating one frontier model as the entire product architecture, a routing
+      layer selects the model, runtime, or deterministic path that best fits each task. The
+      decision can account for quality, latency, privacy, capacity, and cost, while preserving
+      fallbacks when a provider or specialized model fails.
+    what_it_looks_like:
+      - Define task classes and service objectives rather than sending every request to the same endpoint.
+      - Compare models using accepted-output quality, latency, and total cost for each task class.
+      - Add fallbacks, caching, capacity limits, and drift monitoring around the routing decision.
+    applicable_to: Startups with meaningful inference volume, distinct task types, privacy constraints, or reliability requirements.
     source_analysis: early-signal-tracker/heterogeneous-inference
     evidence_links:
       - evidence_id: hf-paper:2609.18063
@@ -125,7 +147,18 @@ cases:
       - Evidence that routing complexity remains worthwhile after maintenance and fallback costs.
 
   - id: ai-native-gtm
+    title: AI-native GTM systems
     requirement: Startups should operate closed-loop AI-native GTM systems that sense, decide, and act across revenue workflows.
+    description: >-
+      An AI-native go-to-market system would do more than generate sales or marketing content.
+      It would continuously observe demand signals, decide what action is appropriate, execute
+      approved steps across revenue tools, and write the outcome back to the system of record.
+      The loop should make attribution and human accountability clearer, not obscure them.
+    what_it_looks_like:
+      - Start with one bounded motion such as inbound qualification, account research, or content refresh.
+      - Use explicit triggers, approval boundaries, CRM writes, and attribution rather than an open-ended sales agent.
+      - Measure pipeline contribution, cycle time, intervention rate, and false-action cost.
+    applicable_to: Startups with repeatable revenue workflows and reliable systems-of-record; not a substitute for product-market fit or GTM judgment.
     source_analysis: operator-narratives/ai-native-gtm-watch
     evidence_links:
       - evidence_id: greylock-essays:32b264a22d3e04806ae3
@@ -166,7 +199,18 @@ cases:
       - Evidence from publishers unrelated to the investor announcements.
 
   - id: modular-agent-operating-stack
+    title: Modular agent operating stack
     requirement: AI systems should separate models, orchestration, reusable skills, execution environments, and assurance controls into replaceable operating layers.
+    description: >-
+      The model becomes one replaceable component inside a larger operating system for agents.
+      The harness controls the loop, skills package repeatable actions, sandboxes constrain
+      execution, interfaces expose progress to people, and assurance controls decide what may
+      proceed. Separating these responsibilities makes behavior easier to test and change.
+    what_it_looks_like:
+      - Keep model adapters separate from orchestration state and workflow control logic.
+      - Version reusable skills and tool permissions independently from prompts and model releases.
+      - Run actions in bounded environments with traces, evaluations, approval gates, and rollback.
+    applicable_to: Startups operating multiple agent workflows or consequential agents; simple trusted scripts may not benefit from every layer.
     source_analysis: early-signal-tracker/modular-agent-stack
     evidence_links:
       - evidence_id: aws-machine-learning-blog:5d4f323bd0d514800a8a
@@ -233,7 +277,18 @@ cases:
       - Longer persistence showing that interfaces remain portable as models and runtimes change.
 
   - id: shared-operational-context
+    title: Shared operational context
     requirement: AI systems operating across organizational data should use a shared semantic and operational context layer instead of rebuilding retrieval and schemas for every workflow.
+    description: >-
+      Multiple agents need a consistent understanding of the organization's entities,
+      relationships, permissions, and current state. A shared context layer combines retrieval
+      with governed semantics and operational state, so each workflow does not invent a
+      different definition of the same customer, contract, incident, or task.
+    what_it_looks_like:
+      - Give important entities stable identifiers, relationships, provenance, and permission rules.
+      - Expose current state through governed retrieval or tools rather than copying documents into every prompt.
+      - Track freshness, writes, and conflicts so agents can act on shared context without silently diverging.
+    applicable_to: Startups running several agents over overlapping business data; a single narrow workflow may be better served by simpler retrieval.
     source_analysis: early-signal-tracker/operational-context
     evidence_links:
       - evidence_id: arxiv:2609.20754v1
@@ -300,7 +355,18 @@ cases:
       - Counterevidence from simpler retrieval systems that achieve comparable outcomes without a shared ontology.
 
   - id: bounded-workflow-ownership
+    title: Bounded workflow ownership
     requirement: AI products should own bounded workflows with explicit completion states, exception routing, and outcome metrics.
+    description: >-
+      The product is responsible for moving a clearly defined piece of work from trigger to
+      verified completion, not merely suggesting the next step in a chat. Ownership remains
+      bounded: the system knows its permitted actions, terminal state, escalation conditions,
+      and the business outcome against which it will be judged.
+    what_it_looks_like:
+      - Define the trigger, allowed actions, system-of-record writes, and objective terminal state.
+      - Make retries idempotent and route policy exceptions or low-confidence cases to a named owner.
+      - Measure completed work, intervention rate, error cost, cycle time, and the downstream business outcome.
+    applicable_to: Startups automating repeatable workflows with observable completion; ambiguous or high-liability work may remain assistive.
     source_analysis: operator-narratives/workflow-ownership
     evidence_links:
       - evidence_id: sequoia-essays:afde56cfaaeb81f69523

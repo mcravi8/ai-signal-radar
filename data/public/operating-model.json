@@ -1,0 +1,1105 @@
+{
+  "meta": {
+    "title": "AI-Native Startup Operating Model evidence policy",
+    "generated_at": "2026-09-22T21:41:34.398196+00:00",
+    "as_of": "2026-09-22",
+    "policy_version": 1,
+    "requirement_count": 6,
+    "maturity_counts": {
+      "narrative": 2,
+      "experimental": 3,
+      "emerging": 1,
+      "established": 0,
+      "baseline": 0
+    }
+  },
+  "purpose": "Assess startup operating requirements without allowing attention, funding, or repeated reporting to masquerade as technical or operational proof.",
+  "maturity_order": [
+    "narrative",
+    "experimental",
+    "emerging",
+    "established",
+    "baseline"
+  ],
+  "maturity_definitions": {
+    "narrative": {
+      "description": "A named operating idea with market or editorial attention, but insufficient technical and operational proof.",
+      "recommended_posture": "Watch and investigate; do not standardize around it yet."
+    },
+    "experimental": {
+      "description": "The pattern is technically credible and can be prototyped, but repeatable production adoption is not established.",
+      "recommended_posture": "Test it in a bounded workflow with explicit success and stop conditions."
+    },
+    "emerging": {
+      "description": "Technical evidence and independent operational use justify selective adoption, although important uncertainties remain.",
+      "recommended_posture": "Adopt selectively, instrument outcomes, and preserve an exit path."
+    },
+    "established": {
+      "description": "Repeated independent deployments show persistent technical and operational value.",
+      "recommended_posture": "Make it part of the standard operating stack unless the local context provides contrary evidence."
+    },
+    "baseline": {
+      "description": "The cost of absence is evidenced and a practical minimum implementation can be specified.",
+      "recommended_posture": "Treat the minimum implementation as a default operating requirement."
+    }
+  },
+  "dimension_rules": {
+    "technical_reality": {
+      "not-observed": "No qualifying technical evidence.",
+      "low": "One unverified claim, prototype, paper, or artifact.",
+      "moderate": "Multiple technical records or one substantial implementation with tests or benchmarks.",
+      "strong": "Several independent implementations, credible benchmarks, or production-grade technical evidence without an unresolved fatal limitation."
+    },
+    "operational_adoption": {
+      "not-observed": "No evidence of real workflow use.",
+      "low": "A demo, stated intention, job posting, benchmark environment, or one vendor-reported deployment.",
+      "moderate": "At least two organizations use it in real workflows, including one detailed implementation account.",
+      "strong": "Repeated independent deployments show measured outcomes, persistence, and operational ownership."
+    },
+    "market_pull": {
+      "not-observed": "No observed market activity.",
+      "low": "A category is named or one product, company, or funding event appears.",
+      "moderate": "Multiple independent companies, funding events, customer signals, or buying signals appear.",
+      "strong": "Company formation persists alongside customer, adoption, or revenue evidence."
+    },
+    "evidence_independence": {
+      "not-observed": "No qualifying evidence.",
+      "low": "One source family or evidence concentrated around one publisher or organization.",
+      "moderate": "Two or three independent evidence families with limited concentration.",
+      "strong": "At least four families, including technical and operator or customer evidence, without one publisher dominating."
+    }
+  },
+  "relationship_types": {
+    "direct-support": {
+      "promotion_eligible": true,
+      "description": "Directly demonstrates or tests the requirement."
+    },
+    "supporting-context": {
+      "promotion_eligible": false,
+      "description": "Makes the requirement more plausible but cannot promote it alone."
+    },
+    "counterevidence": {
+      "promotion_eligible": false,
+      "description": "Contradicts the requirement or exposes an important limitation."
+    },
+    "discovery-only": {
+      "promotion_eligible": false,
+      "description": "Identifies a lead but supplies no qualifying proof."
+    },
+    "excluded": {
+      "promotion_eligible": false,
+      "description": "Irrelevant, duplicated, misclassified, or otherwise non-qualifying."
+    }
+  },
+  "guardrails": [
+    {
+      "id": "no-single-score-promotion",
+      "rule": "No weighted total can bypass a failed maturity gate."
+    },
+    {
+      "id": "no-attention-as-proof",
+      "rule": "Funding, mentions, engagement, newsletters, and social attention cannot prove technical reality or operational adoption."
+    },
+    {
+      "id": "analyses-are-not-independent",
+      "rule": "An analysis inherits the independence of its underlying evidence and never counts as an additional source."
+    },
+    {
+      "id": "deduplicate-events",
+      "rule": "Syndicated coverage, newsletter summaries, and repeated reporting of one launch, paper, repository, deployment, or funding round count as one event."
+    },
+    {
+      "id": "counterevidence-cap",
+      "rule": "Confidence cannot be high until counterevidence has been explicitly reviewed."
+    },
+    {
+      "id": "concentration-cap",
+      "rule": "High source concentration caps evidence independence at low and confidence at moderate."
+    },
+    {
+      "id": "stage-is-separate",
+      "rule": "Company-stage posture never changes evidence maturity; it changes only the recommended implementation."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "modular-agent-operating-stack",
+      "title": "Modular agent operating stack",
+      "requirement": "AI systems should separate models, orchestration, reusable skills, execution environments, and assurance controls into replaceable operating layers.",
+      "description": "The model becomes one replaceable component inside a larger operating system for agents. The harness controls the loop, skills package repeatable actions, sandboxes constrain execution, interfaces expose progress to people, and assurance controls decide what may proceed. Separating these responsibilities makes behavior easier to test and change.",
+      "what_it_looks_like": [
+        "Keep model adapters separate from orchestration state and workflow control logic.",
+        "Version reusable skills and tool permissions independently from prompts and model releases.",
+        "Run actions in bounded environments with traces, evaluations, approval gates, and rollback."
+      ],
+      "applicable_to": "Startups operating multiple agent workflows or consequential agents; simple trusted scripts may not benefit from every layer.",
+      "source_analysis": "early-signal-tracker/modular-agent-stack",
+      "maturity": "emerging",
+      "confidence": "moderate",
+      "concentration": "moderate",
+      "assessments": {
+        "evidence_independence": "moderate",
+        "market_pull": "moderate",
+        "operational_adoption": "moderate",
+        "technical_reality": "strong"
+      },
+      "rationale": "Independent technical artifacts show that harness, skill, execution, and assurance components can be separated, while Wood Mackenzie and Benchling provide two detailed production deployments. Operational evidence is still concentrated in AWS-published case studies, so adoption and independence do not yet qualify as strong.",
+      "next_gate": {
+        "maturity": "established",
+        "failures": [
+          "operational_adoption is moderate; requires strong",
+          "evidence_independence is moderate; requires strong"
+        ]
+      },
+      "evidence_gaps": [
+        "Production accounts published outside a single infrastructure vendor's channel.",
+        "Comparative evidence on when modular interfaces reduce switching cost enough to offset orchestration complexity.",
+        "Longer persistence showing that interfaces remain portable as models and runtimes change."
+      ],
+      "evidence": [
+        {
+          "id": "aws-machine-learning-blog:5d4f323bd0d514800a8a",
+          "event_id": "wood-mackenzie-apex-platform",
+          "title": "A shared agentic platform for Wood Mackenzie, on Amazon Bedrock AgentCore",
+          "summary": "Wood Mackenzie built APEX, a shared agentic AI platform on Amazon Bedrock AgentCore so every team can ship production agents without rebuilding runtime, identity, observability, and guardrails from scratch. Learn why they chose AgentCore, how APEX Studio operates it, and where multi-agent systems go next.",
+          "url": "https://aws.amazon.com/blogs/machine-learning/a-shared-agentic-platform-for-wood-mackenzie-on-amazon-bedrock-agentcore/",
+          "published_at": "2026-09-17T15:41:03+00:00",
+          "source_id": "aws-machine-learning-blog",
+          "source_name": "AWS Machine Learning Blog",
+          "source_type": "first-party-lab",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "aws-machine-learning-blog:2335ca1a4875d9c28b23",
+          "event_id": "benchling-agentcore-isolation",
+          "title": "How Benchling secured multi-tenant AI agents with Amazon Bedrock AgentCore",
+          "summary": "Learn how Benchling built a defense-in-depth security architecture to run untrusted, AI agent-generated scientific code across thousands of life sciences tenants using Amazon Bedrock AgentCore Code Interpreter in VPC mode, combined with Amazon Route 53 Resolver DNS Firewall and VPC endpoint policies to block data exfiltration, including through DNS.",
+          "url": "https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/",
+          "published_at": "2026-09-21T16:27:34+00:00",
+          "source_id": "aws-machine-learning-blog",
+          "source_name": "AWS Machine Learning Blog",
+          "source_type": "first-party-lab",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.20519v1",
+          "event_id": "sol-pi-agent-harness",
+          "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+          "summary": "As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms survive selection and form SoL-Pi, spanning action execution, context compaction, observation handling, and delegated reading. On the 51-task EdgeBench evaluation, SoL-Pi achieves performance comparable to Pi across GPT-5.6 Sol and Opus 5 while reducing recorded token traffic by 44.7-49.0% and API cost by about one third. In other words, estimated hourly savings are \\$8.75-\\$13.50 relative to native Codex and Claude Code harnesses, and \\$4.36-\\$5.71 relative to Pi.",
+          "url": "http://arxiv.org/abs/2609.20519v1",
+          "published_at": "2026-09-17T14:58:29Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "hf-paper:2609.20519",
+          "event_id": "sol-pi-agent-harness",
+          "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+          "summary": "As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms survive selection and form SoL-Pi, spanning action execution, context compaction, observation handling, and delegated reading. On the 51-task EdgeBench evaluation, SoL-Pi achieves performance comparable to Pi across GPT-5.6 Sol and Opus 5 while reducing recorded token traffic by 44.7-49.0% and API cost by about one third. In other words, estimated hourly savings are \\8.75-13.50 relative to native Codex and Claude Code harnesses, and \\4.36-5.71 relative to Pi.",
+          "url": "https://huggingface.co/papers/2609.20519",
+          "published_at": "2026-09-17T00:00:00+00:00",
+          "source_id": "huggingface-papers",
+          "source_name": "Hugging Face Daily Papers",
+          "source_type": "paper-curation",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.20474v1",
+          "event_id": "harness-value-experiments",
+          "title": "How Do Agent Harnesses Create Value? Planning Information and Release Control in Stateful LLM Agents",
+          "summary": "Agent harnesses supply planning guidance, organize execution, and check completion. We study how these components affect success, erroneous acceptance, and cost in two Retail experiments and an Airline pilot in $τ^2$-bench. The primary comparison pairs prewritten task-specific plans (Fixed) with shuffled policy text matched in word count (Sham), isolating the contribution of guidance content. Across 265 matched cells, Fixed improves oracle-verified success by 7.17 percentage points (90\\% task-clustered bootstrap interval, 1.15--13.36 points), with gains concentrated in higher-complexity tasks. A read-only terminal verifier rejects 61\\% of Retail oracle-invalid episodes while withholding 17\\% of correct ones, at less than one cent of additional cost per episode. Which component matters more depends on the loss assigned to erroneous acceptance: at low liability the planning gain dominates; at high liability the verifier's avoided false passes dominate---and a standalone verifier captures nearly all the false-pass benefit of the full planning-plus-verification stack at a fraction of its cost.",
+          "url": "http://arxiv.org/abs/2609.20474v1",
+          "published_at": "2026-09-17T14:30:14Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "github:1365776373",
+          "event_id": "dscode-agent-harness",
+          "title": "qiz029/dscode",
+          "summary": "A DeepSeek coding agent harness: persistent shell, Ultra subagents, auto approval, Chrome MCP and session telemetry",
+          "url": "https://github.com/qiz029/dscode",
+          "published_at": "2026-09-11T09:40:02Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+          "event_id": "alphasignal-modular-stack-synthesis",
+          "title": "Skills, plugins, MCP and harnesses",
+          "summary": "Reusable capabilities and interoperable tool layers became a distinct platform layer around models.",
+          "url": "",
+          "published_at": "2026-09-21",
+          "source_id": "alphasignal",
+          "source_name": "AlphaSignal",
+          "source_type": "newsletter-analysis",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "greylock-essays:aacd57b6bec14e3c9da1",
+          "event_id": "rogue-agent-runtime-narrative",
+          "title": "Rogue Agents: Deciphering Agent Intent",
+          "summary": "An effective solution for understanding and managing an agent’s intent requires a runtime system that learns normal agent behavior, detects meaningful deviation, and intervenes precisely enough to stay trusted.",
+          "url": "https://greylock.com/blog/rogue-agents-deciphering-agent-intent/",
+          "published_at": "2026-09-10T15:00:00+00:00",
+          "source_id": "greylock-essays",
+          "source_name": "Greylock essays",
+          "source_type": "investor-essay",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "operational_adoption",
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "hn:49779329",
+          "event_id": "mcp-complexity-critique",
+          "title": "MCP was always a bad idea?",
+          "summary": "",
+          "url": "https://maharship.com/blog/why-mcp-was-always-a-bad-idea/",
+          "published_at": "2026-09-20T19:44:40+00:00",
+          "source_id": "hacker-news",
+          "source_name": "Hacker News",
+          "source_type": "community",
+          "relationship": "counterevidence",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        }
+      ],
+      "gate_inputs": {
+        "qualifying_events": 5,
+        "technical_artifacts": 5,
+        "independent_organizations": 4,
+        "persistence_cycles": 3,
+        "counterevidence_reviewed": true,
+        "cost_of_absence_evidenced": false,
+        "practical_minimum_available": true
+      }
+    },
+    {
+      "id": "evaluation-release-gates",
+      "title": "Evaluation and release gates",
+      "requirement": "Consequential AI workflows require evaluation and release gates.",
+      "description": "AI-generated work should not move directly from a model response into a consequential action. A separate release layer checks whether the result is correct enough, policy compliant, and safe to commit, send, publish, or execute. The gate can be automated for routine work and escalate uncertain or high-impact cases to a person.",
+      "what_it_looks_like": [
+        "Maintain representative tasks, expected outcomes, and failure cases for every consequential workflow.",
+        "Run deterministic checks, model-based evaluations, and policy rules before external side effects.",
+        "Log the evidence behind release decisions and retain rollback or human-escalation paths."
+      ],
+      "applicable_to": "Startups deploying agents or generated outputs that can change code, data, money, customer communication, or production systems.",
+      "source_analysis": "early-signal-tracker/validation-as-release",
+      "maturity": "experimental",
+      "confidence": "moderate",
+      "concentration": "high",
+      "assessments": {
+        "evidence_independence": "low",
+        "market_pull": "low",
+        "operational_adoption": "low",
+        "technical_reality": "strong"
+      },
+      "rationale": "Several independent technical systems make the requirement technically real, but the sampled corpus does not contain independent production deployments with measured operating outcomes. Research and engineering evidence dominate.",
+      "next_gate": {
+        "maturity": "emerging",
+        "failures": [
+          "operational_adoption is low; requires moderate",
+          "evidence_independence is low; requires moderate",
+          "counterevidence_reviewed is False; requires True"
+        ]
+      },
+      "evidence_gaps": [
+        "Independent production reports with intervention, rollback, or incident metrics.",
+        "A systematic search for cases where conventional testing and access controls were sufficient."
+      ],
+      "evidence": [
+        {
+          "id": "arxiv:2609.16305",
+          "event_id": "blindspot-benchmark",
+          "title": "BLINDSPOT: A Benchmark for Safety and Refusal Calibration in Long-Horizon Tool-Using Agents",
+          "summary": "Introduces a trajectory-level benchmark for long-horizon tool-using agents, measuring safe completion, correct refusal, unsafe completion, over-refusal, indeterminate outcomes, and failures that emerge only after multiple stateful steps.",
+          "url": "https://arxiv.org/abs/2609.16305",
+          "published_at": "2026-09-14T20:12:27Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "github:1370498337",
+          "event_id": "blindspot-benchmark",
+          "title": "sadia-sigma-lab/BLINDSPOT",
+          "summary": "Live Benchmark for long Horizon tool using Agentic Systems",
+          "url": "https://github.com/sadia-sigma-lab/BLINDSPOT",
+          "published_at": "2026-09-14T20:03:08Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.20625v1",
+          "event_id": "chronicle-regression-testing",
+          "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+          "summary": "Large language model responses are non-deterministic, so failures in LLM agents are hard to reproduce: a failure depends on inference that is not bitwise reproducible, on tools that read changing state, and on a multi-step trajectory that a re-run rarely repeats. Record-and-replay makes a run reproducible, but existing agent tooling records runs only to trace or score them, not to test a code change against them. We present Chronicle, which records an agent run at its non-deterministic boundaries as immutable envelopes and replays it from the record. Its central operation, cut-point replay, serves a chosen subset of boundaries from the record and executes the complementary subset live with new code, turning a recorded incident into a regression test that runs in continuous integration. On a benchmark of 6 recorded failures with simulated model boundaries, recording adds 23 μs per crossing (0.008% of an assumed 300 ms model call), full replay issues zero model calls and is bit-stable across 20 repetitions, and cut-point tests fail on faulty code and pass on guarded and benign changes for all 6 incidents. In a mutation study of the guarded tools, cut-point tests catch every mutant th",
+          "url": "http://arxiv.org/abs/2609.20625v1",
+          "published_at": "2026-09-17T16:09:57Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.21841v1",
+          "event_id": "enterpriseval-evaluation-system",
+          "title": "EnterpriseVal: Quantifying the Efficacy, Reliability and Value of Generative AI in the Enterprise",
+          "summary": "Frontier language models now produce professional deliverables that expert graders judge to match human work on a substantial share of economically valuable tasks, yet most enterprise GenAI initiatives fail to show a measurable business effect and a large fraction of agentic projects are expected to be cancelled. We argue that this is substantially a measurement problem: public benchmarks answer \"what can the model do?\", whereas a deployment decision requires \"is this workflow fit, reliable, safe and worth scaling - here, on our data, under our controls?\". We present EnterpriseVal, a use-case-level evaluation system that closes this gap. It comprises (i) a formal specification of the use case and of the frozen socio-technical configuration under test, model, prompts, retrieval, tools, guardrails and human oversight, with an autonomy level and consequence tier that jointly set the required evaluation intensity; (ii) a metric catalogue spanning fidelity, utility, efficiency, reliability, assurance and oversight; (iii) a grading protocol that scales blinded expert judgement with calibrated LLM-as-judge scoring through prediction-powered inference; (iv) a two-tier threshold gate, state",
+          "url": "http://arxiv.org/abs/2609.21841v1",
+          "published_at": "2026-09-18T14:39:26Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.22068v1",
+          "event_id": "codemidas-verifiers",
+          "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
+          "summary": "Training capable coding agents via reinforcement learning (RL) requires diverse tasks with reliable verifiers. Open-source codebases offer a rich source of such tasks, while existing methods typically rely on development artifacts such as issues and commits, limiting the range of tasks that can be extracted. To better scale RL environments, we present CodeMidas, an agentic pipeline that turns implemented functionality in existing codebases into executable RL environments using source code as its only task-specific input. CodeMidas allocates agentic compute to every stage of environment construction: agents explore implemented functionality to formulate behavioral specifications, construct tests grounded in execution of the original code, and validate and filter candidate tasks through execution checks and repeated solution rollouts. The resulting dataset has 5,545 training tasks from 3,185 open-source codebases spanning 23 programming languages and 15 technical domains. Training MiMo-V2.5 on these tasks with GRPO improves performance on all five diverse benchmarks, covering issue repair (DeepSWE + 11.7%), whole-program construction (ProgramBench +17%), and terminal work (Terminal-B",
+          "url": "http://arxiv.org/abs/2609.22068v1",
+          "published_at": "2026-09-18T17:55:17Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "alphasignal:trend:validation-and-release-bottlenecks",
+          "event_id": "alphasignal-validation-synthesis",
+          "title": "Validation and release bottlenecks",
+          "summary": "As agents generated more output, testing, review, observability and trustworthy deployment became the limiting layer.",
+          "url": "",
+          "published_at": "2026-09-21",
+          "source_id": "alphasignal",
+          "source_name": "AlphaSignal",
+          "source_type": "newsletter-analysis",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "hf-paper:2609.14858",
+          "event_id": "dream-rsi-paper",
+          "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+          "summary": "Recursive self-improvement is becoming increasingly vital for autonomous AI agents, where progress hinges on discovering high-value solutions across complex domains. The driver of this process is effective exploration, however, managing and improving exploration strategies remains a major bottleneck. Current systems face a fundamental dilemma: fixed strategies fail to adapt as search spaces scale, while online policy optimization requires navigating vast meta-search spaces under delayed and expensive feedback over long-horizon rollouts. We introduce Dream-RSI, a framework for scalable and recursively self-improving exploration. A lightweight orchestration layer makes exploration explicit and programmable while leaving the underlying coding agent unchanged. Our key insight is that accumulated discovery history can serve as a replay simulator over the realized search space. By performing dreaming in the replay simulator constructed from historical discovery trees, Dream-RSI secures immediate, low-cost off-policy feedback to evaluate and refine exploration policies without invoking repetitive, expensive online evaluations. The improved policy is subsequently redeployed online to drive",
+          "url": "https://huggingface.co/papers/2609.14858",
+          "published_at": "2026-09-14T00:00:00+00:00",
+          "source_id": "huggingface-papers",
+          "source_name": "Hugging Face Daily Papers",
+          "source_type": "paper-curation",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        },
+        {
+          "id": "the-batch:2622ee409c0a925f8cee",
+          "event_id": "batch-coding-agents-roundup",
+          "title": "Inside Key Changes in Data Policies, Ox Alpha Revealed, Taking Custom Models Beyond Fine-Tuning",
+          "summary": "The Batch News & Insights: A key AI engineering skill is using coding agents.",
+          "url": "https://www.deeplearning.ai/the-batch/issue-369",
+          "published_at": "2026-09-04T07:00:31.000-07:00",
+          "source_id": "the-batch",
+          "source_name": "The Batch",
+          "source_type": "curated-newsletter",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        }
+      ],
+      "gate_inputs": {
+        "qualifying_events": 3,
+        "technical_artifacts": 3,
+        "independent_organizations": 3,
+        "persistence_cycles": 1,
+        "counterevidence_reviewed": false,
+        "cost_of_absence_evidenced": false,
+        "practical_minimum_available": true
+      }
+    },
+    {
+      "id": "heterogeneous-model-routing",
+      "title": "Heterogeneous model routing",
+      "requirement": "AI systems should route work across heterogeneous models and inference paths.",
+      "description": "Instead of treating one frontier model as the entire product architecture, a routing layer selects the model, runtime, or deterministic path that best fits each task. The decision can account for quality, latency, privacy, capacity, and cost, while preserving fallbacks when a provider or specialized model fails.",
+      "what_it_looks_like": [
+        "Define task classes and service objectives rather than sending every request to the same endpoint.",
+        "Compare models using accepted-output quality, latency, and total cost for each task class.",
+        "Add fallbacks, caching, capacity limits, and drift monitoring around the routing decision."
+      ],
+      "applicable_to": "Startups with meaningful inference volume, distinct task types, privacy constraints, or reliability requirements.",
+      "source_analysis": "early-signal-tracker/heterogeneous-inference",
+      "maturity": "experimental",
+      "confidence": "moderate",
+      "concentration": "moderate",
+      "assessments": {
+        "evidence_independence": "moderate",
+        "market_pull": "low",
+        "operational_adoption": "low",
+        "technical_reality": "moderate"
+      },
+      "rationale": "Adaptive routing and heterogeneous inference are demonstrated technically, but the selected evidence does not establish repeatable production adoption or superior operating economics across independent companies.",
+      "next_gate": {
+        "maturity": "emerging",
+        "failures": [
+          "operational_adoption is low; requires moderate",
+          "counterevidence_reviewed is False; requires True"
+        ]
+      },
+      "evidence_gaps": [
+        "Production comparisons of quality, latency, failure rate, and cost per accepted outcome.",
+        "Evidence that routing complexity remains worthwhile after maintenance and fallback costs."
+      ],
+      "evidence": [
+        {
+          "id": "hf-paper:2609.18063",
+          "event_id": "edge0-routing-prediction",
+          "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+          "summary": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's routing one token ahead, and the prediction is consumed as the routing itself, so the staged expert set equals the routed set and nothing is dropped. An unmerged recovery LoRA, trained on the student path, pays back the quality lost to int4 quantization and routing replacement. On a single 24GB machine, Edge0\n  serves a 35B MoE at 20tok/s inside 3GiB of peak active memory, within a few points of its fp16 teacher on average across five public benchmarks. An 8B tier runs on the same framework, and the framework, checkpoints, and adapters are open source.",
+          "url": "https://huggingface.co/papers/2609.18063",
+          "published_at": "2026-09-16T00:00:00+00:00",
+          "source_id": "huggingface-papers",
+          "source_name": "Hugging Face Daily Papers",
+          "source_type": "paper-curation",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.21704v1",
+          "event_id": "specquant-adaptive-routing",
+          "title": "SpecQuant: Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference",
+          "summary": "Running large language models (LLMs) locally continues to be limited by restrictions of compute and memory on consumer hardware. The popular acceleration technologies, such as quantization, speculative decoding, and adaptive inferencing, offer substantial speed boosts but usually necessitate retraining, per architecture tuning, or draft models. SpecQuant is a trainingfree framework, that combines speculative decoding with multiparent quantization to perform adaptive, efficient inference of LLMs. SpecQuant derives multiple quantized variants (INT4, FP8, FP16) from a shared base model, and dynamically routes queries based on predicted complexity; lightweight variants are used for simple or factual tasks, and full-precision models are used for complex reasoning tasks or long-context inputs. The shared-weight design of SpecQuant ensures sufficient token acceptance for speculative decoding without compatibility issues using separate draft parent models. We evaluate SpecQuant on Qwen2.5 based models on the MMLU, AlpacaEval, and GSM8K datasets, or benchmarks, demonstrating 35-43% speedups without degrading accuracy greater than 2%, substantial within the LLM community. SpecQuant enables p",
+          "url": "http://arxiv.org/abs/2609.21704v1",
+          "published_at": "2026-09-18T12:39:47Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "github:1375922101",
+          "event_id": "jev-ecosystem-index",
+          "title": "wh000wh000/awesome-jev-live",
+          "summary": "Awesome Jev — evidence-graded index of TypeSafe System One: SDKs, MCP tools, agents, apps and open models. 20 languages, rebuilt every 2 hours.",
+          "url": "https://github.com/wh000wh000/awesome-jev-live",
+          "published_at": "2026-09-18T13:37:03Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality",
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "alphasignal:trend:open-local-models-and-inference-efficiency",
+          "event_id": "alphasignal-efficient-inference-synthesis",
+          "title": "Open/local models and inference efficiency",
+          "summary": "Open weights, MoE, quantization, local and on-device inference repeatedly reduced cost and deployment constraints.",
+          "url": "",
+          "published_at": "2026-09-21",
+          "source_id": "alphasignal",
+          "source_name": "AlphaSignal",
+          "source_type": "newsletter-analysis",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "interconnects:9347a64bc25f44ccdf21",
+          "event_id": "interconnects-open-model-recap",
+          "title": "Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC speech, distillation, the open-closed gap, and what's next",
+          "summary": "A podcast with Florian Brand.",
+          "url": "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3",
+          "published_at": "2026-07-22T14:09:04+00:00",
+          "source_id": "interconnects",
+          "source_name": "Interconnects",
+          "source_type": "expert-newsletter",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "bluesky:e810fac7fd93:3mtmlkcbuoc2x",
+          "event_id": "open-model-reading-request",
+          "title": "What's the best work you've consumed on open models, us v china AI, distillation, or related topics? Blogs, papers, videos, podcasts all welcome.",
+          "summary": "",
+          "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mtmlkcbuoc2x",
+          "published_at": "2026-08-21T20:21:09.535Z",
+          "source_id": "bluesky-nathan-lambert",
+          "source_name": "Nathan Lambert on Bluesky",
+          "source_type": "expert-social",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        },
+        {
+          "id": "hn:49736660",
+          "event_id": "jev-community-claim",
+          "title": "Open-sourced jev architecture last year with model,paper and dataset",
+          "summary": "Everyone now talks about the architecture that&#x27;s not auto regressive and does lightning fast probability prediction with a json schema. I worked on this literally one year back in March 2025, published an arxiv paper, pushed the model to huggingface along with the pypi package and training dataset. And then one year later, a frontier lab came, proposing the same idea like literal breakthrough without technical papers, open weights and no open dataset. For anyones information the main guiding model is RL not embedding model or LLM<p>Paper: https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2503.23303<p>Model: https:&#x2F;&#x2F;huggingface.co&#x2F;DeepMostInnovations&#x2F;sales-conversion-model-reinf-learning<p>Dataset: https:&#x2F;&#x2F;huggingface.co&#x2F;datasets&#x2F;DeepMostInnovations&#x2F;saas-sales-conversations<p>Also the second work published in September 2025 was exactly the same one jev proposed now<p>Paper: https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2510.01237<p>My model uses PPO over sequence embeddings to output turn-by-turn conversion trajectories (probabilities from 0.0 to 1.0).<p>Jev uses parallel sampling (trained via RLCD) to output confidence distributions and schema ",
+          "url": "https://news.ycombinator.com/item?id=49736660",
+          "published_at": "2026-09-17T05:13:00+00:00",
+          "source_id": "hacker-news",
+          "source_name": "Hacker News",
+          "source_type": "community",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.21774v1",
+          "event_id": "comet-fpga-networking",
+          "title": "Scalable Packet Tracking on FPGAs for Erasure-Coded RDMA over Lossy WANs",
+          "summary": "Modern AI workloads increasingly rely on scale across architectures that interconnect multiple datacenters to form a single \"AI factory\", overcoming the power and cooling constraints of individual sites. However, extending Remote Direct Memory Access (RDMA) across wide area networks (WANs) introduces fundamental challenges: multi-path packet reordering, high latency, and packet loss that severely degrade performance. While erasure coding (EC) has emerged as a promising mechanism for loss recovery, its effectiveness critically depends on efficient packet arrival tracking implemented in hardware. We present COmpact Multi-path Erasure-coded Tracking (COMET), the first fully hardware-offloaded packet-arrival tracking design implemented on an FPGA-based network interface card (NIC) for multi-path RDMA over lossy WANs. COMET employs a scalable cache-based architecture that supports operation at high link rates. Our evaluation shows that COMET sustains line rate operation at 400 Gbps and beyond. Critically, COMET decouples on-chip memory footprint from link Bandwidth-Delay Product (BDP), and its cache-based architecture (COMET Cache) enables supporting 6 times more concurrent connections ",
+          "url": "http://arxiv.org/abs/2609.21774v1",
+          "published_at": "2026-09-18T13:43:27Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "excluded",
+          "dimensions": [],
+          "exclusion_reason": "Infrastructure vocabulary matched, but the paper does not support model routing or heterogeneous inference selection."
+        }
+      ],
+      "gate_inputs": {
+        "qualifying_events": 2,
+        "technical_artifacts": 2,
+        "independent_organizations": 2,
+        "persistence_cycles": 1,
+        "counterevidence_reviewed": false,
+        "cost_of_absence_evidenced": false,
+        "practical_minimum_available": false
+      }
+    },
+    {
+      "id": "shared-operational-context",
+      "title": "Shared operational context",
+      "requirement": "AI systems operating across organizational data should use a shared semantic and operational context layer instead of rebuilding retrieval and schemas for every workflow.",
+      "description": "Multiple agents need a consistent understanding of the organization's entities, relationships, permissions, and current state. A shared context layer combines retrieval with governed semantics and operational state, so each workflow does not invent a different definition of the same customer, contract, incident, or task.",
+      "what_it_looks_like": [
+        "Give important entities stable identifiers, relationships, provenance, and permission rules.",
+        "Expose current state through governed retrieval or tools rather than copying documents into every prompt.",
+        "Track freshness, writes, and conflicts so agents can act on shared context without silently diverging."
+      ],
+      "applicable_to": "Startups running several agents over overlapping business data; a single narrow workflow may be better served by simpler retrieval.",
+      "source_analysis": "early-signal-tracker/operational-context",
+      "maturity": "experimental",
+      "confidence": "moderate",
+      "concentration": "moderate",
+      "assessments": {
+        "evidence_independence": "moderate",
+        "market_pull": "low",
+        "operational_adoption": "low",
+        "technical_reality": "strong"
+      },
+      "rationale": "Stateful retrieval, evolving ontologies, real-time agent graphs, and persistent graph memory make the shared-context pattern technically credible. The corpus does not yet show two independent organizations using one context layer across multiple production workflows with measured outcomes.",
+      "next_gate": {
+        "maturity": "emerging",
+        "failures": [
+          "operational_adoption is low; requires moderate",
+          "counterevidence_reviewed is False; requires True"
+        ]
+      },
+      "evidence_gaps": [
+        "Production case studies spanning multiple agents or workflows over the same governed context layer.",
+        "Measurements of maintenance cost, permission correctness, freshness, and task success versus workflow-specific RAG.",
+        "Counterevidence from simpler retrieval systems that achieve comparable outcomes without a shared ontology."
+      ],
+      "evidence": [
+        {
+          "id": "arxiv:2609.20754v1",
+          "event_id": "raft-stateful-troubleshooting",
+          "title": "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents",
+          "summary": "Effective troubleshooting agents in enterprise customer support depend on retrieving actionable guidance from similar historical cases, yet existing retrieval-augmented generation (RAG) systems treat support cases as static documents and overlook their multi-stage, stateful nature. We introduce RAFT (Retrieval-Augmented Framework for Troubleshooting Agents), a stateful RAG framework that abstracts each closed historical case into a directed chain of timeline entries and retrieves at the entry level, surfacing cases whose intermediate states match the active case and returning the parent-case trajectory anchored at the matched state; an optional case-level graph links cases through a configurable similarity representation. We evaluate this retrieval layer directly, which, unlike evaluating a full agent system, requires no production deployment. Because public multi-stage troubleshooting data is extremely rare, we pair a synthetic benchmark built from Microsoft Learn Windows Server documentation with real Apache Jira issues carrying human-created duplicate labels. RAFT improves Case Hit over vanilla RAG and GraphRAG baselines at every stage of case progress, with statistically signif",
+          "url": "http://arxiv.org/abs/2609.20754v1",
+          "published_at": "2026-09-17T17:41:31Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "github:1370752473",
+          "event_id": "evoontology",
+          "title": "ruc-datalab/EvoOntology",
+          "summary": "EvoOntology: A Self-Evolving Ontology Layer for Data Agents ⚙️ EvoOntology插件为Claude Code/Codex 建立&进化本体层",
+          "url": "https://github.com/ruc-datalab/EvoOntology",
+          "published_at": "2026-09-15T01:57:40Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "hf-paper:2609.15779",
+          "event_id": "evoontology",
+          "title": "EvoOntology: A Self-Evolving Ontology Layer for Data Agents",
+          "summary": "Data agents aim to fulfill natural-language instructions over heterogeneous data, including tables, files, and databases. However, data agents face a challenging agent-data gap: heterogeneous data resides outside the agent, while the agent can access it (e.g., column names and file paths) only through generic tools. Existing approaches either let agents directly explore raw data sources or inject manually constructed semantic layers into prompts. However, neither scales well to large heterogeneous data sources nor adapts to different agent behaviors. In this paper, we introduce EvoOntology, a self-evolving ontology layer for data agents. EvoOntology encapsulates the ontology as an MCP server comprising a schema layer, a content layer, and a tool layer, enabling agents to actively query and interact with the ontology at runtime. To this end, we introduce a builder agent for autonomous ontology construction and a self-evolution loop that continuously refines the ontology through attribution-guided typed edits that are accepted only after a backbone-conditional paired evaluation. Experiments on three well-adopted data-agent benchmarks with four LLM backbones demonstrate that EvoOntolo",
+          "url": "https://huggingface.co/papers/2609.15779",
+          "published_at": "2026-09-14T00:00:00+00:00",
+          "source_id": "huggingface-papers",
+          "source_name": "Hugging Face Daily Papers",
+          "source_type": "paper-curation",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        },
+        {
+          "id": "github:840056306",
+          "event_id": "graphiti-realtime-agent-graph",
+          "title": "getzep/graphiti",
+          "summary": "Build Real-Time Knowledge Graphs for AI Agents",
+          "url": "https://github.com/getzep/graphiti",
+          "published_at": "2024-08-08T22:08:30Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "github:679343504",
+          "event_id": "cognee-agent-memory-graph",
+          "title": "topoteretes/cognee",
+          "summary": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+          "url": "https://github.com/topoteretes/cognee",
+          "published_at": "2023-08-16T16:16:33Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "github:778431525",
+          "event_id": "microsoft-graphrag",
+          "title": "microsoft/graphrag",
+          "summary": "A modular graph-based Retrieval-Augmented Generation (RAG) system",
+          "url": "https://github.com/microsoft/graphrag",
+          "published_at": "2024-03-27T17:57:52Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "alphasignal:project:wrenai",
+          "event_id": "wrenai-semantic-layer",
+          "title": "WrenAI",
+          "summary": "Governed natural-language-to-SQL and dashboard generation across many data sources.",
+          "url": "https://github.com/Canner/WrenAI",
+          "published_at": "2026-07-21",
+          "source_id": "alphasignal",
+          "source_name": "AlphaSignal",
+          "source_type": "newsletter-analysis",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "operational_adoption",
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "alphasignal:trend:documents-retrieval-and-structured-data",
+          "event_id": "alphasignal-structured-context-synthesis",
+          "title": "Documents, retrieval and structured data",
+          "summary": "Document parsing, OCR routing, GraphRAG and constrained outputs improved the reliability of knowledge workflows.",
+          "url": "",
+          "published_at": "2026-09-21",
+          "source_id": "alphasignal",
+          "source_name": "AlphaSignal",
+          "source_type": "newsletter-analysis",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.21667v1",
+          "event_id": "archival-publication-knowledge-graph",
+          "title": "From Code Archival to Knowledge Graph: Bridging Software Heritage, COAR Notify and Wikidata",
+          "summary": "Software is a first-class scientific object, yet validated links between source code and the scholarly record remain largely absent from the Linked Open Data (LOD) cloud, isolating archived artefacts from semantic discovery. This paper presents an end-to-end reconciliation pipeline that harvests, validates, and models publication-to-repository pairs from sources where the link between a paper and its source code is explicit and editorially verified: the software-centric journals JOSS, SoftwareX, and IPOL, together with the reproducibility reports of the SIGMOD Availability and Reproducibility Initiative (ARI). This yields a curated corpus of 4,397 $\\langle$DOI, repository-URL$\\rangle$ pairs. We design two distinct application profiles grounded in Wikidata classes (one for scholarly articles, one for software instances) aligned with the schema.org and CodeMeta vocabularies. This architectural separation enables rule-based reconciliation at two granularities: lightweight, inline publication references or standalone, first-class Wikidata software nodes equipped with SWHIDs, Software Heritage's content-addressed identifiers. A read-only lookup against Wikidata shows that only 82 of the",
+          "url": "http://arxiv.org/abs/2609.21667v1",
+          "published_at": "2026-09-18T12:03:19Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "excluded",
+          "dimensions": [],
+          "exclusion_reason": "The paper links scholarly publications to archived code; it does not demonstrate a shared operational context layer for AI workflows."
+        }
+      ],
+      "gate_inputs": {
+        "qualifying_events": 4,
+        "technical_artifacts": 4,
+        "independent_organizations": 4,
+        "persistence_cycles": 2,
+        "counterevidence_reviewed": false,
+        "cost_of_absence_evidenced": false,
+        "practical_minimum_available": true
+      }
+    },
+    {
+      "id": "ai-native-gtm",
+      "title": "AI-native GTM systems",
+      "requirement": "Startups should operate closed-loop AI-native GTM systems that sense, decide, and act across revenue workflows.",
+      "description": "An AI-native go-to-market system would do more than generate sales or marketing content. It would continuously observe demand signals, decide what action is appropriate, execute approved steps across revenue tools, and write the outcome back to the system of record. The loop should make attribution and human accountability clearer, not obscure them.",
+      "what_it_looks_like": [
+        "Start with one bounded motion such as inbound qualification, account research, or content refresh.",
+        "Use explicit triggers, approval boundaries, CRM writes, and attribution rather than an open-ended sales agent.",
+        "Measure pipeline contribution, cycle time, intervention rate, and false-action cost."
+      ],
+      "applicable_to": "Startups with repeatable revenue workflows and reliable systems-of-record; not a substitute for product-market fit or GTM judgment.",
+      "source_analysis": "operator-narratives/ai-native-gtm-watch",
+      "maturity": "narrative",
+      "confidence": "low",
+      "concentration": "high",
+      "assessments": {
+        "evidence_independence": "low",
+        "market_pull": "low",
+        "operational_adoption": "low",
+        "technical_reality": "not-observed"
+      },
+      "rationale": "Two companies and investment events show category formation, but both primary observations come from one investor-publisher. There is no qualifying technical evidence or independent operating-outcome evidence in the current corpus.",
+      "next_gate": {
+        "maturity": "experimental",
+        "failures": [
+          "technical_reality is not-observed; requires moderate",
+          "technical_artifacts is 0; requires 1"
+        ]
+      },
+      "evidence_gaps": [
+        "Customer or operator reports with attributable pipeline, revenue, or cycle-time outcomes.",
+        "Independent technical descriptions of the closed-loop system and its controls.",
+        "Evidence from publishers unrelated to the investor announcements."
+      ],
+      "evidence": [
+        {
+          "id": "greylock-essays:32b264a22d3e04806ae3",
+          "event_id": "airops-investment-and-launch",
+          "title": "Introducing AirOps: The System of Action for Organic Growth",
+          "summary": "Marketers do not win by watching dashboards; they win by acting on them. In today’s AI era, the internet’s front door has shifted. What once started with a Google search now begins with a question to an AI assistant. Apps like ChatGPT, Perplexity, and Gemini are reshaping how people discover and…",
+          "url": "https://greylock.com/blog/introducing-airops-the-system-of-action-for-organic-growth/",
+          "published_at": "2025-11-15T00:49:20+00:00",
+          "source_id": "greylock-essays",
+          "source_name": "Greylock essays",
+          "source_type": "investor-essay",
+          "relationship": "direct-support",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "greylock-essays:841d14442685e9cea677",
+          "event_id": "netic-investment-and-launch",
+          "title": "Introducing Netic: The AI Revenue Engine For America’s Essential Services",
+          "summary": "We are excited to announce Greylock’s investment and partnership with Netic, a company pioneering the autonomous AI revenue engine for the essential services economy that keeps America running. Greylock led Netic’s seed round and increased ownership in the company’s oversubscribed Series A. Founded…",
+          "url": "https://greylock.com/blog/introducing-netic-the-ai-revenue-engine-for-americas-essential-services/",
+          "published_at": "2025-06-02T20:29:40+00:00",
+          "source_id": "greylock-essays",
+          "source_name": "Greylock essays",
+          "source_type": "investor-essay",
+          "relationship": "direct-support",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "alphasignal:trend:enterprise-and-vertical-ai",
+          "event_id": "alphasignal-enterprise-ai-synthesis",
+          "title": "Enterprise and vertical AI",
+          "summary": "General models were wrapped with domain indexes and live business-system access.",
+          "url": "",
+          "published_at": "2026-09-21",
+          "source_id": "alphasignal",
+          "source_name": "AlphaSignal",
+          "source_type": "newsletter-analysis",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        }
+      ],
+      "gate_inputs": {
+        "qualifying_events": 2,
+        "technical_artifacts": 0,
+        "independent_organizations": 2,
+        "persistence_cycles": 2,
+        "counterevidence_reviewed": false,
+        "cost_of_absence_evidenced": false,
+        "practical_minimum_available": false
+      }
+    },
+    {
+      "id": "bounded-workflow-ownership",
+      "title": "Bounded workflow ownership",
+      "requirement": "AI products should own bounded workflows with explicit completion states, exception routing, and outcome metrics.",
+      "description": "The product is responsible for moving a clearly defined piece of work from trigger to verified completion, not merely suggesting the next step in a chat. Ownership remains bounded: the system knows its permitted actions, terminal state, escalation conditions, and the business outcome against which it will be judged.",
+      "what_it_looks_like": [
+        "Define the trigger, allowed actions, system-of-record writes, and objective terminal state.",
+        "Make retries idempotent and route policy exceptions or low-confidence cases to a named owner.",
+        "Measure completed work, intervention rate, error cost, cycle time, and the downstream business outcome."
+      ],
+      "applicable_to": "Startups automating repeatable workflows with observable completion; ambiguous or high-liability work may remain assistive.",
+      "source_analysis": "operator-narratives/workflow-ownership",
+      "maturity": "narrative",
+      "confidence": "low",
+      "concentration": "moderate",
+      "assessments": {
+        "evidence_independence": "low",
+        "market_pull": "moderate",
+        "operational_adoption": "low",
+        "technical_reality": "low"
+      },
+      "rationale": "Company formation, investment, and one open-source implementation show that workflow ownership is a real product narrative. The evidence does not yet demonstrate reliable completion, exception handling, or attributable business outcomes in independent production environments.",
+      "next_gate": {
+        "maturity": "experimental",
+        "failures": [
+          "technical_reality is low; requires moderate"
+        ]
+      },
+      "evidence_gaps": [
+        "Customer-controlled measurements of completed work, intervention rate, error cost, and business outcome.",
+        "Technical implementations with explicit completion checks, exception routing, and systems-of-record writes.",
+        "Counterevidence about workflows where assistance remains safer or more economical than autonomous ownership."
+      ],
+      "evidence": [
+        {
+          "id": "sequoia-essays:afde56cfaaeb81f69523",
+          "event_id": "sable-ai-employee-investment",
+          "title": "Partnering with Sable: Closing the Diffusion Gap",
+          "summary": "Nim, Leon, Linda and Itamar are building an AI employee powered by real-time computer use and vision.",
+          "url": "https://www.sequoiacap.com/article/partnering-with-sable-closing-the-diffusion-gap",
+          "published_at": "2026-07-16T00:00:00",
+          "source_id": "sequoia-essays",
+          "source_name": "Sequoia essays",
+          "source_type": "investor-essay",
+          "relationship": "direct-support",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "sequoia-essays:775cb9638e7b090ad2d9",
+          "event_id": "probook-trades-automation-investment",
+          "title": "Partnering with Probook: AI for the Trades",
+          "summary": "George, Lewis, Ben and their team are powering home service businesses across the country, automating operations from office to doorstep.",
+          "url": "https://www.sequoiacap.com/article/partnering-with-probook-ai-for-the-trades",
+          "published_at": "2026-06-23T00:00:00",
+          "source_id": "sequoia-essays",
+          "source_name": "Sequoia essays",
+          "source_type": "investor-essay",
+          "relationship": "direct-support",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "github:1355117708",
+          "event_id": "open-source-ai-employees",
+          "title": "markfulton/ai-employees",
+          "summary": "Open source AI Employees. 8 scheduled business roles, 60 routines, on Claude Code and 10 other harnesses. They drive your browser the way you do and improve every run. You own the files.",
+          "url": "https://github.com/markfulton/ai-employees",
+          "published_at": "2026-09-02T18:47:36Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "alphasignal:trend:enterprise-and-vertical-ai",
+          "event_id": "alphasignal-enterprise-ai-synthesis",
+          "title": "Enterprise and vertical AI",
+          "summary": "General models were wrapped with domain indexes and live business-system access.",
+          "url": "",
+          "published_at": "2026-09-21",
+          "source_id": "alphasignal",
+          "source_name": "AlphaSignal",
+          "source_type": "newsletter-analysis",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "greylock-essays:aacd57b6bec14e3c9da1",
+          "event_id": "rogue-agent-runtime-narrative",
+          "title": "Rogue Agents: Deciphering Agent Intent",
+          "summary": "An effective solution for understanding and managing an agent’s intent requires a runtime system that learns normal agent behavior, detects meaningful deviation, and intervenes precisely enough to stay trusted.",
+          "url": "https://greylock.com/blog/rogue-agents-deciphering-agent-intent/",
+          "published_at": "2026-09-10T15:00:00+00:00",
+          "source_id": "greylock-essays",
+          "source_name": "Greylock essays",
+          "source_type": "investor-essay",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "openai-news:333ccaae81484d3a4e17",
+          "event_id": "openai-computer-use-capability",
+          "title": "GPT-6 Astra: The next generation in intelligence for work",
+          "summary": "Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.",
+          "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+          "published_at": "2026-09-09T11:00:00+00:00",
+          "source_id": "openai-news",
+          "source_name": "OpenAI News",
+          "source_type": "first-party-lab",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        },
+        {
+          "id": "deepmind-blog:172fd12b4fe6c6e04c47",
+          "event_id": "deepmind-computer-use-capability",
+          "title": "Introducing computer use in Gemini 3.5 Flash",
+          "summary": "",
+          "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
+          "published_at": "2026-06-24T16:30:01+00:00",
+          "source_id": "deepmind-blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "first-party-lab",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        },
+        {
+          "id": "greylock-essays:da9d5e408f534282b985",
+          "event_id": "oak-identity-operating-system",
+          "title": "Introducing Oak: The AI-Native Identity Operating System",
+          "summary": "An AI-native platform that governs every identity across an organization. Identity has become the largest unresolved problem in enterprise security. Legacy tooling built to govern it (IGA, IAM) was designed for a static world of human users and periodic certification. Two shifts have broken that…",
+          "url": "https://greylock.com/blog/introducing-oak-the-ai-native-indentity-operating-system/",
+          "published_at": "2026-07-15T22:17:09+00:00",
+          "source_id": "greylock-essays",
+          "source_name": "Greylock essays",
+          "source_type": "investor-essay",
+          "relationship": "excluded",
+          "dimensions": [],
+          "exclusion_reason": "The product framing concerns identity governance and does not establish bounded end-to-end workflow ownership."
+        }
+      ],
+      "gate_inputs": {
+        "qualifying_events": 3,
+        "technical_artifacts": 1,
+        "independent_organizations": 3,
+        "persistence_cycles": 2,
+        "counterevidence_reviewed": false,
+        "cost_of_absence_evidenced": false,
+        "practical_minimum_available": false
+      }
+    }
+  ],
+  "boundary": "Early Signal Tracker states describe attention and corroboration. Operating requirement maturity describes whether technical, operational, market, and independent evidence justify action."
+}
