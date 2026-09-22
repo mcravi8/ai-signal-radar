@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-22T22:27:00.668066+00:00",
+    "generated_at": "2026-09-22T22:28:45.543023+00:00",
     "as_of": "2026-09-22",
     "policy_version": 1,
     "baseline_cycle": true,
@@ -14,7 +14,8 @@
     },
     "materially_changed_count": 35,
     "assessment_queue_count": 10,
-    "requirement_change_count": 0
+    "requirement_change_count": 0,
+    "idempotent_regeneration": true
   },
   "summary": {
     "headline": "10 candidates require assessment from a 35-item cross-source pool.",
