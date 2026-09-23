@@ -1,6 +1,6 @@
 # Weekly Operating Model Review — 2026-09-23
 
-4 candidate decisions are recorded; 0 candidates remain in the bounded assessment queue.
+4 candidate decisions are recorded; 1 candidates remain in the bounded assessment queue.
 
 > Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement.
 
@@ -17,15 +17,15 @@
 
 | Rank | Candidate | Origin | Priority | Action |
 | ---: | --- | --- | ---: | --- |
-| — | No material candidate changes | — | — | — |
+| 1 | Skills, protocols & integrations | cross-source-theme | 87 | assess-new-requirement |
 
 ## Operating Model changes
 
-- **Simulation-first physical AI development** — added: Added after formal candidate adjudication under the evidence policy.
+- No maturity or linked-evidence changes this cycle.
 
 ## Verification coverage
 
-- **AI company formation** — 50 records across 1 sources; 0 newly observed in this review history.
+- **AI company formation** — 51 records across 1 sources; 1 newly observed in this review history.
 - **Funding activity** — 24 records across 3 sources; 0 newly observed in this review history.
 - **Customer case studies** — 30 records across 12 sources; 0 newly observed in this review history.
 - **AI job postings** — 13 records across 1 sources; 0 newly observed in this review history.

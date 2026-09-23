@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-23T00:38:34.861873+00:00",
+    "generated_at": "2026-09-23T00:44:51.923308+00:00",
     "as_of": "2026-09-23",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,13 +12,13 @@
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 0,
-    "assessment_queue_count": 0,
+    "materially_changed_count": 1,
+    "assessment_queue_count": 1,
     "adjudication_count": 4,
-    "requirement_change_count": 1
+    "requirement_change_count": 0
   },
   "summary": {
-    "headline": "4 candidate decisions are recorded; 0 candidates remain in the bounded assessment queue.",
+    "headline": "4 candidate decisions are recorded; 1 candidates remain in the bounded assessment queue.",
     "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement."
   },
   "selection_policy": {
@@ -172,7 +172,7 @@
         "recent_evidence_count": 14,
         "technical_record_count": 34,
         "family_count": 11,
-        "trend_score": 79.5
+        "trend_score": 79.4
       },
       "linked_requirements": [
         {
@@ -262,7 +262,7 @@
         "recent_evidence_count": 21,
         "technical_record_count": 31,
         "family_count": 12,
-        "trend_score": 84.7
+        "trend_score": 84.6
       },
       "linked_requirements": [
         {
@@ -505,7 +505,7 @@
         "recent_evidence_count": 16,
         "technical_record_count": 27,
         "family_count": 10,
-        "trend_score": 78.7
+        "trend_score": 78.6
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -556,10 +556,11 @@
       "stage": "broadly-corroborated",
       "movement": "rising",
       "metrics": {
-        "evidence_count": 73,
-        "source_count": 14,
+        "evidence_count": 74,
+        "source_count": 15,
         "source_types": [
           "community",
+          "company-directory",
           "expert-social",
           "first-party-lab",
           "investor-essay",
@@ -572,8 +573,8 @@
         ],
         "recent_evidence_count": 16,
         "technical_record_count": 54,
-        "family_count": 10,
-        "trend_score": 86.7
+        "family_count": 11,
+        "trend_score": 87.0
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -585,10 +586,13 @@
         "operating_relevance": 0,
         "total": 87
       },
-      "change_reasons": [],
-      "materially_changed": false,
+      "change_reasons": [
+        "Source breadth increased by 1"
+      ],
+      "materially_changed": true,
       "adjudication": null,
-      "review_action": "assess-new-requirement"
+      "review_action": "assess-new-requirement",
+      "queue_rank": 1
     },
     {
       "id": "theme:small-specialized-models",
@@ -641,7 +645,7 @@
         "recent_evidence_count": 60,
         "technical_record_count": 31,
         "family_count": 10,
-        "trend_score": 80.6
+        "trend_score": 80.5
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -692,7 +696,7 @@
       "stage": "broadly-corroborated",
       "movement": "rising",
       "metrics": {
-        "evidence_count": 160,
+        "evidence_count": 161,
         "source_count": 27,
         "source_types": [
           "community",
@@ -912,7 +916,7 @@
         "recent_evidence_count": 13,
         "technical_record_count": 25,
         "family_count": 9,
-        "trend_score": 76.5
+        "trend_score": 76.4
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -968,7 +972,7 @@
         "recent_evidence_count": 7,
         "technical_record_count": 8,
         "family_count": 6,
-        "trend_score": 67.9
+        "trend_score": 67.8
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1037,7 +1041,7 @@
         "recent_evidence_count": 21,
         "technical_record_count": 54,
         "family_count": 11,
-        "trend_score": 83.8
+        "trend_score": 83.7
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1105,7 +1109,7 @@
         "recent_evidence_count": 6,
         "technical_record_count": 11,
         "family_count": 10,
-        "trend_score": 78.5
+        "trend_score": 78.4
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1167,7 +1171,7 @@
         "recent_evidence_count": 7,
         "technical_record_count": 14,
         "family_count": 4,
-        "trend_score": 63.4
+        "trend_score": 63.3
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1939,7 +1943,7 @@
       "id": "operator-narrative:coding-agent-stack",
       "origin": "operator-narrative",
       "title": "The coding-agent opportunity is shifting below the assistant interface",
-      "description": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 84.7 and appears across 14 radar sources.",
+      "description": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 84.6 and appears across 14 radar sources.",
       "source_analysis": "operator-narratives/coding-agent-stack",
       "theme_ids": [
         "coding-agents"
@@ -2125,7 +2129,7 @@
         "recent_evidence_count": 14,
         "technical_record_count": 34,
         "family_count": 11,
-        "trend_score": 79.5
+        "trend_score": 79.4
       },
       "linked_requirements": [
         {
@@ -2169,7 +2173,7 @@
         "recent_evidence_count": 21,
         "technical_record_count": 31,
         "family_count": 12,
-        "trend_score": 84.7
+        "trend_score": 84.6
       },
       "linked_requirements": [
         {
@@ -2233,7 +2237,80 @@
       "status": "current"
     }
   ],
-  "assessment_queue": [],
+  "assessment_queue": [
+    {
+      "id": "theme:skills-integrations",
+      "origin": "cross-source-theme",
+      "title": "Skills, protocols & integrations",
+      "description": "Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.",
+      "source_analysis": "themes/skills-integrations",
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "evidence_ids": [
+        "hn:49791228",
+        "hn:49791084",
+        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+        "simon-willison:e133d02a1d698c5d1f75",
+        "hn:49779329",
+        "github:1376081650",
+        "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
+        "github:1375922101",
+        "arxiv:2609.21749v1",
+        "arxiv:2609.21686v1",
+        "aws-machine-learning-blog:8fa3089824df1f197189",
+        "arxiv:2609.20519v1",
+        "github:1374194303",
+        "hf-paper:2609.20519",
+        "alphasignal:project:wikiskill",
+        "aws-machine-learning-blog:fe2475d963a81fbb0dda",
+        "arxiv:2609.16305",
+        "hf-paper:2609.15779",
+        "github:1367068508",
+        "github:1366280840"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "rising",
+      "metrics": {
+        "evidence_count": 74,
+        "source_count": 15,
+        "source_types": [
+          "community",
+          "company-directory",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter-analysis",
+          "operator-essay",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 16,
+        "technical_record_count": 54,
+        "family_count": 11,
+        "trend_score": 87.0
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 87
+      },
+      "change_reasons": [
+        "Source breadth increased by 1"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 1
+    }
+  ],
   "requirement_changes": [
     {
       "id": "modular-agent-operating-stack",
@@ -2270,10 +2347,10 @@
     {
       "id": "simulation-first-physical-ai",
       "title": "Simulation-first physical AI development",
-      "change_type": "added",
-      "previous_maturity": null,
+      "change_type": "unchanged",
+      "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "Added after formal candidate adjudication under the evidence policy."
+      "explanation": "No maturity or linked-evidence change this cycle."
     },
     {
       "id": "ai-native-gtm",
@@ -2306,12 +2383,12 @@
       "dimension": "market_pull",
       "evidence_limit": 8,
       "status": "active",
-      "record_count": 50,
+      "record_count": 51,
       "source_count": 1,
       "source_names": [
         "Y Combinator AI companies"
       ],
-      "new_record_count": 0,
+      "new_record_count": 1,
       "evidence_ids": [
         "yc-company:662",
         "yc-company:37995",
@@ -2361,6 +2438,7 @@
         "yc-company:32162",
         "yc-company:32136",
         "yc-company:32124",
+        "yc-company:31557",
         "yc-company:30923",
         "yc-company:1294"
       ],
