@@ -11,7 +11,7 @@ No weighted score can bypass a failed maturity gate. Repeated coverage of one ev
 | Requirement | Technical reality | Operational adoption | Market pull | Independence | Concentration | Confidence | Maturity |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Evaluation and release gates | Strong | Low | Low | Low | High | Moderate | **Experimental** |
-| Heterogeneous model routing | Moderate | Low | Low | Moderate | Moderate | Moderate | **Experimental** |
+| Heterogeneous model routing | Moderate | Low | Moderate | Moderate | Moderate | Moderate | **Experimental** |
 | AI-native GTM systems | N/O | Low | Low | Low | High | Low | **Narrative** |
 | Modular agent operating stack | Strong | Moderate | Moderate | Moderate | Moderate | Moderate | **Emerging** |
 | Shared operational context | Strong | Low | Low | Moderate | Moderate | Moderate | **Experimental** |
@@ -34,9 +34,9 @@ Only the modular agent operating stack reaches `emerging`. It is the sole case w
 - deterministic checks, model-based evaluations, and policy rules before external side effects;
 - evidence logs, rollback, and human escalation around release decisions.
 
-Three deduplicated technical events qualify: BLINDSPOT counts once despite having both a paper and repository, while Chronicle and EnterpriseVal are separate implementations. This makes the requirement technically real. The surrounding AlphaSignal, Hugging Face, and newsletter records provide context or discovery, not extra proof.
+Four deduplicated technical events qualify: BLINDSPOT counts once despite having both a paper and repository, while Chronicle, EnterpriseVal, and OverclaimBench are separate implementations. OverclaimBench found that coding agents frequently reported completion without reading all required files, directly demonstrating why a model's own status message cannot be the release decision. The surrounding AlphaSignal, Hugging Face, and newsletter records provide context or discovery, not extra proof.
 
-Promotion to `emerging` is blocked because operational adoption and evidence independence are low, and counterevidence has not been reviewed. The current corpus does not yet show independent production deployments with attributable intervention, rollback, incident, or business-outcome data.
+The review also retained a survey of 527 scientific programmers as counterevidence to current adoption: generated code was often run, but automated tests and review by another person were rare. Promotion to `emerging` remains blocked because operational adoption and evidence independence are low. The corpus does not yet show independent production deployments with attributable intervention, rollback, incident, or business-outcome data.
 
 **Next verification:** find production accounts with measured outcomes and examine cases where conventional testing and access controls were sufficient.
 
@@ -54,9 +54,9 @@ Promotion to `emerging` is blocked because operational adoption and evidence ind
 - models are compared using accepted-output quality, latency, and total cost per task class;
 - fallbacks, caching, capacity limits, and drift monitoring surround the routing decision.
 
-Edge0 and SpecQuant provide two independent technical demonstrations. The Jev ecosystem index, AlphaSignal synthesis, Interconnects, Bluesky, and Hacker News show adjacent activity or help discover the direction, but do not establish production adoption.
+Edge0, SpecQuant, and the Kubernetes-native ASRB request router provide three independent technical demonstrations across expert routing, precision routing, and endpoint routing. NVIDIA's virtual router and Chip Huyen's predictive-preference analysis provide technical context. OpenRouter's announced acquisition and the Fireworks financing event raise market pull to moderate, but investor-published events do not establish operational adoption.
 
-One arXiv record—*Scalable Packet Tracking on FPGAs* (`arxiv:2609.21774v1`)—was explicitly excluded. It matched infrastructure language but does not concern model routing or heterogeneous inference selection. The exclusion is retained in the calibration data so a classifier false positive cannot inflate maturity.
+Two records were explicitly excluded. *Scalable Packet Tracking on FPGAs* (`arxiv:2609.21774v1`) matched infrastructure language but does not concern model routing or heterogeneous inference selection. Sequoia's Etched investment describes supplier-side frontier-cluster capacity, not evidence that an application startup should operate a heterogeneous routing layer. The exclusions keep attention to frontier infrastructure from inflating an application-level requirement.
 
 Promotion to `emerging` is blocked by low operational adoption and the absence of a counterevidence review.
 
@@ -96,9 +96,9 @@ Promotion to `experimental` is blocked because technical reality is not observed
 - reusable skills and tool permissions are versioned independently from prompts and model releases;
 - actions run in bounded environments with traces, evaluations, approval gates, and rollback.
 
-SoL-Pi, the harness-value experiments, and dscode provide independent technical artifacts. Wood Mackenzie's shared platform and Benchling's isolated agent execution provide two production deployments. The Hugging Face listing of SoL-Pi is deduplicated from the paper rather than counted as another event.
+SoL-Pi, the harness-value experiments, dscode, and a 176-setting component-ablation study provide independent technical artifacts. Wood Mackenzie's shared platform and Benchling's isolated agent execution provide two production deployments. YC profiles for Jcode and herdr add evidence of company formation, but their self-reported usage does not count as independent adoption proof. The Hugging Face listing of SoL-Pi is deduplicated from the paper rather than counted as another event.
 
-The review also considered the public critique that MCP and similar abstraction layers can add unnecessary complexity when a fully trusted terminal agent can call APIs directly. This prevents “modular” from being treated as universally superior: the evidence currently supports it for controlled, multi-workflow systems rather than every agent application.
+The review considered two forms of counterevidence. A public critique argues that MCP-style abstraction can add unnecessary complexity when a trusted terminal agent can call APIs directly. More substantially, an industrial Westermo case found no consistent practitioner-perceived quality advantage for multi-agent orchestration across two real test-failure scenarios; the single-agent system was faster and cheaper. This prevents “modular” from being treated as universally superior: the evidence supports it for controlled, multi-workflow systems rather than every agent application.
 
 Promotion to `established` is blocked because operational adoption and evidence independence are moderate rather than strong. Both detailed deployment accounts were published through AWS, creating a remaining concentration risk.
 
@@ -140,9 +140,9 @@ Promotion to `emerging` is blocked because production adoption remains low and c
 - retries are idempotent and exceptions or low-confidence cases go to a named human owner;
 - completed work, intervention rate, error cost, cycle time, and business outcomes are measured.
 
-Sable and Probook show company formation and investment around AI systems that perform work, while the open-source AI Employees repository provides one implementation. OpenAI and DeepMind computer-use releases are discovery signals: they demonstrate enabling capability, not reliable ownership of a completed business workflow.
+Sable and Probook show company formation and investment around AI systems that perform work, while the open-source AI Employees repository provides one implementation. Foremerge provides an adjacent mechanism for declaring intent and detecting conflicts between parallel coding agents, but it does not implement end-to-end workflow ownership. OpenAI and DeepMind computer-use releases are discovery signals: they demonstrate enabling capability, not reliable ownership of a completed business workflow.
 
-The Greylock Oak record was excluded because identity governance does not establish bounded end-to-end workflow ownership. The remaining evidence does not demonstrate reliable completion, exception handling, systems-of-record updates, or attributable business outcomes.
+The review retained OverclaimBench and the scientific-programming survey as counterevidence. Coding agents often overclaim coverage, while real users rarely apply automated testing or independent review. The Greylock Oak record was excluded because identity governance does not establish bounded end-to-end workflow ownership. The remaining evidence does not demonstrate reliable completion, exception handling, systems-of-record updates, or attributable business outcomes.
 
 Promotion to `experimental` is blocked because technical reality remains low despite moderate market pull.
 

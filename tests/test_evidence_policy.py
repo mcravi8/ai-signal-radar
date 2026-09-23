@@ -51,8 +51,11 @@ class EvidencePolicyTests(unittest.TestCase):
     def test_false_positive_is_explicitly_excluded(self):
         routing_case = next(case for case in self.calibration["cases"] if case["id"] == "heterogeneous-model-routing")
         excluded = [link for link in routing_case["evidence_links"] if link["relationship"] == "excluded"]
-        self.assertEqual([link["evidence_id"] for link in excluded], ["arxiv:2609.21774v1"])
-        self.assertTrue(excluded[0]["exclusion_reason"])
+        self.assertEqual(
+            {link["evidence_id"] for link in excluded},
+            {"arxiv:2609.21774v1", "sequoia-essays:8a2fe18efd08a18eea8c"},
+        )
+        self.assertTrue(all(link["exclusion_reason"] for link in excluded))
 
     def test_modular_stack_is_the_only_emerging_requirement(self):
         emerging = [result["id"] for result in self.results.values() if result["maturity"] == "emerging"]
@@ -70,6 +73,26 @@ class EvidencePolicyTests(unittest.TestCase):
         )
         self.assertTrue(modular_case["gate_inputs"]["counterevidence_reviewed"])
         self.assertTrue(any(link["relationship"] == "counterevidence" for link in modular_case["evidence_links"]))
+
+    def test_candidate_reviews_update_existing_requirement_evidence_maps(self):
+        cases = {case["id"]: case for case in self.calibration["cases"]}
+        modular_ids = {link["evidence_id"] for link in cases["modular-agent-operating-stack"]["evidence_links"]}
+        evaluation_ids = {link["evidence_id"] for link in cases["evaluation-release-gates"]["evidence_links"]}
+        ownership_ids = {link["evidence_id"] for link in cases["bounded-workflow-ownership"]["evidence_links"]}
+        routing_ids = {link["evidence_id"] for link in cases["heterogeneous-model-routing"]["evidence_links"]}
+
+        self.assertIn("arxiv:2609.20804v1", modular_ids)
+        self.assertIn("arxiv:2609.21843v1", modular_ids)
+        self.assertIn("arxiv:2609.20812v1", evaluation_ids)
+        self.assertIn("arxiv:2609.22049v1", ownership_ids)
+        self.assertIn("arxiv:2609.20497v1", routing_ids)
+        self.assertIn("sequoia-essays:8a2fe18efd08a18eea8c", routing_ids)
+
+    def test_candidate_reviews_do_not_promote_without_operational_proof(self):
+        self.assertEqual(self.results["modular-agent-operating-stack"]["maturity"], "emerging")
+        self.assertEqual(self.results["evaluation-release-gates"]["maturity"], "experimental")
+        self.assertEqual(self.results["heterogeneous-model-routing"]["maturity"], "experimental")
+        self.assertEqual(self.results["bounded-workflow-ownership"]["maturity"], "narrative")
 
     def test_public_operating_model_explains_the_practice(self):
         payload = build_operating_model(self.policy, self.calibration, self.research)

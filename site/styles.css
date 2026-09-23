@@ -155,6 +155,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .adjudication-title:hover { color: var(--blue); text-decoration: underline; text-underline-offset: .18em; }
 .adjudication-decision { margin: .15rem 0 0; color: var(--navy); font-size: .72rem; font-weight: 700; line-height: 1.45; }
 .adjudication-rationale { margin: 0; color: var(--muted); font-size: .66rem; line-height: 1.5; }
+.adjudication-audit { display: grid; grid-template-columns: 1fr auto; gap: .28rem .75rem; padding: .62rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); font-size: .59rem; line-height: 1.45; }
+.adjudication-audit-label { color: var(--green); font-weight: 750; letter-spacing: .035em; text-transform: uppercase; }
+.adjudication-audit p { grid-column: 1 / -1; margin: 0; color: var(--ink); font-size: .63rem; }
 .adjudication-links { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: center; margin-top: auto; padding-top: .65rem; border-top: 1px solid var(--line); font-size: .59rem; }
 .adjudication-links a { color: var(--navy); font-weight: 700; text-decoration: none; }
 .adjudication-links a:hover { color: var(--blue); text-decoration: underline; }

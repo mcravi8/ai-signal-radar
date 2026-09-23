@@ -116,6 +116,14 @@ cases:
         event_id: codemidas-verifiers
         relationship: supporting-context
         dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.20812v1
+        event_id: overclaim-benchmark
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.22049v1
+        event_id: scientific-coding-validation-survey
+        relationship: counterevidence
+        dimensions: [operational_adoption]
       - evidence_id: alphasignal:trend:validation-and-release-bottlenecks
         event_id: alphasignal-validation-synthesis
         relationship: supporting-context
@@ -136,21 +144,24 @@ cases:
       concentration: high
       confidence: moderate
     gate_inputs:
-      qualifying_events: 3
-      technical_artifacts: 3
-      independent_organizations: 3
+      qualifying_events: 4
+      technical_artifacts: 4
+      independent_organizations: 4
       persistence_cycles: 1
-      counterevidence_reviewed: false
+      counterevidence_reviewed: true
       cost_of_absence_evidenced: false
       practical_minimum_available: true
     expected_maturity: experimental
     rationale: >-
-      Several independent technical systems make the requirement technically real,
-      but the sampled corpus does not contain independent production deployments with
-      measured operating outcomes. Research and engineering evidence dominate.
+      Several independent technical systems make the requirement technically real, and
+      OverclaimBench shows why a model's own completion statement is not an adequate release
+      decision. A survey of 527 scientific programmers is retained as counterevidence to
+      adoption: generated code is often run, but automated tests and independent review are
+      rare. The sampled corpus still lacks production deployments with measured operating
+      outcomes, and research evidence remains concentrated in papers.
     evidence_gaps:
       - Independent production reports with intervention, rollback, or incident metrics.
-      - A systematic search for cases where conventional testing and access controls were sufficient.
+      - Comparative evidence showing when conventional tests and access controls are sufficient without a separate AI-specific gate.
 
   - id: heterogeneous-model-routing
     title: Heterogeneous model routing
@@ -175,6 +186,26 @@ cases:
         event_id: specquant-adaptive-routing
         relationship: direct-support
         dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.20497v1
+        event_id: asrb-quality-aware-request-routing
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: nvidia-developer-blog:2f4bc5729494727df617
+        event_id: nvidia-virtual-inference-router
+        relationship: supporting-context
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: chip-huyen:a3c6e30055307ca7c6f4
+        event_id: predictive-preference-routing
+        relationship: supporting-context
+        dimensions: [technical_reality]
+      - evidence_id: menlo-ventures:357c545badf007e3def4
+        event_id: openrouter-acquisition
+        relationship: supporting-context
+        dimensions: [market_pull]
+      - evidence_id: menlo-ventures:dfeaba0c266f13ed7f2c
+        event_id: fireworks-specialized-inference-round
+        relationship: supporting-context
+        dimensions: [market_pull]
       - evidence_id: github:1375922101
         event_id: jev-ecosystem-index
         relationship: supporting-context
@@ -200,25 +231,33 @@ cases:
         relationship: excluded
         dimensions: []
         exclusion_reason: Infrastructure vocabulary matched, but the paper does not support model routing or heterogeneous inference selection.
+      - evidence_id: sequoia-essays:8a2fe18efd08a18eea8c
+        event_id: etched-frontier-cluster-investment
+        relationship: excluded
+        dimensions: []
+        exclusion_reason: Building a frontier inference cluster is supplier-side capacity formation; it does not demonstrate that an application startup should operate a heterogeneous routing layer.
     assessments:
       technical_reality: moderate
       operational_adoption: low
-      market_pull: low
+      market_pull: moderate
       evidence_independence: moderate
       concentration: moderate
       confidence: moderate
     gate_inputs:
-      qualifying_events: 2
-      technical_artifacts: 2
-      independent_organizations: 2
+      qualifying_events: 3
+      technical_artifacts: 3
+      independent_organizations: 3
       persistence_cycles: 1
       counterevidence_reviewed: false
       cost_of_absence_evidenced: false
       practical_minimum_available: false
     expected_maturity: experimental
     rationale: >-
-      Adaptive routing and heterogeneous inference are demonstrated technically, but
-      the selected evidence does not establish repeatable production adoption or
+      Three independent technical systems demonstrate model-, precision-, or endpoint-level
+      routing, while OpenRouter's acquisition and specialized-inference investment activity
+      raise market pull to moderate. The review explicitly excludes frontier-cluster financing
+      because supplier capacity is not evidence that an application startup needs a routing
+      layer. The selected evidence still does not establish repeatable production adoption or
       superior operating economics across independent companies.
     evidence_gaps:
       - Production comparisons of quality, latency, failure rate, and cost per accepted outcome.
@@ -311,6 +350,10 @@ cases:
         event_id: harness-value-experiments
         relationship: direct-support
         dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.20804v1
+        event_id: coding-harness-component-ablation
+        relationship: direct-support
+        dimensions: [technical_reality]
       - evidence_id: github:1365776373
         event_id: dscode-agent-harness
         relationship: direct-support
@@ -323,8 +366,20 @@ cases:
         event_id: rogue-agent-runtime-narrative
         relationship: supporting-context
         dimensions: [operational_adoption, market_pull]
+      - evidence_id: yc-company:32172
+        event_id: jcode-harness-company-claim
+        relationship: supporting-context
+        dimensions: [market_pull]
+      - evidence_id: yc-company:34464
+        event_id: herdr-agent-runtime-company-claim
+        relationship: supporting-context
+        dimensions: [market_pull]
       - evidence_id: hn:49779329
         event_id: mcp-complexity-critique
+        relationship: counterevidence
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: arxiv:2609.21843v1
+        event_id: westermo-single-versus-multi-agent
         relationship: counterevidence
         dimensions: [technical_reality, operational_adoption]
     assessments:
@@ -335,20 +390,23 @@ cases:
       concentration: moderate
       confidence: moderate
     gate_inputs:
-      qualifying_events: 5
-      technical_artifacts: 5
-      independent_organizations: 4
+      qualifying_events: 6
+      technical_artifacts: 6
+      independent_organizations: 5
       persistence_cycles: 3
       counterevidence_reviewed: true
       cost_of_absence_evidenced: false
       practical_minimum_available: true
     expected_maturity: emerging
     rationale: >-
-      Independent technical artifacts show that harness, skill, execution, and
-      assurance components can be separated, while Wood Mackenzie and Benchling
-      provide two detailed production deployments. Operational evidence is still
-      concentrated in AWS-published case studies, so adoption and independence do
-      not yet qualify as strong.
+      Independent technical artifacts, including a component-level harness ablation, show
+      that orchestration, context, skills, execution, and assurance can be separated. Wood
+      Mackenzie and Benchling provide two detailed production deployments, while two YC
+      company profiles add market context but not independent adoption proof. A Westermo
+      industrial case found no consistent quality advantage for multi-agent orchestration and
+      found the single-agent baseline faster and cheaper. The requirement therefore remains
+      emerging and conditional; operational evidence is still concentrated in AWS-published
+      case studies and does not qualify as strong.
     evidence_gaps:
       - Production accounts published outside a single infrastructure vendor's channel.
       - Comparative evidence on when modular interfaces reduce switching cost enough to offset orchestration complexity.
@@ -467,6 +525,18 @@ cases:
         event_id: rogue-agent-runtime-narrative
         relationship: supporting-context
         dimensions: [operational_adoption]
+      - evidence_id: github:1342084139
+        event_id: foremerge-intent-coordination
+        relationship: supporting-context
+        dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.20812v1
+        event_id: overclaim-benchmark
+        relationship: counterevidence
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: arxiv:2609.22049v1
+        event_id: scientific-coding-validation-survey
+        relationship: counterevidence
+        dimensions: [operational_adoption]
       - evidence_id: openai-news:333ccaae81484d3a4e17
         event_id: openai-computer-use-capability
         relationship: discovery-only
@@ -492,15 +562,19 @@ cases:
       technical_artifacts: 1
       independent_organizations: 3
       persistence_cycles: 2
-      counterevidence_reviewed: false
+      counterevidence_reviewed: true
       cost_of_absence_evidenced: false
       practical_minimum_available: false
     expected_maturity: narrative
     rationale: >-
-      Company formation, investment, and one open-source implementation show that
-      workflow ownership is a real product narrative. The evidence does not yet
-      demonstrate reliable completion, exception handling, or attributable business
-      outcomes in independent production environments.
+      Company formation, investment, and one open-source implementation show that workflow
+      ownership is a real product narrative. Foremerge supplies an adjacent coordination
+      mechanism, but not an end-to-end owned workflow. OverclaimBench finds that coding agents
+      frequently report completion without reading all required files, and the scientific-
+      programming survey finds automated testing and peer review are rare. These records are
+      counterevidence to current operational readiness: the evidence still does not demonstrate
+      reliable completion, exception handling, or attributable business outcomes in independent
+      production environments.
     evidence_gaps:
       - Customer-controlled measurements of completed work, intervention rate, error cost, and business outcome.
       - Technical implementations with explicit completion checks, exception routing, and systems-of-record writes.

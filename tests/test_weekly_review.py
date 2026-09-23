@@ -36,6 +36,15 @@ class WeeklyReviewTests(unittest.TestCase):
         self.assertEqual(second["assessment_queue"], first["assessment_queue"])
         self.assertTrue(second["meta"]["idempotent_regeneration"])
 
+    def test_unresolved_queue_item_survives_an_unrelated_same_cycle_update(self):
+        first = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
+        self.assertTrue(first["assessment_queue"])
+        prior_id = first["assessment_queue"][0]["id"]
+        previous_operating = json.loads(json.dumps(self.operating))
+        previous_operating["requirements"][0]["evidence"] = []
+        second = build_weekly_review(self.research, self.operating, previous_operating, first, self.config)
+        self.assertIn(prior_id, {item["id"] for item in second["assessment_queue"]})
+
     def test_verification_families_state_their_boundary(self):
         review = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
         self.assertEqual(len(review["verification_families"]), 6)
@@ -61,6 +70,9 @@ class WeeklyReviewTests(unittest.TestCase):
         )
         self.assertEqual(adjudications["theme:robotics-embodied-ai"]["outcome"], "conditional-requirement-added")
         self.assertTrue(all(item["status"] == "current" for item in adjudications.values()))
+        reviewed = [item for key, item in adjudications.items() if key != "theme:robotics-embodied-ai"]
+        self.assertTrue(all(item["evidence_review"]["status"] == "complete" for item in reviewed))
+        self.assertEqual(sum(item["evidence_review"]["records_screened"] for item in reviewed), 147)
         queued_ids = {item["id"] for item in review["assessment_queue"]}
         self.assertFalse(set(adjudications).intersection(queued_ids))
 

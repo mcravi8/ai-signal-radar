@@ -12,11 +12,10 @@
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 1,
+    "materially_changed_count": 0,
     "assessment_queue_count": 1,
     "adjudication_count": 4,
-    "requirement_change_count": 0,
-    "idempotent_regeneration": true
+    "requirement_change_count": 4
   },
   "summary": {
     "headline": "4 candidate decisions are recorded; 1 candidate remains in the bounded assessment queue.",
@@ -206,6 +205,12 @@
         ],
         "decision": "Do not create a duplicate requirement.",
         "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 56,
+          "links_added": 4,
+          "finding": "Component-level harness experiments strengthen technical reality, but an industrial comparison found a single-agent baseline faster and cheaper without a consistent quality loss. The linked requirement remains emerging and explicitly conditional."
+        },
         "status": "current"
       },
       "review_action": "covered-by-existing-requirement"
@@ -302,6 +307,12 @@
         ],
         "decision": "Treat coding agents as an application domain, not a standalone operating requirement.",
         "rationale": "Coding agents make release gates and bounded workflow ownership more urgent, but \"use coding agents\" is not a defensible universal requirement. The reusable operating obligations are verified completion, constrained actions, review, rollback, and measurable workflow outcomes.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 62,
+          "links_added": 5,
+          "finding": "Failure and adoption evidence strengthens the case for independent release gates, while frequent overclaiming and weak verification practice prevent bounded workflow ownership from advancing beyond narrative maturity."
+        },
         "status": "current"
       },
       "review_action": "domain-signal-not-separate-requirement"
@@ -387,6 +398,12 @@
         ],
         "decision": "Do not require ordinary startups to build frontier inference infrastructure.",
         "rationale": "The evidence supports inference optimization and model-path selection, but frontier clusters are a supplier capability and a conditional concern for infrastructure companies. Most startups should consume this capability through routing, capacity, latency, and cost controls rather than own the underlying cluster.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 29,
+          "links_added": 6,
+          "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
+        },
         "status": "current"
       },
       "review_action": "infrastructure-signal-not-general-requirement"
@@ -587,12 +604,11 @@
         "operating_relevance": 0,
         "total": 87
       },
-      "change_reasons": [
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 1
     },
     {
@@ -2146,6 +2162,12 @@
       ],
       "decision": "Do not create a duplicate requirement.",
       "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 56,
+        "links_added": 4,
+        "finding": "Component-level harness experiments strengthen technical reality, but an industrial comparison found a single-agent baseline faster and cheaper without a consistent quality loss. The linked requirement remains emerging and explicitly conditional."
+      },
       "status": "current"
     },
     {
@@ -2196,6 +2218,12 @@
       ],
       "decision": "Treat coding agents as an application domain, not a standalone operating requirement.",
       "rationale": "Coding agents make release gates and bounded workflow ownership more urgent, but \"use coding agents\" is not a defensible universal requirement. The reusable operating obligations are verified completion, constrained actions, review, rollback, and measurable workflow outcomes.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 62,
+        "links_added": 5,
+        "finding": "Failure and adoption evidence strengthens the case for independent release gates, while frequent overclaiming and weak verification practice prevent bounded workflow ownership from advancing beyond narrative maturity."
+      },
       "status": "current"
     },
     {
@@ -2235,6 +2263,12 @@
       ],
       "decision": "Do not require ordinary startups to build frontier inference infrastructure.",
       "rationale": "The evidence supports inference optimization and model-path selection, but frontier clusters are a supplier capability and a conditional concern for infrastructure companies. Most startups should consume this capability through routing, capacity, latency, and cost controls rather than own the underlying cluster.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 29,
+        "links_added": 6,
+        "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
+      },
       "status": "current"
     }
   ],
@@ -2303,12 +2337,11 @@
         "operating_relevance": 0,
         "total": 87
       },
-      "change_reasons": [
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 1
     }
   ],
@@ -2316,26 +2349,26 @@
     {
       "id": "modular-agent-operating-stack",
       "title": "Modular agent operating stack",
-      "change_type": "unchanged",
+      "change_type": "evidence-updated",
       "previous_maturity": "emerging",
       "current_maturity": "emerging",
-      "explanation": "No maturity or linked-evidence change this cycle."
+      "explanation": "Linked evidence changed from 9 to 13 records without changing maturity."
     },
     {
       "id": "evaluation-release-gates",
       "title": "Evaluation and release gates",
-      "change_type": "unchanged",
+      "change_type": "evidence-updated",
       "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "No maturity or linked-evidence change this cycle."
+      "explanation": "Linked evidence changed from 8 to 10 records without changing maturity."
     },
     {
       "id": "heterogeneous-model-routing",
       "title": "Heterogeneous model routing",
-      "change_type": "unchanged",
+      "change_type": "evidence-updated",
       "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "No maturity or linked-evidence change this cycle."
+      "explanation": "Linked evidence changed from 8 to 14 records without changing maturity."
     },
     {
       "id": "shared-operational-context",
@@ -2364,10 +2397,10 @@
     {
       "id": "bounded-workflow-ownership",
       "title": "Bounded workflow ownership",
-      "change_type": "unchanged",
+      "change_type": "evidence-updated",
       "previous_maturity": "narrative",
       "current_maturity": "narrative",
-      "explanation": "No maturity or linked-evidence change this cycle."
+      "explanation": "Linked evidence changed from 8 to 11 records without changing maturity."
     }
   ],
   "verification_families": [
@@ -2389,7 +2422,7 @@
       "source_names": [
         "Y Combinator AI companies"
       ],
-      "new_record_count": 1,
+      "new_record_count": 0,
       "evidence_ids": [
         "yc-company:662",
         "yc-company:37995",

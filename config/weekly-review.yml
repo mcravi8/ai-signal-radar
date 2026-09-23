@@ -39,6 +39,14 @@ candidate_adjudications:
       An agent harness is the orchestration and control portion of the already-calibrated
       modular agent operating stack. Its evidence should strengthen that requirement rather
       than create a second entry with an indistinguishable operating prescription.
+    evidence_review:
+      status: complete
+      records_screened: 56
+      links_added: 4
+      finding: >-
+        Component-level harness experiments strengthen technical reality, but an industrial
+        comparison found a single-agent baseline faster and cheaper without a consistent
+        quality loss. The linked requirement remains emerging and explicitly conditional.
     reviewed_state:
       stage: corroborated-source-concentrated
       movement: rising
@@ -55,6 +63,14 @@ candidate_adjudications:
       "use coding agents" is not a defensible universal requirement. The reusable operating
       obligations are verified completion, constrained actions, review, rollback, and
       measurable workflow outcomes.
+    evidence_review:
+      status: complete
+      records_screened: 62
+      links_added: 5
+      finding: >-
+        Failure and adoption evidence strengthens the case for independent release gates, while
+        frequent overclaiming and weak verification practice prevent bounded workflow ownership
+        from advancing beyond narrative maturity.
     reviewed_state:
       stage: corroborated-source-concentrated
       movement: rising
@@ -71,6 +87,14 @@ candidate_adjudications:
       clusters are a supplier capability and a conditional concern for infrastructure
       companies. Most startups should consume this capability through routing, capacity,
       latency, and cost controls rather than own the underlying cluster.
+    evidence_review:
+      status: complete
+      records_screened: 29
+      links_added: 6
+      finding: >-
+        A third request-routing implementation and market events strengthen the routing case,
+        but no independent production comparison proves the operating economics. Investment
+        in frontier inference clusters was explicitly excluded from requirement evidence.
     reviewed_state:
       stage: broadly-corroborated
       movement: rising

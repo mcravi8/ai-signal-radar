@@ -371,6 +371,22 @@ def build_weekly_review(
 ) -> dict[str, Any]:
     candidates = _candidate_pool(research, operating_model, previous_review, config)
     queue = _select_queue(candidates, config)
+    same_cycle = bool(previous_review and previous_review.get("meta", {}).get("as_of") == research["weekly"]["as_of"])
+    if same_cycle:
+        candidate_by_id = {item["id"]: item for item in candidates}
+        carried_queue = []
+        for prior in previous_review.get("assessment_queue", []):
+            current = candidate_by_id.get(prior["id"])
+            if not current or (current.get("adjudication") or {}).get("status") == "current":
+                continue
+            current["pending_from_previous_review"] = True
+            carried_queue.append(current)
+        queue = [
+            *carried_queue,
+            *(item for item in queue if item["id"] not in {carried["id"] for carried in carried_queue}),
+        ][: config["maximum_assessment_queue"]]
+        for rank, candidate in enumerate(queue, 1):
+            candidate["queue_rank"] = rank
     adjudications = [
         {
             "candidate_id": item["id"],
@@ -401,7 +417,6 @@ def build_weekly_review(
     changed_requirements = [item for item in changes if item["change_type"] not in {"unchanged", "baseline"}]
     origin_counts = dict(Counter(item["origin"] for item in candidates))
     baseline = previous_review is None
-    same_cycle = bool(previous_review and previous_review.get("meta", {}).get("as_of") == research["weekly"]["as_of"])
     if (
         same_cycle
         and not any(item["materially_changed"] for item in candidates)
@@ -411,6 +426,9 @@ def build_weekly_review(
         preserved = {**previous_review, "meta": {**previous_review["meta"]}}
         preserved["meta"]["generated_at"] = research["meta"]["generated_at"]
         preserved["meta"]["idempotent_regeneration"] = True
+        preserved["candidate_pool"] = candidates
+        preserved["adjudications"] = adjudications
+        preserved["meta"]["adjudication_count"] = len(adjudications)
         preserved["summary"] = {**previous_review["summary"]}
         preserved["summary"]["headline"] = _review_headline(
             len(preserved.get("adjudications", [])),
@@ -469,6 +487,12 @@ def weekly_review_markdown(payload: dict[str, Any]) -> str:
     for item in payload.get("adjudications", []):
         linked = ", ".join(requirement["title"] for requirement in item.get("linked_requirements", [])) or "None"
         lines.append(f"| {item['title']} | {item['outcome']} | {linked} | {item['decision']} |")
+        if item.get("evidence_review"):
+            audit = item["evidence_review"]
+            lines.append(
+                f"| ↳ Evidence audit | {audit['status']} | "
+                f"{audit['records_screened']} records / {audit['links_added']} links | {audit['finding']} |"
+            )
     if not payload.get("adjudications"):
         lines.append("| — | No adjudications recorded | — | — |")
     lines.extend([

@@ -400,6 +400,14 @@ function renderWeeklyReview() {
     head.append(node("span", "queue-origin", label(item.origin)), badge(label(item.outcome), item.status), title);
     const decision = node("p", "adjudication-decision", item.decision);
     const rationale = node("p", "adjudication-rationale", item.rationale);
+    const audit = item.evidence_review ? node("div", "adjudication-audit") : null;
+    if (audit) {
+      audit.append(
+        node("span", "adjudication-audit-label", `Evidence audit · ${label(item.evidence_review.status)}`),
+        node("span", "tabular", `${formatNumber(item.evidence_review.records_screened)} records screened · ${formatNumber(item.evidence_review.links_added)} evidence-map links added`),
+        node("p", "", item.evidence_review.finding),
+      );
+    }
     const links = node("div", "adjudication-links");
     links.append(node("span", "tabular", `Reviewed ${formatDate(item.reviewed_at)}`));
     for (const requirement of item.linked_requirements || []) {
@@ -408,7 +416,9 @@ function renderWeeklyReview() {
       links.append(link);
     }
     if (!links.children.length) links.append(node("span", "", "No requirement created"));
-    card.append(head, decision, rationale, links);
+    card.append(head, decision, rationale);
+    if (audit) card.append(audit);
+    card.append(links);
     adjudications.append(card);
   }
 

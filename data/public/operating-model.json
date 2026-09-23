@@ -143,7 +143,7 @@
         "operational_adoption": "moderate",
         "technical_reality": "strong"
       },
-      "rationale": "Independent technical artifacts show that harness, skill, execution, and assurance components can be separated, while Wood Mackenzie and Benchling provide two detailed production deployments. Operational evidence is still concentrated in AWS-published case studies, so adoption and independence do not yet qualify as strong.",
+      "rationale": "Independent technical artifacts, including a component-level harness ablation, show that orchestration, context, skills, execution, and assurance can be separated. Wood Mackenzie and Benchling provide two detailed production deployments, while two YC company profiles add market context but not independent adoption proof. A Westermo industrial case found no consistent quality advantage for multi-agent orchestration and found the single-agent baseline faster and cheaper. The requirement therefore remains emerging and conditional; operational evidence is still concentrated in AWS-published case studies and does not qualify as strong.",
       "next_gate": {
         "maturity": "established",
         "failures": [
@@ -238,6 +238,22 @@
           "exclusion_reason": null
         },
         {
+          "id": "arxiv:2609.20804v1",
+          "event_id": "coding-harness-component-ablation",
+          "title": "An Empirical Study of Harness Design for Coding Agents",
+          "summary": "Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic systems, leaving the effectiveness of individual components unclear. To enable component-level comparisons, we study this question with a lightweight coding harness whose execution loop is fixed while three components are varied: planning, action space, and context management. Across four models evaluated on SWE-Bench Verified and Terminal-Bench 2.1, we evaluate 176 matched settings spanning five context-management strategies, four context-window budgets, and targeted ablations of planning and action space. We find that: (1) Context management becomes increasingly valuable as the context-window budget tightens, with most of its benefit coming from preventing context-overflow failures. (2) Staging rule-based elision before LLM-based summarization provides the strongest overall efficiency among the context-management strategies, whereas making elided content recoverable adds machinery that models rarely use and yields no accuracy gain. (3) Planning shifts from an accuracy scaffold for weaker ",
+          "url": "http://arxiv.org/abs/2609.20804v1",
+          "published_at": "2026-09-17T17:58:07Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
           "id": "github:1365776373",
           "event_id": "dscode-agent-harness",
           "title": "qiz029/dscode",
@@ -287,6 +303,38 @@
           "exclusion_reason": null
         },
         {
+          "id": "yc-company:32172",
+          "event_id": "jcode-harness-company-claim",
+          "title": "Jcode (S2026)",
+          "summary": "High performance coding agents. We produce the most capable, fast, and efficient coding agent harness. Our harness has 20k+ github stars, and $1m+/month of inference throughput",
+          "url": "https://www.ycombinator.com/companies/jcode",
+          "published_at": "",
+          "source_id": "yc-companies",
+          "source_name": "Y Combinator AI companies",
+          "source_type": "company-directory",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "yc-company:34464",
+          "event_id": "herdr-agent-runtime-company-claim",
+          "title": "herdr (F2026)",
+          "summary": "building the open agent runtime. Developers don't run one coding agent anymore. They run fleets of them — for hours, sometimes days — across laptops, servers, and sandboxes. Keeping track of that work is the new bottleneck: which agent is blocked, which one finished, which terminal is it in, and why did everything die when the laptop closed. Herdr is the open-source home for that work. A background server owns the agents' terminal sessions on each machine, so the work survives disconnects, closed lids, and dropped SSH. Herdr detects each agent and turns the chaos into an attention queue — working, blocked, done, across every project — so you look only when an agent needs you. Every client is just a view: the bundled terminal UI, SSH from another machine, your phone. Close one, open another; the work never stops. Software can drive it too: a CLI, a socket API, and a plugin marketplace that passed 500 community plugins in its first month. The runtime is Apache-2.0 and stays open. Four months after launch: 25k GitHub stars, 340k downloads",
+          "url": "https://www.ycombinator.com/companies/herdr",
+          "published_at": "",
+          "source_id": "yc-companies",
+          "source_name": "Y Combinator AI companies",
+          "source_type": "company-directory",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
           "id": "hn:49779329",
           "event_id": "mcp-complexity-critique",
           "title": "MCP was always a bad idea?",
@@ -302,12 +350,29 @@
             "operational_adoption"
           ],
           "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.21843v1",
+          "event_id": "westermo-single-versus-multi-agent",
+          "title": "Supporting Industrial Test-Failure Analysis with LLM-Based Systems: An Experience Report",
+          "summary": "This study examines tool-augmented Large Language Model (LLM) systems for supporting Root Cause Analysis (RCA) of nightly test failures at Westermo Network Technologies AB. Nightly test executions produce heterogeneous test data and logs that practitioners currently inspect manually across multiple sources. We implemented an RCA workflow in single-agent and orchestrated multi-agent configurations, both with access to test metadata and logs. An exploratory industrial case study used two real failure scenarios. Six practitioners evaluated the scenario reports through a survey and focus group, and operational measurements were collected from 120 repeated executions. The evaluation covered practitioner-perceived correctness, reasoning quality, fix realism, clarity, usefulness, and trust, as well as cost, duration, and consistency. Neither configuration showed a consistent practitioner-perceived quality advantage across the two scenarios. The single agent system generated reports faster and at lower cost, making it the more practical baseline in this context. The potential benefits of agent architectures require further evaluation in more complex scenarios.",
+          "url": "http://arxiv.org/abs/2609.21843v1",
+          "published_at": "2026-09-18T14:39:42Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "counterevidence",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
         }
       ],
       "gate_inputs": {
-        "qualifying_events": 5,
-        "technical_artifacts": 5,
-        "independent_organizations": 4,
+        "qualifying_events": 6,
+        "technical_artifacts": 6,
+        "independent_organizations": 5,
         "persistence_cycles": 3,
         "counterevidence_reviewed": true,
         "cost_of_absence_evidenced": false,
@@ -335,18 +400,17 @@
         "operational_adoption": "low",
         "technical_reality": "strong"
       },
-      "rationale": "Several independent technical systems make the requirement technically real, but the sampled corpus does not contain independent production deployments with measured operating outcomes. Research and engineering evidence dominate.",
+      "rationale": "Several independent technical systems make the requirement technically real, and OverclaimBench shows why a model's own completion statement is not an adequate release decision. A survey of 527 scientific programmers is retained as counterevidence to adoption: generated code is often run, but automated tests and independent review are rare. The sampled corpus still lacks production deployments with measured operating outcomes, and research evidence remains concentrated in papers.",
       "next_gate": {
         "maturity": "emerging",
         "failures": [
           "operational_adoption is low; requires moderate",
-          "evidence_independence is low; requires moderate",
-          "counterevidence_reviewed is False; requires True"
+          "evidence_independence is low; requires moderate"
         ]
       },
       "evidence_gaps": [
         "Independent production reports with intervention, rollback, or incident metrics.",
-        "A systematic search for cases where conventional testing and access controls were sufficient."
+        "Comparative evidence showing when conventional tests and access controls are sufficient without a separate AI-specific gate."
       ],
       "evidence": [
         {
@@ -430,6 +494,38 @@
           "exclusion_reason": null
         },
         {
+          "id": "arxiv:2609.20812v1",
+          "event_id": "overclaim-benchmark",
+          "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+          "summary": "Frontier coding agents are increasingly trusted to work autonomously for long periods, yet an agent's final response is often the only account of that work a user sees. We quantify the propensity of frontier agents to \\emph{overclaim} task completion, a misrepresentation that can mislead the user. An agent overclaims when its final response contradicts information in its context. This definition requires no inference about intent and is independent of task success. We introduce \\emph{OverclaimBench}, an evaluation suite composed of five file-review scenarios, transcript-based coverage measurements, and registered planted defects. We evaluate eight proprietary frontier models in their own production command-line interfaces, and four open-weight models under a single fixed harness on OverclaimBench and find that 1) agents do not read all the files they were asked to review in 67.9\\% of runs; 2) among runs where not all files are read, agents are \\emph{misleading} 80.4\\% of the time (59--96\\% per model), either falsely claiming to have read all files or omitting that coverage is incomplete; 3) requiring delegation to subagents increased reading coverage, but among reviews that remaine",
+          "url": "http://arxiv.org/abs/2609.20812v1",
+          "published_at": "2026-09-17T17:59:04Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.22049v1",
+          "event_id": "scientific-coding-validation-survey",
+          "title": "How Researchers Use and Verify AI Coding Assistants: Tasks and Validation Practices in Scientific Programming",
+          "summary": "Generative AI has entered research programming, yet there is little evidence about which tasks researchers hand to it or how they decide whether its code is correct. We draw on 527 free-text responses to a 2025 survey of researchers who write code, most of them at U.S. universities. In each response, a researcher recounts a single task from their own work, the way they used an AI tool for it, and what they did to assess the result. We coded the task and the evaluation strategies reported, and related both to programming experience, research area, and confidence ratings. Use was concentrated in five tasks: data handling, visualization, debugging, mathematical/scientific computing, and statistical analysis. Evaluation was informal and individual. Over half of accounts described running the generated code, while automated tests and review by another person were rare. Use cases and evaluation strategies varied little with programming experience, but confidence did: Less experienced programmers trusted the AI more than themselves, and experienced programmers the reverse. Evaluation confidence was not associated with the strategies reported. Its strongest correlates were confidence in th",
+          "url": "http://arxiv.org/abs/2609.22049v1",
+          "published_at": "2026-09-18T17:41:39Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "counterevidence",
+          "dimensions": [
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
           "id": "alphasignal:trend:validation-and-release-bottlenecks",
           "event_id": "alphasignal-validation-synthesis",
           "title": "Validation and release bottlenecks",
@@ -475,11 +571,11 @@
         }
       ],
       "gate_inputs": {
-        "qualifying_events": 3,
-        "technical_artifacts": 3,
-        "independent_organizations": 3,
+        "qualifying_events": 4,
+        "technical_artifacts": 4,
+        "independent_organizations": 4,
         "persistence_cycles": 1,
-        "counterevidence_reviewed": false,
+        "counterevidence_reviewed": true,
         "cost_of_absence_evidenced": false,
         "practical_minimum_available": true
       }
@@ -501,11 +597,11 @@
       "concentration": "moderate",
       "assessments": {
         "evidence_independence": "moderate",
-        "market_pull": "low",
+        "market_pull": "moderate",
         "operational_adoption": "low",
         "technical_reality": "moderate"
       },
-      "rationale": "Adaptive routing and heterogeneous inference are demonstrated technically, but the selected evidence does not establish repeatable production adoption or superior operating economics across independent companies.",
+      "rationale": "Three independent technical systems demonstrate model-, precision-, or endpoint-level routing, while OpenRouter's acquisition and specialized-inference investment activity raise market pull to moderate. The review explicitly excludes frontier-cluster financing because supplier capacity is not evidence that an application startup needs a routing layer. The selected evidence still does not establish repeatable production adoption or superior operating economics across independent companies.",
       "next_gate": {
         "maturity": "emerging",
         "failures": [
@@ -547,6 +643,87 @@
           "relationship": "direct-support",
           "dimensions": [
             "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.20497v1",
+          "event_id": "asrb-quality-aware-request-routing",
+          "title": "A Kubernetes-Native Request Router for Quality-Aware Inference Serving in the Computing Continuum",
+          "summary": "We introduce Adaptive Score-based Routing Balancer (ASRB), a dynamic, score-based request routing mechanism for Kubernetes-based service deployments over the computing continuum. ASRB jointly considers infrastructure-level information, response time measurements, and application-level quality indicators, with a particular focus on serving Machine Learning (ML) workloads. For these workloads, ASRB balances requests over service instances deployed in the continuum, following service provider-defined policies encoded as weighted combinations of QoS criteria to flexibly address latency-accuracy trade-offs. To drive routing decisions and swiftly adapt to changes in the operating environment, ASRB monitors a range of runtime metrics across multiple system layers. To deal with the associated monitoring overhead, particularly important for large-scale deployments, it selectively and adaptively controls monitoring intensity without sacrificing on routing quality. ASRB is implemented without requiring any modifications to Kubernetes, making it straightforward to deploy and operate in existing cluster environments. Our testbed experiments demonstrate the versatility of ASRB: When tuned for la",
+          "url": "http://arxiv.org/abs/2609.20497v1",
+          "published_at": "2026-09-17T14:45:21Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "nvidia-developer-blog:2f4bc5729494727df617",
+          "event_id": "nvidia-virtual-inference-router",
+          "title": "NVIDIA PAIR Virtual Inference Router Expands Available Compute on Your Local Network",
+          "summary": "AI agents are learning to do more by working together. A lead agent can break a complex task into smaller jobs and assign those jobs to specialized subagents....",
+          "url": "https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network/",
+          "published_at": "2026-09-03T16:00:00Z",
+          "source_id": "nvidia-developer-blog",
+          "source_name": "NVIDIA Developer Blog",
+          "source_type": "first-party-lab",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "chip-huyen:a3c6e30055307ca7c6f4",
+          "event_id": "predictive-preference-routing",
+          "title": "Predictive Human Preference: From Model Ranking to Model Routing",
+          "summary": "A challenge of building AI applications is choosing which model to use. What if we don’t have to? What if we can predict the best model for any prompt? Predictive human preference aims to predict which model users might prefer for a specific query. Human preference has emerged to be both the Northstar and a powerful tool for AI model development. Human preference guides post-training techniques including RLHF and DPO . Human preference is also used to rank AI models, as used by LMSYS’s Chatbot Arena . Chatbot Arena aims to determine which model is generally preferred. I wanted to see if it’s possible to predict which model is preferred for each query . One use case of predictive human preference is model routing. For example, if we know in advance that for a prompt, users will prefer Claude Instant’s response over GPT-4, and Claude Instant is cheaper/faster than GPT-4, we can route this prompt to Claude Instant. Model routing has the potential to increase response quality while reducing costs and latency. Another use case of predictive human preference is interpretability. Mapping out a model’s performance on different prompts can help us understand this model’s strengths and weakn",
+          "url": "https://huyenchip.com//2024/02/28/predictive-human-preference.html",
+          "published_at": "2024-02-28T00:00:00+00:00",
+          "source_id": "chip-huyen",
+          "source_name": "Chip Huyen",
+          "source_type": "practitioner-blog",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "menlo-ventures:357c545badf007e3def4",
+          "event_id": "openrouter-acquisition",
+          "title": "Stripe to Acquire OpenRouter: Why Everyone Is Obsessed With Model Routing",
+          "summary": "Today, OpenRouter announced that they have entered into an agreement to be acquired by Stripe, three years from when it was launched in 2023. OpenRouter launched as “the unified interface for LLMs” with only four models (GPT-3.5, GPT-4, Together’s GPT NeoXT, and Cohere xlarge) and two core bets: 1) AI usage will be massive and […] The post Stripe to Acquire OpenRouter: Why Everyone Is Obsessed With Model Routing appeared first on Menlo Ventures .",
+          "url": "https://menlovc.com/perspective/stripe-to-acquire-openrouter-why-everyone-is-obsessed-with-model-routing/",
+          "published_at": "2026-08-19T17:00:00+00:00",
+          "source_id": "menlo-ventures",
+          "source_name": "Menlo Ventures perspectives",
+          "source_type": "investor-essay",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "menlo-ventures:dfeaba0c266f13ed7f2c",
+          "event_id": "fireworks-specialized-inference-round",
+          "title": "Menlo’s Investment in Fireworks: The Runtime for Specialized Intelligence",
+          "summary": "AI inference is quickly becoming one of the largest markets in the world, and Fireworks is leading the expansion with its platform for specialized intelligence and low-cost token production. Today, Menlo is proud to be partnering with Fireworks in its $1.5 billion Series D. As the leading AI labs push the capability frontier forward, they […] The post Menlo’s Investment in Fireworks: The Runtime for Specialized Intelligence appeared first on Menlo Ventures .",
+          "url": "https://menlovc.com/perspective/menlos-investment-in-fireworks-the-runtime-for-specialized-intelligence/",
+          "published_at": "2026-07-16T13:30:00+00:00",
+          "source_id": "menlo-ventures",
+          "source_name": "Menlo Ventures perspectives",
+          "source_type": "investor-essay",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
           ],
           "exclusion_reason": null
         },
@@ -640,12 +817,26 @@
           "relationship": "excluded",
           "dimensions": [],
           "exclusion_reason": "Infrastructure vocabulary matched, but the paper does not support model routing or heterogeneous inference selection."
+        },
+        {
+          "id": "sequoia-essays:8a2fe18efd08a18eea8c",
+          "event_id": "etched-frontier-cluster-investment",
+          "title": "Partnering with Etched: Building the Inference Machine",
+          "summary": "Gavin, Rob, Chris and the Etched team are building frontier clusters for inference, maximizing the intelligence that humanity can consume.",
+          "url": "https://www.sequoiacap.com/article/partnering-with-etched-building-the-inference-machine",
+          "published_at": "2026-07-23T00:00:00",
+          "source_id": "sequoia-essays",
+          "source_name": "Sequoia essays",
+          "source_type": "investor-essay",
+          "relationship": "excluded",
+          "dimensions": [],
+          "exclusion_reason": "Building a frontier inference cluster is supplier-side capacity formation; it does not demonstrate that an application startup should operate a heterogeneous routing layer."
         }
       ],
       "gate_inputs": {
-        "qualifying_events": 2,
-        "technical_artifacts": 2,
-        "independent_organizations": 2,
+        "qualifying_events": 3,
+        "technical_artifacts": 3,
+        "independent_organizations": 3,
         "persistence_cycles": 1,
         "counterevidence_reviewed": false,
         "cost_of_absence_evidenced": false,
@@ -1141,7 +1332,7 @@
         "operational_adoption": "low",
         "technical_reality": "low"
       },
-      "rationale": "Company formation, investment, and one open-source implementation show that workflow ownership is a real product narrative. The evidence does not yet demonstrate reliable completion, exception handling, or attributable business outcomes in independent production environments.",
+      "rationale": "Company formation, investment, and one open-source implementation show that workflow ownership is a real product narrative. Foremerge supplies an adjacent coordination mechanism, but not an end-to-end owned workflow. OverclaimBench finds that coding agents frequently report completion without reading all required files, and the scientific- programming survey finds automated testing and peer review are rare. These records are counterevidence to current operational readiness: the evidence still does not demonstrate reliable completion, exception handling, or attributable business outcomes in independent production environments.",
       "next_gate": {
         "maturity": "experimental",
         "failures": [
@@ -1235,6 +1426,55 @@
           "exclusion_reason": null
         },
         {
+          "id": "github:1342084139",
+          "event_id": "foremerge-intent-coordination",
+          "title": "naw103/foremerge",
+          "summary": "Catch intent conflicts before code conflicts. The open-source coordination protocol for coding agents, built above Git.",
+          "url": "https://github.com/naw103/foremerge",
+          "published_at": "2026-08-21T17:52:45Z",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "source_type": "repository",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.20812v1",
+          "event_id": "overclaim-benchmark",
+          "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+          "summary": "Frontier coding agents are increasingly trusted to work autonomously for long periods, yet an agent's final response is often the only account of that work a user sees. We quantify the propensity of frontier agents to \\emph{overclaim} task completion, a misrepresentation that can mislead the user. An agent overclaims when its final response contradicts information in its context. This definition requires no inference about intent and is independent of task success. We introduce \\emph{OverclaimBench}, an evaluation suite composed of five file-review scenarios, transcript-based coverage measurements, and registered planted defects. We evaluate eight proprietary frontier models in their own production command-line interfaces, and four open-weight models under a single fixed harness on OverclaimBench and find that 1) agents do not read all the files they were asked to review in 67.9\\% of runs; 2) among runs where not all files are read, agents are \\emph{misleading} 80.4\\% of the time (59--96\\% per model), either falsely claiming to have read all files or omitting that coverage is incomplete; 3) requiring delegation to subagents increased reading coverage, but among reviews that remaine",
+          "url": "http://arxiv.org/abs/2609.20812v1",
+          "published_at": "2026-09-17T17:59:04Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "counterevidence",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.22049v1",
+          "event_id": "scientific-coding-validation-survey",
+          "title": "How Researchers Use and Verify AI Coding Assistants: Tasks and Validation Practices in Scientific Programming",
+          "summary": "Generative AI has entered research programming, yet there is little evidence about which tasks researchers hand to it or how they decide whether its code is correct. We draw on 527 free-text responses to a 2025 survey of researchers who write code, most of them at U.S. universities. In each response, a researcher recounts a single task from their own work, the way they used an AI tool for it, and what they did to assess the result. We coded the task and the evaluation strategies reported, and related both to programming experience, research area, and confidence ratings. Use was concentrated in five tasks: data handling, visualization, debugging, mathematical/scientific computing, and statistical analysis. Evaluation was informal and individual. Over half of accounts described running the generated code, while automated tests and review by another person were rare. Use cases and evaluation strategies varied little with programming experience, but confidence did: Less experienced programmers trusted the AI more than themselves, and experienced programmers the reverse. Evaluation confidence was not associated with the strategies reported. Its strongest correlates were confidence in th",
+          "url": "http://arxiv.org/abs/2609.22049v1",
+          "published_at": "2026-09-18T17:41:39Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "counterevidence",
+          "dimensions": [
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
           "id": "openai-news:333ccaae81484d3a4e17",
           "event_id": "openai-computer-use-capability",
           "title": "GPT-6 Astra: The next generation in intelligence for work",
@@ -1282,7 +1522,7 @@
         "technical_artifacts": 1,
         "independent_organizations": 3,
         "persistence_cycles": 2,
-        "counterevidence_reviewed": false,
+        "counterevidence_reviewed": true,
         "cost_of_absence_evidenced": false,
         "practical_minimum_available": false
       }
