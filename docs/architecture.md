@@ -50,6 +50,16 @@ A candidate theme is promoted when it has either:
 
 Promotion is never based on engagement alone.
 
+## Signal Discovery boundary
+
+Signal Discovery is the pre-analysis layer for patterns that are not yet represented by a canonical theme or Early Signal direction. Its first contract is defined in `config/discovery.yml` and enforced by `pipeline.discovery`.
+
+The contract separates machine-observed fields—evidence, sources, families, concepts, dates, and counts—from inferred fields such as a provisional title, hypothesis, novelty explanation, alternatives, and confirmation tests. A discovery record is always a lead rather than a finding. Its lifecycle is `spark → candidate → approved`, with explicit `merged`, `rejected`, and reversible `dormant` dispositions. Only a human `track` decision can create an approved direction, and approval does not assign an Early Signal lifecycle state.
+
+The eligibility window is 35 days. Inputs must be new or materially changed, attributable to an enabled source, public-safe, dated, and non-empty. Exact records and shared events are collapsed before discovery. Direct papers and repositories are preferred over derivative roundups when the same event appears more than once. Per-candidate contribution caps allow at most two records from one source or publisher; these caps never remove records from the global corpus.
+
+A Spark requires either two records from two sources or one technical seed that receives a manual novelty review. A Candidate requires at least three independent events from three sources and two source families, with no publisher supplying more than half of the retained evidence. These are admission rules for review, not evidence that the proposed hypothesis is true.
+
 ## Compute boundary
 
 GitHub-hosted runners collect public metadata, first-party AI lab publications, and official essay feeds, then retrieve subscribed newsletters from a dedicated AgentMail inbox once per week. Newsletter bodies are reduced to allowlisted derivative records in memory and are never committed or uploaded as artifacts. Gmail access and optional local-model enrichment stay on the owner's machine.
@@ -60,6 +70,6 @@ The same runner collects two official YC public surfaces without authentication:
 
 ## Weekly decision path
 
-The candidate pool is deliberately fixed to four current analytical surfaces: six Early Signal directions, three expert findings, six operator/investor findings, and twenty tracked themes. A transparent priority score ranks material changes using momentum, source breadth, technical support, new evidence, and Operating Model relevance. At most ten candidates enter the weekly assessment queue.
+The current Weekly Review candidate pool remains separate from Signal Discovery. It considers approved analytical surfaces only; Sparks and unreviewed Candidates cannot become Operating Model evidence. A transparent priority score ranks material changes using momentum, source breadth, technical support, new evidence, and Operating Model relevance. At most ten candidates enter the weekly assessment queue.
 
 The score never changes requirement maturity. Promotion or demotion requires an explicit edit to the calibrated case record followed by the formal evidence-policy gates. Same-day synthesis reruns preserve the already-published review when no evidence changed, avoiding an empty or unstable report caused by deployment regeneration.

@@ -7,6 +7,7 @@ on:
       - .github/workflows/synthesize-weekly.yml
       - config/bluesky.yml
       - config/classification-audit.yml
+      - config/discovery.yml
       - config/evidence-policy-calibration.yml
       - config/evidence-policy.yml
       - config/keywords.yml
@@ -22,6 +23,7 @@ on:
       - pipeline/collectors/yc.py
       - pipeline/cli.py
       - pipeline/evidence_policy.py
+      - pipeline/discovery.py
       - pipeline/export_public.py
       - pipeline/research.py
       - pipeline/storage.py

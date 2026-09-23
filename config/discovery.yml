@@ -1,0 +1,214 @@
+version: 1
+name: AI Signal Discovery contract
+purpose: >-
+  Surface unfamiliar cross-source patterns for human review before they become
+  tracked Early Signal hypotheses. Discovery candidates are leads, not findings.
+
+states:
+  spark:
+    terminal: false
+    description: >-
+      A coherent but lightly supported pattern. It remains private to the
+      Discovery Inbox or is publicly labelled as an unreviewed lead.
+    public_posture: Candidate, not a finding. Watch for independent reinforcement.
+  candidate:
+    terminal: false
+    description: >-
+      A mechanically eligible pattern with enough independent breadth for a
+      human decision about tracking, merging, reframing, or rejecting it.
+    public_posture: Review-ready hypothesis, not an Early Signal conclusion.
+  approved:
+    terminal: true
+    description: >-
+      A human-reviewed hypothesis accepted into the Early Signal Tracker with a
+      bounded evidence query, confirmation test, and counter-signal.
+    public_posture: Follow the linked Early Signal lifecycle; approval is not corroboration.
+  merged:
+    terminal: true
+    description: >-
+      A reviewed pattern whose evidence belongs to an existing theme or tracked
+      direction rather than a separate hypothesis.
+    public_posture: Incorporated into the linked existing analysis.
+  rejected:
+    terminal: true
+    description: >-
+      A reviewed pattern judged to be noise, duplication, promotional repetition,
+      or an unsupported abstraction. Its fingerprint is retained to prevent churn.
+    public_posture: Not treated as a signal.
+  dormant:
+    terminal: false
+    description: >-
+      A previously coherent Spark or Candidate that lacks recent reinforcement.
+      It can reactivate when materially new evidence arrives.
+    public_posture: Retained for memory; not currently active.
+
+state_transitions:
+  spark: [candidate, dormant, merged, rejected]
+  candidate: [spark, approved, dormant, merged, rejected]
+  approved: []
+  merged: []
+  rejected: []
+  dormant: [spark, candidate, rejected]
+
+review_actions:
+  track: approved
+  merge: merged
+  watch: spark
+  reframe: candidate
+  reject: rejected
+  dormancy: dormant
+
+record_contract:
+  required_fields:
+    - id
+    - title
+    - state
+    - observed_pattern
+    - hypothesis
+    - why_now
+    - novelty
+    - evidence_ids
+    - source_ids
+    - source_family_ids
+    - theme_ids
+    - concepts
+    - alternative_explanations
+    - confirmation_conditions
+    - invalidation_conditions
+    - first_seen
+    - last_seen
+    - metrics
+    - eligibility
+    - review
+  required_metric_fields:
+    - evidence_count
+    - independent_event_count
+    - source_count
+    - source_family_count
+    - technical_record_count
+    - dominant_publisher_share
+  list_fields:
+    - evidence_ids
+    - source_ids
+    - source_family_ids
+    - theme_ids
+    - concepts
+    - alternative_explanations
+    - confirmation_conditions
+    - invalidation_conditions
+  observation_fields:
+    - observed_pattern
+    - why_now
+    - evidence_ids
+    - source_ids
+    - source_family_ids
+    - theme_ids
+    - concepts
+    - first_seen
+    - last_seen
+    - metrics
+  inference_fields:
+    - title
+    - hypothesis
+    - novelty
+    - alternative_explanations
+    - confirmation_conditions
+    - invalidation_conditions
+  rules:
+    - Generated interpretation can propose a candidate but cannot establish a finding.
+    - Every factual count and date must be reproducible from evidence_ids.
+    - Observation and inference must remain separately labelled in public output.
+    - Approval creates a monitored hypothesis; it does not set its lifecycle state.
+
+eligibility:
+  lookback_days: 35
+  future_tolerance_days: 1
+  require_enabled_source: true
+  require_public_safe_record: true
+  required_fields: [id, source_id, source_type, published_at]
+  required_content_fields_any: [title, summary]
+  accepted_change_types: [new-record, materially-changed]
+  fingerprint_fields:
+    - source_id
+    - source_type
+    - title
+    - summary
+    - url
+    - published_at
+    - tags
+    - projects
+    - theme_ids
+  exclusion_reason_codes:
+    - missing-required-field
+    - missing-content
+    - unknown-source
+    - disabled-source
+    - not-public-safe
+    - invalid-date
+    - future-dated
+    - outside-window
+    - unchanged
+    - duplicate-record
+    - duplicate-event
+  deduplication:
+    explicit_event_id_field: event_id
+    same_title_window_days: 7
+    prefer_source_channels:
+      - paper
+      - repository
+      - practitioner-blog
+      - operator-essay
+      - first-party-lab
+      - investor-essay
+      - expert-newsletter
+      - paper-curation
+      - curated-newsletter
+      - expert-social
+      - community
+      - company-directory
+      - job-posting
+      - newsletter
+  candidate_contribution_caps:
+    per_source: 2
+    per_publisher: 2
+    note: >-
+      Caps apply inside one proposed cluster, never to the global discovery pool.
+      Additional records remain available for other clusters and audit.
+
+state_entry_gates:
+  spark:
+    any_of:
+      cross_source:
+        minimum_evidence_count: 2
+        minimum_source_count: 2
+      technical_seed:
+        minimum_evidence_count: 1
+        minimum_technical_record_count: 1
+        requires_manual_novelty_review: true
+  candidate:
+    minimum_evidence_count: 3
+    minimum_independent_event_count: 3
+    minimum_source_count: 3
+    minimum_source_family_count: 2
+    maximum_dominant_publisher_share: 0.50
+    requires_alternative_explanation: true
+    requires_confirmation_and_invalidation_conditions: true
+
+source_families:
+  first-party-lab: builders
+  paper: research
+  paper-curation: research
+  repository: engineering
+  practitioner-blog: experts
+  expert-newsletter: experts
+  expert-social: experts
+  operator-essay: narratives
+  investor-essay: narratives
+  community: attention
+  newsletter: attention
+  curated-newsletter: attention
+  company-directory: formation
+  job-posting: operations
+
+technical_source_families: [builders, research, engineering]
+

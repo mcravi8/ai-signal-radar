@@ -9,6 +9,7 @@ from pathlib import Path
 from .classify import classify_text
 from .cluster import group_by_theme
 from .deduplicate import deduplicate
+from .discovery import validate_discovery_policy
 from .evidence_policy import build_operating_model, format_calibration, run_calibration
 from .export_public import sanitize_item, validate_public_payload, write_public_dashboard
 from .research import build_research, write_weekly_report
@@ -179,6 +180,7 @@ def collect_bluesky() -> None:
 
 
 def synthesize() -> None:
+    validate_discovery_policy(_yaml(ROOT / "config/discovery.yml"))
     manual_rows = _yaml(ROOT / "data/manual/items.yml").get("items", [])
     rows = deduplicate([*read_jsonl(ROOT / "data/processed/items.jsonl"), *manual_rows])
     keywords = _yaml(ROOT / "config/keywords.yml").get("themes", {})
@@ -289,11 +291,16 @@ def calibrate_evidence() -> None:
         raise SystemExit("Evidence-policy calibration did not match the reviewed outcomes")
 
 
+def validate_discovery() -> None:
+    validate_discovery_policy(_yaml(ROOT / "config/discovery.yml"))
+    print("valid: config/discovery.yml")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(prog="ai-signal-radar")
     parser.add_argument(
         "command",
-        choices=["collect", "collect-verification", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public", "calibrate-evidence"],
+        choices=["collect", "collect-verification", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public", "calibrate-evidence", "validate-discovery"],
     )
     args = parser.parse_args()
     if args.command == "collect":
@@ -308,6 +315,8 @@ def main() -> None:
         synthesize()
     elif args.command == "calibrate-evidence":
         calibrate_evidence()
+    elif args.command == "validate-discovery":
+        validate_discovery()
     else:
         validate_public()
 

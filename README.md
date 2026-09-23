@@ -96,6 +96,18 @@ The Early Signal Tracker is a separate inference layer. Each directional hypothe
 
 Each retained evidence record also has an explicit disposition: `classified` when it maps to one or more canonical themes, or `classification-review` when it remains in the visible taxonomy backlog. This prevents unclassified records from silently disappearing. Classification coverage is reported as a quality metric, not a success score.
 
+## Signal Discovery contract
+
+`config/discovery.yml` defines the stage before the Early Signal Tracker. It distinguishes lightly supported `spark` records from review-ready `candidate` records, then preserves explicit `approved`, `merged`, `rejected`, and `dormant` decisions. Observation fields and inferred fields are kept separate, and no automatically generated candidate is presented as a finding.
+
+The first eligibility rules admit only public-safe evidence that is new or materially changed inside a 35-day window. Repeated records and shared events are collapsed, primary technical sources are preferred over derivative roundups, and one source or publisher can contribute at most two retained records to a proposed cluster. The cap applies inside a cluster—not to the corpus. Validate the contract with:
+
+```bash
+python -m pipeline.cli validate-discovery
+```
+
+Concept extraction, clustering, calibration, review UI, and weekly candidate generation are intentionally not activated by this first contract; they are the next implementation steps.
+
 ## Engineering Atlas
 
 The Engineering workspace connects canonical concepts to reviewed AlphaSignal projects and public repository discoveries. Its boundaries are deliberate:
