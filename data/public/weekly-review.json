@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-23T18:01:06.706335+00:00",
+    "generated_at": "2026-09-23T18:44:37.539772+00:00",
     "as_of": "2026-09-23",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -15,7 +15,8 @@
     "materially_changed_count": 3,
     "assessment_queue_count": 5,
     "adjudication_count": 4,
-    "requirement_change_count": 0
+    "requirement_change_count": 0,
+    "idempotent_regeneration": true
   },
   "summary": {
     "headline": "4 candidate decisions are recorded; 5 candidates remain in the bounded assessment queue.",
@@ -779,16 +780,11 @@
         "operating_relevance": 0,
         "total": 87
       },
-      "change_reasons": [
-        "Lifecycle stage changed from broadly-corroborated to corroborated-source-concentrated",
-        "Movement changed from steady to rising",
-        "Evidence increased by 2",
-        "2 additional dated records entered the latest seven-day window",
-        "Review priority changed by +14"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 4
     },
     {
@@ -928,11 +924,8 @@
         "operating_relevance": 10,
         "total": 83
       },
-      "change_reasons": [
-        "Movement changed from rising to steady",
-        "Review priority changed by -14"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:frontier-inference-infrastructure",
         "reviewed_at": "2026-09-22",
@@ -951,6 +944,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 3
     },
     {
@@ -1205,12 +1199,11 @@
         "operating_relevance": 0,
         "total": 73
       },
-      "change_reasons": [
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 5
     },
     {

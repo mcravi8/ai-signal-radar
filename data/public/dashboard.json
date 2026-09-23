@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-23T18:01:06.706335+00:00",
+    "generated_at": "2026-09-23T18:44:37.539772+00:00",
     "status": "success",
     "source_count": 38,
-    "evidence_count": 1745,
+    "evidence_count": 1746,
     "warnings": []
   },
   "weekly": {
@@ -628,22 +628,6 @@
     }
   ],
   "evidence": [
-    {
-      "id": "hn:49787436",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "What Sun got wrong",
-      "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
-      "published_at": "2026-09-21T14:03:18+00:00",
-      "summary": "",
-      "authors": [
-        "chmaynard"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
     {
       "id": "hn:49787535",
       "source_id": "hacker-news",
@@ -2554,12 +2538,12 @@
         "training-self-improvement"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 500,
+        "location": "San Francisco",
         "github_url": "https://github.com/scaleapi",
         "batch": "S2016",
-        "status": "Active",
-        "team_size": 500
+        "status": "Active"
       }
     },
     {
@@ -2583,11 +2567,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "London",
         "date_basis": "first-observed",
+        "team_size": 1,
+        "location": "London",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 1
+        "status": "Active"
       }
     },
     {
@@ -2611,11 +2595,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -2640,11 +2624,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 1,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 1
+        "status": "Active"
       }
     },
     {
@@ -2670,11 +2654,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -2700,12 +2684,12 @@
         "coding-agents"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 1,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 1
+        "status": "Active"
       }
     },
     {
@@ -2730,11 +2714,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -2758,12 +2742,12 @@
         "coding-agents"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -2786,11 +2770,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -2819,11 +2803,11 @@
         "robotics-embodied-ai"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 6,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 6
+        "status": "Active"
       }
     },
     {
@@ -2847,11 +2831,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "Los Angeles",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "Los Angeles",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -2876,11 +2860,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "Oslo, Norway",
         "date_basis": "first-observed",
+        "team_size": 5,
+        "location": "Oslo, Norway",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 5
+        "status": "Active"
       }
     },
     {
@@ -2905,11 +2889,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -2933,12 +2917,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 1,
+        "location": "San Francisco",
         "github_url": "https://github.com/use-click/",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 1
+        "status": "Active"
       }
     },
     {
@@ -2964,11 +2948,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 6,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 6
+        "status": "Active"
       }
     },
     {
@@ -2992,11 +2976,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3020,11 +3004,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -3050,11 +3034,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -3080,11 +3064,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -3110,11 +3094,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3138,11 +3122,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "Gurugram, Haryana, India",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "Gurugram, Haryana, India",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -3167,12 +3151,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 5,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 5
+        "status": "Active"
       }
     },
     {
@@ -3197,11 +3181,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3227,12 +3211,12 @@
         "coding-agents"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3257,11 +3241,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "London",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "London",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3283,12 +3267,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3314,11 +3298,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -3345,12 +3329,12 @@
         "coding-agents"
       ],
       "verification": {
-        "location": "Ankara, Turkey",
         "date_basis": "first-observed",
+        "team_size": 1,
+        "location": "Ankara, Turkey",
         "github_url": "https://github.com/herdrdev",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 1
+        "status": "Active"
       }
     },
     {
@@ -3377,12 +3361,12 @@
         "open-local-inference"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3407,10 +3391,10 @@
       "theme_ids": [],
       "verification": {
         "date_basis": "first-observed",
+        "team_size": 2,
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3433,12 +3417,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 3,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 3
+        "status": "Active"
       }
     },
     {
@@ -3464,12 +3448,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3493,12 +3477,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 5,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 5
+        "status": "Active"
       }
     },
     {
@@ -3524,12 +3508,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 4,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 4
+        "status": "Active"
       }
     },
     {
@@ -3552,12 +3536,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3583,12 +3567,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3611,12 +3595,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3641,12 +3625,12 @@
         "voice-audio"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3670,12 +3654,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "Munich, Germany",
         "date_basis": "first-observed",
+        "team_size": 8,
+        "location": "Munich, Germany",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 8
+        "status": "Active"
       }
     },
     {
@@ -3700,12 +3684,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3731,12 +3715,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 4,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 4
+        "status": "Active"
       }
     },
     {
@@ -3762,12 +3746,12 @@
         "training-self-improvement"
       ],
       "verification": {
-        "location": "Vancouver, BC, Canada",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "Vancouver, BC, Canada",
         "github_url": "https://github.com/oro-ai",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3793,11 +3777,11 @@
         "robotics-embodied-ai"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 4,
+        "location": "San Francisco",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 4
+        "status": "Active"
       }
     },
     {
@@ -3823,12 +3807,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "New York City",
         "date_basis": "first-observed",
+        "team_size": 4,
+        "location": "New York City",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 4
+        "status": "Active"
       }
     },
     {
@@ -3852,12 +3836,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3881,12 +3865,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "https://github.com/The-Agentic-Data-Co",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3909,12 +3893,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "Salt Lake City, UT, USA",
         "date_basis": "first-observed",
+        "team_size": 0,
+        "location": "Salt Lake City, UT, USA",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 0
+        "status": "Active"
       }
     },
     {
@@ -3938,12 +3922,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3967,12 +3951,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "Santiago, Santiago Metropolitan Region, Chile",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "Santiago, Santiago Metropolitan Region, Chile",
         "github_url": "",
         "batch": "F2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -3998,12 +3982,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 800,
+        "location": "San Francisco",
         "github_url": "https://github.com/checkr",
         "batch": "S2014",
-        "status": "Active",
-        "team_size": 800
+        "status": "Active"
       }
     },
     {
@@ -5146,11 +5130,11 @@
         "training-self-improvement"
       ],
       "verification": {
-        "location": "San Francisco",
         "date_basis": "first-observed",
+        "team_size": 2,
+        "location": "San Francisco",
         "batch": "S2026",
-        "status": "Active",
-        "team_size": 2
+        "status": "Active"
       }
     },
     {
@@ -5363,6 +5347,25 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw7dqzkpcc2n",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "My fake AI new bot is finally starting to produce amusing things more often",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw7dqzkpcc2n",
+      "published_at": "2026-09-23T18:12:43.637Z",
+      "summary": "Posted to Bluesky | Zuckerberg warns time travelers should research how Roko's Basilisk will augment birds",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
       "theme_ids": []
     }
   ],
