@@ -1,25 +1,24 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-23T04:18:27.285705+00:00",
+    "generated_at": "2026-09-23T17:55:10.260465+00:00",
     "as_of": "2026-09-23",
     "policy_version": 1,
     "baseline_cycle": false,
-    "candidate_pool_count": 35,
+    "candidate_pool_count": 36,
     "candidate_origin_counts": {
       "cross-source-theme": 20,
-      "early-signal": 6,
+      "early-signal": 7,
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 0,
-    "assessment_queue_count": 1,
+    "materially_changed_count": 2,
+    "assessment_queue_count": 2,
     "adjudication_count": 4,
-    "requirement_change_count": 4,
-    "idempotent_regeneration": true
+    "requirement_change_count": 0
   },
   "summary": {
-    "headline": "4 candidate decisions are recorded; 1 candidate remains in the bounded assessment queue.",
+    "headline": "4 candidate decisions are recorded; 2 candidates remain in the bounded assessment queue.",
     "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement."
   },
   "selection_policy": {
@@ -542,6 +541,62 @@
       "review_action": "assess-new-requirement"
     },
     {
+      "id": "early:enterprise-data-boundary",
+      "origin": "early-signal",
+      "title": "Proprietary enterprise data is moving behind a governed model boundary",
+      "description": "Firms will keep proprietary data in systems they control and expose only permitted context or computation to replaceable models, rather than contributing that data to general model training.",
+      "source_analysis": "early-signal-tracker/enterprise-data-boundary",
+      "theme_ids": [
+        "assurance-infrastructure",
+        "document-knowledge-systems",
+        "enterprise-vertical-ai",
+        "open-local-inference",
+        "operational-ontology"
+      ],
+      "evidence_ids": [
+        "aws-machine-learning-blog:2335ca1a4875d9c28b23",
+        "hn:49787614",
+        "arxiv:2609.21829v1",
+        "openai-news:192794312f979cbd50ee",
+        "nvidia-developer-blog:c6cbeb9f9f96e88e05d7",
+        "anthropic-news-research:f4efc55098543f59e5e3",
+        "mistral-news:830fb9aa9b114f2dafe7",
+        "arxiv:2609.21728v1"
+      ],
+      "stage": "corroborating",
+      "movement": "accelerating",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 7,
+        "source_types": [
+          "community",
+          "first-party-lab",
+          "paper"
+        ],
+        "recent_evidence_count": 5,
+        "technical_record_count": 7,
+        "family_count": 3,
+        "technical_family_count": 2
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 87
+      },
+      "change_reasons": [
+        "New to the weekly candidate baseline"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 2
+    },
+    {
       "id": "theme:skills-integrations",
       "origin": "cross-source-theme",
       "title": "Skills, protocols & integrations",
@@ -660,7 +715,7 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 60,
+        "recent_evidence_count": 59,
         "technical_record_count": 31,
         "family_count": 10,
         "trend_score": 80.5
@@ -732,7 +787,7 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 68,
+        "recent_evidence_count": 66,
         "technical_record_count": 101,
         "family_count": 14,
         "trend_score": 100.0
@@ -1186,7 +1241,7 @@
           "paper-curation",
           "repository"
         ],
-        "recent_evidence_count": 7,
+        "recent_evidence_count": 6,
         "technical_record_count": 14,
         "family_count": 4,
         "trend_score": 63.3
@@ -1410,48 +1465,6 @@
         "new_evidence": 16,
         "operating_relevance": 0,
         "total": 49
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "expert-finding:evaluation-as-system-design",
-      "origin": "expert-finding",
-      "title": "Evaluation is moving from a final benchmark into the system-design loop",
-      "description": "11 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
-      "source_analysis": "expert-pulse/evaluation-as-system-design",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "evidence_ids": [
-        "bluesky:1278ebf77949:3mvneqxjm3s22",
-        "bluesky:b3614927c6a2:3mupj3vhqo22k",
-        "bluesky:e810fac7fd93:3msw2bx5j7s2h",
-        "bluesky:2a5707251144:3mkbfcbtlbs2n",
-        "bluesky:e14dee24058c:3lbe443vxms2y"
-      ],
-      "strength": "strong",
-      "movement": "new",
-      "metrics": {
-        "evidence_count": 5,
-        "source_count": 5,
-        "source_types": [
-          "expert-social"
-        ],
-        "recent_evidence_count": 1,
-        "technical_record_count": 0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 25,
-        "source_breadth": 17,
-        "technical_support": 0,
-        "new_evidence": 4,
-        "operating_relevance": 0,
-        "total": 46
       },
       "change_reasons": [],
       "materially_changed": false,
@@ -1780,6 +1793,51 @@
       "materially_changed": false,
       "adjudication": null,
       "review_action": "review-existing-requirement"
+    },
+    {
+      "id": "expert-finding:evaluation-as-system-design",
+      "origin": "expert-finding",
+      "title": "Evaluation is moving from a final benchmark into the system-design loop",
+      "description": "11 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
+      "source_analysis": "expert-pulse/evaluation-as-system-design",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "evidence_ids": [
+        "bluesky:1278ebf77949:3mvneqxjm3s22",
+        "bluesky:b3614927c6a2:3mupj3vhqo22k",
+        "bluesky:e810fac7fd93:3msw2bx5j7s2h",
+        "bluesky:2a5707251144:3mkbfcbtlbs2n",
+        "bluesky:e14dee24058c:3lbe443vxms2y"
+      ],
+      "strength": "strong",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 5,
+        "source_count": 5,
+        "source_types": [
+          "expert-social"
+        ],
+        "recent_evidence_count": 0,
+        "technical_record_count": 0
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 17,
+        "technical_support": 0,
+        "new_evidence": 0,
+        "operating_relevance": 0,
+        "total": 25
+      },
+      "change_reasons": [
+        "Movement changed from new to steady",
+        "Review priority changed by -21"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement"
     },
     {
       "id": "theme:web-browser-automation",
@@ -2344,32 +2402,88 @@
       "review_action": "assess-new-requirement",
       "pending_from_previous_review": true,
       "queue_rank": 1
+    },
+    {
+      "id": "early:enterprise-data-boundary",
+      "origin": "early-signal",
+      "title": "Proprietary enterprise data is moving behind a governed model boundary",
+      "description": "Firms will keep proprietary data in systems they control and expose only permitted context or computation to replaceable models, rather than contributing that data to general model training.",
+      "source_analysis": "early-signal-tracker/enterprise-data-boundary",
+      "theme_ids": [
+        "assurance-infrastructure",
+        "document-knowledge-systems",
+        "enterprise-vertical-ai",
+        "open-local-inference",
+        "operational-ontology"
+      ],
+      "evidence_ids": [
+        "aws-machine-learning-blog:2335ca1a4875d9c28b23",
+        "hn:49787614",
+        "arxiv:2609.21829v1",
+        "openai-news:192794312f979cbd50ee",
+        "nvidia-developer-blog:c6cbeb9f9f96e88e05d7",
+        "anthropic-news-research:f4efc55098543f59e5e3",
+        "mistral-news:830fb9aa9b114f2dafe7",
+        "arxiv:2609.21728v1"
+      ],
+      "stage": "corroborating",
+      "movement": "accelerating",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 7,
+        "source_types": [
+          "community",
+          "first-party-lab",
+          "paper"
+        ],
+        "recent_evidence_count": 5,
+        "technical_record_count": 7,
+        "family_count": 3,
+        "technical_family_count": 2
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 87
+      },
+      "change_reasons": [
+        "New to the weekly candidate baseline"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 2
     }
   ],
   "requirement_changes": [
     {
       "id": "modular-agent-operating-stack",
       "title": "Modular agent operating stack",
-      "change_type": "evidence-updated",
+      "change_type": "unchanged",
       "previous_maturity": "emerging",
       "current_maturity": "emerging",
-      "explanation": "Linked evidence changed from 9 to 13 records without changing maturity."
+      "explanation": "No maturity or linked-evidence change this cycle."
     },
     {
       "id": "evaluation-release-gates",
       "title": "Evaluation and release gates",
-      "change_type": "evidence-updated",
+      "change_type": "unchanged",
       "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "Linked evidence changed from 8 to 10 records without changing maturity."
+      "explanation": "No maturity or linked-evidence change this cycle."
     },
     {
       "id": "heterogeneous-model-routing",
       "title": "Heterogeneous model routing",
-      "change_type": "evidence-updated",
+      "change_type": "unchanged",
       "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "Linked evidence changed from 8 to 14 records without changing maturity."
+      "explanation": "No maturity or linked-evidence change this cycle."
     },
     {
       "id": "shared-operational-context",
@@ -2398,10 +2512,10 @@
     {
       "id": "bounded-workflow-ownership",
       "title": "Bounded workflow ownership",
-      "change_type": "evidence-updated",
+      "change_type": "unchanged",
       "previous_maturity": "narrative",
       "current_maturity": "narrative",
-      "explanation": "Linked evidence changed from 8 to 11 records without changing maturity."
+      "explanation": "No maturity or linked-evidence change this cycle."
     }
   ],
   "verification_families": [

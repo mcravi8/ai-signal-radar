@@ -63,6 +63,37 @@ EARLY_SIGNAL_DIRECTIONS = [
         "counter_signal": "Workflow-specific retrieval and direct SaaS integrations remain sufficient, making a shared semantic layer too costly to maintain.",
     },
     {
+        "id": "enterprise-data-boundary",
+        "domain": "Enterprise data architecture",
+        "title": "Proprietary enterprise data is moving behind a governed model boundary",
+        "hypothesis": "Firms will keep proprietary data in systems they control and expose only permitted context or computation to replaceable models, rather than contributing that data to general model training.",
+        "theme_ids": {"operational-ontology", "document-knowledge-systems", "open-local-inference", "assurance-infrastructure", "enterprise-vertical-ai"},
+        "minimum_theme_overlap": 0,
+        "match_phrases": {
+            "data sovereignty", "confidential client work", "data residency", "air-gapped",
+            "air gapped", "on-prem", "on premises", "private data", "sensitive training data",
+            "privacy-preserving", "federated learning", "sovereign enterprise ai",
+            "block data exfiltration", "without sharing patient-level data",
+        },
+        "curated_evidence_ids": {
+            "openai-news:192794312f979cbd50ee",
+            "aws-machine-learning-blog:2335ca1a4875d9c28b23",
+            "aws-machine-learning-blog:5a658dac9f90bae77e02",
+            "mistral-news:830fb9aa9b114f2dafe7",
+            "greylock-essays:16bf0805df87e8f7760d",
+            "arxiv:2609.21728v1",
+            "arxiv:2609.20650v1",
+            "arxiv:2609.20532v1",
+            "hn:49787614",
+            "github:998732712",
+        },
+        "evidence_basis": "This direction uses a curated set of provider, deployment, and technical records plus narrow privacy and sovereignty phrases. The evidence supports a control architecture; it does not yet verify every provider's contractual no-training guarantee.",
+        "interpretation": "Provider announcements, regulated-industry deployments, and privacy-preserving systems increasingly separate the base model from company-controlled data. The emerging pattern is governed access at inference time, with retention, training, permissions, and execution treated as distinct controls.",
+        "why_it_matters": "A startup's durable advantage may reside in its governed proprietary context and workflow data rather than in model ownership. Keeping that layer independent also preserves the ability to change model or compute providers.",
+        "next_confirmation": "Provider trust documentation and customer architecture reports that explicitly specify training exclusion, retention, deletion, human access, fine-tuning boundaries, subprocessors, and enforcement mechanisms.",
+        "counter_signal": "Privacy language remains marketing-level, firms routinely permit provider training or long retention, or the cost of private and sovereign execution outweighs the benefit for ordinary workloads.",
+    },
+    {
         "id": "validation-as-release",
         "domain": "Assurance engineering",
         "title": "Validation is becoming the release gate for AI-generated work",
@@ -610,12 +641,22 @@ def _early_signal_directions(
 
     for definition in EARLY_SIGNAL_DIRECTIONS:
         theme_ids = definition["theme_ids"]
-        # A compound hypothesis needs evidence connecting at least two of its
-        # constituent themes; otherwise one broad theme can create false breadth.
-        all_items = [
-            item for item in evidence
-            if len(theme_ids.intersection(item.get("theme_ids", []))) >= 2
-        ]
+        curated_evidence_ids = definition.get("curated_evidence_ids", set())
+        match_phrases = {phrase.casefold() for phrase in definition.get("match_phrases", set())}
+        minimum_theme_overlap = definition.get("minimum_theme_overlap", 2)
+
+        def qualifies(item: dict[str, Any]) -> bool:
+            if item["id"] in curated_evidence_ids:
+                return True
+            overlap = len(theme_ids.intersection(item.get("theme_ids", [])))
+            if not match_phrases:
+                # A compound hypothesis needs evidence connecting at least two of its
+                # constituent themes; otherwise one broad theme can create false breadth.
+                return overlap >= minimum_theme_overlap
+            searchable = f"{item.get('title', '')} {item.get('summary', '')}".casefold()
+            return overlap >= minimum_theme_overlap and any(phrase in searchable for phrase in match_phrases)
+
+        all_items = [item for item in evidence if qualifies(item)]
         current = _signal_snapshot(all_items, source_defs, as_of)
         previous = _signal_snapshot(all_items, source_defs, as_of - timedelta(days=14))
         active_items = current["items"]
@@ -677,7 +718,10 @@ def _early_signal_directions(
         )
         directions.append(
             {
-                **{key: value for key, value in definition.items() if key != "theme_ids"},
+                **{
+                    key: value for key, value in definition.items()
+                    if key not in {"theme_ids", "curated_evidence_ids", "match_phrases", "minimum_theme_overlap"}
+                },
                 "theme_ids": sorted(theme_ids),
                 "stage": current["stage"],
                 "previous_stage": previous["stage"],
@@ -1232,8 +1276,8 @@ def build_research(
             "stage_counts": early_stage_counts,
             "movement_counts": early_movement_counts,
             "important_changes": early_important_changes,
-            "executive_summary": "The current corpus points toward a more modular and operational AI industry: agents own bounded workflows; models are selected inside heterogeneous inference systems; governed context connects agents to live business state; and assurance becomes part of the release path. Physical AI is earlier, with simulation and validation emerging as the enabling layer. These are hypotheses to monitor, not forecasts of adoption.",
-            "interpretation_note": "A direction's lifecycle is computed from evidence that connects at least two constituent themes, independent source-family breadth, technical-family support, persistence, and recency inside a rolling 90-day window. Movement compares the latest 14 days with the preceding 14. These measures describe observed attention—not adoption, market size, technical correctness, or inevitability.",
+            "executive_summary": "The current corpus points toward a more modular and operational AI industry: agents own bounded workflows; models are selected inside heterogeneous inference systems; governed context connects agents to live business state; proprietary enterprise data is increasingly kept behind a controlled model boundary; and assurance becomes part of the release path. Physical AI is earlier, with simulation and validation emerging as the enabling layer. These are hypotheses to monitor, not forecasts of adoption.",
+            "interpretation_note": "Most directional lifecycles use evidence connecting at least two constituent themes. The enterprise-data-boundary direction instead uses disclosed curated records and narrow privacy or sovereignty phrases because provider policy announcements are often not theme-classified. Lifecycle states still depend on source-family breadth, technical support, persistence, and recency inside a rolling 90-day window. Movement compares the latest 14 days with the preceding 14. These measures describe observed attention—not verified contractual protection, adoption, market size, technical correctness, or inevitability.",
             "method": {
                 "evidence_window_days": 90,
                 "recent_window_days": 30,

@@ -205,6 +205,17 @@ class CrossSourceResearchTests(unittest.TestCase):
             )
         self.assertTrue(set(tracker["important_changes"]).issubset({direction["id"] for direction in tracker["directions"]}))
 
+    def test_enterprise_data_boundary_is_bounded_and_cross_source(self):
+        tracker = next(analysis for analysis in self.payload["analyses"] if analysis["id"] == "early-signal-tracker")
+        direction = next(item for item in tracker["directions"] if item["id"] == "enterprise-data-boundary")
+        self.assertEqual(direction["stage"], "corroborating")
+        self.assertGreaterEqual(direction["source_count"], 5)
+        self.assertGreaterEqual(direction["technical_family_count"], 2)
+        self.assertIn("does not yet verify", direction["evidence_basis"])
+        self.assertIn("contractual no-training guarantee", direction["evidence_basis"])
+        self.assertIn("openai-news:192794312f979cbd50ee", direction["evidence_ids"])
+        self.assertIn("mistral-news:830fb9aa9b114f2dafe7", direction["evidence_ids"])
+
 
 if __name__ == "__main__":
     unittest.main()

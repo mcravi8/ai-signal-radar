@@ -19,7 +19,7 @@ class WeeklyReviewTests(unittest.TestCase):
 
     def test_candidate_pool_is_bounded_and_cross_source(self):
         review = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
-        self.assertEqual(review["meta"]["candidate_pool_count"], 35)
+        self.assertEqual(review["meta"]["candidate_pool_count"], 36)
         self.assertLessEqual(len(review["assessment_queue"]), 10)
         self.assertTrue(all(item["materially_changed"] for item in review["assessment_queue"]))
         self.assertTrue(any(item["linked_requirement"] for item in review["assessment_queue"]))

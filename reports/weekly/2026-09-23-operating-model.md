@@ -1,6 +1,6 @@
 # Weekly Operating Model Review — 2026-09-23
 
-4 candidate decisions are recorded; 1 candidate remains in the bounded assessment queue.
+4 candidate decisions are recorded; 2 candidates remain in the bounded assessment queue.
 
 > Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement.
 
@@ -21,13 +21,11 @@
 | Rank | Candidate | Origin | Priority | Action |
 | ---: | --- | --- | ---: | --- |
 | 1 | Skills, protocols & integrations | cross-source-theme | 87 | assess-new-requirement |
+| 2 | Proprietary enterprise data is moving behind a governed model boundary | early-signal | 87 | assess-new-requirement |
 
 ## Operating Model changes
 
-- **Modular agent operating stack** — evidence-updated: Linked evidence changed from 9 to 13 records without changing maturity.
-- **Evaluation and release gates** — evidence-updated: Linked evidence changed from 8 to 10 records without changing maturity.
-- **Heterogeneous model routing** — evidence-updated: Linked evidence changed from 8 to 14 records without changing maturity.
-- **Bounded workflow ownership** — evidence-updated: Linked evidence changed from 8 to 11 records without changing maturity.
+- No maturity or linked-evidence changes this cycle.
 
 ## Verification coverage
 

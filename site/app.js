@@ -822,6 +822,7 @@ function renderAnalysisDetail() {
       const stateRead = node("p", "signal-state-reason", direction.state_reason);
       if (direction.stage_changed) stateRead.append(node("strong", "", ` Changed from ${label(direction.previous_stage)} in the prior comparison snapshot.`));
       body.append(stateRead);
+      if (direction.evidence_basis) body.append(node("p", "signal-evidence-basis", direction.evidence_basis));
       const lifecycle = node("div", "signal-history");
       lifecycle.append(node("strong", "", "Eight-week path"));
       const history = direction.lifecycle_history || [];
