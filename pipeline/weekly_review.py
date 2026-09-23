@@ -384,6 +384,8 @@ def build_weekly_review(
     changed_requirements = [item for item in changes if item["change_type"] not in {"unchanged", "baseline"}]
     origin_counts = dict(Counter(item["origin"] for item in candidates))
     baseline = previous_review is None
+    candidate_noun = "candidate" if len(queue) == 1 else "candidates"
+    candidate_verb = "remains" if len(queue) == 1 else "remain"
     same_cycle = bool(previous_review and previous_review.get("meta", {}).get("as_of") == research["weekly"]["as_of"])
     if (
         same_cycle
@@ -412,9 +414,9 @@ def build_weekly_review(
         },
         "summary": {
             "headline": (
-                f"{len(adjudications)} candidate decisions are recorded; {len(queue)} candidates remain in the bounded assessment queue."
+                f"{len(adjudications)} candidate decisions are recorded; {len(queue)} {candidate_noun} {candidate_verb} in the bounded assessment queue."
                 if adjudications
-                else f"{len(queue)} candidates require assessment from a {len(candidates)}-item cross-source pool."
+                else f"{len(queue)} {candidate_noun} require assessment from a {len(candidates)}-item cross-source pool."
                 if queue else "No candidate crossed the material-change review boundary this week."
             ),
             "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement.",

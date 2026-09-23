@@ -401,6 +401,7 @@ function renderWeeklyReview() {
     const decision = node("p", "adjudication-decision", item.decision);
     const rationale = node("p", "adjudication-rationale", item.rationale);
     const links = node("div", "adjudication-links");
+    links.append(node("span", "tabular", `Reviewed ${formatDate(item.reviewed_at)}`));
     for (const requirement of item.linked_requirements || []) {
       const link = node("a", "", `${requirement.title} · ${label(requirement.maturity)}`);
       link.href = `#operating-model/${requirement.id}`;
