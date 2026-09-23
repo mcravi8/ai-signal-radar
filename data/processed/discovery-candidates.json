@@ -1,11 +1,11 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-23T20:02:19.550821+00:00",
+    "generated_at": "2026-09-23T20:04:20.123500+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1189,
-    "input_changed_document_count": 1189,
-    "cluster_count": 356,
+    "input_document_count": 1190,
+    "input_changed_document_count": 786,
+    "cluster_count": 357,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 141,
     "coherent_cluster_count": 134,
@@ -19,10 +19,10 @@
     "disposition_counts": {
       "covered-by-existing-theme": 78,
       "merge-existing-direction": 7,
-      "novel": 271
+      "novel": 272
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
-    "baseline_cycle": true,
+    "baseline_cycle": false,
     "baseline_complete": true,
     "baseline_version": 1
   },
@@ -1997,7 +1997,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 8,
         "capped_evidence_count": 4,
-        "changed_evidence_count": 4
+        "changed_evidence_count": 3
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -3285,7 +3285,7 @@
         "dominant_publisher_share": 0.667,
         "raw_evidence_count": 3,
         "capped_evidence_count": 3,
-        "changed_evidence_count": 3
+        "changed_evidence_count": 2
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -3916,7 +3916,7 @@
         "dominant_publisher_share": 0.667,
         "raw_evidence_count": 6,
         "capped_evidence_count": 3,
-        "changed_evidence_count": 3
+        "changed_evidence_count": 2
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -5199,7 +5199,7 @@
       "evidence_ids": [
         "github:1360934358",
         "yc-company:32206",
-        "yc-company:32716"
+        "yc-company:38492"
       ],
       "source_ids": [
         "github",
@@ -5221,7 +5221,7 @@
         "robotics-embodied-ai": 1
       },
       "first_seen": "2026-09-08T04:50:12Z",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-09-23",
       "metrics": {
         "evidence_count": 3,
         "independent_event_count": 3,
@@ -5229,7 +5229,7 @@
         "source_family_count": 2,
         "technical_record_count": 1,
         "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 8,
+        "raw_evidence_count": 9,
         "capped_evidence_count": 4,
         "changed_evidence_count": 3
       },
@@ -5243,7 +5243,7 @@
         "context_coherence_met": true,
         "context_features": [
           {
-            "id": "concept:phrase:batch-s2026",
+            "id": "concept:phrase:artificial-intelligence-robotics",
             "document_count": 2
           },
           {
@@ -5264,6 +5264,13 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [
+        {
+          "evidence_id": "yc-company:32716",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
         {
           "evidence_id": "yc-company:32752",
           "reason_codes": [
@@ -11286,6 +11293,66 @@
         "matched_anchor_phrases": [],
         "basis": "document-share"
       }
+    },
+    {
+      "id": "discovery:full-stack-5fbe42e050",
+      "anchor_ids": [
+        "phrase:full-stack"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:full-stack",
+          "label": "full stack",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "nvidia-developer-blog:b8d6021112d2ddada7db",
+        "yc-company:38492"
+      ],
+      "source_ids": [
+        "nvidia-developer-blog",
+        "yc-companies"
+      ],
+      "source_family_ids": [
+        "builders",
+        "formation"
+      ],
+      "theme_ids": [],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {},
+      "first_seen": "2026-09-10T16:55:32Z",
+      "last_seen": "2026-09-23",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 1,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 2
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": true,
+      "disposition": "novel",
+      "nearest_known": null
     },
     {
       "id": "discovery:fully-open-abd6ab6c22",
@@ -21765,7 +21832,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 2
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,

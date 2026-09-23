@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-23T20:02:19.550821+00:00",
+    "generated_at": "2026-09-23T20:04:20.123500+00:00",
     "as_of": "2026-09-23",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -15,8 +15,7 @@
     "materially_changed_count": 0,
     "assessment_queue_count": 5,
     "adjudication_count": 4,
-    "requirement_change_count": 0,
-    "idempotent_regeneration": true
+    "requirement_change_count": 0
   },
   "summary": {
     "headline": "4 candidate decisions are recorded; 5 candidates remain in the bounded assessment queue.",
@@ -2770,7 +2769,7 @@
       "dimension": "market_pull",
       "evidence_limit": 8,
       "status": "active",
-      "record_count": 52,
+      "record_count": 53,
       "source_count": 1,
       "source_names": [
         "Y Combinator AI companies"
@@ -2778,6 +2777,7 @@
       "new_record_count": 1,
       "evidence_ids": [
         "yc-company:662",
+        "yc-company:38492",
         "yc-company:37995",
         "yc-company:37601",
         "yc-company:37600",
@@ -2832,13 +2832,13 @@
       ],
       "sample_evidence_ids": [
         "yc-company:662",
+        "yc-company:38492",
         "yc-company:37995",
         "yc-company:37601",
         "yc-company:37600",
         "yc-company:37566",
         "yc-company:37468",
-        "yc-company:37273",
-        "yc-company:37203"
+        "yc-company:37273"
       ],
       "boundary": "Supporting verification signal only; maturity still requires case-level review under the formal evidence policy."
     },

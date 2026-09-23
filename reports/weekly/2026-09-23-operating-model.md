@@ -32,7 +32,7 @@
 
 ## Verification coverage
 
-- **AI company formation** — 52 records across 1 sources; 1 newly observed in this review history.
+- **AI company formation** — 53 records across 1 sources; 1 newly observed in this review history.
 - **Funding activity** — 24 records across 3 sources; 0 newly observed in this review history.
 - **Customer case studies** — 30 records across 12 sources; 0 newly observed in this review history.
 - **AI job postings** — 13 records across 1 sources; 0 newly observed in this review history.
