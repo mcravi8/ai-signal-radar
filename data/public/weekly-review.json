@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-23T20:04:20.123500+00:00",
+    "generated_at": "2026-09-23T20:46:51.025545+00:00",
     "as_of": "2026-09-23",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,7 +12,7 @@
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 0,
+    "materially_changed_count": 1,
     "assessment_queue_count": 5,
     "adjudication_count": 4,
     "requirement_change_count": 0
@@ -695,7 +695,7 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 65,
+        "recent_evidence_count": 64,
         "technical_record_count": 101,
         "family_count": 14,
         "trend_score": 100.0
@@ -725,6 +725,7 @@
         "voice-audio"
       ],
       "evidence_ids": [
+        "bluesky:b3614927c6a2:3mw7magyrwc2i",
         "alphasignal:5f3148d70539a8da7f25",
         "alphasignal:1ef7cf038f88524bc9b8",
         "hn:49789320",
@@ -743,18 +744,18 @@
         "alphasignal:project:dograh",
         "github:1057664813",
         "greylock-essays:7ae3d96ba71e4e63c7f2",
-        "greylock-essays:b5d0a493521b25d69daf",
-        "chip-huyen:17001c4976bcaeda4a08"
+        "greylock-essays:b5d0a493521b25d69daf"
       ],
-      "stage": "corroborated-source-concentrated",
+      "stage": "broadly-corroborated",
       "movement": "rising",
       "metrics": {
-        "evidence_count": 22,
+        "evidence_count": 23,
         "source_count": 12,
         "source_types": [
           "community",
           "company-directory",
           "curated-newsletter",
+          "expert-social",
           "first-party-lab",
           "investor-essay",
           "newsletter",
@@ -764,10 +765,10 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 8,
+        "recent_evidence_count": 9,
         "technical_record_count": 11,
-        "family_count": 11,
-        "trend_score": 79.4
+        "family_count": 12,
+        "trend_score": 80.0
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -779,12 +780,15 @@
         "operating_relevance": 0,
         "total": 87
       },
-      "change_reasons": [],
-      "materially_changed": false,
+      "change_reasons": [
+        "Lifecycle stage changed from corroborated-source-concentrated to broadly-corroborated",
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
       "adjudication": null,
       "review_action": "assess-new-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 4
+      "queue_rank": 4,
+      "pending_from_previous_review": true
     },
     {
       "id": "early:heterogeneous-inference",
@@ -2564,6 +2568,7 @@
         "voice-audio"
       ],
       "evidence_ids": [
+        "bluesky:b3614927c6a2:3mw7magyrwc2i",
         "alphasignal:5f3148d70539a8da7f25",
         "alphasignal:1ef7cf038f88524bc9b8",
         "hn:49789320",
@@ -2582,18 +2587,18 @@
         "alphasignal:project:dograh",
         "github:1057664813",
         "greylock-essays:7ae3d96ba71e4e63c7f2",
-        "greylock-essays:b5d0a493521b25d69daf",
-        "chip-huyen:17001c4976bcaeda4a08"
+        "greylock-essays:b5d0a493521b25d69daf"
       ],
-      "stage": "corroborated-source-concentrated",
+      "stage": "broadly-corroborated",
       "movement": "rising",
       "metrics": {
-        "evidence_count": 22,
+        "evidence_count": 23,
         "source_count": 12,
         "source_types": [
           "community",
           "company-directory",
           "curated-newsletter",
+          "expert-social",
           "first-party-lab",
           "investor-essay",
           "newsletter",
@@ -2603,10 +2608,10 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 8,
+        "recent_evidence_count": 9,
         "technical_record_count": 11,
-        "family_count": 11,
-        "trend_score": 79.4
+        "family_count": 12,
+        "trend_score": 80.0
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -2618,12 +2623,15 @@
         "operating_relevance": 0,
         "total": 87
       },
-      "change_reasons": [],
-      "materially_changed": false,
+      "change_reasons": [
+        "Lifecycle stage changed from corroborated-source-concentrated to broadly-corroborated",
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
       "adjudication": null,
       "review_action": "assess-new-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 4
+      "queue_rank": 4,
+      "pending_from_previous_review": true
     },
     {
       "id": "theme:open-local-inference",
@@ -2774,7 +2782,7 @@
       "source_names": [
         "Y Combinator AI companies"
       ],
-      "new_record_count": 1,
+      "new_record_count": 0,
       "evidence_ids": [
         "yc-company:662",
         "yc-company:38492",
