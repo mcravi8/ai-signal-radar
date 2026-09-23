@@ -10,6 +10,23 @@ TECHNICAL_SOURCE_TYPES = {"paper", "repository", "first-party-lab", "practitione
 MATURITY_ORDER = ["narrative", "experimental", "emerging", "established", "baseline"]
 
 
+def _review_headline(adjudication_count: int, queue_count: int, candidate_count: int) -> str:
+    candidate_noun = "candidate" if queue_count == 1 else "candidates"
+    if adjudication_count:
+        candidate_verb = "remains" if queue_count == 1 else "remain"
+        return (
+            f"{adjudication_count} candidate decisions are recorded; "
+            f"{queue_count} {candidate_noun} {candidate_verb} in the bounded assessment queue."
+        )
+    if queue_count:
+        candidate_verb = "requires" if queue_count == 1 else "require"
+        return (
+            f"{queue_count} {candidate_noun} {candidate_verb} assessment "
+            f"from a {candidate_count}-item cross-source pool."
+        )
+    return "No candidate crossed the material-change review boundary this week."
+
+
 def _parse_date(value: str | None) -> datetime | None:
     if not value:
         return None
@@ -384,8 +401,6 @@ def build_weekly_review(
     changed_requirements = [item for item in changes if item["change_type"] not in {"unchanged", "baseline"}]
     origin_counts = dict(Counter(item["origin"] for item in candidates))
     baseline = previous_review is None
-    candidate_noun = "candidate" if len(queue) == 1 else "candidates"
-    candidate_verb = "remains" if len(queue) == 1 else "remain"
     same_cycle = bool(previous_review and previous_review.get("meta", {}).get("as_of") == research["weekly"]["as_of"])
     if (
         same_cycle
@@ -396,6 +411,12 @@ def build_weekly_review(
         preserved = {**previous_review, "meta": {**previous_review["meta"]}}
         preserved["meta"]["generated_at"] = research["meta"]["generated_at"]
         preserved["meta"]["idempotent_regeneration"] = True
+        preserved["summary"] = {**previous_review["summary"]}
+        preserved["summary"]["headline"] = _review_headline(
+            len(preserved.get("adjudications", [])),
+            len(preserved.get("assessment_queue", [])),
+            len(preserved.get("candidate_pool", [])),
+        )
         return preserved
 
     return {
@@ -413,12 +434,7 @@ def build_weekly_review(
             "requirement_change_count": len(changed_requirements),
         },
         "summary": {
-            "headline": (
-                f"{len(adjudications)} candidate decisions are recorded; {len(queue)} {candidate_noun} {candidate_verb} in the bounded assessment queue."
-                if adjudications
-                else f"{len(queue)} {candidate_noun} require assessment from a {len(candidates)}-item cross-source pool."
-                if queue else "No candidate crossed the material-change review boundary this week."
-            ),
+            "headline": _review_headline(len(adjudications), len(queue), len(candidates)),
             "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement.",
         },
         "selection_policy": {

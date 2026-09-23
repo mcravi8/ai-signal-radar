@@ -4,7 +4,7 @@ from pathlib import Path
 
 import yaml
 
-from pipeline.weekly_review import build_weekly_review
+from pipeline.weekly_review import _review_headline, build_weekly_review
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +40,12 @@ class WeeklyReviewTests(unittest.TestCase):
         review = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
         self.assertEqual(len(review["verification_families"]), 6)
         self.assertTrue(all("Supporting verification" in item["boundary"] for item in review["verification_families"]))
+
+    def test_review_headline_uses_singular_candidate_grammar(self):
+        self.assertEqual(
+            _review_headline(4, 1, 35),
+            "4 candidate decisions are recorded; 1 candidate remains in the bounded assessment queue.",
+        )
 
     def test_four_theme_candidates_have_explicit_adjudications(self):
         review = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
