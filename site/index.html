@@ -6,7 +6,7 @@
     <meta name="description" content="Cross-source AI research across first-party labs, newsletters, papers, repositories, public essays, and technical discussion." />
     <title>AI Signal Radar — Cross-source research</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 12h48v8H8zm0 16h48v8H8zm0 16h48v8H8z' fill='%2317354d'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260922.16" />
+    <link rel="stylesheet" href="./styles.css?v=20260922.17" />
   </head>
   <body>
     <a class="skip-link" href="#workspace">Skip to research</a>
@@ -81,18 +81,23 @@
             <div id="requirement-changes"><p class="empty-state">Loading requirement changes…</p></div>
           </section>
 
+          <section class="content-block" aria-labelledby="adjudication-heading">
+            <header class="block-header"><div><span class="block-number">B</span><h3 id="adjudication-heading">Adjudicated this cycle</h3></div><p>Recorded decisions explain whether a signal became a requirement, strengthened an existing requirement, or remained outside the model.</p></header>
+            <div class="adjudication-grid" id="candidate-adjudications"><p class="empty-state">Loading candidate decisions…</p></div>
+          </section>
+
           <section class="content-block" aria-labelledby="assessment-queue-heading">
-            <header class="block-header"><div><span class="block-number">B</span><h3 id="assessment-queue-heading">Assessment queue</h3></div><p>Only new or materially changed candidates above the review boundary enter this queue; it is capped at ten.</p></header>
+            <header class="block-header"><div><span class="block-number">C</span><h3 id="assessment-queue-heading">Assessment queue</h3></div><p>Only unresolved new or materially changed candidates above the review boundary enter this queue; it is capped at ten.</p></header>
             <div class="assessment-queue" id="assessment-queue"><p class="empty-state">Loading the weekly queue…</p></div>
           </section>
 
           <section class="content-block" aria-labelledby="verification-coverage-heading">
-            <header class="block-header"><div><span class="block-number">C</span><h3 id="verification-coverage-heading">Verification coverage</h3></div><p>These sources help test company formation, operating adoption, and technical activity. Each retains a strict proof boundary.</p></header>
+            <header class="block-header"><div><span class="block-number">D</span><h3 id="verification-coverage-heading">Verification coverage</h3></div><p>These sources help test company formation, operating adoption, and technical activity. Each retains a strict proof boundary.</p></header>
             <div class="verification-grid" id="verification-grid"><p class="empty-state">Loading verification coverage…</p></div>
           </section>
 
           <section class="content-block" aria-labelledby="selection-policy-heading">
-            <header class="block-header"><div><span class="block-number">D</span><h3 id="selection-policy-heading">Selection policy</h3></div><p>The prioritization score controls analyst attention only and remains inspectable.</p></header>
+            <header class="block-header"><div><span class="block-number">E</span><h3 id="selection-policy-heading">Selection policy</h3></div><p>The prioritization score controls analyst attention only and remains inspectable.</p></header>
             <div class="selection-policy" id="selection-policy"></div>
           </section>
         </section>
@@ -180,6 +185,6 @@
         <section class="load-failure" id="load-failure" hidden aria-live="assertive"><strong>Research data could not be loaded.</strong><span id="failure-detail"></span><button type="button" id="retry-load">Retry</button></section>
       </main>
     </div>
-    <script src="./app.js?v=20260922.16" defer></script>
+    <script src="./app.js?v=20260922.17" defer></script>
   </body>
 </html>

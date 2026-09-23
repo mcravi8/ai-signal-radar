@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "AI-Native Startup Operating Model evidence policy",
-    "generated_at": "2026-09-22T22:28:45.543023+00:00",
+    "generated_at": "2026-09-23T00:38:34.861873+00:00",
     "as_of": "2026-09-22",
     "policy_version": 1,
-    "requirement_count": 6,
+    "requirement_count": 7,
     "maturity_counts": {
       "narrative": 2,
-      "experimental": 3,
+      "experimental": 4,
       "emerging": 1,
       "established": 0,
       "baseline": 0
@@ -835,6 +835,193 @@
         "independent_organizations": 4,
         "persistence_cycles": 2,
         "counterevidence_reviewed": false,
+        "cost_of_absence_evidenced": false,
+        "practical_minimum_available": true
+      }
+    },
+    {
+      "id": "simulation-first-physical-ai",
+      "title": "Simulation-first physical AI development",
+      "requirement": "Physical-AI startups should use simulation and staged real-world validation before scaling autonomous deployment.",
+      "description": "Physical-AI systems should learn, rehearse, and fail inside instrumented simulated or robot-free environments before expensive or safety-critical deployment. Simulation does not replace real-world data: it creates a repeatable development and evaluation layer, while staged hardware tests measure where synthetic experience fails to transfer.",
+      "what_it_looks_like": [
+        "Define simulation scenarios from real operating conditions, edge cases, and known failure modes.",
+        "Gate hardware deployment on repeatable simulated performance, then measure the sim-to-real gap during staged trials.",
+        "Feed real interventions and failures back into the environment, model, and release criteria instead of treating deployment as the end of training."
+      ],
+      "applicable_to": "Robotics, autonomous vehicles, industrial control, and other startups whose models take actions in the physical world; not a general requirement for software-only AI products.",
+      "source_analysis": "early-signal-tracker/simulation-first-physical-ai",
+      "maturity": "experimental",
+      "confidence": "moderate",
+      "concentration": "moderate",
+      "assessments": {
+        "evidence_independence": "moderate",
+        "market_pull": "moderate",
+        "operational_adoption": "low",
+        "technical_reality": "strong"
+      },
+      "rationale": "Independent research demonstrates closed-loop simulation, robot-free post-training, and transfer between simulation and hardware, while builder and investor sources show market formation. The corpus does not yet demonstrate repeated production deployments with measured reductions in physical testing cost, failure rate, or safety incidents.",
+      "next_gate": {
+        "maturity": "emerging",
+        "failures": [
+          "operational_adoption is low; requires moderate"
+        ]
+      },
+      "evidence_gaps": [
+        "Independent production reports comparing simulated and real-world failure rates and intervention requirements.",
+        "Measured cost and cycle-time improvements attributable to simulation rather than better models or additional real-world data.",
+        "Evidence defining when sim-to-real gaps make physical data collection the dominant development path."
+      ],
+      "evidence": [
+        {
+          "id": "arxiv:2609.20756v1",
+          "event_id": "opted-closed-loop-driving",
+          "title": "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+          "summary": "As scaling pre-training data alone yields diminishing returns, post-training is becoming increasingly important across physical AI domains such as autonomous driving. End-to-end driving policies are pre-trained in open loop with behavior cloning on human demonstrations. However, compounding errors during closed-loop deployment can take the vehicle outside the training data distribution, increasing the risk of safety-critical incidents. Closed-loop post-training can mitigate this risk but requires costly simulation for sensor-based policies. We propose OPTED (on-policy fine-tuning for end-to-end driving) which decouples reinforcement learning from the post-training of the end-to-end policy: a privileged teacher is trained using RL on vectorized inputs (HD-map and bounding boxes). This teacher then provides supervision to the pre-trained student during closed-loop post-training. We apply OPTED to two camera-based models, TransFuser and VaVAM, and fine-tune them in AlpaSim, using neural reconstructions (3DGS) of real driving logs. Driving scores increase by factors of 1.6$\\times$ and 9.5$\\times$, respectively. In controlled experiments OPTED matches closed-loop performance with approx",
+          "url": "http://arxiv.org/abs/2609.20756v1",
+          "published_at": "2026-09-17T17:41:51Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.20659v1",
+          "event_id": "hil-umi-robot-free-post-training",
+          "title": "HIL-UMI: Bringing Human-in-the-Loop Post-Training of Vision-Language-Action Models to Universal Manipulation Interface",
+          "summary": "Large-scale vision-language-action (VLA) models provide powerful priors for robot manipulation, yet adapting them to a specific deployment remains challenging. Supervised fine-tuning (SFT) on task-specific demonstrations provides a step toward deployment, but faces two persistent limitations: static data provide limited coverage of out-of-distribution states, and standard imitation objectives do not distinguish progressing behavior from less useful data. Interactive post-training can address these limitations, but typically requires repeated policy execution and human intervention on a physical robot. We introduce HIL-UMI, a policy-guided Universal Manipulation Interface (UMI) framework for robot-free human-in-the-loop VLA post-training. During handheld UMI demonstrations, HIL-UMI queries the current policy on the same observation stream without executing its predictions. The Energy Score compares the human action trajectory with policy inference and triggers collection when their discrepancy indicates an out-of-distribution region. In a separate feedback loop, low online advantage predictions identify essential segments for refining a progress-based advantage estimator. The update",
+          "url": "http://arxiv.org/abs/2609.20659v1",
+          "published_at": "2026-09-17T16:38:37Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.20820v1",
+          "event_id": "workspace-model-simulation-hardware",
+          "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision",
+          "summary": "Complex robotic manipulation tasks frequently require a long-term memory of past events and actions. As conditioning on full histories renders policies prone to spurious correlations and degrades performance, many approaches to policy memory involve compressing historical information through expensive VLM queries in-the-loop to process only task-salient information. In this paper, we propose an alternative approach in which computationally intensive VLM queries are made during train-time to learn a lightweight latent memory that can be efficiently queried at deployment time. Our representation, which we call the \\textbf{workspace token}, is trained by (1) using a VLM to identify current and historical information necessary for completing a task, then (2) distilling these into the workspace token using a set-reconstruction decoder loss. In both simulation and hardware, we show that the workspace token can be used as a drop-in replacement for observations during deployment, enabling policies to solve memory-intensive tasks without the need for VLM reasoning in-the-loop. Interestingly, we found that workspace tokens are not only more lightweight but also lead to better policy performa",
+          "url": "http://arxiv.org/abs/2609.20820v1",
+          "published_at": "2026-09-17T17:59:53Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "nvidia-developer-blog:5d6d93f42d6ca9b84a08",
+          "event_id": "nvidia-scene-preparation-workflow",
+          "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+          "summary": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data in...",
+          "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation/",
+          "published_at": "2026-09-16T23:20:33Z",
+          "source_id": "nvidia-developer-blog",
+          "source_name": "NVIDIA Developer Blog",
+          "source_type": "first-party-lab",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "greylock-essays:4db96be55ee28289e4fd",
+          "event_id": "antioch-simulation-platform-investment",
+          "title": "Introducing Antioch: The Simulation Platform for Physical AI",
+          "summary": "Enabling teams to develop, test and validate AI systems in high-fidelity simulation. Today, we’re excited to announce that Greylock is leading the Series A in Antioch, a company building the simulation platform for physical AI. AI has transformed how quickly software teams can build products.…",
+          "url": "https://greylock.com/blog/introducing-antioch-the-simulation-platform-for-physical-ai/",
+          "published_at": "2026-09-08T15:11:00+00:00",
+          "source_id": "greylock-essays",
+          "source_name": "Greylock essays",
+          "source_type": "investor-essay",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "radical-ventures:002cb1815fb8b4589802",
+          "event_id": "radical-world-models-thesis",
+          "title": "World Models in Robotics",
+          "summary": "Robots should not go to school in the real world. While scaling physical AI will require robots to learn through active interaction — just like humans do — the physical world is not a practical training ground for trial and error. It is expensive, time-consuming, and ultimately unsafe. Instead, robots and all physical AI systems […] The post World Models in Robotics appeared first on Radical Ventures .",
+          "url": "https://radical.vc/articles/world-models-in-robotics/",
+          "published_at": "2026-08-24T14:32:05+00:00",
+          "source_id": "radical-ventures",
+          "source_name": "Radical Ventures insights",
+          "source_type": "investor-essay",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "alphasignal:trend:robotics-and-embodied-ai",
+          "event_id": "alphasignal-embodied-ai-synthesis",
+          "title": "Robotics and embodied AI",
+          "summary": "World models, robot datasets and self-improving control loops linked multimodal models to physical systems.",
+          "url": "",
+          "published_at": "2026-09-21",
+          "source_id": "alphasignal",
+          "source_name": "AlphaSignal",
+          "source_type": "newsletter-analysis",
+          "relationship": "discovery-only",
+          "dimensions": [],
+          "exclusion_reason": null
+        },
+        {
+          "id": "yc-company:32206",
+          "event_id": "deepreach-real-world-data-thesis",
+          "title": "DeepReach Inc. (S2026)",
+          "summary": "Network for Physical AI Data Business. Physical AI — robots and world models — is bottlenecked on one thing: diverse, real-world data at massive scale showing how humans actually do work in the physical world. It was never written down, and you can't buy it, because no one has ever captured it. Only real local experts, the people who do this work every day, can produce data this authentic and valuable. DeepReach builds the network that reaches them. We design and manufacture wearable stereo capture devices, then place them with local data partners who run collection as their own business — in warehouses, workshops, farms, kitchens and repair shops. They own the local relationships; we supply the hardware, the software platform, the quality pipeline and the payments. Anyone can run a data business. That structure is what produces diversity. Instead of thousands of hours inside one environment, we deliver hours spread across thousands of environments — which is what actually makes robot policies generalize. 475 devices in the field and 100+ data partners are live across 7 countries, adding new partners every week. They've collected nearly 150,000 clips in the past three months, with ",
+          "url": "https://www.ycombinator.com/companies/deepreach-inc",
+          "published_at": "",
+          "source_id": "yc-companies",
+          "source_name": "Y Combinator AI companies",
+          "source_type": "company-directory",
+          "relationship": "counterevidence",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "hf-paper:2506.01844",
+          "event_id": "smolvla-efficient-robotics",
+          "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient\n  Robotics",
+          "summary": "Vision-language models (VLMs) pretrained on large-scale multimodal datasets\nencode rich visual and linguistic knowledge, making them a strong foundation\nfor robotics. Rather than training robotic policies from scratch, recent\napproaches adapt VLMs into vision-language-action (VLA) models that enable\nnatural language-driven perception and control. However, existing VLAs are\ntypically massive--often with billions of parameters--leading to high training\ncosts and limited real-world deployability. Moreover, they rely on academic and\nindustrial datasets, overlooking the growing availability of\ncommunity-collected data from affordable robotic platforms. In this work, we\npresent SmolVLA, a small, efficient, and community-driven VLA that drastically\nreduces both training and inference costs, while retaining competitive\nperformance. SmolVLA is designed to be trained on a single GPU and deployed on\nconsumer-grade GPUs or even CPUs. To further improve responsiveness, we\nintroduce an asynchronous inference stack decoupling perception and action\nprediction from action execution, allowing higher control rates with chunked\naction generation. Despite its compact size, SmolVLA achieves performance\n",
+          "url": "https://huggingface.co/papers/2506.01844",
+          "published_at": "2025-06-02T16:30:19+00:00",
+          "source_id": "huggingface-papers",
+          "source_name": "Hugging Face Daily Papers",
+          "source_type": "paper-curation",
+          "relationship": "excluded",
+          "dimensions": [],
+          "exclusion_reason": "The project demonstrates efficient robotics models but does not establish simulation-first development or sim-to-real validation."
+        }
+      ],
+      "gate_inputs": {
+        "qualifying_events": 3,
+        "technical_artifacts": 3,
+        "independent_organizations": 3,
+        "persistence_cycles": 1,
+        "counterevidence_reviewed": true,
         "cost_of_absence_evidenced": false,
         "practical_minimum_available": true
       }

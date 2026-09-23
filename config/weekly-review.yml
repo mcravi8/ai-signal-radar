@@ -13,6 +13,70 @@ priority_components:
   new_evidence: 20
   operating_relevance: 10
 
+candidate_adjudications:
+  - candidate_id: theme:robotics-embodied-ai
+    reviewed_at: "2026-09-22"
+    outcome: conditional-requirement-added
+    requirement_ids: [simulation-first-physical-ai]
+    decision: Add a conditional requirement for physical-AI startups, not a universal startup requirement.
+    rationale: >-
+      Robotics activity is broad enough to deserve an operating conclusion, but the
+      actionable requirement is narrower than the theme: physical-AI teams should use
+      simulation, staged real-world validation, and explicit sim-to-real checks before
+      scaling autonomous deployment.
+    reviewed_state:
+      stage: corroborated
+      movement: new
+      evidence_count: 16
+      source_count: 8
+
+  - candidate_id: theme:agent-harnesses
+    reviewed_at: "2026-09-22"
+    outcome: covered-by-existing-requirement
+    requirement_ids: [modular-agent-operating-stack]
+    decision: Do not create a duplicate requirement.
+    rationale: >-
+      An agent harness is the orchestration and control portion of the already-calibrated
+      modular agent operating stack. Its evidence should strengthen that requirement rather
+      than create a second entry with an indistinguishable operating prescription.
+    reviewed_state:
+      stage: corroborated-source-concentrated
+      movement: rising
+      evidence_count: 56
+      source_count: 13
+
+  - candidate_id: theme:coding-agents
+    reviewed_at: "2026-09-22"
+    outcome: domain-signal-not-separate-requirement
+    requirement_ids: [evaluation-release-gates, bounded-workflow-ownership]
+    decision: Treat coding agents as an application domain, not a standalone operating requirement.
+    rationale: >-
+      Coding agents make release gates and bounded workflow ownership more urgent, but
+      "use coding agents" is not a defensible universal requirement. The reusable operating
+      obligations are verified completion, constrained actions, review, rollback, and
+      measurable workflow outcomes.
+    reviewed_state:
+      stage: corroborated-source-concentrated
+      movement: rising
+      evidence_count: 62
+      source_count: 14
+
+  - candidate_id: theme:frontier-inference-infrastructure
+    reviewed_at: "2026-09-22"
+    outcome: infrastructure-signal-not-general-requirement
+    requirement_ids: [heterogeneous-model-routing]
+    decision: Do not require ordinary startups to build frontier inference infrastructure.
+    rationale: >-
+      The evidence supports inference optimization and model-path selection, but frontier
+      clusters are a supplier capability and a conditional concern for infrastructure
+      companies. Most startups should consume this capability through routing, capacity,
+      latency, and cost controls rather than own the underlying cluster.
+    reviewed_state:
+      stage: broadly-corroborated
+      movement: rising
+      evidence_count: 29
+      source_count: 8
+
 verification_families:
   - id: company-formation
     title: AI company formation

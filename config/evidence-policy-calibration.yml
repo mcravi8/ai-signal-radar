@@ -3,6 +3,84 @@ as_of: "2026-09-22"
 dataset: data/public/research.json
 
 cases:
+  - id: simulation-first-physical-ai
+    title: Simulation-first physical AI development
+    requirement: Physical-AI startups should use simulation and staged real-world validation before scaling autonomous deployment.
+    description: >-
+      Physical-AI systems should learn, rehearse, and fail inside instrumented simulated or
+      robot-free environments before expensive or safety-critical deployment. Simulation does
+      not replace real-world data: it creates a repeatable development and evaluation layer,
+      while staged hardware tests measure where synthetic experience fails to transfer.
+    what_it_looks_like:
+      - Define simulation scenarios from real operating conditions, edge cases, and known failure modes.
+      - Gate hardware deployment on repeatable simulated performance, then measure the sim-to-real gap during staged trials.
+      - Feed real interventions and failures back into the environment, model, and release criteria instead of treating deployment as the end of training.
+    applicable_to: Robotics, autonomous vehicles, industrial control, and other startups whose models take actions in the physical world; not a general requirement for software-only AI products.
+    source_analysis: early-signal-tracker/simulation-first-physical-ai
+    evidence_links:
+      - evidence_id: arxiv:2609.20756v1
+        event_id: opted-closed-loop-driving
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.20659v1
+        event_id: hil-umi-robot-free-post-training
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.20820v1
+        event_id: workspace-model-simulation-hardware
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: nvidia-developer-blog:5d6d93f42d6ca9b84a08
+        event_id: nvidia-scene-preparation-workflow
+        relationship: supporting-context
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: greylock-essays:4db96be55ee28289e4fd
+        event_id: antioch-simulation-platform-investment
+        relationship: supporting-context
+        dimensions: [market_pull]
+      - evidence_id: radical-ventures:002cb1815fb8b4589802
+        event_id: radical-world-models-thesis
+        relationship: supporting-context
+        dimensions: [market_pull]
+      - evidence_id: alphasignal:trend:robotics-and-embodied-ai
+        event_id: alphasignal-embodied-ai-synthesis
+        relationship: discovery-only
+        dimensions: []
+      - evidence_id: yc-company:32206
+        event_id: deepreach-real-world-data-thesis
+        relationship: counterevidence
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: hf-paper:2506.01844
+        event_id: smolvla-efficient-robotics
+        relationship: excluded
+        dimensions: []
+        exclusion_reason: The project demonstrates efficient robotics models but does not establish simulation-first development or sim-to-real validation.
+    assessments:
+      technical_reality: strong
+      operational_adoption: low
+      market_pull: moderate
+      evidence_independence: moderate
+      concentration: moderate
+      confidence: moderate
+    gate_inputs:
+      qualifying_events: 3
+      technical_artifacts: 3
+      independent_organizations: 3
+      persistence_cycles: 1
+      counterevidence_reviewed: true
+      cost_of_absence_evidenced: false
+      practical_minimum_available: true
+    expected_maturity: experimental
+    rationale: >-
+      Independent research demonstrates closed-loop simulation, robot-free post-training, and
+      transfer between simulation and hardware, while builder and investor sources show market
+      formation. The corpus does not yet demonstrate repeated production deployments with
+      measured reductions in physical testing cost, failure rate, or safety incidents.
+    evidence_gaps:
+      - Independent production reports comparing simulated and real-world failure rates and intervention requirements.
+      - Measured cost and cycle-time improvements attributable to simulation rather than better models or additional real-world data.
+      - Evidence defining when sim-to-real gaps make physical data collection the dominant development path.
+
   - id: evaluation-release-gates
     title: Evaluation and release gates
     requirement: Consequential AI workflows require evaluation and release gates.

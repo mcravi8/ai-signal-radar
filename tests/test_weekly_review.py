@@ -41,6 +41,23 @@ class WeeklyReviewTests(unittest.TestCase):
         self.assertEqual(len(review["verification_families"]), 6)
         self.assertTrue(all("Supporting verification" in item["boundary"] for item in review["verification_families"]))
 
+    def test_four_theme_candidates_have_explicit_adjudications(self):
+        review = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
+        adjudications = {item["candidate_id"]: item for item in review["adjudications"]}
+        self.assertEqual(
+            set(adjudications),
+            {
+                "theme:robotics-embodied-ai",
+                "theme:agent-harnesses",
+                "theme:coding-agents",
+                "theme:frontier-inference-infrastructure",
+            },
+        )
+        self.assertEqual(adjudications["theme:robotics-embodied-ai"]["outcome"], "conditional-requirement-added")
+        self.assertTrue(all(item["status"] == "current" for item in adjudications.values()))
+        queued_ids = {item["id"] for item in review["assessment_queue"]}
+        self.assertFalse(set(adjudications).intersection(queued_ids))
+
 
 if __name__ == "__main__":
     unittest.main()

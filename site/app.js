@@ -338,6 +338,7 @@ function renderWeeklyReview() {
   const metrics = $("#weekly-review-metrics");
   const summary = $("#review-summary");
   const changes = $("#requirement-changes");
+  const adjudications = $("#candidate-adjudications");
   const queue = $("#assessment-queue");
   const verification = $("#verification-grid");
   const policy = $("#selection-policy");
@@ -346,6 +347,7 @@ function renderWeeklyReview() {
     metrics.replaceChildren(metric("Candidate pool", "N/O", "Dataset unavailable"));
     summary.replaceChildren();
     changes.replaceChildren(node("p", "empty-state", "The weekly review dataset is unavailable."));
+    adjudications.replaceChildren(node("p", "empty-state", "Candidate decisions could not be loaded."));
     queue.replaceChildren(node("p", "empty-state", "The assessment queue could not be loaded."));
     verification.replaceChildren(node("p", "empty-state", "Verification coverage could not be loaded."));
     policy.replaceChildren();
@@ -359,6 +361,7 @@ function renderWeeklyReview() {
   metrics.replaceChildren(
     metric("Candidate pool", formatNumber(data.meta.candidate_pool_count), originSummary),
     metric("Materially changed", formatNumber(data.meta.materially_changed_count), data.meta.baseline_cycle ? "First tracked baseline" : "Compared with prior weekly cycle"),
+    metric("Adjudicated", formatNumber(data.meta.adjudication_count || 0), "Explicit evidence-policy decisions"),
     metric("Assessment queue", formatNumber(data.meta.assessment_queue_count), `Hard cap ${data.selection_policy.maximum_queue}`),
     metric("Requirement changes", formatNumber(meaningfulChanges.length), "Human-reviewed policy outcomes"),
     metric("Verification families", `${activeVerification}/${data.verification_families.length}`, "Active public evidence channels"),
@@ -384,6 +387,29 @@ function renderWeeklyReview() {
     changeRows.append(row);
   }
   changes.append(changeRows);
+
+  adjudications.replaceChildren();
+  if (!data.adjudications?.length) {
+    adjudications.append(node("p", "empty-state", "No candidate adjudications are recorded for this cycle."));
+  }
+  for (const item of data.adjudications || []) {
+    const card = node("article", `adjudication-card adjudication-${item.status}`);
+    const head = node("div", "adjudication-head");
+    const title = node("a", "adjudication-title", item.title);
+    title.href = candidateHref(item);
+    head.append(node("span", "queue-origin", label(item.origin)), badge(label(item.outcome), item.status), title);
+    const decision = node("p", "adjudication-decision", item.decision);
+    const rationale = node("p", "adjudication-rationale", item.rationale);
+    const links = node("div", "adjudication-links");
+    for (const requirement of item.linked_requirements || []) {
+      const link = node("a", "", `${requirement.title} · ${label(requirement.maturity)}`);
+      link.href = `#operating-model/${requirement.id}`;
+      links.append(link);
+    }
+    if (!links.children.length) links.append(node("span", "", "No requirement created"));
+    card.append(head, decision, rationale, links);
+    adjudications.append(card);
+  }
 
   queue.replaceChildren();
   if (!data.assessment_queue.length) {

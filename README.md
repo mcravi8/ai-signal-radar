@@ -72,13 +72,13 @@ The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only 
 
 The Operating Model workspace renders the public `data/public/operating-model.json` registry. Each requirement explains the concept, what it looks like in a startup, where it applies, its recommended posture, evidence dimensions, promotion blockers, verification gaps, and the disposition of every linked record.
 
-Six adjudicated cases in `config/evidence-policy-calibration.yml` test the rules against real Radar evidence. Run the calibration with:
+Seven adjudicated cases in `config/evidence-policy-calibration.yml` test the rules against real Radar evidence. Run the calibration with:
 
 ```bash
 python -m pipeline.cli calibrate-evidence
 ```
 
-The current calibration rates the modular agent operating stack as `emerging`; evaluation/release gates, heterogeneous model routing, and shared operational context as `experimental`; and AI-native GTM and bounded workflow ownership as `narrative`. The readable audit is in [reports/calibration/evidence-policy-2026-09-22.md](reports/calibration/evidence-policy-2026-09-22.md).
+The current calibration rates the modular agent operating stack as `emerging`; evaluation/release gates, heterogeneous model routing, shared operational context, and simulation-first physical AI development as `experimental`; and AI-native GTM and bounded workflow ownership as `narrative`. The readable audit is in [reports/calibration/evidence-policy-2026-09-22.md](reports/calibration/evidence-policy-2026-09-22.md).
 
 ## Cross-source contract
 
@@ -129,4 +129,4 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, official YC AI-company and startup-job records, and a narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides eight direct workspaces: Overview, Weekly Review, Operating Model, Analyses, Themes, Engineering, Evidence, and Method.
 
-The Weekly Review is the controlled path from observation to judgment. It considers a 35-item pool made from six Early Signal directions, three expert findings, six operator/investor narratives, and twenty cross-source themes. Only new or materially changed candidates can enter a ten-item assessment queue. Its priority score allocates reviewer attention; it cannot change requirement maturity. The public artifact lives at `data/public/weekly-review.json`.
+The Weekly Review is the controlled path from observation to judgment. It considers a 35-item pool made from six Early Signal directions, three expert findings, six operator/investor narratives, and twenty cross-source themes. Only unresolved new or materially changed candidates can enter a ten-item assessment queue. Reviewed candidates retain an explicit adjudication explaining whether they created a conditional requirement, strengthened an existing requirement, or remained outside the model. Priority allocates reviewer attention; it cannot change requirement maturity. The public artifact lives at `data/public/weekly-review.json`.

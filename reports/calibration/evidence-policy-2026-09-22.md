@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This calibration tests the evidence policy for the AI-Native Startup Operating Model against six real Radar hypotheses. The policy asks a stricter question than the Early Signal Tracker: not merely whether a direction is visible, but whether the evidence is strong enough to treat it as a startup operating requirement.
+This calibration tests the evidence policy for the AI-Native Startup Operating Model against seven real Radar hypotheses. The policy asks a stricter question than the Early Signal Tracker: not merely whether a direction is visible, but whether the evidence is strong enough to treat it as a startup operating requirement.
 
 No weighted score can bypass a failed maturity gate. Repeated coverage of one event is deduplicated, source concentration limits independence and confidence, and attention alone cannot prove technical reality or operational adoption.
 
@@ -16,6 +16,7 @@ No weighted score can bypass a failed maturity gate. Repeated coverage of one ev
 | Modular agent operating stack | Strong | Moderate | Moderate | Moderate | Moderate | Moderate | **Emerging** |
 | Shared operational context | Strong | Low | Low | Moderate | Moderate | Moderate | **Experimental** |
 | Bounded workflow ownership | Low | Low | Moderate | Low | Moderate | Low | **Narrative** |
+| Simulation-first physical AI development | Strong | Low | Moderate | Moderate | Moderate | Moderate | **Experimental** |
 
 Only the modular agent operating stack reaches `emerging`. It is the sole case with qualifying technical evidence, two production deployments, sufficient independence, and an explicit counterevidence review. No case reaches `established` or `baseline`.
 
@@ -147,9 +148,31 @@ Promotion to `experimental` is blocked because technical reality remains low des
 
 **Next verification:** collect customer-controlled completion, intervention, error-cost, and business-outcome measurements; inspect implementations with explicit terminal states and exception routing; and study workflows where assistance remains safer or more economical.
 
+## 7. Simulation-first physical AI development
+
+**Requirement:** Physical-AI startups should use simulation and staged real-world validation before scaling autonomous deployment.
+
+**Result:** `experimental`
+
+**What it means:** Physical systems should rehearse and fail inside instrumented simulated or robot-free environments before expensive or safety-critical deployment. Simulation is a repeatable development and evaluation layer, not a replacement for real-world data.
+
+**What it looks like in a startup:**
+
+- scenarios reproduce operating conditions, edge cases, and known failure modes;
+- repeatable simulated performance gates staged hardware deployment, where the sim-to-real gap is measured;
+- interventions and real failures feed back into the environment, model, and release criteria.
+
+OPTED, HIL-UMI, and Workspace Models provide three independent technical events spanning closed-loop simulation, robot-free post-training, and evaluation in both simulation and hardware. NVIDIA supplies builder context, while Greylock, Radical Ventures, and AlphaSignal show market and narrative formation.
+
+The review also retained DeepReach's claim that diverse real-world data is the binding constraint for physical AI. That counterevidence prevents simulation from being presented as a sufficient replacement for physical data. SmolVLA was excluded because efficient robotics deployment does not itself demonstrate simulation-first development.
+
+Promotion to `emerging` is blocked by low operational adoption. The corpus does not yet show repeated production deployments with measured reductions in physical testing cost, failure rate, or safety incidents.
+
+**Next verification:** compare simulated and real-world failure rates, intervention requirements, development cost, and cycle time; identify domains where sim-to-real gaps leave physical data collection as the dominant path.
+
 ## Calibration verdict
 
-The policy behaved as intended in all six cases:
+The policy behaved as intended in all seven cases:
 
 - it separated technical feasibility from operational necessity;
 - it prevented newsletters, social posts, and investor attention from becoming proof;

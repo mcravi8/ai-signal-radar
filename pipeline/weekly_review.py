@@ -119,6 +119,11 @@ def _candidate_pool(
     analyses = {item["id"]: item for item in research.get("analyses", [])}
     evidence_by_id = {item["id"]: item for item in research.get("evidence", [])}
     requirements = operating_model.get("requirements", [])
+    requirements_by_id = {item["id"]: item for item in requirements}
+    adjudications = {
+        item["candidate_id"]: item
+        for item in config.get("candidate_adjudications", [])
+    }
     as_of = _parse_date(research.get("meta", {}).get("generated_at")) or datetime.now(timezone.utc)
     previous_by_id = {
         item["id"]: item for item in (previous_review or {}).get("candidate_pool", [])
@@ -187,19 +192,46 @@ def _candidate_pool(
 
     for candidate in candidates:
         requirement = _linked_requirement(candidate["source_analysis"], requirements)
-        candidate["linked_requirement"] = (
-            {"id": requirement["id"], "title": requirement["title"], "maturity": requirement["maturity"]}
-            if requirement else None
-        )
-        candidate["priority"] = _priority(candidate, bool(requirement))
+        adjudication = adjudications.get(candidate["id"])
+        linked_requirements = []
+        if requirement:
+            linked_requirements.append(requirement)
+        for requirement_id in (adjudication or {}).get("requirement_ids", []):
+            resolved = requirements_by_id.get(requirement_id)
+            if resolved and resolved["id"] not in {item["id"] for item in linked_requirements}:
+                linked_requirements.append(resolved)
+        candidate["linked_requirements"] = [
+            {"id": item["id"], "title": item["title"], "maturity": item["maturity"]}
+            for item in linked_requirements
+        ]
+        candidate["linked_requirement"] = candidate["linked_requirements"][0] if linked_requirements else None
+        candidate["priority"] = _priority(candidate, bool(linked_requirements))
         candidate["change_reasons"] = _material_changes(
             candidate,
             previous_by_id.get(candidate["id"]),
             config["material_change_thresholds"],
         )
         candidate["materially_changed"] = bool(candidate["change_reasons"])
+        if adjudication:
+            reviewed = adjudication["reviewed_state"]
+            adjudication_current = (
+                candidate.get("stage") == reviewed.get("stage")
+                and candidate.get("movement") == reviewed.get("movement")
+                and candidate["metrics"]["evidence_count"] - reviewed["evidence_count"]
+                < config["material_change_thresholds"]["evidence_count_delta"]
+                and candidate["metrics"]["source_count"] - reviewed["source_count"]
+                < config["material_change_thresholds"]["source_count_delta"]
+            )
+            candidate["adjudication"] = {
+                key: value for key, value in adjudication.items() if key != "reviewed_state"
+            }
+            candidate["adjudication"]["status"] = "current" if adjudication_current else "revisit-required"
+        else:
+            candidate["adjudication"] = None
         candidate["review_action"] = (
-            "review-existing-requirement" if requirement else "assess-new-requirement"
+            candidate["adjudication"]["outcome"]
+            if candidate["adjudication"] and candidate["adjudication"]["status"] == "current"
+            else "review-existing-requirement" if linked_requirements else "assess-new-requirement"
         )
 
     return sorted(candidates, key=lambda item: (-item["priority"]["total"], item["title"]))
@@ -209,6 +241,7 @@ def _select_queue(candidates: list[dict[str, Any]], config: dict[str, Any]) -> l
     eligible = [
         item for item in candidates
         if item["materially_changed"]
+        and (item.get("adjudication") or {}).get("status") != "current"
         and (item["priority"]["total"] >= config["minimum_priority_score"] or item["linked_requirement"])
     ]
     queue = []
@@ -237,8 +270,12 @@ def _requirement_changes(
     for requirement in current.get("requirements", []):
         old = prior.get(requirement["id"])
         if not old:
-            change_type = "baseline"
-            explanation = "Added to the first tracked Operating Model baseline."
+            change_type = "baseline" if previous is None else "added"
+            explanation = (
+                "Added to the first tracked Operating Model baseline."
+                if previous is None
+                else "Added after formal candidate adjudication under the evidence policy."
+            )
             previous_maturity = None
         elif old["maturity"] != requirement["maturity"]:
             change_type = "promoted" if rank[requirement["maturity"]] > rank[old["maturity"]] else "demoted"
@@ -317,7 +354,32 @@ def build_weekly_review(
 ) -> dict[str, Any]:
     candidates = _candidate_pool(research, operating_model, previous_review, config)
     queue = _select_queue(candidates, config)
+    adjudications = [
+        {
+            "candidate_id": item["id"],
+            "title": item["title"],
+            "origin": item["origin"],
+            "source_analysis": item["source_analysis"],
+            "stage": item.get("stage"),
+            "metrics": item["metrics"],
+            "linked_requirements": item.get("linked_requirements", []),
+            **item["adjudication"],
+        }
+        for item in candidates
+        if item.get("adjudication")
+    ]
     changes = _requirement_changes(operating_model, previous_operating_model)
+    added_requirement_ids = {
+        item["id"] for item in changes if item["change_type"] == "added"
+    }
+    queue = [
+        item for item in queue
+        if not added_requirement_ids.intersection(
+            requirement["id"] for requirement in item.get("linked_requirements", [])
+        )
+    ]
+    for rank, candidate in enumerate(queue, 1):
+        candidate["queue_rank"] = rank
     verification = _verification_coverage(research, config, previous_review)
     changed_requirements = [item for item in changes if item["change_type"] not in {"unchanged", "baseline"}]
     origin_counts = dict(Counter(item["origin"] for item in candidates))
@@ -345,11 +407,14 @@ def build_weekly_review(
             "candidate_origin_counts": origin_counts,
             "materially_changed_count": sum(item["materially_changed"] for item in candidates),
             "assessment_queue_count": len(queue),
+            "adjudication_count": len(adjudications),
             "requirement_change_count": len(changed_requirements),
         },
         "summary": {
             "headline": (
-                f"{len(queue)} candidates require assessment from a {len(candidates)}-item cross-source pool."
+                f"{len(adjudications)} candidate decisions are recorded; {len(queue)} candidates remain in the bounded assessment queue."
+                if adjudications
+                else f"{len(queue)} candidates require assessment from a {len(candidates)}-item cross-source pool."
                 if queue else "No candidate crossed the material-change review boundary this week."
             ),
             "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement.",
@@ -362,6 +427,7 @@ def build_weekly_review(
             "commitment_boundary": "A reviewer must update the calibrated case record before the Operating Model can change.",
         },
         "candidate_pool": candidates,
+        "adjudications": adjudications,
         "assessment_queue": queue,
         "requirement_changes": changes,
         "verification_families": verification,
@@ -377,11 +443,23 @@ def weekly_review_markdown(payload: dict[str, Any]) -> str:
         "",
         f"> {payload['summary']['interpretation']}",
         "",
+        "## Adjudicated candidates",
+        "",
+        "| Candidate | Outcome | Linked requirement | Decision |",
+        "| --- | --- | --- | --- |",
+    ]
+    for item in payload.get("adjudications", []):
+        linked = ", ".join(requirement["title"] for requirement in item.get("linked_requirements", [])) or "None"
+        lines.append(f"| {item['title']} | {item['outcome']} | {linked} | {item['decision']} |")
+    if not payload.get("adjudications"):
+        lines.append("| — | No adjudications recorded | — | — |")
+    lines.extend([
+        "",
         "## Assessment queue",
         "",
         "| Rank | Candidate | Origin | Priority | Action |",
         "| ---: | --- | --- | ---: | --- |",
-    ]
+    ])
     for item in payload["assessment_queue"]:
         lines.append(f"| {item['queue_rank']} | {item['title']} | {item['origin']} | {item['priority']['total']} | {item['review_action']} |")
     if not payload["assessment_queue"]:

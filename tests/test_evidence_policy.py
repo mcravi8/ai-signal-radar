@@ -34,6 +34,7 @@ class EvidencePolicyTests(unittest.TestCase):
         self.assertEqual(self.results["modular-agent-operating-stack"]["maturity"], "emerging")
         self.assertEqual(self.results["shared-operational-context"]["maturity"], "experimental")
         self.assertEqual(self.results["bounded-workflow-ownership"]["maturity"], "narrative")
+        self.assertEqual(self.results["simulation-first-physical-ai"]["maturity"], "experimental")
         self.assertTrue(all(result["matches_expected"] for result in self.results.values()))
 
     def test_operational_proof_blocks_premature_promotion(self):
@@ -73,12 +74,20 @@ class EvidencePolicyTests(unittest.TestCase):
     def test_public_operating_model_explains_the_practice(self):
         payload = build_operating_model(self.policy, self.calibration, self.research)
         validate_public_payload(payload)
-        self.assertEqual(payload["meta"]["requirement_count"], 6)
+        self.assertEqual(payload["meta"]["requirement_count"], 7)
         for requirement in payload["requirements"]:
             self.assertGreater(len(requirement["description"]), 120)
             self.assertGreaterEqual(len(requirement["what_it_looks_like"]), 3)
             self.assertTrue(requirement["applicable_to"])
             self.assertTrue(requirement["evidence"])
+
+    def test_physical_ai_requirement_is_conditional_and_reviews_counterevidence(self):
+        case = next(
+            case for case in self.calibration["cases"] if case["id"] == "simulation-first-physical-ai"
+        )
+        self.assertIn("not a general requirement", case["applicable_to"])
+        self.assertTrue(case["gate_inputs"]["counterevidence_reviewed"])
+        self.assertTrue(any(link["relationship"] == "counterevidence" for link in case["evidence_links"]))
 
     def test_tracked_public_artifact_matches_reviewed_cases(self):
         payload = json.loads((ROOT / "data/public/operating-model.json").read_text(encoding="utf-8"))
