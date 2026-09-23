@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-23T00:47:43.470277+00:00",
+    "generated_at": "2026-09-23T00:50:26.836191+00:00",
     "status": "success",
     "normalized_evidence_count": 1766,
     "public_record_count": 1731,
@@ -64,7 +64,7 @@
         "bluesky-karpathy"
       ],
       "evidence_count": 1766,
-      "updated_at": "2026-09-23T00:47:43.470277+00:00"
+      "updated_at": "2026-09-23T00:50:26.836191+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -126,7 +126,7 @@
         "yc-jobs"
       ],
       "evidence_count": 1731,
-      "updated_at": "2026-09-23T00:47:43.470277+00:00"
+      "updated_at": "2026-09-23T00:50:26.836191+00:00"
     },
     {
       "id": "early-signal-tracker",
@@ -1029,7 +1029,7 @@
           "fading": "Historical or trailing-window support exists, but no supporting evidence appeared in the latest 30 days."
         }
       },
-      "updated_at": "2026-09-23T00:47:43.470277+00:00"
+      "updated_at": "2026-09-23T00:50:26.836191+00:00"
     },
     {
       "id": "expert-pulse",
@@ -1285,7 +1285,7 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-09-23T00:47:43.470277+00:00"
+      "updated_at": "2026-09-23T00:50:26.836191+00:00"
     },
     {
       "id": "operator-narratives",
@@ -1602,7 +1602,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-23T00:47:43.470277+00:00"
+      "updated_at": "2026-09-23T00:50:26.836191+00:00"
     },
     {
       "id": "project-opportunities",
@@ -41566,12 +41566,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Engineering",
-        "date_basis": "approximate-public-age",
-        "batch": "S19",
-        "company": "Vahan",
         "created_at": "15 days",
-        "location": "Bengaluru, KA, IN / Bengaluru, Karnataka, IN"
+        "date_basis": "approximate-public-age",
+        "role": "Engineering",
+        "company": "Vahan",
+        "location": "Bengaluru, KA, IN / Bengaluru, Karnataka, IN",
+        "batch": "S19"
       }
     },
     {
@@ -47046,12 +47046,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Product",
-        "date_basis": "approximate-public-age",
-        "batch": "S19",
-        "company": "Vouch",
         "created_at": "about 1 month",
-        "location": "Chicago, IL, US"
+        "date_basis": "approximate-public-age",
+        "role": "Product",
+        "company": "Vouch",
+        "location": "Chicago, IL, US",
+        "batch": "S19"
       }
     },
     {
@@ -47080,12 +47080,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Engineering",
-        "date_basis": "approximate-public-age",
-        "batch": "W20",
-        "company": "Signadot",
         "created_at": "about 1 month",
-        "location": "CA / MX / US / BZ / CR / SV / GT / HN / NI / PA / AG / BS / BB / CU / DM / DO / Granada, AN, ES / Granada, Andalusia, ES / HT / JM / KN / LC / VC / TT / AR / BO / BR / CL / CO / EC / GY / PY / PE / SR / UY / VE / Remote (CA; MX; US; BZ; CR; SV; GT; HN; NI; PA; AG; BS; BB; CU; DM; DO; Granada, AN, ES; Granada, Andalusia, ES; HT; JM; KN; LC; VC; TT; AR; BO; BR; CL; CO; EC; GY; PY; PE; SR; UY; VE)"
+        "date_basis": "approximate-public-age",
+        "role": "Engineering",
+        "company": "Signadot",
+        "location": "CA / MX / US / BZ / CR / SV / GT / HN / NI / PA / AG / BS / BB / CU / DM / DO / Granada, AN, ES / Granada, Andalusia, ES / HT / JM / KN / LC / VC / TT / AR / BO / BR / CL / CO / EC / GY / PY / PE / SR / UY / VE / Remote (CA; MX; US; BZ; CR; SV; GT; HN; NI; PA; AG; BS; BB; CU; DM; DO; Granada, AN, ES; Granada, Andalusia, ES; HT; JM; KN; LC; VC; TT; AR; BO; BR; CL; CO; EC; GY; PY; PE; SR; UY; VE)",
+        "batch": "W20"
       }
     },
     {
@@ -51526,12 +51526,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Design",
-        "date_basis": "approximate-public-age",
-        "batch": "W18",
-        "company": "Tilt (f.k.a. Delphia)",
         "created_at": "about 2 months",
-        "location": "Remote (US)"
+        "date_basis": "approximate-public-age",
+        "role": "Design",
+        "company": "Tilt (f.k.a. Delphia)",
+        "location": "Remote (US)",
+        "batch": "W18"
       }
     },
     {
@@ -53187,12 +53187,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Engineering",
-        "date_basis": "approximate-public-age",
-        "batch": "W19",
-        "company": "Sorting Robotics",
         "created_at": "3 months",
-        "location": "Los Angeles, CA, US"
+        "date_basis": "approximate-public-age",
+        "role": "Engineering",
+        "company": "Sorting Robotics",
+        "location": "Los Angeles, CA, US",
+        "batch": "W19"
       }
     },
     {
@@ -53221,12 +53221,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Marketing",
-        "date_basis": "approximate-public-age",
-        "batch": "W17",
-        "company": "MDalgorithms Inc.",
         "created_at": "3 months",
-        "location": "GB / US / CA / Remote (GB; US; CA)"
+        "date_basis": "approximate-public-age",
+        "role": "Marketing",
+        "company": "MDalgorithms Inc.",
+        "location": "GB / US / CA / Remote (GB; US; CA)",
+        "batch": "W17"
       }
     },
     {
@@ -53255,12 +53255,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Support",
-        "date_basis": "approximate-public-age",
-        "batch": "W17",
-        "company": "Veryfi, Inc.",
         "created_at": "3 months",
-        "location": "BR / Remote (BR)"
+        "date_basis": "approximate-public-age",
+        "role": "Support",
+        "company": "Veryfi, Inc.",
+        "location": "BR / Remote (BR)",
+        "batch": "W17"
       }
     },
     {
@@ -56186,12 +56186,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Engineering",
-        "date_basis": "approximate-public-age",
-        "batch": "W20",
-        "company": "Turing Labs Inc.",
         "created_at": "6 months",
-        "location": "Palo Alto, CA / San Francisco, CA, US"
+        "date_basis": "approximate-public-age",
+        "role": "Engineering",
+        "company": "Turing Labs Inc.",
+        "location": "Palo Alto, CA / San Francisco, CA, US",
+        "batch": "W20"
       }
     },
     {
@@ -57073,12 +57073,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Engineering",
-        "date_basis": "approximate-public-age",
-        "batch": "S20",
-        "company": "Taktile",
         "created_at": "8 months",
-        "location": "New York Office"
+        "date_basis": "approximate-public-age",
+        "role": "Engineering",
+        "company": "Taktile",
+        "location": "New York Office",
+        "batch": "S20"
       }
     },
     {
@@ -57488,12 +57488,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Engineering",
-        "date_basis": "approximate-public-age",
-        "batch": "S20",
-        "company": "Nextera Robotics | DIDGE.ai",
         "created_at": "9 months",
-        "location": "Boston, MA, US"
+        "date_basis": "approximate-public-age",
+        "role": "Engineering",
+        "company": "Nextera Robotics | DIDGE.ai",
+        "location": "Boston, MA, US",
+        "batch": "S20"
       }
     },
     {
@@ -57522,12 +57522,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Operations",
-        "date_basis": "approximate-public-age",
-        "batch": "W19",
-        "company": "Overview",
         "created_at": "9 months",
-        "location": "San Francisco, CA, US"
+        "date_basis": "approximate-public-age",
+        "role": "Operations",
+        "company": "Overview",
+        "location": "San Francisco, CA, US",
+        "batch": "W19"
       }
     },
     {
@@ -61623,12 +61623,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Sales",
-        "date_basis": "approximate-public-age",
-        "batch": "S15",
-        "company": "SnapMagic",
         "created_at": "about 2 years",
-        "location": "Redwood City, CA, US / San Francisco, CA, US / Palo Alto, CA, US / San Jose, CA, US / San Mateo, CA, US"
+        "date_basis": "approximate-public-age",
+        "role": "Sales",
+        "company": "SnapMagic",
+        "location": "Redwood City, CA, US / San Francisco, CA, US / Palo Alto, CA, US / San Jose, CA, US / San Mateo, CA, US",
+        "batch": "S15"
       }
     },
     {
@@ -63669,12 +63669,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "role": "Engineering",
-        "date_basis": "approximate-public-age",
-        "batch": "W19",
-        "company": "Numero",
         "created_at": "about 4 years",
-        "location": "US / Remote (US)"
+        "date_basis": "approximate-public-age",
+        "role": "Engineering",
+        "company": "Numero",
+        "location": "US / Remote (US)",
+        "batch": "W19"
       }
     },
     {
@@ -65108,12 +65108,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2014",
         "team_size": 800,
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/checkr",
         "location": "San Francisco",
-        "github_url": "https://github.com/checkr"
+        "batch": "S2014",
+        "status": "Active"
       }
     },
     {
@@ -65140,12 +65140,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "Santiago, Santiago Metropolitan Region, Chile",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65172,12 +65172,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65204,12 +65204,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 0,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "Salt Lake City, UT, USA",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65236,12 +65236,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/The-Agentic-Data-Co",
         "location": "San Francisco",
-        "github_url": "https://github.com/The-Agentic-Data-Co"
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65268,12 +65268,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65300,12 +65300,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "New York City",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65337,11 +65337,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 4,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65373,12 +65373,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/oro-ai",
         "location": "Vancouver, BC, Canada",
-        "github_url": "https://github.com/oro-ai"
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65405,12 +65405,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65437,12 +65437,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65469,12 +65469,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 8,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "Munich, Germany",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65506,12 +65506,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65538,12 +65538,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65570,12 +65570,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65602,12 +65602,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65634,12 +65634,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65666,12 +65666,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 5,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65698,12 +65698,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65730,12 +65730,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65762,11 +65762,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
-        "github_url": ""
+        "date_basis": "first-observed",
+        "github_url": "",
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65799,12 +65799,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65837,12 +65837,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "F2026",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/herdrdev",
         "location": "Ankara, Turkey",
-        "github_url": "https://github.com/herdrdev"
+        "batch": "F2026",
+        "status": "Active"
       }
     },
     {
@@ -65869,11 +65869,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 3,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -65900,12 +65900,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -65932,11 +65932,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
-        "location": "London"
+        "date_basis": "first-observed",
+        "location": "London",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -65968,12 +65968,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66000,11 +66000,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66031,12 +66031,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 5,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66063,11 +66063,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 3,
-        "location": "Gurugram, Haryana, India"
+        "date_basis": "first-observed",
+        "location": "Gurugram, Haryana, India",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66094,11 +66094,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66125,11 +66125,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 3,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66156,11 +66156,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 3,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66187,11 +66187,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 3,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66218,11 +66218,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66249,11 +66249,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 6,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66280,12 +66280,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/use-click/",
         "location": "San Francisco",
-        "github_url": "https://github.com/use-click/"
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66312,11 +66312,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 3,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66343,11 +66343,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 5,
-        "location": "Oslo, Norway"
+        "date_basis": "first-observed",
+        "location": "Oslo, Norway",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66374,11 +66374,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
-        "location": "Los Angeles"
+        "date_basis": "first-observed",
+        "location": "Los Angeles",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66411,11 +66411,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 6,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66442,11 +66442,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 3,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66478,12 +66478,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66510,11 +66510,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66547,12 +66547,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "github_url": "",
         "location": "San Francisco",
-        "github_url": ""
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66579,11 +66579,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66610,11 +66610,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 1,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66641,11 +66641,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 3,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66680,11 +66680,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 2,
-        "location": "San Francisco"
+        "date_basis": "first-observed",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66711,11 +66711,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2026",
         "team_size": 1,
-        "location": "London"
+        "date_basis": "first-observed",
+        "location": "London",
+        "batch": "S2026",
+        "status": "Active"
       }
     },
     {
@@ -66747,12 +66747,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "status": "Active",
-        "date_basis": "first-observed",
-        "batch": "S2016",
         "team_size": 500,
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/scaleapi",
         "location": "San Francisco",
-        "github_url": "https://github.com/scaleapi"
+        "batch": "S2016",
+        "status": "Active"
       }
     }
   ],

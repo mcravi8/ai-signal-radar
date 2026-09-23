@@ -1,6 +1,6 @@
 # Weekly Operating Model Review — 2026-09-23
 
-4 candidate decisions are recorded; 1 candidates remain in the bounded assessment queue.
+4 candidate decisions are recorded; 1 candidate remains in the bounded assessment queue.
 
 > Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement.
 
