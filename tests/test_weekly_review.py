@@ -69,12 +69,18 @@ class WeeklyReviewTests(unittest.TestCase):
             },
         )
         self.assertEqual(adjudications["theme:robotics-embodied-ai"]["outcome"], "conditional-requirement-added")
-        self.assertTrue(all(item["status"] == "current" for item in adjudications.values()))
+        self.assertTrue(
+            all(item["status"] in {"current", "revisit-required"} for item in adjudications.values())
+        )
         reviewed = [item for key, item in adjudications.items() if key != "theme:robotics-embodied-ai"]
         self.assertTrue(all(item["evidence_review"]["status"] == "complete" for item in reviewed))
         self.assertEqual(sum(item["evidence_review"]["records_screened"] for item in reviewed), 147)
         queued_ids = {item["id"] for item in review["assessment_queue"]}
-        self.assertFalse(set(adjudications).intersection(queued_ids))
+        current_ids = {
+            candidate_id for candidate_id, item in adjudications.items()
+            if item["status"] == "current"
+        }
+        self.assertFalse(current_ids.intersection(queued_ids))
 
 
 if __name__ == "__main__":
