@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-23T19:16:44.021153+00:00",
+    "generated_at": "2026-09-23T20:02:19.550821+00:00",
     "status": "success",
     "source_count": 38,
     "evidence_count": 1748,
@@ -112,7 +112,10 @@
         "inference cloud",
         "AI factory",
         "token factory",
-        "inference cluster"
+        "inference cluster",
+        "inference optimization",
+        "LLM inference",
+        "output tokens"
       ],
       "primary_layer": "compute-inference-serving",
       "maturity": "emerging",
@@ -166,9 +169,17 @@
       "definition": "Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.",
       "aliases": [
         "agent scaffolding",
+        "agent run",
+        "agent swarm",
+        "agent swarms",
+        "agent system",
+        "single agent",
         "orchestration layer",
         "agent runtime",
-        "self-improving harness"
+        "self-improving harness",
+        "agent systems",
+        "multi-agent systems",
+        "system prompt"
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
@@ -201,7 +212,9 @@
         "AI assurance",
         "agent security",
         "eval infrastructure",
-        "AI observability"
+        "AI observability",
+        "audit trail",
+        "multi-tenant"
       ],
       "primary_layer": "assurance",
       "maturity": "emerging",
@@ -230,10 +243,12 @@
       "definition": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
       "aliases": [
         "open weights",
+        "model weights",
         "local inference",
         "quantization",
         "mixture of experts",
-        "on-device inference"
+        "on-device inference",
+        "self-hosted"
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
@@ -291,10 +306,19 @@
       "definition": "Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.",
       "aliases": [
         "fine-tuning",
+        "model training",
+        "training data",
+        "agent-generated",
         "reinforcement learning",
+        "synthetic data",
         "synthetic training",
         "prompt optimization",
-        "self-improving systems"
+        "self-improving systems",
+        "continual learning",
+        "deep neural network",
+        "deep neural networks",
+        "zero-shot",
+        "ground truth"
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
@@ -329,6 +353,7 @@
       "definition": "AI systems that search repositories, write and review code, run tools, validate changes, and participate in software delivery.",
       "aliases": [
         "coding agent",
+        "agentic coding",
         "software engineering agent",
         "repository agent",
         "code generation"
@@ -392,7 +417,9 @@
         "image generation",
         "world model",
         "3D generation",
-        "spatial AI"
+        "spatial AI",
+        "computer vision",
+        "multimodal model"
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
@@ -458,9 +485,14 @@
       "definition": "Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.",
       "aliases": [
         "agent skills",
+        "agent tools",
+        "workflow automation",
         "plugins",
         "MCP",
+        "model context protocol",
+        "context protocol",
         "tool protocol",
+        "tool calls",
         "connectors"
       ],
       "primary_layer": "tools-skills-integrations",
@@ -494,6 +526,9 @@
       "aliases": [
         "RAG",
         "document intelligence",
+        "document processing",
+        "embedding models",
+        "question answering",
         "OCR",
         "GraphRAG",
         "structured generation"
@@ -521,9 +556,11 @@
       "definition": "Techniques for selecting, compressing, persisting, and retrieving context across long-running model or agent activity.",
       "aliases": [
         "agent memory",
+        "context length",
         "context management",
         "context compression",
-        "persistent memory"
+        "persistent memory",
+        "long-term memory"
       ],
       "primary_layer": "harness-orchestration",
       "secondary_layer": "assurance",
@@ -602,9 +639,11 @@
       "definition": "Models, datasets, simulations, and control systems that connect learned intelligence to physical sensing and action.",
       "aliases": [
         "robotics foundation model",
+        "robot foundation",
         "embodied agent",
         "robot learning",
-        "physical AI"
+        "physical AI",
+        "digital twins"
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
@@ -2506,10 +2545,10 @@
         "training-self-improvement"
       ],
       "verification": {
-        "github_url": "https://github.com/scaleapi",
-        "batch": "S2016",
-        "team_size": 500,
         "date_basis": "first-observed",
+        "team_size": 500,
+        "batch": "S2016",
+        "github_url": "https://github.com/scaleapi",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2535,9 +2574,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 1,
         "date_basis": "first-observed",
+        "team_size": 1,
+        "batch": "S2026",
         "location": "London",
         "status": "Active"
       }
@@ -2563,9 +2602,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2592,9 +2631,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 1,
         "date_basis": "first-observed",
+        "team_size": 1,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2622,9 +2661,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2652,10 +2691,10 @@
         "coding-agents"
       ],
       "verification": {
-        "github_url": "",
-        "batch": "S2026",
-        "team_size": 1,
         "date_basis": "first-observed",
+        "team_size": 1,
+        "batch": "S2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2682,9 +2721,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2710,10 +2749,10 @@
         "coding-agents"
       ],
       "verification": {
-        "github_url": "",
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2738,9 +2777,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2771,9 +2810,9 @@
         "robotics-embodied-ai"
       ],
       "verification": {
-        "batch": "S2026",
-        "team_size": 6,
         "date_basis": "first-observed",
+        "team_size": 6,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2799,9 +2838,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
         "location": "Los Angeles",
         "status": "Active"
       }
@@ -2828,9 +2867,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 5,
         "date_basis": "first-observed",
+        "team_size": 5,
+        "batch": "S2026",
         "location": "Oslo, Norway",
         "status": "Active"
       }
@@ -2857,9 +2896,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2885,10 +2924,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "https://github.com/use-click/",
-        "batch": "S2026",
-        "team_size": 1,
         "date_basis": "first-observed",
+        "team_size": 1,
+        "batch": "S2026",
+        "github_url": "https://github.com/use-click/",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2916,9 +2955,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 6,
         "date_basis": "first-observed",
+        "team_size": 6,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2944,9 +2983,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -2972,9 +3011,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3002,9 +3041,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3032,9 +3071,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3062,9 +3101,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3090,9 +3129,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "S2026",
         "location": "Gurugram, Haryana, India",
         "status": "Active"
       }
@@ -3119,10 +3158,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "S2026",
-        "team_size": 5,
         "date_basis": "first-observed",
+        "team_size": 5,
+        "batch": "S2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3149,9 +3188,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3179,10 +3218,10 @@
         "coding-agents"
       ],
       "verification": {
-        "github_url": "",
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3209,9 +3248,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
         "location": "London",
         "status": "Active"
       }
@@ -3235,10 +3274,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3266,9 +3305,9 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "batch": "S2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3297,10 +3336,10 @@
         "coding-agents"
       ],
       "verification": {
-        "github_url": "https://github.com/herdrdev",
-        "batch": "F2026",
-        "team_size": 1,
         "date_basis": "first-observed",
+        "team_size": 1,
+        "batch": "F2026",
+        "github_url": "https://github.com/herdrdev",
         "location": "Ankara, Turkey",
         "status": "Active"
       }
@@ -3329,10 +3368,10 @@
         "open-local-inference"
       ],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3358,10 +3397,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "status": "Active"
       }
     },
@@ -3385,10 +3424,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 3,
         "date_basis": "first-observed",
+        "team_size": 3,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3416,10 +3455,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3445,10 +3484,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 5,
         "date_basis": "first-observed",
+        "team_size": 5,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3476,10 +3515,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 4,
         "date_basis": "first-observed",
+        "team_size": 4,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3504,10 +3543,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3535,10 +3574,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3563,10 +3602,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3593,10 +3632,10 @@
         "voice-audio"
       ],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3622,10 +3661,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 8,
         "date_basis": "first-observed",
+        "team_size": 8,
+        "batch": "F2026",
+        "github_url": "",
         "location": "Munich, Germany",
         "status": "Active"
       }
@@ -3652,10 +3691,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3683,10 +3722,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 4,
         "date_basis": "first-observed",
+        "team_size": 4,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3714,10 +3753,10 @@
         "training-self-improvement"
       ],
       "verification": {
-        "github_url": "https://github.com/oro-ai",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "https://github.com/oro-ai",
         "location": "Vancouver, BC, Canada",
         "status": "Active"
       }
@@ -3745,9 +3784,9 @@
         "robotics-embodied-ai"
       ],
       "verification": {
-        "batch": "F2026",
-        "team_size": 4,
         "date_basis": "first-observed",
+        "team_size": 4,
+        "batch": "F2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3775,10 +3814,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 4,
         "date_basis": "first-observed",
+        "team_size": 4,
+        "batch": "F2026",
+        "github_url": "",
         "location": "New York City",
         "status": "Active"
       }
@@ -3804,10 +3843,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3833,10 +3872,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "https://github.com/The-Agentic-Data-Co",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "https://github.com/The-Agentic-Data-Co",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3861,10 +3900,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 0,
         "date_basis": "first-observed",
+        "team_size": 0,
+        "batch": "F2026",
+        "github_url": "",
         "location": "Salt Lake City, UT, USA",
         "status": "Active"
       }
@@ -3890,10 +3929,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -3919,10 +3958,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026",
+        "github_url": "",
         "location": "Santiago, Santiago Metropolitan Region, Chile",
         "status": "Active"
       }
@@ -3950,10 +3989,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "https://github.com/checkr",
-        "batch": "S2014",
-        "team_size": 800,
         "date_basis": "first-observed",
+        "team_size": 800,
+        "batch": "S2014",
+        "github_url": "https://github.com/checkr",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -5098,9 +5137,9 @@
         "training-self-improvement"
       ],
       "verification": {
-        "batch": "S2026",
-        "team_size": 2,
         "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "S2026",
         "location": "San Francisco",
         "status": "Active"
       }
@@ -5126,10 +5165,10 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "github_url": "https://github.com/AGEOspatial",
-        "batch": "F2026",
-        "team_size": 1,
         "date_basis": "first-observed",
+        "team_size": 1,
+        "batch": "F2026",
+        "github_url": "https://github.com/AGEOspatial",
         "location": "San Francisco",
         "status": "Active"
       }

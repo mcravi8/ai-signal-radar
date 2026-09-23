@@ -9,6 +9,7 @@ on:
       - config/classification-audit.yml
       - config/discovery.yml
       - config/discovery-concepts.yml
+      - config/discovery-clustering.yml
       - config/evidence-policy-calibration.yml
       - config/evidence-policy.yml
       - config/keywords.yml
@@ -26,6 +27,7 @@ on:
       - pipeline/evidence_policy.py
       - pipeline/discovery.py
       - pipeline/concepts.py
+      - pipeline/discovery_cluster.py
       - pipeline/export_public.py
       - pipeline/research.py
       - pipeline/storage.py

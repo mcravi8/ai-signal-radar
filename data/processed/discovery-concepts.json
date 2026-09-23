@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-23T19:16:44.021153+00:00",
+    "generated_at": "2026-09-23T20:02:19.550821+00:00",
     "method": "deterministic-lexical-v1",
     "window_days": 35,
     "document_count": 1189,
@@ -2398,35 +2398,49 @@
       "id": "theme:training-self-improvement",
       "label": "Training, evaluation & self-improvement",
       "kind": "theme",
-      "document_count": 108,
+      "document_count": 131,
       "source_count": 15
     },
     {
       "id": "theme:open-local-inference",
       "label": "Open, local & efficient inference",
       "kind": "theme",
-      "document_count": 62,
+      "document_count": 73,
       "source_count": 13
-    },
-    {
-      "id": "theme:coding-agents",
-      "label": "Coding agents & developer tooling",
-      "kind": "theme",
-      "document_count": 44,
-      "source_count": 9
     },
     {
       "id": "theme:agent-harnesses",
       "label": "Agent harnesses",
       "kind": "theme",
-      "document_count": 32,
+      "document_count": 48,
+      "source_count": 12
+    },
+    {
+      "id": "theme:coding-agents",
+      "label": "Coding agents & developer tooling",
+      "kind": "theme",
+      "document_count": 46,
+      "source_count": 10
+    },
+    {
+      "id": "theme:skills-integrations",
+      "label": "Skills, protocols & integrations",
+      "kind": "theme",
+      "document_count": 56,
       "source_count": 9
     },
     {
       "id": "theme:assurance-infrastructure",
       "label": "Assurance infrastructure",
       "kind": "theme",
-      "document_count": 29,
+      "document_count": 33,
+      "source_count": 9
+    },
+    {
+      "id": "theme:frontier-inference-infrastructure",
+      "label": "Frontier inference infrastructure",
+      "kind": "theme",
+      "document_count": 26,
       "source_count": 9
     },
     {
@@ -2437,13 +2451,6 @@
       "source_count": 9
     },
     {
-      "id": "theme:skills-integrations",
-      "label": "Skills, protocols & integrations",
-      "kind": "theme",
-      "document_count": 43,
-      "source_count": 8
-    },
-    {
       "id": "theme:small-specialized-models",
       "label": "Small & specialized models",
       "kind": "theme",
@@ -2451,17 +2458,31 @@
       "source_count": 7
     },
     {
-      "id": "theme:robotics-embodied-ai",
-      "label": "Robotics & embodied AI",
+      "id": "theme:multimodal-3d",
+      "label": "Multimodal generation & 3D",
       "kind": "theme",
-      "document_count": 14,
+      "document_count": 34,
       "source_count": 7
     },
     {
       "id": "theme:document-knowledge-systems",
       "label": "Documents, retrieval & knowledge systems",
       "kind": "theme",
-      "document_count": 25,
+      "document_count": 31,
+      "source_count": 7
+    },
+    {
+      "id": "theme:robotics-embodied-ai",
+      "label": "Robotics & embodied AI",
+      "kind": "theme",
+      "document_count": 18,
+      "source_count": 7
+    },
+    {
+      "id": "theme:memory-context",
+      "label": "Memory & context engineering",
+      "kind": "theme",
+      "document_count": 21,
       "source_count": 6
     },
     {
@@ -2472,31 +2493,10 @@
       "source_count": 6
     },
     {
-      "id": "theme:multimodal-3d",
-      "label": "Multimodal generation & 3D",
-      "kind": "theme",
-      "document_count": 28,
-      "source_count": 5
-    },
-    {
-      "id": "theme:frontier-inference-infrastructure",
-      "label": "Frontier inference infrastructure",
-      "kind": "theme",
-      "document_count": 19,
-      "source_count": 5
-    },
-    {
-      "id": "theme:memory-context",
-      "label": "Memory & context engineering",
-      "kind": "theme",
-      "document_count": 16,
-      "source_count": 5
-    },
-    {
       "id": "phrase:gpt-6-astra",
       "label": "gpt 6 astra",
       "kind": "emergent-phrase",
-      "document_count": 15,
+      "document_count": 16,
       "source_count": 5
     },
     {
@@ -2505,13 +2505,6 @@
       "kind": "emergent-phrase",
       "document_count": 6,
       "source_count": 5
-    },
-    {
-      "id": "phrase:llm-inference",
-      "label": "llm inference",
-      "kind": "emergent-phrase",
-      "document_count": 8,
-      "source_count": 4
     },
     {
       "id": "phrase:fable-5-1",
@@ -2549,13 +2542,6 @@
       "source_count": 4
     },
     {
-      "id": "phrase:agentic-coding",
-      "label": "agentic coding",
-      "kind": "emergent-phrase",
-      "document_count": 4,
-      "source_count": 4
-    },
-    {
       "id": "phrase:per-token",
       "label": "per token",
       "kind": "emergent-phrase",
@@ -2584,13 +2570,6 @@
       "source_count": 3
     },
     {
-      "id": "phrase:computer-vision",
-      "label": "computer vision",
-      "kind": "emergent-phrase",
-      "document_count": 5,
-      "source_count": 3
-    },
-    {
       "id": "phrase:high-level",
       "label": "high level",
       "kind": "emergent-phrase",
@@ -2600,6 +2579,13 @@
     {
       "id": "phrase:long-running",
       "label": "long running",
+      "kind": "emergent-phrase",
+      "document_count": 5,
+      "source_count": 3
+    },
+    {
+      "id": "phrase:long-term",
+      "label": "long term",
       "kind": "emergent-phrase",
       "document_count": 5,
       "source_count": 3
@@ -2626,8 +2612,8 @@
       "source_count": 3
     },
     {
-      "id": "phrase:system-prompt",
-      "label": "system prompt",
+      "id": "phrase:term-memory",
+      "label": "term memory",
       "kind": "emergent-phrase",
       "document_count": 5,
       "source_count": 3
@@ -2654,13 +2640,6 @@
       "source_count": 3
     },
     {
-      "id": "phrase:continual-learning",
-      "label": "continual learning",
-      "kind": "emergent-phrase",
-      "document_count": 4,
-      "source_count": 3
-    },
-    {
       "id": "phrase:data-collection",
       "label": "data collection",
       "kind": "emergent-phrase",
@@ -2677,13 +2656,6 @@
     {
       "id": "phrase:desktop-app",
       "label": "desktop app",
-      "kind": "emergent-phrase",
-      "document_count": 4,
-      "source_count": 3
-    },
-    {
-      "id": "phrase:embedding-models",
-      "label": "embedding models",
       "kind": "emergent-phrase",
       "document_count": 4,
       "source_count": 3
@@ -2731,13 +2703,6 @@
       "source_count": 3
     },
     {
-      "id": "phrase:multi-agent-systems",
-      "label": "multi agent systems",
-      "kind": "emergent-phrase",
-      "document_count": 4,
-      "source_count": 3
-    },
-    {
       "id": "phrase:put-together",
       "label": "put together",
       "kind": "emergent-phrase",
@@ -2766,13 +2731,6 @@
       "source_count": 3
     },
     {
-      "id": "phrase:zero-shot",
-      "label": "zero shot",
-      "kind": "emergent-phrase",
-      "document_count": 4,
-      "source_count": 3
-    },
-    {
       "id": "phrase:access-control",
       "label": "access control",
       "kind": "emergent-phrase",
@@ -2780,22 +2738,8 @@
       "source_count": 3
     },
     {
-      "id": "phrase:agent-systems",
-      "label": "agent systems",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 3
-    },
-    {
       "id": "phrase:agents-coding",
       "label": "agents coding",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 3
-    },
-    {
-      "id": "phrase:audit-trail",
-      "label": "audit trail",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 3
@@ -2822,13 +2766,6 @@
       "source_count": 3
     },
     {
-      "id": "phrase:context-protocol",
-      "label": "context protocol",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 3
-    },
-    {
       "id": "phrase:cost-effective",
       "label": "cost effective",
       "kind": "emergent-phrase",
@@ -2838,13 +2775,6 @@
     {
       "id": "phrase:device-inference",
       "label": "device inference",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 3
-    },
-    {
-      "id": "phrase:digital-twins",
-      "label": "digital twins",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 3
@@ -2892,13 +2822,6 @@
       "source_count": 3
     },
     {
-      "id": "phrase:ground-truth",
-      "label": "ground truth",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 3
-    },
-    {
       "id": "phrase:high-fidelity",
       "label": "high fidelity",
       "kind": "emergent-phrase",
@@ -2906,8 +2829,8 @@
       "source_count": 3
     },
     {
-      "id": "phrase:long-term-memory",
-      "label": "long term memory",
+      "id": "phrase:model-context",
+      "label": "model context",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 3
@@ -2920,22 +2843,8 @@
       "source_count": 3
     },
     {
-      "id": "phrase:output-tokens",
-      "label": "output tokens",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 3
-    },
-    {
       "id": "phrase:physical-world",
       "label": "physical world",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 3
-    },
-    {
-      "id": "phrase:robot-foundation",
-      "label": "robot foundation",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 3
@@ -2964,13 +2873,6 @@
     {
       "id": "phrase:someone-else",
       "label": "someone else",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 3
-    },
-    {
-      "id": "phrase:tool-calls",
-      "label": "tool calls",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 3
@@ -3014,13 +2916,6 @@
       "id": "technology:robotics",
       "label": "robotics",
       "kind": "technology",
-      "document_count": 8,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:training-data",
-      "label": "training data",
-      "kind": "emergent-phrase",
       "document_count": 8,
       "source_count": 2
     },
@@ -3088,13 +2983,6 @@
       "source_count": 2
     },
     {
-      "id": "phrase:self-hosted",
-      "label": "self hosted",
-      "kind": "emergent-phrase",
-      "document_count": 5,
-      "source_count": 2
-    },
-    {
       "id": "technology:workflow-automation",
       "label": "workflow-automation",
       "kind": "technology",
@@ -3130,6 +3018,13 @@
       "source_count": 2
     },
     {
+      "id": "phrase:neural-network",
+      "label": "neural network",
+      "kind": "emergent-phrase",
+      "document_count": 4,
+      "source_count": 2
+    },
+    {
       "id": "technology:rag",
       "label": "rag",
       "kind": "technology",
@@ -3160,13 +3055,6 @@
     {
       "id": "phrase:agent-llm",
       "label": "agent llm",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:agent-tools",
-      "label": "agent tools",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 2
@@ -3237,6 +3125,13 @@
     {
       "id": "phrase:data-science",
       "label": "data science",
+      "kind": "emergent-phrase",
+      "document_count": 3,
+      "source_count": 2
+    },
+    {
+      "id": "phrase:deep-neural",
+      "label": "deep neural",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 2
@@ -3368,13 +3263,6 @@
       "source_count": 2
     },
     {
-      "id": "phrase:model-training",
-      "label": "model training",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 2
-    },
-    {
       "id": "phrase:models-often",
       "label": "models often",
       "kind": "emergent-phrase",
@@ -3391,13 +3279,6 @@
     {
       "id": "phrase:natural-language-instructions",
       "label": "natural language instructions",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:neural-network",
-      "label": "neural network",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 2
@@ -3536,13 +3417,6 @@
       "source_count": 2
     },
     {
-      "id": "phrase:synthetic-data",
-      "label": "synthetic data",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 2
-    },
-    {
       "id": "phrase:task-completion",
       "label": "task completion",
       "kind": "emergent-phrase",
@@ -3566,13 +3440,6 @@
     {
       "id": "phrase:weeks-ago",
       "label": "weeks ago",
-      "kind": "emergent-phrase",
-      "document_count": 3,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:workflow-automation",
-      "label": "workflow automation",
       "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 2
@@ -3671,34 +3538,6 @@
     {
       "id": "phrase:agent-experience",
       "label": "agent experience",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:agent-generated",
-      "label": "agent generated",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:agent-run",
-      "label": "agent run",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:agent-swarms",
-      "label": "agent swarms",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:agent-system",
-      "label": "agent system",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
@@ -4082,13 +3921,6 @@
       "source_count": 2
     },
     {
-      "id": "phrase:context-length",
-      "label": "context length",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
       "id": "phrase:control-remains",
       "label": "control remains",
       "kind": "emergent-phrase",
@@ -4161,13 +3993,6 @@
     {
       "id": "phrase:data-without",
       "label": "data without",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:deep-neural-networks",
-      "label": "deep neural networks",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
@@ -4260,13 +4085,6 @@
       "id": "technology:docker",
       "label": "docker",
       "kind": "technology",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:document-processing",
-      "label": "document processing",
-      "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
     },
@@ -4691,13 +4509,6 @@
       "source_count": 2
     },
     {
-      "id": "phrase:inference-optimization",
-      "label": "inference optimization",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
       "id": "phrase:inference-procedure",
       "label": "inference procedure",
       "kind": "emergent-phrase",
@@ -4887,6 +4698,13 @@
       "source_count": 2
     },
     {
+      "id": "phrase:memory-long",
+      "label": "memory long",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 2
+    },
+    {
       "id": "phrase:memory-system",
       "label": "memory system",
       "kind": "emergent-phrase",
@@ -4915,13 +4733,6 @@
       "source_count": 2
     },
     {
-      "id": "phrase:model-context",
-      "label": "model context",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
       "id": "phrase:model-performance",
       "label": "model performance",
       "kind": "emergent-phrase",
@@ -4939,13 +4750,6 @@
       "id": "primitive:model-replaceability",
       "label": "Model replaceability",
       "kind": "primitive",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:model-weights",
-      "label": "model weights",
-      "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
     },
@@ -4971,13 +4775,6 @@
       "source_count": 2
     },
     {
-      "id": "phrase:multi-tenant",
-      "label": "multi tenant",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
       "id": "phrase:multi-turn",
       "label": "multi turn",
       "kind": "emergent-phrase",
@@ -4987,13 +4784,6 @@
     {
       "id": "phrase:multimodal-large-language-model",
       "label": "multimodal large language model",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:multimodal-model",
-      "label": "multimodal model",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
@@ -5314,13 +5104,6 @@
       "source_count": 2
     },
     {
-      "id": "phrase:question-answering",
-      "label": "question answering",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
       "id": "phrase:random-number",
       "label": "random number",
       "kind": "emergent-phrase",
@@ -5505,13 +5288,6 @@
     {
       "id": "phrase:simulation-platform",
       "label": "simulation platform",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:single-agent",
-      "label": "single agent",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
@@ -5827,6 +5603,13 @@
     {
       "id": "phrase:white-house",
       "label": "white house",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 2
+    },
+    {
+      "id": "phrase:wide-range",
+      "label": "wide range",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
@@ -6490,6 +6273,13 @@
       "source_count": 1
     },
     {
+      "id": "phrase:fine-grained",
+      "label": "fine grained",
+      "kind": "emergent-phrase",
+      "document_count": 4,
+      "source_count": 1
+    },
+    {
       "id": "technology:grok",
       "label": "grok",
       "kind": "technology",
@@ -6840,16 +6630,16 @@
       "source_count": 1
     },
     {
-      "id": "technology:fastapi",
-      "label": "fastapi",
-      "kind": "technology",
+      "id": "phrase:existing-approaches",
+      "label": "existing approaches",
+      "kind": "emergent-phrase",
       "document_count": 3,
       "source_count": 1
     },
     {
-      "id": "phrase:fine-grained",
-      "label": "fine grained",
-      "kind": "emergent-phrase",
+      "id": "technology:fastapi",
+      "label": "fastapi",
+      "kind": "technology",
       "document_count": 3,
       "source_count": 1
     },
@@ -7904,6 +7694,13 @@
       "source_count": 1
     },
     {
+      "id": "phrase:cache-llm-llm-inference",
+      "label": "cache llm llm inference",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 1
+    },
+    {
       "id": "technology:calibration",
       "label": "calibration",
       "kind": "technology",
@@ -8025,13 +7822,6 @@
     {
       "id": "phrase:closed-source",
       "label": "closed source",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:code-codex",
-      "label": "code codex",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 1
@@ -8926,13 +8716,6 @@
       "source_count": 1
     },
     {
-      "id": "phrase:existing-approaches",
-      "label": "existing approaches",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 1
-    },
-    {
       "id": "phrase:existing-datasets",
       "label": "existing datasets",
       "kind": "emergent-phrase",
@@ -9780,13 +9563,6 @@
       "source_count": 1
     },
     {
-      "id": "phrase:long-term",
-      "label": "long term",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 1
-    },
-    {
       "id": "phrase:loop-post-training",
       "label": "loop post training",
       "kind": "emergent-phrase",
@@ -10027,6 +9803,13 @@
     {
       "id": "phrase:model-distillation",
       "label": "model distillation",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 1
+    },
+    {
+      "id": "phrase:model-evaluation",
+      "label": "model evaluation",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 1
@@ -10991,6 +10774,13 @@
       "source_count": 1
     },
     {
+      "id": "phrase:self-hosted-workflow-automation",
+      "label": "self hosted workflow automation",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 1
+    },
+    {
       "id": "phrase:self-improving-agents",
       "label": "self improving agents",
       "kind": "emergent-phrase",
@@ -11285,6 +11075,13 @@
       "source_count": 1
     },
     {
+      "id": "phrase:task-specific",
+      "label": "task specific",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 1
+    },
+    {
       "id": "phrase:task-success",
       "label": "task success",
       "kind": "emergent-phrase",
@@ -11323,13 +11120,6 @@
       "id": "primitive:tenant-isolation",
       "label": "Tenant isolation",
       "kind": "primitive",
-      "document_count": 2,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:term-memory",
-      "label": "term memory",
-      "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 1
     },
@@ -11546,6 +11336,13 @@
     {
       "id": "phrase:week-radical",
       "label": "week radical",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 1
+    },
+    {
+      "id": "phrase:widely-recognized",
+      "label": "widely recognized",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 1
@@ -12657,20 +12454,6 @@
       "source_count": 1
     },
     {
-      "id": "phrase:cache-llm-llm",
-      "label": "cache llm llm",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:cache-llm-llm-inference",
-      "label": "cache llm llm inference",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
       "id": "phrase:calibration-error",
       "label": "calibration error",
       "kind": "emergent-phrase",
@@ -12884,6 +12667,13 @@
       "id": "project:cobanov-awesome-jev",
       "label": "cobanov/awesome-jev",
       "kind": "project",
+      "document_count": 1,
+      "source_count": 1
+    },
+    {
+      "id": "phrase:code-codex",
+      "label": "code codex",
+      "kind": "emergent-phrase",
       "document_count": 1,
       "source_count": 1
     },
@@ -13262,20 +13052,6 @@
       "id": "technology:decision-intelligence",
       "label": "decision-intelligence",
       "kind": "technology",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:deep-neural",
-      "label": "deep neural",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:deep-neural-network",
-      "label": "deep neural network",
-      "kind": "emergent-phrase",
       "document_count": 1,
       "source_count": 1
     },
@@ -15128,20 +14904,6 @@
       "source_count": 1
     },
     {
-      "id": "phrase:memory-long",
-      "label": "memory long",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:memory-long-term",
-      "label": "memory long term",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
       "id": "technology:memory-system",
       "label": "memory-system",
       "kind": "technology",
@@ -15257,13 +15019,6 @@
       "id": "project:mochi",
       "label": "Mochi",
       "kind": "project",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:model-evaluation",
-      "label": "model evaluation",
-      "kind": "emergent-phrase",
       "document_count": 1,
       "source_count": 1
     },
@@ -16220,6 +15975,13 @@
       "source_count": 1
     },
     {
+      "id": "phrase:provides-supervision",
+      "label": "provides supervision",
+      "kind": "emergent-phrase",
+      "document_count": 1,
+      "source_count": 1
+    },
+    {
       "id": "technology:proxy",
       "label": "proxy",
       "kind": "technology",
@@ -16822,20 +16584,6 @@
       "source_count": 1
     },
     {
-      "id": "phrase:self-hosted-workflow",
-      "label": "self hosted workflow",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:self-hosted-workflow-automation",
-      "label": "self hosted workflow automation",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
       "id": "phrase:self-improvement",
       "label": "self improvement",
       "kind": "emergent-phrase",
@@ -17161,13 +16909,6 @@
       "id": "project:talhapythoneer-anti-sycophancy-prompt",
       "label": "talhapythoneer/anti-sycophancy-prompt",
       "kind": "project",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:task-specific",
-      "label": "task specific",
-      "kind": "emergent-phrase",
       "document_count": 1,
       "source_count": 1
     },
@@ -17781,20 +17522,6 @@
       "source_count": 1
     },
     {
-      "id": "phrase:wide-range",
-      "label": "wide range",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:widely-recognized",
-      "label": "widely recognized",
-      "kind": "emergent-phrase",
-      "document_count": 1,
-      "source_count": 1
-    },
-    {
       "id": "technology:windows",
       "label": "windows",
       "kind": "technology",
@@ -17951,6 +17678,18 @@
   ],
   "relationship_index": [
     {
+      "subject_id": "technology:self-hosted",
+      "predicate": "serve",
+      "object_id": "theme:skills-integrations",
+      "document_count": 2
+    },
+    {
+      "subject_id": "theme:skills-integrations",
+      "predicate": "deploy",
+      "object_id": "theme:small-specialized-models",
+      "document_count": 2
+    },
+    {
       "subject_id": "theme:small-specialized-models",
       "predicate": "train",
       "object_id": "theme:training-self-improvement",
@@ -17966,6 +17705,12 @@
       "subject_id": "theme:training-self-improvement",
       "predicate": "train",
       "object_id": "theme:robotics-embodied-ai",
+      "document_count": 2
+    },
+    {
+      "subject_id": "theme:training-self-improvement",
+      "predicate": "train",
+      "object_id": "theme:small-specialized-models",
       "document_count": 2
     },
     {
@@ -18032,18 +17777,6 @@
       "subject_id": "technology:agentic-ai",
       "predicate": "orchestrate",
       "object_id": "technology:agentic-framework",
-      "document_count": 1
-    },
-    {
-      "subject_id": "technology:ai-agent",
-      "predicate": "secure",
-      "object_id": "theme:agent-harnesses",
-      "document_count": 1
-    },
-    {
-      "subject_id": "technology:ai-agent",
-      "predicate": "serve",
-      "object_id": "theme:agent-harnesses",
       "document_count": 1
     },
     {
@@ -18227,12 +17960,6 @@
       "document_count": 1
     },
     {
-      "subject_id": "technology:crypto-web3",
-      "predicate": "train",
-      "object_id": "technology:consumer-products",
-      "document_count": 1
-    },
-    {
       "subject_id": "technology:cuda",
       "predicate": "train",
       "object_id": "technology:super-mario-bros",
@@ -18251,12 +17978,6 @@
       "document_count": 1
     },
     {
-      "subject_id": "technology:data-labeling",
-      "predicate": "train",
-      "object_id": "technology:robotics",
-      "document_count": 1
-    },
-    {
       "subject_id": "technology:datawhale",
       "predicate": "infer",
       "object_id": "technology:infra",
@@ -18266,12 +17987,6 @@
       "subject_id": "technology:decision-model",
       "predicate": "infer",
       "object_id": "technology:laya",
-      "document_count": 1
-    },
-    {
-      "subject_id": "technology:deep-learning",
-      "predicate": "train",
-      "object_id": "technology:yc-batch-f2026",
       "document_count": 1
     },
     {
@@ -18365,12 +18080,6 @@
       "document_count": 1
     },
     {
-      "subject_id": "technology:inference",
-      "predicate": "infer",
-      "object_id": "technology:browser",
-      "document_count": 1
-    },
-    {
       "subject_id": "technology:inference-time-reasoning",
       "predicate": "reason",
       "object_id": "technology:policy-gradient",
@@ -18397,7 +18106,7 @@
     {
       "subject_id": "technology:insurance",
       "predicate": "deploy",
-      "object_id": "technology:computer-vision",
+      "object_id": "theme:multimodal-3d",
       "document_count": 1
     },
     {
@@ -18473,12 +18182,6 @@
       "document_count": 1
     },
     {
-      "subject_id": "technology:macos",
-      "predicate": "serve",
-      "object_id": "project:zidniryi-unbagrnd",
-      "document_count": 1
-    },
-    {
       "subject_id": "technology:manufacturing",
       "predicate": "automate",
       "object_id": "technology:robotics",
@@ -18545,12 +18248,6 @@
       "document_count": 1
     },
     {
-      "subject_id": "technology:nextjs",
-      "predicate": "serve",
-      "object_id": "project:vicoa-ai-vicoa",
-      "document_count": 1
-    },
-    {
       "subject_id": "technology:non-autoregressive",
       "predicate": "reason",
       "object_id": "technology:jev",
@@ -18565,7 +18262,7 @@
     {
       "subject_id": "technology:open-source",
       "predicate": "orchestrate",
-      "object_id": "technology:workflow-automation",
+      "object_id": "theme:skills-integrations",
       "document_count": 1
     },
     {
@@ -18578,12 +18275,6 @@
       "subject_id": "technology:open-source-ai",
       "predicate": "reason",
       "object_id": "technology:ai-models",
-      "document_count": 1
-    },
-    {
-      "subject_id": "technology:opencode",
-      "predicate": "serve",
-      "object_id": "project:useagenthq-useagent",
       "document_count": 1
     },
     {
@@ -18665,24 +18356,6 @@
       "document_count": 1
     },
     {
-      "subject_id": "technology:self-hosted",
-      "predicate": "automate",
-      "object_id": "project:rome-os-rome",
-      "document_count": 1
-    },
-    {
-      "subject_id": "technology:self-hosted",
-      "predicate": "serve",
-      "object_id": "project:rome-os-rome",
-      "document_count": 1
-    },
-    {
-      "subject_id": "technology:self-hosted",
-      "predicate": "serve",
-      "object_id": "technology:workflow-automation",
-      "document_count": 1
-    },
-    {
       "subject_id": "technology:sglang",
       "predicate": "infer",
       "object_id": "technology:datawhale",
@@ -18756,6 +18429,24 @@
     },
     {
       "subject_id": "theme:agent-harnesses",
+      "predicate": "evaluate",
+      "object_id": "theme:multimodal-3d",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:agent-harnesses",
+      "predicate": "evaluate",
+      "object_id": "theme:training-self-improvement",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:agent-harnesses",
+      "predicate": "generate",
+      "object_id": "theme:multimodal-3d",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:agent-harnesses",
       "predicate": "orchestrate",
       "object_id": "theme:coding-agents",
       "document_count": 1
@@ -18767,9 +18458,45 @@
       "document_count": 1
     },
     {
+      "subject_id": "theme:agent-harnesses",
+      "predicate": "train",
+      "object_id": "theme:multimodal-3d",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:assurance-infrastructure",
+      "predicate": "generate",
+      "object_id": "theme:training-self-improvement",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:assurance-infrastructure",
+      "predicate": "route",
+      "object_id": "theme:training-self-improvement",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:assurance-infrastructure",
+      "predicate": "secure",
+      "object_id": "theme:training-self-improvement",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:coding-agents",
+      "predicate": "deploy",
+      "object_id": "theme:open-local-inference",
+      "document_count": 1
+    },
+    {
       "subject_id": "theme:coding-agents",
       "predicate": "evaluate",
       "object_id": "theme:memory-context",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:coding-agents",
+      "predicate": "evaluate",
+      "object_id": "theme:open-local-inference",
       "document_count": 1
     },
     {
@@ -18816,14 +18543,56 @@
     },
     {
       "subject_id": "theme:frontier-inference-infrastructure",
+      "predicate": "evaluate",
+      "object_id": "theme:document-knowledge-systems",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:frontier-inference-infrastructure",
+      "predicate": "infer",
+      "object_id": "technology:browser",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:frontier-inference-infrastructure",
+      "predicate": "infer",
+      "object_id": "theme:multimodal-3d",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:frontier-inference-infrastructure",
       "predicate": "infer",
       "object_id": "theme:open-local-inference",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:frontier-inference-infrastructure",
+      "predicate": "retrieve",
+      "object_id": "theme:document-knowledge-systems",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:frontier-inference-infrastructure",
+      "predicate": "serve",
+      "object_id": "theme:document-knowledge-systems",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:frontier-inference-infrastructure",
+      "predicate": "serve",
+      "object_id": "theme:multimodal-3d",
       "document_count": 1
     },
     {
       "subject_id": "theme:memory-context",
       "predicate": "retrieve",
       "object_id": "technology:agent-memory",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:multimodal-3d",
+      "predicate": "evaluate",
+      "object_id": "theme:training-self-improvement",
       "document_count": 1
     },
     {
@@ -18836,6 +18605,24 @@
       "subject_id": "theme:multimodal-3d",
       "predicate": "generate",
       "object_id": "technology:world-models",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:multimodal-3d",
+      "predicate": "secure",
+      "object_id": "theme:training-self-improvement",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:multimodal-3d",
+      "predicate": "simulate",
+      "object_id": "theme:training-self-improvement",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:multimodal-3d",
+      "predicate": "train",
+      "object_id": "theme:training-self-improvement",
       "document_count": 1
     },
     {
@@ -18854,6 +18641,60 @@
       "subject_id": "theme:open-local-inference",
       "predicate": "route",
       "object_id": "theme:memory-context",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:open-local-inference",
+      "predicate": "secure",
+      "object_id": "technology:ai-agent",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:open-local-inference",
+      "predicate": "serve",
+      "object_id": "project:useagenthq-useagent",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:open-local-inference",
+      "predicate": "serve",
+      "object_id": "project:vicoa-ai-vicoa",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:open-local-inference",
+      "predicate": "serve",
+      "object_id": "project:zidniryi-unbagrnd",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:open-local-inference",
+      "predicate": "serve",
+      "object_id": "technology:ai-agent",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:open-local-inference",
+      "predicate": "serve",
+      "object_id": "theme:voice-audio",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:open-local-inference",
+      "predicate": "train",
+      "object_id": "theme:training-self-improvement",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:skills-integrations",
+      "predicate": "automate",
+      "object_id": "project:rome-os-rome",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:skills-integrations",
+      "predicate": "automate",
+      "object_id": "theme:small-specialized-models",
       "document_count": 1
     },
     {
@@ -18907,6 +18748,12 @@
     {
       "subject_id": "theme:training-self-improvement",
       "predicate": "evaluate",
+      "object_id": "theme:document-knowledge-systems",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:training-self-improvement",
+      "predicate": "evaluate",
       "object_id": "theme:open-local-inference",
       "document_count": 1
     },
@@ -18936,6 +18783,12 @@
     },
     {
       "subject_id": "theme:training-self-improvement",
+      "predicate": "retrieve",
+      "object_id": "theme:document-knowledge-systems",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:training-self-improvement",
       "predicate": "route",
       "object_id": "theme:open-local-inference",
       "document_count": 1
@@ -18955,6 +18808,24 @@
     {
       "subject_id": "theme:training-self-improvement",
       "predicate": "train",
+      "object_id": "technology:crypto-web3",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:training-self-improvement",
+      "predicate": "train",
+      "object_id": "technology:data-labeling",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:training-self-improvement",
+      "predicate": "train",
+      "object_id": "technology:deep-learning",
+      "document_count": 1
+    },
+    {
+      "subject_id": "theme:training-self-improvement",
+      "predicate": "train",
       "object_id": "theme:coding-agents",
       "document_count": 1
     },
@@ -18962,12 +18833,6 @@
       "subject_id": "theme:training-self-improvement",
       "predicate": "train",
       "object_id": "theme:open-local-inference",
-      "document_count": 1
-    },
-    {
-      "subject_id": "theme:training-self-improvement",
-      "predicate": "train",
-      "object_id": "theme:small-specialized-models",
       "document_count": 1
     },
     {
@@ -19699,6 +19564,7 @@
           "kind": "theme",
           "matched_terms": [
             "model context protocol",
+            "context protocol",
             "MCP",
             "mcp"
           ]
@@ -20231,26 +20097,6 @@
           "score": 8.659
         },
         {
-          "id": "phrase:multi-agent-systems",
-          "label": "multi agent systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "multi agent systems"
-          ],
-          "document_frequency": 4,
-          "score": 7.249
-        },
-        {
-          "id": "phrase:multi-tenant",
-          "label": "multi tenant",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "multi tenant"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "primitive:tenant-isolation",
           "label": "Tenant isolation",
           "kind": "primitive",
@@ -20263,6 +20109,8 @@
           "label": "Agent harnesses",
           "kind": "theme",
           "matched_terms": [
+            "multi-agent systems",
+            "agent systems",
             "multi agent",
             "multi-agent"
           ]
@@ -20272,6 +20120,7 @@
           "label": "Assurance infrastructure",
           "kind": "theme",
           "matched_terms": [
+            "multi-tenant",
             "provenance"
           ]
         },
@@ -20289,7 +20138,8 @@
           "label": "Skills, protocols & integrations",
           "kind": "theme",
           "matched_terms": [
-            "model context protocol"
+            "model context protocol",
+            "context protocol"
           ]
         }
       ],
@@ -20487,6 +20337,7 @@
           "kind": "theme",
           "matched_terms": [
             "model context protocol",
+            "context protocol",
             "mcp server",
             "MCP",
             "mcp"
@@ -20677,6 +20528,7 @@
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
+            "LLM inference",
             "kv cache",
             "kv-cache"
           ]
@@ -21279,6 +21131,22 @@
           ],
           "document_frequency": 2,
           "score": 8.659
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "self-hosted"
+          ]
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "workflow automation"
+          ]
         }
       ],
       "entities": [
@@ -21397,7 +21265,7 @@
       ],
       "relationships": [
         {
-          "subject_id": "technology:self-hosted",
+          "subject_id": "theme:skills-integrations",
           "predicate": "automate",
           "object_id": "project:rome-os-rome",
           "basis": "same-sentence-co-mention"
@@ -21405,7 +21273,7 @@
         {
           "subject_id": "technology:self-hosted",
           "predicate": "serve",
-          "object_id": "project:rome-os-rome",
+          "object_id": "theme:skills-integrations",
           "basis": "same-sentence-co-mention"
         }
       ]
@@ -21590,21 +21458,19 @@
           "score": 8.659
         },
         {
-          "id": "phrase:workflow-automation",
-          "label": "workflow automation",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "workflow automation"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
-        },
-        {
           "id": "theme:coding-agents",
           "label": "Coding agents & developer tooling",
           "kind": "theme",
           "matched_terms": [
             "coding agent"
+          ]
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "workflow automation"
           ]
         }
       ],
@@ -22391,16 +22257,6 @@
           "score": 9.476
         },
         {
-          "id": "phrase:model-weights",
-          "label": "model weights",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "model weights"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:test-time",
           "label": "test time",
           "kind": "emergent-phrase",
@@ -22434,6 +22290,14 @@
           "kind": "theme",
           "matched_terms": [
             "long context"
+          ]
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "model weights"
           ]
         },
         {
@@ -22560,6 +22424,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "system prompt"
+          ]
         },
         {
           "id": "theme:training-self-improvement",
@@ -22969,16 +22841,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:computer-vision",
-          "label": "computer vision",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "computer vision"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
-        },
-        {
           "id": "phrase:image-processing",
           "label": "image processing",
           "kind": "emergent-phrase",
@@ -23007,6 +22869,22 @@
           ],
           "document_frequency": 3,
           "score": 8.302
+        },
+        {
+          "id": "theme:multimodal-3d",
+          "label": "Multimodal generation & 3D",
+          "kind": "theme",
+          "matched_terms": [
+            "computer vision"
+          ]
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "self-hosted"
+          ]
         }
       ],
       "entities": [
@@ -23118,7 +22996,7 @@
       ],
       "relationships": [
         {
-          "subject_id": "technology:macos",
+          "subject_id": "theme:open-local-inference",
           "predicate": "serve",
           "object_id": "project:zidniryi-unbagrnd",
           "basis": "same-sentence-co-mention"
@@ -23276,16 +23154,6 @@
           "score": 7.045
         },
         {
-          "id": "phrase:multi-agent-systems",
-          "label": "multi agent systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "multi agent systems"
-          ],
-          "document_frequency": 4,
-          "score": 7.249
-        },
-        {
           "id": "phrase:scientific-discovery",
           "label": "scientific discovery",
           "kind": "emergent-phrase",
@@ -23300,6 +23168,8 @@
           "label": "Agent harnesses",
           "kind": "theme",
           "matched_terms": [
+            "multi-agent systems",
+            "agent systems",
             "multi agent",
             "multi-agent"
           ]
@@ -23559,6 +23429,14 @@
             "multi agent",
             "multi-agent"
           ]
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "workflow automation"
+          ]
         }
       ],
       "entities": [
@@ -23647,7 +23525,7 @@
         {
           "subject_id": "technology:open-source",
           "predicate": "orchestrate",
-          "object_id": "technology:workflow-automation",
+          "object_id": "theme:skills-integrations",
           "basis": "same-sentence-co-mention"
         },
         {
@@ -24041,14 +23919,14 @@
           "score": 7.821
         },
         {
-          "id": "phrase:deep-neural-networks",
-          "label": "deep neural networks",
+          "id": "phrase:deep-neural",
+          "label": "deep neural",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "deep neural networks"
+            "deep neural"
           ],
-          "document_frequency": 2,
-          "score": 7.821
+          "document_frequency": 4,
+          "score": 6.472
         },
         {
           "id": "phrase:learning-trainer-trainer-studio",
@@ -24109,6 +23987,14 @@
           ],
           "document_frequency": 2,
           "score": 8.659
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "deep neural networks"
+          ]
         }
       ],
       "entities": [
@@ -24247,20 +24133,11 @@
           "score": 7.045
         },
         {
-          "id": "phrase:question-answering",
-          "label": "question answering",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "question answering"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "theme:document-knowledge-systems",
           "label": "Documents, retrieval & knowledge systems",
           "kind": "theme",
           "matched_terms": [
+            "question answering",
             "RAG"
           ]
         }
@@ -25937,16 +25814,6 @@
           "score": 11.823
         },
         {
-          "id": "phrase:agentic-coding",
-          "label": "agentic coding",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agentic coding"
-          ],
-          "document_frequency": 4,
-          "score": 6.472
-        },
-        {
           "id": "phrase:agentic-workflows",
           "label": "agentic workflows",
           "kind": "emergent-phrase",
@@ -25991,6 +25858,7 @@
           "label": "Coding agents & developer tooling",
           "kind": "theme",
           "matched_terms": [
+            "agentic coding",
             "coding agent"
           ]
         }
@@ -26353,14 +26221,12 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:embedding-models",
-          "label": "embedding models",
-          "kind": "emergent-phrase",
+          "id": "theme:document-knowledge-systems",
+          "label": "Documents, retrieval & knowledge systems",
+          "kind": "theme",
           "matched_terms": [
             "embedding models"
-          ],
-          "document_frequency": 4,
-          "score": 9.708
+          ]
         }
       ],
       "entities": [],
@@ -26383,16 +26249,6 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:agent-tools",
-          "label": "agent tools",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent tools"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:agents-developer-tools",
           "label": "agents developer tools",
           "kind": "emergent-phrase",
@@ -26401,6 +26257,14 @@
           ],
           "document_frequency": 3,
           "score": 7.499
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "agent tools"
+          ]
         }
       ],
       "entities": [
@@ -26457,16 +26321,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:self-hosted",
-          "label": "self hosted",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "self hosted"
-          ],
-          "document_frequency": 9,
-          "score": 5.779
-        },
-        {
           "id": "theme:agent-harnesses",
           "label": "Agent harnesses",
           "kind": "theme",
@@ -26480,6 +26334,14 @@
           "kind": "theme",
           "matched_terms": [
             "red-team"
+          ]
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "self-hosted"
           ]
         }
       ],
@@ -26591,15 +26453,15 @@
       ],
       "relationships": [
         {
-          "subject_id": "technology:ai-agent",
+          "subject_id": "theme:open-local-inference",
           "predicate": "secure",
-          "object_id": "theme:agent-harnesses",
+          "object_id": "technology:ai-agent",
           "basis": "same-sentence-co-mention"
         },
         {
-          "subject_id": "technology:ai-agent",
+          "subject_id": "theme:open-local-inference",
           "predicate": "serve",
-          "object_id": "theme:agent-harnesses",
+          "object_id": "technology:ai-agent",
           "basis": "same-sentence-co-mention"
         },
         {
@@ -26637,16 +26499,6 @@
           "kind": "emergent-phrase",
           "matched_terms": [
             "background removal"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
-          "id": "phrase:context-length",
-          "label": "context length",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "context length"
           ],
           "document_frequency": 2,
           "score": 6.983
@@ -26709,6 +26561,14 @@
             "OCR",
             "RAG",
             "ocr"
+          ]
+        },
+        {
+          "id": "theme:memory-context",
+          "label": "Memory & context engineering",
+          "kind": "theme",
+          "matched_terms": [
+            "context length"
           ]
         },
         {
@@ -27373,26 +27233,6 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:agentic-coding",
-          "label": "agentic coding",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agentic coding"
-          ],
-          "document_frequency": 4,
-          "score": 9.708
-        },
-        {
-          "id": "phrase:model-weights",
-          "label": "model weights",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "model weights"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:qwen3-8-flash-next",
           "label": "qwen3.8 flash next",
           "kind": "emergent-phrase",
@@ -27401,6 +27241,22 @@
           ],
           "document_frequency": 3,
           "score": 19.045
+        },
+        {
+          "id": "theme:coding-agents",
+          "label": "Coding agents & developer tooling",
+          "kind": "theme",
+          "matched_terms": [
+            "agentic coding"
+          ]
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "model weights"
+          ]
         }
       ],
       "entities": [],
@@ -27420,7 +27276,20 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:coding-agents",
+          "predicate": "evaluate",
+          "object_id": "theme:open-local-inference",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:coding-agents",
+          "predicate": "deploy",
+          "object_id": "theme:open-local-inference",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "nvidia-developer-blog:669a2bcff9f93697746c",
@@ -27519,24 +27388,14 @@
       ],
       "concepts": [
         {
-          "id": "phrase:cache-llm-llm",
-          "label": "cache llm llm",
+          "id": "phrase:cache-llm-llm-inference",
+          "label": "cache llm llm inference",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "cache llm llm"
+            "cache llm llm inference"
           ],
           "document_frequency": 2,
-          "score": 7.821
-        },
-        {
-          "id": "phrase:llm-inference",
-          "label": "llm inference",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "llm inference"
-          ],
-          "document_frequency": 10,
-          "score": 9.624
+          "score": 8.659
         },
         {
           "id": "theme:frontier-inference-infrastructure",
@@ -27544,6 +27403,7 @@
           "kind": "theme",
           "matched_terms": [
             "inference engine",
+            "LLM inference",
             "kv cache",
             "kv-cache"
           ]
@@ -28192,6 +28052,14 @@
           "score": 7.499
         },
         {
+          "id": "theme:frontier-inference-infrastructure",
+          "label": "Frontier inference infrastructure",
+          "kind": "theme",
+          "matched_terms": [
+            "LLM inference"
+          ]
+        },
+        {
           "id": "theme:open-local-inference",
           "label": "Open, local & efficient inference",
           "kind": "theme",
@@ -28311,16 +28179,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agentic-coding",
-          "label": "agentic coding",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agentic coding"
-          ],
-          "document_frequency": 4,
-          "score": 6.472
-        },
-        {
           "id": "phrase:batch-news-insights",
           "label": "batch news insights",
           "kind": "emergent-phrase",
@@ -28356,6 +28214,14 @@
           "kind": "theme",
           "matched_terms": [
             "agent harness"
+          ]
+        },
+        {
+          "id": "theme:coding-agents",
+          "label": "Coding agents & developer tooling",
+          "kind": "theme",
+          "matched_terms": [
+            "agentic coding"
           ]
         }
       ],
@@ -28507,6 +28373,7 @@
           "kind": "theme",
           "matched_terms": [
             "model context protocol",
+            "context protocol",
             "MCP",
             "mcp"
           ]
@@ -28630,16 +28497,6 @@
           "score": 7.249
         },
         {
-          "id": "phrase:self-hosted",
-          "label": "self hosted",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "self hosted"
-          ],
-          "document_frequency": 9,
-          "score": 5.779
-        },
-        {
           "id": "phrase:vibe-coding",
           "label": "vibe coding",
           "kind": "emergent-phrase",
@@ -28656,6 +28513,14 @@
           "matched_terms": [
             "coding agents",
             "coding agent"
+          ]
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "self-hosted"
           ]
         }
       ],
@@ -28768,7 +28633,7 @@
       ],
       "relationships": [
         {
-          "subject_id": "technology:nextjs",
+          "subject_id": "theme:open-local-inference",
           "predicate": "serve",
           "object_id": "project:vicoa-ai-vicoa",
           "basis": "same-sentence-co-mention"
@@ -28850,16 +28715,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-run",
-          "label": "agent run",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent run"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:llm-agents-llm",
           "label": "llm agents llm",
           "kind": "emergent-phrase",
@@ -28878,6 +28733,14 @@
           ],
           "document_frequency": 5,
           "score": 7.045
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent run"
+          ]
         },
         {
           "id": "theme:skills-integrations",
@@ -29361,21 +29224,19 @@
           "score": 7.821
         },
         {
-          "id": "phrase:self-hosted",
-          "label": "self hosted",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "self hosted"
-          ],
-          "document_frequency": 9,
-          "score": 5.779
-        },
-        {
           "id": "theme:coding-agents",
           "label": "Coding agents & developer tooling",
           "kind": "theme",
           "matched_terms": [
             "coding agent"
+          ]
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "self-hosted"
           ]
         }
       ],
@@ -29501,7 +29362,7 @@
           "basis": "same-sentence-co-mention"
         },
         {
-          "subject_id": "technology:opencode",
+          "subject_id": "theme:open-local-inference",
           "predicate": "serve",
           "object_id": "project:useagenthq-useagent",
           "basis": "same-sentence-co-mention"
@@ -29780,16 +29641,6 @@
           "score": 4.824
         },
         {
-          "id": "phrase:ground-truth",
-          "label": "ground truth",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "ground truth"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:malware-analysis",
           "label": "malware analysis",
           "kind": "emergent-phrase",
@@ -29835,6 +29686,14 @@
             "mcp server",
             "MCP",
             "mcp"
+          ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "ground truth"
           ]
         }
       ],
@@ -29981,16 +29840,6 @@
           "score": 6.472
         },
         {
-          "id": "phrase:continual-learning",
-          "label": "continual learning",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "continual learning"
-          ],
-          "document_frequency": 4,
-          "score": 10.959
-        },
-        {
           "id": "phrase:inference-llm",
           "label": "inference llm",
           "kind": "emergent-phrase",
@@ -30037,6 +29886,7 @@
           "matched_terms": [
             "reinforcement learning",
             "reinforcement-learning",
+            "continual learning",
             "self improving",
             "self-improving"
           ]
@@ -30259,6 +30109,14 @@
           "matched_terms": [
             "multi agent",
             "multi-agent"
+          ]
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "workflow automation"
           ]
         }
       ],
@@ -30673,16 +30531,6 @@
           "score": 6.695
         },
         {
-          "id": "phrase:llm-inference",
-          "label": "llm inference",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "llm inference"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
-        },
-        {
           "id": "phrase:llm-local",
           "label": "llm local",
           "kind": "emergent-phrase",
@@ -30708,7 +30556,8 @@
           "kind": "theme",
           "matched_terms": [
             "distributed inference",
-            "speculative decoding"
+            "speculative decoding",
+            "LLM inference"
           ]
         }
       ],
@@ -30805,7 +30654,7 @@
       ],
       "relationships": [
         {
-          "subject_id": "technology:inference",
+          "subject_id": "theme:frontier-inference-infrastructure",
           "predicate": "infer",
           "object_id": "technology:browser",
           "basis": "same-sentence-co-mention"
@@ -31833,16 +31682,6 @@
           "score": 6.002
         },
         {
-          "id": "phrase:robot-foundation",
-          "label": "robot foundation",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "robot foundation"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:robotics-appeared",
           "label": "robotics appeared",
           "kind": "emergent-phrase",
@@ -31861,6 +31700,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:robotics-embodied-ai",
+          "label": "Robotics & embodied AI",
+          "kind": "theme",
+          "matched_terms": [
+            "robot foundation"
+          ]
         }
       ],
       "entities": [],
@@ -31967,16 +31814,6 @@
           "score": 7.816
         },
         {
-          "id": "phrase:code-codex",
-          "label": "code codex",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "code codex"
-          ],
-          "document_frequency": 12,
-          "score": 5.517
-        },
-        {
           "id": "phrase:llm-local",
           "label": "llm local",
           "kind": "emergent-phrase",
@@ -31987,24 +31824,24 @@
           "score": 6.29
         },
         {
-          "id": "phrase:long-term-memory",
-          "label": "long term memory",
+          "id": "phrase:long-term",
+          "label": "long term",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "long term memory"
+            "long term"
           ],
-          "document_frequency": 4,
-          "score": 12.274
+          "document_frequency": 5,
+          "score": 10.65
         },
         {
-          "id": "phrase:memory-long-term",
-          "label": "memory long term",
+          "id": "phrase:memory-long",
+          "label": "memory long",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "memory long term"
+            "memory long"
           ],
           "document_frequency": 2,
-          "score": 7.821
+          "score": 6.983
         },
         {
           "id": "phrase:memory-markdown-mcp",
@@ -32017,10 +31854,21 @@
           "score": 7.821
         },
         {
+          "id": "phrase:term-memory",
+          "label": "term memory",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "term memory"
+          ],
+          "document_frequency": 5,
+          "score": 10.65
+        },
+        {
           "id": "theme:memory-context",
           "label": "Memory & context engineering",
           "kind": "theme",
           "matched_terms": [
+            "long-term memory",
             "agent memory"
           ]
         },
@@ -32208,14 +32056,12 @@
           "score": 10.475
         },
         {
-          "id": "phrase:output-tokens",
-          "label": "output tokens",
-          "kind": "emergent-phrase",
+          "id": "theme:frontier-inference-infrastructure",
+          "label": "Frontier inference infrastructure",
+          "kind": "theme",
           "matched_terms": [
             "output tokens"
-          ],
-          "document_frequency": 4,
-          "score": 9.708
+          ]
         }
       ],
       "entities": [],
@@ -32403,14 +32249,12 @@
           "score": 8.395
         },
         {
-          "id": "phrase:system-prompt",
-          "label": "system prompt",
-          "kind": "emergent-phrase",
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
           "matched_terms": [
             "system prompt"
-          ],
-          "document_frequency": 6,
-          "score": 9.204
+          ]
         }
       ],
       "entities": [],
@@ -32427,21 +32271,12 @@
       ],
       "concepts": [
         {
-          "id": "phrase:llm-inference",
-          "label": "llm inference",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "llm inference"
-          ],
-          "document_frequency": 10,
-          "score": 14.435
-        },
-        {
           "id": "theme:frontier-inference-infrastructure",
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
-            "speculative decoding"
+            "speculative decoding",
+            "LLM inference"
           ]
         }
       ],
@@ -32581,24 +32416,14 @@
           "score": 8.302
         },
         {
-          "id": "phrase:self-hosted-workflow",
-          "label": "self hosted workflow",
+          "id": "phrase:self-hosted-workflow-automation",
+          "label": "self hosted workflow automation",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "self hosted workflow"
+            "self hosted workflow automation"
           ],
           "document_frequency": 2,
-          "score": 7.821
-        },
-        {
-          "id": "phrase:workflow-automation",
-          "label": "workflow automation",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "workflow automation"
-          ],
-          "document_frequency": 6,
-          "score": 10.389
+          "score": 8.659
         },
         {
           "id": "theme:coding-agents",
@@ -32606,6 +32431,22 @@
           "kind": "theme",
           "matched_terms": [
             "coding agents"
+          ]
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "self-hosted"
+          ]
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "workflow automation"
           ]
         }
       ],
@@ -32731,7 +32572,7 @@
         {
           "subject_id": "technology:self-hosted",
           "predicate": "serve",
-          "object_id": "technology:workflow-automation",
+          "object_id": "theme:skills-integrations",
           "basis": "same-sentence-co-mention"
         }
       ]
@@ -33878,14 +33719,12 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:continual-learning",
-          "label": "continual learning",
-          "kind": "emergent-phrase",
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
           "matched_terms": [
             "continual learning"
-          ],
-          "document_frequency": 4,
-          "score": 6.472
+          ]
         }
       ],
       "entities": [
@@ -34884,6 +34723,14 @@
           ],
           "document_frequency": 3,
           "score": 11.248
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent swarm"
+          ]
         }
       ],
       "entities": [],
@@ -35061,16 +34908,6 @@
           "score": 8.659
         },
         {
-          "id": "phrase:context-protocol",
-          "label": "context protocol",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "context protocol"
-          ],
-          "document_frequency": 7,
-          "score": 6.002
-        },
-        {
           "id": "phrase:knowledge-base",
           "label": "knowledge base",
           "kind": "emergent-phrase",
@@ -35121,6 +34958,16 @@
           "score": 7.821
         },
         {
+          "id": "phrase:model-context",
+          "label": "model context",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "model context"
+          ],
+          "document_frequency": 7,
+          "score": 6.002
+        },
+        {
           "id": "theme:coding-agents",
           "label": "Coding agents & developer tooling",
           "kind": "theme",
@@ -35159,6 +35006,7 @@
           "kind": "theme",
           "matched_terms": [
             "model context protocol",
+            "context protocol",
             "mcp server",
             "MCP",
             "mcp"
@@ -35725,6 +35573,14 @@
           "kind": "theme",
           "matched_terms": [
             "world action model"
+          ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "training data"
           ]
         }
       ],
@@ -36376,16 +36232,6 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:embedding-models",
-          "label": "embedding models",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "embedding models"
-          ],
-          "document_frequency": 4,
-          "score": 6.472
-        },
-        {
           "id": "phrase:information-retrieval",
           "label": "information retrieval",
           "kind": "emergent-phrase",
@@ -36400,6 +36246,7 @@
           "label": "Documents, retrieval & knowledge systems",
           "kind": "theme",
           "matched_terms": [
+            "embedding models",
             "RAG"
           ]
         }
@@ -36718,16 +36565,6 @@
           "score": 7.821
         },
         {
-          "id": "phrase:ground-truth",
-          "label": "ground truth",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "ground truth"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:ill-posed",
           "label": "ill posed",
           "kind": "emergent-phrase",
@@ -36772,7 +36609,8 @@
           "label": "Multimodal generation & 3D",
           "kind": "theme",
           "matched_terms": [
-            "image generation"
+            "image generation",
+            "computer vision"
           ]
         },
         {
@@ -36788,6 +36626,7 @@
           "label": "Training, evaluation & self-improvement",
           "kind": "theme",
           "matched_terms": [
+            "ground truth",
             "fine tuning",
             "fine-tuning"
           ]
@@ -36909,6 +36748,14 @@
           ],
           "document_frequency": 4,
           "score": 7.249
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "tool calls"
+          ]
         },
         {
           "id": "theme:small-specialized-models",
@@ -37209,16 +37056,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:zero-shot",
-          "label": "zero shot",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "zero shot"
-          ],
-          "document_frequency": 7,
-          "score": 6.002
-        },
-        {
           "id": "theme:multimodal-3d",
           "label": "Multimodal generation & 3D",
           "kind": "theme",
@@ -37233,6 +37070,14 @@
           "kind": "theme",
           "matched_terms": [
             "embodied ai"
+          ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "zero-shot"
           ]
         }
       ],
@@ -38147,14 +37992,12 @@
           "score": 8.827
         },
         {
-          "id": "phrase:output-tokens",
-          "label": "output tokens",
-          "kind": "emergent-phrase",
+          "id": "theme:frontier-inference-infrastructure",
+          "label": "Frontier inference infrastructure",
+          "kind": "theme",
           "matched_terms": [
             "output tokens"
-          ],
-          "document_frequency": 4,
-          "score": 9.708
+          ]
         }
       ],
       "entities": [],
@@ -38318,7 +38161,8 @@
           "kind": "theme",
           "matched_terms": [
             "fine tuning",
-            "fine-tuning"
+            "fine-tuning",
+            "zero-shot"
           ]
         }
       ],
@@ -38972,26 +38816,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:inference-optimization",
-          "label": "inference optimization",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "inference optimization"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
-          "id": "phrase:multimodal-model",
-          "label": "multimodal model",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "multimodal model"
-          ],
-          "document_frequency": 2,
-          "score": 10.475
-        },
-        {
           "id": "phrase:multimodal-models",
           "label": "multimodal models",
           "kind": "emergent-phrase",
@@ -39006,8 +38830,17 @@
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
+            "inference optimization",
             "prefill-decode",
             "model serving"
+          ]
+        },
+        {
+          "id": "theme:multimodal-3d",
+          "label": "Multimodal generation & 3D",
+          "kind": "theme",
+          "matched_terms": [
+            "multimodal model"
           ]
         }
       ],
@@ -39028,7 +38861,20 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:frontier-inference-infrastructure",
+          "predicate": "infer",
+          "object_id": "theme:multimodal-3d",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:frontier-inference-infrastructure",
+          "predicate": "serve",
+          "object_id": "theme:multimodal-3d",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "bluesky:1278ebf77949:3mv4jopucic2g",
@@ -41907,16 +41753,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-swarms",
-          "label": "agent swarms",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent swarms"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:compact-models",
           "label": "compact models",
           "kind": "emergent-phrase",
@@ -41985,6 +41821,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent swarms"
+          ]
         },
         {
           "id": "theme:skills-integrations",
@@ -43565,6 +43409,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent swarm"
+          ]
         }
       ],
       "entities": [],
@@ -43605,6 +43457,14 @@
           ],
           "document_frequency": 2,
           "score": 11.732
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent swarm"
+          ]
         }
       ],
       "entities": [],
@@ -44298,6 +44158,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "tool calls"
+          ]
         }
       ],
       "entities": [],
@@ -45938,22 +45806,20 @@
           "score": 5.684
         },
         {
-          "id": "phrase:model-training",
-          "label": "model training",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "model training"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "theme:open-local-inference",
           "label": "Open, local & efficient inference",
           "kind": "theme",
           "matched_terms": [
             "mixture of experts",
             "mixture-of-experts"
+          ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "model training"
           ]
         }
       ],
@@ -45967,7 +45833,14 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:open-local-inference",
+          "predicate": "train",
+          "object_id": "theme:training-self-improvement",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "radical-ventures:a907a55c8f3d23f10720",
@@ -47314,6 +47187,16 @@
           "score": 6.983
         },
         {
+          "id": "phrase:gpt-6-astra",
+          "label": "gpt 6 astra",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "gpt 6 astra"
+          ],
+          "document_frequency": 20,
+          "score": 5.642
+        },
+        {
           "id": "phrase:gpt-live",
           "label": "gpt live",
           "kind": "emergent-phrase",
@@ -47354,14 +47237,12 @@
           "score": 6.983
         },
         {
-          "id": "phrase:system-prompt",
-          "label": "system prompt",
-          "kind": "emergent-phrase",
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
           "matched_terms": [
             "system prompt"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
+          ]
         },
         {
           "id": "theme:voice-audio",
@@ -47639,14 +47520,12 @@
           "score": 7.249
         },
         {
-          "id": "phrase:system-prompt",
-          "label": "system prompt",
-          "kind": "emergent-phrase",
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
           "matched_terms": [
             "system prompt"
-          ],
-          "document_frequency": 6,
-          "score": 10.389
+          ]
         }
       ],
       "entities": [
@@ -48003,16 +47882,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-system",
-          "label": "agent system",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent system"
-          ],
-          "document_frequency": 3,
-          "score": 10.043
-        },
-        {
           "id": "phrase:amazon-bedrock-agentcore",
           "label": "amazon bedrock agentcore",
           "kind": "emergent-phrase",
@@ -48033,24 +47902,14 @@
           "score": 6.983
         },
         {
-          "id": "phrase:single-agent",
-          "label": "single agent",
-          "kind": "emergent-phrase",
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
           "matched_terms": [
+            "system prompt",
+            "agent system",
             "single agent"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
-          "id": "phrase:system-prompt",
-          "label": "system prompt",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "system prompt"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
+          ]
         },
         {
           "id": "theme:training-self-improvement",
@@ -48072,7 +47931,14 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:agent-harnesses",
+          "predicate": "evaluate",
+          "object_id": "theme:training-self-improvement",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "openai-news:b0366f9850a9d166d4a5",
@@ -48591,20 +48457,11 @@
       ],
       "concepts": [
         {
-          "id": "phrase:digital-twins",
-          "label": "digital twins",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "digital twins"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "theme:robotics-embodied-ai",
           "label": "Robotics & embodied AI",
           "kind": "theme",
           "matched_terms": [
+            "digital twins",
             "physical AI",
             "physical ai"
           ]
@@ -49229,16 +49086,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-tools",
-          "label": "agent tools",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent tools"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:agents-awesome-awesome",
           "label": "agents awesome awesome",
           "kind": "emergent-phrase",
@@ -49289,6 +49136,16 @@
           "score": 11.823
         },
         {
+          "id": "phrase:model-evaluation",
+          "label": "model evaluation",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "model evaluation"
+          ],
+          "document_frequency": 3,
+          "score": 6.695
+        },
+        {
           "id": "phrase:structured-output-system",
           "label": "structured output system",
           "kind": "emergent-phrase",
@@ -49329,7 +49186,8 @@
           "label": "Skills, protocols & integrations",
           "kind": "theme",
           "matched_terms": [
-            "agent skills"
+            "agent skills",
+            "agent tools"
           ]
         },
         {
@@ -49833,16 +49691,6 @@
           "score": 6.29
         },
         {
-          "id": "phrase:training-data",
-          "label": "training data",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "training data"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
-        },
-        {
           "id": "phrase:training-distribution",
           "label": "training distribution",
           "kind": "emergent-phrase",
@@ -49858,7 +49706,8 @@
           "kind": "theme",
           "matched_terms": [
             "post training",
-            "post-training"
+            "post-training",
+            "training data"
           ]
         }
       ],
@@ -49948,16 +49797,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:training-data",
-          "label": "training data",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "training data"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
-        },
-        {
           "id": "phrase:video-models",
           "label": "video models",
           "kind": "emergent-phrase",
@@ -49973,6 +49812,14 @@
           "kind": "theme",
           "matched_terms": [
             "robotic manipulation"
+          ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "training data"
           ]
         }
       ],
@@ -50289,16 +50136,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:document-processing",
-          "label": "document processing",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "document processing"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:high-level",
           "label": "high level",
           "kind": "emergent-phrase",
@@ -50324,6 +50161,14 @@
           "kind": "theme",
           "matched_terms": [
             "coding agents"
+          ]
+        },
+        {
+          "id": "theme:document-knowledge-systems",
+          "label": "Documents, retrieval & knowledge systems",
+          "kind": "theme",
+          "matched_terms": [
+            "document processing"
           ]
         },
         {
@@ -50361,7 +50206,26 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:frontier-inference-infrastructure",
+          "predicate": "evaluate",
+          "object_id": "theme:document-knowledge-systems",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:frontier-inference-infrastructure",
+          "predicate": "retrieve",
+          "object_id": "theme:document-knowledge-systems",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:frontier-inference-infrastructure",
+          "predicate": "serve",
+          "object_id": "theme:document-knowledge-systems",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "arxiv:2609.20449v1",
@@ -50801,16 +50665,6 @@
           "score": 19.045
         },
         {
-          "id": "phrase:multimodal-model",
-          "label": "multimodal model",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "multimodal model"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:reasoning-tasks",
           "label": "reasoning tasks",
           "kind": "emergent-phrase",
@@ -50841,11 +50695,29 @@
           "score": 6.983
         },
         {
+          "id": "phrase:wide-range",
+          "label": "wide range",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "wide range"
+          ],
+          "document_frequency": 3,
+          "score": 6.695
+        },
+        {
           "id": "theme:assurance-infrastructure",
           "label": "Assurance infrastructure",
           "kind": "theme",
           "matched_terms": [
             "provenance"
+          ]
+        },
+        {
+          "id": "theme:multimodal-3d",
+          "label": "Multimodal generation & 3D",
+          "kind": "theme",
+          "matched_terms": [
+            "multimodal model"
           ]
         },
         {
@@ -52781,16 +52653,6 @@
           "score": 6.695
         },
         {
-          "id": "phrase:training-data",
-          "label": "training data",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "training data"
-          ],
-          "document_frequency": 10,
-          "score": 9.624
-        },
-        {
           "id": "phrase:trusted-execution-environments-tees",
           "label": "trusted execution environments tees",
           "kind": "emergent-phrase",
@@ -52815,6 +52677,7 @@
           "label": "Training, evaluation & self-improvement",
           "kind": "theme",
           "matched_terms": [
+            "training data",
             "fine tuning",
             "fine-tuning"
           ]
@@ -52941,6 +52804,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "zero-shot"
+          ]
         }
       ],
       "entities": [],
@@ -53005,16 +52876,6 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:context-length",
-          "label": "context length",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "context length"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:diffusion-language-models",
           "label": "diffusion language models",
           "kind": "emergent-phrase",
@@ -53023,6 +52884,16 @@
           ],
           "document_frequency": 2,
           "score": 11.732
+        },
+        {
+          "id": "phrase:fine-grained",
+          "label": "fine grained",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "fine grained"
+          ],
+          "document_frequency": 7,
+          "score": 6.002
         },
         {
           "id": "phrase:forward-passes",
@@ -53083,6 +52954,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:memory-context",
+          "label": "Memory & context engineering",
+          "kind": "theme",
+          "matched_terms": [
+            "context length"
+          ]
         }
       ],
       "entities": [
@@ -53511,14 +53390,12 @@
           "score": 6.472
         },
         {
-          "id": "phrase:synthetic-data",
-          "label": "synthetic data",
-          "kind": "emergent-phrase",
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
           "matched_terms": [
             "synthetic data"
-          ],
-          "document_frequency": 3,
-          "score": 17.004
+          ]
         }
       ],
       "entities": [],
@@ -53652,26 +53529,6 @@
           "score": 17.735
         },
         {
-          "id": "phrase:audit-trail",
-          "label": "audit trail",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "audit trail"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
-          "id": "phrase:context-protocol",
-          "label": "context protocol",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "context protocol"
-          ],
-          "document_frequency": 7,
-          "score": 6.002
-        },
-        {
           "id": "phrase:mcp-tools",
           "label": "mcp tools",
           "kind": "emergent-phrase",
@@ -53702,11 +53559,20 @@
           "score": 6.695
         },
         {
+          "id": "theme:assurance-infrastructure",
+          "label": "Assurance infrastructure",
+          "kind": "theme",
+          "matched_terms": [
+            "audit trail"
+          ]
+        },
+        {
           "id": "theme:skills-integrations",
           "label": "Skills, protocols & integrations",
           "kind": "theme",
           "matched_terms": [
             "model context protocol",
+            "context protocol",
             "MCP",
             "mcp"
           ]
@@ -54309,16 +54175,6 @@
           "score": 5.443
         },
         {
-          "id": "phrase:computer-vision",
-          "label": "computer vision",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "computer vision"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
-        },
-        {
           "id": "phrase:iclr-icml",
           "label": "iclr icml",
           "kind": "emergent-phrase",
@@ -54337,6 +54193,14 @@
           ],
           "document_frequency": 2,
           "score": 7.821
+        },
+        {
+          "id": "theme:multimodal-3d",
+          "label": "Multimodal generation & 3D",
+          "kind": "theme",
+          "matched_terms": [
+            "computer vision"
+          ]
         }
       ],
       "entities": [
@@ -54471,16 +54335,6 @@
           "score": 17.073
         },
         {
-          "id": "phrase:multi-agent-systems",
-          "label": "multi agent systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "multi agent systems"
-          ],
-          "document_frequency": 4,
-          "score": 7.249
-        },
-        {
           "id": "phrase:production-agents",
           "label": "production agents",
           "kind": "emergent-phrase",
@@ -54495,6 +54349,8 @@
           "label": "Agent harnesses",
           "kind": "theme",
           "matched_terms": [
+            "multi-agent systems",
+            "agent systems",
             "multi agent",
             "multi-agent"
           ]
@@ -55223,21 +55079,12 @@
           "score": 6.29
         },
         {
-          "id": "phrase:output-tokens",
-          "label": "output tokens",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "output tokens"
-          ],
-          "document_frequency": 4,
-          "score": 10.959
-        },
-        {
           "id": "theme:frontier-inference-infrastructure",
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
-            "inference engine"
+            "inference engine",
+            "output tokens"
           ]
         }
       ],
@@ -55418,16 +55265,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-run",
-          "label": "agent run",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent run"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:cs-cl-cs-ai",
           "label": "cs.cl cs.ai",
           "kind": "emergent-phrase",
@@ -55476,6 +55313,14 @@
           ],
           "document_frequency": 2,
           "score": 11.823
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent run"
+          ]
         },
         {
           "id": "theme:training-self-improvement",
@@ -57016,16 +56861,6 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:agent-systems",
-          "label": "agent systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent systems"
-          ],
-          "document_frequency": 7,
-          "score": 6.002
-        },
-        {
           "id": "phrase:attack-surface",
           "label": "attack surface",
           "kind": "emergent-phrase",
@@ -57074,6 +56909,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent systems"
+          ]
         },
         {
           "id": "theme:assurance-infrastructure",
@@ -57791,16 +57634,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:zero-shot",
-          "label": "zero shot",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "zero shot"
-          ],
-          "document_frequency": 7,
-          "score": 10.163
-        },
-        {
           "id": "primitive:sim-to-real",
           "label": "Sim-to-real transfer",
           "kind": "primitive",
@@ -57815,7 +57648,8 @@
           "kind": "theme",
           "matched_terms": [
             "reinforcement learning",
-            "reinforcement-learning"
+            "reinforcement-learning",
+            "zero-shot"
           ]
         }
       ],
@@ -58248,6 +58082,14 @@
           "score": 6.983
         },
         {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent system"
+          ]
+        },
+        {
           "id": "theme:document-knowledge-systems",
           "label": "Documents, retrieval & knowledge systems",
           "kind": "theme",
@@ -58385,14 +58227,14 @@
           "score": 6.983
         },
         {
-          "id": "phrase:training-data",
-          "label": "training data",
+          "id": "phrase:provides-supervision",
+          "label": "provides supervision",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "training data"
+            "provides supervision"
           ],
-          "document_frequency": 10,
-          "score": 9.624
+          "document_frequency": 2,
+          "score": 6.983
         },
         {
           "id": "theme:robotics-embodied-ai",
@@ -58412,8 +58254,8 @@
             "reinforcement-learning",
             "post training",
             "post-training",
-            "fine tuning",
-            "fine-tuning"
+            "training data",
+            "fine tuning"
           ]
         }
       ],
@@ -60242,14 +60084,14 @@
           "score": 5.884
         },
         {
-          "id": "phrase:long-term-memory",
-          "label": "long term memory",
+          "id": "phrase:long-term",
+          "label": "long term",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "long term memory"
+            "long term"
           ],
-          "document_frequency": 4,
-          "score": 7.249
+          "document_frequency": 5,
+          "score": 6.29
         },
         {
           "id": "phrase:manipulation-tasks",
@@ -60270,6 +60112,24 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "phrase:term-memory",
+          "label": "term memory",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "term memory"
+          ],
+          "document_frequency": 5,
+          "score": 6.29
+        },
+        {
+          "id": "theme:memory-context",
+          "label": "Memory & context engineering",
+          "kind": "theme",
+          "matched_terms": [
+            "long-term memory"
+          ]
         },
         {
           "id": "theme:multimodal-3d",
@@ -60347,16 +60207,6 @@
           "score": 6.136
         },
         {
-          "id": "phrase:embedding-models",
-          "label": "embedding models",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "embedding models"
-          ],
-          "document_frequency": 4,
-          "score": 9.708
-        },
-        {
           "id": "phrase:substantially-improve",
           "label": "substantially improve",
           "kind": "emergent-phrase",
@@ -60365,6 +60215,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:document-knowledge-systems",
+          "label": "Documents, retrieval & knowledge systems",
+          "kind": "theme",
+          "matched_terms": [
+            "embedding models"
+          ]
         }
       ],
       "entities": [],
@@ -60803,16 +60661,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-systems",
-          "label": "agent systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent systems"
-          ],
-          "document_frequency": 7,
-          "score": 6.002
-        },
-        {
           "id": "phrase:api-endpoint",
           "label": "api endpoint",
           "kind": "emergent-phrase",
@@ -60881,6 +60729,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
+          "matched_terms": [
+            "agent systems"
+          ]
         },
         {
           "id": "theme:memory-context",
@@ -61014,14 +60870,12 @@
           "score": 7.499
         },
         {
-          "id": "phrase:system-prompt",
-          "label": "system prompt",
-          "kind": "emergent-phrase",
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
           "matched_terms": [
             "system prompt"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
+          ]
         }
       ],
       "entities": [],
@@ -61130,16 +60984,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:agent-systems",
-          "label": "agent systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent systems"
-          ],
-          "document_frequency": 7,
-          "score": 6.002
-        },
-        {
           "id": "phrase:different-ways",
           "label": "different ways",
           "kind": "emergent-phrase",
@@ -61204,6 +61048,7 @@
           "label": "Agent harnesses",
           "kind": "theme",
           "matched_terms": [
+            "agent systems",
             "multi agent",
             "multi-agent"
           ]
@@ -61264,7 +61109,26 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:agent-harnesses",
+          "predicate": "train",
+          "object_id": "theme:multimodal-3d",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:agent-harnesses",
+          "predicate": "evaluate",
+          "object_id": "theme:multimodal-3d",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:agent-harnesses",
+          "predicate": "generate",
+          "object_id": "theme:multimodal-3d",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "hn:49748553",
@@ -61296,16 +61160,6 @@
           "score": 6.695
         },
         {
-          "id": "phrase:tool-calls",
-          "label": "tool calls",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "tool calls"
-          ],
-          "document_frequency": 6,
-          "score": 10.389
-        },
-        {
           "id": "phrase:weeks-ago",
           "label": "weeks ago",
           "kind": "emergent-phrase",
@@ -61324,6 +61178,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "tool calls"
+          ]
         },
         {
           "id": "theme:small-specialized-models",
@@ -61351,7 +61213,20 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:skills-integrations",
+          "predicate": "deploy",
+          "object_id": "theme:small-specialized-models",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:skills-integrations",
+          "predicate": "automate",
+          "object_id": "theme:small-specialized-models",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "bluesky:1278ebf77949:3mvr3litp3k2i",
@@ -62413,6 +62288,14 @@
           "matched_terms": [
             "slms"
           ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "zero-shot"
+          ]
         }
       ],
       "entities": [
@@ -63096,16 +62979,6 @@
           "score": 7.443
         },
         {
-          "id": "phrase:llm-inference",
-          "label": "llm inference",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "llm inference"
-          ],
-          "document_frequency": 10,
-          "score": 8.526
-        },
-        {
           "id": "phrase:multi-parent",
           "label": "multi parent",
           "kind": "emergent-phrase",
@@ -63140,7 +63013,8 @@
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
-            "speculative decoding"
+            "speculative decoding",
+            "LLM inference"
           ]
         },
         {
@@ -64224,16 +64098,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:digital-twins",
-          "label": "digital twins",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "digital twins"
-          ],
-          "document_frequency": 3,
-          "score": 17.004
-        },
-        {
           "id": "phrase:may-require",
           "label": "may require",
           "kind": "emergent-phrase",
@@ -64258,7 +64122,8 @@
           "label": "Robotics & embodied AI",
           "kind": "theme",
           "matched_terms": [
-            "robotic manipulation"
+            "robotic manipulation",
+            "digital twins"
           ]
         }
       ],
@@ -65005,16 +64870,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-generated",
-          "label": "agent generated",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent generated"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:cs-ro-cs-lg",
           "label": "cs.ro cs.lg",
           "kind": "emergent-phrase",
@@ -65023,6 +64878,16 @@
           ],
           "document_frequency": 3,
           "score": 6.695
+        },
+        {
+          "id": "phrase:existing-approaches",
+          "label": "existing approaches",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "existing approaches"
+          ],
+          "document_frequency": 5,
+          "score": 6.29
         },
         {
           "id": "phrase:horizon-tasks",
@@ -65043,16 +64908,6 @@
           ],
           "document_frequency": 11,
           "score": 17.618
-        },
-        {
-          "id": "phrase:robot-foundation",
-          "label": "robot foundation",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "robot foundation"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
         },
         {
           "id": "phrase:supervised-fine-tuning-sft",
@@ -65093,12 +64948,21 @@
           ]
         },
         {
+          "id": "theme:robotics-embodied-ai",
+          "label": "Robotics & embodied AI",
+          "kind": "theme",
+          "matched_terms": [
+            "robot foundation"
+          ]
+        },
+        {
           "id": "theme:training-self-improvement",
           "label": "Training, evaluation & self-improvement",
           "kind": "theme",
           "matched_terms": [
             "reinforcement learning",
             "reinforcement-learning",
+            "agent-generated",
             "fine tuning",
             "fine-tuning"
           ]
@@ -65152,16 +65016,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:embedding-models",
-          "label": "embedding models",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "embedding models"
-          ],
-          "document_frequency": 4,
-          "score": 6.472
-        },
-        {
           "id": "phrase:percentage-points",
           "label": "percentage points",
           "kind": "emergent-phrase",
@@ -65210,6 +65064,22 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:document-knowledge-systems",
+          "label": "Documents, retrieval & knowledge systems",
+          "kind": "theme",
+          "matched_terms": [
+            "embedding models"
+          ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "training data"
+          ]
         }
       ],
       "entities": [],
@@ -65704,6 +65574,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "deep neural network"
+          ]
         }
       ],
       "entities": [],
@@ -65885,16 +65763,6 @@
           "score": 6.136
         },
         {
-          "id": "phrase:llm-inference",
-          "label": "llm inference",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "llm inference"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
-        },
-        {
           "id": "phrase:probability-distribution",
           "label": "probability distribution",
           "kind": "emergent-phrase",
@@ -65909,7 +65777,8 @@
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
-            "speculative decoding"
+            "speculative decoding",
+            "LLM inference"
           ]
         }
       ],
@@ -66029,14 +65898,14 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:deep-neural-network",
-          "label": "deep neural network",
+          "id": "phrase:deep-neural",
+          "label": "deep neural",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "deep neural network"
+            "deep neural"
           ],
-          "document_frequency": 2,
-          "score": 7.821
+          "document_frequency": 4,
+          "score": 6.472
         },
         {
           "id": "phrase:dimensional-data",
@@ -66099,14 +65968,23 @@
           "score": 13.583
         },
         {
-          "id": "phrase:synthetic-data",
-          "label": "synthetic data",
+          "id": "phrase:neural-network",
+          "label": "neural network",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "synthetic data"
+            "neural network"
           ],
-          "document_frequency": 3,
-          "score": 6.695
+          "document_frequency": 7,
+          "score": 6.002
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "deep neural network",
+            "synthetic data"
+          ]
         }
       ],
       "entities": [],
@@ -66288,16 +66166,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-system",
-          "label": "agent system",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent system"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:case-study",
           "label": "case study",
           "kind": "emergent-phrase",
@@ -66348,16 +66216,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:single-agent",
-          "label": "single agent",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "single agent"
-          ],
-          "document_frequency": 2,
-          "score": 11.823
-        },
-        {
           "id": "phrase:study-examines",
           "label": "study examines",
           "kind": "emergent-phrase",
@@ -66372,6 +66230,8 @@
           "label": "Agent harnesses",
           "kind": "theme",
           "matched_terms": [
+            "agent system",
+            "single agent",
             "multi agent",
             "multi-agent"
           ]
@@ -66576,16 +66436,6 @@
           "score": 6.695
         },
         {
-          "id": "phrase:llm-inference",
-          "label": "llm inference",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "llm inference"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
-        },
-        {
           "id": "phrase:text-encoder",
           "label": "text encoder",
           "kind": "emergent-phrase",
@@ -66594,6 +66444,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:frontier-inference-infrastructure",
+          "label": "Frontier inference infrastructure",
+          "kind": "theme",
+          "matched_terms": [
+            "LLM inference"
+          ]
         },
         {
           "id": "theme:multimodal-3d",
@@ -67847,16 +67705,6 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:audit-trail",
-          "label": "audit trail",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "audit trail"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:instance-level",
           "label": "instance level",
           "kind": "emergent-phrase",
@@ -67905,6 +67753,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:assurance-infrastructure",
+          "label": "Assurance infrastructure",
+          "kind": "theme",
+          "matched_terms": [
+            "audit trail"
+          ]
         }
       ],
       "entities": [],
@@ -68814,16 +68670,6 @@
           "score": 6.695
         },
         {
-          "id": "phrase:synthetic-data",
-          "label": "synthetic data",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "synthetic data"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:time-series",
           "label": "time series",
           "kind": "emergent-phrase",
@@ -68832,6 +68678,14 @@
           ],
           "document_frequency": 5,
           "score": 6.29
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "synthetic data"
+          ]
         }
       ],
       "entities": [],
@@ -69050,6 +68904,14 @@
           "matched_terms": [
             "provenance"
           ]
+        },
+        {
+          "id": "theme:memory-context",
+          "label": "Memory & context engineering",
+          "kind": "theme",
+          "matched_terms": [
+            "long-term memory"
+          ]
         }
       ],
       "entities": [],
@@ -69121,16 +68983,6 @@
           "score": 6.983
         },
         {
-          "id": "phrase:deep-neural-networks",
-          "label": "deep neural networks",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "deep neural networks"
-          ],
-          "document_frequency": 2,
-          "score": 7.821
-        },
-        {
           "id": "phrase:enables-efficient",
           "label": "enables efficient",
           "kind": "emergent-phrase",
@@ -69159,6 +69011,24 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "phrase:widely-recognized",
+          "label": "widely recognized",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "widely recognized"
+          ],
+          "document_frequency": 2,
+          "score": 6.983
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "deep neural networks"
+          ]
         }
       ],
       "entities": [],
@@ -69312,20 +69182,12 @@
           "score": 17.004
         },
         {
-          "id": "phrase:multi-agent-systems",
-          "label": "multi agent systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "multi agent systems"
-          ],
-          "document_frequency": 4,
-          "score": 7.249
-        },
-        {
           "id": "theme:agent-harnesses",
           "label": "Agent harnesses",
           "kind": "theme",
           "matched_terms": [
+            "multi-agent systems",
+            "agent systems",
             "multi agent",
             "multi-agent"
           ]
@@ -70166,14 +70028,12 @@
           "score": 7.821
         },
         {
-          "id": "phrase:ground-truth",
-          "label": "ground truth",
-          "kind": "emergent-phrase",
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
           "matched_terms": [
             "ground truth"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
+          ]
         }
       ],
       "entities": [],
@@ -70948,16 +70808,6 @@
           "score": 10.65
         },
         {
-          "id": "phrase:question-answering",
-          "label": "question answering",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "question answering"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:resulting-dataset",
           "label": "resulting dataset",
           "kind": "emergent-phrase",
@@ -70973,6 +70823,14 @@
           "kind": "primitive",
           "matched_terms": [
             "manual review"
+          ]
+        },
+        {
+          "id": "theme:document-knowledge-systems",
+          "label": "Documents, retrieval & knowledge systems",
+          "kind": "theme",
+          "matched_terms": [
+            "question answering"
           ]
         },
         {
@@ -71017,7 +70875,20 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:training-self-improvement",
+          "predicate": "evaluate",
+          "object_id": "theme:document-knowledge-systems",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:training-self-improvement",
+          "predicate": "retrieve",
+          "object_id": "theme:document-knowledge-systems",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "arxiv:2609.22039v1",
@@ -71531,16 +71402,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:continual-learning",
-          "label": "continual learning",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "continual learning"
-          ],
-          "document_frequency": 4,
-          "score": 20.374
-        },
-        {
           "id": "phrase:cs-lg-cs-ro",
           "label": "cs.lg cs.ro",
           "kind": "emergent-phrase",
@@ -71594,6 +71455,7 @@
           "label": "Training, evaluation & self-improvement",
           "kind": "theme",
           "matched_terms": [
+            "continual learning",
             "benchmarking",
             "benchmark"
           ]
@@ -71626,6 +71488,12 @@
       ],
       "relationships": [
         {
+          "subject_id": "theme:multimodal-3d",
+          "predicate": "simulate",
+          "object_id": "theme:training-self-improvement",
+          "basis": "same-sentence-co-mention"
+        },
+        {
           "subject_id": "theme:training-self-improvement",
           "predicate": "evaluate",
           "object_id": "theme:multimodal-3d",
@@ -71635,6 +71503,12 @@
           "subject_id": "theme:training-self-improvement",
           "predicate": "secure",
           "object_id": "theme:multimodal-3d",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:multimodal-3d",
+          "predicate": "evaluate",
+          "object_id": "theme:training-self-improvement",
           "basis": "same-sentence-co-mention"
         }
       ]
@@ -71789,22 +71663,13 @@
           "score": 6.983
         },
         {
-          "id": "phrase:zero-shot",
-          "label": "zero shot",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "zero shot"
-          ],
-          "document_frequency": 7,
-          "score": 6.002
-        },
-        {
           "id": "theme:training-self-improvement",
           "label": "Training, evaluation & self-improvement",
           "kind": "theme",
           "matched_terms": [
             "benchmarking",
-            "benchmark"
+            "benchmark",
+            "zero-shot"
           ]
         }
       ],
@@ -71901,16 +71766,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agentic-coding",
-          "label": "agentic coding",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agentic coding"
-          ],
-          "document_frequency": 4,
-          "score": 9.708
-        },
-        {
           "id": "phrase:agentic-pipeline",
           "label": "agentic pipeline",
           "kind": "emergent-phrase",
@@ -71971,6 +71826,16 @@
           "score": 10.475
         },
         {
+          "id": "phrase:task-specific",
+          "label": "task specific",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "task specific"
+          ],
+          "document_frequency": 4,
+          "score": 6.472
+        },
+        {
           "id": "phrase:typically-rely",
           "label": "typically rely",
           "kind": "emergent-phrase",
@@ -71985,6 +71850,7 @@
           "label": "Coding agents & developer tooling",
           "kind": "theme",
           "matched_terms": [
+            "agentic coding",
             "coding agents"
           ]
         },
@@ -72310,14 +72176,12 @@
       ],
       "concepts": [
         {
-          "id": "phrase:llm-inference",
-          "label": "llm inference",
-          "kind": "emergent-phrase",
+          "id": "theme:frontier-inference-infrastructure",
+          "label": "Frontier inference infrastructure",
+          "kind": "theme",
           "matched_terms": [
-            "llm inference"
-          ],
-          "document_frequency": 10,
-          "score": 8.526
+            "LLM inference"
+          ]
         },
         {
           "id": "theme:training-self-improvement",
@@ -74458,14 +74322,12 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:agent-swarms",
-          "label": "agent swarms",
-          "kind": "emergent-phrase",
+          "id": "theme:agent-harnesses",
+          "label": "Agent harnesses",
+          "kind": "theme",
           "matched_terms": [
             "agent swarms"
-          ],
-          "document_frequency": 2,
-          "score": 10.475
+          ]
         }
       ],
       "entities": [],
@@ -74831,14 +74693,12 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:audit-trail",
-          "label": "audit trail",
-          "kind": "emergent-phrase",
+          "id": "theme:assurance-infrastructure",
+          "label": "Assurance infrastructure",
+          "kind": "theme",
           "matched_terms": [
             "audit trail"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
+          ]
         }
       ],
       "entities": [],
@@ -75330,16 +75190,6 @@
           "score": 6.179
         },
         {
-          "id": "phrase:context-protocol",
-          "label": "context protocol",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "context protocol"
-          ],
-          "document_frequency": 7,
-          "score": 6.002
-        },
-        {
           "id": "phrase:full-coding",
           "label": "full coding",
           "kind": "emergent-phrase",
@@ -75403,6 +75253,7 @@
           "kind": "theme",
           "matched_terms": [
             "model context protocol",
+            "context protocol",
             "MCP",
             "mcp"
           ]
@@ -76546,16 +76397,6 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:continual-learning",
-          "label": "continual learning",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "continual learning"
-          ],
-          "document_frequency": 4,
-          "score": 9.708
-        },
-        {
           "id": "phrase:fine-tune",
           "label": "fine tune",
           "kind": "emergent-phrase",
@@ -76614,6 +76455,14 @@
           ],
           "document_frequency": 7,
           "score": 12.602
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "continual learning"
+          ]
         }
       ],
       "entities": [],
@@ -76648,16 +76497,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:computer-vision",
-          "label": "computer vision",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "computer vision"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
-        },
-        {
           "id": "phrase:https-x2f-x2f-github-com",
           "label": "https x2f x2f github.com",
           "kind": "emergent-phrase",
@@ -76666,16 +76505,6 @@
           ],
           "document_frequency": 7,
           "score": 7.443
-        },
-        {
-          "id": "phrase:model-training",
-          "label": "model training",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "model training"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
         },
         {
           "id": "phrase:months-ago",
@@ -76718,10 +76547,19 @@
           "score": 7.443
         },
         {
+          "id": "theme:multimodal-3d",
+          "label": "Multimodal generation & 3D",
+          "kind": "theme",
+          "matched_terms": [
+            "computer vision"
+          ]
+        },
+        {
           "id": "theme:training-self-improvement",
           "label": "Training, evaluation & self-improvement",
           "kind": "theme",
           "matched_terms": [
+            "model training",
             "benchmark"
           ]
         }
@@ -76750,7 +76588,20 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:multimodal-3d",
+          "predicate": "train",
+          "object_id": "theme:training-self-improvement",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:multimodal-3d",
+          "predicate": "secure",
+          "object_id": "theme:training-self-improvement",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "hn:49783406",
@@ -76792,14 +76643,12 @@
           "score": 10.475
         },
         {
-          "id": "phrase:self-hosted",
-          "label": "self hosted",
-          "kind": "emergent-phrase",
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
           "matched_terms": [
-            "self hosted"
-          ],
-          "document_frequency": 9,
-          "score": 8.669
+            "self-hosted"
+          ]
         }
       ],
       "entities": [],
@@ -77080,14 +76929,32 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:long-term-memory",
-          "label": "long term memory",
+          "id": "phrase:long-term",
+          "label": "long term",
           "kind": "emergent-phrase",
           "matched_terms": [
-            "long term memory"
+            "long term"
           ],
-          "document_frequency": 4,
-          "score": 10.873
+          "document_frequency": 5,
+          "score": 9.435
+        },
+        {
+          "id": "phrase:term-memory",
+          "label": "term memory",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "term memory"
+          ],
+          "document_frequency": 5,
+          "score": 9.435
+        },
+        {
+          "id": "theme:memory-context",
+          "label": "Memory & context engineering",
+          "kind": "theme",
+          "matched_terms": [
+            "long-term memory"
+          ]
         }
       ],
       "entities": [],
@@ -78050,24 +77917,13 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:inference-optimization",
-          "label": "inference optimization",
-          "kind": "emergent-phrase",
+          "id": "theme:frontier-inference-infrastructure",
+          "label": "Frontier inference infrastructure",
+          "kind": "theme",
           "matched_terms": [
-            "inference optimization"
-          ],
-          "document_frequency": 2,
-          "score": 10.475
-        },
-        {
-          "id": "phrase:llm-inference",
-          "label": "llm inference",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "llm inference"
-          ],
-          "document_frequency": 10,
-          "score": 8.526
+            "inference optimization",
+            "LLM inference"
+          ]
         }
       ],
       "entities": [],
@@ -78840,14 +78696,12 @@
           "score": 5.402
         },
         {
-          "id": "phrase:model-training",
-          "label": "model training",
-          "kind": "emergent-phrase",
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
           "matched_terms": [
             "model training"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
+          ]
         }
       ],
       "entities": [],
@@ -79016,21 +78870,19 @@
           "score": 6.983
         },
         {
-          "id": "phrase:zero-shot",
-          "label": "zero shot",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "zero shot"
-          ],
-          "document_frequency": 7,
-          "score": 15.244
-        },
-        {
           "id": "theme:small-specialized-models",
           "label": "Small & specialized models",
           "kind": "theme",
           "matched_terms": [
             "jev"
+          ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "zero-shot"
           ]
         }
       ],
@@ -79044,7 +78896,14 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:training-self-improvement",
+          "predicate": "train",
+          "object_id": "theme:small-specialized-models",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "hn:49787436",
@@ -79265,6 +79124,14 @@
           ],
           "document_frequency": 3,
           "score": 12.453
+        },
+        {
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
+          "matched_terms": [
+            "self-hosted"
+          ]
         }
       ],
       "entities": [],
@@ -79738,14 +79605,12 @@
           "score": 10.475
         },
         {
-          "id": "phrase:self-hosted",
-          "label": "self hosted",
-          "kind": "emergent-phrase",
+          "id": "theme:open-local-inference",
+          "label": "Open, local & efficient inference",
+          "kind": "theme",
           "matched_terms": [
-            "self hosted"
-          ],
-          "document_frequency": 9,
-          "score": 8.669
+            "self-hosted"
+          ]
         },
         {
           "id": "theme:voice-audio",
@@ -79766,7 +79631,14 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:open-local-inference",
+          "predicate": "serve",
+          "object_id": "theme:voice-audio",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "aws-machine-learning-blog:747e43df8917ffb7281b",
@@ -79796,16 +79668,6 @@
           "score": 6.136
         },
         {
-          "id": "phrase:document-processing",
-          "label": "document processing",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "document processing"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:domain-specific",
           "label": "domain specific",
           "kind": "emergent-phrase",
@@ -79814,6 +79676,14 @@
           ],
           "document_frequency": 3,
           "score": 6.695
+        },
+        {
+          "id": "theme:document-knowledge-systems",
+          "label": "Documents, retrieval & knowledge systems",
+          "kind": "theme",
+          "matched_terms": [
+            "document processing"
+          ]
         }
       ],
       "entities": [],
@@ -79836,16 +79706,6 @@
       "theme_ids": [],
       "concepts": [
         {
-          "id": "phrase:agent-generated",
-          "label": "agent generated",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent generated"
-          ],
-          "document_frequency": 2,
-          "score": 6.983
-        },
-        {
           "id": "phrase:amazon-bedrock-agentcore",
           "label": "amazon bedrock agentcore",
           "kind": "emergent-phrase",
@@ -79866,16 +79726,6 @@
           "score": 6.695
         },
         {
-          "id": "phrase:multi-tenant",
-          "label": "multi tenant",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "multi tenant"
-          ],
-          "document_frequency": 2,
-          "score": 10.475
-        },
-        {
           "id": "phrase:using-amazon",
           "label": "using amazon",
           "kind": "emergent-phrase",
@@ -79884,6 +79734,22 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:assurance-infrastructure",
+          "label": "Assurance infrastructure",
+          "kind": "theme",
+          "matched_terms": [
+            "multi-tenant"
+          ]
+        },
+        {
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
+          "matched_terms": [
+            "agent-generated"
+          ]
         }
       ],
       "entities": [],
@@ -79911,7 +79777,26 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:assurance-infrastructure",
+          "predicate": "route",
+          "object_id": "theme:training-self-improvement",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:assurance-infrastructure",
+          "predicate": "secure",
+          "object_id": "theme:training-self-improvement",
+          "basis": "same-sentence-co-mention"
+        },
+        {
+          "subject_id": "theme:assurance-infrastructure",
+          "predicate": "generate",
+          "object_id": "theme:training-self-improvement",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "aws-machine-learning-blog:ab27b05ba29471e68153",
@@ -80064,6 +79949,14 @@
           "score": 12.602
         },
         {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "tool calls"
+          ]
+        },
+        {
           "id": "theme:small-specialized-models",
           "label": "Small & specialized models",
           "kind": "theme",
@@ -80082,7 +79975,14 @@
           ]
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "subject_id": "theme:skills-integrations",
+          "predicate": "deploy",
+          "object_id": "theme:small-specialized-models",
+          "basis": "same-sentence-co-mention"
+        }
+      ]
     },
     {
       "evidence_id": "aws-machine-learning-blog:a6bba200f1bb279614e9",
@@ -81622,14 +81522,12 @@
           "score": 9.708
         },
         {
-          "id": "phrase:tool-calls",
-          "label": "tool calls",
-          "kind": "emergent-phrase",
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
           "matched_terms": [
             "tool calls"
-          ],
-          "document_frequency": 6,
-          "score": 15.583
+          ]
         }
       ],
       "entities": [],
@@ -82111,6 +82009,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:frontier-inference-infrastructure",
+          "label": "Frontier inference infrastructure",
+          "kind": "theme",
+          "matched_terms": [
+            "output tokens"
+          ]
         },
         {
           "id": "theme:small-specialized-models",
@@ -82640,14 +82546,12 @@
           "score": 4.75
         },
         {
-          "id": "phrase:digital-twins",
-          "label": "digital twins",
-          "kind": "emergent-phrase",
+          "id": "theme:robotics-embodied-ai",
+          "label": "Robotics & embodied AI",
+          "kind": "theme",
           "matched_terms": [
             "digital twins"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
+          ]
         }
       ],
       "entities": [
@@ -83093,16 +82997,6 @@
           "score": 4.75
         },
         {
-          "id": "phrase:computer-vision",
-          "label": "computer vision",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "computer vision"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
-        },
-        {
           "id": "phrase:hardware-artificial-intelligence",
           "label": "hardware artificial intelligence",
           "kind": "emergent-phrase",
@@ -83157,6 +83051,7 @@
           "label": "Multimodal generation & 3D",
           "kind": "theme",
           "matched_terms": [
+            "computer vision",
             "world models"
           ]
         },
@@ -84199,14 +84094,12 @@
           "score": 6.695
         },
         {
-          "id": "phrase:training-data",
-          "label": "training data",
-          "kind": "emergent-phrase",
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
           "matched_terms": [
             "training data"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
+          ]
         }
       ],
       "entities": [
@@ -84280,9 +84173,9 @@
       ],
       "relationships": [
         {
-          "subject_id": "technology:data-labeling",
+          "subject_id": "theme:training-self-improvement",
           "predicate": "train",
-          "object_id": "technology:robotics",
+          "object_id": "technology:data-labeling",
           "basis": "same-sentence-co-mention"
         }
       ]
@@ -84851,22 +84744,20 @@
           "score": 6.472
         },
         {
-          "id": "phrase:workflow-automation",
-          "label": "workflow automation",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "workflow automation"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
-        },
-        {
           "id": "primitive:model-replaceability",
           "label": "Model replaceability",
           "kind": "primitive",
           "matched_terms": [
             "model agnostic",
             "model-agnostic"
+          ]
+        },
+        {
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
+          "matched_terms": [
+            "workflow automation"
           ]
         }
       ],
@@ -85256,14 +85147,12 @@
           "score": 7.821
         },
         {
-          "id": "phrase:training-data",
-          "label": "training data",
-          "kind": "emergent-phrase",
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
           "matched_terms": [
             "training data"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
+          ]
         }
       ],
       "entities": [
@@ -85304,9 +85193,9 @@
       ],
       "relationships": [
         {
-          "subject_id": "technology:deep-learning",
+          "subject_id": "theme:training-self-improvement",
           "predicate": "train",
-          "object_id": "technology:yc-batch-f2026",
+          "object_id": "technology:deep-learning",
           "basis": "same-sentence-co-mention"
         }
       ]
@@ -85678,14 +85567,12 @@
           "score": 6.983
         },
         {
-          "id": "phrase:tool-calls",
-          "label": "tool calls",
-          "kind": "emergent-phrase",
+          "id": "theme:skills-integrations",
+          "label": "Skills, protocols & integrations",
+          "kind": "theme",
           "matched_terms": [
             "tool calls"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
+          ]
         }
       ],
       "entities": [
@@ -86147,14 +86034,12 @@
           "score": 6.29
         },
         {
-          "id": "phrase:robot-foundation",
-          "label": "robot foundation",
-          "kind": "emergent-phrase",
+          "id": "theme:robotics-embodied-ai",
+          "label": "Robotics & embodied AI",
+          "kind": "theme",
           "matched_terms": [
             "robot foundation"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
+          ]
         }
       ],
       "entities": [
@@ -86269,20 +86154,11 @@
           "score": 6.983
         },
         {
-          "id": "phrase:training-data",
-          "label": "training data",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "training data"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
-        },
-        {
           "id": "theme:training-self-improvement",
           "label": "Training, evaluation & self-improvement",
           "kind": "theme",
           "matched_terms": [
+            "training data",
             "benchmark"
           ]
         }
@@ -86339,9 +86215,9 @@
       ],
       "relationships": [
         {
-          "subject_id": "technology:crypto-web3",
+          "subject_id": "theme:training-self-improvement",
           "predicate": "train",
-          "object_id": "technology:consumer-products",
+          "object_id": "technology:crypto-web3",
           "basis": "same-sentence-co-mention"
         }
       ]
@@ -86629,14 +86505,12 @@
           "score": 11.823
         },
         {
-          "id": "phrase:training-data",
-          "label": "training data",
-          "kind": "emergent-phrase",
+          "id": "theme:training-self-improvement",
+          "label": "Training, evaluation & self-improvement",
+          "kind": "theme",
           "matched_terms": [
             "training data"
-          ],
-          "document_frequency": 10,
-          "score": 5.684
+          ]
         }
       ],
       "entities": [
@@ -88002,16 +87876,6 @@
       ],
       "concepts": [
         {
-          "id": "phrase:agent-tools",
-          "label": "agent tools",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "agent tools"
-          ],
-          "document_frequency": 3,
-          "score": 6.695
-        },
-        {
           "id": "phrase:agents-yet",
           "label": "agents yet",
           "kind": "emergent-phrase",
@@ -88056,6 +87920,7 @@
           "label": "Skills, protocols & integrations",
           "kind": "theme",
           "matched_terms": [
+            "agent tools",
             "MCP",
             "mcp"
           ]
@@ -88162,16 +88027,6 @@
           "score": 4.904
         },
         {
-          "id": "phrase:computer-vision",
-          "label": "computer vision",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "computer vision"
-          ],
-          "document_frequency": 6,
-          "score": 6.136
-        },
-        {
           "id": "phrase:native-service",
           "label": "native service",
           "kind": "emergent-phrase",
@@ -88190,6 +88045,14 @@
           ],
           "document_frequency": 2,
           "score": 6.983
+        },
+        {
+          "id": "theme:multimodal-3d",
+          "label": "Multimodal generation & 3D",
+          "kind": "theme",
+          "matched_terms": [
+            "computer vision"
+          ]
         }
       ],
       "entities": [
@@ -88239,7 +88102,7 @@
         {
           "subject_id": "technology:insurance",
           "predicate": "deploy",
-          "object_id": "technology:computer-vision",
+          "object_id": "theme:multimodal-3d",
           "basis": "same-sentence-co-mention"
         }
       ]

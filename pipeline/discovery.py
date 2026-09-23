@@ -390,7 +390,7 @@ def cap_candidate_contributions(
         key=lambda item: (
             _source_rank(source_by_id.get(item.get("source_id"), {}), policy),
             -_published_rank(item),
-            item.get("id", ""),
+            item.get("id") or item.get("evidence_id", ""),
         ),
     )
     for item in ranked:
@@ -403,7 +403,9 @@ def cap_candidate_contributions(
         if publisher_counts[publisher_id] >= caps["per_publisher"]:
             reasons.append("publisher-cap")
         if reasons:
-            excluded.append({"evidence_id": item.get("id", ""), "reason_codes": reasons})
+            excluded.append(
+                {"evidence_id": item.get("id") or item.get("evidence_id", ""), "reason_codes": reasons}
+            )
             continue
         kept.append(item)
         source_counts[source_id] += 1

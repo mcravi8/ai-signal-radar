@@ -53,7 +53,7 @@ seed_themes:
   - id: frontier-inference-infrastructure
     name: Frontier inference infrastructure
     definition: Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.
-    aliases: [frontier inference cluster, inference cloud, AI factory, token factory, inference cluster]
+    aliases: [frontier inference cluster, inference cloud, AI factory, token factory, inference cluster, inference optimization, LLM inference, output tokens]
     primary_layer: compute-inference-serving
 
   - id: specialized-inference-silicon
@@ -65,19 +65,19 @@ seed_themes:
   - id: agent-harnesses
     name: Agent harnesses
     definition: Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.
-    aliases: [agent scaffolding, orchestration layer, agent runtime, self-improving harness]
+    aliases: [agent scaffolding, agent run, agent swarm, agent swarms, agent system, single agent, orchestration layer, agent runtime, self-improving harness, agent systems, multi-agent systems, system prompt]
     primary_layer: harness-orchestration
 
   - id: assurance-infrastructure
     name: Assurance infrastructure
     definition: Evaluation, security, observability, permissions, governance, and provenance required to operate AI systems safely.
-    aliases: [AI assurance, agent security, eval infrastructure, AI observability]
+    aliases: [AI assurance, agent security, eval infrastructure, AI observability, audit trail, multi-tenant]
     primary_layer: assurance
 
   - id: open-local-inference
     name: Open, local & efficient inference
     definition: Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.
-    aliases: [open weights, local inference, quantization, mixture of experts, on-device inference]
+    aliases: [open weights, model weights, local inference, quantization, mixture of experts, on-device inference, self-hosted]
     primary_layer: models-capabilities
     secondary_layer: compute-inference-serving
 
@@ -91,14 +91,14 @@ seed_themes:
   - id: training-self-improvement
     name: Training, evaluation & self-improvement
     definition: Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.
-    aliases: [fine-tuning, reinforcement learning, synthetic training, prompt optimization, self-improving systems]
+    aliases: [fine-tuning, model training, training data, agent-generated, reinforcement learning, synthetic data, synthetic training, prompt optimization, self-improving systems, continual learning, deep neural network, deep neural networks, zero-shot, ground truth]
     primary_layer: models-capabilities
     secondary_layer: assurance
 
   - id: coding-agents
     name: Coding agents & developer tooling
     definition: AI systems that search repositories, write and review code, run tools, validate changes, and participate in software delivery.
-    aliases: [coding agent, software engineering agent, repository agent, code generation]
+    aliases: [coding agent, agentic coding, software engineering agent, repository agent, code generation]
     primary_layer: harness-orchestration
     secondary_layer: tools-skills-integrations
 
@@ -112,7 +112,7 @@ seed_themes:
   - id: multimodal-3d
     name: Multimodal generation & 3D
     definition: Systems that generate, edit, understand, or reconstruct images, video, spatial scenes, avatars, and three-dimensional environments.
-    aliases: [video generation, image generation, world model, 3D generation, spatial AI]
+    aliases: [video generation, image generation, world model, 3D generation, spatial AI, computer vision, multimodal model]
     primary_layer: models-capabilities
     secondary_layer: tools-skills-integrations
 
@@ -126,21 +126,21 @@ seed_themes:
   - id: skills-integrations
     name: Skills, protocols & integrations
     definition: Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.
-    aliases: [agent skills, plugins, MCP, tool protocol, connectors]
+    aliases: [agent skills, agent tools, workflow automation, plugins, MCP, model context protocol, context protocol, tool protocol, tool calls, connectors]
     primary_layer: tools-skills-integrations
     secondary_layer: harness-orchestration
 
   - id: document-knowledge-systems
     name: Documents, retrieval & knowledge systems
     definition: Parsing, retrieval, structured generation, graphs, and data systems that make private or complex information usable by AI workflows.
-    aliases: [RAG, document intelligence, OCR, GraphRAG, structured generation]
+    aliases: [RAG, document intelligence, document processing, embedding models, question answering, OCR, GraphRAG, structured generation]
     primary_layer: tools-skills-integrations
     secondary_layer: harness-orchestration
 
   - id: memory-context
     name: Memory & context engineering
     definition: Techniques for selecting, compressing, persisting, and retrieving context across long-running model or agent activity.
-    aliases: [agent memory, context management, context compression, persistent memory]
+    aliases: [agent memory, context length, context management, context compression, persistent memory, long-term memory]
     primary_layer: harness-orchestration
     secondary_layer: assurance
 
@@ -161,6 +161,6 @@ seed_themes:
   - id: robotics-embodied-ai
     name: Robotics & embodied AI
     definition: Models, datasets, simulations, and control systems that connect learned intelligence to physical sensing and action.
-    aliases: [robotics foundation model, embodied agent, robot learning, physical AI]
+    aliases: [robotics foundation model, robot foundation, embodied agent, robot learning, physical AI, digital twins]
     primary_layer: models-capabilities
     secondary_layer: tools-skills-integrations

@@ -11,9 +11,10 @@ from .cluster import group_by_theme
 from .concepts import build_concept_catalog, validate_concept_policy
 from .deduplicate import deduplicate
 from .discovery import validate_discovery_policy
+from .discovery_cluster import build_discovery_candidates, validate_clustering_policy
 from .evidence_policy import build_operating_model, format_calibration, run_calibration
 from .export_public import sanitize_item, validate_public_payload, write_public_dashboard
-from .research import build_research, write_weekly_report
+from .research import EARLY_SIGNAL_DIRECTIONS, build_research, write_weekly_report
 from .score import score_theme
 from .storage import merge_items, read_jsonl, write_jsonl
 from .weekly_review import build_weekly_review, write_weekly_review
@@ -183,8 +184,10 @@ def collect_bluesky() -> None:
 def synthesize() -> None:
     discovery_policy = _yaml(ROOT / "config/discovery.yml")
     concept_policy = _yaml(ROOT / "config/discovery-concepts.yml")
+    clustering_policy = _yaml(ROOT / "config/discovery-clustering.yml")
     validate_discovery_policy(discovery_policy)
     validate_concept_policy(concept_policy)
+    validate_clustering_policy(clustering_policy)
     generated_at = datetime.now(timezone.utc)
     manual_rows = _yaml(ROOT / "data/manual/items.yml").get("items", [])
     rows = deduplicate([*read_jsonl(ROOT / "data/processed/items.jsonl"), *manual_rows])
@@ -216,7 +219,11 @@ def synthesize() -> None:
     public_items = [sanitize_item(row) for row in rows]
     source_config = _yaml(ROOT / "config/sources.yml")["sources"]
     concept_path = ROOT / "data/processed/discovery-concepts.json"
+    candidate_path = ROOT / "data/processed/discovery-candidates.json"
     previous_concepts = json.loads(concept_path.read_text(encoding="utf-8")) if concept_path.exists() else None
+    previous_candidates = json.loads(candidate_path.read_text(encoding="utf-8")) if candidate_path.exists() else None
+    previous_baseline_version = (previous_candidates or {}).get("meta", {}).get("baseline_version")
+    discovery_baseline = previous_baseline_version != clustering_policy["version"]
     concept_catalog = build_concept_catalog(
         public_items,
         source_config,
@@ -227,7 +234,24 @@ def synthesize() -> None:
         as_of=generated_at,
         previous_catalog=previous_concepts,
     )
+    if discovery_baseline:
+        concept_catalog["changed_document_ids"] = sorted(
+            document["evidence_id"] for document in concept_catalog.get("documents", [])
+        )
+        concept_catalog["meta"]["changed_document_count"] = len(concept_catalog["changed_document_ids"])
     write_public_dashboard(concept_path, concept_catalog)
+    discovery_candidates = build_discovery_candidates(
+        concept_catalog,
+        source_config,
+        discovery_policy,
+        taxonomy,
+        EARLY_SIGNAL_DIRECTIONS,
+        clustering_policy,
+    )
+    discovery_candidates["meta"]["baseline_cycle"] = discovery_baseline
+    discovery_candidates["meta"]["baseline_complete"] = True
+    discovery_candidates["meta"]["baseline_version"] = clustering_policy["version"]
+    write_public_dashboard(candidate_path, discovery_candidates)
 
     payload = {
         "meta": {
@@ -313,8 +337,10 @@ def calibrate_evidence() -> None:
 def validate_discovery() -> None:
     validate_discovery_policy(_yaml(ROOT / "config/discovery.yml"))
     validate_concept_policy(_yaml(ROOT / "config/discovery-concepts.yml"))
+    validate_clustering_policy(_yaml(ROOT / "config/discovery-clustering.yml"))
     print("valid: config/discovery.yml")
     print("valid: config/discovery-concepts.yml")
+    print("valid: config/discovery-clustering.yml")
 
 
 def main() -> None:

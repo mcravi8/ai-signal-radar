@@ -102,13 +102,17 @@ Each retained evidence record also has an explicit disposition: `classified` whe
 
 The first eligibility rules admit only public-safe evidence that is new or materially changed inside a 35-day window. Repeated records and shared events are collapsed, primary technical sources are preferred over derivative roundups, and one source or publisher can contribute at most two retained records to a proposed cluster. The cap applies inside a cluster—not to the corpus.
 
-Step 3 is also active. `pipeline.concepts` produces an internal `data/processed/discovery-concepts.json` catalog using the existing taxonomy, disclosed architectural primitives, recurring lexical phrases, project and technology metadata, and controlled actions. Relationship edges require same-sentence co-mention and never claim causality. No external model or paid API is used, and no title, summary, or source excerpt is copied into the concept document. Validate both contracts with:
+Step 3 is also active. `pipeline.concepts` produces an internal `data/processed/discovery-concepts.json` catalog using the existing taxonomy, disclosed architectural primitives, recurring lexical phrases, project and technology metadata, and controlled actions. Relationship edges require same-sentence co-mention and never claim causality. No external model or paid API is used, and no title, summary, or source excerpt is copied into the concept document.
+
+Steps 4 and 5 are active in `pipeline.discovery_cluster`. Recurring anchors are joined only when their evidence overlaps, then reduced to a cross-source coherent core using repeated themes, actions, or companion concepts. The cluster is compared with disclosed Early Signal anchors and recurrent canonical themes before it can enter the review queue. Explained clusters become merge suggestions. Unexplained clusters must contain new or materially changed evidence, meet source and publisher caps, and pass an anchor-support gate. Automatically extracted phrases need three sources to become a Spark and three source families plus technical support to become a Candidate; controlled structural concepts can enter with the base contract's lower Spark threshold. The bounded result is written to `data/processed/discovery-candidates.json` and remains explicitly labelled as review leads—not findings.
+
+Validate all three contracts with:
 
 ```bash
 python -m pipeline.cli validate-discovery
 ```
 
-Clustering, novelty comparison, calibration, review UI, and weekly candidate generation remain inactive; they are the next implementation steps.
+The weekly synthesis now performs clustering, novelty comparison, and mechanical Spark/Candidate classification. Human adjudication and a frontend review surface remain separate future steps; automation cannot approve a new Early Signal direction.
 
 ## Engineering Atlas
 

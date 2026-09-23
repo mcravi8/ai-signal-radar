@@ -24,6 +24,7 @@ EARLY_SIGNAL_DIRECTIONS = [
         "title": "The agent stack is separating into modular operating layers",
         "hypothesis": "Models are becoming replaceable components inside a larger system of harnesses, reusable skills, execution environments, and assurance controls.",
         "theme_ids": {"agent-harnesses", "skills-integrations", "assurance-infrastructure"},
+        "match_anchor_ids": {"primitive:model-replaceability"},
         "interpretation": "Independent work is accumulating above the model API: orchestration controls execution, skills package repeatable actions, and assurance governs whether those actions can be trusted.",
         "why_it_matters": "Value and defensibility may shift from exclusive model access toward the infrastructure that makes changing models reliable inside real workflows.",
         "next_confirmation": "More production systems publishing interchangeable model adapters, portable skill interfaces, and assurance telemetry as separate components.",
@@ -35,6 +36,7 @@ EARLY_SIGNAL_DIRECTIONS = [
         "title": "AI products are moving from assistance toward bounded workflow ownership",
         "hypothesis": "The important product boundary is shifting from generating an answer to carrying a well-defined task from trigger to verified outcome.",
         "theme_ids": {"agent-harnesses", "enterprise-vertical-ai", "ai-native-gtm"},
+        "match_anchor_ids": {"primitive:workflow-ownership"},
         "interpretation": "Operator language around systems of action, AI workforces, and vertical agents points toward products measured by completed work and exception handling rather than chat quality.",
         "why_it_matters": "This creates room for products that own narrow operational loops, integrate with systems of record, and charge against measurable outcomes.",
         "next_confirmation": "Case studies reporting cycle-time, intervention-rate, or business-outcome improvements from agents operating a complete workflow.",
@@ -46,6 +48,7 @@ EARLY_SIGNAL_DIRECTIONS = [
         "title": "Heterogeneous model portfolios are becoming the default inference architecture",
         "hypothesis": "Teams will combine frontier, small, open, local, and specialized models through routing and purpose-built serving rather than standardizing on one endpoint.",
         "theme_ids": {"small-specialized-models", "model-routing", "open-local-inference", "frontier-inference-infrastructure", "specialized-inference-silicon"},
+        "match_anchor_ids": {"primitive:inference-control-plane"},
         "interpretation": "Cost, latency, privacy, and task fit are becoming first-class architectural constraints. The emerging control plane chooses the model and runtime per request instead of treating inference as homogeneous.",
         "why_it_matters": "Routing, evaluation, caching, capacity planning, and fallback logic can become durable infrastructure even as the best individual model changes.",
         "next_confirmation": "Production benchmarks showing sustained quality and unit-economic gains from routing across model sizes, vendors, or specialized inference hardware.",
@@ -57,6 +60,7 @@ EARLY_SIGNAL_DIRECTIONS = [
         "title": "Enterprise context is evolving from document retrieval into an operational ontology",
         "hypothesis": "Agents need governed business objects, relationships, permissions, and actions—not only retrieved text—to operate reliably inside companies.",
         "theme_ids": {"operational-ontology", "memory-context", "document-knowledge-systems", "enterprise-vertical-ai"},
+        "match_anchor_ids": {"primitive:governed-context"},
         "interpretation": "Memory and retrieval solve what the system can recall. Operational ontologies extend that layer with shared meanings, live state, rules, and allowed actions across systems of record.",
         "why_it_matters": "The enabling product may be a semantic control layer that lets many agents understand and manipulate the same organization without rebuilding context for every workflow.",
         "next_confirmation": "Open schemas, context graphs, or enterprise platforms demonstrating permission-aware actions across several business systems and agent vendors.",
@@ -74,6 +78,11 @@ EARLY_SIGNAL_DIRECTIONS = [
             "air gapped", "on-prem", "on premises", "private data", "sensitive training data",
             "privacy-preserving", "federated learning", "sovereign enterprise ai",
             "block data exfiltration", "without sharing patient-level data",
+        },
+        "match_anchor_ids": {
+            "primitive:proprietary-data-boundary", "primitive:data-sovereignty",
+            "primitive:confidential-computing", "primitive:tenant-isolation",
+            "primitive:private-execution",
         },
         "curated_evidence_ids": {
             "openai-news:192794312f979cbd50ee",
@@ -99,6 +108,7 @@ EARLY_SIGNAL_DIRECTIONS = [
         "title": "Validation is becoming the release gate for AI-generated work",
         "hypothesis": "As agents produce code and operational changes, evaluation, observability, security, and reversible deployment become one continuous release discipline.",
         "theme_ids": {"assurance-infrastructure", "validation-release", "training-self-improvement", "coding-agents"},
+        "match_anchor_ids": {"primitive:release-gate"},
         "interpretation": "The bottleneck is moving from whether an agent can produce an output to whether the system can test, constrain, trace, and safely ship that output under real conditions.",
         "why_it_matters": "A reusable release layer could govern many agent workflows and become more durable than any individual agent interface.",
         "next_confirmation": "Teams publishing intervention rates, rollback data, policy violations, and production-quality evals as standard agent deployment metrics.",
@@ -110,6 +120,7 @@ EARLY_SIGNAL_DIRECTIONS = [
         "title": "Simulation is becoming the development environment for physical AI",
         "hypothesis": "World models, synthetic environments, and evaluation loops will mature before broadly deployed autonomous physical systems.",
         "theme_ids": {"robotics-embodied-ai", "multimodal-3d", "assurance-infrastructure"},
+        "match_anchor_ids": {"primitive:sim-to-real"},
         "interpretation": "Research and investor narratives increasingly connect spatial models with scalable training and validation environments, where rare failures can be generated and replayed before physical deployment.",
         "why_it_matters": "Simulation, data generation, and safety evaluation may be nearer-term infrastructure opportunities than betting on one general-purpose robot application.",
         "next_confirmation": "Evidence that simulation-generated experience transfers reliably into deployed systems and materially reduces physical testing cost or failure rates.",
@@ -720,7 +731,14 @@ def _early_signal_directions(
             {
                 **{
                     key: value for key, value in definition.items()
-                    if key not in {"theme_ids", "curated_evidence_ids", "match_phrases", "minimum_theme_overlap"}
+                    if key
+                    not in {
+                        "theme_ids",
+                        "curated_evidence_ids",
+                        "match_phrases",
+                        "match_anchor_ids",
+                        "minimum_theme_overlap",
+                    }
                 },
                 "theme_ids": sorted(theme_ids),
                 "stage": current["stage"],

@@ -1,0 +1,118 @@
+version: 1
+method: lexical-anchor-overlap-v1
+purpose: >-
+  Group recurring concepts without embeddings, compare each group with existing
+  themes and Early Signal directions, and classify only bounded unexplained
+  groups as Sparks or Candidates.
+
+anchors:
+  allowed_kinds: [primitive, emergent-phrase, project, technology]
+  structural_kinds: [primitive, relationship]
+  entity_kinds: [project, technology]
+  minimum_document_count: 2
+  minimum_source_count: 2
+  maximum_document_fraction: 0.10
+  include_relationships: true
+  exclude_numeric_phrases: true
+  blocked_phrases:
+    - agents agent
+    - agents anthropic
+    - agent llm
+    - api key
+    - api endpoint
+    - artificial intelligence conversational
+    - becoming increasingly
+    - black box
+    - brier score
+    - business value
+    - chatgpt work
+    - claude code
+    - claude code codex
+    - claude opus
+    - command line
+    - cost effective
+    - data centers
+    - data collection
+    - data driven
+    - data science
+    - desktop app
+    - domain specific
+    - feel like
+    - fine tune
+    - fine tuned
+    - frontier labs
+    - general purpose
+    - gpt 5.6 sol
+    - gpt 6 astra
+    - hermes agent
+    - high fidelity
+    - high level
+    - inference time
+    - job search
+    - large scale
+    - model families
+    - model training
+    - model trained
+    - models often
+    - native codex
+    - multi step
+    - neural networks
+    - per token
+    - people using
+    - performance improvements
+    - programming generative
+    - put together
+    - september 2026
+    - server side
+    - social media
+    - software development
+    - software engineering
+    - someone else
+    - supply chain
+
+merging:
+  minimum_shared_documents: 2
+  minimum_jaccard: 0.50
+  minimum_containment: 0.75
+
+clusters:
+  minimum_document_count: 2
+  minimum_source_count: 2
+  maximum_document_count: 80
+  maximum_clusters: 500
+  maximum_anchors_per_cluster: 8
+  maximum_themes_per_cluster: 6
+  coherence:
+    minimum_shared_feature_documents: 2
+    minimum_core_documents: 2
+    minimum_core_sources: 2
+    concept_kinds: [primitive, emergent-phrase, theme]
+
+known_comparison:
+  direction_theme_recall_threshold: 0.60
+  direction_minimum_recurrent_theme_matches: 2
+  direction_anchor_phrase_match: true
+  recurrent_theme_minimum_documents: 2
+  existing_theme_document_share: 0.50
+  theme_anchor_phrase_match: true
+  cross_theme_minimum: 2
+  dispositions:
+    - merge-existing-direction
+    - covered-by-existing-theme
+    - cross-theme-extension
+    - novel
+
+record_generation:
+  maximum_active_records: 12
+  maximum_merge_suggestions: 25
+  retain_dispositions: [cross-theme-extension, novel]
+  title_anchor_count: 2
+  minimum_anchor_support_share: 0.67
+  allow_entity_only: false
+  phrase_spark:
+    minimum_source_count: 3
+    minimum_technical_record_count: 1
+  phrase_candidate:
+    minimum_source_count: 3
+    minimum_source_family_count: 3
+    minimum_technical_record_count: 2
