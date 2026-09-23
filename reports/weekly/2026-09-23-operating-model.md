@@ -1,6 +1,6 @@
 # Weekly Operating Model Review — 2026-09-23
 
-4 candidate decisions are recorded; 2 candidates remain in the bounded assessment queue.
+4 candidate decisions are recorded; 5 candidates remain in the bounded assessment queue.
 
 > Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement.
 
@@ -22,6 +22,9 @@
 | ---: | --- | --- | ---: | --- |
 | 1 | Skills, protocols & integrations | cross-source-theme | 87 | assess-new-requirement |
 | 2 | Proprietary enterprise data is moving behind a governed model boundary | early-signal | 87 | assess-new-requirement |
+| 3 | Frontier inference infrastructure | cross-source-theme | 83 | review-existing-requirement |
+| 4 | Voice & audio interfaces | cross-source-theme | 87 | assess-new-requirement |
+| 5 | Open, local & efficient inference | cross-source-theme | 73 | assess-new-requirement |
 
 ## Operating Model changes
 

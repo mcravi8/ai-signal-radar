@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-23T17:55:10.260465+00:00",
+    "generated_at": "2026-09-23T18:01:06.706335+00:00",
     "as_of": "2026-09-23",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,13 +12,13 @@
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 2,
-    "assessment_queue_count": 2,
+    "materially_changed_count": 3,
+    "assessment_queue_count": 5,
     "adjudication_count": 4,
     "requirement_change_count": 0
   },
   "summary": {
-    "headline": "4 candidate decisions are recorded; 2 candidates remain in the bounded assessment queue.",
+    "headline": "4 candidate decisions are recorded; 5 candidates remain in the bounded assessment queue.",
     "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement."
   },
   "selection_policy": {
@@ -318,97 +318,6 @@
       "review_action": "domain-signal-not-separate-requirement"
     },
     {
-      "id": "theme:frontier-inference-infrastructure",
-      "origin": "cross-source-theme",
-      "title": "Frontier inference infrastructure",
-      "description": "Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.",
-      "source_analysis": "themes/frontier-inference-infrastructure",
-      "theme_ids": [
-        "frontier-inference-infrastructure"
-      ],
-      "evidence_ids": [
-        "nvidia-developer-blog:837464fefd470eaa54f6",
-        "arxiv:2609.21827v1",
-        "arxiv:2609.21774v1",
-        "arxiv:2609.21704v1",
-        "arxiv:2609.20734v1",
-        "arxiv:2609.20614v1",
-        "arxiv:2609.20446v1",
-        "hf-paper:2609.18063",
-        "nvidia-developer-blog:f95e55a325c1d57f2115",
-        "nvidia-developer-blog:e7c3a6c0afb937549e09",
-        "nvidia-developer-blog:93db95fb6cd1a35dc083",
-        "nvidia-developer-blog:d14025c328b788abfb85",
-        "nvidia-developer-blog:e25568b4ce57971f1453",
-        "github:1347982389",
-        "nvidia-developer-blog:655e6fb2eee2feb6b510",
-        "github:1342935078",
-        "sequoia-essays:8a2fe18efd08a18eea8c",
-        "menlo-ventures:dfeaba0c266f13ed7f2c",
-        "the-batch:0b297472a2efbd99a896",
-        "hf-paper:2606.31227"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "rising",
-      "metrics": {
-        "evidence_count": 29,
-        "source_count": 8,
-        "source_types": [
-          "company-directory",
-          "curated-newsletter",
-          "first-party-lab",
-          "investor-essay",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 7,
-        "technical_record_count": 20,
-        "family_count": 7,
-        "trend_score": 77.4
-      },
-      "linked_requirements": [
-        {
-          "id": "heterogeneous-model-routing",
-          "title": "Heterogeneous model routing",
-          "maturity": "experimental"
-        }
-      ],
-      "linked_requirement": {
-        "id": "heterogeneous-model-routing",
-        "title": "Heterogeneous model routing",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 10,
-        "total": 97
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:frontier-inference-infrastructure",
-        "reviewed_at": "2026-09-22",
-        "outcome": "infrastructure-signal-not-general-requirement",
-        "requirement_ids": [
-          "heterogeneous-model-routing"
-        ],
-        "decision": "Do not require ordinary startups to build frontier inference infrastructure.",
-        "rationale": "The evidence supports inference optimization and model-path selection, but frontier clusters are a supplier capability and a conditional concern for infrastructure companies. Most startups should consume this capability through routing, capacity, latency, and cost controls rather than own the underlying cluster.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 29,
-          "links_added": 6,
-          "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
-        },
-        "status": "current"
-      },
-      "review_action": "infrastructure-signal-not-general-requirement"
-    },
-    {
       "id": "early:modular-agent-stack",
       "origin": "early-signal",
       "title": "The agent stack is separating into modular operating layers",
@@ -588,12 +497,11 @@
         "operating_relevance": 0,
         "total": 87
       },
-      "change_reasons": [
-        "New to the weekly candidate baseline"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 2
     },
     {
@@ -808,6 +716,82 @@
       "review_action": "assess-new-requirement"
     },
     {
+      "id": "theme:voice-audio",
+      "origin": "cross-source-theme",
+      "title": "Voice & audio interfaces",
+      "description": "Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.",
+      "source_analysis": "themes/voice-audio",
+      "theme_ids": [
+        "voice-audio"
+      ],
+      "evidence_ids": [
+        "alphasignal:5f3148d70539a8da7f25",
+        "alphasignal:1ef7cf038f88524bc9b8",
+        "hn:49789320",
+        "alphasignal:trend:voice-and-audio-interfaces",
+        "arxiv:2609.21967v1",
+        "arxiv:2609.21683v1",
+        "hf-paper:2609.21465",
+        "arxiv:2609.20504v1",
+        "simon-willison:219c439494be37cebb69",
+        "github:1361693766",
+        "alphasignal:project:voicestudio",
+        "deepmind-blog:ac6eb9276806c2f8127d",
+        "the-batch:ab4caab4fe2b8644e7ea",
+        "huggingface-blog:e3ddd7a65cd3a566e91c",
+        "huggingface-blog:5890b1cfd4cc38aa3885",
+        "alphasignal:project:dograh",
+        "github:1057664813",
+        "greylock-essays:7ae3d96ba71e4e63c7f2",
+        "greylock-essays:b5d0a493521b25d69daf",
+        "chip-huyen:17001c4976bcaeda4a08"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "rising",
+      "metrics": {
+        "evidence_count": 22,
+        "source_count": 12,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 8,
+        "technical_record_count": 11,
+        "family_count": 11,
+        "trend_score": 79.4
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 87
+      },
+      "change_reasons": [
+        "Lifecycle stage changed from broadly-corroborated to corroborated-source-concentrated",
+        "Movement changed from steady to rising",
+        "Evidence increased by 2",
+        "2 additional dated records entered the latest seven-day window",
+        "Review priority changed by +14"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 4
+    },
+    {
       "id": "early:heterogeneous-inference",
       "origin": "early-signal",
       "title": "Heterogeneous model portfolios are becoming the default inference architecture",
@@ -873,6 +857,101 @@
       "materially_changed": false,
       "adjudication": null,
       "review_action": "review-existing-requirement"
+    },
+    {
+      "id": "theme:frontier-inference-infrastructure",
+      "origin": "cross-source-theme",
+      "title": "Frontier inference infrastructure",
+      "description": "Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.",
+      "source_analysis": "themes/frontier-inference-infrastructure",
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
+      "evidence_ids": [
+        "nvidia-developer-blog:837464fefd470eaa54f6",
+        "arxiv:2609.21827v1",
+        "arxiv:2609.21774v1",
+        "arxiv:2609.21704v1",
+        "arxiv:2609.20734v1",
+        "arxiv:2609.20614v1",
+        "arxiv:2609.20446v1",
+        "hf-paper:2609.18063",
+        "nvidia-developer-blog:f95e55a325c1d57f2115",
+        "nvidia-developer-blog:e7c3a6c0afb937549e09",
+        "nvidia-developer-blog:93db95fb6cd1a35dc083",
+        "nvidia-developer-blog:d14025c328b788abfb85",
+        "nvidia-developer-blog:e25568b4ce57971f1453",
+        "github:1347982389",
+        "nvidia-developer-blog:655e6fb2eee2feb6b510",
+        "github:1342935078",
+        "sequoia-essays:8a2fe18efd08a18eea8c",
+        "menlo-ventures:dfeaba0c266f13ed7f2c",
+        "the-batch:0b297472a2efbd99a896",
+        "hf-paper:2606.31227"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 29,
+        "source_count": 8,
+        "source_types": [
+          "company-directory",
+          "curated-newsletter",
+          "first-party-lab",
+          "investor-essay",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 7,
+        "technical_record_count": 20,
+        "family_count": 7,
+        "trend_score": 77.4
+      },
+      "linked_requirements": [
+        {
+          "id": "heterogeneous-model-routing",
+          "title": "Heterogeneous model routing",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "heterogeneous-model-routing",
+        "title": "Heterogeneous model routing",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 83
+      },
+      "change_reasons": [
+        "Movement changed from rising to steady",
+        "Review priority changed by -14"
+      ],
+      "materially_changed": true,
+      "adjudication": {
+        "candidate_id": "theme:frontier-inference-infrastructure",
+        "reviewed_at": "2026-09-22",
+        "outcome": "infrastructure-signal-not-general-requirement",
+        "requirement_ids": [
+          "heterogeneous-model-routing"
+        ],
+        "decision": "Do not require ordinary startups to build frontier inference infrastructure.",
+        "rationale": "The evidence supports inference optimization and model-path selection, but frontier clusters are a supplier capability and a conditional concern for infrastructure companies. Most startups should consume this capability through routing, capacity, latency, and cost controls rather than own the underlying cluster.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 29,
+          "links_added": 6,
+          "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
+        },
+        "status": "revisit-required"
+      },
+      "review_action": "review-existing-requirement",
+      "queue_rank": 3
     },
     {
       "id": "early:validation-as-release",
@@ -1072,6 +1151,7 @@
         "open-local-inference"
       ],
       "evidence_ids": [
+        "alphasignal:a8def2376d665f117870",
         "alphasignal:46d0001edf2628fce6c2",
         "latent-space:c5ef439db94fe95e2aa5",
         "huggingface-blog:689d78c6e007ab8e2c4f",
@@ -1090,13 +1170,12 @@
         "bluesky:e810fac7fd93:3mvs4salrn72j",
         "github:1374869789",
         "arxiv:2609.20812v1",
-        "arxiv:2609.20807v1",
-        "arxiv:2609.20441v1"
+        "arxiv:2609.20807v1"
       ],
       "stage": "corroborated-source-concentrated",
       "movement": "steady",
       "metrics": {
-        "evidence_count": 91,
+        "evidence_count": 92,
         "source_count": 15,
         "source_types": [
           "community",
@@ -1111,10 +1190,10 @@
           "paper-curation",
           "repository"
         ],
-        "recent_evidence_count": 21,
+        "recent_evidence_count": 22,
         "technical_record_count": 54,
         "family_count": 11,
-        "trend_score": 83.7
+        "trend_score": 83.8
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1126,78 +1205,13 @@
         "operating_relevance": 0,
         "total": 73
       },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "theme:voice-audio",
-      "origin": "cross-source-theme",
-      "title": "Voice & audio interfaces",
-      "description": "Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.",
-      "source_analysis": "themes/voice-audio",
-      "theme_ids": [
-        "voice-audio"
+      "change_reasons": [
+        "1 additional dated records entered the latest seven-day window"
       ],
-      "evidence_ids": [
-        "hn:49789320",
-        "alphasignal:trend:voice-and-audio-interfaces",
-        "arxiv:2609.21967v1",
-        "arxiv:2609.21683v1",
-        "hf-paper:2609.21465",
-        "arxiv:2609.20504v1",
-        "simon-willison:219c439494be37cebb69",
-        "github:1361693766",
-        "alphasignal:project:voicestudio",
-        "deepmind-blog:ac6eb9276806c2f8127d",
-        "the-batch:ab4caab4fe2b8644e7ea",
-        "huggingface-blog:e3ddd7a65cd3a566e91c",
-        "huggingface-blog:5890b1cfd4cc38aa3885",
-        "alphasignal:project:dograh",
-        "github:1057664813",
-        "greylock-essays:7ae3d96ba71e4e63c7f2",
-        "greylock-essays:b5d0a493521b25d69daf",
-        "chip-huyen:17001c4976bcaeda4a08",
-        "github:541269386",
-        "yc-company:35265"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 20,
-        "source_count": 12,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 6,
-        "technical_record_count": 11,
-        "family_count": 10,
-        "trend_score": 78.4
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 73
-      },
-      "change_reasons": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "adjudication": null,
-      "review_action": "assess-new-requirement"
+      "review_action": "assess-new-requirement",
+      "queue_rank": 5
     },
     {
       "id": "theme:document-knowledge-systems",
@@ -1831,11 +1845,8 @@
         "operating_relevance": 0,
         "total": 25
       },
-      "change_reasons": [
-        "Movement changed from new to steady",
-        "Review priority changed by -21"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
     },
@@ -2328,7 +2339,7 @@
         "links_added": 6,
         "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
       },
-      "status": "current"
+      "status": "revisit-required"
     }
   ],
   "assessment_queue": [
@@ -2451,13 +2462,255 @@
         "operating_relevance": 0,
         "total": 87
       },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
+      "queue_rank": 2
+    },
+    {
+      "id": "theme:frontier-inference-infrastructure",
+      "origin": "cross-source-theme",
+      "title": "Frontier inference infrastructure",
+      "description": "Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.",
+      "source_analysis": "themes/frontier-inference-infrastructure",
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
+      "evidence_ids": [
+        "nvidia-developer-blog:837464fefd470eaa54f6",
+        "arxiv:2609.21827v1",
+        "arxiv:2609.21774v1",
+        "arxiv:2609.21704v1",
+        "arxiv:2609.20734v1",
+        "arxiv:2609.20614v1",
+        "arxiv:2609.20446v1",
+        "hf-paper:2609.18063",
+        "nvidia-developer-blog:f95e55a325c1d57f2115",
+        "nvidia-developer-blog:e7c3a6c0afb937549e09",
+        "nvidia-developer-blog:93db95fb6cd1a35dc083",
+        "nvidia-developer-blog:d14025c328b788abfb85",
+        "nvidia-developer-blog:e25568b4ce57971f1453",
+        "github:1347982389",
+        "nvidia-developer-blog:655e6fb2eee2feb6b510",
+        "github:1342935078",
+        "sequoia-essays:8a2fe18efd08a18eea8c",
+        "menlo-ventures:dfeaba0c266f13ed7f2c",
+        "the-batch:0b297472a2efbd99a896",
+        "hf-paper:2606.31227"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 29,
+        "source_count": 8,
+        "source_types": [
+          "company-directory",
+          "curated-newsletter",
+          "first-party-lab",
+          "investor-essay",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 7,
+        "technical_record_count": 20,
+        "family_count": 7,
+        "trend_score": 77.4
+      },
+      "linked_requirements": [
+        {
+          "id": "heterogeneous-model-routing",
+          "title": "Heterogeneous model routing",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "heterogeneous-model-routing",
+        "title": "Heterogeneous model routing",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 83
+      },
       "change_reasons": [
-        "New to the weekly candidate baseline"
+        "Movement changed from rising to steady",
+        "Review priority changed by -14"
+      ],
+      "materially_changed": true,
+      "adjudication": {
+        "candidate_id": "theme:frontier-inference-infrastructure",
+        "reviewed_at": "2026-09-22",
+        "outcome": "infrastructure-signal-not-general-requirement",
+        "requirement_ids": [
+          "heterogeneous-model-routing"
+        ],
+        "decision": "Do not require ordinary startups to build frontier inference infrastructure.",
+        "rationale": "The evidence supports inference optimization and model-path selection, but frontier clusters are a supplier capability and a conditional concern for infrastructure companies. Most startups should consume this capability through routing, capacity, latency, and cost controls rather than own the underlying cluster.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 29,
+          "links_added": 6,
+          "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
+        },
+        "status": "revisit-required"
+      },
+      "review_action": "review-existing-requirement",
+      "queue_rank": 3
+    },
+    {
+      "id": "theme:voice-audio",
+      "origin": "cross-source-theme",
+      "title": "Voice & audio interfaces",
+      "description": "Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.",
+      "source_analysis": "themes/voice-audio",
+      "theme_ids": [
+        "voice-audio"
+      ],
+      "evidence_ids": [
+        "alphasignal:5f3148d70539a8da7f25",
+        "alphasignal:1ef7cf038f88524bc9b8",
+        "hn:49789320",
+        "alphasignal:trend:voice-and-audio-interfaces",
+        "arxiv:2609.21967v1",
+        "arxiv:2609.21683v1",
+        "hf-paper:2609.21465",
+        "arxiv:2609.20504v1",
+        "simon-willison:219c439494be37cebb69",
+        "github:1361693766",
+        "alphasignal:project:voicestudio",
+        "deepmind-blog:ac6eb9276806c2f8127d",
+        "the-batch:ab4caab4fe2b8644e7ea",
+        "huggingface-blog:e3ddd7a65cd3a566e91c",
+        "huggingface-blog:5890b1cfd4cc38aa3885",
+        "alphasignal:project:dograh",
+        "github:1057664813",
+        "greylock-essays:7ae3d96ba71e4e63c7f2",
+        "greylock-essays:b5d0a493521b25d69daf",
+        "chip-huyen:17001c4976bcaeda4a08"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "rising",
+      "metrics": {
+        "evidence_count": 22,
+        "source_count": 12,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 8,
+        "technical_record_count": 11,
+        "family_count": 11,
+        "trend_score": 79.4
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 87
+      },
+      "change_reasons": [
+        "Lifecycle stage changed from broadly-corroborated to corroborated-source-concentrated",
+        "Movement changed from steady to rising",
+        "Evidence increased by 2",
+        "2 additional dated records entered the latest seven-day window",
+        "Review priority changed by +14"
       ],
       "materially_changed": true,
       "adjudication": null,
       "review_action": "assess-new-requirement",
-      "queue_rank": 2
+      "queue_rank": 4
+    },
+    {
+      "id": "theme:open-local-inference",
+      "origin": "cross-source-theme",
+      "title": "Open, local & efficient inference",
+      "description": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
+      "source_analysis": "themes/open-local-inference",
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "evidence_ids": [
+        "alphasignal:a8def2376d665f117870",
+        "alphasignal:46d0001edf2628fce6c2",
+        "latent-space:c5ef439db94fe95e2aa5",
+        "huggingface-blog:689d78c6e007ab8e2c4f",
+        "bluesky:e810fac7fd93:3mvzupklbjz2u",
+        "bluesky:e810fac7fd93:3mvzo2lneqg2j",
+        "interconnects:43bf4602833d95a55b19",
+        "alphasignal:trend:open-local-models-and-inference-efficiency",
+        "aws-machine-learning-blog:e2c6e3c192e8183542dd",
+        "arxiv:2609.21967v1",
+        "arxiv:2609.21879v1",
+        "arxiv:2609.21857v1",
+        "arxiv:2609.21849v1",
+        "github:1375922101",
+        "arxiv:2609.21704v1",
+        "arxiv:2609.21672v1",
+        "bluesky:e810fac7fd93:3mvs4salrn72j",
+        "github:1374869789",
+        "arxiv:2609.20812v1",
+        "arxiv:2609.20807v1"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 92,
+        "source_count": 15,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 22,
+        "technical_record_count": 54,
+        "family_count": 11,
+        "trend_score": 83.8
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 73
+      },
+      "change_reasons": [
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 5
     }
   ],
   "requirement_changes": [
