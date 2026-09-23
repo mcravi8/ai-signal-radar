@@ -60,6 +60,8 @@ The eligibility window is 35 days. Inputs must be new or materially changed, att
 
 A Spark requires either two records from two sources or one technical seed that receives a manual novelty review. A Candidate requires at least three independent events from three sources and two source families, with no publisher supplying more than half of the retained evidence. These are admission rules for review, not evidence that the proposed hypothesis is true.
 
+Eligible records are converted into an internal concept catalog by the deterministic rules in `config/discovery-concepts.yml`. Extraction combines canonical theme vocabulary, a small disclosed set of architectural primitives, recurring two-to-four-token phrases, project and technology metadata, and controlled action verbs. A relationship is retained only when two controlled concepts or entities and one action occur in the same sentence. The catalog stores no source excerpt and describes co-mention rather than causality. It is written to `data/processed/discovery-concepts.json`; unchanged documents remain available for corpus context while `changed_document_ids` bounds the next clustering step.
+
 ## Compute boundary
 
 GitHub-hosted runners collect public metadata, first-party AI lab publications, and official essay feeds, then retrieve subscribed newsletters from a dedicated AgentMail inbox once per week. Newsletter bodies are reduced to allowlisted derivative records in memory and are never committed or uploaded as artifacts. Gmail access and optional local-model enrichment stay on the owner's machine.

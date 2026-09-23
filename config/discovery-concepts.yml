@@ -1,0 +1,172 @@
+version: 1
+method: deterministic-lexical-v1
+purpose: >-
+  Convert eligible evidence into inspectable concepts, actions, entities, and
+  co-mentioned relationships without using an external model or treating the
+  extraction as an analytical conclusion.
+
+phrase_extraction:
+  minimum_tokens: 2
+  maximum_tokens: 4
+  minimum_document_frequency: 2
+  maximum_document_fraction: 0.35
+  maximum_phrases_per_record: 8
+  minimum_score: 1.15
+  title_weight: 1.5
+  generic_domain_tokens:
+    - ai
+    - artificial
+    - intelligence
+    - machine
+    - learning
+    - language
+    - large
+    - foundation
+    - deep
+    - natural
+    - real
+    - world
+    - last
+    - week
+    - next
+    - source
+    - open
+    - bluesky
+    - expert
+    - observation
+    - billion
+    - million
+    - third
+    - party
+    - model
+    - models
+    - system
+    - systems
+    - platform
+    - platforms
+    - framework
+    - frameworks
+    - tool
+    - tools
+    - technology
+    - technologies
+    - new
+    - latest
+    - approach
+    - approaches
+    - using
+    - based
+    - research
+    - paper
+    - work
+  blocked_phrases:
+    - artificial intelligence
+    - machine learning
+    - generative ai
+    - large language model
+    - large language models
+    - new ai model
+    - open source
+    - learn more
+    - read more
+    - bluesky expert observation
+    - expert observation
+    - real world
+    - real time
+    - last week
+    - next generation
+    - bluesky expert
+    - deep learning
+    - natural language
+    - hugging face
+    - third party
+
+primitive_concepts:
+  - id: proprietary-data-boundary
+    label: Proprietary data boundary
+    aliases: [proprietary data, confidential data, private data, customer data boundary, training exclusion]
+  - id: data-sovereignty
+    label: Data sovereignty
+    aliases: [data sovereignty, sovereign data, data residency, sovereign enterprise ai]
+  - id: confidential-computing
+    label: Confidential computing
+    aliases: [confidential computing, trusted execution environment, trusted execution environments, tee, tees]
+  - id: tenant-isolation
+    label: Tenant isolation
+    aliases: [tenant isolation, tenant-isolated, multi-tenant isolation, multi tenant isolation]
+  - id: private-execution
+    label: Private execution
+    aliases: [air-gapped, air gapped, on-prem, on premises, private deployment, local execution]
+  - id: model-replaceability
+    label: Model replaceability
+    aliases: [replaceable model, replaceable models, model agnostic, model-agnostic, swap models, model portability]
+  - id: governed-context
+    label: Governed context
+    aliases: [governed context, permission-aware context, permission aware context, access-controlled context]
+  - id: inference-control-plane
+    label: Inference control plane
+    aliases: [inference control plane, inference routing, request routing, route requests]
+  - id: agent-control-loop
+    label: Agent control loop
+    aliases: [agent control loop, agent loop, execution loop, tool loop]
+  - id: release-gate
+    label: AI release gate
+    aliases: [release gate, validation gate, deployment gate, quality gate]
+  - id: human-intervention
+    label: Human intervention
+    aliases: [human intervention, human-in-the-loop, human in the loop, manual review, human review]
+  - id: workflow-ownership
+    label: Workflow ownership
+    aliases: [workflow ownership, end-to-end workflow, end to end workflow, system of action]
+  - id: sim-to-real
+    label: Sim-to-real transfer
+    aliases: [sim-to-real, sim to real, simulation transfer, synthetic-to-real]
+
+actions:
+  train: [train, trains, trained, training, fine-tune, fine-tunes, fine-tuned, fine tuning]
+  infer: [infer, infers, inference, run inference, execute inference]
+  route: [route, routes, routed, routing, select model, selects models]
+  evaluate: [evaluate, evaluates, evaluated, evaluation, benchmark, benchmarks, validate, validates, validation]
+  deploy: [deploy, deploys, deployed, deployment, release, releases, released]
+  orchestrate: [orchestrate, orchestrates, orchestration, coordinate, coordinates, coordination]
+  retrieve: [retrieve, retrieves, retrieval, search, searches, query, queries]
+  govern: [govern, governs, governed, governance, permission, permissions, authorize, authorization]
+  secure: [secure, secures, secured, security, protect, protects, protected, isolate, isolates, isolation]
+  integrate: [integrate, integrates, integrated, integration, connect, connects, connector]
+  automate: [automate, automates, automated, automation, execute workflow, executes workflow]
+  generate: [generate, generates, generated, generation, synthesize, synthetic]
+  reason: [reason, reasons, reasoning, plan, plans, planning, decide, decision]
+  serve: [serve, serves, serving, host, hosts, hosted]
+  monitor: [monitor, monitors, monitored, monitoring, observe, observes, observability]
+  simulate: [simulate, simulates, simulated, simulation, world model, synthetic environment]
+
+entity_extraction:
+  include_projects: true
+  include_tags: true
+  minimum_tag_length: 3
+  maximum_entities_per_record: 12
+  blocked_tags:
+    - ai
+    - ml
+    - llm
+    - llms
+    - news
+    - research
+    - paper
+    - model
+    - models
+    - tool
+    - tools
+    - bluesky
+    - expert-observation
+    - artificial-intelligence
+    - ai-agents
+    - machine-learning
+    - developer-tools
+
+relationships:
+  maximum_per_record: 12
+  rule: >-
+    A relationship is emitted only when two extracted concepts or entities and
+    a controlled action occur in the same sentence. It records co-mentioned
+    structure, not causality or a verified dependency.

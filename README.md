@@ -100,13 +100,15 @@ Each retained evidence record also has an explicit disposition: `classified` whe
 
 `config/discovery.yml` defines the stage before the Early Signal Tracker. It distinguishes lightly supported `spark` records from review-ready `candidate` records, then preserves explicit `approved`, `merged`, `rejected`, and `dormant` decisions. Observation fields and inferred fields are kept separate, and no automatically generated candidate is presented as a finding.
 
-The first eligibility rules admit only public-safe evidence that is new or materially changed inside a 35-day window. Repeated records and shared events are collapsed, primary technical sources are preferred over derivative roundups, and one source or publisher can contribute at most two retained records to a proposed cluster. The cap applies inside a cluster—not to the corpus. Validate the contract with:
+The first eligibility rules admit only public-safe evidence that is new or materially changed inside a 35-day window. Repeated records and shared events are collapsed, primary technical sources are preferred over derivative roundups, and one source or publisher can contribute at most two retained records to a proposed cluster. The cap applies inside a cluster—not to the corpus.
+
+Step 3 is also active. `pipeline.concepts` produces an internal `data/processed/discovery-concepts.json` catalog using the existing taxonomy, disclosed architectural primitives, recurring lexical phrases, project and technology metadata, and controlled actions. Relationship edges require same-sentence co-mention and never claim causality. No external model or paid API is used, and no title, summary, or source excerpt is copied into the concept document. Validate both contracts with:
 
 ```bash
 python -m pipeline.cli validate-discovery
 ```
 
-Concept extraction, clustering, calibration, review UI, and weekly candidate generation are intentionally not activated by this first contract; they are the next implementation steps.
+Clustering, novelty comparison, calibration, review UI, and weekly candidate generation remain inactive; they are the next implementation steps.
 
 ## Engineering Atlas
 

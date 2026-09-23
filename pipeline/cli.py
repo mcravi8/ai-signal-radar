@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .classify import classify_text
 from .cluster import group_by_theme
+from .concepts import build_concept_catalog, validate_concept_policy
 from .deduplicate import deduplicate
 from .discovery import validate_discovery_policy
 from .evidence_policy import build_operating_model, format_calibration, run_calibration
@@ -180,7 +181,11 @@ def collect_bluesky() -> None:
 
 
 def synthesize() -> None:
-    validate_discovery_policy(_yaml(ROOT / "config/discovery.yml"))
+    discovery_policy = _yaml(ROOT / "config/discovery.yml")
+    concept_policy = _yaml(ROOT / "config/discovery-concepts.yml")
+    validate_discovery_policy(discovery_policy)
+    validate_concept_policy(concept_policy)
+    generated_at = datetime.now(timezone.utc)
     manual_rows = _yaml(ROOT / "data/manual/items.yml").get("items", [])
     rows = deduplicate([*read_jsonl(ROOT / "data/processed/items.jsonl"), *manual_rows])
     keywords = _yaml(ROOT / "config/keywords.yml").get("themes", {})
@@ -209,10 +214,24 @@ def synthesize() -> None:
         )
 
     public_items = [sanitize_item(row) for row in rows]
+    source_config = _yaml(ROOT / "config/sources.yml")["sources"]
+    concept_path = ROOT / "data/processed/discovery-concepts.json"
+    previous_concepts = json.loads(concept_path.read_text(encoding="utf-8")) if concept_path.exists() else None
+    concept_catalog = build_concept_catalog(
+        public_items,
+        source_config,
+        discovery_policy,
+        taxonomy,
+        {"themes": keywords},
+        concept_policy,
+        as_of=generated_at,
+        previous_catalog=previous_concepts,
+    )
+    write_public_dashboard(concept_path, concept_catalog)
 
     payload = {
         "meta": {
-            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "generated_at": generated_at.isoformat(),
             "status": "success" if rows else "empty",
             "source_count": len({row.get("source_id") for row in rows}),
             "evidence_count": len(rows),
@@ -228,7 +247,7 @@ def synthesize() -> None:
         "projects": [],
         "sources": [
             {key: source[key] for key in ("id", "name", "channel", "source_quality", "commercial_bias", "publisher_id", "evidence_role", "homepage_url", "logo_url") if key in source}
-            for source in _yaml(ROOT / "config/sources.yml")["sources"]
+            for source in source_config
         ],
     }
     write_public_dashboard(ROOT / "data/public/dashboard.json", payload)
@@ -293,7 +312,9 @@ def calibrate_evidence() -> None:
 
 def validate_discovery() -> None:
     validate_discovery_policy(_yaml(ROOT / "config/discovery.yml"))
+    validate_concept_policy(_yaml(ROOT / "config/discovery-concepts.yml"))
     print("valid: config/discovery.yml")
+    print("valid: config/discovery-concepts.yml")
 
 
 def main() -> None:

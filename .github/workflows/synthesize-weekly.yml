@@ -8,6 +8,7 @@ on:
       - config/bluesky.yml
       - config/classification-audit.yml
       - config/discovery.yml
+      - config/discovery-concepts.yml
       - config/evidence-policy-calibration.yml
       - config/evidence-policy.yml
       - config/keywords.yml
@@ -24,6 +25,7 @@ on:
       - pipeline/cli.py
       - pipeline/evidence_policy.py
       - pipeline/discovery.py
+      - pipeline/concepts.py
       - pipeline/export_public.py
       - pipeline/research.py
       - pipeline/storage.py
