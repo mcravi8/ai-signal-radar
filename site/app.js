@@ -3,6 +3,7 @@ const state = {
   alpha: null,
   operatingModel: null,
   weeklyReview: null,
+  discoveryReview: null,
   route: "overview",
   selectedRequirement: "",
   selectedAnalysis: "cross-source-landscape",
@@ -19,10 +20,11 @@ const state = {
   sourceType: "",
 };
 
-const routes = new Set(["overview", "weekly-review", "operating-model", "analyses", "themes", "projects", "evidence", "method"]);
+const routes = new Set(["overview", "weekly-review", "discovery", "operating-model", "analyses", "themes", "projects", "evidence", "method"]);
 const routeTitles = {
   overview: ["Research system", "Overview"],
   "weekly-review": ["Bounded evidence review", "Weekly Review"],
+  discovery: ["Pre-analysis review", "Discovery"],
   "operating-model": ["Evidence-backed practice", "Operating Model"],
   analyses: ["Research library", "Analyses"],
   themes: ["Cross-source dossiers", "Themes"],
@@ -510,6 +512,224 @@ function renderWeeklyReview() {
     componentGrid.append(item);
   }
   policy.append(policyIntro, componentGrid);
+}
+
+function discoveryTargetHref(nearest) {
+  if (!nearest?.id) return "#discovery";
+  if (nearest.kind === "theme") return `#themes/${nearest.id}`;
+  if (nearest.kind === "early-signal-direction") return `#analyses/early-signal-tracker`;
+  return "#discovery";
+}
+
+function discoveryBasis(nearest) {
+  if (!nearest) return "No established target matched.";
+  const parts = [label(nearest.basis)];
+  if (nearest.theme_recall !== undefined) parts.push(`${Math.round(nearest.theme_recall * 100)}% direction-theme recall`);
+  if (nearest.document_share !== undefined) parts.push(`${Math.round(nearest.document_share * 100)}% cluster document share`);
+  const phrases = nearest.matched_anchor_phrases || [];
+  if (phrases.length) parts.push(`phrase match: ${phrases.join(", ")}`);
+  const anchors = nearest.matched_anchor_ids || [];
+  if (anchors.length) parts.push(`${anchors.length} explicit anchor ${anchors.length === 1 ? "match" : "matches"}`);
+  return parts.join(" · ");
+}
+
+function discoveryEvidenceDetails(evidenceIds = []) {
+  const details = node("details", "discovery-evidence");
+  const evidenceById = new Map((state.research?.evidence || []).map((item) => [item.id, item]));
+  details.append(node("summary", "", `Inspect ${evidenceIds.length} evidence ${evidenceIds.length === 1 ? "record" : "records"}`));
+  const rows = node("div", "evidence-list");
+  for (const evidenceId of evidenceIds) {
+    const evidence = evidenceById.get(evidenceId);
+    const row = node("article", "evidence-list-item");
+    if (evidence) {
+      row.append(linkOrText(evidence), node("span", "", `${sourceName(evidence.source_id)} · ${formatDate(evidence.published_at)} · ${label(evidence.evidence_kind)}`));
+    } else {
+      row.append(node("strong", "evidence-title", evidenceId), node("span", "", "Evidence metadata is not present in the current public research export."));
+    }
+    rows.append(row);
+  }
+  if (!evidenceIds.length) rows.append(node("p", "empty-state", "No evidence identifiers were supplied."));
+  details.append(rows);
+  return details;
+}
+
+function renderDiscovery() {
+  const data = state.discoveryReview;
+  const metrics = $("#discovery-metrics");
+  const summary = $("#discovery-summary");
+  const queue = $("#discovery-queue");
+  const merges = $("#merge-suggestions");
+  const history = $("#discovery-history");
+  const review = $("#decision-review");
+
+  if (!data) {
+    metrics.replaceChildren(metric("Pending records", "N/O", "Dataset unavailable"));
+    summary.replaceChildren(node("strong", "", "Discovery data is unavailable."), node("span", "", "The core research dataset is still available; this review page cannot establish whether new leads exist."));
+    queue.replaceChildren(node("p", "empty-state", "New Sparks and Candidates could not be loaded."));
+    merges.replaceChildren(node("p", "empty-state", "Merge suggestions could not be loaded."));
+    history.replaceChildren(node("p", "empty-state", "Decision history could not be loaded."));
+  } else {
+    const activeRecords = (data.records || []).filter((item) => ["spark", "candidate"].includes(item.state));
+    const terminalHistory = [
+      ...(data.history || []),
+      ...(data.records || []).filter((item) => ["rejected", "dormant"].includes(item.state)),
+    ].filter((item, index, items) => items.findIndex((candidate) => candidate.id === item.id) === index);
+    const meta = data.meta || {};
+    metrics.replaceChildren(
+      metric("Needs decision", formatNumber(activeRecords.length), "New Sparks and Candidates"),
+      metric("Sparks", formatNumber(meta.spark_count), "Coherent leads below Candidate maturity"),
+      metric("Candidates", formatNumber(meta.candidate_count), "Mechanically review-ready"),
+      metric("Merge suggestions", formatNumber((data.merge_suggestions || []).length), "Proposed, not accepted"),
+      metric("Coherent clusters", formatNumber(meta.coherent_cluster_count), `${formatNumber(meta.cluster_count)} clusters screened`),
+      metric("Quality eligible", formatNumber(meta.quality_eligible_cluster_count), `${formatNumber(meta.explained_cluster_count)} explained by known work`),
+    );
+    summary.replaceChildren(
+      node("strong", "", activeRecords.length ? `${activeRecords.length} unexplained pattern${activeRecords.length === 1 ? "" : "s"} requires a decision.` : "No unexplained pattern crossed the review gate this cycle."),
+      node("span", "", meta.interpretation || "Discovery leads are generated mechanically and require human review."),
+      node("small", "tabular", `Generated ${formatDate(meta.generated_at)} · ${formatNumber(meta.input_changed_document_count)} new or changed inputs`),
+    );
+
+    queue.replaceChildren();
+    if (!activeRecords.length) {
+      const empty = node("div", "discovery-empty");
+      empty.append(
+        node("strong", "", "Nothing requires a new Spark or Candidate decision."),
+        node("p", "", "This is a gated result, not missing analysis: quality-eligible patterns were already explained by a tracked theme or Early Signal direction. Review the merge suggestions below."),
+      );
+      queue.append(empty);
+    }
+    for (const record of activeRecords) {
+      const card = node("article", "discovery-record");
+      const head = node("div", "discovery-record-head");
+      head.append(
+        badge(label(record.state), record.state),
+        node("span", "discovery-change tabular", record.materially_changed ? "New or materially changed" : "Retained from prior cycle"),
+        node("h4", "", record.title),
+        node("p", "", record.why_now),
+      );
+      const reasoning = node("div", "discovery-reasoning");
+      const observed = node("section", "discovery-observation");
+      observed.append(node("span", "discovery-kicker", "Observed"), node("p", "", record.observed_pattern));
+      const inferred = node("section", "discovery-inference");
+      inferred.append(node("span", "discovery-kicker", "Proposed interpretation"), node("p", "", record.hypothesis), node("small", "", record.novelty));
+      reasoning.append(observed, inferred);
+      const facts = node("div", "discovery-facts");
+      facts.append(
+        node("span", "tabular", `${formatNumber(record.metrics?.evidence_count)} evidence`),
+        node("span", "tabular", `${formatNumber(record.metrics?.source_count)} sources`),
+        node("span", "tabular", `${formatNumber(record.metrics?.source_family_count)} families`),
+        node("span", "tabular", `${formatNumber(record.metrics?.technical_record_count)} technical records`),
+        node("span", "tabular", `${formatDate(record.first_seen)} → ${formatDate(record.last_seen)}`),
+      );
+      const conditions = node("div", "discovery-conditions");
+      const confirm = node("section", "");
+      confirm.append(node("strong", "", "Confirmation test"));
+      const confirmList = node("ul", "");
+      for (const item of record.confirmation_conditions || []) confirmList.append(node("li", "", item));
+      confirm.append(confirmList);
+      const invalidate = node("section", "");
+      invalidate.append(node("strong", "", "Counter-signal"));
+      const invalidateList = node("ul", "");
+      for (const item of record.invalidation_conditions || []) invalidateList.append(node("li", "", item));
+      invalidate.append(invalidateList);
+      conditions.append(confirm, invalidate);
+      card.append(head, reasoning, facts, conditions, discoveryEvidenceDetails(record.evidence_ids));
+      queue.append(card);
+    }
+
+    merges.replaceChildren();
+    if (!(data.merge_suggestions || []).length) merges.append(node("p", "empty-state", "No merge suggestion was generated in this cycle."));
+    for (const [index, suggestion] of (data.merge_suggestions || []).entries()) {
+      const card = node("article", "merge-card");
+      const order = node("span", "merge-order tabular", String(index + 1).padStart(2, "0"));
+      const copy = node("div", "merge-copy");
+      copy.append(
+        node("span", "merge-kind", label(suggestion.disposition)),
+        node("h4", "", (suggestion.anchor_labels || []).join(" + ") || "Unlabelled cross-source cluster"),
+        node("p", "", discoveryBasis(suggestion.nearest_known)),
+      );
+      const target = node("div", "merge-target");
+      target.append(node("small", "", "Suggested target"));
+      const targetLink = node("a", "", suggestion.nearest_known?.title || suggestion.nearest_known?.id || "No target");
+      targetLink.href = discoveryTargetHref(suggestion.nearest_known);
+      target.append(targetLink, badge("Proposal", "proposal"));
+      const facts = node("div", "merge-facts");
+      facts.append(
+        node("span", "tabular", `${formatNumber(suggestion.evidence_ids?.length)} evidence`),
+        node("span", "tabular", `${formatNumber(suggestion.source_count)} sources`),
+        node("span", "tabular", `${formatNumber(suggestion.source_family_count)} families`),
+        node("span", "tabular", suggestion.materially_changed ? "Changed this cycle" : "Retained"),
+      );
+      card.append(order, copy, target, facts, discoveryEvidenceDetails(suggestion.evidence_ids));
+      merges.append(card);
+    }
+
+    history.replaceChildren();
+    if (!terminalHistory.length) {
+      const empty = node("div", "discovery-empty");
+      empty.append(
+        node("strong", "", "No rejected or dormant decision has been recorded yet."),
+        node("p", "", "History begins only after a human review is written back to the decision ledger. Generated suggestions are never counted as decisions."),
+      );
+      history.append(empty);
+    }
+    for (const item of terminalHistory) {
+      const row = node("article", "history-row");
+      row.append(
+        badge(label(item.state), item.state),
+        node("strong", "", item.title),
+        node("p", "", item.review?.rationale || "No review rationale was supplied."),
+        node("span", "tabular", item.review?.reviewed_at ? `Reviewed ${formatDate(item.review.reviewed_at)}` : `Last observed ${formatDate(item.last_seen)}`),
+      );
+      history.append(row);
+    }
+  }
+
+  review.replaceChildren();
+  const intro = node("div", "decision-intro");
+  intro.append(
+    badge("Read-only", "proposal"),
+    node("strong", "", "A reviewer must complete all five checks before writing a decision."),
+    node("p", "", "The current static dashboard does not pretend to save state. Record the action, rationale, and target in the repository, then regenerate the public export."),
+  );
+  const checklist = node("ol", "decision-checklist");
+  const checks = [
+    ["Same pattern", "Confirm the cited records describe one structural pattern, not merely shared wording or a syndicated event."],
+    ["Known comparison", "Inspect the nearest theme or direction and decide whether it already explains the evidence."],
+    ["Disconfirming case", "Review alternative explanations, missing source families, and at least one counter-signal."],
+    ["Bounded hypothesis", "For Track or Reframe, write a testable hypothesis with confirmation and invalidation conditions."],
+    ["Audit trail", "Record one action, a concise rationale, the target ID when merging, and the review date."],
+  ];
+  for (const [title, description] of checks) {
+    const item = node("li", "");
+    item.append(node("strong", "", title), node("span", "", description));
+    checklist.append(item);
+  }
+  const actions = node("div", "decision-actions");
+  const actionDefinitions = [
+    ["Watch", "Spark", "Coherent, but independent reinforcement is still missing."],
+    ["Reframe", "Candidate", "Keep the lead but change the proposed abstraction or test."],
+    ["Track", "Approved", "Create a bounded Early Signal hypothesis after human review."],
+    ["Merge", "Merged", "Attach evidence to an existing theme or direction; target ID required."],
+    ["Reject", "Rejected", "Retain the fingerprint as noise, duplication, or unsupported framing."],
+    ["Dormancy", "Dormant", "Preserve a prior lead without treating it as currently active."],
+  ];
+  for (const [action, outcome, description] of actionDefinitions) {
+    const item = node("article", "decision-action");
+    item.append(node("strong", "", action), node("span", "tabular", `→ ${outcome}`), node("p", "", description));
+    actions.append(item);
+  }
+  const links = node("div", "decision-links");
+  const policyLink = node("a", "", "Open discovery policy ↗");
+  policyLink.href = "https://github.com/mcravi8/ai-signal-radar/blob/main/config/discovery.yml";
+  policyLink.target = "_blank";
+  policyLink.rel = "noreferrer";
+  const dataLink = node("a", "", "Inspect generated review data ↗");
+  dataLink.href = "https://github.com/mcravi8/ai-signal-radar/blob/main/data/processed/discovery-candidates.json";
+  dataLink.target = "_blank";
+  dataLink.rel = "noreferrer";
+  links.append(policyLink, dataLink);
+  review.append(intro, checklist, actions, links);
 }
 
 function renderOperatingModel() {
@@ -1414,6 +1634,7 @@ function populateFilters() {
 function renderAll() {
   renderOverview();
   renderWeeklyReview();
+  renderDiscovery();
   renderOperatingModel();
   renderAnalyses();
   if (!state.selectedTheme) state.selectedTheme = state.research.themes[0]?.id || "";
@@ -1440,6 +1661,7 @@ function routeFromHash() {
     if (route === "analyses") renderAnalyses();
     if (route === "operating-model") renderOperatingModel();
     if (route === "weekly-review") renderWeeklyReview();
+    if (route === "discovery") renderDiscovery();
   }
   window.scrollTo(0, 0);
 }
@@ -1506,7 +1728,7 @@ function bindControls() {
 async function load() {
   $("#load-failure").hidden = true;
   $("#sidebar-state").textContent = "Loading research";
-  const [researchResult, alphaResult, operatingResult, weeklyReviewResult] = await Promise.allSettled([
+  const [researchResult, alphaResult, operatingResult, weeklyReviewResult, discoveryReviewResult] = await Promise.allSettled([
     fetch("./data/research.json", { cache: "no-store" }).then((response) => {
       if (!response.ok) throw new Error(`Cross-source dataset returned ${response.status}.`);
       return response.json();
@@ -1523,6 +1745,10 @@ async function load() {
       if (!response.ok) throw new Error(`Weekly review returned ${response.status}.`);
       return response.json();
     }),
+    fetch("./data/discovery-review.json", { cache: "no-store" }).then((response) => {
+      if (!response.ok) throw new Error(`Discovery review returned ${response.status}.`);
+      return response.json();
+    }),
   ]);
 
   if (researchResult.status === "rejected") {
@@ -1535,6 +1761,7 @@ async function load() {
   state.alpha = alphaResult.status === "fulfilled" ? alphaResult.value : null;
   state.operatingModel = operatingResult.status === "fulfilled" ? operatingResult.value : null;
   state.weeklyReview = weeklyReviewResult.status === "fulfilled" ? weeklyReviewResult.value : null;
+  state.discoveryReview = discoveryReviewResult.status === "fulfilled" ? discoveryReviewResult.value : null;
   populateFilters();
   renderAll();
   routeFromHash();

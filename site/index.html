@@ -6,7 +6,7 @@
     <meta name="description" content="Cross-source AI research across first-party labs, newsletters, papers, repositories, public essays, and technical discussion." />
     <title>AI Signal Radar — Cross-source research</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 12h48v8H8zm0 16h48v8H8zm0 16h48v8H8z' fill='%2317354d'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20260922.18" />
+    <link rel="stylesheet" href="./styles.css?v=20260923.19" />
   </head>
   <body>
     <a class="skip-link" href="#workspace">Skip to research</a>
@@ -16,12 +16,13 @@
         <nav class="primary-nav" aria-label="Research navigation">
           <a href="#overview" data-route="overview"><span>01</span>Overview</a>
           <a href="#weekly-review" data-route="weekly-review"><span>02</span>Weekly Review</a>
-          <a href="#operating-model" data-route="operating-model"><span>03</span>Operating Model</a>
-          <a href="#analyses" data-route="analyses"><span>04</span>Analyses</a>
-          <a href="#themes" data-route="themes"><span>05</span>Themes</a>
-          <a href="#projects" data-route="projects"><span>06</span>Engineering</a>
-          <a href="#evidence" data-route="evidence"><span>07</span>Evidence</a>
-          <a href="#method" data-route="method"><span>08</span>Method</a>
+          <a href="#discovery" data-route="discovery"><span>03</span>Discovery</a>
+          <a href="#operating-model" data-route="operating-model"><span>04</span>Operating Model</a>
+          <a href="#analyses" data-route="analyses"><span>05</span>Analyses</a>
+          <a href="#themes" data-route="themes"><span>06</span>Themes</a>
+          <a href="#projects" data-route="projects"><span>07</span>Engineering</a>
+          <a href="#evidence" data-route="evidence"><span>08</span>Evidence</a>
+          <a href="#method" data-route="method"><span>09</span>Method</a>
         </nav>
         <div class="sidebar-status">
           <span class="status-dot" aria-hidden="true"></span>
@@ -99,6 +100,35 @@
           <section class="content-block" aria-labelledby="selection-policy-heading">
             <header class="block-header"><div><span class="block-number">E</span><h3 id="selection-policy-heading">Selection policy</h3></div><p>The prioritization score controls analyst attention only and remains inspectable.</p></header>
             <div class="selection-policy" id="selection-policy"></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-discovery" data-view="discovery" aria-labelledby="discovery-heading" hidden>
+          <div class="view-intro">
+            <div><h2 id="discovery-heading">Review unfamiliar cross-source patterns</h2><p>Mechanically grouped observations enter here before they become tracked hypotheses. Evidence, proposed interpretation, and human decisions remain separate.</p></div>
+            <div class="system-rule"><strong>Commitment boundary</strong><span>This page is read-only. A decision becomes real only when its action, rationale, and target are recorded in the repository and the dataset is regenerated.</span></div>
+          </div>
+          <div class="metric-strip discovery-metrics" id="discovery-metrics"><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div><div class="metric loading"></div></div>
+          <div class="discovery-summary" id="discovery-summary"></div>
+
+          <section class="content-block" aria-labelledby="discovery-queue-heading">
+            <header class="block-header"><div><span class="block-number">A</span><h3 id="discovery-queue-heading">New Sparks and Candidates</h3></div><p>Only materially changed, unexplained clusters that pass the quality gate appear here. They are leads requiring a human decision—not findings.</p></header>
+            <div class="discovery-queue" id="discovery-queue"><p class="empty-state">Loading discovery leads…</p></div>
+          </section>
+
+          <section class="content-block" aria-labelledby="merge-suggestions-heading">
+            <header class="block-header"><div><span class="block-number">B</span><h3 id="merge-suggestions-heading">Merge suggestions</h3></div><p>The system found a likely existing theme or tracked direction. Each proposal keeps its target, matching basis, and underlying evidence visible.</p></header>
+            <div class="merge-suggestions" id="merge-suggestions"><p class="empty-state">Loading merge suggestions…</p></div>
+          </section>
+
+          <section class="content-block" aria-labelledby="discovery-history-heading">
+            <header class="block-header"><div><span class="block-number">C</span><h3 id="discovery-history-heading">Rejected and dormant history</h3></div><p>Past decisions remain visible so rejected noise does not re-enter the queue and dormant patterns can reactivate only on materially new evidence.</p></header>
+            <div class="discovery-history" id="discovery-history"><p class="empty-state">Loading decision history…</p></div>
+          </section>
+
+          <section class="content-block" aria-labelledby="decision-checklist-heading">
+            <header class="block-header"><div><span class="block-number">D</span><h3 id="decision-checklist-heading">Read-only decision checklist</h3></div><p>Use this sequence before recording a review outcome. No control on this page writes to the research system.</p></header>
+            <div class="decision-review" id="decision-review"></div>
           </section>
         </section>
 
@@ -185,6 +215,6 @@
         <section class="load-failure" id="load-failure" hidden aria-live="assertive"><strong>Research data could not be loaded.</strong><span id="failure-detail"></span><button type="button" id="retry-load">Retry</button></section>
       </main>
     </div>
-    <script src="./app.js?v=20260922.18" defer></script>
+    <script src="./app.js?v=20260923.19" defer></script>
   </body>
 </html>

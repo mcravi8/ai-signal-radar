@@ -252,6 +252,17 @@ def synthesize() -> None:
     discovery_candidates["meta"]["baseline_complete"] = True
     discovery_candidates["meta"]["baseline_version"] = clustering_policy["version"]
     write_public_dashboard(candidate_path, discovery_candidates)
+    discovery_review = {
+        "meta": discovery_candidates["meta"],
+        "records": discovery_candidates["records"],
+        "merge_suggestions": discovery_candidates["merge_suggestions"],
+        "history": [
+            record
+            for record in discovery_candidates["records"]
+            if record.get("state") in {"rejected", "dormant"}
+        ],
+    }
+    write_public_dashboard(ROOT / "data/public/discovery-review.json", discovery_review)
 
     payload = {
         "meta": {

@@ -1,0 +1,666 @@
+{
+  "meta": {
+    "schema_version": 1,
+    "generated_at": "2026-09-23T20:04:20.123500+00:00",
+    "method": "lexical-anchor-overlap-v1",
+    "input_document_count": 1190,
+    "input_changed_document_count": 786,
+    "cluster_count": 357,
+    "overbroad_cluster_count": 0,
+    "filtered_anchor_count": 141,
+    "coherent_cluster_count": 134,
+    "quality_eligible_cluster_count": 13,
+    "explained_cluster_count": 85,
+    "unexplained_quality_eligible_count": 0,
+    "active_record_count": 0,
+    "spark_count": 0,
+    "candidate_count": 0,
+    "merge_suggestion_count": 25,
+    "disposition_counts": {
+      "covered-by-existing-theme": 78,
+      "merge-existing-direction": 7,
+      "novel": 272
+    },
+    "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
+    "baseline_cycle": false,
+    "baseline_complete": true,
+    "baseline_version": 1
+  },
+  "records": [],
+  "merge_suggestions": [
+    {
+      "cluster_id": "discovery:long-running-0b1aa70e84",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "modular-agent-stack",
+        "title": "The agent stack is separating into modular operating layers",
+        "theme_recall": 0.667,
+        "matched_theme_ids": [
+          "agent-harnesses",
+          "skills-integrations"
+        ],
+        "matched_anchor_ids": [],
+        "matched_anchor_phrases": [],
+        "basis": "recurrent-theme-recall"
+      },
+      "anchor_labels": [
+        "long running"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.16305",
+        "bluesky:1278ebf77949:3mv6cihd7tk2v",
+        "bluesky:1278ebf77949:3mvxrv6krzs22",
+        "openai-news:b32e9b847135398762b9"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:physical-world-d38e2b293c",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "simulation-first-physical-ai",
+        "title": "Simulation is becoming the development environment for physical AI",
+        "theme_recall": 0.667,
+        "matched_theme_ids": [
+          "multimodal-3d",
+          "robotics-embodied-ai"
+        ],
+        "matched_anchor_ids": [],
+        "matched_anchor_phrases": [],
+        "basis": "recurrent-theme-recall"
+      },
+      "anchor_labels": [
+        "physical world"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.22055v1",
+        "radical-ventures:002cb1815fb8b4589802",
+        "yc-company:32206"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:federated-learning-532a4ee3f3",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "enterprise-data-boundary",
+        "title": "Proprietary enterprise data is moving behind a governed model boundary",
+        "theme_recall": 0.0,
+        "matched_theme_ids": [],
+        "matched_anchor_ids": [],
+        "matched_anchor_phrases": [
+          "federated learning"
+        ],
+        "basis": "disclosed-phrase"
+      },
+      "anchor_labels": [
+        "federated learning"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20501v1",
+        "arxiv:2609.21829v1",
+        "nvidia-developer-blog:c6cbeb9f9f96e88e05d7"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:long-horizon-tool-using-b0604038be",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "modular-agent-stack",
+        "title": "The agent stack is separating into modular operating layers",
+        "theme_recall": 0.667,
+        "matched_theme_ids": [
+          "agent-harnesses",
+          "assurance-infrastructure"
+        ],
+        "matched_anchor_ids": [],
+        "matched_anchor_phrases": [],
+        "basis": "recurrent-theme-recall"
+      },
+      "anchor_labels": [
+        "long horizon tool using",
+        "refusal-calibration",
+        "sadia sigma lab blindspot",
+        "sadia-sigma-lab/BLINDSPOT"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.16305",
+        "github:1370498337"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:model-replaceability-24ff553ea4",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "modular-agent-stack",
+        "title": "The agent stack is separating into modular operating layers",
+        "theme_recall": 0.0,
+        "matched_theme_ids": [],
+        "matched_anchor_ids": [
+          "primitive:model-replaceability"
+        ],
+        "matched_anchor_phrases": [],
+        "basis": "explicit-anchor"
+      },
+      "anchor_labels": [
+        "Model replaceability"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20504v1",
+        "yc-company:33969"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:privacy-preserving-c9dc4f17d9",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "enterprise-data-boundary",
+        "title": "Proprietary enterprise data is moving behind a governed model boundary",
+        "theme_recall": 0.0,
+        "matched_theme_ids": [],
+        "matched_anchor_ids": [],
+        "matched_anchor_phrases": [
+          "privacy preserving"
+        ],
+        "basis": "disclosed-phrase"
+      },
+      "anchor_labels": [
+        "privacy preserving"
+      ],
+      "evidence_ids": [
+        "anthropic-news-research:f4efc55098543f59e5e3",
+        "arxiv:2609.20650v1"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:data-sovereignty-5980424c41",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "enterprise-data-boundary",
+        "title": "Proprietary enterprise data is moving behind a governed model boundary",
+        "theme_recall": 0.0,
+        "matched_theme_ids": [],
+        "matched_anchor_ids": [
+          "primitive:data-sovereignty"
+        ],
+        "matched_anchor_phrases": [
+          "data sovereignty"
+        ],
+        "basis": "explicit-anchor"
+      },
+      "anchor_labels": [
+        "Data sovereignty"
+      ],
+      "evidence_ids": [
+        "aws-machine-learning-blog:5a658dac9f90bae77e02",
+        "mistral-news:830fb9aa9b114f2dafe7"
+      ],
+      "source_count": 2,
+      "source_family_count": 1,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:rule-based-d5bc3cb86a",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 0.5,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "rule based"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21667v1",
+        "arxiv:2609.21676v1",
+        "github:1369187725",
+        "hn:49786485"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:access-control-35f92e6b7b",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "assurance-infrastructure",
+        "title": "Assurance infrastructure",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "access control"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21713v1",
+        "aws-machine-learning-blog:8fa3089824df1f197189",
+        "github:1342500731"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:agents-coding-ed09e70153",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "coding-agents",
+        "title": "Coding agents & developer tooling",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "agents coding"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20804v1",
+        "aws-machine-learning-blog:16b9772b96509775d2ea",
+        "github:1354991682"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:device-inference-8160109f2a",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "open-local-inference",
+        "title": "Open, local & efficient inference",
+        "matched_anchor_phrases": [
+          "device inference"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.667
+      },
+      "anchor_labels": [
+        "device inference"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21849v1",
+        "nvidia-developer-blog:837464fefd470eaa54f6",
+        "yc-company:34597"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:long-term-0ee888073b",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "memory-context",
+        "title": "Memory & context engineering",
+        "matched_anchor_phrases": [
+          "long term",
+          "term memory"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.0
+      },
+      "anchor_labels": [
+        "long term",
+        "term memory",
+        "memory long"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21940v1",
+        "github:1354059245",
+        "hn:49783671"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:model-context-b3e4393a75",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "skills-integrations",
+        "title": "Skills, protocols & integrations",
+        "matched_anchor_phrases": [
+          "model context"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 1.0
+      },
+      "anchor_labels": [
+        "model context"
+      ],
+      "evidence_ids": [
+        "aws-machine-learning-blog:8fa3089824df1f197189",
+        "github:1358571386",
+        "simon-willison:e133d02a1d698c5d1f75"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:long-horizon-cc9f8906a0",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "document_share": 0.6,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "long horizon"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20800v1",
+        "arxiv:2609.21788v1",
+        "hf-paper:2608.26005",
+        "hf-paper:2609.14858",
+        "yc-company:30923"
+      ],
+      "source_count": 3,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:agentic-post-training-c4f87db853",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "document_share": 0.75,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "recursive self improvement",
+        "agentic post training",
+        "self improvement rsi"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20519v1",
+        "github:1356900025",
+        "hf-paper:2609.08183",
+        "hf-paper:2609.14858"
+      ],
+      "source_count": 3,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:experts-moe-71e61b30c7",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "open-local-inference",
+        "title": "Open, local & efficient inference",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "experts moe"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21672v1",
+        "hf-paper:2609.18063",
+        "nvidia-developer-blog:7a123450627a2d3d1e65"
+      ],
+      "source_count": 3,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:computer-vision-018bbaa7ef",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "multimodal-3d",
+        "title": "Multimodal generation & 3D",
+        "matched_anchor_phrases": [
+          "computer vision"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.25
+      },
+      "anchor_labels": [
+        "computer-vision"
+      ],
+      "evidence_ids": [
+        "github:1345052184",
+        "github:1374667371",
+        "yc-company:32206",
+        "yc-company:37468"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:developer-tools-e8508fddf7",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "coding-agents",
+        "title": "Coding agents & developer tooling",
+        "document_share": 0.5,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "developer tools"
+      ],
+      "evidence_ids": [
+        "github:1351859098",
+        "github:1353965369",
+        "yc-company:33250",
+        "yc-company:34464"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:api-keys-c177b8ad02",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "coding-agents",
+        "title": "Coding agents & developer tooling",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "api keys"
+      ],
+      "evidence_ids": [
+        "simon-willison:e133d02a1d698c5d1f75",
+        "simon-willison:f9d4182cc1e12525793a",
+        "yc-company:31557"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:code-review-1eea82899d",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "validation-release",
+        "title": "Validation & release infrastructure",
+        "matched_anchor_phrases": [
+          "code review"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.0
+      },
+      "anchor_labels": [
+        "code review"
+      ],
+      "evidence_ids": [
+        "github:1365776373",
+        "hn:49783816",
+        "hn:49789314"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:deep-neural-9178e272c3",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "matched_anchor_phrases": [
+          "deep neural"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.0
+      },
+      "anchor_labels": [
+        "deep neural"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21815v1",
+        "arxiv:2609.21829v1",
+        "github:1345901466"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:fine-tuning-03c735a407",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "matched_anchor_phrases": [
+          "fine tuning"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 1.0
+      },
+      "anchor_labels": [
+        "fine-tuning"
+      ],
+      "evidence_ids": [
+        "github:1347394075",
+        "github:1366280840",
+        "yc-job:108650"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:flow-matching-7be45b9585",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "flow matching"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21989v1",
+        "arxiv:2609.22041v1",
+        "github:1345931063"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:frontier-lab-d1a1540ba1",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "open-local-inference",
+        "title": "Open, local & efficient inference",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "frontier lab"
+      ],
+      "evidence_ids": [
+        "hn:49736660",
+        "latent-space:1d6b63efae6a0d6226fa",
+        "latent-space:c5ef439db94fe95e2aa5"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:jev-like-a2c9a6c982",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "jev like"
+      ],
+      "evidence_ids": [
+        "hn:49783999",
+        "hn:49787404",
+        "simon-willison:b3e5263fa8976c3c350c"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": true
+    }
+  ],
+  "history": []
+}
