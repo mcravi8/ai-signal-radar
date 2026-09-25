@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-25T07:18:15.174276+00:00",
+    "generated_at": "2026-09-25T07:22:33.164902+00:00",
     "status": "success",
     "source_count": 38,
     "evidence_count": 1781,
@@ -2276,12 +2276,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/scaleapi",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2016",
+        "status": "Active",
         "team_size": 500,
-        "batch": "S2016"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2308,11 +2308,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "London",
         "team_size": 1,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "London"
       }
     },
     {
@@ -2339,11 +2339,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2371,11 +2371,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 1,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2404,11 +2404,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2437,12 +2437,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active",
         "team_size": 1,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2470,11 +2470,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2501,12 +2501,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2532,11 +2532,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2568,11 +2568,11 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 6,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2599,11 +2599,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "Los Angeles",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "Los Angeles"
       }
     },
     {
@@ -2631,11 +2631,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "Oslo, Norway",
         "team_size": 5,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "Oslo, Norway"
       }
     },
     {
@@ -2663,11 +2663,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2694,12 +2694,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/use-click/",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active",
         "team_size": 1,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2728,11 +2728,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 6,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2759,11 +2759,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2790,11 +2790,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2823,11 +2823,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2856,11 +2856,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2889,11 +2889,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2920,11 +2920,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "Gurugram, Haryana, India",
         "team_size": 3,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "Gurugram, Haryana, India"
       }
     },
     {
@@ -2952,12 +2952,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active",
         "team_size": 5,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -2985,11 +2985,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3018,12 +3018,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3051,11 +3051,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "London",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "London"
       }
     },
     {
@@ -3080,12 +3080,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3114,11 +3114,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3148,12 +3148,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/herdrdev",
-        "date_basis": "first-observed",
-        "location": "Ankara, Turkey",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 1,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "Ankara, Turkey"
       }
     },
     {
@@ -3183,12 +3183,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3215,11 +3215,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed"
       }
     },
     {
@@ -3245,12 +3245,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 3,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3279,12 +3279,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3311,12 +3311,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 5,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3345,12 +3345,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 4,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3376,12 +3376,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3412,12 +3412,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3443,12 +3443,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3476,12 +3476,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3508,12 +3508,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "Munich, Germany",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 8,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "Munich, Germany"
       }
     },
     {
@@ -3541,12 +3541,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3577,12 +3577,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 4,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3611,12 +3611,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/oro-ai",
-        "date_basis": "first-observed",
-        "location": "Vancouver, BC, Canada",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "Vancouver, BC, Canada"
       }
     },
     {
@@ -3645,11 +3645,11 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "batch": "F2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 4,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3678,11 +3678,11 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "batch": "F2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "New York City",
         "team_size": 4,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "New York City"
       }
     },
     {
@@ -3709,12 +3709,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3741,12 +3741,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/The-Agentic-Data-Co",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3772,12 +3772,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "Salt Lake City, UT, USA",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 0,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "Salt Lake City, UT, USA"
       }
     },
     {
@@ -3804,12 +3804,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -3836,12 +3836,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "Santiago, Santiago Metropolitan Region, Chile",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "Santiago, Santiago Metropolitan Region, Chile"
       }
     },
     {
@@ -3870,12 +3870,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/checkr",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2014",
+        "status": "Active",
         "team_size": 800,
-        "batch": "S2014"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -5228,11 +5228,11 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "batch": "S2026",
         "status": "Active",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -5259,12 +5259,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/AGEOspatial",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 1,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -5292,12 +5292,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -6080,12 +6080,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "",
-        "date_basis": "first-observed",
-        "location": "New York City",
+        "batch": "S2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "New York City"
       }
     },
     {
@@ -6116,12 +6116,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/Hebbian-Robotics",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "S2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "S2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -6148,12 +6148,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/Vorelios",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
@@ -6180,12 +6180,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
         "github_url": "https://github.com/useoxygen",
-        "date_basis": "first-observed",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "status": "Active",
         "team_size": 2,
-        "batch": "F2026"
+        "date_basis": "first-observed",
+        "location": "San Francisco"
       }
     },
     {
