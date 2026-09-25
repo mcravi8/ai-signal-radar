@@ -112,7 +112,7 @@ Validate all three contracts with:
 python -m pipeline.cli validate-discovery
 ```
 
-The weekly synthesis now performs clustering, novelty comparison, and mechanical Spark/Candidate classification. Human adjudication and a frontend review surface remain separate future steps; automation cannot approve a new Early Signal direction.
+The weekly synthesis performs clustering, novelty comparison, and mechanical Spark/Candidate classification. Human decisions are recorded in `config/weekly-review.yml` and exposed through the Discovery and Weekly Review workspaces. Automation can propose and prioritize candidates, but it cannot approve a new Early Signal direction or Operating Model requirement.
 
 ## Engineering Atlas
 
@@ -145,6 +145,6 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 ## Current status
 
-The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, official YC AI-company and startup-job records, and a narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides eight direct workspaces: Overview, Weekly Review, Operating Model, Analyses, Themes, Engineering, Evidence, and Method.
+The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, official YC AI-company and startup-job records, and a narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides nine direct workspaces: Overview, Weekly Review, Operating Model, Discovery, Analyses, Themes, Engineering, Evidence, and Method.
 
 The Weekly Review is the controlled path from observation to judgment. It considers a 36-item pool made from seven Early Signal directions, three expert findings, six operator/investor narratives, and twenty cross-source themes. Only unresolved new or materially changed candidates can enter a ten-item assessment queue. Reviewed candidates retain an explicit adjudication explaining whether they created a conditional requirement, strengthened an existing requirement, or remained outside the model. Priority allocates reviewer attention; it cannot change requirement maturity. The public artifact lives at `data/public/weekly-review.json`.

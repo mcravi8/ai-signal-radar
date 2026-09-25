@@ -1,10 +1,11 @@
+import copy
 import json
 import unittest
 from pathlib import Path
 
 import yaml
 
-from pipeline.weekly_review import _review_headline, build_weekly_review
+from pipeline.weekly_review import _material_changes, _review_headline, build_weekly_review
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,6 +46,36 @@ class WeeklyReviewTests(unittest.TestCase):
         second = build_weekly_review(self.research, self.operating, previous_operating, first, self.config)
         self.assertIn(prior_id, {item["id"] for item in second["assessment_queue"]})
 
+    def test_same_cycle_adjudication_removes_item_from_preserved_queue(self):
+        base_config = copy.deepcopy(self.config)
+        base_config["candidate_adjudications"] = []
+        first = build_weekly_review(self.research, self.operating, self.operating, None, base_config)
+        target = first["assessment_queue"][0]
+        reviewed_config = copy.deepcopy(base_config)
+        reviewed_config["candidate_adjudications"] = [{
+            "candidate_id": target["id"],
+            "reviewed_at": first["meta"]["as_of"],
+            "outcome": "reviewed-for-test",
+            "requirement_ids": [],
+            "decision": "Reviewed.",
+            "rationale": "Test-only adjudication record.",
+            "reviewed_state": {
+                "stage": target.get("stage"),
+                "movement": target.get("movement"),
+                "evidence_count": target["metrics"]["evidence_count"],
+                "source_count": target["metrics"]["source_count"],
+            },
+        }]
+        second = build_weekly_review(
+            self.research,
+            self.operating,
+            self.operating,
+            first,
+            reviewed_config,
+        )
+        self.assertNotIn(target["id"], {item["id"] for item in second["assessment_queue"]})
+        self.assertEqual(second["meta"]["assessment_queue_count"], len(second["assessment_queue"]))
+
     def test_verification_families_state_their_boundary(self):
         review = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
         self.assertEqual(len(review["verification_families"]), 6)
@@ -56,7 +87,25 @@ class WeeklyReviewTests(unittest.TestCase):
             "4 candidate decisions are recorded; 1 candidate remains in the bounded assessment queue.",
         )
 
-    def test_four_theme_candidates_have_explicit_adjudications(self):
+    def test_momentum_decay_and_priority_shift_do_not_reopen_a_review(self):
+        previous = {
+            "stage": "broadly-corroborated",
+            "movement": "rising",
+            "metrics": {"evidence_count": 20, "source_count": 8, "recent_evidence_count": 6},
+            "priority": {"total": 90},
+        }
+        candidate = {
+            "stage": "broadly-corroborated",
+            "movement": "steady",
+            "metrics": {"evidence_count": 20, "source_count": 8, "recent_evidence_count": 5},
+            "priority": {"total": 72},
+        }
+        self.assertEqual(
+            _material_changes(candidate, previous, self.config["material_change_thresholds"]),
+            [],
+        )
+
+    def test_reviewed_candidates_have_explicit_adjudications(self):
         review = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
         adjudications = {item["candidate_id"]: item for item in review["adjudications"]}
         self.assertEqual(
@@ -66,15 +115,25 @@ class WeeklyReviewTests(unittest.TestCase):
                 "theme:agent-harnesses",
                 "theme:coding-agents",
                 "theme:frontier-inference-infrastructure",
+                "theme:skills-integrations",
+                "early:modular-agent-stack",
+                "early:enterprise-data-boundary",
+                "theme:voice-audio",
+                "theme:open-local-inference",
             },
         )
         self.assertEqual(adjudications["theme:robotics-embodied-ai"]["outcome"], "conditional-requirement-added")
-        self.assertTrue(
-            all(item["status"] in {"current", "revisit-required"} for item in adjudications.values())
+        self.assertEqual(
+            adjudications["early:enterprise-data-boundary"]["outcome"],
+            "conditional-requirement-added",
         )
-        reviewed = [item for key, item in adjudications.items() if key != "theme:robotics-embodied-ai"]
-        self.assertTrue(all(item["evidence_review"]["status"] == "complete" for item in reviewed))
-        self.assertEqual(sum(item["evidence_review"]["records_screened"] for item in reviewed), 147)
+        self.assertEqual(
+            adjudications["theme:voice-audio"]["outcome"],
+            "modality-signal-not-general-requirement",
+        )
+        self.assertTrue(all(item["status"] == "current" for item in adjudications.values()))
+        audited = [item for item in adjudications.values() if item.get("evidence_review")]
+        self.assertTrue(all(item["evidence_review"]["status"] == "complete" for item in audited))
         queued_ids = {item["id"] for item in review["assessment_queue"]}
         current_ids = {
             candidate_id for candidate_id, item in adjudications.items()

@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "AI-Native Startup Operating Model evidence policy",
-    "generated_at": "2026-09-23T20:46:51.025545+00:00",
-    "as_of": "2026-09-22",
+    "generated_at": "2026-09-25T06:54:45.048329+00:00",
+    "as_of": "2026-09-24",
     "policy_version": 1,
-    "requirement_count": 7,
+    "requirement_count": 8,
     "maturity_counts": {
       "narrative": 2,
-      "experimental": 4,
+      "experimental": 5,
       "emerging": 1,
       "established": 0,
       "baseline": 0
@@ -143,7 +143,7 @@
         "operational_adoption": "moderate",
         "technical_reality": "strong"
       },
-      "rationale": "Independent technical artifacts, including a component-level harness ablation, show that orchestration, context, skills, execution, and assurance can be separated. Wood Mackenzie and Benchling provide two detailed production deployments, while two YC company profiles add market context but not independent adoption proof. A Westermo industrial case found no consistent quality advantage for multi-agent orchestration and found the single-agent baseline faster and cheaper. The requirement therefore remains emerging and conditional; operational evidence is still concentrated in AWS-published case studies and does not qualify as strong.",
+      "rationale": "Independent technical artifacts, including a component-level harness ablation, evaluated reusable skills, permissioned MCP tools, and graph-structured skill optimization, show that orchestration, context, skills, execution, and assurance can be separated. Wood Mackenzie and Benchling remain the two detailed production deployments. Counterevidence shows that a direct API or simpler single-agent system can be cheaper and more effective when the workflow does not need a governed interoperability boundary. The requirement therefore remains emerging and conditional; stronger skill evidence does not substitute for independent operational adoption.",
       "next_gate": {
         "maturity": "established",
         "failures": [
@@ -270,6 +270,70 @@
           "exclusion_reason": null
         },
         {
+          "id": "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
+          "event_id": "reusable-sagemaker-deployment-skills",
+          "title": "Deploy Hugging Face models on Amazon SageMaker AI with coding agents",
+          "summary": "Deploy production-ready Hugging Face models on Amazon SageMaker AI using six open-source agent skills. Point a coding agent at a model and get back a real-time endpoint with the right serving container, autoscaling, Amazon CloudWatch alarms, and a verified teardown path.",
+          "url": "https://aws.amazon.com/blogs/machine-learning/deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents/",
+          "published_at": "2026-09-18T15:25:23+00:00",
+          "source_id": "aws-machine-learning-blog",
+          "source_name": "AWS Machine Learning Blog",
+          "source_type": "first-party-lab",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "aws-machine-learning-blog:8fa3089824df1f197189",
+          "event_id": "governed-mcp-tool-authorization",
+          "title": "Implementing defense-in-depth authorization for MCP tools on Amazon Quick",
+          "summary": "Learn how to enforce defense-in-depth authorization for Model Context Protocol (MCP) tools on Amazon Quick. This walkthrough wires Microsoft Entra ID group and claims-based JWTs through an Amazon Bedrock AgentCore Gateway interceptor to apply per-user, per-tool role-based and attribute-based access control, with a server-side check and an immutable audit trail.",
+          "url": "https://aws.amazon.com/blogs/machine-learning/implementing-defense-in-depth-authorization-for-mcp-tools-on-amazon-quick/",
+          "published_at": "2026-09-17T15:30:17+00:00",
+          "source_id": "aws-machine-learning-blog",
+          "source_name": "AWS Machine Learning Blog",
+          "source_type": "first-party-lab",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "aws-machine-learning-blog:fe2475d963a81fbb0dda",
+          "event_id": "evaluated-hcls-agent-skills",
+          "title": "Improving HCLS AI reasoning with open-source agent skills",
+          "summary": "AI agents on foundation models often misapply healthcare and life sciences decision frameworks, citing the right guideline but applying it incorrectly. This post shares 38 open-source agent skills across 11 HCLS domains that close this gap, with installation steps, three worked use cases, and a 410-prompt evaluation showing a 70-86% win rate.",
+          "url": "https://aws.amazon.com/blogs/machine-learning/improving-hcls-ai-reasoning-with-open-source-agent-skills/",
+          "published_at": "2026-09-16T19:00:00+00:00",
+          "source_id": "aws-machine-learning-blog",
+          "source_name": "AWS Machine Learning Blog",
+          "source_type": "first-party-lab",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.21749v1",
+          "event_id": "graph-structured-skill-optimization",
+          "title": "GraphSkillEvo: Evolutionary Optimization of Graph-Structured Agent Skills",
+          "summary": "Skills can improve the performance of Large Language Model (LLM) agents by providing task-specific procedural guidance, while skill optimization further improves their effectiveness through iterative refinement. However, existing skill optimization methods typically represent skills as unstructured natural-language instructions, creating two key challenges: 1) Unstructured skills often lack explicit workflow-level guidance and contain substantial redundancy, making them difficult for LLMs to execute; 2) the vast search space of unconstrained natural-language skills makes skill optimization ineffective. To address these challenges, we propose representing skills as graph-structured natural-language artifacts. In graph-structured skills, each node represents an execution step together with its operational guidance, while directed edges encode context-dependent transitions between steps. Compared to unstructured skills, graph-structured skills can provide clear workflow-level guidance. Moreover, the proposed graph-structured skill can also facilitate skill optimization. Building on this structured representation, we introduce GraphSkillEvo, a population-based evolutionary optimization",
+          "url": "http://arxiv.org/abs/2609.21749v1",
+          "published_at": "2026-09-18T13:24:33Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
           "id": "alphasignal:trend:skills-plugins-mcp-and-harnesses",
           "event_id": "alphasignal-modular-stack-synthesis",
           "title": "Skills, plugins, MCP and harnesses",
@@ -352,6 +416,23 @@
           "exclusion_reason": null
         },
         {
+          "id": "simon-willison:e133d02a1d698c5d1f75",
+          "event_id": "mcp-boundary-versus-direct-api-critique",
+          "title": "MCP was always a bad idea?",
+          "summary": "My comment on MCP was always a bad idea? — Hacker News. This article entirely misses the value that MCP brings today. Sure, there's almost no reason to use MCPs if you are running a full-blown terminal agent (Claude Code, Codex, Meta Muse, OpenClaw etc) with unfettered internet access - just let it call APIs directly. If you want to operate something that's less YOLO than that, you'll find yourself wanting: Control over exactly which external services it can access A way to handle authentication that doesn't allow the agent to directly access API keys A sensible UI to allow users to connect and authenticate further services Strong audit logging for what's going on MCP makes all of that so much easier to provide. Thinking MCP is obsolete because full coding agents don't need it misses out on all of the other things we might want to build. Tags: hacker-news , model-context-protocol",
+          "url": "https://simonwillison.net/2026/Sep/20/hn-49779718/",
+          "published_at": "2026-09-20T20:24:41+00:00",
+          "source_id": "simon-willison",
+          "source_name": "Simon Willison's Weblog",
+          "source_type": "practitioner-blog",
+          "relationship": "counterevidence",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
           "id": "arxiv:2609.21843v1",
           "event_id": "westermo-single-versus-multi-agent",
           "title": "Supporting Industrial Test-Failure Analysis with LLM-Based Systems: An Experience Report",
@@ -370,9 +451,9 @@
         }
       ],
       "gate_inputs": {
-        "qualifying_events": 6,
-        "technical_artifacts": 6,
-        "independent_organizations": 5,
+        "qualifying_events": 10,
+        "technical_artifacts": 10,
+        "independent_organizations": 8,
         "persistence_cycles": 3,
         "counterevidence_reviewed": true,
         "cost_of_absence_evidenced": false,
@@ -581,6 +662,168 @@
       }
     },
     {
+      "id": "governed-proprietary-data-boundary",
+      "title": "Governed proprietary data boundary",
+      "requirement": "Startups handling proprietary or regulated data should keep the source-of-truth data behind a governed boundary and expose only permitted context or computation to replaceable models.",
+      "description": "The company-controlled data layer remains separate from the model provider. Agents and models receive scoped context through permission-aware retrieval, tools, or protected computation rather than unrestricted copies of the underlying corpus. Training use, retention, deletion, human access, execution location, and downstream writes are treated as distinct controls that can be audited and changed without moving the source of truth.",
+      "what_it_looks_like": [
+        "Keep sensitive records in company-controlled systems and issue least-privilege, task-scoped access to models and agents.",
+        "Record provider-specific rules for training use, retention, deletion, human access, subprocessors, regional execution, and fine-tuning.",
+        "Add exfiltration controls, audit trails, revocation, and a model-provider exit path around every workflow that touches proprietary data."
+      ],
+      "applicable_to": "Startups handling customer-confidential, regulated, security-sensitive, or uniquely valuable workflow data; public-data prototypes may not need the full boundary.",
+      "source_analysis": "early-signal-tracker/enterprise-data-boundary",
+      "maturity": "experimental",
+      "confidence": "moderate",
+      "concentration": "moderate",
+      "assessments": {
+        "evidence_independence": "moderate",
+        "market_pull": "moderate",
+        "operational_adoption": "low",
+        "technical_reality": "moderate"
+      },
+      "rationale": "A detailed Benchling deployment demonstrates tenant isolation and exfiltration controls, while federated execution and trusted-computation research make the architecture technically credible. Provider and partnership announcements show market pull but do not independently verify contractual training exclusion, retention, deletion, or human-access guarantees. CIPL is retained as counterevidence because scoped internal components can still leak recoverable information through observable channels. The requirement is therefore experimental rather than emerging: the control pattern is actionable, but repeatable independent operating adoption has not been demonstrated.",
+      "next_gate": {
+        "maturity": "emerging",
+        "failures": [
+          "operational_adoption is low; requires moderate"
+        ]
+      },
+      "evidence_gaps": [
+        "Customer-controlled audits of training exclusion, retention, deletion, human access, subprocessors, and regional execution.",
+        "Independent deployments reporting exfiltration incidents, permission failures, portability, latency, and operating cost.",
+        "Comparative evidence showing when governed hosted access is sufficient and when local, sovereign, or confidential execution is necessary."
+      ],
+      "evidence": [
+        {
+          "id": "aws-machine-learning-blog:2335ca1a4875d9c28b23",
+          "event_id": "benchling-agentcore-data-isolation",
+          "title": "How Benchling secured multi-tenant AI agents with Amazon Bedrock AgentCore",
+          "summary": "Learn how Benchling built a defense-in-depth security architecture to run untrusted, AI agent-generated scientific code across thousands of life sciences tenants using Amazon Bedrock AgentCore Code Interpreter in VPC mode, combined with Amazon Route 53 Resolver DNS Firewall and VPC endpoint policies to block data exfiltration, including through DNS.",
+          "url": "https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/",
+          "published_at": "2026-09-21T16:27:34+00:00",
+          "source_id": "aws-machine-learning-blog",
+          "source_name": "AWS Machine Learning Blog",
+          "source_type": "first-party-lab",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.21728v1",
+          "event_id": "tee-digital-computation-rights",
+          "title": "Verifiable Computation with Trusted Execution Environments and On-Chain Digital Rights Tokens",
+          "summary": "We present an architecture that enables data owners to combine private data into data pools using Trusted Execution Environments (TEEs) and manage these pools by issuing narrowly scoped computational rights, encoded as Digital Rights Tokens (DRTs), to third-party data analysts. Each DRT binds specific open-source code to a pool and is issued and redeemed on a distributed ledger. Data analysts can obtain the right to execute open-source code on the combined sealed data inside a TEE and receive the result from this code execution, but not the underlying data. We argue for a control-centric view of privacy in which creators retain ex ante control over how their data is processed. A reference implementation runs WebAssembly (WASM)/Python jobs over sealed datasets and records redemptions on Solana, illustrating the feasibility and limitations of the platform.",
+          "url": "http://arxiv.org/abs/2609.21728v1",
+          "published_at": "2026-09-18T13:05:29Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "nvidia-developer-blog:c6cbeb9f9f96e88e05d7",
+          "event_id": "nvidia-flare-federated-execution",
+          "title": "Scaling Federated Learning Across Docker, Kubernetes, and Slurm with NVIDIA FLARE",
+          "summary": "Federated learning (FL) projects often begin with a straightforward setup: one server, a few clients, and one dataset at each site. As those projects grow, the...",
+          "url": "https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare/",
+          "published_at": "2026-09-15T15:00:00Z",
+          "source_id": "nvidia-developer-blog",
+          "source_name": "NVIDIA Developer Blog",
+          "source_type": "first-party-lab",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "openai-news:192794312f979cbd50ee",
+          "event_id": "astra-law-confidential-data-controls",
+          "title": "Introducing Astra for Law",
+          "summary": "OpenAI for Law brings frontier intelligence for law, custom firm workflows, connected legal data sources, and legal-grade controls for confidential client work.",
+          "url": "https://openai.com/index/astra-for-law",
+          "published_at": "2026-09-17T00:00:00+00:00",
+          "source_id": "openai-news",
+          "source_name": "OpenAI News",
+          "source_type": "first-party-lab",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "operational_adoption",
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "mistral-news:830fb9aa9b114f2dafe7",
+          "event_id": "cloudera-mistral-sovereign-enterprise-ai",
+          "title": "Cloudera and Mistral Partner for Sovereign Enterprise AI",
+          "summary": "Cloudera and Mistral join forces to bring specialized, sovereign AI intelligence to enterprise data, helping regulated industries innovate on their own terms.",
+          "url": "https://mistral.ai/news/mistral-x-cloudera/",
+          "published_at": "2026-09-10T15:02:24.715Z",
+          "source_id": "mistral-news",
+          "source_name": "Mistral AI News",
+          "source_type": "first-party-lab",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "operational_adoption",
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "anthropic-news-research:f4efc55098543f59e5e3",
+          "event_id": "anthropic-privacy-preserving-research-access",
+          "title": "Enabling independent research on how people use Claude",
+          "summary": "Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.",
+          "url": "https://www.anthropic.com/research/enabling-independent-research",
+          "published_at": "2026-09-11T16:57:50.000Z",
+          "source_id": "anthropic-news-research",
+          "source_name": "Anthropic News & Research",
+          "source_type": "first-party-lab",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.21686v1",
+          "event_id": "cipl-recoverable-agent-privacy-leakage",
+          "title": "CIPL: A Channel-Aware Framework for Recoverable Privacy Leakage in LLM Agents",
+          "summary": "Privacy leakage in LLM agents is commonly evaluated within individual components such as memory, retrieval, or tool-use pipelines, which makes it difficult to distinguish internal exposure from information that an external observer can actually recover. We present CIPL (Channel Inversion for Privacy Leakage), a channel-aware evaluation framework for black-box privacy leakage in LLM agents. CIPL represents a target through sensitive source, selection, assembly, execution, observation, and extraction stages and evaluates the transition from selected sensitive units to attacker-recoverable output under a shared protocol. Experiments across memory-based, retrieval-mediated, and tool-mediated targets, together with a BrowserUse live-agent case study, show that storage labels alone do not determine recoverability. Memory targets form a near-saturated reference case, retrieval-mediated leakage is frequently partial, and tool-mediated and live-agent leakage varies strongly with observation surface, prompt-to-channel alignment, retrieval depth, and provider behavior. A stratified semantic audit further identifies attacker-useful disclosures that canonical exact matching misses. CIPL therefo",
+          "url": "http://arxiv.org/abs/2609.21686v1",
+          "published_at": "2026-09-18T12:23:41Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "counterevidence",
+          "dimensions": [
+            "technical_reality",
+            "operational_adoption"
+          ],
+          "exclusion_reason": null
+        }
+      ],
+      "gate_inputs": {
+        "qualifying_events": 3,
+        "technical_artifacts": 3,
+        "independent_organizations": 6,
+        "persistence_cycles": 2,
+        "counterevidence_reviewed": true,
+        "cost_of_absence_evidenced": false,
+        "practical_minimum_available": true
+      }
+    },
+    {
       "id": "heterogeneous-model-routing",
       "title": "Heterogeneous model routing",
       "requirement": "AI systems should route work across heterogeneous models and inference paths.",
@@ -601,7 +844,7 @@
         "operational_adoption": "low",
         "technical_reality": "moderate"
       },
-      "rationale": "Three independent technical systems demonstrate model-, precision-, or endpoint-level routing, while OpenRouter's acquisition and specialized-inference investment activity raise market pull to moderate. The review explicitly excludes frontier-cluster financing because supplier capacity is not evidence that an application startup needs a routing layer. The selected evidence still does not establish repeatable production adoption or superior operating economics across independent companies.",
+      "rationale": "Four independent technical systems demonstrate model-, precision-, endpoint-, or quantized-runtime selection, while expanding open-weight availability makes a heterogeneous model portfolio more practical. The review explicitly excludes frontier-cluster financing because supplier capacity is not evidence that an application startup needs a routing layer. The selected evidence still does not establish repeatable production adoption or superior operating economics across independent companies.",
       "next_gate": {
         "maturity": "emerging",
         "failures": [
@@ -656,6 +899,22 @@
           "source_id": "arxiv",
           "source_name": "arXiv",
           "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "huggingface-blog:689d78c6e007ab8e2c4f",
+          "event_id": "transformers-llamacpp-quantized-runtime",
+          "title": "Transformers now runs llama.cpp quants",
+          "summary": "",
+          "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+          "published_at": "2026-09-22T00:00:00+00:00",
+          "source_id": "huggingface-blog",
+          "source_name": "Hugging Face Blog",
+          "source_type": "first-party-lab",
           "relationship": "direct-support",
           "dimensions": [
             "technical_reality"
@@ -761,6 +1020,39 @@
           "exclusion_reason": null
         },
         {
+          "id": "aws-machine-learning-blog:e2c6e3c192e8183542dd",
+          "event_id": "kimi-k3-open-weight-bedrock",
+          "title": "Introducing Kimi K3 on Amazon Bedrock",
+          "summary": "Kimi K3 from Moonshot AI is now available on Amazon Bedrock, giving you a powerful new open-weight option for coding and knowledge work. It offers native vision, a 1-million-token context window, and explicit prompt caching to reduce latency and input costs.",
+          "url": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-on-amazon-bedrock/",
+          "published_at": "2026-09-18T16:52:01+00:00",
+          "source_id": "aws-machine-learning-blog",
+          "source_name": "AWS Machine Learning Blog",
+          "source_type": "first-party-lab",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality",
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "interconnects:43bf4602833d95a55b19",
+          "event_id": "current-open-model-balance",
+          "title": "The current balance of power in open models",
+          "summary": "The expanded form of a testimony I prepared for Congress.",
+          "url": "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
+          "published_at": "2026-09-21T11:56:56+00:00",
+          "source_id": "interconnects",
+          "source_name": "Interconnects",
+          "source_type": "expert-newsletter",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "market_pull"
+          ],
+          "exclusion_reason": null
+        },
+        {
           "id": "interconnects:9347a64bc25f44ccdf21",
           "event_id": "interconnects-open-model-recap",
           "title": "Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC speech, distillation, the open-closed gap, and what's next",
@@ -834,9 +1126,9 @@
         }
       ],
       "gate_inputs": {
-        "qualifying_events": 3,
-        "technical_artifacts": 3,
-        "independent_organizations": 3,
+        "qualifying_events": 4,
+        "technical_artifacts": 4,
+        "independent_organizations": 4,
         "persistence_cycles": 1,
         "counterevidence_reviewed": false,
         "cost_of_absence_evidenced": false,

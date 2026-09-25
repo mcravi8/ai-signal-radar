@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-23T20:46:51.025545+00:00",
-    "as_of": "2026-09-23",
+    "generated_at": "2026-09-25T06:54:45.048329+00:00",
+    "as_of": "2026-09-25",
     "policy_version": 1,
     "baseline_cycle": false,
     "candidate_pool_count": 36,
@@ -12,13 +12,14 @@
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 1,
-    "assessment_queue_count": 5,
-    "adjudication_count": 4,
-    "requirement_change_count": 0
+    "materially_changed_count": 0,
+    "assessment_queue_count": 0,
+    "adjudication_count": 9,
+    "requirement_change_count": 3,
+    "idempotent_regeneration": true
   },
   "summary": {
-    "headline": "4 candidate decisions are recorded; 5 candidates remain in the bounded assessment queue.",
+    "headline": "9 candidate decisions are recorded; 0 candidates remain in the bounded assessment queue.",
     "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement."
   },
   "selection_policy": {
@@ -39,682 +40,6 @@
     "commitment_boundary": "A reviewer must update the calibrated case record before the Operating Model can change."
   },
   "candidate_pool": [
-    {
-      "id": "theme:robotics-embodied-ai",
-      "origin": "cross-source-theme",
-      "title": "Robotics & embodied AI",
-      "description": "Models, datasets, simulations, and control systems that connect learned intelligence to physical sensing and action.",
-      "source_analysis": "themes/robotics-embodied-ai",
-      "theme_ids": [
-        "robotics-embodied-ai"
-      ],
-      "evidence_ids": [
-        "alphasignal:trend:robotics-and-embodied-ai",
-        "arxiv:2609.21751v1",
-        "arxiv:2609.20820v1",
-        "arxiv:2609.20776v1",
-        "arxiv:2609.20761v1",
-        "arxiv:2609.20756v1",
-        "arxiv:2609.20659v1",
-        "arxiv:2609.20414v1",
-        "nvidia-developer-blog:5d6d93f42d6ca9b84a08",
-        "greylock-essays:4db96be55ee28289e4fd",
-        "radical-ventures:002cb1815fb8b4589802",
-        "hf-paper:2607.08448",
-        "yc-job:97722",
-        "hf-paper:2506.01844",
-        "yc-company:35850",
-        "yc-company:32206"
-      ],
-      "stage": "corroborated",
-      "movement": "new",
-      "metrics": {
-        "evidence_count": 16,
-        "source_count": 8,
-        "source_types": [
-          "company-directory",
-          "first-party-lab",
-          "investor-essay",
-          "job-posting",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation"
-        ],
-        "recent_evidence_count": 9,
-        "technical_record_count": 8,
-        "family_count": 7,
-        "trend_score": 69.7
-      },
-      "linked_requirements": [
-        {
-          "id": "simulation-first-physical-ai",
-          "title": "Simulation-first physical AI development",
-          "maturity": "experimental"
-        }
-      ],
-      "linked_requirement": {
-        "id": "simulation-first-physical-ai",
-        "title": "Simulation-first physical AI development",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 25,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 10,
-        "total": 100
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:robotics-embodied-ai",
-        "reviewed_at": "2026-09-22",
-        "outcome": "conditional-requirement-added",
-        "requirement_ids": [
-          "simulation-first-physical-ai"
-        ],
-        "decision": "Add a conditional requirement for physical-AI startups, not a universal startup requirement.",
-        "rationale": "Robotics activity is broad enough to deserve an operating conclusion, but the actionable requirement is narrower than the theme: physical-AI teams should use simulation, staged real-world validation, and explicit sim-to-real checks before scaling autonomous deployment.",
-        "status": "current"
-      },
-      "review_action": "conditional-requirement-added"
-    },
-    {
-      "id": "theme:agent-harnesses",
-      "origin": "cross-source-theme",
-      "title": "Agent harnesses",
-      "description": "Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.",
-      "source_analysis": "themes/agent-harnesses",
-      "theme_ids": [
-        "agent-harnesses"
-      ],
-      "evidence_ids": [
-        "aws-machine-learning-blog:16b9772b96509775d2ea",
-        "hn:49785562",
-        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
-        "alphasignal:trend:agent-orchestration-and-autonomy",
-        "bluesky:1278ebf77949:3mvxrv6krzs22",
-        "arxiv:2609.21944v1",
-        "arxiv:2609.21859v1",
-        "arxiv:2609.21843v1",
-        "hf-paper:2609.21465",
-        "arxiv:2609.20620v1",
-        "aws-machine-learning-blog:5d4f323bd0d514800a8a",
-        "arxiv:2609.20519v1",
-        "arxiv:2609.20474v1",
-        "hf-paper:2609.20519",
-        "arxiv:2609.16305",
-        "github:1370498337",
-        "hf-paper:2609.15364",
-        "hf-paper:2609.14858",
-        "github:1365776373",
-        "greylock-essays:aacd57b6bec14e3c9da1"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "rising",
-      "metrics": {
-        "evidence_count": 56,
-        "source_count": 13,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 14,
-        "technical_record_count": 34,
-        "family_count": 11,
-        "trend_score": 79.4
-      },
-      "linked_requirements": [
-        {
-          "id": "modular-agent-operating-stack",
-          "title": "Modular agent operating stack",
-          "maturity": "emerging"
-        }
-      ],
-      "linked_requirement": {
-        "id": "modular-agent-operating-stack",
-        "title": "Modular agent operating stack",
-        "maturity": "emerging"
-      },
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 10,
-        "total": 97
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:agent-harnesses",
-        "reviewed_at": "2026-09-22",
-        "outcome": "covered-by-existing-requirement",
-        "requirement_ids": [
-          "modular-agent-operating-stack"
-        ],
-        "decision": "Do not create a duplicate requirement.",
-        "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 56,
-          "links_added": 4,
-          "finding": "Component-level harness experiments strengthen technical reality, but an industrial comparison found a single-agent baseline faster and cheaper without a consistent quality loss. The linked requirement remains emerging and explicitly conditional."
-        },
-        "status": "current"
-      },
-      "review_action": "covered-by-existing-requirement"
-    },
-    {
-      "id": "theme:coding-agents",
-      "origin": "cross-source-theme",
-      "title": "Coding agents & developer tooling",
-      "description": "AI systems that search repositories, write and review code, run tools, validate changes, and participate in software delivery.",
-      "source_analysis": "themes/coding-agents",
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "evidence_ids": [
-        "alphasignal:ed11042f47b8f05c3ace",
-        "alphasignal:cec6f55c7deff2c8dfc5",
-        "hn:49790729",
-        "hn:49789356",
-        "hn:49785853",
-        "hn:49783713",
-        "hn:49781554",
-        "alphasignal:trend:coding-agents-and-developer-tooling",
-        "simon-willison:e133d02a1d698c5d1f75",
-        "simon-willison:f9d4182cc1e12525793a",
-        "hn:49768826",
-        "arxiv:2609.22068v1",
-        "arxiv:2609.22049v1",
-        "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
-        "hn:49744416",
-        "arxiv:2609.20822v1",
-        "arxiv:2609.20812v1",
-        "arxiv:2609.20804v1",
-        "arxiv:2609.20519v1",
-        "arxiv:2609.20446v1"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "rising",
-      "metrics": {
-        "evidence_count": 62,
-        "source_count": 14,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 21,
-        "technical_record_count": 31,
-        "family_count": 12,
-        "trend_score": 84.6
-      },
-      "linked_requirements": [
-        {
-          "id": "evaluation-release-gates",
-          "title": "Evaluation and release gates",
-          "maturity": "experimental"
-        },
-        {
-          "id": "bounded-workflow-ownership",
-          "title": "Bounded workflow ownership",
-          "maturity": "narrative"
-        }
-      ],
-      "linked_requirement": {
-        "id": "evaluation-release-gates",
-        "title": "Evaluation and release gates",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 10,
-        "total": 97
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:coding-agents",
-        "reviewed_at": "2026-09-22",
-        "outcome": "domain-signal-not-separate-requirement",
-        "requirement_ids": [
-          "evaluation-release-gates",
-          "bounded-workflow-ownership"
-        ],
-        "decision": "Treat coding agents as an application domain, not a standalone operating requirement.",
-        "rationale": "Coding agents make release gates and bounded workflow ownership more urgent, but \"use coding agents\" is not a defensible universal requirement. The reusable operating obligations are verified completion, constrained actions, review, rollback, and measurable workflow outcomes.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 62,
-          "links_added": 5,
-          "finding": "Failure and adoption evidence strengthens the case for independent release gates, while frequent overclaiming and weak verification practice prevent bounded workflow ownership from advancing beyond narrative maturity."
-        },
-        "status": "current"
-      },
-      "review_action": "domain-signal-not-separate-requirement"
-    },
-    {
-      "id": "early:modular-agent-stack",
-      "origin": "early-signal",
-      "title": "The agent stack is separating into modular operating layers",
-      "description": "Models are becoming replaceable components inside a larger system of harnesses, reusable skills, execution environments, and assurance controls.",
-      "source_analysis": "early-signal-tracker/modular-agent-stack",
-      "theme_ids": [
-        "agent-harnesses",
-        "assurance-infrastructure",
-        "skills-integrations"
-      ],
-      "evidence_ids": [
-        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
-        "aws-machine-learning-blog:5d4f323bd0d514800a8a",
-        "arxiv:2609.20519v1",
-        "hf-paper:2609.20519",
-        "github:1370498337",
-        "greylock-essays:aacd57b6bec14e3c9da1",
-        "arxiv:2609.16305",
-        "github:1365776373"
-      ],
-      "stage": "established",
-      "movement": "accelerating",
-      "metrics": {
-        "evidence_count": 8,
-        "source_count": 6,
-        "source_types": [
-          "first-party-lab",
-          "investor-essay",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 4,
-        "technical_record_count": 5,
-        "family_count": 5,
-        "technical_family_count": 3
-      },
-      "linked_requirements": [
-        {
-          "id": "modular-agent-operating-stack",
-          "title": "Modular agent operating stack",
-          "maturity": "emerging"
-        }
-      ],
-      "linked_requirement": {
-        "id": "modular-agent-operating-stack",
-        "title": "Modular agent operating stack",
-        "maturity": "emerging"
-      },
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 15,
-        "new_evidence": 16,
-        "operating_relevance": 10,
-        "total": 88
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "review-existing-requirement"
-    },
-    {
-      "id": "theme:multimodal-3d",
-      "origin": "cross-source-theme",
-      "title": "Multimodal generation & 3D",
-      "description": "Systems that generate, edit, understand, or reconstruct images, video, spatial scenes, avatars, and three-dimensional environments.",
-      "source_analysis": "themes/multimodal-3d",
-      "theme_ids": [
-        "multimodal-3d"
-      ],
-      "evidence_ids": [
-        "alphasignal:46d0001edf2628fce6c2",
-        "alphasignal:trend:multimodal-generation-and-3d",
-        "arxiv:2609.22055v1",
-        "arxiv:2609.22008v1",
-        "arxiv:2609.21906v1",
-        "arxiv:2609.21879v1",
-        "arxiv:2609.21849v1",
-        "arxiv:2609.21755v1",
-        "arxiv:2609.21748v1",
-        "hf-paper:2609.21465",
-        "arxiv:2609.20820v1",
-        "arxiv:2609.20817v1",
-        "arxiv:2609.20816v1",
-        "arxiv:2609.20800v1",
-        "arxiv:2609.20744v1",
-        "arxiv:2609.20723v1",
-        "hf-paper:2609.16679",
-        "hf-paper:2609.11638",
-        "hf-paper:2609.10522",
-        "github:1361693766"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "rising",
-      "metrics": {
-        "evidence_count": 46,
-        "source_count": 10,
-        "source_types": [
-          "company-directory",
-          "curated-newsletter",
-          "expert-social",
-          "investor-essay",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 16,
-        "technical_record_count": 27,
-        "family_count": 10,
-        "trend_score": 78.6
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 87
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "early:enterprise-data-boundary",
-      "origin": "early-signal",
-      "title": "Proprietary enterprise data is moving behind a governed model boundary",
-      "description": "Firms will keep proprietary data in systems they control and expose only permitted context or computation to replaceable models, rather than contributing that data to general model training.",
-      "source_analysis": "early-signal-tracker/enterprise-data-boundary",
-      "theme_ids": [
-        "assurance-infrastructure",
-        "document-knowledge-systems",
-        "enterprise-vertical-ai",
-        "open-local-inference",
-        "operational-ontology"
-      ],
-      "evidence_ids": [
-        "aws-machine-learning-blog:2335ca1a4875d9c28b23",
-        "hn:49787614",
-        "arxiv:2609.21829v1",
-        "openai-news:192794312f979cbd50ee",
-        "nvidia-developer-blog:c6cbeb9f9f96e88e05d7",
-        "anthropic-news-research:f4efc55098543f59e5e3",
-        "mistral-news:830fb9aa9b114f2dafe7",
-        "arxiv:2609.21728v1"
-      ],
-      "stage": "corroborating",
-      "movement": "accelerating",
-      "metrics": {
-        "evidence_count": 8,
-        "source_count": 7,
-        "source_types": [
-          "community",
-          "first-party-lab",
-          "paper"
-        ],
-        "recent_evidence_count": 5,
-        "technical_record_count": 7,
-        "family_count": 3,
-        "technical_family_count": 2
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 87
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 2
-    },
-    {
-      "id": "theme:skills-integrations",
-      "origin": "cross-source-theme",
-      "title": "Skills, protocols & integrations",
-      "description": "Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.",
-      "source_analysis": "themes/skills-integrations",
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "evidence_ids": [
-        "hn:49791228",
-        "hn:49791084",
-        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
-        "simon-willison:e133d02a1d698c5d1f75",
-        "hn:49779329",
-        "github:1376081650",
-        "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
-        "github:1375922101",
-        "arxiv:2609.21749v1",
-        "arxiv:2609.21686v1",
-        "aws-machine-learning-blog:8fa3089824df1f197189",
-        "arxiv:2609.20519v1",
-        "github:1374194303",
-        "hf-paper:2609.20519",
-        "alphasignal:project:wikiskill",
-        "aws-machine-learning-blog:fe2475d963a81fbb0dda",
-        "arxiv:2609.16305",
-        "hf-paper:2609.15779",
-        "github:1367068508",
-        "github:1366280840"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "rising",
-      "metrics": {
-        "evidence_count": 74,
-        "source_count": 15,
-        "source_types": [
-          "community",
-          "company-directory",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter-analysis",
-          "operator-essay",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 15,
-        "technical_record_count": 54,
-        "family_count": 11,
-        "trend_score": 87.0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 87
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 1
-    },
-    {
-      "id": "theme:small-specialized-models",
-      "origin": "cross-source-theme",
-      "title": "Small & specialized models",
-      "description": "Compact or task-specific models optimized for cost, latency, privacy, or a narrow operational decision.",
-      "source_analysis": "themes/small-specialized-models",
-      "theme_ids": [
-        "small-specialized-models"
-      ],
-      "evidence_ids": [
-        "hn:49799641",
-        "hn:49795109",
-        "bluesky:b3614927c6a2:3mw2tsop42c2u",
-        "simon-willison:b3e5263fa8976c3c350c",
-        "latent-space:7409d5ffee8a2c05841b",
-        "hn:49791429",
-        "hn:49790936",
-        "hn:49789538",
-        "hn:49788903",
-        "hn:49788260",
-        "hn:49787404",
-        "hn:49786725",
-        "hn:49786635",
-        "hn:49786578",
-        "hn:49786485",
-        "hn:49786471",
-        "github:1379574728",
-        "hn:49784706",
-        "hn:49783999",
-        "hn:49783806"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "rising",
-      "metrics": {
-        "evidence_count": 75,
-        "source_count": 12,
-        "source_types": [
-          "community",
-          "curated-newsletter",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 59,
-        "technical_record_count": 31,
-        "family_count": 10,
-        "trend_score": 80.5
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 87
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "theme:training-self-improvement",
-      "origin": "cross-source-theme",
-      "title": "Training, evaluation & self-improvement",
-      "description": "Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.",
-      "source_analysis": "themes/training-self-improvement",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "evidence_ids": [
-        "alphasignal:ed11042f47b8f05c3ace",
-        "alphasignal:cec6f55c7deff2c8dfc5",
-        "hn:49791343",
-        "hn:49788178",
-        "hn:49786635",
-        "hn:49783224",
-        "alphasignal:trend:training-evaluation-and-self-improvement",
-        "nvidia-developer-blog:127a999e24da184d5065",
-        "arxiv:2609.22086v1",
-        "arxiv:2609.22076v1",
-        "arxiv:2609.22068v1",
-        "arxiv:2609.22064v1",
-        "arxiv:2609.22056v1",
-        "arxiv:2609.22055v1",
-        "arxiv:2609.22053v1",
-        "arxiv:2609.22041v1",
-        "arxiv:2609.22038v1",
-        "arxiv:2609.22000v1",
-        "arxiv:2609.21989v1",
-        "arxiv:2609.21962v1"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "rising",
-      "metrics": {
-        "evidence_count": 161,
-        "source_count": 27,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "job-posting",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 64,
-        "technical_record_count": 101,
-        "family_count": 14,
-        "trend_score": 100.0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 87
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
     {
       "id": "theme:voice-audio",
       "origin": "cross-source-theme",
@@ -765,10 +90,189 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 9,
+        "recent_evidence_count": 7,
         "technical_record_count": 11,
         "family_count": 12,
         "trend_score": 80.0
+      },
+      "linked_requirements": [
+        {
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        },
+        {
+          "id": "bounded-workflow-ownership",
+          "title": "Bounded workflow ownership",
+          "maturity": "narrative"
+        }
+      ],
+      "linked_requirement": {
+        "id": "evaluation-release-gates",
+        "title": "Evaluation and release gates",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 97
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:voice-audio",
+        "reviewed_at": "2026-09-24",
+        "outcome": "modality-signal-not-general-requirement",
+        "requirement_ids": [
+          "evaluation-release-gates",
+          "bounded-workflow-ownership"
+        ],
+        "decision": "Treat voice as a conditional interface and workflow domain, not a general startup operating requirement.",
+        "rationale": "Voice is technically credible and increasingly usable, but adoption depends on the user, environment, latency tolerance, accessibility needs, and workflow economics. Startups that choose voice inherit the existing obligations for verified completion, escalation, consent, fraud resistance, and measurable workflow outcomes; other startups should not add voice merely because the modality is advancing.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 23,
+          "links_added": 0,
+          "finding": "Full-duplex models, self-hosted stacks, multilingual systems, and practitioner tooling show strong capability breadth. The corpus does not establish that voice is a default operating layer, and impersonation risk plus domain-specific recognition failures make it unsuitable as a universal requirement."
+        },
+        "status": "current"
+      },
+      "review_action": "modality-signal-not-general-requirement"
+    },
+    {
+      "id": "early:enterprise-data-boundary",
+      "origin": "early-signal",
+      "title": "Proprietary enterprise data is moving behind a governed model boundary",
+      "description": "Firms will keep proprietary data in systems they control and expose only permitted context or computation to replaceable models, rather than contributing that data to general model training.",
+      "source_analysis": "early-signal-tracker/enterprise-data-boundary",
+      "theme_ids": [
+        "assurance-infrastructure",
+        "document-knowledge-systems",
+        "enterprise-vertical-ai",
+        "open-local-inference",
+        "operational-ontology"
+      ],
+      "evidence_ids": [
+        "aws-machine-learning-blog:2335ca1a4875d9c28b23",
+        "hn:49787614",
+        "arxiv:2609.21829v1",
+        "openai-news:192794312f979cbd50ee",
+        "nvidia-developer-blog:c6cbeb9f9f96e88e05d7",
+        "anthropic-news-research:f4efc55098543f59e5e3",
+        "mistral-news:830fb9aa9b114f2dafe7",
+        "arxiv:2609.21728v1"
+      ],
+      "stage": "corroborating",
+      "movement": "accelerating",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 7,
+        "source_types": [
+          "community",
+          "first-party-lab",
+          "paper"
+        ],
+        "recent_evidence_count": 4,
+        "technical_record_count": 7,
+        "family_count": 3,
+        "technical_family_count": 2
+      },
+      "linked_requirements": [
+        {
+          "id": "governed-proprietary-data-boundary",
+          "title": "Governed proprietary data boundary",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "governed-proprietary-data-boundary",
+        "title": "Governed proprietary data boundary",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 16,
+        "operating_relevance": 10,
+        "total": 93
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "early:enterprise-data-boundary",
+        "reviewed_at": "2026-09-24",
+        "outcome": "conditional-requirement-added",
+        "requirement_ids": [
+          "governed-proprietary-data-boundary"
+        ],
+        "decision": "Add an experimental requirement for startups handling proprietary, regulated, or customer-confidential data.",
+        "rationale": "The actionable conclusion is not that every company must self-host a model. It is that the company-controlled data layer should remain separate from replaceable models, with explicit controls for scoped access, training use, retention, deletion, human access, execution, audit, and provider exit.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 8,
+          "links_added": 7,
+          "finding": "Benchling supplies one detailed tenant-isolation and exfiltration architecture; federated and trusted-computation systems make the pattern technically credible. Provider announcements show demand but do not verify contractual guarantees, while channel-level privacy leakage remains an unresolved counter-signal. The evidence clears experimental, not emerging, maturity."
+        },
+        "status": "current"
+      },
+      "review_action": "conditional-requirement-added"
+    },
+    {
+      "id": "theme:small-specialized-models",
+      "origin": "cross-source-theme",
+      "title": "Small & specialized models",
+      "description": "Compact or task-specific models optimized for cost, latency, privacy, or a narrow operational decision.",
+      "source_analysis": "themes/small-specialized-models",
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "evidence_ids": [
+        "hn:49799641",
+        "hn:49795109",
+        "bluesky:b3614927c6a2:3mw2tsop42c2u",
+        "simon-willison:b3e5263fa8976c3c350c",
+        "latent-space:7409d5ffee8a2c05841b",
+        "hn:49791429",
+        "hn:49790936",
+        "hn:49789538",
+        "hn:49788903",
+        "hn:49788260",
+        "hn:49787404",
+        "hn:49786725",
+        "hn:49786635",
+        "hn:49786578",
+        "hn:49786485",
+        "hn:49786471",
+        "github:1379574728",
+        "hn:49784706",
+        "hn:49783999",
+        "hn:49783806"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "rising",
+      "metrics": {
+        "evidence_count": 75,
+        "source_count": 12,
+        "source_types": [
+          "community",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 43,
+        "technical_record_count": 31,
+        "family_count": 10,
+        "trend_score": 80.5
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -780,15 +284,308 @@
         "operating_relevance": 0,
         "total": 87
       },
-      "change_reasons": [
-        "Lifecycle stage changed from corroborated-source-concentrated to broadly-corroborated",
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "queue_rank": 4,
-      "pending_from_previous_review": true
+      "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "theme:coding-agents",
+      "origin": "cross-source-theme",
+      "title": "Coding agents & developer tooling",
+      "description": "AI systems that search repositories, write and review code, run tools, validate changes, and participate in software delivery.",
+      "source_analysis": "themes/coding-agents",
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "evidence_ids": [
+        "alphasignal:ed11042f47b8f05c3ace",
+        "alphasignal:cec6f55c7deff2c8dfc5",
+        "hn:49790729",
+        "hn:49789356",
+        "hn:49785853",
+        "hn:49783713",
+        "hn:49781554",
+        "alphasignal:trend:coding-agents-and-developer-tooling",
+        "simon-willison:e133d02a1d698c5d1f75",
+        "simon-willison:f9d4182cc1e12525793a",
+        "hn:49768826",
+        "arxiv:2609.22068v1",
+        "arxiv:2609.22049v1",
+        "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
+        "hn:49744416",
+        "arxiv:2609.20822v1",
+        "arxiv:2609.20812v1",
+        "arxiv:2609.20804v1",
+        "arxiv:2609.20519v1",
+        "arxiv:2609.20446v1"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 62,
+        "source_count": 14,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 14,
+        "technical_record_count": 31,
+        "family_count": 12,
+        "trend_score": 84.6
+      },
+      "linked_requirements": [
+        {
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        },
+        {
+          "id": "bounded-workflow-ownership",
+          "title": "Bounded workflow ownership",
+          "maturity": "narrative"
+        }
+      ],
+      "linked_requirement": {
+        "id": "evaluation-release-gates",
+        "title": "Evaluation and release gates",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 83
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:coding-agents",
+        "reviewed_at": "2026-09-22",
+        "outcome": "domain-signal-not-separate-requirement",
+        "requirement_ids": [
+          "evaluation-release-gates",
+          "bounded-workflow-ownership"
+        ],
+        "decision": "Treat coding agents as an application domain, not a standalone operating requirement.",
+        "rationale": "Coding agents make release gates and bounded workflow ownership more urgent, but \"use coding agents\" is not a defensible universal requirement. The reusable operating obligations are verified completion, constrained actions, review, rollback, and measurable workflow outcomes.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 62,
+          "links_added": 5,
+          "finding": "Failure and adoption evidence strengthens the case for independent release gates, while frequent overclaiming and weak verification practice prevent bounded workflow ownership from advancing beyond narrative maturity."
+        },
+        "status": "current"
+      },
+      "review_action": "domain-signal-not-separate-requirement"
+    },
+    {
+      "id": "theme:open-local-inference",
+      "origin": "cross-source-theme",
+      "title": "Open, local & efficient inference",
+      "description": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
+      "source_analysis": "themes/open-local-inference",
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "evidence_ids": [
+        "alphasignal:a8def2376d665f117870",
+        "alphasignal:46d0001edf2628fce6c2",
+        "latent-space:c5ef439db94fe95e2aa5",
+        "huggingface-blog:689d78c6e007ab8e2c4f",
+        "bluesky:e810fac7fd93:3mvzupklbjz2u",
+        "bluesky:e810fac7fd93:3mvzo2lneqg2j",
+        "interconnects:43bf4602833d95a55b19",
+        "alphasignal:trend:open-local-models-and-inference-efficiency",
+        "aws-machine-learning-blog:e2c6e3c192e8183542dd",
+        "arxiv:2609.21967v1",
+        "arxiv:2609.21879v1",
+        "arxiv:2609.21857v1",
+        "arxiv:2609.21849v1",
+        "github:1375922101",
+        "arxiv:2609.21704v1",
+        "arxiv:2609.21672v1",
+        "bluesky:e810fac7fd93:3mvs4salrn72j",
+        "github:1374869789",
+        "arxiv:2609.20812v1",
+        "arxiv:2609.20807v1"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 92,
+        "source_count": 15,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 17,
+        "technical_record_count": 54,
+        "family_count": 11,
+        "trend_score": 83.8
+      },
+      "linked_requirements": [
+        {
+          "id": "heterogeneous-model-routing",
+          "title": "Heterogeneous model routing",
+          "maturity": "experimental"
+        },
+        {
+          "id": "governed-proprietary-data-boundary",
+          "title": "Governed proprietary data boundary",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "heterogeneous-model-routing",
+        "title": "Heterogeneous model routing",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 83
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:open-local-inference",
+        "reviewed_at": "2026-09-24",
+        "outcome": "covered-by-existing-requirements",
+        "requirement_ids": [
+          "heterogeneous-model-routing",
+          "governed-proprietary-data-boundary"
+        ],
+        "decision": "Treat open and local inference as an execution option, not a universal standalone requirement.",
+        "rationale": "Open weights, quantization, and local runtimes expand the available inference portfolio. They become operationally relevant when a task needs lower cost, lower latency, data control, offline behavior, or provider independence. Those decisions are already captured by heterogeneous routing and the governed proprietary-data boundary; requiring local inference everywhere would ignore quality, maintenance, and hardware tradeoffs.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 92,
+          "links_added": 3,
+          "finding": "Quantized runtime integration, adaptive inference research, and wider open-weight availability strengthen technical feasibility. The corpus still lacks independent production comparisons proving that local execution beats hosted inference after quality, operations, fallback, and hardware costs are included."
+        },
+        "status": "current"
+      },
+      "review_action": "covered-by-existing-requirements"
+    },
+    {
+      "id": "theme:skills-integrations",
+      "origin": "cross-source-theme",
+      "title": "Skills, protocols & integrations",
+      "description": "Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.",
+      "source_analysis": "themes/skills-integrations",
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "evidence_ids": [
+        "hn:49791228",
+        "hn:49791084",
+        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+        "simon-willison:e133d02a1d698c5d1f75",
+        "hn:49779329",
+        "github:1376081650",
+        "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
+        "github:1375922101",
+        "arxiv:2609.21749v1",
+        "arxiv:2609.21686v1",
+        "aws-machine-learning-blog:8fa3089824df1f197189",
+        "arxiv:2609.20519v1",
+        "github:1374194303",
+        "hf-paper:2609.20519",
+        "alphasignal:project:wikiskill",
+        "aws-machine-learning-blog:fe2475d963a81fbb0dda",
+        "arxiv:2609.16305",
+        "hf-paper:2609.15779",
+        "github:1367068508",
+        "github:1366280840"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 74,
+        "source_count": 15,
+        "source_types": [
+          "community",
+          "company-directory",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter-analysis",
+          "operator-essay",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 10,
+        "technical_record_count": 54,
+        "family_count": 11,
+        "trend_score": 87.0
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "linked_requirement": {
+        "id": "modular-agent-operating-stack",
+        "title": "Modular agent operating stack",
+        "maturity": "emerging"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 83
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:skills-integrations",
+        "reviewed_at": "2026-09-24",
+        "outcome": "covered-by-existing-requirement",
+        "requirement_ids": [
+          "modular-agent-operating-stack"
+        ],
+        "decision": "Do not create a separate requirement for skills, protocols, and integrations.",
+        "rationale": "Reusable skills and governed tool interfaces are one operating layer inside the modular agent stack. Splitting them into a second requirement would duplicate the existing obligations to version capabilities independently, constrain permissions, evaluate behavior, and preserve replaceable model and execution layers.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 74,
+          "links_added": 5,
+          "finding": "Evaluated domain skills, repeatable deployment skills, MCP authorization, and graph-structured skill optimization materially strengthen technical reality. Direct API and single-agent critiques remain valid counterevidence: an interoperability layer is useful when governance or reuse warrants it, not as mandatory ceremony for every simple workflow."
+        },
+        "status": "current"
+      },
+      "review_action": "covered-by-existing-requirement"
     },
     {
       "id": "early:heterogeneous-inference",
@@ -827,7 +624,7 @@
           "paper-curation",
           "repository"
         ],
-        "recent_evidence_count": 5,
+        "recent_evidence_count": 4,
         "technical_record_count": 3,
         "family_count": 4,
         "technical_family_count": 2
@@ -848,107 +645,14 @@
         "momentum": 22,
         "source_breadth": 25,
         "technical_support": 9,
-        "new_evidence": 20,
+        "new_evidence": 16,
         "operating_relevance": 10,
-        "total": 86
+        "total": 82
       },
       "change_reasons": [],
       "materially_changed": false,
       "adjudication": null,
       "review_action": "review-existing-requirement"
-    },
-    {
-      "id": "theme:frontier-inference-infrastructure",
-      "origin": "cross-source-theme",
-      "title": "Frontier inference infrastructure",
-      "description": "Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.",
-      "source_analysis": "themes/frontier-inference-infrastructure",
-      "theme_ids": [
-        "frontier-inference-infrastructure"
-      ],
-      "evidence_ids": [
-        "nvidia-developer-blog:837464fefd470eaa54f6",
-        "arxiv:2609.21827v1",
-        "arxiv:2609.21774v1",
-        "arxiv:2609.21704v1",
-        "arxiv:2609.20734v1",
-        "arxiv:2609.20614v1",
-        "arxiv:2609.20446v1",
-        "hf-paper:2609.18063",
-        "nvidia-developer-blog:f95e55a325c1d57f2115",
-        "nvidia-developer-blog:e7c3a6c0afb937549e09",
-        "nvidia-developer-blog:93db95fb6cd1a35dc083",
-        "nvidia-developer-blog:d14025c328b788abfb85",
-        "nvidia-developer-blog:e25568b4ce57971f1453",
-        "github:1347982389",
-        "nvidia-developer-blog:655e6fb2eee2feb6b510",
-        "github:1342935078",
-        "sequoia-essays:8a2fe18efd08a18eea8c",
-        "menlo-ventures:dfeaba0c266f13ed7f2c",
-        "the-batch:0b297472a2efbd99a896",
-        "hf-paper:2606.31227"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 29,
-        "source_count": 8,
-        "source_types": [
-          "company-directory",
-          "curated-newsletter",
-          "first-party-lab",
-          "investor-essay",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 7,
-        "technical_record_count": 20,
-        "family_count": 7,
-        "trend_score": 77.4
-      },
-      "linked_requirements": [
-        {
-          "id": "heterogeneous-model-routing",
-          "title": "Heterogeneous model routing",
-          "maturity": "experimental"
-        }
-      ],
-      "linked_requirement": {
-        "id": "heterogeneous-model-routing",
-        "title": "Heterogeneous model routing",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 10,
-        "total": 83
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:frontier-inference-infrastructure",
-        "reviewed_at": "2026-09-22",
-        "outcome": "infrastructure-signal-not-general-requirement",
-        "requirement_ids": [
-          "heterogeneous-model-routing"
-        ],
-        "decision": "Do not require ordinary startups to build frontier inference infrastructure.",
-        "rationale": "The evidence supports inference optimization and model-path selection, but frontier clusters are a supplier capability and a conditional concern for infrastructure companies. Most startups should consume this capability through routing, capacity, latency, and cost controls rather than own the underlying cluster.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 29,
-          "links_added": 6,
-          "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
-        },
-        "status": "revisit-required"
-      },
-      "review_action": "review-existing-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 3
     },
     {
       "id": "early:validation-as-release",
@@ -1016,6 +720,272 @@
       "review_action": "review-existing-requirement"
     },
     {
+      "id": "theme:frontier-inference-infrastructure",
+      "origin": "cross-source-theme",
+      "title": "Frontier inference infrastructure",
+      "description": "Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.",
+      "source_analysis": "themes/frontier-inference-infrastructure",
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
+      "evidence_ids": [
+        "nvidia-developer-blog:837464fefd470eaa54f6",
+        "arxiv:2609.21827v1",
+        "arxiv:2609.21774v1",
+        "arxiv:2609.21704v1",
+        "arxiv:2609.20734v1",
+        "arxiv:2609.20614v1",
+        "arxiv:2609.20446v1",
+        "hf-paper:2609.18063",
+        "nvidia-developer-blog:f95e55a325c1d57f2115",
+        "nvidia-developer-blog:e7c3a6c0afb937549e09",
+        "nvidia-developer-blog:93db95fb6cd1a35dc083",
+        "nvidia-developer-blog:d14025c328b788abfb85",
+        "nvidia-developer-blog:e25568b4ce57971f1453",
+        "github:1347982389",
+        "nvidia-developer-blog:655e6fb2eee2feb6b510",
+        "github:1342935078",
+        "sequoia-essays:8a2fe18efd08a18eea8c",
+        "menlo-ventures:dfeaba0c266f13ed7f2c",
+        "the-batch:0b297472a2efbd99a896",
+        "hf-paper:2606.31227"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 29,
+        "source_count": 8,
+        "source_types": [
+          "company-directory",
+          "curated-newsletter",
+          "first-party-lab",
+          "investor-essay",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 4,
+        "technical_record_count": 20,
+        "family_count": 7,
+        "trend_score": 77.4
+      },
+      "linked_requirements": [
+        {
+          "id": "heterogeneous-model-routing",
+          "title": "Heterogeneous model routing",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "heterogeneous-model-routing",
+        "title": "Heterogeneous model routing",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 16,
+        "operating_relevance": 10,
+        "total": 79
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:frontier-inference-infrastructure",
+        "reviewed_at": "2026-09-24",
+        "outcome": "infrastructure-signal-not-general-requirement",
+        "requirement_ids": [
+          "heterogeneous-model-routing"
+        ],
+        "decision": "Do not require ordinary startups to build frontier inference infrastructure.",
+        "rationale": "The evidence supports inference optimization and model-path selection, but frontier clusters are a supplier capability and a conditional concern for infrastructure companies. Most startups should consume this capability through routing, capacity, latency, and cost controls rather than own the underlying cluster.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 29,
+          "links_added": 6,
+          "finding": "New multi-GPU serving, networking, and decoding records strengthen the supplier-side infrastructure signal, but they still do not show that an application startup should own a frontier cluster. The reusable requirement remains routing, capacity, latency, cost control, and fallback selection across externally supplied inference paths."
+        },
+        "status": "current"
+      },
+      "review_action": "infrastructure-signal-not-general-requirement"
+    },
+    {
+      "id": "theme:agent-harnesses",
+      "origin": "cross-source-theme",
+      "title": "Agent harnesses",
+      "description": "Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.",
+      "source_analysis": "themes/agent-harnesses",
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "evidence_ids": [
+        "aws-machine-learning-blog:16b9772b96509775d2ea",
+        "hn:49785562",
+        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+        "alphasignal:trend:agent-orchestration-and-autonomy",
+        "bluesky:1278ebf77949:3mvxrv6krzs22",
+        "arxiv:2609.21944v1",
+        "arxiv:2609.21859v1",
+        "arxiv:2609.21843v1",
+        "hf-paper:2609.21465",
+        "arxiv:2609.20620v1",
+        "aws-machine-learning-blog:5d4f323bd0d514800a8a",
+        "arxiv:2609.20519v1",
+        "arxiv:2609.20474v1",
+        "hf-paper:2609.20519",
+        "arxiv:2609.16305",
+        "github:1370498337",
+        "hf-paper:2609.15364",
+        "hf-paper:2609.14858",
+        "github:1365776373",
+        "greylock-essays:aacd57b6bec14e3c9da1"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "falling",
+      "metrics": {
+        "evidence_count": 56,
+        "source_count": 13,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 8,
+        "technical_record_count": 34,
+        "family_count": 11,
+        "trend_score": 79.4
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "linked_requirement": {
+        "id": "modular-agent-operating-stack",
+        "title": "Modular agent operating stack",
+        "maturity": "emerging"
+      },
+      "priority": {
+        "momentum": 3,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 78
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:agent-harnesses",
+        "reviewed_at": "2026-09-22",
+        "outcome": "covered-by-existing-requirement",
+        "requirement_ids": [
+          "modular-agent-operating-stack"
+        ],
+        "decision": "Do not create a duplicate requirement.",
+        "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 56,
+          "links_added": 4,
+          "finding": "Component-level harness experiments strengthen technical reality, but an industrial comparison found a single-agent baseline faster and cheaper without a consistent quality loss. The linked requirement remains emerging and explicitly conditional."
+        },
+        "status": "current"
+      },
+      "review_action": "covered-by-existing-requirement"
+    },
+    {
+      "id": "early:modular-agent-stack",
+      "origin": "early-signal",
+      "title": "The agent stack is separating into modular operating layers",
+      "description": "Models are becoming replaceable components inside a larger system of harnesses, reusable skills, execution environments, and assurance controls.",
+      "source_analysis": "early-signal-tracker/modular-agent-stack",
+      "theme_ids": [
+        "agent-harnesses",
+        "assurance-infrastructure",
+        "skills-integrations"
+      ],
+      "evidence_ids": [
+        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+        "aws-machine-learning-blog:5d4f323bd0d514800a8a",
+        "arxiv:2609.20519v1",
+        "hf-paper:2609.20519",
+        "github:1370498337",
+        "greylock-essays:aacd57b6bec14e3c9da1",
+        "arxiv:2609.16305",
+        "github:1365776373"
+      ],
+      "stage": "established",
+      "movement": "accelerating",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 6,
+        "source_types": [
+          "first-party-lab",
+          "investor-essay",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 5,
+        "family_count": 5,
+        "technical_family_count": 3
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "linked_requirement": {
+        "id": "modular-agent-operating-stack",
+        "title": "Modular agent operating stack",
+        "maturity": "emerging"
+      },
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 15,
+        "new_evidence": 4,
+        "operating_relevance": 10,
+        "total": 76
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "early:modular-agent-stack",
+        "reviewed_at": "2026-09-24",
+        "outcome": "source-analysis-already-calibrated",
+        "requirement_ids": [
+          "modular-agent-operating-stack"
+        ],
+        "decision": "Keep one calibrated modular-stack requirement; do not duplicate the Early Signal direction.",
+        "rationale": "Early Signal lifecycle measures attention, breadth, and persistence, while Operating Model maturity requires technical and operational proof. The direction can be established as an industry signal while the corresponding startup requirement remains emerging because independent production adoption is still only moderate.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 8,
+          "links_added": 0,
+          "finding": "The direction and requirement refer to the same architecture. Additional signal breadth does not overcome the requirement's explicit blockers: strong operational adoption and strong evidence independence."
+        },
+        "status": "current"
+      },
+      "review_action": "source-analysis-already-calibrated"
+    },
+    {
       "id": "theme:assurance-infrastructure",
       "origin": "cross-source-theme",
       "title": "Assurance infrastructure",
@@ -1062,7 +1032,7 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 13,
+        "recent_evidence_count": 10,
         "technical_record_count": 25,
         "family_count": 9,
         "trend_score": 76.4
@@ -1081,6 +1051,227 @@
       "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "theme:multimodal-3d",
+      "origin": "cross-source-theme",
+      "title": "Multimodal generation & 3D",
+      "description": "Systems that generate, edit, understand, or reconstruct images, video, spatial scenes, avatars, and three-dimensional environments.",
+      "source_analysis": "themes/multimodal-3d",
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "evidence_ids": [
+        "alphasignal:46d0001edf2628fce6c2",
+        "alphasignal:trend:multimodal-generation-and-3d",
+        "arxiv:2609.22055v1",
+        "arxiv:2609.22008v1",
+        "arxiv:2609.21906v1",
+        "arxiv:2609.21879v1",
+        "arxiv:2609.21849v1",
+        "arxiv:2609.21755v1",
+        "arxiv:2609.21748v1",
+        "hf-paper:2609.21465",
+        "arxiv:2609.20820v1",
+        "arxiv:2609.20817v1",
+        "arxiv:2609.20816v1",
+        "arxiv:2609.20800v1",
+        "arxiv:2609.20744v1",
+        "arxiv:2609.20723v1",
+        "hf-paper:2609.16679",
+        "hf-paper:2609.11638",
+        "hf-paper:2609.10522",
+        "github:1361693766"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 46,
+        "source_count": 10,
+        "source_types": [
+          "company-directory",
+          "curated-newsletter",
+          "expert-social",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 9,
+        "technical_record_count": 27,
+        "family_count": 10,
+        "trend_score": 78.6
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 73
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "theme:training-self-improvement",
+      "origin": "cross-source-theme",
+      "title": "Training, evaluation & self-improvement",
+      "description": "Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.",
+      "source_analysis": "themes/training-self-improvement",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "evidence_ids": [
+        "alphasignal:ed11042f47b8f05c3ace",
+        "alphasignal:cec6f55c7deff2c8dfc5",
+        "hn:49791343",
+        "hn:49788178",
+        "hn:49786635",
+        "hn:49783224",
+        "alphasignal:trend:training-evaluation-and-self-improvement",
+        "nvidia-developer-blog:127a999e24da184d5065",
+        "arxiv:2609.22086v1",
+        "arxiv:2609.22076v1",
+        "arxiv:2609.22068v1",
+        "arxiv:2609.22064v1",
+        "arxiv:2609.22056v1",
+        "arxiv:2609.22055v1",
+        "arxiv:2609.22053v1",
+        "arxiv:2609.22041v1",
+        "arxiv:2609.22038v1",
+        "arxiv:2609.22000v1",
+        "arxiv:2609.21989v1",
+        "arxiv:2609.21962v1"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 161,
+        "source_count": 27,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "job-posting",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 35,
+        "technical_record_count": 101,
+        "family_count": 14,
+        "trend_score": 100.0
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 73
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "theme:robotics-embodied-ai",
+      "origin": "cross-source-theme",
+      "title": "Robotics & embodied AI",
+      "description": "Models, datasets, simulations, and control systems that connect learned intelligence to physical sensing and action.",
+      "source_analysis": "themes/robotics-embodied-ai",
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
+      "evidence_ids": [
+        "alphasignal:trend:robotics-and-embodied-ai",
+        "arxiv:2609.21751v1",
+        "arxiv:2609.20820v1",
+        "arxiv:2609.20776v1",
+        "arxiv:2609.20761v1",
+        "arxiv:2609.20756v1",
+        "arxiv:2609.20659v1",
+        "arxiv:2609.20414v1",
+        "nvidia-developer-blog:5d6d93f42d6ca9b84a08",
+        "greylock-essays:4db96be55ee28289e4fd",
+        "radical-ventures:002cb1815fb8b4589802",
+        "hf-paper:2607.08448",
+        "yc-job:97722",
+        "hf-paper:2506.01844",
+        "yc-company:35850",
+        "yc-company:32206"
+      ],
+      "stage": "corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 16,
+        "source_count": 8,
+        "source_types": [
+          "company-directory",
+          "first-party-lab",
+          "investor-essay",
+          "job-posting",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation"
+        ],
+        "recent_evidence_count": 2,
+        "technical_record_count": 8,
+        "family_count": 7,
+        "trend_score": 69.7
+      },
+      "linked_requirements": [
+        {
+          "id": "simulation-first-physical-ai",
+          "title": "Simulation-first physical AI development",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "simulation-first-physical-ai",
+        "title": "Simulation-first physical AI development",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 8,
+        "operating_relevance": 10,
+        "total": 71
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:robotics-embodied-ai",
+        "reviewed_at": "2026-09-22",
+        "outcome": "conditional-requirement-added",
+        "requirement_ids": [
+          "simulation-first-physical-ai"
+        ],
+        "decision": "Add a conditional requirement for physical-AI startups, not a universal startup requirement.",
+        "rationale": "Robotics activity is broad enough to deserve an operating conclusion, but the actionable requirement is narrower than the theme: physical-AI teams should use simulation, staged real-world validation, and explicit sim-to-real checks before scaling autonomous deployment.",
+        "status": "current"
+      },
+      "review_action": "conditional-requirement-added"
     },
     {
       "id": "theme:memory-context",
@@ -1118,7 +1309,7 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 7,
+        "recent_evidence_count": 3,
         "technical_record_count": 8,
         "family_count": 6,
         "trend_score": 67.8
@@ -1129,85 +1320,14 @@
         "momentum": 8,
         "source_breadth": 25,
         "technical_support": 20,
-        "new_evidence": 20,
+        "new_evidence": 12,
         "operating_relevance": 0,
-        "total": 73
+        "total": 65
       },
       "change_reasons": [],
       "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "theme:open-local-inference",
-      "origin": "cross-source-theme",
-      "title": "Open, local & efficient inference",
-      "description": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
-      "source_analysis": "themes/open-local-inference",
-      "theme_ids": [
-        "open-local-inference"
-      ],
-      "evidence_ids": [
-        "alphasignal:a8def2376d665f117870",
-        "alphasignal:46d0001edf2628fce6c2",
-        "latent-space:c5ef439db94fe95e2aa5",
-        "huggingface-blog:689d78c6e007ab8e2c4f",
-        "bluesky:e810fac7fd93:3mvzupklbjz2u",
-        "bluesky:e810fac7fd93:3mvzo2lneqg2j",
-        "interconnects:43bf4602833d95a55b19",
-        "alphasignal:trend:open-local-models-and-inference-efficiency",
-        "aws-machine-learning-blog:e2c6e3c192e8183542dd",
-        "arxiv:2609.21967v1",
-        "arxiv:2609.21879v1",
-        "arxiv:2609.21857v1",
-        "arxiv:2609.21849v1",
-        "github:1375922101",
-        "arxiv:2609.21704v1",
-        "arxiv:2609.21672v1",
-        "bluesky:e810fac7fd93:3mvs4salrn72j",
-        "github:1374869789",
-        "arxiv:2609.20812v1",
-        "arxiv:2609.20807v1"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 92,
-        "source_count": 15,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 22,
-        "technical_record_count": 54,
-        "family_count": 11,
-        "trend_score": 83.8
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 73
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 5
     },
     {
       "id": "theme:document-knowledge-systems",
@@ -1251,7 +1371,7 @@
           "paper-curation",
           "repository"
         ],
-        "recent_evidence_count": 6,
+        "recent_evidence_count": 4,
         "technical_record_count": 14,
         "family_count": 4,
         "trend_score": 63.3
@@ -1262,9 +1382,9 @@
         "momentum": 8,
         "source_breadth": 20,
         "technical_support": 20,
-        "new_evidence": 20,
+        "new_evidence": 16,
         "operating_relevance": 0,
-        "total": 68
+        "total": 64
       },
       "change_reasons": [],
       "materially_changed": false,
@@ -1505,7 +1625,7 @@
           "investor-essay",
           "paper"
         ],
-        "recent_evidence_count": 1,
+        "recent_evidence_count": 0,
         "technical_record_count": 1,
         "family_count": 2,
         "technical_family_count": 1
@@ -1526,9 +1646,9 @@
         "momentum": 18,
         "source_breadth": 10,
         "technical_support": 3,
-        "new_evidence": 4,
+        "new_evidence": 0,
         "operating_relevance": 10,
-        "total": 45
+        "total": 41
       },
       "change_reasons": [],
       "materially_changed": false,
@@ -1602,7 +1722,7 @@
           "community",
           "paper"
         ],
-        "recent_evidence_count": 3,
+        "recent_evidence_count": 2,
         "technical_record_count": 2,
         "family_count": 2,
         "trend_score": 40.3
@@ -1613,9 +1733,9 @@
         "momentum": 8,
         "source_breadth": 10,
         "technical_support": 6,
-        "new_evidence": 12,
+        "new_evidence": 8,
         "operating_relevance": 0,
-        "total": 36
+        "total": 32
       },
       "change_reasons": [],
       "materially_changed": false,
@@ -1647,7 +1767,7 @@
           "newsletter-analysis",
           "practitioner-blog"
         ],
-        "recent_evidence_count": 2,
+        "recent_evidence_count": 1,
         "technical_record_count": 1,
         "family_count": 3,
         "trend_score": 53.3
@@ -1658,51 +1778,9 @@
         "momentum": 8,
         "source_breadth": 15,
         "technical_support": 3,
-        "new_evidence": 8,
+        "new_evidence": 4,
         "operating_relevance": 0,
-        "total": 34
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "theme:validation-release",
-      "origin": "cross-source-theme",
-      "title": "Validation & release infrastructure",
-      "description": "Testing, review, runtime validation, and deployment controls that determine whether AI-generated work is safe to release.",
-      "source_analysis": "themes/validation-release",
-      "theme_ids": [
-        "validation-release"
-      ],
-      "evidence_ids": [
-        "alphasignal:trend:validation-and-release-bottlenecks",
-        "arxiv:2609.20625v1"
-      ],
-      "stage": "emerging",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 2,
-        "source_count": 2,
-        "source_types": [
-          "newsletter-analysis",
-          "paper"
-        ],
-        "recent_evidence_count": 2,
-        "technical_record_count": 1,
-        "family_count": 2,
-        "trend_score": 46.9
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 10,
-        "technical_support": 3,
-        "new_evidence": 8,
-        "operating_relevance": 0,
-        "total": 29
+        "total": 30
       },
       "change_reasons": [],
       "materially_changed": false,
@@ -1838,6 +1916,48 @@
         "source_breadth": 17,
         "technical_support": 0,
         "new_evidence": 0,
+        "operating_relevance": 0,
+        "total": 25
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "theme:validation-release",
+      "origin": "cross-source-theme",
+      "title": "Validation & release infrastructure",
+      "description": "Testing, review, runtime validation, and deployment controls that determine whether AI-generated work is safe to release.",
+      "source_analysis": "themes/validation-release",
+      "theme_ids": [
+        "validation-release"
+      ],
+      "evidence_ids": [
+        "alphasignal:trend:validation-and-release-bottlenecks",
+        "arxiv:2609.20625v1"
+      ],
+      "stage": "emerging",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 2,
+        "source_count": 2,
+        "source_types": [
+          "newsletter-analysis",
+          "paper"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 1,
+        "family_count": 2,
+        "trend_score": 46.9
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 10,
+        "technical_support": 3,
+        "new_evidence": 4,
         "operating_relevance": 0,
         "total": 25
       },
@@ -2149,53 +2269,14 @@
   ],
   "adjudications": [
     {
-      "candidate_id": "theme:robotics-embodied-ai",
-      "title": "Robotics & embodied AI",
+      "candidate_id": "theme:voice-audio",
+      "title": "Voice & audio interfaces",
       "origin": "cross-source-theme",
-      "source_analysis": "themes/robotics-embodied-ai",
-      "stage": "corroborated",
+      "source_analysis": "themes/voice-audio",
+      "stage": "broadly-corroborated",
       "metrics": {
-        "evidence_count": 16,
-        "source_count": 8,
-        "source_types": [
-          "company-directory",
-          "first-party-lab",
-          "investor-essay",
-          "job-posting",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation"
-        ],
-        "recent_evidence_count": 9,
-        "technical_record_count": 8,
-        "family_count": 7,
-        "trend_score": 69.7
-      },
-      "linked_requirements": [
-        {
-          "id": "simulation-first-physical-ai",
-          "title": "Simulation-first physical AI development",
-          "maturity": "experimental"
-        }
-      ],
-      "reviewed_at": "2026-09-22",
-      "outcome": "conditional-requirement-added",
-      "requirement_ids": [
-        "simulation-first-physical-ai"
-      ],
-      "decision": "Add a conditional requirement for physical-AI startups, not a universal startup requirement.",
-      "rationale": "Robotics activity is broad enough to deserve an operating conclusion, but the actionable requirement is narrower than the theme: physical-AI teams should use simulation, staged real-world validation, and explicit sim-to-real checks before scaling autonomous deployment.",
-      "status": "current"
-    },
-    {
-      "candidate_id": "theme:agent-harnesses",
-      "title": "Agent harnesses",
-      "origin": "cross-source-theme",
-      "source_analysis": "themes/agent-harnesses",
-      "stage": "corroborated-source-concentrated",
-      "metrics": {
-        "evidence_count": 56,
-        "source_count": 13,
+        "evidence_count": 23,
+        "source_count": 12,
         "source_types": [
           "community",
           "company-directory",
@@ -2203,36 +2284,84 @@
           "expert-social",
           "first-party-lab",
           "investor-essay",
+          "newsletter",
           "newsletter-analysis",
           "paper",
           "paper-curation",
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 14,
-        "technical_record_count": 34,
-        "family_count": 11,
-        "trend_score": 79.4
+        "recent_evidence_count": 7,
+        "technical_record_count": 11,
+        "family_count": 12,
+        "trend_score": 80.0
       },
       "linked_requirements": [
         {
-          "id": "modular-agent-operating-stack",
-          "title": "Modular agent operating stack",
-          "maturity": "emerging"
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        },
+        {
+          "id": "bounded-workflow-ownership",
+          "title": "Bounded workflow ownership",
+          "maturity": "narrative"
         }
       ],
-      "reviewed_at": "2026-09-22",
-      "outcome": "covered-by-existing-requirement",
+      "reviewed_at": "2026-09-24",
+      "outcome": "modality-signal-not-general-requirement",
       "requirement_ids": [
-        "modular-agent-operating-stack"
+        "evaluation-release-gates",
+        "bounded-workflow-ownership"
       ],
-      "decision": "Do not create a duplicate requirement.",
-      "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+      "decision": "Treat voice as a conditional interface and workflow domain, not a general startup operating requirement.",
+      "rationale": "Voice is technically credible and increasingly usable, but adoption depends on the user, environment, latency tolerance, accessibility needs, and workflow economics. Startups that choose voice inherit the existing obligations for verified completion, escalation, consent, fraud resistance, and measurable workflow outcomes; other startups should not add voice merely because the modality is advancing.",
       "evidence_review": {
         "status": "complete",
-        "records_screened": 56,
-        "links_added": 4,
-        "finding": "Component-level harness experiments strengthen technical reality, but an industrial comparison found a single-agent baseline faster and cheaper without a consistent quality loss. The linked requirement remains emerging and explicitly conditional."
+        "records_screened": 23,
+        "links_added": 0,
+        "finding": "Full-duplex models, self-hosted stacks, multilingual systems, and practitioner tooling show strong capability breadth. The corpus does not establish that voice is a default operating layer, and impersonation risk plus domain-specific recognition failures make it unsuitable as a universal requirement."
+      },
+      "status": "current"
+    },
+    {
+      "candidate_id": "early:enterprise-data-boundary",
+      "title": "Proprietary enterprise data is moving behind a governed model boundary",
+      "origin": "early-signal",
+      "source_analysis": "early-signal-tracker/enterprise-data-boundary",
+      "stage": "corroborating",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 7,
+        "source_types": [
+          "community",
+          "first-party-lab",
+          "paper"
+        ],
+        "recent_evidence_count": 4,
+        "technical_record_count": 7,
+        "family_count": 3,
+        "technical_family_count": 2
+      },
+      "linked_requirements": [
+        {
+          "id": "governed-proprietary-data-boundary",
+          "title": "Governed proprietary data boundary",
+          "maturity": "experimental"
+        }
+      ],
+      "reviewed_at": "2026-09-24",
+      "outcome": "conditional-requirement-added",
+      "requirement_ids": [
+        "governed-proprietary-data-boundary"
+      ],
+      "decision": "Add an experimental requirement for startups handling proprietary, regulated, or customer-confidential data.",
+      "rationale": "The actionable conclusion is not that every company must self-host a model. It is that the company-controlled data layer should remain separate from replaceable models, with explicit controls for scoped access, training use, retention, deletion, human access, execution, audit, and provider exit.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 8,
+        "links_added": 7,
+        "finding": "Benchling supplies one detailed tenant-isolation and exfiltration architecture; federated and trusted-computation systems make the pattern technically credible. Provider announcements show demand but do not verify contractual guarantees, while channel-level privacy leakage remains an unresolved counter-signal. The evidence clears experimental, not emerging, maturity."
       },
       "status": "current"
     },
@@ -2259,7 +2388,7 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 21,
+        "recent_evidence_count": 14,
         "technical_record_count": 31,
         "family_count": 12,
         "trend_score": 84.6
@@ -2293,6 +2422,110 @@
       "status": "current"
     },
     {
+      "candidate_id": "theme:open-local-inference",
+      "title": "Open, local & efficient inference",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/open-local-inference",
+      "stage": "corroborated-source-concentrated",
+      "metrics": {
+        "evidence_count": 92,
+        "source_count": 15,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 17,
+        "technical_record_count": 54,
+        "family_count": 11,
+        "trend_score": 83.8
+      },
+      "linked_requirements": [
+        {
+          "id": "heterogeneous-model-routing",
+          "title": "Heterogeneous model routing",
+          "maturity": "experimental"
+        },
+        {
+          "id": "governed-proprietary-data-boundary",
+          "title": "Governed proprietary data boundary",
+          "maturity": "experimental"
+        }
+      ],
+      "reviewed_at": "2026-09-24",
+      "outcome": "covered-by-existing-requirements",
+      "requirement_ids": [
+        "heterogeneous-model-routing",
+        "governed-proprietary-data-boundary"
+      ],
+      "decision": "Treat open and local inference as an execution option, not a universal standalone requirement.",
+      "rationale": "Open weights, quantization, and local runtimes expand the available inference portfolio. They become operationally relevant when a task needs lower cost, lower latency, data control, offline behavior, or provider independence. Those decisions are already captured by heterogeneous routing and the governed proprietary-data boundary; requiring local inference everywhere would ignore quality, maintenance, and hardware tradeoffs.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 92,
+        "links_added": 3,
+        "finding": "Quantized runtime integration, adaptive inference research, and wider open-weight availability strengthen technical feasibility. The corpus still lacks independent production comparisons proving that local execution beats hosted inference after quality, operations, fallback, and hardware costs are included."
+      },
+      "status": "current"
+    },
+    {
+      "candidate_id": "theme:skills-integrations",
+      "title": "Skills, protocols & integrations",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/skills-integrations",
+      "stage": "broadly-corroborated",
+      "metrics": {
+        "evidence_count": 74,
+        "source_count": 15,
+        "source_types": [
+          "community",
+          "company-directory",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter-analysis",
+          "operator-essay",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 10,
+        "technical_record_count": 54,
+        "family_count": 11,
+        "trend_score": 87.0
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "reviewed_at": "2026-09-24",
+      "outcome": "covered-by-existing-requirement",
+      "requirement_ids": [
+        "modular-agent-operating-stack"
+      ],
+      "decision": "Do not create a separate requirement for skills, protocols, and integrations.",
+      "rationale": "Reusable skills and governed tool interfaces are one operating layer inside the modular agent stack. Splitting them into a second requirement would duplicate the existing obligations to version capabilities independently, constrain permissions, evaluate behavior, and preserve replaceable model and execution layers.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 74,
+        "links_added": 5,
+        "finding": "Evaluated domain skills, repeatable deployment skills, MCP authorization, and graph-structured skill optimization materially strengthen technical reality. Direct API and single-agent critiques remain valid counterevidence: an interoperability layer is useful when governance or reuse warrants it, not as mandatory ceremony for every simple workflow."
+      },
+      "status": "current"
+    },
+    {
       "candidate_id": "theme:frontier-inference-infrastructure",
       "title": "Frontier inference infrastructure",
       "origin": "cross-source-theme",
@@ -2310,7 +2543,7 @@
           "paper-curation",
           "repository"
         ],
-        "recent_evidence_count": 7,
+        "recent_evidence_count": 4,
         "technical_record_count": 20,
         "family_count": 7,
         "trend_score": 77.4
@@ -2322,7 +2555,7 @@
           "maturity": "experimental"
         }
       ],
-      "reviewed_at": "2026-09-22",
+      "reviewed_at": "2026-09-24",
       "outcome": "infrastructure-signal-not-general-requirement",
       "requirement_ids": [
         "heterogeneous-model-routing"
@@ -2333,386 +2566,152 @@
         "status": "complete",
         "records_screened": 29,
         "links_added": 6,
-        "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
+        "finding": "New multi-GPU serving, networking, and decoding records strengthen the supplier-side infrastructure signal, but they still do not show that an application startup should own a frontier cluster. The reusable requirement remains routing, capacity, latency, cost control, and fallback selection across externally supplied inference paths."
       },
-      "status": "revisit-required"
-    }
-  ],
-  "assessment_queue": [
+      "status": "current"
+    },
     {
-      "id": "theme:skills-integrations",
+      "candidate_id": "theme:agent-harnesses",
+      "title": "Agent harnesses",
       "origin": "cross-source-theme",
-      "title": "Skills, protocols & integrations",
-      "description": "Reusable capabilities, connectors, protocols, and application interfaces that let models and agents act beyond a chat session.",
-      "source_analysis": "themes/skills-integrations",
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "evidence_ids": [
-        "hn:49791228",
-        "hn:49791084",
-        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
-        "simon-willison:e133d02a1d698c5d1f75",
-        "hn:49779329",
-        "github:1376081650",
-        "aws-machine-learning-blog:ebd0a07472f2fcd39a9d",
-        "github:1375922101",
-        "arxiv:2609.21749v1",
-        "arxiv:2609.21686v1",
-        "aws-machine-learning-blog:8fa3089824df1f197189",
-        "arxiv:2609.20519v1",
-        "github:1374194303",
-        "hf-paper:2609.20519",
-        "alphasignal:project:wikiskill",
-        "aws-machine-learning-blog:fe2475d963a81fbb0dda",
-        "arxiv:2609.16305",
-        "hf-paper:2609.15779",
-        "github:1367068508",
-        "github:1366280840"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "rising",
+      "source_analysis": "themes/agent-harnesses",
+      "stage": "corroborated-source-concentrated",
       "metrics": {
-        "evidence_count": 74,
-        "source_count": 15,
+        "evidence_count": 56,
+        "source_count": 13,
         "source_types": [
           "community",
           "company-directory",
+          "curated-newsletter",
           "expert-social",
           "first-party-lab",
           "investor-essay",
           "newsletter-analysis",
-          "operator-essay",
           "paper",
           "paper-curation",
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 15,
-        "technical_record_count": 54,
+        "recent_evidence_count": 8,
+        "technical_record_count": 34,
         "family_count": 11,
-        "trend_score": 87.0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 87
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 1
-    },
-    {
-      "id": "early:enterprise-data-boundary",
-      "origin": "early-signal",
-      "title": "Proprietary enterprise data is moving behind a governed model boundary",
-      "description": "Firms will keep proprietary data in systems they control and expose only permitted context or computation to replaceable models, rather than contributing that data to general model training.",
-      "source_analysis": "early-signal-tracker/enterprise-data-boundary",
-      "theme_ids": [
-        "assurance-infrastructure",
-        "document-knowledge-systems",
-        "enterprise-vertical-ai",
-        "open-local-inference",
-        "operational-ontology"
-      ],
-      "evidence_ids": [
-        "aws-machine-learning-blog:2335ca1a4875d9c28b23",
-        "hn:49787614",
-        "arxiv:2609.21829v1",
-        "openai-news:192794312f979cbd50ee",
-        "nvidia-developer-blog:c6cbeb9f9f96e88e05d7",
-        "anthropic-news-research:f4efc55098543f59e5e3",
-        "mistral-news:830fb9aa9b114f2dafe7",
-        "arxiv:2609.21728v1"
-      ],
-      "stage": "corroborating",
-      "movement": "accelerating",
-      "metrics": {
-        "evidence_count": 8,
-        "source_count": 7,
-        "source_types": [
-          "community",
-          "first-party-lab",
-          "paper"
-        ],
-        "recent_evidence_count": 5,
-        "technical_record_count": 7,
-        "family_count": 3,
-        "technical_family_count": 2
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 87
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 2
-    },
-    {
-      "id": "theme:frontier-inference-infrastructure",
-      "origin": "cross-source-theme",
-      "title": "Frontier inference infrastructure",
-      "description": "Large-scale clusters, serving systems, networks, and operational designs built primarily for frontier-model inference.",
-      "source_analysis": "themes/frontier-inference-infrastructure",
-      "theme_ids": [
-        "frontier-inference-infrastructure"
-      ],
-      "evidence_ids": [
-        "nvidia-developer-blog:837464fefd470eaa54f6",
-        "arxiv:2609.21827v1",
-        "arxiv:2609.21774v1",
-        "arxiv:2609.21704v1",
-        "arxiv:2609.20734v1",
-        "arxiv:2609.20614v1",
-        "arxiv:2609.20446v1",
-        "hf-paper:2609.18063",
-        "nvidia-developer-blog:f95e55a325c1d57f2115",
-        "nvidia-developer-blog:e7c3a6c0afb937549e09",
-        "nvidia-developer-blog:93db95fb6cd1a35dc083",
-        "nvidia-developer-blog:d14025c328b788abfb85",
-        "nvidia-developer-blog:e25568b4ce57971f1453",
-        "github:1347982389",
-        "nvidia-developer-blog:655e6fb2eee2feb6b510",
-        "github:1342935078",
-        "sequoia-essays:8a2fe18efd08a18eea8c",
-        "menlo-ventures:dfeaba0c266f13ed7f2c",
-        "the-batch:0b297472a2efbd99a896",
-        "hf-paper:2606.31227"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 29,
-        "source_count": 8,
-        "source_types": [
-          "company-directory",
-          "curated-newsletter",
-          "first-party-lab",
-          "investor-essay",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 7,
-        "technical_record_count": 20,
-        "family_count": 7,
-        "trend_score": 77.4
+        "trend_score": 79.4
       },
       "linked_requirements": [
         {
-          "id": "heterogeneous-model-routing",
-          "title": "Heterogeneous model routing",
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "reviewed_at": "2026-09-22",
+      "outcome": "covered-by-existing-requirement",
+      "requirement_ids": [
+        "modular-agent-operating-stack"
+      ],
+      "decision": "Do not create a duplicate requirement.",
+      "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 56,
+        "links_added": 4,
+        "finding": "Component-level harness experiments strengthen technical reality, but an industrial comparison found a single-agent baseline faster and cheaper without a consistent quality loss. The linked requirement remains emerging and explicitly conditional."
+      },
+      "status": "current"
+    },
+    {
+      "candidate_id": "early:modular-agent-stack",
+      "title": "The agent stack is separating into modular operating layers",
+      "origin": "early-signal",
+      "source_analysis": "early-signal-tracker/modular-agent-stack",
+      "stage": "established",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 6,
+        "source_types": [
+          "first-party-lab",
+          "investor-essay",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 5,
+        "family_count": 5,
+        "technical_family_count": 3
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "reviewed_at": "2026-09-24",
+      "outcome": "source-analysis-already-calibrated",
+      "requirement_ids": [
+        "modular-agent-operating-stack"
+      ],
+      "decision": "Keep one calibrated modular-stack requirement; do not duplicate the Early Signal direction.",
+      "rationale": "Early Signal lifecycle measures attention, breadth, and persistence, while Operating Model maturity requires technical and operational proof. The direction can be established as an industry signal while the corresponding startup requirement remains emerging because independent production adoption is still only moderate.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 8,
+        "links_added": 0,
+        "finding": "The direction and requirement refer to the same architecture. Additional signal breadth does not overcome the requirement's explicit blockers: strong operational adoption and strong evidence independence."
+      },
+      "status": "current"
+    },
+    {
+      "candidate_id": "theme:robotics-embodied-ai",
+      "title": "Robotics & embodied AI",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/robotics-embodied-ai",
+      "stage": "corroborated",
+      "metrics": {
+        "evidence_count": 16,
+        "source_count": 8,
+        "source_types": [
+          "company-directory",
+          "first-party-lab",
+          "investor-essay",
+          "job-posting",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation"
+        ],
+        "recent_evidence_count": 2,
+        "technical_record_count": 8,
+        "family_count": 7,
+        "trend_score": 69.7
+      },
+      "linked_requirements": [
+        {
+          "id": "simulation-first-physical-ai",
+          "title": "Simulation-first physical AI development",
           "maturity": "experimental"
         }
       ],
-      "linked_requirement": {
-        "id": "heterogeneous-model-routing",
-        "title": "Heterogeneous model routing",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 10,
-        "total": 83
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:frontier-inference-infrastructure",
-        "reviewed_at": "2026-09-22",
-        "outcome": "infrastructure-signal-not-general-requirement",
-        "requirement_ids": [
-          "heterogeneous-model-routing"
-        ],
-        "decision": "Do not require ordinary startups to build frontier inference infrastructure.",
-        "rationale": "The evidence supports inference optimization and model-path selection, but frontier clusters are a supplier capability and a conditional concern for infrastructure companies. Most startups should consume this capability through routing, capacity, latency, and cost controls rather than own the underlying cluster.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 29,
-          "links_added": 6,
-          "finding": "A third request-routing implementation and market events strengthen the routing case, but no independent production comparison proves the operating economics. Investment in frontier inference clusters was explicitly excluded from requirement evidence."
-        },
-        "status": "revisit-required"
-      },
-      "review_action": "review-existing-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 3
-    },
-    {
-      "id": "theme:voice-audio",
-      "origin": "cross-source-theme",
-      "title": "Voice & audio interfaces",
-      "description": "Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.",
-      "source_analysis": "themes/voice-audio",
-      "theme_ids": [
-        "voice-audio"
+      "reviewed_at": "2026-09-22",
+      "outcome": "conditional-requirement-added",
+      "requirement_ids": [
+        "simulation-first-physical-ai"
       ],
-      "evidence_ids": [
-        "bluesky:b3614927c6a2:3mw7magyrwc2i",
-        "alphasignal:5f3148d70539a8da7f25",
-        "alphasignal:1ef7cf038f88524bc9b8",
-        "hn:49789320",
-        "alphasignal:trend:voice-and-audio-interfaces",
-        "arxiv:2609.21967v1",
-        "arxiv:2609.21683v1",
-        "hf-paper:2609.21465",
-        "arxiv:2609.20504v1",
-        "simon-willison:219c439494be37cebb69",
-        "github:1361693766",
-        "alphasignal:project:voicestudio",
-        "deepmind-blog:ac6eb9276806c2f8127d",
-        "the-batch:ab4caab4fe2b8644e7ea",
-        "huggingface-blog:e3ddd7a65cd3a566e91c",
-        "huggingface-blog:5890b1cfd4cc38aa3885",
-        "alphasignal:project:dograh",
-        "github:1057664813",
-        "greylock-essays:7ae3d96ba71e4e63c7f2",
-        "greylock-essays:b5d0a493521b25d69daf"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "rising",
-      "metrics": {
-        "evidence_count": 23,
-        "source_count": 12,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 9,
-        "technical_record_count": 11,
-        "family_count": 12,
-        "trend_score": 80.0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 87
-      },
-      "change_reasons": [
-        "Lifecycle stage changed from corroborated-source-concentrated to broadly-corroborated",
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "queue_rank": 4,
-      "pending_from_previous_review": true
-    },
-    {
-      "id": "theme:open-local-inference",
-      "origin": "cross-source-theme",
-      "title": "Open, local & efficient inference",
-      "description": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
-      "source_analysis": "themes/open-local-inference",
-      "theme_ids": [
-        "open-local-inference"
-      ],
-      "evidence_ids": [
-        "alphasignal:a8def2376d665f117870",
-        "alphasignal:46d0001edf2628fce6c2",
-        "latent-space:c5ef439db94fe95e2aa5",
-        "huggingface-blog:689d78c6e007ab8e2c4f",
-        "bluesky:e810fac7fd93:3mvzupklbjz2u",
-        "bluesky:e810fac7fd93:3mvzo2lneqg2j",
-        "interconnects:43bf4602833d95a55b19",
-        "alphasignal:trend:open-local-models-and-inference-efficiency",
-        "aws-machine-learning-blog:e2c6e3c192e8183542dd",
-        "arxiv:2609.21967v1",
-        "arxiv:2609.21879v1",
-        "arxiv:2609.21857v1",
-        "arxiv:2609.21849v1",
-        "github:1375922101",
-        "arxiv:2609.21704v1",
-        "arxiv:2609.21672v1",
-        "bluesky:e810fac7fd93:3mvs4salrn72j",
-        "github:1374869789",
-        "arxiv:2609.20812v1",
-        "arxiv:2609.20807v1"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 92,
-        "source_count": 15,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 22,
-        "technical_record_count": 54,
-        "family_count": 11,
-        "trend_score": 83.8
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 73
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 5
+      "decision": "Add a conditional requirement for physical-AI startups, not a universal startup requirement.",
+      "rationale": "Robotics activity is broad enough to deserve an operating conclusion, but the actionable requirement is narrower than the theme: physical-AI teams should use simulation, staged real-world validation, and explicit sim-to-real checks before scaling autonomous deployment.",
+      "status": "current"
     }
   ],
+  "assessment_queue": [],
   "requirement_changes": [
     {
       "id": "modular-agent-operating-stack",
       "title": "Modular agent operating stack",
-      "change_type": "unchanged",
+      "change_type": "evidence-updated",
       "previous_maturity": "emerging",
       "current_maturity": "emerging",
-      "explanation": "No maturity or linked-evidence change this cycle."
+      "explanation": "Linked evidence changed from 13 to 18 records without changing maturity."
     },
     {
       "id": "evaluation-release-gates",
@@ -2723,12 +2722,20 @@
       "explanation": "No maturity or linked-evidence change this cycle."
     },
     {
+      "id": "governed-proprietary-data-boundary",
+      "title": "Governed proprietary data boundary",
+      "change_type": "added",
+      "previous_maturity": null,
+      "current_maturity": "experimental",
+      "explanation": "Added after formal candidate adjudication under the evidence policy."
+    },
+    {
       "id": "heterogeneous-model-routing",
       "title": "Heterogeneous model routing",
-      "change_type": "unchanged",
+      "change_type": "evidence-updated",
       "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "No maturity or linked-evidence change this cycle."
+      "explanation": "Linked evidence changed from 14 to 17 records without changing maturity."
     },
     {
       "id": "shared-operational-context",

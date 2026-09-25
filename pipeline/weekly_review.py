@@ -105,10 +105,18 @@ def _material_changes(
     if previous is None:
         return ["New to the weekly candidate baseline"]
     reasons = []
-    for field, label in (("stage", "Lifecycle stage"), ("movement", "Movement"), ("strength", "Finding strength")):
+    for field, label in (("stage", "Lifecycle stage"), ("strength", "Finding strength")):
         before, after = previous.get(field), candidate.get(field)
         if before and after and before != after:
             reasons.append(f"{label} changed from {before} to {after}")
+    before_movement, after_movement = previous.get("movement"), candidate.get("movement")
+    if (
+        before_movement
+        and after_movement
+        and before_movement != after_movement
+        and after_movement in {"new", "accelerating", "rising", "resurfacing"}
+    ):
+        reasons.append(f"Movement changed from {before_movement} to {after_movement}")
     current_metrics = candidate["metrics"]
     previous_metrics = previous.get("metrics", {})
     evidence_delta = current_metrics["evidence_count"] - previous_metrics.get("evidence_count", 0)
@@ -120,10 +128,6 @@ def _material_changes(
     recent_delta = current_metrics["recent_evidence_count"] - previous_metrics.get("recent_evidence_count", 0)
     if recent_delta > 0:
         reasons.append(f"{recent_delta} additional dated records entered the latest seven-day window")
-    previous_score = previous.get("priority", {}).get("total", 0)
-    current_score = candidate.get("priority", {}).get("total", 0)
-    if abs(current_score - previous_score) >= thresholds["priority_score_delta"]:
-        reasons.append(f"Review priority changed by {current_score - previous_score:+d}")
     return reasons
 
 
@@ -233,7 +237,6 @@ def _candidate_pool(
             reviewed = adjudication["reviewed_state"]
             adjudication_current = (
                 candidate.get("stage") == reviewed.get("stage")
-                and candidate.get("movement") == reviewed.get("movement")
                 and candidate["metrics"]["evidence_count"] - reviewed["evidence_count"]
                 < config["material_change_thresholds"]["evidence_count_delta"]
                 and candidate["metrics"]["source_count"] - reviewed["source_count"]
@@ -427,8 +430,18 @@ def build_weekly_review(
         preserved["meta"]["generated_at"] = research["meta"]["generated_at"]
         preserved["meta"]["idempotent_regeneration"] = True
         preserved["candidate_pool"] = candidates
+        preserved["meta"]["materially_changed_count"] = sum(
+            item["materially_changed"] for item in candidates
+        )
         preserved["adjudications"] = adjudications
         preserved["meta"]["adjudication_count"] = len(adjudications)
+        retained_queue_ids = {item["id"] for item in queue}
+        preserved["assessment_queue"] = [
+            item
+            for item in previous_review.get("assessment_queue", [])
+            if item["id"] in retained_queue_ids
+        ]
+        preserved["meta"]["assessment_queue_count"] = len(preserved["assessment_queue"])
         preserved["summary"] = {**previous_review["summary"]}
         preserved["summary"]["headline"] = _review_headline(
             len(preserved.get("adjudications", [])),

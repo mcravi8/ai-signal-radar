@@ -1,5 +1,5 @@
 policy_version: 1
-as_of: "2026-09-22"
+as_of: "2026-09-24"
 dataset: data/public/research.json
 
 cases:
@@ -190,6 +190,10 @@ cases:
         event_id: asrb-quality-aware-request-routing
         relationship: direct-support
         dimensions: [technical_reality]
+      - evidence_id: huggingface-blog:689d78c6e007ab8e2c4f
+        event_id: transformers-llamacpp-quantized-runtime
+        relationship: direct-support
+        dimensions: [technical_reality]
       - evidence_id: nvidia-developer-blog:2f4bc5729494727df617
         event_id: nvidia-virtual-inference-router
         relationship: supporting-context
@@ -212,6 +216,14 @@ cases:
         dimensions: [technical_reality, market_pull]
       - evidence_id: alphasignal:trend:open-local-models-and-inference-efficiency
         event_id: alphasignal-efficient-inference-synthesis
+        relationship: supporting-context
+        dimensions: [market_pull]
+      - evidence_id: aws-machine-learning-blog:e2c6e3c192e8183542dd
+        event_id: kimi-k3-open-weight-bedrock
+        relationship: supporting-context
+        dimensions: [technical_reality, market_pull]
+      - evidence_id: interconnects:43bf4602833d95a55b19
+        event_id: current-open-model-balance
         relationship: supporting-context
         dimensions: [market_pull]
       - evidence_id: interconnects:9347a64bc25f44ccdf21
@@ -244,24 +256,98 @@ cases:
       concentration: moderate
       confidence: moderate
     gate_inputs:
-      qualifying_events: 3
-      technical_artifacts: 3
-      independent_organizations: 3
+      qualifying_events: 4
+      technical_artifacts: 4
+      independent_organizations: 4
       persistence_cycles: 1
       counterevidence_reviewed: false
       cost_of_absence_evidenced: false
       practical_minimum_available: false
     expected_maturity: experimental
     rationale: >-
-      Three independent technical systems demonstrate model-, precision-, or endpoint-level
-      routing, while OpenRouter's acquisition and specialized-inference investment activity
-      raise market pull to moderate. The review explicitly excludes frontier-cluster financing
-      because supplier capacity is not evidence that an application startup needs a routing
-      layer. The selected evidence still does not establish repeatable production adoption or
-      superior operating economics across independent companies.
+      Four independent technical systems demonstrate model-, precision-, endpoint-, or
+      quantized-runtime selection, while expanding open-weight availability makes a
+      heterogeneous model portfolio more practical. The review explicitly excludes
+      frontier-cluster financing because supplier capacity is not evidence that an application
+      startup needs a routing layer. The selected evidence still does not establish repeatable
+      production adoption or superior operating economics across independent companies.
     evidence_gaps:
       - Production comparisons of quality, latency, failure rate, and cost per accepted outcome.
       - Evidence that routing complexity remains worthwhile after maintenance and fallback costs.
+
+  - id: governed-proprietary-data-boundary
+    title: Governed proprietary data boundary
+    requirement: Startups handling proprietary or regulated data should keep the source-of-truth data behind a governed boundary and expose only permitted context or computation to replaceable models.
+    description: >-
+      The company-controlled data layer remains separate from the model provider. Agents and
+      models receive scoped context through permission-aware retrieval, tools, or protected
+      computation rather than unrestricted copies of the underlying corpus. Training use,
+      retention, deletion, human access, execution location, and downstream writes are treated
+      as distinct controls that can be audited and changed without moving the source of truth.
+    what_it_looks_like:
+      - Keep sensitive records in company-controlled systems and issue least-privilege, task-scoped access to models and agents.
+      - Record provider-specific rules for training use, retention, deletion, human access, subprocessors, regional execution, and fine-tuning.
+      - Add exfiltration controls, audit trails, revocation, and a model-provider exit path around every workflow that touches proprietary data.
+    applicable_to: Startups handling customer-confidential, regulated, security-sensitive, or uniquely valuable workflow data; public-data prototypes may not need the full boundary.
+    source_analysis: early-signal-tracker/enterprise-data-boundary
+    evidence_links:
+      - evidence_id: aws-machine-learning-blog:2335ca1a4875d9c28b23
+        event_id: benchling-agentcore-data-isolation
+        relationship: direct-support
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: arxiv:2609.21728v1
+        event_id: tee-digital-computation-rights
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: nvidia-developer-blog:c6cbeb9f9f96e88e05d7
+        event_id: nvidia-flare-federated-execution
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: openai-news:192794312f979cbd50ee
+        event_id: astra-law-confidential-data-controls
+        relationship: supporting-context
+        dimensions: [operational_adoption, market_pull]
+      - evidence_id: mistral-news:830fb9aa9b114f2dafe7
+        event_id: cloudera-mistral-sovereign-enterprise-ai
+        relationship: supporting-context
+        dimensions: [operational_adoption, market_pull]
+      - evidence_id: anthropic-news-research:f4efc55098543f59e5e3
+        event_id: anthropic-privacy-preserving-research-access
+        relationship: supporting-context
+        dimensions: [technical_reality, operational_adoption]
+      - evidence_id: arxiv:2609.21686v1
+        event_id: cipl-recoverable-agent-privacy-leakage
+        relationship: counterevidence
+        dimensions: [technical_reality, operational_adoption]
+    assessments:
+      technical_reality: moderate
+      operational_adoption: low
+      market_pull: moderate
+      evidence_independence: moderate
+      concentration: moderate
+      confidence: moderate
+    gate_inputs:
+      qualifying_events: 3
+      technical_artifacts: 3
+      independent_organizations: 6
+      persistence_cycles: 2
+      counterevidence_reviewed: true
+      cost_of_absence_evidenced: false
+      practical_minimum_available: true
+    expected_maturity: experimental
+    rationale: >-
+      A detailed Benchling deployment demonstrates tenant isolation and exfiltration controls,
+      while federated execution and trusted-computation research make the architecture
+      technically credible. Provider and partnership announcements show market pull but do not
+      independently verify contractual training exclusion, retention, deletion, or human-access
+      guarantees. CIPL is retained as counterevidence because scoped internal components can
+      still leak recoverable information through observable channels. The requirement is
+      therefore experimental rather than emerging: the control pattern is actionable, but
+      repeatable independent operating adoption has not been demonstrated.
+    evidence_gaps:
+      - Customer-controlled audits of training exclusion, retention, deletion, human access, subprocessors, and regional execution.
+      - Independent deployments reporting exfiltration incidents, permission failures, portability, latency, and operating cost.
+      - Comparative evidence showing when governed hosted access is sufficient and when local, sovereign, or confidential execution is necessary.
 
   - id: ai-native-gtm
     title: AI-native GTM systems
@@ -358,6 +444,22 @@ cases:
         event_id: dscode-agent-harness
         relationship: direct-support
         dimensions: [technical_reality]
+      - evidence_id: aws-machine-learning-blog:ebd0a07472f2fcd39a9d
+        event_id: reusable-sagemaker-deployment-skills
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: aws-machine-learning-blog:8fa3089824df1f197189
+        event_id: governed-mcp-tool-authorization
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: aws-machine-learning-blog:fe2475d963a81fbb0dda
+        event_id: evaluated-hcls-agent-skills
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.21749v1
+        event_id: graph-structured-skill-optimization
+        relationship: direct-support
+        dimensions: [technical_reality]
       - evidence_id: alphasignal:trend:skills-plugins-mcp-and-harnesses
         event_id: alphasignal-modular-stack-synthesis
         relationship: supporting-context
@@ -378,6 +480,10 @@ cases:
         event_id: mcp-complexity-critique
         relationship: counterevidence
         dimensions: [technical_reality, operational_adoption]
+      - evidence_id: simon-willison:e133d02a1d698c5d1f75
+        event_id: mcp-boundary-versus-direct-api-critique
+        relationship: counterevidence
+        dimensions: [technical_reality, operational_adoption]
       - evidence_id: arxiv:2609.21843v1
         event_id: westermo-single-versus-multi-agent
         relationship: counterevidence
@@ -390,23 +496,23 @@ cases:
       concentration: moderate
       confidence: moderate
     gate_inputs:
-      qualifying_events: 6
-      technical_artifacts: 6
-      independent_organizations: 5
+      qualifying_events: 10
+      technical_artifacts: 10
+      independent_organizations: 8
       persistence_cycles: 3
       counterevidence_reviewed: true
       cost_of_absence_evidenced: false
       practical_minimum_available: true
     expected_maturity: emerging
     rationale: >-
-      Independent technical artifacts, including a component-level harness ablation, show
+      Independent technical artifacts, including a component-level harness ablation, evaluated
+      reusable skills, permissioned MCP tools, and graph-structured skill optimization, show
       that orchestration, context, skills, execution, and assurance can be separated. Wood
-      Mackenzie and Benchling provide two detailed production deployments, while two YC
-      company profiles add market context but not independent adoption proof. A Westermo
-      industrial case found no consistent quality advantage for multi-agent orchestration and
-      found the single-agent baseline faster and cheaper. The requirement therefore remains
-      emerging and conditional; operational evidence is still concentrated in AWS-published
-      case studies and does not qualify as strong.
+      Mackenzie and Benchling remain the two detailed production deployments. Counterevidence
+      shows that a direct API or simpler single-agent system can be cheaper and more effective
+      when the workflow does not need a governed interoperability boundary. The requirement
+      therefore remains emerging and conditional; stronger skill evidence does not substitute
+      for independent operational adoption.
     evidence_gaps:
       - Production accounts published outside a single infrastructure vendor's channel.
       - Comparative evidence on when modular interfaces reduce switching cost enough to offset orchestration complexity.

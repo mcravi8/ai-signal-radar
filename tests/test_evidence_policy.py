@@ -35,6 +35,7 @@ class EvidencePolicyTests(unittest.TestCase):
         self.assertEqual(self.results["shared-operational-context"]["maturity"], "experimental")
         self.assertEqual(self.results["bounded-workflow-ownership"]["maturity"], "narrative")
         self.assertEqual(self.results["simulation-first-physical-ai"]["maturity"], "experimental")
+        self.assertEqual(self.results["governed-proprietary-data-boundary"]["maturity"], "experimental")
         self.assertTrue(all(result["matches_expected"] for result in self.results.values()))
 
     def test_operational_proof_blocks_premature_promotion(self):
@@ -97,7 +98,7 @@ class EvidencePolicyTests(unittest.TestCase):
     def test_public_operating_model_explains_the_practice(self):
         payload = build_operating_model(self.policy, self.calibration, self.research)
         validate_public_payload(payload)
-        self.assertEqual(payload["meta"]["requirement_count"], 7)
+        self.assertEqual(payload["meta"]["requirement_count"], 8)
         for requirement in payload["requirements"]:
             self.assertGreater(len(requirement["description"]), 120)
             self.assertGreaterEqual(len(requirement["what_it_looks_like"]), 3)
@@ -111,6 +112,22 @@ class EvidencePolicyTests(unittest.TestCase):
         self.assertIn("not a general requirement", case["applicable_to"])
         self.assertTrue(case["gate_inputs"]["counterevidence_reviewed"])
         self.assertTrue(any(link["relationship"] == "counterevidence" for link in case["evidence_links"]))
+
+    def test_enterprise_data_boundary_is_experimental_and_reviews_leakage(self):
+        case = next(
+            case for case in self.calibration["cases"] if case["id"] == "governed-proprietary-data-boundary"
+        )
+        result = self.results["governed-proprietary-data-boundary"]
+        self.assertEqual(result["maturity"], "experimental")
+        self.assertIn(
+            "operational_adoption is low; requires moderate",
+            result["gate_results"]["emerging"]["failures"],
+        )
+        self.assertTrue(case["gate_inputs"]["counterevidence_reviewed"])
+        self.assertIn(
+            "arxiv:2609.21686v1",
+            {link["evidence_id"] for link in case["evidence_links"] if link["relationship"] == "counterevidence"},
+        )
 
     def test_tracked_public_artifact_matches_reviewed_cases(self):
         payload = json.loads((ROOT / "data/public/operating-model.json").read_text(encoding="utf-8"))
