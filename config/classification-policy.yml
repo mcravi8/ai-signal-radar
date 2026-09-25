@@ -76,6 +76,25 @@ out_of_scope_rules:
       Personnel and publisher housekeeping without a canonical technical or operating signal
       is outside thematic coverage.
 
+  - id: operator-personnel-housekeeping
+    source_ids: [yc-essays]
+    title_patterns:
+      - '\bjoins? yc as (?:a )?(?:general|managing) partners?\b'
+      - '\bnewest (?:general|managing|visiting) partners?\b'
+      - '\bpartner emeritus\b'
+      - '^welcoming [^\n]+ as yc[’'']s newest general partners?\b'
+    reason: >-
+      Operator personnel announcements are retained for provenance but do not describe an
+      AI engineering architecture, operating control, workflow system, or category signal.
+
+  - id: investor-fund-housekeeping
+    source_ids: [greylock-essays]
+    title_patterns:
+      - '^introducing greylock \d+\b'
+    reason: >-
+      A publisher's own fund announcement is retained for provenance but does not constitute
+      thematic evidence about an AI engineering or startup operating pattern.
+
 review_policy:
   - Out-of-scope rules run only after canonical theme matching, so a precise theme always wins.
   - Out-of-scope records remain public and inspectable; they are excluded only from the coverage denominator and review backlog.

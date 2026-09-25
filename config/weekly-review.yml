@@ -14,7 +14,7 @@ priority_components:
 
 candidate_adjudications:
   - candidate_id: theme:robotics-embodied-ai
-    reviewed_at: "2026-09-22"
+    reviewed_at: "2026-09-25"
     outcome: conditional-requirement-added
     requirement_ids: [simulation-first-physical-ai]
     decision: Add a conditional requirement for physical-AI startups, not a universal startup requirement.
@@ -23,14 +23,23 @@ candidate_adjudications:
       actionable requirement is narrower than the theme: physical-AI teams should use
       simulation, staged real-world validation, and explicit sim-to-real checks before
       scaling autonomous deployment.
+    evidence_review:
+      status: complete
+      records_screened: 36
+      links_added: 0
+      finding: >-
+        The broader vocabulary pass added first-party robotics systems, implementation
+        reports, research, and repositories. It strengthens the physical-AI domain but does
+        not change the operating conclusion: simulation and staged validation remain a
+        conditional requirement only for systems acting in the physical world.
     reviewed_state:
-      stage: corroborated
-      movement: new
-      evidence_count: 16
-      source_count: 8
+      stage: broadly-corroborated
+      movement: steady
+      evidence_count: 36
+      source_count: 12
 
   - candidate_id: theme:agent-harnesses
-    reviewed_at: "2026-09-22"
+    reviewed_at: "2026-09-25"
     outcome: covered-by-existing-requirement
     requirement_ids: [modular-agent-operating-stack]
     decision: Do not create a duplicate requirement.
@@ -40,20 +49,21 @@ candidate_adjudications:
       than create a second entry with an indistinguishable operating prescription.
     evidence_review:
       status: complete
-      records_screened: 56
+      records_screened: 67
       links_added: 4
       finding: >-
-        Component-level harness experiments strengthen technical reality, but an industrial
-        comparison found a single-agent baseline faster and cheaper without a consistent
-        quality loss. The linked requirement remains emerging and explicitly conditional.
+        Sixteen sources now support the orchestration layer, while the generic-agent cluster
+        was deliberately left unresolved. The industrial comparison favoring a simpler
+        single-agent baseline remains material counterevidence, so the modular-stack
+        requirement stays emerging and conditional.
     reviewed_state:
       stage: corroborated-source-concentrated
-      movement: rising
-      evidence_count: 56
-      source_count: 13
+      movement: falling
+      evidence_count: 67
+      source_count: 16
 
   - candidate_id: theme:coding-agents
-    reviewed_at: "2026-09-22"
+    reviewed_at: "2026-09-25"
     outcome: domain-signal-not-separate-requirement
     requirement_ids: [evaluation-release-gates, bounded-workflow-ownership]
     decision: Treat coding agents as an application domain, not a standalone operating requirement.
@@ -64,20 +74,21 @@ candidate_adjudications:
       measurable workflow outcomes.
     evidence_review:
       status: complete
-      records_screened: 62
+      records_screened: 101
       links_added: 5
       finding: >-
-        Failure and adoption evidence strengthens the case for independent release gates, while
-        frequent overclaiming and weak verification practice prevent bounded workflow ownership
-        from advancing beyond narrative maturity.
+        Claude Code, AI-coding, and development-tool records materially expand capability and
+        adoption evidence. They do not create a separate startup obligation: overclaiming,
+        incomplete review, and CI bottlenecks instead reinforce independent release gates and
+        bounded workflow ownership.
     reviewed_state:
-      stage: corroborated-source-concentrated
+      stage: broadly-corroborated
       movement: rising
-      evidence_count: 62
-      source_count: 14
+      evidence_count: 101
+      source_count: 15
 
   - candidate_id: theme:frontier-inference-infrastructure
-    reviewed_at: "2026-09-24"
+    reviewed_at: "2026-09-25"
     outcome: infrastructure-signal-not-general-requirement
     requirement_ids: [heterogeneous-model-routing]
     decision: Do not require ordinary startups to build frontier inference infrastructure.
@@ -88,21 +99,21 @@ candidate_adjudications:
       latency, and cost controls rather than own the underlying cluster.
     evidence_review:
       status: complete
-      records_screened: 29
+      records_screened: 46
       links_added: 6
       finding: >-
-        New multi-GPU serving, networking, and decoding records strengthen the supplier-side
-        infrastructure signal, but they still do not show that an application startup should
-        own a frontier cluster. The reusable requirement remains routing, capacity, latency,
-        cost control, and fallback selection across externally supplied inference paths.
+        CUDA, GPU-kernel, NIM, and inference-time-compute records deepen the supplier-side
+        infrastructure signal. They still do not show that an application startup should own
+        a frontier cluster; the reusable requirement remains routing, capacity, latency, cost,
+        and fallback control across supplied inference paths.
     reviewed_state:
       stage: broadly-corroborated
       movement: steady
-      evidence_count: 29
-      source_count: 8
+      evidence_count: 46
+      source_count: 12
 
   - candidate_id: theme:skills-integrations
-    reviewed_at: "2026-09-24"
+    reviewed_at: "2026-09-25"
     outcome: covered-by-existing-requirement
     requirement_ids: [modular-agent-operating-stack]
     decision: Do not create a separate requirement for skills, protocols, and integrations.
@@ -113,7 +124,7 @@ candidate_adjudications:
       behavior, and preserve replaceable model and execution layers.
     evidence_review:
       status: complete
-      records_screened: 74
+      records_screened: 80
       links_added: 5
       finding: >-
         Evaluated domain skills, repeatable deployment skills, MCP authorization, and
@@ -123,12 +134,12 @@ candidate_adjudications:
         simple workflow.
     reviewed_state:
       stage: broadly-corroborated
-      movement: rising
-      evidence_count: 74
-      source_count: 15
+      movement: steady
+      evidence_count: 80
+      source_count: 16
 
   - candidate_id: early:modular-agent-stack
-    reviewed_at: "2026-09-24"
+    reviewed_at: "2026-09-25"
     outcome: source-analysis-already-calibrated
     requirement_ids: [modular-agent-operating-stack]
     decision: Keep one calibrated modular-stack requirement; do not duplicate the Early Signal direction.
@@ -142,14 +153,14 @@ candidate_adjudications:
       records_screened: 8
       links_added: 0
       finding: >-
-        The direction and requirement refer to the same architecture. Additional signal breadth
-        does not overcome the requirement's explicit blockers: strong operational adoption and
-        strong evidence independence.
+        The direction and requirement refer to the same architecture. A seventh source adds
+        breadth but does not overcome the requirement's explicit blockers: strong operational
+        adoption and strong evidence independence.
     reviewed_state:
       stage: established
       movement: accelerating
       evidence_count: 8
-      source_count: 6
+      source_count: 7
 
   - candidate_id: early:enterprise-data-boundary
     reviewed_at: "2026-09-24"
@@ -204,7 +215,7 @@ candidate_adjudications:
       source_count: 12
 
   - candidate_id: theme:open-local-inference
-    reviewed_at: "2026-09-24"
+    reviewed_at: "2026-09-25"
     outcome: covered-by-existing-requirements
     requirement_ids: [heterogeneous-model-routing, governed-proprietary-data-boundary]
     decision: Treat open and local inference as an execution option, not a universal standalone requirement.
@@ -216,7 +227,7 @@ candidate_adjudications:
       inference everywhere would ignore quality, maintenance, and hardware tradeoffs.
     evidence_review:
       status: complete
-      records_screened: 92
+      records_screened: 98
       links_added: 3
       finding: >-
         Quantized runtime integration, adaptive inference research, and wider open-weight
@@ -225,9 +236,9 @@ candidate_adjudications:
         quality, operations, fallback, and hardware costs are included.
     reviewed_state:
       stage: corroborated-source-concentrated
-      movement: steady
-      evidence_count: 92
-      source_count: 15
+      movement: rising
+      evidence_count: 98
+      source_count: 16
 
   - candidate_id: theme:multimodal-3d
     reviewed_at: "2026-09-25"
@@ -242,18 +253,18 @@ candidate_adjudications:
       and workflow-specific release criteria.
     evidence_review:
       status: complete
-      records_screened: 48
+      records_screened: 51
       links_added: 0
       finding: >-
-        Ten source families and twenty-seven technical records establish broad capability
+        Eleven source families and thirty technical records establish broad capability
         progress, but the evidence spans unrelated product domains and benchmarks. It does not
         establish a common operating practice, measurable cost of absence, or production
         control that every AI startup should implement.
     reviewed_state:
       stage: broadly-corroborated
       movement: steady
-      evidence_count: 48
-      source_count: 10
+      evidence_count: 51
+      source_count: 12
 
   - candidate_id: theme:training-self-improvement
     reviewed_at: "2026-09-25"
@@ -268,18 +279,112 @@ candidate_adjudications:
       economics and product require them.
     evidence_review:
       status: complete
-      records_screened: 166
+      records_screened: 204
       links_added: 3
       finding: >-
-        Payment authorization, calibrated abstention, and replay-gated procedural memory show
-        evaluation operating inside action and improvement loops. They strengthen technical
-        reality for evaluation gates, but the corpus remains paper-heavy and does not establish
-        repeatable production adoption or make model training a universal startup requirement.
+        The vocabulary audit added pretraining, synthetic-data, federated-learning, scaling-law,
+        and representation-learning records. This strengthens the capability family but makes
+        it more heterogeneous, not more universal: the general operating obligation remains
+        evaluation and release control rather than training a model.
     reviewed_state:
       stage: broadly-corroborated
       movement: steady
-      evidence_count: 166
+      evidence_count: 204
       source_count: 27
+
+  - candidate_id: early:operational-context
+    reviewed_at: "2026-09-25"
+    outcome: linked-requirement-revalidated
+    requirement_ids: [shared-operational-context]
+    decision: Keep the shared operational context requirement at experimental maturity.
+    rationale: >-
+      The direction now connects newsletter analysis, research, and an open repository, which
+      supports the architectural hypothesis. Three sources do not yet demonstrate repeatable
+      production adoption, maintenance economics, or superiority over workflow-specific
+      retrieval and direct integrations.
+    evidence_review:
+      status: complete
+      records_screened: 5
+      links_added: 0
+      finding: >-
+        Operational ontology, graph retrieval, and structured business context converge on one
+        reusable layer. The evidence clears continued experimentation but not promotion to an
+        established startup baseline.
+    reviewed_state:
+      stage: emerging
+      movement: accelerating
+      evidence_count: 5
+      source_count: 3
+
+  - candidate_id: early:simulation-first-physical-ai
+    reviewed_at: "2026-09-25"
+    outcome: linked-requirement-revalidated
+    requirement_ids: [simulation-first-physical-ai]
+    decision: Keep simulation-first development as an experimental, physical-AI-only requirement.
+    rationale: >-
+      Research, repositories, paper curation, and investor analysis now repeat the simulation
+      pattern. The corpus still lacks comparative production evidence showing reliable
+      sim-to-real transfer and lower total validation cost across independent deployments.
+    evidence_review:
+      status: complete
+      records_screened: 6
+      links_added: 0
+      finding: >-
+        Added source breadth confirms that simulation is an active development layer, while
+        transfer quality remains the gating uncertainty. No universal software-startup
+        requirement follows from this domain-specific evidence.
+    reviewed_state:
+      stage: emerging
+      movement: steady
+      evidence_count: 6
+      source_count: 4
+
+  - candidate_id: expert-finding:agent-operating-layer
+    reviewed_at: "2026-09-25"
+    outcome: source-analysis-covered-by-existing-requirements
+    requirement_ids: [modular-agent-operating-stack, evaluation-release-gates]
+    decision: Use the expert pattern as directional context for the modular stack and release gates.
+    rationale: >-
+      The synthesis describes context, tools, permissions, observability, and recovery—the same
+      control surface already represented by the modular agent stack and evaluation gates.
+      Social interpretation can direct attention but cannot independently verify operational
+      adoption or effectiveness.
+    evidence_review:
+      status: complete
+      records_screened: 5
+      links_added: 0
+      finding: >-
+        Five experts independently emphasize the operating layer around agents. Technical and
+        production evidence must still come from the linked requirements' underlying records,
+        so no duplicate requirement or maturity promotion is warranted.
+    reviewed_state:
+      stage:
+      movement: new
+      evidence_count: 5
+      source_count: 5
+
+  - candidate_id: theme:proprietary-data-boundary
+    reviewed_at: "2026-09-25"
+    outcome: covered-by-existing-requirement
+    requirement_ids: [governed-proprietary-data-boundary]
+    decision: Use the new canonical theme to support the existing governed proprietary-data requirement.
+    rationale: >-
+      Federated execution, confidential computing, tenant isolation, sovereignty, and explicit
+      training-use controls are technical expressions of the same controlled data boundary.
+      Creating another requirement would duplicate the already calibrated obligation.
+    evidence_review:
+      status: complete
+      records_screened: 10
+      links_added: 0
+      finding: >-
+        Six independent sources establish a corroborated technical category, but repeatable
+        production comparisons and verified provider guarantees remain thin. The corresponding
+        startup requirement therefore remains experimental.
+    reviewed_state:
+      stage: corroborated
+      movement: steady
+      evidence_count: 10
+      source_count: 6
 
   - candidate_id: expert-finding:evaluation-as-system-design
     reviewed_at: "2026-09-25"

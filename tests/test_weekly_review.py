@@ -20,7 +20,7 @@ class WeeklyReviewTests(unittest.TestCase):
 
     def test_candidate_pool_is_bounded_and_cross_source(self):
         review = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
-        self.assertEqual(review["meta"]["candidate_pool_count"], 36)
+        self.assertEqual(review["meta"]["candidate_pool_count"], 37)
         self.assertLessEqual(len(review["assessment_queue"]), 10)
         self.assertTrue(all(item["materially_changed"] for item in review["assessment_queue"]))
         self.assertTrue(any(item["linked_requirement"] for item in review["assessment_queue"]))
@@ -123,6 +123,10 @@ class WeeklyReviewTests(unittest.TestCase):
                 "theme:multimodal-3d",
                 "theme:training-self-improvement",
                 "expert-finding:evaluation-as-system-design",
+                "early:operational-context",
+                "early:simulation-first-physical-ai",
+                "expert-finding:agent-operating-layer",
+                "theme:proprietary-data-boundary",
             },
         )
         self.assertEqual(adjudications["theme:robotics-embodied-ai"]["outcome"], "conditional-requirement-added")
@@ -138,7 +142,7 @@ class WeeklyReviewTests(unittest.TestCase):
             adjudications["theme:training-self-improvement"]["requirement_ids"],
             ["evaluation-release-gates"],
         )
-        self.assertTrue(all(item["status"] in {"current", "revisit-required"} for item in adjudications.values()))
+        self.assertTrue(all(item["status"] == "current" for item in adjudications.values()))
         audited = [item for item in adjudications.values() if item.get("evidence_review")]
         self.assertTrue(all(item["evidence_review"]["status"] == "complete" for item in audited))
         queued_ids = {item["id"] for item in review["assessment_queue"]}
@@ -147,13 +151,8 @@ class WeeklyReviewTests(unittest.TestCase):
             if item["status"] == "current"
         }
         self.assertFalse(current_ids.intersection(queued_ids))
-        revisit_ids = {
-            candidate_id for candidate_id, item in adjudications.items()
-            if item["status"] == "revisit-required"
-        }
         queued_adjudication_ids = queued_ids.intersection(adjudications)
-        self.assertTrue(queued_adjudication_ids)
-        self.assertTrue(queued_adjudication_ids.issubset(revisit_ids))
+        self.assertFalse(queued_adjudication_ids)
 
 
 if __name__ == "__main__":

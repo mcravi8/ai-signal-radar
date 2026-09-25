@@ -1495,8 +1495,32 @@ function renderProjects() {
       clusterRows.append(item);
     }
     clusters.append(clusterRows);
+    const selective = audit.selective_review;
+    let ranked = null;
+    if (selective) {
+      ranked = node("details", "classification-clusters");
+      ranked.append(node("summary", "", `Inspect ${formatNumber((selective.ranked_clusters || []).length)} ranked second-pass clusters`));
+      const rankedRows = node("div", "classification-cluster-rows");
+      for (const cluster of selective.ranked_clusters || []) {
+        const item = node("article", "classification-cluster");
+        const heading = node("div", "audit-finding-heading");
+        heading.append(
+          node("strong", "", `${cluster.rank}. ${cluster.title}`),
+          badge(label(cluster.disposition), cluster.disposition),
+        );
+        item.append(
+          heading,
+          node("p", "", cluster.decision),
+          node("small", "tabular", `${formatNumber(cluster.observed_records)} matched · ${formatNumber(cluster.source_count)} sources · priority ${formatNumber(cluster.priority_score)}`),
+        );
+        rankedRows.append(item);
+      }
+      ranked.append(rankedRows);
+    }
     const boundary = node("p", "audit-boundary", audit.limitation);
-    auditRoot.append(summary, findings, clusters, boundary);
+    auditRoot.append(summary, findings, clusters);
+    if (ranked) auditRoot.append(ranked);
+    auditRoot.append(boundary);
   } else {
     auditRoot.append(node("p", "empty-state", "No classification audit has been published yet."));
   }

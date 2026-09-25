@@ -164,3 +164,11 @@ seed_themes:
     aliases: [robotics foundation model, robot foundation, embodied agent, robot learning, physical AI, digital twins]
     primary_layer: models-capabilities
     secondary_layer: tools-skills-integrations
+
+  - id: proprietary-data-boundary
+    name: Governed proprietary-data boundaries
+    definition: Architectures that keep proprietary, regulated, or customer-confidential data inside controlled systems while exposing only permitted context or computation to models.
+    aliases: [proprietary data boundary, confidential data, data sovereignty, data residency, confidential computing, tenant isolation, federated learning]
+    primary_layer: assurance
+    secondary_layer: tools-skills-integrations
+    lens: enterprise-adoption

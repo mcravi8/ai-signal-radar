@@ -64,6 +64,12 @@ themes:
     - nvlink
     - high bandwidth memory
     - hbm
+    - inference-time compute
+    - gpu kernel
+    - gpu kernels
+    - cuda
+    - nim optimization
+    - nim optimizations
   specialized-inference-silicon:
     - language processing unit
     - inference asic
@@ -127,6 +133,18 @@ themes:
     - agent observability
     - runtime monitor
     - multi-tenant
+    - jailbreak
+    - jailbreaks
+    - ai safety
+    - model safety
+    - ai misuse
+    - model manipulation
+    - model evaluation
+    - model evaluations
+    - hallucination
+    - hallucinations
+    - adversarial attack
+    - adversarial attacks
   open-local-inference:
     - open weights
     - open-weight
@@ -188,6 +206,18 @@ themes:
     - model evals
     - product evals
     - continual learning
+    - pretraining
+    - pre-training
+    - model training
+    - training data
+    - synthetic data
+    - federated learning
+    - scaling law
+    - scaling laws
+    - self-supervised learning
+    - representation learning
+    - data augmentation
+    - finetuning
   coding-agents:
     - coding agent
     - coding agents
@@ -207,6 +237,10 @@ themes:
     - code assistants
     - developer tooling
     - agentic coding
+    - claude code
+    - ai coding
+    - ai-driven development
+    - agentic software development
   validation-release:
     - runtime validation
     - release bottleneck
@@ -282,6 +316,14 @@ themes:
     - rag systems
     - rag application
     - document processing
+    - rag
+    - embedding model
+    - embedding models
+    - vector database
+    - vector databases
+    - information extraction
+    - knowledge base
+    - knowledge bases
   memory-context:
     - agent memory
     - persistent memory
@@ -319,6 +361,12 @@ themes:
     - ai for the trades
     - ai for the physical sciences
     - ai-native professional
+    - forward deployed engineer
+    - forward-deployed engineer
+    - forward deployed engineering
+    - forward-deployed engineering
+    - enterprise workflow
+    - enterprise workflows
   web-browser-automation:
     - browser agent
     - browser automation
@@ -340,3 +388,18 @@ themes:
     - world action model
     - robot policy
     - robot foundation
+    - robotics
+    - robot navigation
+  proprietary-data-boundary:
+    - proprietary data
+    - confidential data
+    - data sovereignty
+    - data residency
+    - privacy-preserving
+    - confidential computing
+    - trusted execution environment
+    - trusted execution environments
+    - tenant isolation
+    - training exclusion
+    - air-gapped
+    - federated learning

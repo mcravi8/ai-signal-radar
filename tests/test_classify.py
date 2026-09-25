@@ -56,6 +56,30 @@ class ClassificationRegressionTests(unittest.TestCase):
             with self.subTest(text=text):
                 self.assertIn(expected, classify_text(text, self.keywords))
 
+    def test_second_pass_maps_only_precise_cluster_vocabulary(self):
+        cases = {
+            "Scaling federated learning across private clients": {
+                "training-self-improvement", "proprietary-data-boundary",
+            },
+            "Claude Code exposed an AI coding CI bottleneck": {"coding-agents"},
+            "A jailbreak revealed a model safety failure": {"assurance-infrastructure"},
+            "CUDA GPU kernels improve inference-time compute": {"frontier-inference-infrastructure"},
+            "Multi-vector embedding models for information extraction": {"document-knowledge-systems"},
+            "A cross-embodiment robot navigation system for robotics": {"robotics-embodied-ai"},
+            "A forward-deployed engineer builds an enterprise workflow": {"enterprise-vertical-ai"},
+        }
+        for text, expected in cases.items():
+            with self.subTest(text=text):
+                self.assertTrue(expected.issubset(classify_text(text, self.keywords)))
+
+    def test_generic_agent_and_model_brand_language_remains_unclassified(self):
+        for text in (
+            "AI agents are changing quickly",
+            "A reaction to the latest Claude and Gemini releases",
+        ):
+            with self.subTest(text=text):
+                self.assertEqual(classify_text(text, self.keywords), [])
+
     def test_general_community_material_is_explicitly_out_of_scope(self):
         result = classify_record(
             {
@@ -99,6 +123,24 @@ class ClassificationRegressionTests(unittest.TestCase):
         )
         self.assertEqual(result["disposition"], "classified")
         self.assertIn("robotics-embodied-ai", result["theme_ids"])
+
+    def test_inspected_publisher_housekeeping_is_out_of_scope(self):
+        cases = (
+            {
+                "source_id": "yc-essays",
+                "source_type": "operator-essay",
+                "title": "Two people join YC as General Partners",
+            },
+            {
+                "source_id": "greylock-essays",
+                "source_type": "investor-essay",
+                "title": "Introducing Greylock 18",
+            },
+        )
+        for row in cases:
+            with self.subTest(title=row["title"]):
+                result = classify_record({**row, "summary": "", "tags": []}, self.keywords, self.policy)
+                self.assertEqual(result["disposition"], "out-of-scope")
 
 
 if __name__ == "__main__":

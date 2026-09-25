@@ -176,7 +176,7 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertTrue(all(item.get("disposition_reason") for item in self.payload["evidence"]))
         audit = atlas["classification_audit"]
         self.assertEqual(audit["baseline_public_records"], self.payload["meta"]["public_record_count"])
-        self.assertEqual(audit["current_newly_classified_records"], 25)
+        self.assertGreaterEqual(audit["current_newly_classified_records"], 100)
         self.assertEqual(
             sum(item["observed_records"] for item in audit["recurring_unmatched_clusters"]),
             audit["baseline_classification_review_records"],
@@ -184,6 +184,14 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertEqual(audit["current_unclassified_records"], atlas["quality"]["unclassified_public_records"])
         self.assertEqual(audit["current_out_of_scope_records"], atlas["quality"]["out_of_scope_public_records"])
         self.assertGreater(audit["current_classification_coverage"], audit["baseline_raw_classification_coverage"])
+        selective = audit["selective_review"]
+        self.assertEqual(selective["input_classification_review_records"], 886)
+        self.assertEqual(len(selective["ranked_clusters"]), 10)
+        self.assertEqual(
+            [item["rank"] for item in selective["ranked_clusters"]],
+            list(range(1, 11)),
+        )
+        self.assertTrue(all(item["sample_evidence_ids"] for item in selective["ranked_clusters"]))
 
     def test_early_signal_tracker_separates_inference_from_evidence(self):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}

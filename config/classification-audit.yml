@@ -1,5 +1,5 @@
 audit:
-  id: classification-audit-2026-09-25
+  id: classification-audit-2026-09-25-pass-2
   audited_at: "2026-09-25"
   baseline_public_records: 1781
   baseline_classified_records: 554
@@ -52,5 +52,210 @@ audit:
       conclusion: Every out-of-scope record retains its source, title, link, rule, and reason and can re-enter the taxonomy if precise vocabulary matches later.
     - title: Most unmatched AI material remains unresolved
       conclusion: Papers, repositories, expert observations, and first-party claims stay in classification review unless a precise theme or a bounded exclusion rule explains them.
-  next_step: Inspect the largest recurring phrases inside the remaining classification-review pool; propose a new theme only when several independent sources describe the same reusable architecture or operating practice.
-  limitation: Cluster counts partition the September 25 backlog after precise theme matches take precedence. They are an audit snapshot, not permanent source quotas or claims that every record in a cluster was manually read.
+    - title: Generic agent and model language is not a category
+      conclusion: Agent mentions and frontier-model brand names remain in review unless the record also states a reusable architecture, operating control, workflow system, or commercialization pattern.
+    - title: Proprietary-data controls clear the new-theme bar
+      conclusion: Federated execution, confidential computing, tenant isolation, sovereignty, and training-use controls recur across independent technical and operating sources and now form one canonical theme.
+  selective_review:
+    input_classification_review_records: 886
+    reviewed_at: "2026-09-25"
+    ranking_method: >-
+      Candidate clusters were ranked on capped record frequency, independent publisher breadth,
+      source-family breadth, records published in the latest seven-day window, and reusable
+      operating relevance. Clusters overlap; the ranking directs inspection and is not a partition
+      of the backlog.
+    decision_policy: >-
+      Representative records from independent sources were inspected before a decision. A cluster
+      could map only through precise phrases, create a theme only with cross-source architectural
+      coherence, or remain unresolved. Generic words did not become classification rules.
+    ranked_clusters:
+      - rank: 1
+        id: agent-systems-general
+        title: Generic agent-system references
+        observed_records: 54
+        source_count: 20
+        source_family_count: 10
+        recent_records: 15
+        operating_relevance: high
+        priority_score: 100
+        disposition: classification-review
+        decision: >-
+          Keep generic AI agent and agentic references unresolved. The sample spans orchestration,
+          memory, marketplaces, security, research, and product announcements; mapping all of it
+          to agent harnesses would erase those distinctions.
+        sample_evidence_ids:
+          - alphasignal:878cd92f8396df643edb
+          - hn:49797801
+          - openai-news:d2871d486c61275aa183
+      - rank: 2
+        id: training-and-learning-methods
+        title: Training and learning methods
+        observed_records: 27
+        source_count: 9
+        source_family_count: 7
+        recent_records: 8
+        operating_relevance: high
+        priority_score: 96
+        disposition: classified
+        decision: >-
+          Map inspected phrases including pretraining, training data, synthetic data, federated
+          learning, scaling laws, representation learning, and data augmentation to training and
+          self-improvement. Federated and privacy-preserving records may also map to the new
+          proprietary-data boundary theme.
+        sample_evidence_ids:
+          - arxiv:2609.22005v1
+          - aws-machine-learning-blog:4b89a77060c422fd8497
+          - nvidia-developer-blog:c6cbeb9f9f96e88e05d7
+      - rank: 3
+        id: coding-development
+        title: AI coding and Claude Code
+        observed_records: 16
+        source_count: 5
+        source_family_count: 5
+        recent_records: 8
+        operating_relevance: high
+        priority_score: 82
+        disposition: classified
+        decision: >-
+          Map Claude Code, AI coding, AI-driven development, and agentic software development to
+          coding agents. Do not map generic mentions of coding, repositories, or software work.
+        sample_evidence_ids:
+          - alphasignal:324bb0890b258e7ec4fc
+          - hn:49798257
+          - github:1369759058
+      - rank: 4
+        id: assurance-evals-security
+        title: Model assurance, evaluation, and adversarial behavior
+        observed_records: 19
+        source_count: 11
+        source_family_count: 5
+        recent_records: 3
+        operating_relevance: high
+        priority_score: 80
+        disposition: classified
+        decision: >-
+          Map precise phrases such as jailbreak, AI or model safety, model evaluation, AI misuse,
+          hallucination, model manipulation, and adversarial attack to assurance. Generic security,
+          risk, and evaluation language remains insufficient.
+        sample_evidence_ids:
+          - last-week-in-ai:232d3fdd993d62e5051b
+          - bluesky:e810fac7fd93:3mv3ybz4g4n2c
+          - anthropic-news-research:b44c829b27028fd75a53
+      - rank: 5
+        id: frontier-model-capabilities
+        title: Frontier-model releases and capability reactions
+        observed_records: 127
+        source_count: 20
+        source_family_count: 10
+        recent_records: 38
+        operating_relevance: low
+        priority_score: 80
+        disposition: classification-review
+        decision: >-
+          Keep brand and release references unresolved. GPT, Claude, Gemini, frontier-lab, and
+          superintelligence mentions describe products or reactions, not one reusable engineering
+          or operating category. Specific capabilities still classify when precise vocabulary matches.
+        sample_evidence_ids:
+          - bluesky:1278ebf77949:3mwctdxv7pc26
+          - alphasignal:cc3dc4af9a1c16678c1f
+          - bluesky:b3614927c6a2:3mw5g6izoms2n
+      - rank: 6
+        id: enterprise-workflows
+        title: Forward-deployed enterprise workflows
+        observed_records: 8
+        source_count: 5
+        source_family_count: 6
+        recent_records: 0
+        operating_relevance: high
+        priority_score: 60
+        disposition: classified
+        decision: >-
+          Map forward-deployed engineering and explicit enterprise workflows to enterprise and
+          vertical AI. Product-brand mentions such as ChatGPT Work remain insufficient by themselves.
+        sample_evidence_ids:
+          - latent-space:b01f2ad61bd017c9f37a
+          - hn:49661645
+          - openai-news:d22acfa5d0cc1d093c4a
+      - rank: 7
+        id: inference-compute
+        title: Inference-time compute and GPU implementation
+        observed_records: 9
+        source_count: 4
+        source_family_count: 4
+        recent_records: 1
+        operating_relevance: high
+        priority_score: 57
+        disposition: classified
+        decision: >-
+          Map inference-time compute, GPU kernels, CUDA, and NIM optimization to frontier inference
+          infrastructure. Do not map the generic statistical word inference.
+        sample_evidence_ids:
+          - bluesky:e810fac7fd93:3mvuzqbqzz223
+          - nvidia-developer-blog:d41c5d0bcd6835d87291
+          - import-ai:8abc3244a14ba63a9d42
+      - rank: 8
+        id: proprietary-data-boundary
+        title: Governed proprietary-data boundaries
+        observed_records: 6
+        source_count: 4
+        source_family_count: 2
+        recent_records: 1
+        operating_relevance: high
+        priority_score: 50
+        disposition: classified
+        decision: >-
+          Create one canonical theme for federated execution, confidential computing, data
+          sovereignty, tenant isolation, and explicit training-use boundaries. These sources
+          describe the same reusable control boundary already monitored by Early Signals.
+        sample_evidence_ids:
+          - arxiv:2609.21829v1
+          - aws-machine-learning-blog:5a658dac9f90bae77e02
+          - nvidia-developer-blog:c6cbeb9f9f96e88e05d7
+      - rank: 9
+        id: retrieval-documents
+        title: Embedding and structured retrieval systems
+        observed_records: 6
+        source_count: 3
+        source_family_count: 3
+        recent_records: 1
+        operating_relevance: high
+        priority_score: 50
+        disposition: classified
+        decision: >-
+          Map exact RAG, embedding-model, vector-database, information-extraction, and
+          knowledge-base phrases to document and knowledge systems. Generic document,
+          retrieval, or embedding language remains unresolved.
+        sample_evidence_ids:
+          - huggingface-blog:17177c100c9150295f9a
+          - hf-paper:2508.07662
+          - arxiv:2609.21789v1
+      - rank: 10
+        id: robotics-physical-ai
+        title: Robotics implementation
+        observed_records: 6
+        source_count: 4
+        source_family_count: 3
+        recent_records: 0
+        operating_relevance: high
+        priority_score: 50
+        disposition: classified
+        decision: >-
+          Map the bounded terms robotics and robot navigation to robotics and embodied AI.
+          Generic robot metaphors or unrelated automation remain unmatched.
+        sample_evidence_ids:
+          - nvidia-developer-blog:669a2bcff9f93697746c
+          - deepmind-blog:614d79e4a866af7d0adf
+          - import-ai:cc90ec0bce0196116fe5
+    additional_exclusions:
+      - id: operator-personnel-housekeeping
+        decision: Exclude only source-bounded YC partner appointments and transitions.
+      - id: investor-fund-housekeeping
+        decision: Exclude the inspected Greylock fund announcement without excluding portfolio-company essays.
+  next_step: >-
+    Monitor the remaining review pool for genuinely new multi-source architectures. Re-run this
+    ranked audit only when a cluster gains independent-source breadth or precise vocabulary;
+    do not reduce the backlog merely to improve a percentage.
+  limitation: >-
+    The first-pass cluster counts partition the September 25 backlog after precise theme matches
+    take precedence. The second-pass ranked clusters overlap and use representative inspection;
+    neither snapshot claims that every record was manually read.
