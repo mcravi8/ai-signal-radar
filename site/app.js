@@ -553,10 +553,71 @@ function discoveryEvidenceDetails(evidenceIds = []) {
   return details;
 }
 
+function discoveryMergeCard(suggestion, index) {
+  const card = node("article", "merge-card");
+  const order = node("span", "merge-order tabular", String(index + 1).padStart(2, "0"));
+  const copy = node("div", "merge-copy");
+  copy.append(
+    node("span", "merge-kind", label(suggestion.disposition)),
+    node("h4", "", (suggestion.anchor_labels || []).join(" + ") || "Unlabelled cross-source cluster"),
+    node("p", "", discoveryBasis(suggestion.nearest_known)),
+  );
+  const facts = node("div", "merge-facts");
+  facts.append(
+    node("span", "tabular", `${formatNumber(suggestion.evidence_ids?.length)} evidence`),
+    node("span", "tabular", `${formatNumber(suggestion.source_count)} sources`),
+    node("span", "tabular", `${formatNumber(suggestion.source_family_count)} families`),
+    node("span", "tabular", suggestion.materially_changed ? "Changed this cycle" : "Retained"),
+  );
+  card.append(order, copy, facts, discoveryEvidenceDetails(suggestion.evidence_ids));
+  return card;
+}
+
+function discoveryMergeFamily(title, note, suggestions, open = false) {
+  const family = node("details", "merge-family");
+  family.open = open;
+  const summary = node("summary", "merge-family-summary");
+  const summaryCopy = node("span", "merge-family-copy");
+  summaryCopy.append(node("strong", "", title), node("small", "", note));
+  summary.append(summaryCopy, node("span", "merge-family-count tabular", `${formatNumber(suggestions.length)} proposals`));
+  family.append(summary);
+
+  const targetGroups = new Map();
+  for (const suggestion of suggestions) {
+    const key = `${suggestion.nearest_known?.kind || "unknown"}:${suggestion.nearest_known?.id || "unassigned"}`;
+    if (!targetGroups.has(key)) targetGroups.set(key, []);
+    targetGroups.get(key).push(suggestion);
+  }
+  const groups = node("div", "merge-target-groups");
+  for (const groupSuggestions of targetGroups.values()) {
+    const target = groupSuggestions[0].nearest_known;
+    const targetDetails = node("details", "merge-target-group");
+    const targetSummary = node("summary", "merge-target-summary");
+    const targetCopy = node("span", "merge-target-copy");
+    targetCopy.append(node("small", "", `Suggested ${target?.kind === "theme" ? "theme" : "direction"}`));
+    targetCopy.append(node("strong", "", target?.title || target?.id || "No target"));
+    const uniqueEvidence = new Set(groupSuggestions.flatMap((item) => item.evidence_ids || [])).size;
+    targetSummary.append(
+      targetCopy,
+      node("span", "merge-target-count tabular", `${groupSuggestions.length} ${groupSuggestions.length === 1 ? "proposal" : "proposals"} · ${uniqueEvidence} evidence`),
+    );
+    const items = node("div", "merge-target-items");
+    const targetLink = node("a", "merge-target-reference", `Open ${target?.kind === "theme" ? "theme" : "tracked direction"} ↗`);
+    targetLink.href = discoveryTargetHref(target);
+    items.append(targetLink);
+    groupSuggestions.forEach((suggestion, index) => items.append(discoveryMergeCard(suggestion, index)));
+    targetDetails.append(targetSummary, items);
+    groups.append(targetDetails);
+  }
+  family.append(groups);
+  return family;
+}
+
 function renderDiscovery() {
   const data = state.discoveryReview;
   const metrics = $("#discovery-metrics");
   const summary = $("#discovery-summary");
+  const runDetails = $("#discovery-run-details");
   const queue = $("#discovery-queue");
   const merges = $("#merge-suggestions");
   const history = $("#discovery-history");
@@ -565,6 +626,7 @@ function renderDiscovery() {
   if (!data) {
     metrics.replaceChildren(metric("Pending records", "N/O", "Dataset unavailable"));
     summary.replaceChildren(node("strong", "", "Discovery data is unavailable."), node("span", "", "The core research dataset is still available; this review page cannot establish whether new leads exist."));
+    runDetails.replaceChildren();
     queue.replaceChildren(node("p", "empty-state", "New Sparks and Candidates could not be loaded."));
     merges.replaceChildren(node("p", "empty-state", "Merge suggestions could not be loaded."));
     history.replaceChildren(node("p", "empty-state", "Decision history could not be loaded."));
@@ -575,19 +637,32 @@ function renderDiscovery() {
       ...(data.records || []).filter((item) => ["rejected", "dormant"].includes(item.state)),
     ].filter((item, index, items) => items.findIndex((candidate) => candidate.id === item.id) === index);
     const meta = data.meta || {};
+    const mergeSuggestions = data.merge_suggestions || [];
     metrics.replaceChildren(
       metric("Needs decision", formatNumber(activeRecords.length), "New Sparks and Candidates"),
-      metric("Sparks", formatNumber(meta.spark_count), "Coherent leads below Candidate maturity"),
-      metric("Candidates", formatNumber(meta.candidate_count), "Mechanically review-ready"),
-      metric("Merge suggestions", formatNumber((data.merge_suggestions || []).length), "Proposed, not accepted"),
-      metric("Coherent clusters", formatNumber(meta.coherent_cluster_count), `${formatNumber(meta.cluster_count)} clusters screened`),
-      metric("Quality eligible", formatNumber(meta.quality_eligible_cluster_count), `${formatNumber(meta.explained_cluster_count)} explained by known work`),
+      metric("Merge proposals", formatNumber(mergeSuggestions.length), "Grouped by destination"),
+      metric("Decision history", formatNumber(terminalHistory.length), "Rejected or dormant"),
     );
     summary.replaceChildren(
       node("strong", "", activeRecords.length ? `${activeRecords.length} unexplained pattern${activeRecords.length === 1 ? "" : "s"} requires a decision.` : "No unexplained pattern crossed the review gate this cycle."),
-      node("span", "", meta.interpretation || "Discovery leads are generated mechanically and require human review."),
-      node("small", "tabular", `Generated ${formatDate(meta.generated_at)} · ${formatNumber(meta.input_changed_document_count)} new or changed inputs`),
+      node("span", "", mergeSuggestions.length ? `${mergeSuggestions.length} explained patterns are grouped below by their proposed destination.` : "No merge proposal was generated."),
+      node("small", "tabular", `Updated ${formatDate(meta.generated_at)}`),
     );
+    const audit = node("details", "discovery-run-audit");
+    const auditSummary = node("summary", "");
+    auditSummary.append(
+      node("strong", "", "Run details"),
+      node("span", "tabular", `${formatNumber(meta.input_changed_document_count)} changed inputs → ${formatNumber(meta.cluster_count)} clusters → ${formatNumber(meta.quality_eligible_cluster_count)} quality eligible`),
+    );
+    const auditFacts = node("div", "discovery-run-facts");
+    auditFacts.append(
+      metric("Changed inputs", formatNumber(meta.input_changed_document_count), "New or materially changed"),
+      metric("Coherent clusters", formatNumber(meta.coherent_cluster_count), `${formatNumber(meta.cluster_count)} screened`),
+      metric("Quality eligible", formatNumber(meta.quality_eligible_cluster_count), "Passed the structural gate"),
+      metric("Explained", formatNumber(meta.explained_cluster_count), "Matched known work"),
+    );
+    audit.append(auditSummary, auditFacts);
+    runDetails.replaceChildren(audit);
 
     queue.replaceChildren();
     if (!activeRecords.length) {
@@ -638,31 +713,13 @@ function renderDiscovery() {
     }
 
     merges.replaceChildren();
-    if (!(data.merge_suggestions || []).length) merges.append(node("p", "empty-state", "No merge suggestion was generated in this cycle."));
-    for (const [index, suggestion] of (data.merge_suggestions || []).entries()) {
-      const card = node("article", "merge-card");
-      const order = node("span", "merge-order tabular", String(index + 1).padStart(2, "0"));
-      const copy = node("div", "merge-copy");
-      copy.append(
-        node("span", "merge-kind", label(suggestion.disposition)),
-        node("h4", "", (suggestion.anchor_labels || []).join(" + ") || "Unlabelled cross-source cluster"),
-        node("p", "", discoveryBasis(suggestion.nearest_known)),
-      );
-      const target = node("div", "merge-target");
-      target.append(node("small", "", "Suggested target"));
-      const targetLink = node("a", "", suggestion.nearest_known?.title || suggestion.nearest_known?.id || "No target");
-      targetLink.href = discoveryTargetHref(suggestion.nearest_known);
-      target.append(targetLink, badge("Proposal", "proposal"));
-      const facts = node("div", "merge-facts");
-      facts.append(
-        node("span", "tabular", `${formatNumber(suggestion.evidence_ids?.length)} evidence`),
-        node("span", "tabular", `${formatNumber(suggestion.source_count)} sources`),
-        node("span", "tabular", `${formatNumber(suggestion.source_family_count)} families`),
-        node("span", "tabular", suggestion.materially_changed ? "Changed this cycle" : "Retained"),
-      );
-      card.append(order, copy, target, facts, discoveryEvidenceDetails(suggestion.evidence_ids));
-      merges.append(card);
-    }
+    if (!mergeSuggestions.length) merges.append(node("p", "empty-state", "No merge suggestion was generated in this cycle."));
+    const directionSuggestions = mergeSuggestions.filter((item) => item.nearest_known?.kind === "early-signal-direction");
+    const themeSuggestions = mergeSuggestions.filter((item) => item.nearest_known?.kind === "theme");
+    const unassignedSuggestions = mergeSuggestions.filter((item) => !["early-signal-direction", "theme"].includes(item.nearest_known?.kind));
+    if (directionSuggestions.length) merges.append(discoveryMergeFamily("Tracked directions", "Higher-level hypotheses already monitored in the Early Signal Tracker.", directionSuggestions, true));
+    if (themeSuggestions.length) merges.append(discoveryMergeFamily("Existing themes", "Established taxonomy categories; open only when sampling classification quality.", themeSuggestions));
+    if (unassignedSuggestions.length) merges.append(discoveryMergeFamily("Other destinations", "Suggestions without a standard theme or direction target.", unassignedSuggestions));
 
     history.replaceChildren();
     if (!terminalHistory.length) {
@@ -686,6 +743,10 @@ function renderDiscovery() {
   }
 
   review.replaceChildren();
+  const reviewPanel = node("details", "decision-panel");
+  const reviewSummary = node("summary", "decision-panel-summary");
+  reviewSummary.append(node("strong", "", "Open the decision checklist"), node("span", "", "5 checks · 6 possible outcomes · read-only"));
+  const reviewBody = node("div", "decision-panel-body");
   const intro = node("div", "decision-intro");
   intro.append(
     badge("Read-only", "proposal"),
@@ -729,7 +790,9 @@ function renderDiscovery() {
   dataLink.target = "_blank";
   dataLink.rel = "noreferrer";
   links.append(policyLink, dataLink);
-  review.append(intro, checklist, actions, links);
+  reviewBody.append(intro, checklist, actions, links);
+  reviewPanel.append(reviewSummary, reviewBody);
+  review.append(reviewPanel);
 }
 
 function renderOperatingModel() {
