@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-25T07:02:50.177694+00:00",
+    "generated_at": "2026-09-25T07:18:15.174276+00:00",
     "method": "deterministic-lexical-v1",
     "window_days": 35,
     "document_count": 1205,
@@ -53,12 +53,12 @@
     "arxiv:2609.20427v1": "0b84e9f24d37542b3d35cf77bf960fea2daffc9d71a08fb3b2cceb08f536cba6",
     "arxiv:2609.20437v1": "6a3adf7ecdd27d090667046568f5f09c080664fb9e1df10b4eaa8713cd4f48f3",
     "arxiv:2609.20441v1": "c3a84be92026f75e9f0eed25b4057e303567e6044a268eeb2efad2456118a01b",
-    "arxiv:2609.20446v1": "3977ad424e4e6924274fd9090e55dbde6a6107d6c34e9748468c653168b4421a",
+    "arxiv:2609.20446v1": "db6d97f8213e85ce55c1ed6fe06a44e3019c4cff55d11222ba9d5300dcfb8130",
     "arxiv:2609.20449v1": "04f83117ba761669023ed1ecec14c511a90b17234c632888b47ff6f78427a5dc",
     "arxiv:2609.20451v1": "bcd65ad427a2086095407225901ff0746252c8c07448a4bbd43682b1b4de2ab5",
     "arxiv:2609.20454v1": "78f6798d1aed99549e94f531a45617d5c480575d80adfd414fa1862dd2232ace",
     "arxiv:2609.20455v1": "09a9aff1110e2e49721735119a2b308d879e3e1b1b0dabd5c751bb9dcb1c6cbe",
-    "arxiv:2609.20457v1": "ea10c580c8117089d2c96ddfd84bb97571fddf2df16efab3739107c346192530",
+    "arxiv:2609.20457v1": "83f810f8429b82ae84bccc6ae684b9f7b1c6e59ef2b1b9b604cae47f1d1b0390",
     "arxiv:2609.20461v1": "205a47af99749ceed2a2425db396a00d1c9e73d4b24a1b017490249863db5df1",
     "arxiv:2609.20465v1": "15f2e4cf1b53b77ceb267a68944d668b1041b127e25d57b48b1f96a8f4afea04",
     "arxiv:2609.20467v1": "b248b907bb8c6ac83795e34f1afb49d4eb07220d6ae20a98a2c15912338e3d63",
@@ -80,7 +80,7 @@
     "arxiv:2609.20532v1": "0c51e9f4fe145f1be9b1aa23c0ef58bdfe0a995d5206acb164892c973ee72535",
     "arxiv:2609.20535v1": "8d4c705803c76bb0d000bbce6d78d0c04095c53521fabb9bac47f04df1087042",
     "arxiv:2609.20538v1": "1b0ea2db0de6c273565ad5c6545b9ea7da86f611b0ff936357e603d2c2698481",
-    "arxiv:2609.20539v1": "0a4a15dd8a41f90bce08c8869cb33c28cd6fe1afe99624c993111c34c597dd6a",
+    "arxiv:2609.20539v1": "78aa773627abda9734ea70e51d60bcfeb33b7e07029621bba11730627f375bea",
     "arxiv:2609.20541v1": "9a21ee4ee0d15517a6db85d2768658e6f0baa47630753a56553c131665e6631b",
     "arxiv:2609.20543v1": "df28a4db73faa9b130a74fd8fb99d605a747ff5be61555538c857fdc5bdc3561",
     "arxiv:2609.20548v1": "3c044bc17d816765a86cdffe703f00b6d66a7082bbbc2d5228bd7bf23c6b13fc",
@@ -116,7 +116,7 @@
     "arxiv:2609.20715v1": "b62209ca914bddedbecd924efbff1236591d7a097d18029e39405a37baf11a4e",
     "arxiv:2609.20722v1": "61fe216a56a83377c10a5fe7bb7f4f1a91ad49b840cea9a440c1d96061de60d2",
     "arxiv:2609.20723v1": "c8ddaa3c462c98d6e18e42e85438384193f56e566cbdae87f106230ff953af7d",
-    "arxiv:2609.20732v1": "62de2632a88bd6eb4450023674a4b3bf00eaf2ecb08f8d997a43eb817c986771",
+    "arxiv:2609.20732v1": "dcef3dfafb0425dc40376342ec6b3bc70dac68165d5e6f1cb12c87b22a32570c",
     "arxiv:2609.20733v1": "effa2e09d50d2fa0a10cc6dcab1485b1bd06d9cf7269c79eecc42f1ee59e6628",
     "arxiv:2609.20734v1": "29d15aa354bdcb07492bace178e2e59c48ef670a68e7b489a2608885cb144f7c",
     "arxiv:2609.20739v1": "b954ca910e148c1da1b0d291b9dc8ab2d50e383e656f20d45208a7b961ff3b64",
@@ -144,7 +144,7 @@
     "arxiv:2609.20815v1": "bd25e9e0114a8678d6ee16108b4c7ba85cf525bd9c72ce48a6ea5d7ed09dda01",
     "arxiv:2609.20816v1": "c582315dfa88084f2dc73496c71936fbb9542657ffddf0ad8271c0aa01ac9f4b",
     "arxiv:2609.20817v1": "72bb8adbb9f5115f7a69c67eda5f8b7fe10a0471536f155542e3b4e1c9057ccd",
-    "arxiv:2609.20820v1": "b82a1daeb9545a757c289495c80186751ea87f6e74b66bd5d234ef7c6e646cbf",
+    "arxiv:2609.20820v1": "80449dea79097a5453ad9b508caddd5d99455d60ecd6a4a4684c7a28697cd670",
     "arxiv:2609.20821v1": "743258aa508fd74d59a9dead738c91c26f0ef5e68f6ce2a97834bae822dc2bc2",
     "arxiv:2609.20822v1": "ce84e1cf74be98a008360118f611430e1469f3cb5cfb713600b37cde8b279a8a",
     "arxiv:2609.21667v1": "8e883b40bc2265778da237d25ef060db90b6e0bc4e7876b119479ab1975e7b6b",
@@ -174,7 +174,7 @@
     "arxiv:2609.21762v1": "13c01a43589adc78ccb62b48a478f303d25513766b85d9a70c5df83aa9f9dc24",
     "arxiv:2609.21763v1": "ca4ce070c6f7dd9db44848baa658ebbc80ba425a16c7ffa32d1faf7d509efedd",
     "arxiv:2609.21774v1": "bcbca7372e1ecba3c522dd08d50dee02c8dd6393583f53aaa3a4a45da8ce975d",
-    "arxiv:2609.21788v1": "2e23473bd99fc52aeedf9488b39a79afdc8da7cce9586db1814e0b9b401a1257",
+    "arxiv:2609.21788v1": "e40a4fd67b2d9e5476018b48a7dab9d093fed7f068b2ca864882d05e2f25d928",
     "arxiv:2609.21789v1": "02ecd0d33b410604cb404d7ee08ec3d101b1d356e6dad1a4b053f0549b88cdf2",
     "arxiv:2609.21791v1": "d889e803f2657e61090a0a5070004b17d152d44d6a6a34cd62c48349574676c9",
     "arxiv:2609.21793v1": "13287f1264f160c4fe4bb1778d08a5a12ded83789fb497f141c774593b46d328",
@@ -191,7 +191,7 @@
     "arxiv:2609.21843v1": "09cad62e384971e47df185bd209fe095c8574eddfc210eac958f63cb5f065159",
     "arxiv:2609.21844v1": "5d4ed038a8b951cb416896f9cfd249ff8c311087e278223ac20c5e334155c3ba",
     "arxiv:2609.21848v1": "faded0f63fb1472dba23ae514452ab89d54ed1257b6126be8e4ba49e6541d1db",
-    "arxiv:2609.21849v1": "4f0e85b6f9fcff9f5d338521ffbc840f0a35d03804ce4cd1825f1380a1923b3d",
+    "arxiv:2609.21849v1": "e916148c5e68cfe3003513dfbf735591851125a4eeecba4d9e8438f8825968ca",
     "arxiv:2609.21857v1": "23cfdd4196bd24bbc06e7034b01a94ba4852f08c7ae9c1edb440f9a39b91c30e",
     "arxiv:2609.21858v1": "17d59db3e3647ee9e1977a9b716be56319653d4db66c915dfcfb96f2d26bc66d",
     "arxiv:2609.21859v1": "e6c1163509805507c76939e1f8ab68eba95fca8c5b3b687397a3644198c7f717",
@@ -211,7 +211,7 @@
     "arxiv:2609.21924v1": "07d1f47596997595ba1392810f0ef72301bff6cab43c1e5aa7f6d2da1049cb22",
     "arxiv:2609.21926v1": "14a72bd3b5d48d7c6958973d859a586200e4671e0a54b14115b28fcbbab4e91b",
     "arxiv:2609.21932v1": "e4ac93509243465c279c6276c9f69311f92e8887a4d49669bc1ac934ec579812",
-    "arxiv:2609.21940v1": "e102a3945b79db08b86fbb40440db7f318fd0f3bcc7773c1c4b73242e2eb899a",
+    "arxiv:2609.21940v1": "1f26a0bc1fccd7e278a2936b1e2d4a393f49e1e3b99d66bdf80d80a822ebcd24",
     "arxiv:2609.21941v1": "5f4a25c4ae71799a494280aa1cc1423098f33d4ae7ee37584945ae452d03f9d2",
     "arxiv:2609.21942v1": "e785a2f1f9020f69a8f6cdedfcd81169864d245d92f68aac7c5ac32970ef76fd",
     "arxiv:2609.21944v1": "5d7c8c19de25849130f9dc82fded77fbde5c0a38811999ce1420896dca1292f3",
@@ -250,16 +250,16 @@
     "aws-machine-learning-blog:0ef56137fe741d0cfda6": "4cb8b0958394667b645acdb143a4683e8fba525d70e62317aaded9130ccbeb48",
     "aws-machine-learning-blog:16b9772b96509775d2ea": "5b7603cb3f66e4b757e27aa1a948b3acb9ce87d45c25d497b7ceaac859c5253b",
     "aws-machine-learning-blog:1bb3f1e36d5df57ec2cd": "41638604a69f7aae9c28ee4c1f25fe97c4873bcca86ff901651eeef5d75f545c",
-    "aws-machine-learning-blog:2335ca1a4875d9c28b23": "cfb71ae352d7bde6e115686b7603158d99e85d75fdbaf8871aa86648fc7206c2",
-    "aws-machine-learning-blog:30b3afc5283f79f193d7": "17f2bf2412207535a672ab1d702b8a2a49ac80e08224ceb27a3b611a7a357160",
+    "aws-machine-learning-blog:2335ca1a4875d9c28b23": "6a27641f090ea893b94bdc8c95b4a00a5a36bbb999f52f599c8ac4c7816222f3",
+    "aws-machine-learning-blog:30b3afc5283f79f193d7": "5688cd8a17b782014feeb81057f8fca5ee7ae383a2edbb31d3cf31ed3d1a6266",
     "aws-machine-learning-blog:3e076652a58598c64440": "66c5ad7c65d2964e5efe2795c01eac74165a70fbecaa8df7b0794461df1cd9fe",
     "aws-machine-learning-blog:42de060ea8ef1ae5dc23": "2ae4813ab0c4e2b9403016cf540649b600d3befda5a70906c44ee10d187c60c9",
     "aws-machine-learning-blog:4b89a77060c422fd8497": "28c32e584427bd75c2627f3b885249e4dace6d781d6fd87f4ec7347d6c36af4d",
     "aws-machine-learning-blog:5a658dac9f90bae77e02": "16abe1def6f152fe23aa37ec5e260fa5255eaed6b6a8097e5139c32d9df49d3d",
     "aws-machine-learning-blog:5d4f323bd0d514800a8a": "3f20e101241305399b66f9aa0b16cce7ea6b5a0a260f558311bbe406c601f6fe",
-    "aws-machine-learning-blog:62dc961dfa66e53af6a0": "7b6a40f7a3d9775e69ddbfc2d7a7b8c3b0dae4e400683c6c60a0ab669b3c49a1",
+    "aws-machine-learning-blog:62dc961dfa66e53af6a0": "2ce385fdc8c45045f0c7d8f364643db7f6b90591f44a764828baf5eafb73f581",
     "aws-machine-learning-blog:6ab0ff58cde9714e2988": "9af4c27b9dd0fe81626f3fbb67096a3abb6e12f97e32047698fb6b4c9c905389",
-    "aws-machine-learning-blog:747e43df8917ffb7281b": "01cd24307d3e20337e1677f2e8856a7c59e2acf950ed3477437ae5fd582ee044",
+    "aws-machine-learning-blog:747e43df8917ffb7281b": "7a590d205355aac888251cc225203f385ad898dfba49ad6869a09692f91c4dcf",
     "aws-machine-learning-blog:8fa3089824df1f197189": "08472a4c45b221821c4578b83e89b12ee314612ba505fd11acc71e44354ecc8c",
     "aws-machine-learning-blog:a6bba200f1bb279614e9": "9ab58d94b57a7bc59fb95d9c17c5de4192b602dbdf0e50b8410b13b053ddf029",
     "aws-machine-learning-blog:ab27b05ba29471e68153": "1752ab90853afb1ef9ab8f4cdb39ee87cdd2c88f3cf59b8a4b0e9cdf6ef76afe",
@@ -345,7 +345,7 @@
     "bluesky:b3614927c6a2:3mu5443unn22s": "0014d6ad81ab6837e81af34d2a1a6a94aecbcbc24285555a93bd5a8cd5e1692f",
     "bluesky:b3614927c6a2:3mui4h3h76223": "200dbf500dac8731fce0fa40ffcd479608b46f72eda2662a29367346b718e955",
     "bluesky:b3614927c6a2:3muimzxo2sk2g": "d031924f5aa1db312bfb4937f260f2c952a5cc9bd25339aefb5b469061313ec7",
-    "bluesky:b3614927c6a2:3muk4vfcq2k2f": "b26035417f2204c422ca4c18618784e12f5b07a01b1c3b0cfe758ea1f2b58a4f",
+    "bluesky:b3614927c6a2:3muk4vfcq2k2f": "c3f83fecb9b1a6a5ada529fae54f6b8958c80770ee509ae39bedf93875f795ca",
     "bluesky:b3614927c6a2:3mupj3vhqo22k": "accbc20aae38296d4355f8a30f15f9a7c5aa0e8b80b6b9aa645ee9fa4279241a",
     "bluesky:b3614927c6a2:3mupxubgrls2c": "b5370833f6337d9366d9231e88546c2087563848b5f82bb469994b838037d8c7",
     "bluesky:b3614927c6a2:3murtmdynq22s": "78080012926cc900dd4aa128cf4cb598bef627934ba625895f4af6bf14502695",
@@ -353,7 +353,7 @@
     "bluesky:b3614927c6a2:3mv2a4quhpk2d": "17c14a721457bade23be5264ef752e5975da936044e373d885310e7d0055348f",
     "bluesky:b3614927c6a2:3mv4su6pfzk24": "72def68c199183f2e001e0fa9ab8386d880ef2b3eacfe7b798cbbdcbc07f57f2",
     "bluesky:b3614927c6a2:3mv7nb6bezk23": "783d02b637a254a196719a015701d281decf5809545b21ebf3de55724979a898",
-    "bluesky:b3614927c6a2:3mvbu4gg2ic2m": "53afd0d3543ad6d4bd113de89be84ff2d350e6daa7c6870f25478e0bf0c3e2eb",
+    "bluesky:b3614927c6a2:3mvbu4gg2ic2m": "d0f658802e7a7cce7edfa8d35da2259393adb758c7a8de2144e195a3727552a5",
     "bluesky:b3614927c6a2:3mvdokksrl223": "55c81d98fb9988db6e760cb09990dcd922004fddaedf430632de44c864970286",
     "bluesky:b3614927c6a2:3mved4krjbs2b": "add0c84acf843fa77a17f2f193e72d919c09ece3914b5d557b7630c8f98a0f2f",
     "bluesky:b3614927c6a2:3mw2tsop42c2u": "cd513798a5970e648bfff7432c268668cd05dcb53556b818906ef552bf8da9fb",
@@ -400,7 +400,7 @@
     "bluesky:e810fac7fd93:3mvup57pavf2j": "bd14232ed9c5322508bd5e1493c419d4a94da7f28ae43e1428a848c0bfaca66e",
     "bluesky:e810fac7fd93:3mvuzqbqzz223": "dd36ab7fb2aecdfab56e0749e958c3b0ab9d6cd979cc5b8b9b7e4a18fb8883d6",
     "bluesky:e810fac7fd93:3mvv5thxd5r2j": "7b80301246915f8ef6b2fca480b442b442869ba9246a7112bc5de57fb9ce6cff",
-    "bluesky:e810fac7fd93:3mvxajmx5cz2n": "de96f341211c2cbe5f4469771d67742866d763a88fcd0f05e3e84abdd4c8f88e",
+    "bluesky:e810fac7fd93:3mvxajmx5cz2n": "a496d0ab04cbf947e05bd4a0113427bc5ff5dcb37f610b4d0e1c8f5ae80b2d55",
     "bluesky:e810fac7fd93:3mvzo2lneqg2j": "6c8e77ff074c56ef6675f4296b07f93b358c65628b0d5305ee3022ece0a63154",
     "bluesky:e810fac7fd93:3mvzupklbjz2u": "a20bffddf03a59dd0a4d09d700f64adb4d6109f97fa9a44edda130193f3c34b4",
     "bluesky:e810fac7fd93:3mw4dzm7j7u2q": "028a370f8ba9aed39f4b076aefa650b48692f5f44f264bb3049831408fa8090d",
@@ -435,7 +435,7 @@
     "github:1343591542": "e0d92a360ba5d720c7b7096a6d288c639b307283b0f610854f7503ac6cca9bb6",
     "github:1343701672": "0ecca6603be6500f14a7efe5b6f7a9f6e6c7ae819551373e6f58293e9c3ac94e",
     "github:1344075823": "a8b62d83908f68a74c518c18d98262bd35d405e06eda9aabc3d8216f39360366",
-    "github:1344611274": "92c094d80f18b395a0c7ed972342fadc9ef5edde3a39bf8a75bb791daadac3ef",
+    "github:1344611274": "18046ec55806d8eefa2854099206fc8084d21265f30fed3b6c3d8c687bd486e7",
     "github:1344623876": "dbe01dd1a89c4ba187e59b67d4e0641982b3a353ea6cadfae2a41de5a524537e",
     "github:1344686779": "b6ba835e41f15043ba67a038ee7680bed70a4932fc18e672111d24913889f772",
     "github:1345052184": "56738e2103f4beb88c494d3ebe9da1d3231705aea7371e0541cd7e24694bb561",
@@ -459,7 +459,7 @@
     "github:1346539416": "c581256328f760ce50b81de00adb199803da1b53cf7203568d29a0db99a99a9f",
     "github:1346870728": "e97c7dd8dc93cfdc35911667f9a73afb6e89cc99ac73221bc30d250c05c4ac21",
     "github:1346917581": "111d59171147e9a15e5fb99f6f01cfcd4aece782c6f4911f52e36e9c1b4900cc",
-    "github:1346919628": "f6dbc119ed17c9b6fdc2c16f511b217328498f97fb0e7d6dc7bea60c3e881024",
+    "github:1346919628": "01feee1bc7906cd1db8f1a82c675c185acd30a62e068a1c178eba733cc919d17",
     "github:1347143439": "caf0605606cf52b5047bfb7a34ae81b93f7cf0ef17c1c41429d71759a5d4175d",
     "github:1347320778": "de67f862d4300044755c803aa9fa6978d6ea1c8cf6c8699c005f004f9e63f319",
     "github:1347394075": "0ccfb22edf9235328c16739d436b1aa6c28066c4e76c4710dd26c9c74dd94145",
@@ -482,12 +482,12 @@
     "github:1352444090": "5b59e249b8ebe57ce0652136fa9f77962cb6cea321622f4095ad09dc2a5540cf",
     "github:1352547997": "8a6ad32ab1fb087b640eae9ddef02b265c278b70e3795ecefedcbff3a01d3f6e",
     "github:1352880998": "faf4a59bb6364f5f3542556e83171e4fc0b2067f2aff2d3c0843a90c20a16258",
-    "github:1352965805": "681c240f78aebdec639681a5beb5839cf5eae3410b6a1016be475a70b1b7f61b",
+    "github:1352965805": "03acee5fea0ef195dbbb0c8e89727f60dace557be677e6618310befe262b0b42",
     "github:1353051646": "71ac818ede30550fad6bbe3b67da9f4d8e126f644e36a9d11c6dd423975866d4",
     "github:1353921399": "f0f6bde36220f1b836745634da4c8e155aad75ab30a364e2536d27210d89ddb1",
     "github:1353960300": "6a26e045dd0f65fbb7c53ae48e0bc47147dbbec3bb254b2fc939a37f1cdbcbb4",
     "github:1353965369": "b81bbeebb0c2bbe86612d5b035dc66468649c07212f5b3382d85b667cc9d2d02",
-    "github:1354059245": "4c4daa76fa2a76037823ea3903c16178c072f8d73028b821f46e46b058e6dbad",
+    "github:1354059245": "ece2d004603518771546609065b900de6e5d139f0086b1f9a03e3b365a7ee882",
     "github:1354501642": "888f5b848afff454869be2ca0ffae83ae373865c4f31a572231989b88a319181",
     "github:1354763699": "6839d698a0a1e32f5ed49a37aee20f2a43633c20deb2f2352ebd2e3fe879080f",
     "github:1354991682": "1f677cefd74d976bbdab4fe79c8e06e7a5c262eaa7a7f2796a3b45282905a4cc",
@@ -525,7 +525,7 @@
     "github:1369759058": "668f3507631ebc0fdd85deaa11a1c810768858627d98d95f2abd202d2ef06bbc",
     "github:1370498337": "803087e73010f7bfa24ca00aea32daf893e127611015267952f9f524f547bc69",
     "github:1370752473": "4912b426eb22b906245a0824b1b21be6fe5cd0c6a185d16550f51c25afeeb1e1",
-    "github:1372892093": "8f35abafe1b21f23d2d6418c3a75aa23dd5e3c1460d1e219b6eb4135bf7003b3",
+    "github:1372892093": "7ca54555574edf1ecaf0dc47d163dc7e81c91bcf07cdc2ca2b11fd22ddcd9e40",
     "github:1373440611": "e449db690f4f2aad0b00e782ff4e7480047d0ad724a60f4c5f1399ec4a218f44",
     "github:1373993338": "0f9efdda5bb65f1f5e416c37efae70faada29cd604b4fff96da3dad70aff33a8",
     "github:1374058281": "8bd8a04b206bb909d0baf82f964bcf126b6f33c4d4d9220204dc843ce4e42d42",
@@ -547,18 +547,18 @@
     "greylock-essays:4db96be55ee28289e4fd": "7ff115f062d595174430f2c3c8fd989bf999c43b6006f7d71ac68622329ef034",
     "greylock-essays:aacd57b6bec14e3c9da1": "26662dc4412893d29ecd34a5cb567dc1d9720e6b7d7692045717552907b473f4",
     "hf-paper:2608.23283": "d2e6f63dc08df4ca0be538bebf7d28fc7e35b1b0e2e39ffe7c4e2b31fd67dee6",
-    "hf-paper:2608.23552": "834b4f91134e65575c1b14d4f075242a7ea97234bdf1f6f72316eb3f41ba1ddf",
+    "hf-paper:2608.23552": "981b66ebc06873d265d4142d3093f8b57c97d36a6545384957a34ca142fb4f22",
     "hf-paper:2608.26005": "71907dbbb88d3b2368895bee012c4eabeb3cc22edfec70dbb6da321c2351f947",
     "hf-paper:2609.04034": "df3a64a8cfda415e021df595bf25aca162f572f6f956ac84a139ecf4d915bd70",
     "hf-paper:2609.05571": "46f4bf36faf893ab57b73784d9899e383503f9968e1f399d8993e7740e49dd4a",
     "hf-paper:2609.07398": "be6855712ed456e76bd17911a9568daeeff98b494a29cced7e6b2283964e9f7f",
     "hf-paper:2609.08084": "29416b01a525fcd489ad9d5da092753ca616e00e747b447955c15291425fa685",
-    "hf-paper:2609.08183": "7bde3448b20078c2023c85db473925a76c1edf10b205585dbcf3cea249ddb3d7",
+    "hf-paper:2609.08183": "7b44d90cbabfd8b228a73b4512a89cf7e3a412d60654d2dccab8071dafa9b34f",
     "hf-paper:2609.08936": "dcbe25607f7db24eea7c0c6a3d37541e3fa35fb39cfd619b55d10675b457300f",
     "hf-paper:2609.10522": "d5079354459a91dc432d0d55e3ec392701d537e6c47fb810e1b163eb33d224be",
     "hf-paper:2609.11638": "1327305a47ca38ebf039c839f5489c95365bb649a97914479be2d68c3a50a291",
     "hf-paper:2609.12552": "65e6640a52d2c784429202c62bcf86876b0d7d7c6c874cb45061116972c5d19e",
-    "hf-paper:2609.13356": "7f3dcce1cdbb857f87c1054941b44d18b53232b061c2c4d4de15615679483d86",
+    "hf-paper:2609.13356": "98835988e7732d6a5f73277a7221dda5339c00aaece139e611ad78a5880c6d1e",
     "hf-paper:2609.14858": "7d95ab761d2d3d136b8242337279038469ebdfd01e7116f67469212891eeea83",
     "hf-paper:2609.15364": "b82c6d7cee73abb4219297df092e1e5338877b20a6478fb1d16b59365f0f4e14",
     "hf-paper:2609.15779": "d3422c95c74b5ff63a702fa52fc3b2492b73d4e3cd758152cd297285c1c2cac2",
@@ -608,7 +608,7 @@
     "hn:49744416": "973e3ef081a15ff8dfffbc8611c57fd9a1f78b3fba60322aa8a2864659918c0f",
     "hn:49746346": "a1ddc13c5d7be6e170e64bd73b11a2c93f18710643b3cc909c2f49b562502e6a",
     "hn:49748041": "38ed0012c93dfb12eef3affbfc7ef7f296b6a9730d5d3ac177e0ddb65615684e",
-    "hn:49748553": "6765ab21650576513d9cfde0c5af7dda47de56a24d89b9ae2d9481eddbbd8d47",
+    "hn:49748553": "f54c9550310a49dbb49ba4b20a5c21aa8ce1d563c451f96a0793f89a45e3b7b6",
     "hn:49753131": "c9853321480c380122b65b71c92570cafa0dee5761b90d5120c48f3b7c4ee021",
     "hn:49753579": "d4de885e92a62141ad44923347963678fae10579e4950567bdb7ee799eeb3da3",
     "hn:49755575": "67b7110131b780a11a3ec77379ff139c5f89f2128aa8348d5fbc8ae543a41b1a",
@@ -721,10 +721,10 @@
     "hn:49782775": "8cb03474c5f3c1494654ee97f5023ecad35d0e1381c20b552c6633784161fa0d",
     "hn:49782878": "9c8f978ae5bc36bc96ea73658ba3e1b32cf05ef0a80604b5c06b8956dac2774e",
     "hn:49782912": "a5889962e58ae7cbbb3bb77cbdc3239dd2a4ecf4f342c687dfee576de7a015cd",
-    "hn:49783039": "2ad711f894b36e0624afe68af65de3f4c04ae00f2ba95fe3c3477da3e596cd2f",
+    "hn:49783039": "b3c89140bb7a2a6d318c1b30e440cbc707286170c89558a72aa5a01deb20993f",
     "hn:49783062": "84c029696469e19b7604028cbc7be322342e1d962124b078b1f5c727c3cf525a",
     "hn:49783101": "8e548e4522241602fbf0b1dcde0c3dd745108959582cbbafaf9cc4f75048ed7b",
-    "hn:49783133": "918f49961985037f800e1d2a84a3410d7f34a95ef86c73f4a797d9554d4a704c",
+    "hn:49783133": "cbad3117cd8b45d76faab6aeae5cfa2730c923701d69cc0e29fd052a96517861",
     "hn:49783224": "d45471b7ecacad7f8a57fb647a235a940d6587bdecc287e9ba8cf523c743368c",
     "hn:49783406": "24cf74fbf4d19fead0fdbbac06dd4fd1a2cb232cd010f9223fe20941d916d5e2",
     "hn:49783473": "2d734cd01f7aff42df16d06bc4dc7857e6dfddbaf7b98f1a52b264001180e840",
@@ -747,7 +747,7 @@
     "hn:49783639": "9d375b8c23886989427f8eeb4c086c040f973984edd152794e65db002a2c79b6",
     "hn:49783662": "a843e8170214ecf2ab736f1113e0448c3a16ecd032c2dddee2a97beb96d2bce4",
     "hn:49783665": "d03f8d56aa2637ea8b008a90bdd2d1ea3c797cf2bf5ba4c1ed3f33cd9eee73ae",
-    "hn:49783671": "552b316323151a002aa669bb6f799a6334215548c85e201a726d7d06b9dfaab4",
+    "hn:49783671": "702393bdf87165d71432a33afc0a829b9646ca8bd591226986d2c0ae4a9c9d3b",
     "hn:49783675": "99f2addab3c3d1e0a05b3d2059941410aa4e178c12f63a0f10f1016bfb14e64b",
     "hn:49783679": "22e469bfa5fe835ccbaeed488c1bdf450e0dc3e871ee03fc1fc974ff13ab8714",
     "hn:49783692": "b04d90c95d38b53e82bdd9f8317c2bd44c556c378dc2e270d40cdc04d69fdb23",
@@ -789,7 +789,7 @@
     "hn:49785429": "3b78fc7b183cd4e23f647f7a21987a0b3e10546ce0261d34fff6ef88668594ea",
     "hn:49785562": "49dd8ba7e23ecec7944fa653f71bd5b22b37685f51a00a0eb9092c2f526db7c0",
     "hn:49785853": "bf322a29f0d79f662fbd8661e3857c215c85a68d69f023ae20121b4f7323d82b",
-    "hn:49786379": "ecdf7f4bc62547d509a6b9aec46e8fa68035c3ec6cfb5fea230f57a6d13aa384",
+    "hn:49786379": "706b69a732faa8809dee39178dc5b42894b2f5753138ce32fb8bab30fb864f70",
     "hn:49786401": "513f6bfffba5c9b770dade5925e198c5c91e09f73c5187bcd8dc62f2c3068e43",
     "hn:49786419": "94991a8a46e689977372f02152aa099c0bd3bb0b44ed595f68b992e7b527f6d7",
     "hn:49786425": "d1a72a2af16148836ebe39eb337799f3d7e2fe70f3f870fba1ba59bbc3591dcb",
@@ -848,7 +848,7 @@
     "hn:49789228": "09a2e2af8c6b83a7a5b55e0675aff41aa8cb0c1d889788be8e479eed4d52b4db",
     "hn:49789314": "c61332041a7d18e782ab7f6a8665f3aacaa7b9c3a2e4604355ab520ea0da832f",
     "hn:49789320": "6a79b91d18b913bd9867533375c2e60f59b752245d5ea8725940f9eea898fec8",
-    "hn:49789538": "287a284ba37a9f090091869b8af1d4d3f983e6a285cd39ce3ff571acc0e7e4d9",
+    "hn:49789538": "98c4ed407c4e1879e0f72b80f4d976e9c004f8be52b2f7862b7cfe9c4935570d",
     "hn:49789982": "c4d81a87268863f185de4fc66b6ceff5c8c09ab32fe0b72fea8076f989d7d581",
     "hn:49790069": "f46ccd7252820cb70e1bc90a562f42c4e75e0495db0020780c8db687cfed57f4",
     "hn:49790409": "7d7ce23932fd644c416fa432125ca8007af16d59aff7ee9b323e1072e1a48337",
@@ -999,7 +999,7 @@
     "latent-space:12cb7c8dc1094ce2e4c8": "72c9f0f12c1e5a17b62c346971778fead21ec320ccc23b1b16d0fd37494b56e9",
     "latent-space:1d6b63efae6a0d6226fa": "f774a4f443d38a3cf82cdb744b863bd0bf56244116079754dca1e12b02992592",
     "latent-space:24a6ec459ab4b7dd7592": "4313eaa19a84f6332c1523b3765eaaf95cb15fc909ed4aa72e03f10785983723",
-    "latent-space:2906695f474f1c030c6a": "76f616bb263cb9a0bbb5a0fad6bcb10cada0be871c49835995f68348812ec7d2",
+    "latent-space:2906695f474f1c030c6a": "5e0c4812183b1c160c50e7a2082da1bf1732beeccd74183d82fcdfa4b6e164ec",
     "latent-space:3c123bff8ba1a302dd2c": "a86f13d28db96ea0be1946203e9a4e79f22d2f033812d45f05635b5237cdce40",
     "latent-space:3f89dd954b82394ac561": "98defa358481a896c2dcf862cde24acc72d6b90fae215f0c2d1c59f027dd5911",
     "latent-space:3f9d96e979702fa8adb4": "1e1b967fc51f487064c8d4342dbd5995c02d75f948018b62b131ad1ae5ce756e",
@@ -1051,12 +1051,12 @@
     "mistral-news:f0349196879e780ac215": "78cff49dec2b6ceb5397c81eea6bd99a9e264816be838ab7dd34b32eba68b8c4",
     "mistral-news:fab09401c167a1dc5c2c": "7ee3ec2c1bf1f4ce7d9f4d53ee5218ea4ce922c0648ba706c3c71835656ab20d",
     "mistral-news:feb76866f5df035522eb": "eddd26d32ba4c73bd9c3308e946c04e72971a45b308817dbb11525db20959820",
-    "nvidia-developer-blog:127a999e24da184d5065": "b101987c275138fde0eb4e62e36f62d6166fd7e0956288a3c9cab94448576dac",
+    "nvidia-developer-blog:127a999e24da184d5065": "5e0e94f4666fa762305a4ebf24d2185631ddcb4b7190cf1134499805b0d9c477",
     "nvidia-developer-blog:13af96f13ab7c5bce61c": "86701ba9fd01199fe9939af09b6a8158bc37207cef4f5de6ea77fa6a9234982c",
     "nvidia-developer-blog:15901f186f7335edb0a3": "3e2d5ad3b021942ce2347f55afd577eb3122f1e0c3e3a300a303b6787f2c501e",
     "nvidia-developer-blog:2f4bc5729494727df617": "112834010039ec42f3d03a1c1b68a1db44c25bb2a063c9ff2d02a06fd3dfbea4",
-    "nvidia-developer-blog:3c695c0ed34fa87bc774": "1b8f7e25ac4fd87ac5f1aee839a9b8b9c229ca0d623296c15e1d7a206b585365",
-    "nvidia-developer-blog:3f062ae5d12a3d2b6381": "0dd2d77531fca3153c131af5b44ec85b50d2aad3cedea9fa098db6228d3f5363",
+    "nvidia-developer-blog:3c695c0ed34fa87bc774": "a6c7da48d6f24b0a4e77aca0d8e2f2f28898b2ee7c50291f7261ced1c9d40220",
+    "nvidia-developer-blog:3f062ae5d12a3d2b6381": "1357b8ca6575c28c11712116550b94944086eaa8c4047f1756c27b457601e430",
     "nvidia-developer-blog:41aa45582bb68e10c0e6": "7011b5c5fdb7d354f35a0601f7f07a6b3914a5c29f56fde975acd5fdfaddc5d3",
     "nvidia-developer-blog:58b2c9f4f2fd211b3fa2": "9463c7a8854161392391a784c7651e9bf0dd533be998de8fcf7e217143823778",
     "nvidia-developer-blog:5d6d93f42d6ca9b84a08": "13ee46c49a6d0e1679b6dfbce5dee91e0ca845fbdc84f794a472e33cbd27f7a5",
@@ -1069,7 +1069,7 @@
     "nvidia-developer-blog:82db5b52199ef8490e65": "3278e403d2ab96be4972ec4f10dd10ef42e071d9b7adcf5d996ffeb598314f54",
     "nvidia-developer-blog:837464fefd470eaa54f6": "94ef428402e6b30a6e1efd7f5d1772984127665e39bf72c19c6e703c0b2366b7",
     "nvidia-developer-blog:8d49e0a966acc1482d66": "77a588440c684d33a29b21a255d730479ce85c38a5e7c8e87b56d9f7ed4abc56",
-    "nvidia-developer-blog:93db95fb6cd1a35dc083": "8c5011b73c54874584d2a2d3372af428db1086cd8b8618248539f012ec3a5212",
+    "nvidia-developer-blog:93db95fb6cd1a35dc083": "31780f5afb398913a71aa8e12bbd580bf1ea2fc658e4072d60e823da44fea298",
     "nvidia-developer-blog:9f3b52b864391410756d": "20a1a2a123048d3c46d338c9584b6edfc43250b45bdaef5c79e095653a8d9449",
     "nvidia-developer-blog:a10444e3469f16548166": "a80d9fd58de3f256b92cca0a6b0e457a9fb8b139cb84a1ba7259aef15f9de8c4",
     "nvidia-developer-blog:b4adb46d50bf1528d8af": "1863431fd993d82e91d65d6d7f20945fc755715e819efdff79547bb8f46bd2fc",
@@ -1117,13 +1117,13 @@
     "radical-ventures:002cb1815fb8b4589802": "67c77ae4185fb29d1da6f544a564fd57df9328f3a2fc8139ff4b4b688e82533b",
     "radical-ventures:2ff85a6e59d73fca6180": "4d0a07e652944e514eb92593953f8065d9f09d181657196f6efbc288453abc5f",
     "radical-ventures:40d52447cb1ae36c2d2e": "004ad2c026230f191542a67bd765ad9469ad6a0c13075cf0d2bf6a2fd2b795ec",
-    "radical-ventures:4be08dec55eba7fcfb9f": "25f85cfbf00128add1552ce068d0063ef7f9a78e265e849b9da2839cbfd89a39",
+    "radical-ventures:4be08dec55eba7fcfb9f": "9c912d2a606e1a77aefe4f54e0cadc87afed44e651104b729915ea86d2978819",
     "radical-ventures:a907a55c8f3d23f10720": "12ff4b0bfecc50e902b620b7408c67019bcfeef1d4d2698b088e7638aaf1c33c",
     "radical-ventures:ac23f6a635d1537abf1d": "e1b3a1725d9fe74484105b828837dc290fbdcd7d2c7a649259a79fdc3051037e",
     "radical-ventures:f1d373af6ede201d5a8d": "357329e5fac6198d58f6e8900237da11e02b9c66b697d07e047f5ef9786ed5df",
-    "simon-willison:0c114974aa55eb9d7222": "0ca5444ae2864f6f5c19e732ca69476d062b73209f7dc7e3d66a13d1d0b31c79",
+    "simon-willison:0c114974aa55eb9d7222": "0a7f71cf6b9fb8b33e548119fcfd915b0c5244b26c206345b4d3e922e83d12b0",
     "simon-willison:1b7a07575c93824e39bf": "6dd48c167f75b7d53b2acc37b1e6943b458c815cb4644dd7977b3ca747385509",
-    "simon-willison:219c439494be37cebb69": "716da52cb7f372ba608a7cc01fbd16f9773420263bf4a495f36563df77d1e22b",
+    "simon-willison:219c439494be37cebb69": "58b778d0dd1a5c472ad0fa11b8c5d6c69bbd474a2b67d8ed65e7e820036dceb4",
     "simon-willison:28569c3c31a0d771f817": "78e44873c39db535368ed1437aa859d8f81db9d22940d32d09346fa2cb261cf2",
     "simon-willison:33879f77e1536c694c43": "e498c248663bf957cb3b6f12f0d382cf41be607e6ba66edb46d7a4ad45d2ca31",
     "simon-willison:35cfdc3ffbab38ec7111": "b5aedacd87d7d949370754a8b120fe82d46c52f8f4ce76ac48fb59940d120699",
@@ -1132,12 +1132,12 @@
     "simon-willison:41d15f7729de397ab49d": "12c691860f0d3d1a2610f4734ca740551ee242525841b784a469801e9472db20",
     "simon-willison:4e32c351abd8d17df0b2": "ef0f2ead1725311a731d2c4c7dfccba990f4ee5c7e7caf580af0829fa590fa91",
     "simon-willison:55668e9d93e2c01a2445": "5047cf1dc9698a87c33531fc9921f64aa83843d97442bbd3190ac95d2439b7df",
-    "simon-willison:56ed9309de330598a4e5": "baad3176ae69eddabf93daf2d894cde5c68e7b043af621d96391263fa1cca21d",
+    "simon-willison:56ed9309de330598a4e5": "fd3717e13fb1672550a2d20bb0974e6eef3c4c100218ca7e75ee99d7ee4f557d",
     "simon-willison:64f040316f79ac59d87e": "2731ff7dc347a516e5e10a6f377a9cca39ec4ff1ba31e23fe0afc24b0b6b8ead",
     "simon-willison:6533bdcc0f6c39c58db7": "7bd25a1461a716edb7d18a97a623cfd8f5308dc65770199fdefd5b12464ea47b",
     "simon-willison:6d026a20051380d1e830": "d92bba5d0fc8caf36f88316d7fdecd7f9c368da160e056104141f16d5918f02a",
     "simon-willison:72f4aaebdca9e500cdd2": "940bb51f6a3fb8db8fdd15e32fd82ad004ae719f6b478fbc6cdc2667125b409c",
-    "simon-willison:7b2efff004017f358a30": "89b314f52709bebbc0b3e0639f7c936425d8a2589eeec86e865f7f5eb6eba9da",
+    "simon-willison:7b2efff004017f358a30": "7692082d576088e097ff0d1482b472a7ef4a102022adcdaae942e5af6b6e247b",
     "simon-willison:827d855fbddb5cbbcdda": "99af03a462dcf5c7a0948ce6f6baaa5d358928ef7ebc16fef4fa76cec3fc4a91",
     "simon-willison:a747e45677404a77ff5e": "1340920fb28a1ad53fa550a758227edb1363bdfe9b8a4fa98846bd044c4dbbf7",
     "simon-willison:ac293d7ca39f3bdc6e8b": "15138ab20eeccca149ea4acec3abd168845cc1c2390016eb917a8ad1dd475e6d",
@@ -1156,7 +1156,7 @@
     "simon-willison:fb0112d2438294fff4fd": "d692a0c900453762990e26be2a1be085b556ae4bf4f44f948949ebcf669f43d3",
     "the-batch:2622ee409c0a925f8cee": "cf6fac49d7ec0fad8e491b02c19cc0dbf5161d0ff1f2374a397e042d23763de0",
     "the-batch:ab4caab4fe2b8644e7ea": "ee5ac7a831d28b89361e62644e752a62900bcf750aebf618b979e1a47155be91",
-    "the-batch:d47f795c64ff8c48f8ce": "7af251582a68630eca60db4a371b542c57c8a949947541150741d018353154e4",
+    "the-batch:d47f795c64ff8c48f8ce": "d8af58d53d8f19fb5d4fa30cfd40117f4d2e05252b0578d52b876e6bd21544cd",
     "yc-company:1294": "54812f224c6895d11f92da0dba2053f54f8afd2335bb2f80e05937f0104ea6d8",
     "yc-company:30923": "40f76e4268cfdedd70aff3ddf22a31435ee083afc3a0f383f9c3cf2ae6f496c7",
     "yc-company:31557": "287c4065519a6f5679e648bcf601be837dc5c69ccda98860fb08ca25e74c0e7e",
@@ -1195,12 +1195,12 @@
     "yc-company:35094": "93982f655b42d8ec25bce595dee8b432d35f7d511e38fd6fc786a82e2415e4e9",
     "yc-company:35190": "84fb2a8791d5450b96c8c8523c7f0a60960196d247db597e2dabab153fe3e6dc",
     "yc-company:35257": "36064a86878ea6dd52454cc9fa8734422978295ff2f3b4627e5f5acbeea823d3",
-    "yc-company:35258": "884cd7d58749156d92b6adab21e6c2ecbe634ccc91d152987c6d8d7880c64fbc",
+    "yc-company:35258": "455a7c0b305d7ee52cc803e92da6353a9d8c9a9c47645abe55e3e81212f467da",
     "yc-company:35263": "716c5deb1c0f6a305573147cbfa037077c0e42fbd18d7cdf79b907539a456866",
     "yc-company:35265": "49fb40532c4ee55ef699106ab8991e85e8d5d9a87b28db3ddafee5b2b7ff5c13",
     "yc-company:35355": "2e19605280393da30a4f100f0ede6baee373e0795fe49ccae1353cb495ed5a03",
     "yc-company:35395": "993b4f4bf197e360a144a03893216ad4d71b1234370a2acd278e5295502299b4",
-    "yc-company:35454": "fe30932000509f298037f16031085275faea594bec2144c59a612e03a41233ef",
+    "yc-company:35454": "7a8c751d964da6044e02cec850a89f1226999e821d78a6d804a54c498c305f77",
     "yc-company:35521": "f083fd6e688303effe04dfd7aec2cf0d39ac4c72de475e10ff34c13a5118bb81",
     "yc-company:35784": "b8afca8af83c597c038537a519f3b16ac6fa7c06499fa3aa937f7f0c0aa2d92b",
     "yc-company:35850": "9ee043d40b49ae178b53572044b9f8fadb388caeaa9e6a2bc8e3a3964c010576",
@@ -5967,6 +5967,13 @@
       "source_count": 1
     },
     {
+      "id": "phrase:yet-existing",
+      "label": "yet existing",
+      "kind": "emergent-phrase",
+      "document_count": 3,
+      "source_count": 1
+    },
+    {
       "id": "phrase:0-1-release",
       "label": "0.1 release",
       "kind": "emergent-phrase",
@@ -9460,13 +9467,6 @@
       "source_count": 1
     },
     {
-      "id": "phrase:rag-systems",
-      "label": "rag systems",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 1
-    },
-    {
       "id": "phrase:random-seeds",
       "label": "random seeds",
       "kind": "emergent-phrase",
@@ -10316,13 +10316,6 @@
     {
       "id": "phrase:x2f-sec",
       "label": "x2f sec",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 1
-    },
-    {
-      "id": "phrase:yet-existing",
-      "label": "yet existing",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 1
@@ -19339,6 +19332,7 @@
           "kind": "theme",
           "matched_terms": [
             "LLM inference",
+            "llm inference",
             "kv cache",
             "kv-cache"
           ]
@@ -20882,6 +20876,7 @@
       "source_type": "paper-curation",
       "published_at": "2026-08-24T00:00:00+00:00",
       "theme_ids": [
+        "open-local-inference",
         "training-self-improvement"
       ],
       "concepts": [
@@ -21001,6 +20996,7 @@
       "source_type": "repository",
       "published_at": "2026-08-24T06:21:04Z",
       "theme_ids": [
+        "agent-harnesses",
         "training-self-improvement"
       ],
       "concepts": [
@@ -25279,6 +25275,7 @@
       "published_at": "2026-08-26T05:00:24Z",
       "theme_ids": [
         "document-knowledge-systems",
+        "memory-context",
         "multimodal-3d",
         "open-local-inference"
       ],
@@ -26030,7 +26027,10 @@
       "source_id": "nvidia-developer-blog",
       "source_type": "first-party-lab",
       "published_at": "2026-08-26T17:07:12Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "coding-agents",
+        "open-local-inference"
+      ],
       "concepts": [
         {
           "id": "phrase:qwen3-8-flash-next",
@@ -26204,6 +26204,7 @@
           "matched_terms": [
             "inference engine",
             "LLM inference",
+            "llm inference",
             "kv cache",
             "kv-cache"
           ]
@@ -26856,7 +26857,8 @@
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
-            "LLM inference"
+            "LLM inference",
+            "llm inference"
           ]
         },
         {
@@ -26975,7 +26977,8 @@
       "source_type": "curated-newsletter",
       "published_at": "2026-08-28T07:00:58.000-07:00",
       "theme_ids": [
-        "agent-harnesses"
+        "agent-harnesses",
+        "coding-agents"
       ],
       "concepts": [
         {
@@ -29393,7 +29396,9 @@
       "source_id": "github",
       "source_type": "repository",
       "published_at": "2026-09-01T00:05:54Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
       "concepts": [
         {
           "id": "phrase:browser-tabs",
@@ -29442,7 +29447,8 @@
           "matched_terms": [
             "distributed inference",
             "speculative decoding",
-            "LLM inference"
+            "LLM inference",
+            "llm inference"
           ]
         }
       ],
@@ -30524,7 +30530,9 @@
       "source_id": "radical-ventures",
       "source_type": "investor-essay",
       "published_at": "2026-09-01T20:39:59+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
       "concepts": [
         {
           "id": "phrase:google-deepmind",
@@ -30665,6 +30673,7 @@
       "source_type": "repository",
       "published_at": "2026-09-01T21:52:29Z",
       "theme_ids": [
+        "memory-context",
         "skills-integrations"
       ],
       "concepts": [
@@ -31111,7 +31120,9 @@
       "source_id": "simon-willison",
       "source_type": "expert-social",
       "published_at": "2026-09-02T14:18:47.846Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
       "concepts": [
         {
           "id": "phrase:fable-5",
@@ -31161,7 +31172,8 @@
           "kind": "theme",
           "matched_terms": [
             "speculative decoding",
-            "LLM inference"
+            "LLM inference",
+            "llm inference"
           ]
         }
       ],
@@ -33617,7 +33629,9 @@
       "source_id": "latent-space",
       "source_type": "expert-newsletter",
       "published_at": "2026-09-05T04:32:00+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
       "concepts": [
         {
           "id": "phrase:openai-agent-swarm",
@@ -35570,6 +35584,7 @@
       "source_type": "paper-curation",
       "published_at": "2026-09-08T00:00:00+00:00",
       "theme_ids": [
+        "skills-integrations",
         "small-specialized-models",
         "training-self-improvement"
       ],
@@ -37727,7 +37742,8 @@
       "source_type": "first-party-lab",
       "published_at": "2026-09-09T20:31:04Z",
       "theme_ids": [
-        "frontier-inference-infrastructure"
+        "frontier-inference-infrastructure",
+        "multimodal-3d"
       ],
       "concepts": [
         {
@@ -40673,6 +40689,7 @@
       "source_type": "paper-curation",
       "published_at": "2026-09-11T00:00:00+00:00",
       "theme_ids": [
+        "agent-harnesses",
         "skills-integrations",
         "training-self-improvement"
       ],
@@ -42303,7 +42320,9 @@
       "source_id": "simon-willison",
       "source_type": "practitioner-blog",
       "published_at": "2026-09-12T00:42:25+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
       "concepts": [
         {
           "id": "phrase:agents-using",
@@ -42371,7 +42390,9 @@
       "source_id": "simon-willison",
       "source_type": "expert-social",
       "published_at": "2026-09-12T00:45:33.933Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
       "concepts": [
         {
           "id": "phrase:openai-agent-swarm",
@@ -43022,7 +43043,9 @@
       "source_id": "simon-willison",
       "source_type": "practitioner-blog",
       "published_at": "2026-09-12T23:56:42+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "skills-integrations"
+      ],
       "concepts": [
         {
           "id": "phrase:agent-tool-calls",
@@ -46098,6 +46121,7 @@
       "source_type": "practitioner-blog",
       "published_at": "2026-09-15T22:47:07+00:00",
       "theme_ids": [
+        "agent-harnesses",
         "voice-audio"
       ],
       "concepts": [
@@ -46442,7 +46466,9 @@
       "source_id": "github",
       "source_type": "repository",
       "published_at": "2026-09-16T10:50:11Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
       "concepts": [
         {
           "id": "phrase:artificial-intelligence-chatgpt-claude",
@@ -46823,6 +46849,7 @@
       "source_type": "first-party-lab",
       "published_at": "2026-09-16T15:47:39+00:00",
       "theme_ids": [
+        "agent-harnesses",
         "training-self-improvement"
       ],
       "concepts": [
@@ -49087,6 +49114,7 @@
       "published_at": "2026-09-17T14:16:44Z",
       "theme_ids": [
         "coding-agents",
+        "document-knowledge-systems",
         "frontier-inference-infrastructure"
       ],
       "concepts": [
@@ -49576,6 +49604,7 @@
       "published_at": "2026-09-17T14:21:39Z",
       "theme_ids": [
         "assurance-infrastructure",
+        "multimodal-3d",
         "small-specialized-models"
       ],
       "concepts": [
@@ -51828,7 +51857,9 @@
       "source_id": "arxiv",
       "source_type": "paper",
       "published_at": "2026-09-17T15:10:18Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "memory-context"
+      ],
       "concepts": [
         {
           "id": "phrase:diffusion-language-models",
@@ -53817,6 +53848,7 @@
       "source_type": "first-party-lab",
       "published_at": "2026-09-17T15:53:13+00:00",
       "theme_ids": [
+        "document-knowledge-systems",
         "training-self-improvement"
       ],
       "concepts": [
@@ -53835,6 +53867,7 @@
           "label": "Documents, retrieval & knowledge systems",
           "kind": "theme",
           "matched_terms": [
+            "rag application",
             "RAG"
           ]
         },
@@ -56059,7 +56092,9 @@
       "source_id": "arxiv",
       "source_type": "paper",
       "published_at": "2026-09-17T17:22:43Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "document-knowledge-systems"
+      ],
       "concepts": [
         {
           "id": "phrase:context-rather",
@@ -56092,16 +56127,6 @@
           "score": 6.996
         },
         {
-          "id": "phrase:rag-systems",
-          "label": "rag systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "rag systems"
-          ],
-          "document_frequency": 2,
-          "score": 6.996
-        },
-        {
           "id": "phrase:unstructured-text",
           "label": "unstructured text",
           "kind": "emergent-phrase",
@@ -56116,6 +56141,7 @@
           "label": "Documents, retrieval & knowledge systems",
           "kind": "theme",
           "matched_terms": [
+            "rag systems",
             "RAG"
           ]
         }
@@ -57007,16 +57033,6 @@
           "score": 11.359
         },
         {
-          "id": "phrase:rag-systems",
-          "label": "rag systems",
-          "kind": "emergent-phrase",
-          "matched_terms": [
-            "rag systems"
-          ],
-          "document_frequency": 2,
-          "score": 6.996
-        },
-        {
           "id": "phrase:retrieval-augmented",
           "label": "retrieval augmented",
           "kind": "emergent-phrase",
@@ -57037,6 +57053,16 @@
           "score": 6.996
         },
         {
+          "id": "phrase:yet-existing",
+          "label": "yet existing",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "yet existing"
+          ],
+          "document_frequency": 4,
+          "score": 6.486
+        },
+        {
           "id": "theme:agent-harnesses",
           "label": "Agent harnesses",
           "kind": "theme",
@@ -57051,6 +57077,7 @@
           "matched_terms": [
             "retrieval augmented generation",
             "retrieval-augmented generation",
+            "rag systems",
             "GraphRAG",
             "graphrag",
             "RAG"
@@ -59024,6 +59051,7 @@
       "source_type": "paper",
       "published_at": "2026-09-17T17:59:53Z",
       "theme_ids": [
+        "memory-context",
         "multimodal-3d",
         "robotics-embodied-ai"
       ],
@@ -59812,7 +59840,9 @@
       "source_id": "simon-willison",
       "source_type": "practitioner-blog",
       "published_at": "2026-09-17T23:37:27+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
       "concepts": [
         {
           "id": "phrase:hacker-news-tags",
@@ -60091,6 +60121,7 @@
       "source_type": "community",
       "published_at": "2026-09-18T00:11:44+00:00",
       "theme_ids": [
+        "skills-integrations",
         "small-specialized-models"
       ],
       "concepts": [
@@ -61969,7 +62000,8 @@
           "kind": "theme",
           "matched_terms": [
             "speculative decoding",
-            "LLM inference"
+            "LLM inference",
+            "llm inference"
           ]
         },
         {
@@ -63821,6 +63853,7 @@
       "source_type": "paper",
       "published_at": "2026-09-18T14:03:49Z",
       "theme_ids": [
+        "robotics-embodied-ai",
         "training-self-improvement"
       ],
       "concepts": [
@@ -64733,7 +64766,8 @@
           "kind": "theme",
           "matched_terms": [
             "speculative decoding",
-            "LLM inference"
+            "LLM inference",
+            "llm inference"
           ]
         }
       ],
@@ -65376,6 +65410,7 @@
       "source_type": "paper",
       "published_at": "2026-09-18T14:42:55Z",
       "theme_ids": [
+        "frontier-inference-infrastructure",
         "multimodal-3d",
         "open-local-inference"
       ],
@@ -65405,7 +65440,8 @@
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
-            "LLM inference"
+            "LLM inference",
+            "llm inference"
           ]
         },
         {
@@ -67769,7 +67805,8 @@
       "source_type": "paper",
       "published_at": "2026-09-18T15:55:29Z",
       "theme_ids": [
-        "assurance-infrastructure"
+        "assurance-infrastructure",
+        "memory-context"
       ],
       "concepts": [
         {
@@ -71127,6 +71164,7 @@
       "source_type": "first-party-lab",
       "published_at": "2026-09-18T19:04:41Z",
       "theme_ids": [
+        "frontier-inference-infrastructure",
         "training-self-improvement"
       ],
       "concepts": [
@@ -71135,7 +71173,8 @@
           "label": "Frontier inference infrastructure",
           "kind": "theme",
           "matched_terms": [
-            "LLM inference"
+            "LLM inference",
+            "llm inference"
           ]
         },
         {
@@ -73274,7 +73313,9 @@
       "source_id": "bluesky-nathan-lambert",
       "source_type": "expert-social",
       "published_at": "2026-09-20T12:53:36.367Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
       "concepts": [
         {
           "id": "theme:agent-harnesses",
@@ -75289,7 +75330,9 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "published_at": "2026-09-21T04:26:08+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "document-knowledge-systems"
+      ],
       "concepts": [
         {
           "id": "phrase:https-x2f-x2f",
@@ -75306,6 +75349,7 @@
           "label": "Documents, retrieval & knowledge systems",
           "kind": "theme",
           "matched_terms": [
+            "production rag",
             "RAG"
           ]
         }
@@ -75349,7 +75393,9 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "published_at": "2026-09-21T04:42:37+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
       "concepts": [
         {
           "id": "phrase:fine-tune",
@@ -75881,7 +75927,9 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "published_at": "2026-09-21T06:24:34+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "memory-context"
+      ],
       "concepts": [
         {
           "id": "phrase:long-term",
@@ -76869,7 +76917,9 @@
       "source_id": "hacker-news",
       "source_type": "community",
       "published_at": "2026-09-21T12:23:19+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
       "concepts": [
         {
           "id": "theme:frontier-inference-infrastructure",
@@ -76877,7 +76927,8 @@
           "kind": "theme",
           "matched_terms": [
             "inference optimization",
-            "LLM inference"
+            "LLM inference",
+            "llm inference"
           ]
         }
       ],
@@ -78600,7 +78651,9 @@
       "source_id": "aws-machine-learning-blog",
       "source_type": "first-party-lab",
       "published_at": "2026-09-21T16:24:40+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "document-knowledge-systems"
+      ],
       "concepts": [
         {
           "id": "phrase:amazon-bedrock",
@@ -78658,7 +78711,9 @@
       "source_id": "aws-machine-learning-blog",
       "source_type": "first-party-lab",
       "published_at": "2026-09-21T16:27:34+00:00",
-      "theme_ids": [],
+      "theme_ids": [
+        "assurance-infrastructure"
+      ],
       "concepts": [
         {
           "id": "phrase:amazon-bedrock-agentcore",
@@ -78830,6 +78885,7 @@
       "source_type": "community",
       "published_at": "2026-09-21T16:34:27+00:00",
       "theme_ids": [
+        "skills-integrations",
         "small-specialized-models"
       ],
       "concepts": [
@@ -80464,7 +80520,9 @@
       "source_id": "nvidia-developer-blog",
       "source_type": "first-party-lab",
       "published_at": "2026-09-21T21:05:28Z",
-      "theme_ids": [],
+      "theme_ids": [
+        "skills-integrations"
+      ],
       "concepts": [
         {
           "id": "phrase:task-completion",
@@ -84499,7 +84557,9 @@
       "source_id": "yc-companies",
       "source_type": "company-directory",
       "published_at": "2026-09-22",
-      "theme_ids": [],
+      "theme_ids": [
+        "skills-integrations"
+      ],
       "concepts": [
         {
           "id": "phrase:batch-f2026",
@@ -84956,7 +85016,9 @@
       "source_id": "yc-companies",
       "source_type": "company-directory",
       "published_at": "2026-09-22",
-      "theme_ids": [],
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
       "concepts": [
         {
           "id": "phrase:artificial-intelligence-robotics",

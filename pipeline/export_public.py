@@ -37,6 +37,9 @@ PUBLIC_ITEM_FIELD_ORDER = (
     "projects",
     "sponsor_status",
     "theme_ids",
+    "classification_disposition",
+    "classification_reason",
+    "classification_rule_id",
     "verification",
 )
 PUBLIC_ITEM_FIELDS = set(PUBLIC_ITEM_FIELD_ORDER)

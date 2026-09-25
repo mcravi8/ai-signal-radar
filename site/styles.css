@@ -518,6 +518,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .engineering-health { grid-template-columns: repeat(4, 1fr); }
 .classification-audit-section { margin-top: 0; }
+.audit-finding-heading { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.classification-clusters { border-bottom: 1px solid var(--line-dark); }
+.classification-clusters > summary { padding: .7rem .9rem; color: var(--navy); font: 700 .58rem var(--mono); cursor: pointer; text-transform: uppercase; }
+.classification-cluster-rows { border-top: 1px solid var(--line); }
+.classification-cluster { display: grid; grid-template-columns: minmax(180px, .8fr) minmax(0, 1.6fr) auto; gap: .75rem 1rem; align-items: start; padding: .75rem .9rem; border-bottom: 1px solid var(--line); }
+.classification-cluster:last-child { border-bottom: 0; }
+.classification-cluster p { margin: 0; color: var(--muted); font-size: .68rem; line-height: 1.45; }
+.classification-cluster small { color: var(--faint); font-size: .56rem; white-space: nowrap; }
 .audit-summary { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line-dark); }
 .audit-findings { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line-dark); }
 .audit-finding { min-height: 112px; padding: .85rem .9rem; border-right: 1px solid var(--line); }
@@ -693,6 +701,8 @@ a.evidence-title:hover { color: var(--blue); text-decoration: underline; }
   .audit-summary { grid-template-columns: 1fr 1fr; }
   .audit-findings { grid-template-columns: 1fr; }
   .audit-finding { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .classification-cluster { grid-template-columns: 1fr; }
+  .classification-cluster small { white-space: normal; }
   .analysis-layout, .theme-layout, .operating-layout { grid-template-columns: 1fr; }
   .review-summary { grid-template-columns: 1fr; }
   .review-summary small { white-space: normal; }

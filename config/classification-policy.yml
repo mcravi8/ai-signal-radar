@@ -1,0 +1,83 @@
+version: 1
+
+scope_definition: >-
+  The thematic taxonomy covers reusable AI engineering architectures, operating controls,
+  workflow systems, and commercialization patterns. A collected record is not automatically
+  in scope merely because it comes from an AI-oriented source.
+
+dispositions:
+  classified:
+    description: One or more precise canonical-theme terms matched the record.
+  classification-review:
+    description: The record may contain a relevant signal, but no reviewed theme or exclusion rule currently explains it.
+  out-of-scope:
+    description: A reviewed high-precision rule excludes the record from thematic coverage without deleting it from the corpus.
+
+scope_terms:
+  - ai
+  - artificial intelligence
+  - machine learning
+  - deep learning
+  - llm
+  - language model
+  - model
+  - neural network
+  - transformer
+  - generative
+  - foundation model
+  - agent
+  - chatbot
+  - chatgpt
+  - openai
+  - anthropic
+  - claude
+  - gemini
+  - llama
+  - mistral
+  - qwen
+  - deepseek
+  - grok
+  - hugging face
+  - pytorch
+  - tensorflow
+  - gpu
+  - cuda
+  - inference
+  - training
+  - benchmark
+  - robot
+  - robotics
+  - computer vision
+  - speech
+  - embedding
+
+out_of_scope_rules:
+  - id: verification-only-no-theme
+    source_types: [company-directory, job-posting]
+    reason: >-
+      Retained as company-formation or hiring verification, but it does not map to a canonical
+      engineering theme. Verification evidence remains available outside thematic coverage.
+
+  - id: community-no-ai-system-signal
+    source_ids: [hacker-news]
+    requires_no_scope_term: true
+    reason: >-
+      General community material with no explicit AI-system term is outside the radar's
+      engineering and operating taxonomy.
+
+  - id: publisher-housekeeping
+    source_types: [first-party-lab, investor-essay, operator-essay, practitioner-blog]
+    title_patterns:
+      - '^welcome\b'
+      - '^introducing [^\n]{0,80}\bfund\b'
+      - '^announcing [^\n]{0,80}\bfund\b'
+      - '\bnewest partner\b'
+    reason: >-
+      Personnel and publisher housekeeping without a canonical technical or operating signal
+      is outside thematic coverage.
+
+review_policy:
+  - Out-of-scope rules run only after canonical theme matching, so a precise theme always wins.
+  - Out-of-scope records remain public and inspectable; they are excluded only from the coverage denominator and review backlog.
+  - Classification-review is the default for unmatched research, repository, practitioner, newsletter, and expert records because they may expose a genuine taxonomy gap.
+  - New vocabulary requires inspected examples, term-boundary matching, and a regression test; generic words such as agent, model, evaluation, or data are not sufficient theme rules.

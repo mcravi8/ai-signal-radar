@@ -321,6 +321,9 @@ def _normalize_public_evidence(row: dict[str, Any], themes: dict[str, dict[str, 
     published_at = "" if first_observed_only else row.get("published_at", "")
     month = _month(published_at)
     theme_ids = row.get("theme_ids", [])
+    disposition = "classified" if theme_ids else row.get("classification_disposition", "classification-review")
+    if disposition == "classified" and not theme_ids:
+        disposition = "classification-review"
     return {
         "id": row["id"],
         "source_id": row.get("source_id", "unknown"),
@@ -334,7 +337,15 @@ def _normalize_public_evidence(row: dict[str, Any], themes: dict[str, dict[str, 
         "authors": row.get("authors", []),
         "projects": row.get("projects", []),
         "theme_ids": theme_ids,
-        "disposition": "classified" if theme_ids else "classification-review",
+        "disposition": disposition,
+        "disposition_reason": row.get(
+            "classification_reason",
+            "Matched reviewed canonical-theme vocabulary." if theme_ids else "Awaiting classification review.",
+        ),
+        "classification_rule_id": row.get(
+            "classification_rule_id",
+            "canonical-theme-match" if theme_ids else "unresolved-review",
+        ),
         "stack_layers": _stack_layers(theme_ids, themes),
         "support_count": 1,
         "monthly_counts": {month: 1} if month else {},
@@ -372,6 +383,8 @@ def _normalize_alpha_evidence(
                 "projects": trend.get("examples", []),
                 "theme_ids": theme_ids,
                 "disposition": "classified" if theme_ids else "classification-review",
+                "disposition_reason": "Mapped from a reviewed AlphaSignal trend category." if theme_ids else "Awaiting classification review.",
+                "classification_rule_id": "alphasignal-trend-mapping" if theme_ids else "unresolved-review",
                 "stack_layers": _stack_layers(theme_ids, themes),
                 "support_count": trend["mentions"],
                 "monthly_counts": trend.get("monthly_mentions", {}),
@@ -407,6 +420,8 @@ def _normalize_alpha_evidence(
                 "projects": [project["name"]],
                 "theme_ids": theme_ids,
                 "disposition": "classified" if theme_ids else "classification-review",
+                "disposition_reason": "Mapped from a reviewed AlphaSignal project category." if theme_ids else "Awaiting classification review.",
+                "classification_rule_id": "alphasignal-project-mapping" if theme_ids else "unresolved-review",
                 "stack_layers": _stack_layers(theme_ids, themes),
                 "support_count": 1,
                 "monthly_counts": {month: 1} if month else {},
@@ -1213,8 +1228,22 @@ def build_research(
             concept["name"],
         )
     )
-    classified_public_count = sum(bool(item.get("theme_ids")) for item in public_evidence)
-    classification_coverage = round(classified_public_count / len(public_evidence), 3) if public_evidence else None
+    disposition_counts = Counter(item.get("disposition", "classification-review") for item in public_evidence)
+    classified_public_count = disposition_counts["classified"]
+    classification_review_count = disposition_counts["classification-review"]
+    out_of_scope_count = disposition_counts["out-of-scope"]
+    scope_eligible_count = classified_public_count + classification_review_count
+    classification_coverage = (
+        round(classified_public_count / scope_eligible_count, 3) if scope_eligible_count else None
+    )
+    raw_classification_coverage = (
+        round(classified_public_count / len(public_evidence), 3) if public_evidence else None
+    )
+    out_of_scope_reason_counts = Counter(
+        item.get("classification_rule_id", "unspecified")
+        for item in public_evidence
+        if item.get("disposition") == "out-of-scope"
+    )
     recent_source_count = sum(source.get("freshness") == "recent" for source in sources)
     aging_source_count = sum(source.get("freshness") == "aging" for source in sources)
     historical_source_count = sum(source.get("freshness") == "historical" for source in sources)
@@ -1222,8 +1251,18 @@ def build_research(
     if classification_audit:
         published_classification_audit = {
             **classification_audit,
-            "current_unclassified_records": len(public_evidence) - classified_public_count,
+            "current_newly_classified_records": max(
+                0,
+                classified_public_count - classification_audit.get("baseline_classified_records", classified_public_count),
+            ),
+            "current_classified_records": classified_public_count,
+            "current_unclassified_records": classification_review_count,
+            "current_classification_review_records": classification_review_count,
+            "current_out_of_scope_records": out_of_scope_count,
+            "current_scope_eligible_records": scope_eligible_count,
             "current_classification_coverage": classification_coverage,
+            "current_raw_classification_coverage": raw_classification_coverage,
+            "current_out_of_scope_reason_counts": dict(sorted(out_of_scope_reason_counts.items())),
         }
     engineering_atlas = {
         "title": "Engineering Atlas",
@@ -1231,9 +1270,13 @@ def build_research(
         "concepts": engineering_concepts,
         "quality": {
             "classification_coverage": classification_coverage,
+            "raw_classification_coverage": raw_classification_coverage,
             "classified_public_records": classified_public_count,
-            "unclassified_public_records": len(public_evidence) - classified_public_count,
-            "classification_review_records": len(public_evidence) - classified_public_count,
+            "unclassified_public_records": classification_review_count,
+            "classification_review_records": classification_review_count,
+            "out_of_scope_public_records": out_of_scope_count,
+            "scope_eligible_public_records": scope_eligible_count,
+            "disposition_counts": dict(sorted(disposition_counts.items())),
             "recent_sources": recent_source_count,
             "aging_sources": aging_source_count,
             "historical_sources": historical_source_count,
@@ -1374,6 +1417,7 @@ def build_research(
             "queued_project_count": len(queued_projects),
             "discovered_project_count": len(discovered_projects),
             "classification_coverage": classification_coverage,
+            "raw_classification_coverage": raw_classification_coverage,
             "recent_source_count": recent_source_count,
             "model": "Every source is normalized into the same evidence contract. Source-specific analyses remain inspectable but do not define the global navigation.",
         },
@@ -1401,6 +1445,7 @@ def build_research(
                 "Curated Bluesky posts are treated as expert observations. Engagement is ignored, and the same publisher is counted once across its social, blog, and newsletter channels.",
                 "Hugging Face may curate papers also present on arXiv; the source breakdown makes this visible.",
                 "Keyword classification is deterministic and inspectable but can miss unusual language or create false positives.",
+                "Classification coverage excludes only records assigned an explicit out-of-scope rule. Raw corpus coverage, in-scope coverage, the review backlog, and every exclusion reason remain public.",
                 "Seven-day movement excludes month-level AlphaSignal aggregates because their dates are not equally precise.",
             ],
         },

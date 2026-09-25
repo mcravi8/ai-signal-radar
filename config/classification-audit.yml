@@ -1,22 +1,56 @@
 audit:
-  id: classification-audit-2026-09-21
-  audited_at: "2026-09-21"
-  baseline_unclassified_records: 1162
-  baseline_classification_coverage: 0.256
-  sample_size: 120
-  sample_source_count: 35
-  sample_method: Deterministic stratified sample of the unclassified public corpus, with at least one record per represented source and the remaining sample allocated proportionally by source backlog.
-  sample_newly_classified: 12
-  sample_remaining_for_review: 108
-  newly_classified_records: 110
-  post_audit_unclassified_records: 1052
-  post_audit_classification_coverage: 0.327
+  id: classification-audit-2026-09-25
+  audited_at: "2026-09-25"
+  baseline_public_records: 1781
+  baseline_classified_records: 554
+  baseline_classification_review_records: 1227
+  baseline_raw_classification_coverage: 0.311
+  inspection_method: >-
+    Recurring unmatched phrases were counted across the full backlog, then representative
+    examples were inspected before any vocabulary or exclusion rule was accepted. Exact
+    theme phrases were regression-tested; exclusions were limited to source-bounded clusters
+    with a stable reason.
+  recurring_unmatched_clusters:
+    - id: precise-technical-vocabulary
+      title: Precise technical vocabulary gaps
+      observed_records: 25
+      disposition: classified
+      decision: >-
+        Add only inspected phrases such as LLM inference, agent swarm, multi-tenant,
+        production RAG, long-term memory, tool calls, and robot foundation.
+    - id: general-community-material
+      title: General community material without an AI-system signal
+      observed_records: 257
+      disposition: out-of-scope
+      decision: >-
+        Keep the records public, but exclude them from thematic coverage and the review backlog.
+    - id: verification-only-records
+      title: Company and hiring verification without a theme
+      observed_records: 54
+      disposition: out-of-scope
+      decision: >-
+        Retain them for company-formation and hiring checks; do not treat verification-only
+        evidence as an unresolved engineering category.
+    - id: publisher-housekeeping
+      title: Publisher personnel and fund housekeeping
+      observed_records: 5
+      disposition: out-of-scope
+      decision: >-
+        Exclude narrowly matched welcome, partner, and fund announcements when no canonical
+        technical or operating theme matched first.
+    - id: unresolved-research-and-commentary
+      title: Adjacent research, broad commentary, and underspecified projects
+      observed_records: 886
+      disposition: classification-review
+      decision: >-
+        Leave unresolved. These records may reveal a future category, but their current text
+        does not support a precise classification or a safe blanket exclusion.
   findings:
-    - title: Specific technical vocabulary was missing
-      conclusion: Post-training, RLHF and GRPO, KV-cache and model-serving terms, open-model language, refusal calibration, MCP, VLM/VLA, and several robotics phrases mapped cleanly to existing themes.
-    - title: Substring matching was unsafe
-      conclusion: Short terms such as MCP, VLM, VLA, SLM, and TTS now require word boundaries, preventing accidental matches inside unrelated words.
-    - title: Most of the backlog should remain unresolved
-      conclusion: The remainder includes broad commentary, company announcements, adjacent scientific applications, duplicates, and off-topic community posts. It should not be forced into the engineering taxonomy.
-  next_step: Review recurring unmatched clusters before adding vocabulary or proposing a new theme; prefer precise phrases with inspected examples over generic words such as agent, model, or evaluation.
-  limitation: This was a taxonomy-gap audit, not a relevance judgment on all 1,162 records. The 108 sampled records left unresolved require further review or an explicit discard policy.
+    - title: Coverage needs two denominators
+      conclusion: Raw coverage describes the entire collected corpus; in-scope coverage excludes only explicitly reviewed out-of-scope records. Both remain public.
+    - title: Exclusion is not deletion
+      conclusion: Every out-of-scope record retains its source, title, link, rule, and reason and can re-enter the taxonomy if precise vocabulary matches later.
+    - title: Most unmatched AI material remains unresolved
+      conclusion: Papers, repositories, expert observations, and first-party claims stay in classification review unless a precise theme or a bounded exclusion rule explains them.
+  next_step: Inspect the largest recurring phrases inside the remaining classification-review pool; propose a new theme only when several independent sources describe the same reusable architecture or operating practice.
+  limitation: Cluster counts partition the September 25 backlog after precise theme matches take precedence. They are an audit snapshot, not permanent source quotas or claims that every record in a cluster was manually read.

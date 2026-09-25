@@ -94,7 +94,7 @@ Theme scores use recurrence, acceleration, persistence, and source breadth. Raw 
 
 The Early Signal Tracker is a separate inference layer. Each directional hypothesis requires an evidence record to connect at least two constituent themes. A reproducible lifecycle then distinguishes weak signals, emerging directions, corroborating directions, established patterns, and fading activity from independent source-family breadth, technical-family support, persistence, and recency inside a rolling 90-day window. Movement compares the latest 14 days with the preceding 14, while every direction retains its earliest observed source and a bounded set of diverse supporting records. These states describe observed attention; they are not forecasts of adoption, market size, or technical correctness.
 
-Each retained evidence record also has an explicit disposition: `classified` when it maps to one or more canonical themes, or `classification-review` when it remains in the visible taxonomy backlog. This prevents unclassified records from silently disappearing. Classification coverage is reported as a quality metric, not a success score.
+Each retained evidence record also has an explicit disposition: `classified` when it maps to one or more canonical themes, `classification-review` when it may contain a relevant unresolved signal, or `out-of-scope` when a reviewed high-precision rule excludes it from the thematic taxonomy. Out-of-scope records are retained with a public reason; they are not deleted. The interface reports both raw coverage across the collected corpus and in-scope coverage across records eligible for classification. Coverage remains a quality metric, not a success score.
 
 ## Signal Discovery contract
 
@@ -126,7 +126,7 @@ The Atlas also reports source freshness from the newest dated evidence seen for 
 
 The Expert Pulse analysis turns classified Bluesky observations into bounded findings with a stated interpretation, why it matters, a workflow opportunity, caveat, and inspectable supporting posts. Social engagement is never treated as corroboration.
 
-The Engineering Atlas publishes the latest classification audit next to the registry. The September 21 audit sampled 120 records across 35 sources, added precise missing vocabulary, replaced substring matching with term boundaries, and moved 110 records from `classification-review` into supported themes. Unresolved records remain visible rather than being assigned a convenient category.
+The Engineering Atlas publishes the latest classification audit next to the registry. The September 25 pass inspected recurring unmatched clusters, added only precise regression-tested vocabulary, and introduced source-bounded exclusions for general community material, verification-only company and job records, and publisher housekeeping. Research, repositories, expert observations, and other plausible AI signals remain in `classification-review` when neither a precise theme nor a safe exclusion applies.
 
 ## AlphaSignal research
 

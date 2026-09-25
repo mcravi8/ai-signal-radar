@@ -17,6 +17,7 @@ const state = {
   evidenceSearch: "",
   evidenceSource: "",
   evidenceTheme: "",
+  evidenceDisposition: "",
   sourceType: "",
 };
 
@@ -1459,7 +1460,8 @@ function renderProjects() {
   const atlas = state.research.engineering_atlas;
   const quality = atlas.quality;
   $("#engineering-health").replaceChildren(
-    metric("Classification", quality.classification_coverage === null ? "N/O" : `${Math.round(quality.classification_coverage * 100)}%`, `${formatNumber(quality.unclassified_public_records)} public records remain unclassified`),
+    metric("In-scope classification", quality.classification_coverage === null ? "N/O" : `${Math.round(quality.classification_coverage * 1000) / 10}%`, `${formatNumber(quality.classification_review_records)} records still require review`),
+    metric("Out of scope", formatNumber(quality.out_of_scope_public_records), `${Math.round((quality.raw_classification_coverage || 0) * 1000) / 10}% raw corpus coverage`),
     metric("Fresh sources", formatNumber(quality.recent_sources), `${quality.aging_sources} aging · ${quality.historical_sources} historical`),
     metric("Review queue", formatNumber(quality.queued_projects), "Bounded set selected from public discoveries"),
     metric("Reviewed tools", formatNumber(quality.reviewed_projects), `${quality.discovered_projects} additional discoveries`),
@@ -1471,10 +1473,10 @@ function renderProjects() {
   if (audit) {
     const summary = node("div", "audit-summary");
     summary.append(
-      metric("Sample", formatNumber(audit.sample_size), `${audit.sample_source_count} represented sources`),
-      metric("Reclassified", formatNumber(audit.newly_classified_records), "Previously unresolved records"),
-      metric("Coverage", `${Math.round(audit.post_audit_classification_coverage * 1000) / 10}%`, `from ${Math.round(audit.baseline_classification_coverage * 1000) / 10}%`),
-      metric("After audit", formatNumber(audit.post_audit_unclassified_records), "Unresolved records at completion"),
+      metric("Baseline", `${Math.round(audit.baseline_raw_classification_coverage * 1000) / 10}%`, `${formatNumber(audit.baseline_classification_review_records)} unmatched records`),
+      metric("In-scope coverage", `${Math.round(audit.current_classification_coverage * 1000) / 10}%`, `${formatNumber(audit.current_newly_classified_records)} newly mapped · ${formatNumber(audit.current_scope_eligible_records)} eligible`),
+      metric("Review backlog", formatNumber(audit.current_classification_review_records), "Plausible unresolved signals"),
+      metric("Explicitly excluded", formatNumber(audit.current_out_of_scope_records), "Retained with a public reason"),
     );
     const findings = node("div", "audit-findings");
     for (const finding of audit.findings || []) {
@@ -1482,8 +1484,19 @@ function renderProjects() {
       item.append(node("strong", "", finding.title), node("p", "", finding.conclusion));
       findings.append(item);
     }
+    const clusters = node("details", "classification-clusters");
+    clusters.append(node("summary", "", `Inspect ${formatNumber((audit.recurring_unmatched_clusters || []).length)} reviewed unmatched clusters`));
+    const clusterRows = node("div", "classification-cluster-rows");
+    for (const cluster of audit.recurring_unmatched_clusters || []) {
+      const item = node("article", "classification-cluster");
+      const heading = node("div", "audit-finding-heading");
+      heading.append(node("strong", "", cluster.title), badge(label(cluster.disposition), cluster.disposition));
+      item.append(heading, node("p", "", cluster.decision), node("small", "tabular", `${formatNumber(cluster.observed_records)} records in the audited backlog`));
+      clusterRows.append(item);
+    }
+    clusters.append(clusterRows);
     const boundary = node("p", "audit-boundary", audit.limitation);
-    auditRoot.append(summary, findings, boundary);
+    auditRoot.append(summary, findings, clusters, boundary);
   } else {
     auditRoot.append(node("p", "empty-state", "No classification audit has been published yet."));
   }
@@ -1595,7 +1608,10 @@ function renderEvidence() {
   const query = state.evidenceSearch.trim().toLowerCase();
   const records = state.research.evidence.filter((item) => {
     const searchable = [item.title, item.summary, ...(item.projects || []), ...(item.authors || [])].join(" ").toLowerCase();
-    return (!query || searchable.includes(query)) && (!state.evidenceSource || item.source_id === state.evidenceSource) && (!state.evidenceTheme || item.theme_ids.includes(state.evidenceTheme));
+    return (!query || searchable.includes(query))
+      && (!state.evidenceSource || item.source_id === state.evidenceSource)
+      && (!state.evidenceTheme || item.theme_ids.includes(state.evidenceTheme))
+      && (!state.evidenceDisposition || item.disposition === state.evidenceDisposition);
   });
   $("#evidence-count").textContent = `${formatNumber(records.length)} of ${formatNumber(state.research.evidence.length)}`;
   const shown = records.slice(0, 100);
@@ -1613,6 +1629,10 @@ function renderEvidence() {
       button.type = "button";
       button.dataset.themeId = themeId;
       themes.append(button);
+    }
+    if (!item.theme_ids.length) {
+      themes.append(badge(item.disposition === "out-of-scope" ? "Out of scope" : "Needs review", item.disposition));
+      if (item.disposition_reason) themes.append(node("small", "", item.disposition_reason));
     }
     row.append(node("td", "date-cell tabular", formatDate(item.published_at)), node("td", "", sourceName(item.source_id)), subject, node("td", "", label(item.evidence_kind)), node("td", "number-cell tabular", formatNumber(item.support_count)), themes);
     body.append(row);
@@ -1749,6 +1769,7 @@ function bindControls() {
   $("#evidence-search").addEventListener("input", (event) => { state.evidenceSearch = event.target.value; renderEvidence(); });
   $("#evidence-source").addEventListener("change", (event) => { state.evidenceSource = event.target.value; renderEvidence(); });
   $("#evidence-theme").addEventListener("change", (event) => { state.evidenceTheme = event.target.value; renderEvidence(); });
+  $("#evidence-disposition").addEventListener("change", (event) => { state.evidenceDisposition = event.target.value; renderEvidence(); });
   $("#source-type").addEventListener("change", (event) => { state.sourceType = event.target.value; renderOverview(); });
   $("#retry-load").addEventListener("click", load);
   document.addEventListener("click", (event) => {

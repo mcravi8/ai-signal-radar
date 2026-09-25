@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-25T07:02:50.177694+00:00",
+    "generated_at": "2026-09-25T07:18:15.174276+00:00",
     "status": "success",
     "source_count": 38,
     "evidence_count": 1781,
@@ -12,8 +12,8 @@
     "signals": [
       "training-self-improvement",
       "open-local-inference",
-      "small-specialized-models",
       "skills-integrations",
+      "small-specialized-models",
       "coding-agents"
     ]
   },
@@ -119,14 +119,16 @@
       ],
       "primary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 29,
+      "evidence_count": 34,
       "source_types": [
+        "community",
         "company-directory",
         "curated-newsletter",
         "first-party-lab",
         "investor-essay",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
@@ -183,11 +185,12 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 52,
+      "evidence_count": 63,
       "source_types": [
         "community",
         "company-directory",
         "curated-newsletter",
+        "expert-newsletter",
         "expert-social",
         "first-party-lab",
         "investor-essay",
@@ -218,7 +221,7 @@
       ],
       "primary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 39,
+      "evidence_count": 40,
       "source_types": [
         "community",
         "expert-social",
@@ -253,7 +256,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 89,
+      "evidence_count": 94,
       "source_types": [
         "community",
         "company-directory",
@@ -264,6 +267,7 @@
         "newsletter",
         "paper",
         "paper-curation",
+        "practitioner-blog",
         "repository"
       ],
       "score": {
@@ -323,7 +327,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 164,
+      "evidence_count": 165,
       "source_types": [
         "community",
         "company-directory",
@@ -361,7 +365,7 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 60,
+      "evidence_count": 64,
       "source_types": [
         "community",
         "company-directory",
@@ -424,11 +428,12 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 45,
+      "evidence_count": 48,
       "source_types": [
         "company-directory",
         "curated-newsletter",
         "expert-social",
+        "first-party-lab",
         "investor-essay",
         "newsletter",
         "paper",
@@ -499,7 +504,7 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 70,
+      "evidence_count": 76,
       "source_types": [
         "community",
         "company-directory",
@@ -537,8 +542,10 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 18,
+      "evidence_count": 24,
       "source_types": [
+        "community",
+        "first-party-lab",
         "paper",
         "paper-curation",
         "repository"
@@ -547,8 +554,8 @@
         "recurrence": 25.0,
         "acceleration": 25.0,
         "persistence": 25.0,
-        "breadth": 15.0,
-        "total": 90.0
+        "breadth": 25.0,
+        "total": 100.0
       }
     },
     {
@@ -566,20 +573,22 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 9,
+      "evidence_count": 18,
       "source_types": [
+        "community",
         "first-party-lab",
         "investor-essay",
         "paper",
+        "paper-curation",
         "practitioner-blog",
         "repository"
       ],
       "score": {
-        "recurrence": 22.5,
+        "recurrence": 25.0,
         "acceleration": 25.0,
-        "persistence": 20.0,
+        "persistence": 25.0,
         "breadth": 25.0,
-        "total": 92.5
+        "total": 100.0
       }
     },
     {
@@ -649,7 +658,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 16,
+      "evidence_count": 19,
       "source_types": [
         "company-directory",
         "first-party-lab",
@@ -682,7 +691,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790721",
@@ -698,7 +710,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49790729",
@@ -716,7 +731,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "coding-agents"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49790784",
@@ -732,7 +750,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790786",
@@ -748,7 +769,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49790821",
@@ -764,7 +788,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790829",
@@ -780,7 +807,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49790833",
@@ -796,7 +826,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790835",
@@ -812,7 +845,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49790846",
@@ -828,7 +864,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790874",
@@ -844,7 +883,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790875",
@@ -860,7 +902,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790885",
@@ -876,7 +921,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49790912",
@@ -892,7 +940,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49790936",
@@ -910,7 +961,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "small-specialized-models"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49790937",
@@ -926,7 +980,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "radical-ventures:40d52447cb1ae36c2d2e",
@@ -942,7 +999,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Personnel and publisher housekeeping without a canonical technical or operating signal is outside thematic coverage.",
+      "classification_rule_id": "publisher-housekeeping"
     },
     {
       "id": "hn:49790971",
@@ -958,7 +1018,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790986",
@@ -974,7 +1037,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790987",
@@ -990,7 +1056,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49790990",
@@ -1006,7 +1075,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49790991",
@@ -1022,7 +1094,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791040",
@@ -1038,7 +1113,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791046",
@@ -1054,7 +1132,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791058",
@@ -1070,7 +1151,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791074",
@@ -1086,7 +1170,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791084",
@@ -1104,7 +1191,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "skills-integrations"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49791101",
@@ -1120,7 +1210,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791104",
@@ -1136,7 +1229,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791117",
@@ -1152,7 +1248,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791125",
@@ -1168,7 +1267,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "bluesky:6cf953cc69a4:3mw2d2xdvz22d",
@@ -1187,7 +1289,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791191",
@@ -1203,7 +1308,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791228",
@@ -1221,7 +1329,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "skills-integrations"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49791231",
@@ -1237,7 +1348,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791242",
@@ -1253,7 +1367,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791246",
@@ -1269,7 +1386,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791250",
@@ -1285,7 +1405,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791255",
@@ -1301,7 +1424,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791296",
@@ -1317,7 +1443,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791312",
@@ -1333,7 +1462,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791317",
@@ -1349,7 +1481,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791321",
@@ -1365,7 +1500,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "aws-machine-learning-blog:16b9772b96509775d2ea",
@@ -1384,7 +1522,10 @@
       "theme_ids": [
         "agent-harnesses",
         "memory-context"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49791338",
@@ -1400,7 +1541,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791343",
@@ -1418,7 +1562,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "training-self-improvement"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49791350",
@@ -1434,7 +1581,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791366",
@@ -1450,7 +1600,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791378",
@@ -1466,7 +1619,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791380",
@@ -1482,7 +1638,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791384",
@@ -1498,7 +1657,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791397",
@@ -1514,7 +1676,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791398",
@@ -1530,7 +1695,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791429",
@@ -1548,7 +1716,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "small-specialized-models"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49791442",
@@ -1564,7 +1735,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791468",
@@ -1580,7 +1754,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49791939",
@@ -1596,7 +1773,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49791997",
@@ -1612,7 +1792,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49792067",
@@ -1628,7 +1811,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49792323",
@@ -1644,7 +1830,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49792342",
@@ -1660,7 +1849,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "bluesky:6cf953cc69a4:3mw2il75vy22y",
@@ -1679,7 +1871,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49792730",
@@ -1695,7 +1890,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49792742",
@@ -1711,7 +1909,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:6cf953cc69a4:3mw2kwnye2y2c",
@@ -1730,7 +1931,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mw2l5jyq7226",
@@ -1749,7 +1953,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49793381",
@@ -1765,7 +1972,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "nvidia-developer-blog:3f062ae5d12a3d2b6381",
@@ -1781,7 +1991,12 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49793545",
@@ -1797,7 +2012,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49793764",
@@ -1813,7 +2031,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "nvidia-developer-blog:837464fefd470eaa54f6",
@@ -1831,7 +2052,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "frontier-inference-infrastructure"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49794120",
@@ -1847,7 +2071,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "latent-space:7409d5ffee8a2c05841b",
@@ -1863,7 +2090,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "small-specialized-models"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "simon-willison:b3a971b72e2de3b7e5ee",
@@ -1877,7 +2107,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49794330",
@@ -1893,7 +2126,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49794615",
@@ -1909,7 +2145,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "simon-willison:b3e5263fa8976c3c350c",
@@ -1925,7 +2164,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "small-specialized-models"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "anthropic-news-research:b44c829b27028fd75a53",
@@ -1939,7 +2181,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:b3614927c6a2:3mw2tsop42c2u",
@@ -1960,7 +2205,10 @@
       "sponsor_status": "not-applicable",
       "theme_ids": [
         "small-specialized-models"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49794736",
@@ -1976,7 +2224,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "bluesky:1278ebf77949:3mw2usvvn6c26",
@@ -1995,7 +2246,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "yc-company:1294",
@@ -2018,13 +2272,16 @@
       "theme_ids": [
         "training-self-improvement"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/scaleapi",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 500,
-        "batch": "S2016",
-        "github_url": "https://github.com/scaleapi",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2016"
       }
     },
     {
@@ -2047,12 +2304,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "London",
         "team_size": 1,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2075,12 +2335,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2104,12 +2367,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 1,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2134,12 +2400,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2164,13 +2433,16 @@
         "agent-harnesses",
         "coding-agents"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 1,
-        "batch": "S2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2194,12 +2466,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2222,13 +2497,16 @@
       "theme_ids": [
         "coding-agents"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2250,12 +2528,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2283,12 +2564,15 @@
         "multimodal-3d",
         "robotics-embodied-ai"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 6,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2311,12 +2595,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "Los Angeles",
         "team_size": 2,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2340,12 +2627,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "Oslo, Norway",
         "team_size": 5,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2369,12 +2659,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2397,13 +2690,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/use-click/",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 1,
-        "batch": "S2026",
-        "github_url": "https://github.com/use-click/",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2428,12 +2724,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 6,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2456,12 +2755,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2484,12 +2786,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2514,12 +2819,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2544,12 +2852,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2574,12 +2885,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2602,12 +2916,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "Gurugram, Haryana, India",
         "team_size": 3,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2631,13 +2948,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 5,
-        "batch": "S2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2661,12 +2981,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2691,13 +3014,16 @@
       "theme_ids": [
         "coding-agents"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2721,12 +3047,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "London",
         "team_size": 2,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2747,13 +3076,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2778,12 +3110,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 3,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -2809,13 +3144,16 @@
         "agent-harnesses",
         "coding-agents"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/herdrdev",
+        "date_basis": "first-observed",
         "location": "Ankara, Turkey",
         "team_size": 1,
-        "batch": "F2026",
-        "github_url": "https://github.com/herdrdev",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -2841,13 +3179,16 @@
         "frontier-inference-infrastructure",
         "open-local-inference"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -2870,12 +3211,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
         "status": "Active",
-        "date_basis": "first-observed"
+        "github_url": "",
+        "date_basis": "first-observed",
+        "team_size": 2,
+        "batch": "F2026"
       }
     },
     {
@@ -2897,13 +3241,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 3,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -2928,13 +3275,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -2957,13 +3307,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 5,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -2988,13 +3341,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 4,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3016,13 +3372,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3046,14 +3405,19 @@
         "Mirrors"
       ],
       "sponsor_status": "first-party-directory",
-      "theme_ids": [],
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3075,13 +3439,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3105,13 +3472,16 @@
       "theme_ids": [
         "voice-audio"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3134,13 +3504,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "Munich, Germany",
         "team_size": 8,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3164,13 +3537,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3194,14 +3570,19 @@
         "Shepherd Robotics"
       ],
       "sponsor_status": "first-party-directory",
-      "theme_ids": [],
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 4,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3226,13 +3607,16 @@
       "theme_ids": [
         "training-self-improvement"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/oro-ai",
+        "date_basis": "first-observed",
         "location": "Vancouver, BC, Canada",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "https://github.com/oro-ai",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3257,12 +3641,15 @@
       "theme_ids": [
         "robotics-embodied-ai"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 4,
-        "batch": "F2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3287,12 +3674,15 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "New York City",
         "team_size": 4,
-        "batch": "F2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3315,13 +3705,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3344,13 +3737,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/The-Agentic-Data-Co",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "https://github.com/The-Agentic-Data-Co",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3372,13 +3768,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "Salt Lake City, UT, USA",
         "team_size": 0,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3401,13 +3800,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3430,13 +3832,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "Santiago, Santiago Metropolitan Region, Chile",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -3461,13 +3866,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/checkr",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 800,
-        "batch": "S2014",
-        "github_url": "https://github.com/checkr",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2014"
       }
     },
     {
@@ -3484,7 +3892,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "open-local-inference"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "huggingface-blog:6b3083011aeb49b1cc1d",
@@ -3498,7 +3909,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49795109",
@@ -3516,7 +3930,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "small-specialized-models"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49795122",
@@ -3532,7 +3949,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49795579",
@@ -3548,7 +3968,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49796660",
@@ -3564,7 +3987,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49797323",
@@ -3580,7 +4006,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "latent-space:c5ef439db94fe95e2aa5",
@@ -3596,7 +4025,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "open-local-inference"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49797801",
@@ -3612,7 +4044,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49797982",
@@ -3628,7 +4063,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49798204",
@@ -3644,7 +4082,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49798257",
@@ -3660,7 +4101,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49798597",
@@ -3676,7 +4120,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49798699",
@@ -3692,7 +4139,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49799083",
@@ -3708,7 +4158,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799241",
@@ -3724,7 +4177,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799287",
@@ -3740,7 +4196,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799306",
@@ -3756,7 +4215,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799323",
@@ -3772,7 +4234,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799339",
@@ -3788,7 +4253,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799351",
@@ -3804,7 +4272,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49799397",
@@ -3820,7 +4291,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799398",
@@ -3836,7 +4310,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799429",
@@ -3852,7 +4329,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799433",
@@ -3868,7 +4348,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799464",
@@ -3884,7 +4367,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799465",
@@ -3900,7 +4386,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799468",
@@ -3916,7 +4405,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799492",
@@ -3932,7 +4424,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799504",
@@ -3948,7 +4443,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799509",
@@ -3964,7 +4462,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799524",
@@ -3980,7 +4481,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799525",
@@ -3996,7 +4500,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799545",
@@ -4012,7 +4519,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799546",
@@ -4028,7 +4538,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799577",
@@ -4044,7 +4557,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799603",
@@ -4060,7 +4576,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799622",
@@ -4076,7 +4595,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799630",
@@ -4092,7 +4614,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49799636",
@@ -4108,7 +4633,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799638",
@@ -4124,7 +4652,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799640",
@@ -4140,7 +4671,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799641",
@@ -4158,7 +4692,10 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "small-specialized-models"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "hn:49799643",
@@ -4174,7 +4711,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "hn:49799645",
@@ -4190,7 +4730,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49799672",
@@ -4206,7 +4749,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "hn:49799677",
@@ -4222,7 +4768,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
+      "classification_rule_id": "community-no-ai-system-signal"
     },
     {
       "id": "bluesky:6cf953cc69a4:3mw4btfedmg2y",
@@ -4241,7 +4790,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:e810fac7fd93:3mw4dzm7j7u2q",
@@ -4260,7 +4812,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mw4in3uyx226",
@@ -4279,7 +4834,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mw4jgfjqzk2z",
@@ -4298,7 +4856,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mw4k4igwxc2z",
@@ -4317,7 +4878,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:1454af9586eaae4c2d8c",
@@ -4331,7 +4895,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:15d47f7fa52c1499f11e",
@@ -4345,7 +4912,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:2b1feaa89cfde858d3b9",
@@ -4359,7 +4929,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:46d0001edf2628fce6c2",
@@ -4376,7 +4949,10 @@
       "theme_ids": [
         "multimodal-3d",
         "open-local-inference"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:5fac7cf4af69b9bdfe97",
@@ -4390,7 +4966,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:82e85d9bb7da8782f712",
@@ -4404,7 +4983,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:878cd92f8396df643edb",
@@ -4418,7 +5000,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:99ef41ba3a38c48b2cad",
@@ -4432,7 +5017,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:a0dafd2406b26182a588",
@@ -4446,7 +5034,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:cec6f55c7deff2c8dfc5",
@@ -4463,7 +5054,10 @@
       "theme_ids": [
         "coding-agents",
         "training-self-improvement"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:e15b8b8bb38c36aac506",
@@ -4477,7 +5071,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:ed11042f47b8f05c3ace",
@@ -4494,7 +5091,10 @@
       "theme_ids": [
         "coding-agents",
         "training-self-improvement"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:f589934827be4c010ca7",
@@ -4508,7 +5108,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mw4ndprwy22g",
@@ -4527,7 +5130,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mw4nfn76oc2g",
@@ -4546,7 +5152,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mw4ssgedys2j",
@@ -4565,7 +5174,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:b3614927c6a2:3mw5g6izoms2n",
@@ -4584,7 +5196,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "yc-company:31557",
@@ -4609,12 +5224,15 @@
         "skills-integrations",
         "training-self-improvement"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -4637,13 +5255,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/AGEOspatial",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 1,
-        "batch": "F2026",
-        "github_url": "https://github.com/AGEOspatial",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -4667,13 +5288,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -4693,7 +5317,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:6cf953cc69a4:3mw6tre6fls2j",
@@ -4712,7 +5339,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:05d87aff9d0bebc4b8a8",
@@ -4726,7 +5356,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:1024d4744c2adaa98a01",
@@ -4740,7 +5373,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:1ef7cf038f88524bc9b8",
@@ -4756,7 +5392,10 @@
       "sponsor_status": "sponsored",
       "theme_ids": [
         "voice-audio"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:2dbf62d45c70cc5f832c",
@@ -4770,7 +5409,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:331e1dadabcfd39024b8",
@@ -4784,7 +5426,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:432e3953f61ee91b8e02",
@@ -4798,7 +5443,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:5052b2f68ef6970e4c01",
@@ -4812,7 +5460,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:5f3148d70539a8da7f25",
@@ -4828,7 +5479,10 @@
       "sponsor_status": "sponsored",
       "theme_ids": [
         "voice-audio"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:65cd83ee399b698ff48c",
@@ -4842,7 +5496,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:98eeae98e4ff5124d7ae",
@@ -4856,7 +5513,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:a8def2376d665f117870",
@@ -4872,7 +5532,10 @@
       "sponsor_status": "editorial",
       "theme_ids": [
         "open-local-inference"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:d11265243efa60fee595",
@@ -4886,7 +5549,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mw7dqzkpcc2n",
@@ -4905,7 +5571,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mw7g7v3uuc2z",
@@ -4924,7 +5593,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:b3614927c6a2:3mw7magyrwc2i",
@@ -4945,7 +5617,10 @@
       "sponsor_status": "not-applicable",
       "theme_ids": [
         "voice-audio"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "bluesky:1278ebf77949:3mw7n5pr7222t",
@@ -4966,7 +5641,10 @@
       "sponsor_status": "not-applicable",
       "theme_ids": [
         "training-self-improvement"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mw7vpw22g22j",
@@ -4985,7 +5663,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mw7zndlglc2j",
@@ -5004,7 +5685,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mwa2mjely225",
@@ -5023,7 +5707,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mwb7k3pba22e",
@@ -5042,7 +5729,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mwbbytwuuc2k",
@@ -5061,7 +5751,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:111e6fbcff6d492fbbb3",
@@ -5078,7 +5771,10 @@
       "theme_ids": [
         "multimodal-3d",
         "open-local-inference"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:14a5789fce9a3ced1882",
@@ -5092,7 +5788,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:2347f2dcbcf7e9dc1ca2",
@@ -5106,7 +5805,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:28e88f0768d976bbfccb",
@@ -5122,7 +5824,10 @@
       "sponsor_status": "editorial",
       "theme_ids": [
         "training-self-improvement"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:2f6d8ed916266407f173",
@@ -5136,7 +5841,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:324bb0890b258e7ec4fc",
@@ -5150,7 +5858,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:5e4d06e1b5148246bf48",
@@ -5166,7 +5877,10 @@
       "sponsor_status": "sponsored",
       "theme_ids": [
         "training-self-improvement"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:67e6c2c145912f097d63",
@@ -5180,7 +5894,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:878cd0da4350818f61b9",
@@ -5196,7 +5913,10 @@
       "sponsor_status": "sponsored",
       "theme_ids": [
         "training-self-improvement"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "alphasignal:90c6d5a5a7443445b951",
@@ -5210,7 +5930,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "sponsored",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:bab25bbc8c0db790846f",
@@ -5224,7 +5947,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:cc3dc4af9a1c16678c1f",
@@ -5238,7 +5964,10 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "editorial",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "alphasignal:e32078afc6278482f336",
@@ -5254,7 +5983,10 @@
       "sponsor_status": "sponsored",
       "theme_ids": [
         "training-self-improvement"
-      ]
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
     },
     {
       "id": "bluesky:1278ebf77949:3mwbsy7mgfk2i",
@@ -5273,7 +6005,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mwc2fyzarc2o",
@@ -5292,7 +6027,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mwcedxq5x22o",
@@ -5311,7 +6049,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "yc-company:33048",
@@ -5335,13 +6076,16 @@
       "theme_ids": [
         "multimodal-3d"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "",
+        "date_basis": "first-observed",
         "location": "New York City",
         "team_size": 2,
-        "batch": "S2026",
-        "github_url": "",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -5368,13 +6112,16 @@
       "theme_ids": [
         "robotics-embodied-ai"
       ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/Hebbian-Robotics",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "S2026",
-        "github_url": "https://github.com/Hebbian-Robotics",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "S2026"
       }
     },
     {
@@ -5397,13 +6144,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/Vorelios",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "https://github.com/Vorelios",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -5426,13 +6176,16 @@
       ],
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
       "verification": {
+        "status": "Active",
+        "github_url": "https://github.com/useoxygen",
+        "date_basis": "first-observed",
         "location": "San Francisco",
         "team_size": 2,
-        "batch": "F2026",
-        "github_url": "https://github.com/useoxygen",
-        "status": "Active",
-        "date_basis": "first-observed"
+        "batch": "F2026"
       }
     },
     {
@@ -5452,7 +6205,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:c2ef00c3e14c:3mwcncl2y5c23",
@@ -5471,7 +6227,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mwcpe6pdic26",
@@ -5490,7 +6249,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     },
     {
       "id": "bluesky:1278ebf77949:3mwctdxv7pc26",
@@ -5509,7 +6271,10 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
-      "theme_ids": []
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
     }
   ],
   "projects": [],

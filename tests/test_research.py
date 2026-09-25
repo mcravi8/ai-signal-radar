@@ -155,8 +155,15 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertGreaterEqual(len(atlas["concepts"]), 10)
         self.assertGreater(atlas["quality"]["classification_coverage"], 0.2)
         self.assertEqual(
-            atlas["quality"]["classified_public_records"] + atlas["quality"]["classification_review_records"],
+            atlas["quality"]["classified_public_records"]
+            + atlas["quality"]["classification_review_records"]
+            + atlas["quality"]["out_of_scope_public_records"],
             self.payload["meta"]["public_record_count"],
+        )
+        self.assertGreater(atlas["quality"]["out_of_scope_public_records"], 0)
+        self.assertGreater(
+            atlas["quality"]["classification_coverage"],
+            atlas["quality"]["raw_classification_coverage"],
         )
         self.assertEqual(atlas["quality"]["queued_projects"], 25)
         self.assertEqual(atlas["quality"]["reviewed_projects"], 25)
@@ -165,12 +172,18 @@ class CrossSourceResearchTests(unittest.TestCase):
         active_sources = [source for source in self.payload["sources"] if source["status"] == "active"]
         self.assertTrue(all(source["last_observed_at"] for source in active_sources))
         self.assertTrue(all(source["freshness"] in {"recent", "aging", "historical"} for source in active_sources))
-        self.assertTrue(all(item["disposition"] in {"classified", "classification-review"} for item in self.payload["evidence"]))
+        self.assertTrue(all(item["disposition"] in {"classified", "classification-review", "out-of-scope"} for item in self.payload["evidence"]))
+        self.assertTrue(all(item.get("disposition_reason") for item in self.payload["evidence"]))
         audit = atlas["classification_audit"]
-        self.assertEqual(audit["sample_size"], 120)
-        self.assertEqual(audit["newly_classified_records"], 110)
+        self.assertEqual(audit["baseline_public_records"], self.payload["meta"]["public_record_count"])
+        self.assertEqual(audit["current_newly_classified_records"], 25)
+        self.assertEqual(
+            sum(item["observed_records"] for item in audit["recurring_unmatched_clusters"]),
+            audit["baseline_classification_review_records"],
+        )
         self.assertEqual(audit["current_unclassified_records"], atlas["quality"]["unclassified_public_records"])
-        self.assertGreater(audit["post_audit_classification_coverage"], audit["baseline_classification_coverage"])
+        self.assertEqual(audit["current_out_of_scope_records"], atlas["quality"]["out_of_scope_public_records"])
+        self.assertGreater(audit["current_classification_coverage"], audit["baseline_raw_classification_coverage"])
 
     def test_early_signal_tracker_separates_inference_from_evidence(self):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}

@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-25T07:02:50.177694+00:00",
+    "generated_at": "2026-09-25T07:18:15.174276+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1205,
     "input_changed_document_count": 0,
@@ -10,16 +10,16 @@
     "filtered_anchor_count": 143,
     "coherent_cluster_count": 136,
     "quality_eligible_cluster_count": 13,
-    "explained_cluster_count": 85,
+    "explained_cluster_count": 87,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 78,
-      "merge-existing-direction": 7,
-      "novel": 277
+      "covered-by-existing-theme": 79,
+      "merge-existing-direction": 8,
+      "novel": 275
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -83,6 +83,37 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:agentic-post-training-c4f87db853",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "modular-agent-stack",
+        "title": "The agent stack is separating into modular operating layers",
+        "theme_recall": 0.667,
+        "matched_theme_ids": [
+          "agent-harnesses",
+          "skills-integrations"
+        ],
+        "matched_anchor_ids": [],
+        "matched_anchor_phrases": [],
+        "basis": "recurrent-theme-recall"
+      },
+      "anchor_labels": [
+        "recursive self improvement",
+        "agentic post training",
+        "self improvement rsi"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20519v1",
+        "github:1356900025",
+        "hf-paper:2609.08183",
+        "hf-paper:2609.14858"
+      ],
+      "source_count": 3,
+      "source_family_count": 2,
       "materially_changed": false
     },
     {
@@ -329,7 +360,7 @@
           "term memory"
         ],
         "basis": "anchor-phrase",
-        "document_share": 0.0
+        "document_share": 1.0
       },
       "anchor_labels": [
         "long term",
@@ -390,32 +421,6 @@
         "hf-paper:2608.26005",
         "hf-paper:2609.14858",
         "yc-company:30923"
-      ],
-      "source_count": 3,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
-      "cluster_id": "discovery:agentic-post-training-c4f87db853",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "document_share": 0.75,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "recursive self improvement",
-        "agentic post training",
-        "self improvement rsi"
-      ],
-      "evidence_ids": [
-        "arxiv:2609.20519v1",
-        "github:1356900025",
-        "hf-paper:2609.08183",
-        "hf-paper:2609.14858"
       ],
       "source_count": 3,
       "source_family_count": 2,
@@ -1125,7 +1130,7 @@
         "open-local-inference"
       ],
       "theme_document_counts": {
-        "frontier-inference-infrastructure": 2,
+        "frontier-inference-infrastructure": 3,
         "multimodal-3d": 1,
         "open-local-inference": 2
       },
@@ -1160,11 +1165,11 @@
             "document_count": 3
           },
           {
-            "id": "concept:theme:open-local-inference",
-            "document_count": 2
+            "id": "theme:frontier-inference-infrastructure",
+            "document_count": 3
           },
           {
-            "id": "theme:frontier-inference-infrastructure",
+            "id": "concept:theme:open-local-inference",
             "document_count": 2
           },
           {
@@ -1305,11 +1310,15 @@
       ],
       "theme_ids": [
         "assurance-infrastructure",
+        "memory-context",
         "skills-integrations"
       ],
-      "recurrent_theme_ids": [],
+      "recurrent_theme_ids": [
+        "memory-context"
+      ],
       "theme_document_counts": {
         "assurance-infrastructure": 1,
+        "memory-context": 3,
         "skills-integrations": 1
       },
       "first_seen": "2026-09-01T21:52:29Z",
@@ -1331,11 +1340,15 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 0,
+        "recurrent_theme_count": 1,
         "context_coherence_met": true,
         "context_features": [
           {
             "id": "concept:theme:memory-context",
+            "document_count": 3
+          },
+          {
+            "id": "theme:memory-context",
             "document_count": 3
           },
           {
@@ -1374,7 +1387,7 @@
           "term memory"
         ],
         "basis": "anchor-phrase",
-        "document_share": 0.0
+        "document_share": 1.0
       }
     },
     {
@@ -1614,6 +1627,7 @@
         "agent-harnesses",
         "coding-agents",
         "multimodal-3d",
+        "robotics-embodied-ai",
         "small-specialized-models",
         "training-self-improvement"
       ],
@@ -1624,6 +1638,7 @@
         "agent-harnesses": 1,
         "coding-agents": 1,
         "multimodal-3d": 1,
+        "robotics-embodied-ai": 1,
         "small-specialized-models": 1,
         "training-self-improvement": 3
       },
@@ -1757,12 +1772,13 @@
       "recurrent_theme_ids": [
         "agent-harnesses",
         "coding-agents",
+        "skills-integrations",
         "training-self-improvement"
       ],
       "theme_document_counts": {
         "agent-harnesses": 2,
         "coding-agents": 2,
-        "skills-integrations": 1,
+        "skills-integrations": 2,
         "small-specialized-models": 1,
         "training-self-improvement": 3
       },
@@ -1785,7 +1801,7 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 3,
+        "recurrent_theme_count": 4,
         "context_coherence_met": true,
         "context_features": [
           {
@@ -1843,14 +1859,19 @@
       },
       "source_cap_exclusions": [],
       "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
+      "disposition": "merge-existing-direction",
       "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "document_share": 0.75,
+        "kind": "early-signal-direction",
+        "id": "modular-agent-stack",
+        "title": "The agent stack is separating into modular operating layers",
+        "theme_recall": 0.667,
+        "matched_theme_ids": [
+          "agent-harnesses",
+          "skills-integrations"
+        ],
+        "matched_anchor_ids": [],
         "matched_anchor_phrases": [],
-        "basis": "document-share"
+        "basis": "recurrent-theme-recall"
       }
     },
     {
@@ -1983,12 +2004,14 @@
       ],
       "theme_ids": [
         "document-knowledge-systems",
+        "robotics-embodied-ai",
         "skills-integrations",
         "small-specialized-models"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
         "document-knowledge-systems": 1,
+        "robotics-embodied-ai": 1,
         "skills-integrations": 1,
         "small-specialized-models": 1
       },
@@ -2760,10 +2783,12 @@
         "formation"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "training-self-improvement": 1
       },
       "first_seen": "2026-08-24T06:21:04Z",
@@ -4050,10 +4075,12 @@
         "research"
       ],
       "theme_ids": [
+        "robotics-embodied-ai",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "robotics-embodied-ai": 1,
         "training-self-improvement": 1
       },
       "first_seen": "2026-09-18T14:03:49Z",
@@ -4605,10 +4632,12 @@
         "open-local-inference",
         "training-self-improvement"
       ],
-      "recurrent_theme_ids": [],
+      "recurrent_theme_ids": [
+        "multimodal-3d"
+      ],
       "theme_document_counts": {
         "frontier-inference-infrastructure": 1,
-        "multimodal-3d": 1,
+        "multimodal-3d": 2,
         "open-local-inference": 1,
         "training-self-improvement": 1
       },
@@ -4631,7 +4660,7 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 0,
+        "recurrent_theme_count": 1,
         "context_coherence_met": true,
         "context_features": [
           {
@@ -4641,6 +4670,10 @@
           {
             "id": "concept:theme:multimodal-3d",
             "document_count": 2
+          },
+          {
+            "id": "theme:multimodal-3d",
+            "document_count": 2
           }
         ],
         "context_outlier_count": 0,
@@ -4649,8 +4682,15 @@
       },
       "source_cap_exclusions": [],
       "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "multimodal-3d",
+        "title": "Multimodal generation & 3D",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
     },
     {
       "id": "discovery:neural-network-12f5a5f799",
@@ -5544,9 +5584,13 @@
         "experts",
         "research"
       ],
-      "theme_ids": [],
+      "theme_ids": [
+        "memory-context"
+      ],
       "recurrent_theme_ids": [],
-      "theme_document_counts": {},
+      "theme_document_counts": {
+        "memory-context": 1
+      },
       "first_seen": "2026-09-17T15:10:18Z",
       "last_seen": "2026-09-20T23:20:40.363Z",
       "metrics": {
@@ -6171,11 +6215,13 @@
         "experts"
       ],
       "theme_ids": [
+        "skills-integrations",
         "small-specialized-models",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "skills-integrations": 1,
         "small-specialized-models": 1,
         "training-self-improvement": 1
       },
@@ -6599,10 +6645,14 @@
         "experts"
       ],
       "theme_ids": [
+        "skills-integrations",
         "small-specialized-models"
       ],
-      "recurrent_theme_ids": [],
+      "recurrent_theme_ids": [
+        "skills-integrations"
+      ],
       "theme_document_counts": {
+        "skills-integrations": 2,
         "small-specialized-models": 1
       },
       "first_seen": "2026-09-12T23:56:42+00:00",
@@ -6624,11 +6674,15 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 0,
+        "recurrent_theme_count": 1,
         "context_coherence_met": true,
         "context_features": [
           {
             "id": "concept:theme:skills-integrations",
+            "document_count": 2
+          },
+          {
+            "id": "theme:skills-integrations",
             "document_count": 2
           }
         ],
@@ -6647,7 +6701,7 @@
           "agent tool calls"
         ],
         "basis": "anchor-phrase",
-        "document_share": 0.0
+        "document_share": 1.0
       }
     },
     {
@@ -7459,9 +7513,11 @@
       "theme_ids": [
         "agent-harnesses"
       ],
-      "recurrent_theme_ids": [],
+      "recurrent_theme_ids": [
+        "agent-harnesses"
+      ],
       "theme_document_counts": {
-        "agent-harnesses": 1
+        "agent-harnesses": 2
       },
       "first_seen": "2026-08-24T15:04:35Z",
       "last_seen": "2026-09-12T00:42:25+00:00",
@@ -7482,11 +7538,15 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 0,
+        "recurrent_theme_count": 1,
         "context_coherence_met": true,
         "context_features": [
           {
             "id": "concept:theme:agent-harnesses",
+            "document_count": 2
+          },
+          {
+            "id": "theme:agent-harnesses",
             "document_count": 2
           }
         ],
@@ -7496,8 +7556,15 @@
       },
       "source_cap_exclusions": [],
       "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "agent-harnesses",
+        "title": "Agent harnesses",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
     },
     {
       "id": "discovery:agents-without-049f90009f",
@@ -8126,10 +8193,12 @@
         "experts"
       ],
       "theme_ids": [
+        "skills-integrations",
         "small-specialized-models"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "skills-integrations": 1,
         "small-specialized-models": 1
       },
       "first_seen": "2026-09-13T23:58:14+00:00",
@@ -8198,9 +8267,13 @@
         "attention",
         "engineering"
       ],
-      "theme_ids": [],
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
       "recurrent_theme_ids": [],
-      "theme_document_counts": {},
+      "theme_document_counts": {
+        "frontier-inference-infrastructure": 1
+      },
       "first_seen": "2026-09-01T00:05:54Z",
       "last_seen": "2026-09-20T15:28:20+00:00",
       "metrics": {
@@ -11779,11 +11852,13 @@
         "research"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "skills-integrations",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "skills-integrations": 1,
         "training-self-improvement": 1
       },
@@ -12062,9 +12137,13 @@
         "builders",
         "narratives"
       ],
-      "theme_ids": [],
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
       "recurrent_theme_ids": [],
-      "theme_document_counts": {},
+      "theme_document_counts": {
+        "robotics-embodied-ai": 1
+      },
       "first_seen": "2026-08-21T11:59:48+00:00",
       "last_seen": "2026-09-01T20:39:59+00:00",
       "metrics": {
@@ -12189,10 +12268,12 @@
         "experts"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "voice-audio"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "voice-audio": 1
       },
       "first_seen": "2026-09-10T00:00:00+00:00",
@@ -12253,10 +12334,12 @@
         "research"
       ],
       "theme_ids": [
+        "open-local-inference",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "open-local-inference": 1,
         "training-self-improvement": 1
       },
       "first_seen": "2026-08-24T00:00:00+00:00",
@@ -13422,10 +13505,12 @@
         "experts"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "voice-audio"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "voice-audio": 1
       },
       "first_seen": "2026-09-15T17:05:57+00:00",
@@ -14052,6 +14137,7 @@
         "research"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "small-specialized-models",
         "training-self-improvement"
       ],
@@ -14059,6 +14145,7 @@
         "training-self-improvement"
       ],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "small-specialized-models": 1,
         "training-self-improvement": 2
       },
@@ -15561,10 +15648,14 @@
         "formation"
       ],
       "theme_ids": [
+        "agent-harnesses",
+        "skills-integrations",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
+        "skills-integrations": 1,
         "training-self-improvement": 1
       },
       "first_seen": "2026-09-16T15:47:39+00:00",
@@ -15626,12 +15717,14 @@
       ],
       "theme_ids": [
         "memory-context",
+        "skills-integrations",
         "small-specialized-models",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
         "memory-context": 1,
+        "skills-integrations": 1,
         "small-specialized-models": 1,
         "training-self-improvement": 1
       },
@@ -17455,10 +17548,12 @@
         "formation"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "voice-audio"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "voice-audio": 1
       },
       "first_seen": "2026-09-15T22:47:07+00:00",
@@ -18023,11 +18118,13 @@
         "research"
       ],
       "theme_ids": [
-        "coding-agents"
+        "coding-agents",
+        "skills-integrations"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
-        "coding-agents": 1
+        "coding-agents": 1,
+        "skills-integrations": 1
       },
       "first_seen": "2026-09-17T17:59:58Z",
       "last_seen": "2026-09-21T21:05:28Z",
@@ -18156,10 +18253,12 @@
         "research"
       ],
       "theme_ids": [
+        "robotics-embodied-ai",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "robotics-embodied-ai": 1,
         "training-self-improvement": 1
       },
       "first_seen": "2026-09-16T23:51:43+00:00",
@@ -18387,6 +18486,7 @@
         "research"
       ],
       "theme_ids": [
+        "skills-integrations",
         "small-specialized-models",
         "training-self-improvement"
       ],
@@ -18394,6 +18494,7 @@
         "small-specialized-models"
       ],
       "theme_document_counts": {
+        "skills-integrations": 1,
         "small-specialized-models": 2,
         "training-self-improvement": 1
       },
@@ -18479,10 +18580,12 @@
         "research"
       ],
       "theme_ids": [
+        "open-local-inference",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "open-local-inference": 1,
         "training-self-improvement": 1
       },
       "first_seen": "2026-08-24T00:00:00+00:00",
@@ -19572,11 +19675,13 @@
       ],
       "theme_ids": [
         "assurance-infrastructure",
+        "multimodal-3d",
         "small-specialized-models"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
         "assurance-infrastructure": 1,
+        "multimodal-3d": 1,
         "small-specialized-models": 1
       },
       "first_seen": "2026-09-17T14:21:39Z",
@@ -20308,6 +20413,7 @@
         "research"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "frontier-inference-infrastructure",
         "memory-context",
         "skills-integrations",
@@ -20315,6 +20421,7 @@
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "frontier-inference-infrastructure": 1,
         "memory-context": 1,
         "skills-integrations": 1,
@@ -20481,10 +20588,12 @@
         "builders"
       ],
       "theme_ids": [
+        "assurance-infrastructure",
         "skills-integrations"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "assurance-infrastructure": 1,
         "skills-integrations": 1
       },
       "first_seen": "2026-09-16T19:00:00+00:00",
@@ -20814,9 +20923,15 @@
       "source_family_ids": [
         "experts"
       ],
-      "theme_ids": [],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {},
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "recurrent_theme_ids": [
+        "agent-harnesses"
+      ],
+      "theme_document_counts": {
+        "agent-harnesses": 3
+      },
       "first_seen": "2026-09-05T04:32:00+00:00",
       "last_seen": "2026-09-12T00:45:33.933Z",
       "metrics": {
@@ -20836,11 +20951,15 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 0,
+        "recurrent_theme_count": 1,
         "context_coherence_met": true,
         "context_features": [
           {
             "id": "concept:theme:agent-harnesses",
+            "document_count": 3
+          },
+          {
+            "id": "theme:agent-harnesses",
             "document_count": 3
           }
         ],
@@ -20859,7 +20978,7 @@
           "openai agent swarm"
         ],
         "basis": "anchor-phrase",
-        "document_share": 0.0
+        "document_share": 1.0
       }
     },
     {
@@ -20993,10 +21112,12 @@
         "research"
       ],
       "theme_ids": [
+        "open-local-inference",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "open-local-inference": 1,
         "training-self-improvement": 1
       },
       "first_seen": "2026-08-24T00:00:00+00:00",
@@ -21640,6 +21761,7 @@
       ],
       "theme_ids": [
         "coding-agents",
+        "skills-integrations",
         "small-specialized-models",
         "training-self-improvement"
       ],
@@ -21648,6 +21770,7 @@
       ],
       "theme_document_counts": {
         "coding-agents": 1,
+        "skills-integrations": 1,
         "small-specialized-models": 1,
         "training-self-improvement": 2
       },
@@ -21791,6 +21914,7 @@
         "research"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "multimodal-3d",
         "skills-integrations",
         "training-self-improvement"
@@ -21799,6 +21923,7 @@
         "training-self-improvement"
       ],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "multimodal-3d": 1,
         "skills-integrations": 1,
         "training-self-improvement": 2
@@ -23714,6 +23839,7 @@
         "research"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "skills-integrations",
         "training-self-improvement"
       ],
@@ -23721,6 +23847,7 @@
         "training-self-improvement"
       ],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "skills-integrations": 1,
         "training-self-improvement": 2
       },
@@ -24112,13 +24239,17 @@
         "research"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "assurance-infrastructure",
+        "memory-context",
         "skills-integrations",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "assurance-infrastructure": 1,
+        "memory-context": 1,
         "skills-integrations": 1,
         "training-self-improvement": 1
       },
@@ -25294,9 +25425,13 @@
       "source_family_ids": [
         "experts"
       ],
-      "theme_ids": [],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
       "recurrent_theme_ids": [],
-      "theme_document_counts": {},
+      "theme_document_counts": {
+        "agent-harnesses": 1
+      },
       "first_seen": "2026-09-12T00:42:25+00:00",
       "last_seen": "2026-09-24T12:02:35.513Z",
       "metrics": {
@@ -26518,6 +26653,7 @@
       ],
       "theme_ids": [
         "agent-harnesses",
+        "memory-context",
         "multimodal-3d",
         "open-local-inference",
         "robotics-embodied-ai"
@@ -26525,6 +26661,7 @@
       "recurrent_theme_ids": [],
       "theme_document_counts": {
         "agent-harnesses": 1,
+        "memory-context": 1,
         "multimodal-3d": 1,
         "open-local-inference": 1,
         "robotics-embodied-ai": 1
@@ -26650,11 +26787,13 @@
         "research"
       ],
       "theme_ids": [
+        "frontier-inference-infrastructure",
         "multimodal-3d",
         "open-local-inference"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "frontier-inference-infrastructure": 1,
         "multimodal-3d": 1,
         "open-local-inference": 1
       },
@@ -26720,11 +26859,13 @@
         "research"
       ],
       "theme_ids": [
+        "agent-harnesses",
         "skills-integrations",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
+        "agent-harnesses": 1,
         "skills-integrations": 1,
         "training-self-improvement": 1
       },

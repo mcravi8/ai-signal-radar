@@ -3,7 +3,7 @@ from pathlib import Path
 
 import yaml
 
-from pipeline.classify import classify_text
+from pipeline.classify import classify_record, classify_text, validate_classification_policy
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,6 +14,8 @@ class ClassificationRegressionTests(unittest.TestCase):
     def setUpClass(cls):
         config = yaml.safe_load((ROOT / "config/keywords.yml").read_text(encoding="utf-8"))
         cls.keywords = config["themes"]
+        cls.policy = yaml.safe_load((ROOT / "config/classification-policy.yml").read_text(encoding="utf-8"))
+        validate_classification_policy(cls.policy)
 
     def test_jev_is_recognized_as_a_specialized_decision_model(self):
         themes = classify_text(
@@ -40,6 +42,63 @@ class ClassificationRegressionTests(unittest.TestCase):
         themes = classify_text(text, self.keywords)
         self.assertIn("training-self-improvement", themes)
         self.assertIn("frontier-inference-infrastructure", themes)
+
+    def test_selective_vocabulary_covers_inspected_recurring_clusters(self):
+        cases = {
+            "An LLM inference optimization guide": "frontier-inference-infrastructure",
+            "An OpenAI agent swarm attacked a package registry": "agent-harnesses",
+            "A multi-tenant agent runtime blocks exfiltration": "assurance-infrastructure",
+            "Knowledge refresh for production RAG": "document-knowledge-systems",
+            "A benchmark for long-term memory": "memory-context",
+            "A robot foundation model": "robotics-embodied-ai",
+        }
+        for text, expected in cases.items():
+            with self.subTest(text=text):
+                self.assertIn(expected, classify_text(text, self.keywords))
+
+    def test_general_community_material_is_explicitly_out_of_scope(self):
+        result = classify_record(
+            {
+                "source_id": "hacker-news",
+                "source_type": "community",
+                "title": "Show HN: A community DVD lending library",
+                "summary": "Borrow films from people nearby.",
+                "tags": [],
+            },
+            self.keywords,
+            self.policy,
+        )
+        self.assertEqual(result["disposition"], "out-of-scope")
+        self.assertEqual(result["rule_id"], "community-no-ai-system-signal")
+
+    def test_unmatched_research_stays_in_review(self):
+        result = classify_record(
+            {
+                "source_id": "arxiv",
+                "source_type": "paper",
+                "title": "A novel AI architecture without reviewed taxonomy vocabulary",
+                "summary": "Potentially relevant research should remain visible for review.",
+                "tags": [],
+            },
+            self.keywords,
+            self.policy,
+        )
+        self.assertEqual(result["disposition"], "classification-review")
+
+    def test_precise_theme_match_wins_before_exclusion(self):
+        result = classify_record(
+            {
+                "source_id": "yc-companies",
+                "source_type": "company-directory",
+                "title": "A robot foundation model company",
+                "summary": "",
+                "tags": [],
+            },
+            self.keywords,
+            self.policy,
+        )
+        self.assertEqual(result["disposition"], "classified")
+        self.assertIn("robotics-embodied-ai", result["theme_ids"])
 
 
 if __name__ == "__main__":

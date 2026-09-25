@@ -57,6 +57,8 @@ themes:
     - speculative decoding
     - model serving
     - inference engine
+    - inference optimization
+    - llm inference
     - prefill-decode
     - disaggregated serving
     - nvlink
@@ -89,6 +91,9 @@ themes:
     - agent loop
     - agent middleware
     - harness middleware
+    - agent swarm
+    - agent swarms
+    - system prompt
   assurance-infrastructure:
     - agent security
     - ai observability
@@ -121,6 +126,7 @@ themes:
     - cybersecurity evals
     - agent observability
     - runtime monitor
+    - multi-tenant
   open-local-inference:
     - open weights
     - open-weight
@@ -141,6 +147,7 @@ themes:
     - gguf
     - open model
     - open models
+    - model weights
   model-routing:
     - model router
     - model routing
@@ -180,6 +187,7 @@ themes:
     - model pruning
     - model evals
     - product evals
+    - continual learning
   coding-agents:
     - coding agent
     - coding agents
@@ -198,6 +206,7 @@ themes:
     - code assistant
     - code assistants
     - developer tooling
+    - agentic coding
   validation-release:
     - runtime validation
     - release bottleneck
@@ -226,6 +235,7 @@ themes:
     - vision-language model
     - vision language model
     - vlm
+    - multimodal model
   voice-audio:
     - voice agent
     - voice agents
@@ -255,6 +265,7 @@ themes:
     - function calling
     - tool use
     - tool-use
+    - tool calls
   document-knowledge-systems:
     - retrieval augmented generation
     - retrieval-augmented generation
@@ -267,6 +278,10 @@ themes:
     - structured generation
     - structured output
     - ocr
+    - production rag
+    - rag systems
+    - rag application
+    - document processing
   memory-context:
     - agent memory
     - persistent memory
@@ -278,6 +293,8 @@ themes:
     - context for agents
     - context window
     - context caching
+    - context length
+    - long-term memory
   enterprise-vertical-ai:
     - vertical ai
     - enterprise ai
@@ -322,3 +339,4 @@ themes:
     - humanoid robot
     - world action model
     - robot policy
+    - robot foundation

@@ -6,7 +6,7 @@ import os
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from .classify import classify_text
+from .classify import classify_record, validate_classification_policy
 from .cluster import group_by_theme
 from .concepts import build_concept_catalog, validate_concept_policy
 from .deduplicate import deduplicate
@@ -192,12 +192,17 @@ def synthesize() -> None:
     manual_rows = _yaml(ROOT / "data/manual/items.yml").get("items", [])
     rows = deduplicate([*read_jsonl(ROOT / "data/processed/items.jsonl"), *manual_rows])
     keywords = _yaml(ROOT / "config/keywords.yml").get("themes", {})
+    classification_policy = _yaml(ROOT / "config/classification-policy.yml")
+    validate_classification_policy(classification_policy)
     taxonomy = _yaml(ROOT / "config/taxonomy.yml")
     theme_defs = {theme["id"]: theme for theme in taxonomy.get("seed_themes", [])}
 
     for row in rows:
-        searchable = " ".join([row.get("title", ""), row.get("summary", ""), " ".join(row.get("tags", []))])
-        row["theme_ids"] = classify_text(searchable, keywords)
+        classification = classify_record(row, keywords, classification_policy)
+        row["theme_ids"] = classification["theme_ids"]
+        row["classification_disposition"] = classification["disposition"]
+        row["classification_reason"] = classification["reason"]
+        row["classification_rule_id"] = classification["rule_id"]
 
     write_jsonl(ROOT / "data/processed/items.jsonl", rows)
     grouped = group_by_theme(rows)

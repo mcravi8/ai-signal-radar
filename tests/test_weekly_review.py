@@ -138,7 +138,7 @@ class WeeklyReviewTests(unittest.TestCase):
             adjudications["theme:training-self-improvement"]["requirement_ids"],
             ["evaluation-release-gates"],
         )
-        self.assertTrue(all(item["status"] == "current" for item in adjudications.values()))
+        self.assertTrue(all(item["status"] in {"current", "revisit-required"} for item in adjudications.values()))
         audited = [item for item in adjudications.values() if item.get("evidence_review")]
         self.assertTrue(all(item["evidence_review"]["status"] == "complete" for item in audited))
         queued_ids = {item["id"] for item in review["assessment_queue"]}
@@ -147,6 +147,13 @@ class WeeklyReviewTests(unittest.TestCase):
             if item["status"] == "current"
         }
         self.assertFalse(current_ids.intersection(queued_ids))
+        revisit_ids = {
+            candidate_id for candidate_id, item in adjudications.items()
+            if item["status"] == "revisit-required"
+        }
+        queued_adjudication_ids = queued_ids.intersection(adjudications)
+        self.assertTrue(queued_adjudication_ids)
+        self.assertTrue(queued_adjudication_ids.issubset(revisit_ids))
 
 
 if __name__ == "__main__":
