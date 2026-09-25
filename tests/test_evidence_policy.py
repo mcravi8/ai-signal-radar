@@ -85,6 +85,9 @@ class EvidencePolicyTests(unittest.TestCase):
         self.assertIn("arxiv:2609.20804v1", modular_ids)
         self.assertIn("arxiv:2609.21843v1", modular_ids)
         self.assertIn("arxiv:2609.20812v1", evaluation_ids)
+        self.assertIn("arxiv:2609.22076v1", evaluation_ids)
+        self.assertIn("arxiv:2609.22056v1", evaluation_ids)
+        self.assertIn("arxiv:2609.22086v1", evaluation_ids)
         self.assertIn("arxiv:2609.22049v1", ownership_ids)
         self.assertIn("arxiv:2609.20497v1", routing_ids)
         self.assertIn("sequoia-essays:8a2fe18efd08a18eea8c", routing_ids)
@@ -94,6 +97,17 @@ class EvidencePolicyTests(unittest.TestCase):
         self.assertEqual(self.results["evaluation-release-gates"]["maturity"], "experimental")
         self.assertEqual(self.results["heterogeneous-model-routing"]["maturity"], "experimental")
         self.assertEqual(self.results["bounded-workflow-ownership"]["maturity"], "narrative")
+
+    def test_evaluation_review_adds_system_loop_evidence_without_promoting_maturity(self):
+        case = next(
+            case for case in self.calibration["cases"] if case["id"] == "evaluation-release-gates"
+        )
+        self.assertEqual(self.results["evaluation-release-gates"]["maturity"], "experimental")
+        self.assertEqual(case["gate_inputs"]["qualifying_events"], 6)
+        self.assertIn(
+            "operational_adoption is low; requires moderate",
+            self.results["evaluation-release-gates"]["gate_results"]["emerging"]["failures"],
+        )
 
     def test_public_operating_model_explains_the_practice(self):
         payload = build_operating_model(self.policy, self.calibration, self.research)

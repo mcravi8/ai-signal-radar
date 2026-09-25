@@ -1,10 +1,10 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-25T06:57:49.555876+00:00",
+    "generated_at": "2026-09-25T07:01:49.542084+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1205,
-    "input_changed_document_count": 809,
+    "input_changed_document_count": 0,
     "cluster_count": 362,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 143,
@@ -55,7 +55,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:physical-world-d38e2b293c",
@@ -83,7 +83,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:federated-learning-532a4ee3f3",
@@ -110,7 +110,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:long-horizon-tool-using-b0604038be",
@@ -140,7 +140,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:model-replaceability-24ff553ea4",
@@ -166,7 +166,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:privacy-preserving-c9dc4f17d9",
@@ -192,7 +192,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:data-sovereignty-5980424c41",
@@ -220,7 +220,7 @@
       ],
       "source_count": 2,
       "source_family_count": 1,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:rule-based-d5bc3cb86a",
@@ -244,7 +244,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:access-control-35f92e6b7b",
@@ -267,7 +267,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:agents-coding-ed09e70153",
@@ -290,7 +290,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:device-inference-8160109f2a",
@@ -315,7 +315,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:long-term-0ee888073b",
@@ -343,7 +343,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:model-context-b3e4393a75",
@@ -368,7 +368,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:long-horizon-cc9f8906a0",
@@ -393,7 +393,7 @@
       ],
       "source_count": 3,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:agentic-post-training-c4f87db853",
@@ -419,7 +419,7 @@
       ],
       "source_count": 3,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:experts-moe-71e61b30c7",
@@ -442,7 +442,7 @@
       ],
       "source_count": 3,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:computer-vision-018bbaa7ef",
@@ -468,7 +468,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:developer-tools-e8508fddf7",
@@ -492,7 +492,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:api-keys-c177b8ad02",
@@ -515,7 +515,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:code-review-1eea82899d",
@@ -540,7 +540,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:deep-neural-9178e272c3",
@@ -565,7 +565,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:fine-tuning-03c735a407",
@@ -590,7 +590,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:flow-matching-7be45b9585",
@@ -613,7 +613,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:frontier-lab-d1a1540ba1",
@@ -636,7 +636,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:jev-like-a2c9a6c982",
@@ -659,7 +659,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     }
   ],
   "history": []

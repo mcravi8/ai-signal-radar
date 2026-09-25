@@ -1,6 +1,6 @@
 # Weekly Operating Model Review — 2026-09-25
 
-9 candidate decisions are recorded; 3 candidates remain in the bounded assessment queue.
+12 candidate decisions are recorded; 0 candidates remain in the bounded assessment queue.
 
 > Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement.
 
@@ -18,32 +18,36 @@
 | ↳ Evidence audit | complete | 62 records / 5 links | Failure and adoption evidence strengthens the case for independent release gates, while frequent overclaiming and weak verification practice prevent bounded workflow ownership from advancing beyond narrative maturity. |
 | Skills, protocols & integrations | covered-by-existing-requirement | Modular agent operating stack | Do not create a separate requirement for skills, protocols, and integrations. |
 | ↳ Evidence audit | complete | 74 records / 5 links | Evaluated domain skills, repeatable deployment skills, MCP authorization, and graph-structured skill optimization materially strengthen technical reality. Direct API and single-agent critiques remain valid counterevidence: an interoperability layer is useful when governance or reuse warrants it, not as mandatory ceremony for every simple workflow. |
+| Training, evaluation & self-improvement | covered-by-existing-requirement | Evaluation and release gates | Merge the operating conclusion into evaluation and release gates; do not require every startup to train or self-improve models. |
+| ↳ Evidence audit | complete | 166 records / 3 links | Payment authorization, calibrated abstention, and replay-gated procedural memory show evaluation operating inside action and improvement loops. They strengthen technical reality for evaluation gates, but the corpus remains paper-heavy and does not establish repeatable production adoption or make model training a universal startup requirement. |
 | Frontier inference infrastructure | infrastructure-signal-not-general-requirement | Heterogeneous model routing | Do not require ordinary startups to build frontier inference infrastructure. |
 | ↳ Evidence audit | complete | 29 records / 6 links | New multi-GPU serving, networking, and decoding records strengthen the supplier-side infrastructure signal, but they still do not show that an application startup should own a frontier cluster. The reusable requirement remains routing, capacity, latency, cost control, and fallback selection across externally supplied inference paths. |
 | Agent harnesses | covered-by-existing-requirement | Modular agent operating stack | Do not create a duplicate requirement. |
 | ↳ Evidence audit | complete | 56 records / 4 links | Component-level harness experiments strengthen technical reality, but an industrial comparison found a single-agent baseline faster and cheaper without a consistent quality loss. The linked requirement remains emerging and explicitly conditional. |
 | The agent stack is separating into modular operating layers | source-analysis-already-calibrated | Modular agent operating stack | Keep one calibrated modular-stack requirement; do not duplicate the Early Signal direction. |
 | ↳ Evidence audit | complete | 8 records / 0 links | The direction and requirement refer to the same architecture. Additional signal breadth does not overcome the requirement's explicit blockers: strong operational adoption and strong evidence independence. |
+| Multimodal generation & 3D | capability-domain-not-general-requirement | None | Treat multimodal generation and 3D as a capability domain, not a general startup operating requirement. |
+| ↳ Evidence audit | complete | 48 records / 0 links | Ten source families and twenty-seven technical records establish broad capability progress, but the evidence spans unrelated product domains and benchmarks. It does not establish a common operating practice, measurable cost of absence, or production control that every AI startup should implement. |
 | Robotics & embodied AI | conditional-requirement-added | Simulation-first physical AI development | Add a conditional requirement for physical-AI startups, not a universal startup requirement. |
+| Evaluation is moving from a final benchmark into the system-design loop | source-analysis-covered-by-existing-requirement | Evaluation and release gates | Use the expert pattern as directional context for evaluation and release gates, not as a separate requirement. |
+| ↳ Evidence audit | complete | 5 records / 0 links | Five experts provide independent narrative breadth, but social observations do not verify deployment or effectiveness. The finding is retained as directional context; technical support comes from the calibrated benchmark, authorization, abstention, and regression-testing records linked to the existing requirement. |
 
 ## Assessment queue
 
 | Rank | Candidate | Origin | Priority | Action |
 | ---: | --- | --- | ---: | --- |
-| 1 | Multimodal generation & 3D | cross-source-theme | 73 | assess-new-requirement |
-| 2 | Training, evaluation & self-improvement | cross-source-theme | 73 | assess-new-requirement |
-| 3 | Evaluation is moving from a final benchmark into the system-design loop | expert-finding | 46 | assess-new-requirement |
+| — | No material candidate changes | — | — | — |
 
 ## Operating Model changes
 
-- No maturity or linked-evidence changes this cycle.
+- **Evaluation and release gates** — evidence-updated: Linked evidence changed from 10 to 13 records without changing maturity.
 
 ## Verification coverage
 
-- **AI company formation** — 57 records across 1 sources; 4 newly observed in this review history.
+- **AI company formation** — 57 records across 1 sources; 0 newly observed in this review history.
 - **Funding activity** — 24 records across 3 sources; 0 newly observed in this review history.
 - **Customer case studies** — 30 records across 12 sources; 0 newly observed in this review history.
-- **AI job postings** — 14 records across 1 sources; 1 newly observed in this review history.
+- **AI job postings** — 14 records across 1 sources; 0 newly observed in this review history.
 - **GitHub adoption proxies** — 242 records across 1 sources; 0 newly observed in this review history.
 - **Production architecture reports** — 77 records across 13 sources; 0 newly observed in this review history.
 

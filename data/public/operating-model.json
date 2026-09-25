@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "AI-Native Startup Operating Model evidence policy",
-    "generated_at": "2026-09-25T06:57:49.555876+00:00",
-    "as_of": "2026-09-24",
+    "generated_at": "2026-09-25T07:01:49.542084+00:00",
+    "as_of": "2026-09-25",
     "policy_version": 1,
     "requirement_count": 8,
     "maturity_counts": {
@@ -481,7 +481,7 @@
         "operational_adoption": "low",
         "technical_reality": "strong"
       },
-      "rationale": "Several independent technical systems make the requirement technically real, and OverclaimBench shows why a model's own completion statement is not an adequate release decision. A survey of 527 scientific programmers is retained as counterevidence to adoption: generated code is often run, but automated tests and independent review are rare. The sampled corpus still lacks production deployments with measured operating outcomes, and research evidence remains concentrated in papers.",
+      "rationale": "Independent technical systems make the requirement technically real. Payment authorization, calibrated abstention, regression testing, and replay-gated procedural memory show that evaluation can govern actions and system changes rather than remain a final benchmark. OverclaimBench shows why a model's own completion statement is not an adequate release decision. A survey of 527 scientific programmers is retained as counterevidence to adoption: generated code is often run, but automated tests and independent review are rare. The sampled corpus still lacks production deployments with measured operating outcomes, and research evidence remains concentrated in papers.",
       "next_gate": {
         "maturity": "emerging",
         "failures": [
@@ -575,6 +575,54 @@
           "exclusion_reason": null
         },
         {
+          "id": "arxiv:2609.22076v1",
+          "event_id": "aport-payment-authorization-benchmark",
+          "title": "APort Vault: Benchmarking AI Agent Payment Authorization with the Open Agent Passport",
+          "summary": "APort Vault is a benchmark for payment authorization in tool-using AI agents. It replays 4,371 attacks written by humans against a live payment agent during a public capture-the-flag event, across 14 models from 8 labs, five policy configurations and two replay tracks, with and without a deterministic pre-action check implementing the Open Agent Passport (OAP) specification. 225,964 evaluations completed. We report five distinct events per evaluation, because collapsing them is how an agent benchmark produces a number that does not survive review. Requests are common and their rate differs far more across configurations than across models, though each attack exists at exactly one configuration so policy and attack cohort vary together: 10.9% of model-alone evaluations at Level 1, 3.0% at Level 2, 0.1% at Level 3, 79.4% at Level 4. On the 1,293 Level 4 prompts, each evaluated on every model, request rates run from 71.2% to 84.3%, and 809 prompts (62.6%) elicited a request from all fourteen models, each ending in a successful payment to the level's allowlisted recipient. The authorization boundary is where the conditions diverge. At Levels 2 to 4, transfers to recipients the passport",
+          "url": "http://arxiv.org/abs/2609.22076v1",
+          "published_at": "2026-09-18T17:58:10Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.22056v1",
+          "event_id": "regime-aware-abstention",
+          "title": "Predictable Failure in Multi-Hop Retrieval: Score-Distributional Confidence Scoring and Abstention",
+          "summary": "Multi-hop retrieval failures are not uniformly distributed across queries: they cluster in structurally predictable subpopulations. We prove two results formalizing this structure. First (CWAR Reducibility): confident-failure reduction is achievable if and only if retrieval features carry mutual information about success, a condition satisfied by LLM-judge pipelines but substantially weaker in dense-only settings, explaining the AUC-AC gap between regimes. Second (Feature Regime Complementarity): no single ANN score feature achieves best predictive performance across all failure regimes; the dominant feature differs between datasets (query length on MuSiQue, hop-1 concentration on HoVer), and a constructive witness pair shows each is necessary in one regime and non-contributory in the other. We instantiate these principles in RegimeAbstain, which computes a Retrieval Confidence Score (RCS), a logistic function of up to nine query-ANN structural features, all available without any additional LLM call, and uses it to implement a calibrated abstention policy. We define the Confident-Wrong-Answer Rate (CWAR) metric and evaluate across three multi-hop benchmarks (MuSiQue, 2WikiMultiHopQ",
+          "url": "http://arxiv.org/abs/2609.22056v1",
+          "published_at": "2026-09-18T17:48:15Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "direct-support",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
+          "id": "arxiv:2609.22086v1",
+          "event_id": "designer-rsi-replay-gates",
+          "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+          "summary": "Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We introduce a continual adaptation framework in which a frozen frontier model operates professional design software through more than 230 tools, while an external procedural memory of natural-language skills accumulates and refines reusable design procedures from experience. The memory widens by acquiring procedures for recurring uncovered subtasks and deepens by revising existing procedures against their own successful and failed executions, while a matched replay gate admits only changes that repair failures without regressing observed successes. Five rounds over 1,406 real user briefs and 1,869 automatically graded trajectories, with no weight updates and no human labels, grow the bank from 76 documentation-derived skills to 139 and raise GenEval2 execution success on Claude-Sonnet-4 from 72.7% to 99.3% (+11.99 points in generation quality), with 61.8% and 67.6% win rates against the no-skill agent across four specialized design benchmarks on Claude-Sonnet-4 and Claude-Opus-4.6. We further",
+          "url": "http://arxiv.org/abs/2609.22086v1",
+          "published_at": "2026-09-18T17:59:56Z",
+          "source_id": "arxiv",
+          "source_name": "arXiv",
+          "source_type": "paper",
+          "relationship": "supporting-context",
+          "dimensions": [
+            "technical_reality"
+          ],
+          "exclusion_reason": null
+        },
+        {
           "id": "arxiv:2609.20812v1",
           "event_id": "overclaim-benchmark",
           "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
@@ -652,9 +700,9 @@
         }
       ],
       "gate_inputs": {
-        "qualifying_events": 4,
-        "technical_artifacts": 4,
-        "independent_organizations": 4,
+        "qualifying_events": 6,
+        "technical_artifacts": 6,
+        "independent_organizations": 6,
         "persistence_cycles": 1,
         "counterevidence_reviewed": true,
         "cost_of_absence_evidenced": false,

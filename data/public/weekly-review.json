@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-25T06:57:49.555876+00:00",
+    "generated_at": "2026-09-25T07:01:49.542084+00:00",
     "as_of": "2026-09-25",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,13 +12,14 @@
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 4,
-    "assessment_queue_count": 3,
-    "adjudication_count": 9,
-    "requirement_change_count": 0
+    "materially_changed_count": 0,
+    "assessment_queue_count": 0,
+    "adjudication_count": 12,
+    "requirement_change_count": 1,
+    "idempotent_regeneration": true
   },
   "summary": {
-    "headline": "9 candidate decisions are recorded; 3 candidates remain in the bounded assessment queue.",
+    "headline": "12 candidate decisions are recorded; 0 candidates remain in the bounded assessment queue.",
     "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement."
   },
   "selection_policy": {
@@ -117,11 +118,8 @@
         "operating_relevance": 10,
         "total": 97
       },
-      "change_reasons": [
-        "Movement changed from steady to rising",
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:open-local-inference",
         "reviewed_at": "2026-09-24",
@@ -583,6 +581,104 @@
           "records_screened": 74,
           "links_added": 5,
           "finding": "Evaluated domain skills, repeatable deployment skills, MCP authorization, and graph-structured skill optimization materially strengthen technical reality. Direct API and single-agent critiques remain valid counterevidence: an interoperability layer is useful when governance or reuse warrants it, not as mandatory ceremony for every simple workflow."
+        },
+        "status": "current"
+      },
+      "review_action": "covered-by-existing-requirement"
+    },
+    {
+      "id": "theme:training-self-improvement",
+      "origin": "cross-source-theme",
+      "title": "Training, evaluation & self-improvement",
+      "description": "Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.",
+      "source_analysis": "themes/training-self-improvement",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "evidence_ids": [
+        "alphasignal:e32078afc6278482f336",
+        "alphasignal:878cd0da4350818f61b9",
+        "alphasignal:5e4d06e1b5148246bf48",
+        "alphasignal:28e88f0768d976bbfccb",
+        "bluesky:1278ebf77949:3mw7n5pr7222t",
+        "alphasignal:ed11042f47b8f05c3ace",
+        "alphasignal:cec6f55c7deff2c8dfc5",
+        "hn:49791343",
+        "hn:49788178",
+        "hn:49786635",
+        "hn:49783224",
+        "alphasignal:trend:training-evaluation-and-self-improvement",
+        "nvidia-developer-blog:127a999e24da184d5065",
+        "arxiv:2609.22086v1",
+        "arxiv:2609.22076v1",
+        "arxiv:2609.22068v1",
+        "arxiv:2609.22064v1",
+        "arxiv:2609.22056v1",
+        "arxiv:2609.22055v1",
+        "arxiv:2609.22053v1"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 166,
+        "source_count": 27,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "job-posting",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 40,
+        "technical_record_count": 101,
+        "family_count": 14,
+        "trend_score": 100.0
+      },
+      "linked_requirements": [
+        {
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "evaluation-release-gates",
+        "title": "Evaluation and release gates",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 83
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:training-self-improvement",
+        "reviewed_at": "2026-09-25",
+        "outcome": "covered-by-existing-requirement",
+        "requirement_ids": [
+          "evaluation-release-gates"
+        ],
+        "decision": "Merge the operating conclusion into evaluation and release gates; do not require every startup to train or self-improve models.",
+        "rationale": "Training, feedback, evaluation, and self-improvement describe a wide capability family. The general startup obligation is narrower: measure representative workflow behavior and prevent unverified outputs or system changes from crossing a consequential boundary. Model training and recursive improvement remain optional strategies for teams whose economics and product require them.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 166,
+          "links_added": 3,
+          "finding": "Payment authorization, calibrated abstention, and replay-gated procedural memory show evaluation operating inside action and improvement loops. They strengthen technical reality for evaluation gates, but the corpus remains paper-heavy and does not establish repeatable production adoption or make model training a universal startup requirement."
         },
         "status": "current"
       },
@@ -1116,90 +1212,24 @@
         "operating_relevance": 0,
         "total": 73
       },
-      "change_reasons": [
-        "Evidence increased by 2",
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "queue_rank": 1
-    },
-    {
-      "id": "theme:training-self-improvement",
-      "origin": "cross-source-theme",
-      "title": "Training, evaluation & self-improvement",
-      "description": "Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.",
-      "source_analysis": "themes/training-self-improvement",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "evidence_ids": [
-        "alphasignal:e32078afc6278482f336",
-        "alphasignal:878cd0da4350818f61b9",
-        "alphasignal:5e4d06e1b5148246bf48",
-        "alphasignal:28e88f0768d976bbfccb",
-        "bluesky:1278ebf77949:3mw7n5pr7222t",
-        "alphasignal:ed11042f47b8f05c3ace",
-        "alphasignal:cec6f55c7deff2c8dfc5",
-        "hn:49791343",
-        "hn:49788178",
-        "hn:49786635",
-        "hn:49783224",
-        "alphasignal:trend:training-evaluation-and-self-improvement",
-        "nvidia-developer-blog:127a999e24da184d5065",
-        "arxiv:2609.22086v1",
-        "arxiv:2609.22076v1",
-        "arxiv:2609.22068v1",
-        "arxiv:2609.22064v1",
-        "arxiv:2609.22056v1",
-        "arxiv:2609.22055v1",
-        "arxiv:2609.22053v1"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 166,
-        "source_count": 27,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "job-posting",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 40,
-        "technical_record_count": 101,
-        "family_count": 14,
-        "trend_score": 100.0
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:multimodal-3d",
+        "reviewed_at": "2026-09-25",
+        "outcome": "capability-domain-not-general-requirement",
+        "requirement_ids": [],
+        "decision": "Treat multimodal generation and 3D as a capability domain, not a general startup operating requirement.",
+        "rationale": "Images, video, spatial interfaces, and 3D generation can define the product for design, media, robotics, commerce, or simulation companies. They do not create one reusable operating obligation for startups outside those domains. Teams that adopt the modality still inherit the existing requirements for evaluation, bounded actions, provenance, and workflow-specific release criteria.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 48,
+          "links_added": 0,
+          "finding": "Ten source families and twenty-seven technical records establish broad capability progress, but the evidence spans unrelated product domains and benchmarks. It does not establish a common operating practice, measurable cost of absence, or production control that every AI startup should implement."
+        },
+        "status": "current"
       },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 73
-      },
-      "change_reasons": [
-        "Evidence increased by 5",
-        "5 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "queue_rank": 2
+      "review_action": "capability-domain-not-general-requirement"
     },
     {
       "id": "theme:robotics-embodied-ai",
@@ -1400,6 +1430,74 @@
       "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "expert-finding:evaluation-as-system-design",
+      "origin": "expert-finding",
+      "title": "Evaluation is moving from a final benchmark into the system-design loop",
+      "description": "12 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
+      "source_analysis": "expert-pulse/evaluation-as-system-design",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "evidence_ids": [
+        "bluesky:1278ebf77949:3mw7n5pr7222t",
+        "bluesky:b3614927c6a2:3mupj3vhqo22k",
+        "bluesky:e810fac7fd93:3msw2bx5j7s2h",
+        "bluesky:2a5707251144:3mkbfcbtlbs2n",
+        "bluesky:e14dee24058c:3lbe443vxms2y"
+      ],
+      "strength": "strong",
+      "movement": "new",
+      "metrics": {
+        "evidence_count": 5,
+        "source_count": 5,
+        "source_types": [
+          "expert-social"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 0
+      },
+      "linked_requirements": [
+        {
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "evaluation-release-gates",
+        "title": "Evaluation and release gates",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 25,
+        "source_breadth": 17,
+        "technical_support": 0,
+        "new_evidence": 4,
+        "operating_relevance": 10,
+        "total": 56
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "expert-finding:evaluation-as-system-design",
+        "reviewed_at": "2026-09-25",
+        "outcome": "source-analysis-covered-by-existing-requirement",
+        "requirement_ids": [
+          "evaluation-release-gates"
+        ],
+        "decision": "Use the expert pattern as directional context for evaluation and release gates, not as a separate requirement.",
+        "rationale": "The expert synthesis correctly describes a shift from one final benchmark toward continuous, task-specific evaluation. That is the engineering rationale already encoded by evaluation and release gates. Creating another requirement would duplicate the same practice while promoting social interpretation beyond its evidentiary role.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 5,
+          "links_added": 0,
+          "finding": "Five experts provide independent narrative breadth, but social observations do not verify deployment or effectiveness. The finding is retained as directional context; technical support comes from the calibrated benchmark, authorization, abstention, and regression-testing records linked to the existing requirement."
+        },
+        "status": "current"
+      },
+      "review_action": "source-analysis-covered-by-existing-requirement"
     },
     {
       "id": "early:operational-context",
@@ -1610,52 +1708,6 @@
       "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "expert-finding:evaluation-as-system-design",
-      "origin": "expert-finding",
-      "title": "Evaluation is moving from a final benchmark into the system-design loop",
-      "description": "12 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
-      "source_analysis": "expert-pulse/evaluation-as-system-design",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "evidence_ids": [
-        "bluesky:1278ebf77949:3mw7n5pr7222t",
-        "bluesky:b3614927c6a2:3mupj3vhqo22k",
-        "bluesky:e810fac7fd93:3msw2bx5j7s2h",
-        "bluesky:2a5707251144:3mkbfcbtlbs2n",
-        "bluesky:e14dee24058c:3lbe443vxms2y"
-      ],
-      "strength": "strong",
-      "movement": "new",
-      "metrics": {
-        "evidence_count": 5,
-        "source_count": 5,
-        "source_types": [
-          "expert-social"
-        ],
-        "recent_evidence_count": 1,
-        "technical_record_count": 0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 25,
-        "source_breadth": 17,
-        "technical_support": 0,
-        "new_evidence": 4,
-        "operating_relevance": 0,
-        "total": 46
-      },
-      "change_reasons": [
-        "Movement changed from steady to new",
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "queue_rank": 3
     },
     {
       "id": "early:simulation-first-physical-ai",
@@ -2540,6 +2592,58 @@
       "status": "current"
     },
     {
+      "candidate_id": "theme:training-self-improvement",
+      "title": "Training, evaluation & self-improvement",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/training-self-improvement",
+      "stage": "broadly-corroborated",
+      "metrics": {
+        "evidence_count": 166,
+        "source_count": 27,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "job-posting",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 40,
+        "technical_record_count": 101,
+        "family_count": 14,
+        "trend_score": 100.0
+      },
+      "linked_requirements": [
+        {
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        }
+      ],
+      "reviewed_at": "2026-09-25",
+      "outcome": "covered-by-existing-requirement",
+      "requirement_ids": [
+        "evaluation-release-gates"
+      ],
+      "decision": "Merge the operating conclusion into evaluation and release gates; do not require every startup to train or self-improve models.",
+      "rationale": "Training, feedback, evaluation, and self-improvement describe a wide capability family. The general startup obligation is narrower: measure representative workflow behavior and prevent unverified outputs or system changes from crossing a consequential boundary. Model training and recursive improvement remain optional strategies for teams whose economics and product require them.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 166,
+        "links_added": 3,
+        "finding": "Payment authorization, calibrated abstention, and replay-gated procedural memory show evaluation operating inside action and improvement loops. They strengthen technical reality for evaluation gates, but the corpus remains paper-heavy and does not establish repeatable production adoption or make model training a universal startup requirement."
+      },
+      "status": "current"
+    },
+    {
       "candidate_id": "theme:frontier-inference-infrastructure",
       "title": "Frontier inference infrastructure",
       "origin": "cross-source-theme",
@@ -2678,6 +2782,46 @@
       "status": "current"
     },
     {
+      "candidate_id": "theme:multimodal-3d",
+      "title": "Multimodal generation & 3D",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/multimodal-3d",
+      "stage": "broadly-corroborated",
+      "metrics": {
+        "evidence_count": 48,
+        "source_count": 10,
+        "source_types": [
+          "company-directory",
+          "curated-newsletter",
+          "expert-social",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 10,
+        "technical_record_count": 27,
+        "family_count": 10,
+        "trend_score": 79.0
+      },
+      "linked_requirements": [],
+      "reviewed_at": "2026-09-25",
+      "outcome": "capability-domain-not-general-requirement",
+      "requirement_ids": [],
+      "decision": "Treat multimodal generation and 3D as a capability domain, not a general startup operating requirement.",
+      "rationale": "Images, video, spatial interfaces, and 3D generation can define the product for design, media, robotics, commerce, or simulation companies. They do not create one reusable operating obligation for startups outside those domains. Teams that adopt the modality still inherit the existing requirements for evaluation, bounded actions, provenance, and workflow-specific release criteria.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 48,
+        "links_added": 0,
+        "finding": "Ten source families and twenty-seven technical records establish broad capability progress, but the evidence spans unrelated product domains and benchmarks. It does not establish a common operating practice, measurable cost of absence, or production control that every AI startup should implement."
+      },
+      "status": "current"
+    },
+    {
       "candidate_id": "theme:robotics-embodied-ai",
       "title": "Robotics & embodied AI",
       "origin": "cross-source-theme",
@@ -2715,175 +2859,13 @@
       "decision": "Add a conditional requirement for physical-AI startups, not a universal startup requirement.",
       "rationale": "Robotics activity is broad enough to deserve an operating conclusion, but the actionable requirement is narrower than the theme: physical-AI teams should use simulation, staged real-world validation, and explicit sim-to-real checks before scaling autonomous deployment.",
       "status": "current"
-    }
-  ],
-  "assessment_queue": [
-    {
-      "id": "theme:multimodal-3d",
-      "origin": "cross-source-theme",
-      "title": "Multimodal generation & 3D",
-      "description": "Systems that generate, edit, understand, or reconstruct images, video, spatial scenes, avatars, and three-dimensional environments.",
-      "source_analysis": "themes/multimodal-3d",
-      "theme_ids": [
-        "multimodal-3d"
-      ],
-      "evidence_ids": [
-        "alphasignal:111e6fbcff6d492fbbb3",
-        "alphasignal:46d0001edf2628fce6c2",
-        "alphasignal:trend:multimodal-generation-and-3d",
-        "arxiv:2609.22055v1",
-        "arxiv:2609.22008v1",
-        "arxiv:2609.21906v1",
-        "arxiv:2609.21879v1",
-        "arxiv:2609.21849v1",
-        "arxiv:2609.21755v1",
-        "arxiv:2609.21748v1",
-        "hf-paper:2609.21465",
-        "arxiv:2609.20820v1",
-        "arxiv:2609.20817v1",
-        "arxiv:2609.20816v1",
-        "arxiv:2609.20800v1",
-        "arxiv:2609.20744v1",
-        "arxiv:2609.20723v1",
-        "hf-paper:2609.16679",
-        "hf-paper:2609.11638",
-        "hf-paper:2609.10522"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 48,
-        "source_count": 10,
-        "source_types": [
-          "company-directory",
-          "curated-newsletter",
-          "expert-social",
-          "investor-essay",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 10,
-        "technical_record_count": 27,
-        "family_count": 10,
-        "trend_score": 79.0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 73
-      },
-      "change_reasons": [
-        "Evidence increased by 2",
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "queue_rank": 1
     },
     {
-      "id": "theme:training-self-improvement",
-      "origin": "cross-source-theme",
-      "title": "Training, evaluation & self-improvement",
-      "description": "Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.",
-      "source_analysis": "themes/training-self-improvement",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "evidence_ids": [
-        "alphasignal:e32078afc6278482f336",
-        "alphasignal:878cd0da4350818f61b9",
-        "alphasignal:5e4d06e1b5148246bf48",
-        "alphasignal:28e88f0768d976bbfccb",
-        "bluesky:1278ebf77949:3mw7n5pr7222t",
-        "alphasignal:ed11042f47b8f05c3ace",
-        "alphasignal:cec6f55c7deff2c8dfc5",
-        "hn:49791343",
-        "hn:49788178",
-        "hn:49786635",
-        "hn:49783224",
-        "alphasignal:trend:training-evaluation-and-self-improvement",
-        "nvidia-developer-blog:127a999e24da184d5065",
-        "arxiv:2609.22086v1",
-        "arxiv:2609.22076v1",
-        "arxiv:2609.22068v1",
-        "arxiv:2609.22064v1",
-        "arxiv:2609.22056v1",
-        "arxiv:2609.22055v1",
-        "arxiv:2609.22053v1"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 166,
-        "source_count": 27,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "job-posting",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 40,
-        "technical_record_count": 101,
-        "family_count": 14,
-        "trend_score": 100.0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 0,
-        "total": 73
-      },
-      "change_reasons": [
-        "Evidence increased by 5",
-        "5 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "queue_rank": 2
-    },
-    {
-      "id": "expert-finding:evaluation-as-system-design",
-      "origin": "expert-finding",
+      "candidate_id": "expert-finding:evaluation-as-system-design",
       "title": "Evaluation is moving from a final benchmark into the system-design loop",
-      "description": "12 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
+      "origin": "expert-finding",
       "source_analysis": "expert-pulse/evaluation-as-system-design",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "evidence_ids": [
-        "bluesky:1278ebf77949:3mw7n5pr7222t",
-        "bluesky:b3614927c6a2:3mupj3vhqo22k",
-        "bluesky:e810fac7fd93:3msw2bx5j7s2h",
-        "bluesky:2a5707251144:3mkbfcbtlbs2n",
-        "bluesky:e14dee24058c:3lbe443vxms2y"
-      ],
-      "strength": "strong",
-      "movement": "new",
+      "stage": null,
       "metrics": {
         "evidence_count": 5,
         "source_count": 5,
@@ -2893,26 +2875,30 @@
         "recent_evidence_count": 1,
         "technical_record_count": 0
       },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 25,
-        "source_breadth": 17,
-        "technical_support": 0,
-        "new_evidence": 4,
-        "operating_relevance": 0,
-        "total": 46
-      },
-      "change_reasons": [
-        "Movement changed from steady to new",
-        "1 additional dated records entered the latest seven-day window"
+      "linked_requirements": [
+        {
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        }
       ],
-      "materially_changed": true,
-      "adjudication": null,
-      "review_action": "assess-new-requirement",
-      "queue_rank": 3
+      "reviewed_at": "2026-09-25",
+      "outcome": "source-analysis-covered-by-existing-requirement",
+      "requirement_ids": [
+        "evaluation-release-gates"
+      ],
+      "decision": "Use the expert pattern as directional context for evaluation and release gates, not as a separate requirement.",
+      "rationale": "The expert synthesis correctly describes a shift from one final benchmark toward continuous, task-specific evaluation. That is the engineering rationale already encoded by evaluation and release gates. Creating another requirement would duplicate the same practice while promoting social interpretation beyond its evidentiary role.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 5,
+        "links_added": 0,
+        "finding": "Five experts provide independent narrative breadth, but social observations do not verify deployment or effectiveness. The finding is retained as directional context; technical support comes from the calibrated benchmark, authorization, abstention, and regression-testing records linked to the existing requirement."
+      },
+      "status": "current"
     }
   ],
+  "assessment_queue": [],
   "requirement_changes": [
     {
       "id": "modular-agent-operating-stack",
@@ -2925,10 +2911,10 @@
     {
       "id": "evaluation-release-gates",
       "title": "Evaluation and release gates",
-      "change_type": "unchanged",
+      "change_type": "evidence-updated",
       "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "No maturity or linked-evidence change this cycle."
+      "explanation": "Linked evidence changed from 10 to 13 records without changing maturity."
     },
     {
       "id": "governed-proprietary-data-boundary",
@@ -2998,7 +2984,7 @@
       "source_names": [
         "Y Combinator AI companies"
       ],
-      "new_record_count": 4,
+      "new_record_count": 0,
       "evidence_ids": [
         "yc-company:662",
         "yc-company:38492",
@@ -3254,7 +3240,7 @@
       "source_names": [
         "Y Combinator startup jobs"
       ],
-      "new_record_count": 1,
+      "new_record_count": 0,
       "evidence_ids": [
         "yc-job:108650",
         "yc-job:107397",

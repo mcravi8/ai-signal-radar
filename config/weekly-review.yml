@@ -229,6 +229,83 @@ candidate_adjudications:
       evidence_count: 92
       source_count: 15
 
+  - candidate_id: theme:multimodal-3d
+    reviewed_at: "2026-09-25"
+    outcome: capability-domain-not-general-requirement
+    requirement_ids: []
+    decision: Treat multimodal generation and 3D as a capability domain, not a general startup operating requirement.
+    rationale: >-
+      Images, video, spatial interfaces, and 3D generation can define the product for design,
+      media, robotics, commerce, or simulation companies. They do not create one reusable
+      operating obligation for startups outside those domains. Teams that adopt the modality
+      still inherit the existing requirements for evaluation, bounded actions, provenance,
+      and workflow-specific release criteria.
+    evidence_review:
+      status: complete
+      records_screened: 48
+      links_added: 0
+      finding: >-
+        Ten source families and twenty-seven technical records establish broad capability
+        progress, but the evidence spans unrelated product domains and benchmarks. It does not
+        establish a common operating practice, measurable cost of absence, or production
+        control that every AI startup should implement.
+    reviewed_state:
+      stage: broadly-corroborated
+      movement: steady
+      evidence_count: 48
+      source_count: 10
+
+  - candidate_id: theme:training-self-improvement
+    reviewed_at: "2026-09-25"
+    outcome: covered-by-existing-requirement
+    requirement_ids: [evaluation-release-gates]
+    decision: Merge the operating conclusion into evaluation and release gates; do not require every startup to train or self-improve models.
+    rationale: >-
+      Training, feedback, evaluation, and self-improvement describe a wide capability family.
+      The general startup obligation is narrower: measure representative workflow behavior and
+      prevent unverified outputs or system changes from crossing a consequential boundary.
+      Model training and recursive improvement remain optional strategies for teams whose
+      economics and product require them.
+    evidence_review:
+      status: complete
+      records_screened: 166
+      links_added: 3
+      finding: >-
+        Payment authorization, calibrated abstention, and replay-gated procedural memory show
+        evaluation operating inside action and improvement loops. They strengthen technical
+        reality for evaluation gates, but the corpus remains paper-heavy and does not establish
+        repeatable production adoption or make model training a universal startup requirement.
+    reviewed_state:
+      stage: broadly-corroborated
+      movement: steady
+      evidence_count: 166
+      source_count: 27
+
+  - candidate_id: expert-finding:evaluation-as-system-design
+    reviewed_at: "2026-09-25"
+    outcome: source-analysis-covered-by-existing-requirement
+    requirement_ids: [evaluation-release-gates]
+    decision: Use the expert pattern as directional context for evaluation and release gates, not as a separate requirement.
+    rationale: >-
+      The expert synthesis correctly describes a shift from one final benchmark toward
+      continuous, task-specific evaluation. That is the engineering rationale already encoded
+      by evaluation and release gates. Creating another requirement would duplicate the same
+      practice while promoting social interpretation beyond its evidentiary role.
+    evidence_review:
+      status: complete
+      records_screened: 5
+      links_added: 0
+      finding: >-
+        Five experts provide independent narrative breadth, but social observations do not
+        verify deployment or effectiveness. The finding is retained as directional context;
+        technical support comes from the calibrated benchmark, authorization, abstention, and
+        regression-testing records linked to the existing requirement.
+    reviewed_state:
+      stage:
+      movement: new
+      evidence_count: 5
+      source_count: 5
+
 verification_families:
   - id: company-formation
     title: AI company formation

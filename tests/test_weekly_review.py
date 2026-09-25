@@ -120,6 +120,9 @@ class WeeklyReviewTests(unittest.TestCase):
                 "early:enterprise-data-boundary",
                 "theme:voice-audio",
                 "theme:open-local-inference",
+                "theme:multimodal-3d",
+                "theme:training-self-improvement",
+                "expert-finding:evaluation-as-system-design",
             },
         )
         self.assertEqual(adjudications["theme:robotics-embodied-ai"]["outcome"], "conditional-requirement-added")
@@ -130,6 +133,10 @@ class WeeklyReviewTests(unittest.TestCase):
         self.assertEqual(
             adjudications["theme:voice-audio"]["outcome"],
             "modality-signal-not-general-requirement",
+        )
+        self.assertEqual(
+            adjudications["theme:training-self-improvement"]["requirement_ids"],
+            ["evaluation-release-gates"],
         )
         self.assertTrue(all(item["status"] == "current" for item in adjudications.values()))
         audited = [item for item in adjudications.values() if item.get("evidence_review")]

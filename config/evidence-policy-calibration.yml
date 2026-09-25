@@ -1,5 +1,5 @@
 policy_version: 1
-as_of: "2026-09-24"
+as_of: "2026-09-25"
 dataset: data/public/research.json
 
 cases:
@@ -116,6 +116,18 @@ cases:
         event_id: codemidas-verifiers
         relationship: supporting-context
         dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.22076v1
+        event_id: aport-payment-authorization-benchmark
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.22056v1
+        event_id: regime-aware-abstention
+        relationship: direct-support
+        dimensions: [technical_reality]
+      - evidence_id: arxiv:2609.22086v1
+        event_id: designer-rsi-replay-gates
+        relationship: supporting-context
+        dimensions: [technical_reality]
       - evidence_id: arxiv:2609.20812v1
         event_id: overclaim-benchmark
         relationship: direct-support
@@ -144,21 +156,23 @@ cases:
       concentration: high
       confidence: moderate
     gate_inputs:
-      qualifying_events: 4
-      technical_artifacts: 4
-      independent_organizations: 4
+      qualifying_events: 6
+      technical_artifacts: 6
+      independent_organizations: 6
       persistence_cycles: 1
       counterevidence_reviewed: true
       cost_of_absence_evidenced: false
       practical_minimum_available: true
     expected_maturity: experimental
     rationale: >-
-      Several independent technical systems make the requirement technically real, and
-      OverclaimBench shows why a model's own completion statement is not an adequate release
-      decision. A survey of 527 scientific programmers is retained as counterevidence to
-      adoption: generated code is often run, but automated tests and independent review are
-      rare. The sampled corpus still lacks production deployments with measured operating
-      outcomes, and research evidence remains concentrated in papers.
+      Independent technical systems make the requirement technically real. Payment
+      authorization, calibrated abstention, regression testing, and replay-gated procedural
+      memory show that evaluation can govern actions and system changes rather than remain a
+      final benchmark. OverclaimBench shows why a model's own completion statement is not an
+      adequate release decision. A survey of 527 scientific programmers is retained as
+      counterevidence to adoption: generated code is often run, but automated tests and
+      independent review are rare. The sampled corpus still lacks production deployments with
+      measured operating outcomes, and research evidence remains concentrated in papers.
     evidence_gaps:
       - Independent production reports with intervention, rollback, or incident metrics.
       - Comparative evidence showing when conventional tests and access controls are sufficient without a separate AI-specific gate.
