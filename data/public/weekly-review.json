@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-25T06:54:45.048329+00:00",
+    "generated_at": "2026-09-25T06:57:49.555876+00:00",
     "as_of": "2026-09-25",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,14 +12,13 @@
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 0,
-    "assessment_queue_count": 0,
+    "materially_changed_count": 4,
+    "assessment_queue_count": 3,
     "adjudication_count": 9,
-    "requirement_change_count": 3,
-    "idempotent_regeneration": true
+    "requirement_change_count": 0
   },
   "summary": {
-    "headline": "9 candidate decisions are recorded; 0 candidates remain in the bounded assessment queue.",
+    "headline": "9 candidate decisions are recorded; 3 candidates remain in the bounded assessment queue.",
     "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement."
   },
   "selection_policy": {
@@ -33,13 +32,116 @@
       "operating_relevance": 10
     },
     "material_change_thresholds": {
-      "priority_score_delta": 5,
       "evidence_count_delta": 2,
       "source_count_delta": 1
     },
     "commitment_boundary": "A reviewer must update the calibrated case record before the Operating Model can change."
   },
   "candidate_pool": [
+    {
+      "id": "theme:open-local-inference",
+      "origin": "cross-source-theme",
+      "title": "Open, local & efficient inference",
+      "description": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
+      "source_analysis": "themes/open-local-inference",
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "evidence_ids": [
+        "alphasignal:111e6fbcff6d492fbbb3",
+        "alphasignal:a8def2376d665f117870",
+        "alphasignal:46d0001edf2628fce6c2",
+        "latent-space:c5ef439db94fe95e2aa5",
+        "huggingface-blog:689d78c6e007ab8e2c4f",
+        "bluesky:e810fac7fd93:3mvzupklbjz2u",
+        "bluesky:e810fac7fd93:3mvzo2lneqg2j",
+        "interconnects:43bf4602833d95a55b19",
+        "alphasignal:trend:open-local-models-and-inference-efficiency",
+        "aws-machine-learning-blog:e2c6e3c192e8183542dd",
+        "arxiv:2609.21967v1",
+        "arxiv:2609.21879v1",
+        "arxiv:2609.21857v1",
+        "arxiv:2609.21849v1",
+        "github:1375922101",
+        "arxiv:2609.21704v1",
+        "arxiv:2609.21672v1",
+        "bluesky:e810fac7fd93:3mvs4salrn72j",
+        "github:1374869789",
+        "arxiv:2609.20812v1"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "rising",
+      "metrics": {
+        "evidence_count": 93,
+        "source_count": 15,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 18,
+        "technical_record_count": 54,
+        "family_count": 11,
+        "trend_score": 83.8
+      },
+      "linked_requirements": [
+        {
+          "id": "heterogeneous-model-routing",
+          "title": "Heterogeneous model routing",
+          "maturity": "experimental"
+        },
+        {
+          "id": "governed-proprietary-data-boundary",
+          "title": "Governed proprietary data boundary",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "heterogeneous-model-routing",
+        "title": "Heterogeneous model routing",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 10,
+        "total": 97
+      },
+      "change_reasons": [
+        "Movement changed from steady to rising",
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": {
+        "candidate_id": "theme:open-local-inference",
+        "reviewed_at": "2026-09-24",
+        "outcome": "covered-by-existing-requirements",
+        "requirement_ids": [
+          "heterogeneous-model-routing",
+          "governed-proprietary-data-boundary"
+        ],
+        "decision": "Treat open and local inference as an execution option, not a universal standalone requirement.",
+        "rationale": "Open weights, quantization, and local runtimes expand the available inference portfolio. They become operationally relevant when a task needs lower cost, lower latency, data control, offline behavior, or provider independence. Those decisions are already captured by heterogeneous routing and the governed proprietary-data boundary; requiring local inference everywhere would ignore quality, maintenance, and hardware tradeoffs.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 92,
+          "links_added": 3,
+          "finding": "Quantized runtime integration, adaptive inference research, and wider open-weight availability strengthen technical feasibility. The corpus still lacks independent production comparisons proving that local execution beats hosted inference after quality, operations, fallback, and hardware costs are included."
+        },
+        "status": "current"
+      },
+      "review_action": "covered-by-existing-requirements"
+    },
     {
       "id": "theme:voice-audio",
       "origin": "cross-source-theme",
@@ -93,7 +195,7 @@
         "recent_evidence_count": 7,
         "technical_record_count": 11,
         "family_count": 12,
-        "trend_score": 80.0
+        "trend_score": 79.9
       },
       "linked_requirements": [
         {
@@ -272,7 +374,7 @@
         "recent_evidence_count": 43,
         "technical_record_count": 31,
         "family_count": 10,
-        "trend_score": 80.5
+        "trend_score": 80.4
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -342,7 +444,7 @@
         "recent_evidence_count": 14,
         "technical_record_count": 31,
         "family_count": 12,
-        "trend_score": 84.6
+        "trend_score": 84.5
       },
       "linked_requirements": [
         {
@@ -390,107 +492,6 @@
         "status": "current"
       },
       "review_action": "domain-signal-not-separate-requirement"
-    },
-    {
-      "id": "theme:open-local-inference",
-      "origin": "cross-source-theme",
-      "title": "Open, local & efficient inference",
-      "description": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
-      "source_analysis": "themes/open-local-inference",
-      "theme_ids": [
-        "open-local-inference"
-      ],
-      "evidence_ids": [
-        "alphasignal:a8def2376d665f117870",
-        "alphasignal:46d0001edf2628fce6c2",
-        "latent-space:c5ef439db94fe95e2aa5",
-        "huggingface-blog:689d78c6e007ab8e2c4f",
-        "bluesky:e810fac7fd93:3mvzupklbjz2u",
-        "bluesky:e810fac7fd93:3mvzo2lneqg2j",
-        "interconnects:43bf4602833d95a55b19",
-        "alphasignal:trend:open-local-models-and-inference-efficiency",
-        "aws-machine-learning-blog:e2c6e3c192e8183542dd",
-        "arxiv:2609.21967v1",
-        "arxiv:2609.21879v1",
-        "arxiv:2609.21857v1",
-        "arxiv:2609.21849v1",
-        "github:1375922101",
-        "arxiv:2609.21704v1",
-        "arxiv:2609.21672v1",
-        "bluesky:e810fac7fd93:3mvs4salrn72j",
-        "github:1374869789",
-        "arxiv:2609.20812v1",
-        "arxiv:2609.20807v1"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 92,
-        "source_count": 15,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 17,
-        "technical_record_count": 54,
-        "family_count": 11,
-        "trend_score": 83.8
-      },
-      "linked_requirements": [
-        {
-          "id": "heterogeneous-model-routing",
-          "title": "Heterogeneous model routing",
-          "maturity": "experimental"
-        },
-        {
-          "id": "governed-proprietary-data-boundary",
-          "title": "Governed proprietary data boundary",
-          "maturity": "experimental"
-        }
-      ],
-      "linked_requirement": {
-        "id": "heterogeneous-model-routing",
-        "title": "Heterogeneous model routing",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 20,
-        "operating_relevance": 10,
-        "total": 83
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:open-local-inference",
-        "reviewed_at": "2026-09-24",
-        "outcome": "covered-by-existing-requirements",
-        "requirement_ids": [
-          "heterogeneous-model-routing",
-          "governed-proprietary-data-boundary"
-        ],
-        "decision": "Treat open and local inference as an execution option, not a universal standalone requirement.",
-        "rationale": "Open weights, quantization, and local runtimes expand the available inference portfolio. They become operationally relevant when a task needs lower cost, lower latency, data control, offline behavior, or provider independence. Those decisions are already captured by heterogeneous routing and the governed proprietary-data boundary; requiring local inference everywhere would ignore quality, maintenance, and hardware tradeoffs.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 92,
-          "links_added": 3,
-          "finding": "Quantized runtime integration, adaptive inference research, and wider open-weight availability strengthen technical feasibility. The corpus still lacks independent production comparisons proving that local execution beats hosted inference after quality, operations, fallback, and hardware costs are included."
-        },
-        "status": "current"
-      },
-      "review_action": "covered-by-existing-requirements"
     },
     {
       "id": "theme:skills-integrations",
@@ -544,7 +545,7 @@
         "recent_evidence_count": 10,
         "technical_record_count": 54,
         "family_count": 11,
-        "trend_score": 87.0
+        "trend_score": 86.9
       },
       "linked_requirements": [
         {
@@ -767,7 +768,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 20,
         "family_count": 7,
-        "trend_score": 77.4
+        "trend_score": 77.3
       },
       "linked_requirements": [
         {
@@ -862,7 +863,7 @@
         "recent_evidence_count": 8,
         "technical_record_count": 34,
         "family_count": 11,
-        "trend_score": 79.4
+        "trend_score": 79.3
       },
       "linked_requirements": [
         {
@@ -1035,7 +1036,7 @@
         "recent_evidence_count": 10,
         "technical_record_count": 25,
         "family_count": 9,
-        "trend_score": 76.4
+        "trend_score": 76.3
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1062,6 +1063,7 @@
         "multimodal-3d"
       ],
       "evidence_ids": [
+        "alphasignal:111e6fbcff6d492fbbb3",
         "alphasignal:46d0001edf2628fce6c2",
         "alphasignal:trend:multimodal-generation-and-3d",
         "arxiv:2609.22055v1",
@@ -1080,13 +1082,12 @@
         "arxiv:2609.20723v1",
         "hf-paper:2609.16679",
         "hf-paper:2609.11638",
-        "hf-paper:2609.10522",
-        "github:1361693766"
+        "hf-paper:2609.10522"
       ],
       "stage": "broadly-corroborated",
       "movement": "steady",
       "metrics": {
-        "evidence_count": 46,
+        "evidence_count": 48,
         "source_count": 10,
         "source_types": [
           "company-directory",
@@ -1100,10 +1101,10 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 9,
+        "recent_evidence_count": 10,
         "technical_record_count": 27,
         "family_count": 10,
-        "trend_score": 78.6
+        "trend_score": 79.0
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1115,10 +1116,14 @@
         "operating_relevance": 0,
         "total": 73
       },
-      "change_reasons": [],
-      "materially_changed": false,
+      "change_reasons": [
+        "Evidence increased by 2",
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
       "adjudication": null,
-      "review_action": "assess-new-requirement"
+      "review_action": "assess-new-requirement",
+      "queue_rank": 1
     },
     {
       "id": "theme:training-self-improvement",
@@ -1130,6 +1135,11 @@
         "training-self-improvement"
       ],
       "evidence_ids": [
+        "alphasignal:e32078afc6278482f336",
+        "alphasignal:878cd0da4350818f61b9",
+        "alphasignal:5e4d06e1b5148246bf48",
+        "alphasignal:28e88f0768d976bbfccb",
+        "bluesky:1278ebf77949:3mw7n5pr7222t",
         "alphasignal:ed11042f47b8f05c3ace",
         "alphasignal:cec6f55c7deff2c8dfc5",
         "hn:49791343",
@@ -1144,17 +1154,12 @@
         "arxiv:2609.22064v1",
         "arxiv:2609.22056v1",
         "arxiv:2609.22055v1",
-        "arxiv:2609.22053v1",
-        "arxiv:2609.22041v1",
-        "arxiv:2609.22038v1",
-        "arxiv:2609.22000v1",
-        "arxiv:2609.21989v1",
-        "arxiv:2609.21962v1"
+        "arxiv:2609.22053v1"
       ],
       "stage": "broadly-corroborated",
       "movement": "steady",
       "metrics": {
-        "evidence_count": 161,
+        "evidence_count": 166,
         "source_count": 27,
         "source_types": [
           "community",
@@ -1172,7 +1177,7 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 35,
+        "recent_evidence_count": 40,
         "technical_record_count": 101,
         "family_count": 14,
         "trend_score": 100.0
@@ -1187,10 +1192,14 @@
         "operating_relevance": 0,
         "total": 73
       },
-      "change_reasons": [],
-      "materially_changed": false,
+      "change_reasons": [
+        "Evidence increased by 5",
+        "5 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
       "adjudication": null,
-      "review_action": "assess-new-requirement"
+      "review_action": "assess-new-requirement",
+      "queue_rank": 2
     },
     {
       "id": "theme:robotics-embodied-ai",
@@ -1217,12 +1226,13 @@
         "yc-job:97722",
         "hf-paper:2506.01844",
         "yc-company:35850",
+        "yc-company:33279",
         "yc-company:32206"
       ],
       "stage": "corroborated",
       "movement": "steady",
       "metrics": {
-        "evidence_count": 16,
+        "evidence_count": 17,
         "source_count": 8,
         "source_types": [
           "company-directory",
@@ -1236,7 +1246,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 8,
         "family_count": 7,
-        "trend_score": 69.7
+        "trend_score": 69.8
       },
       "linked_requirements": [
         {
@@ -1490,7 +1500,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 3,
         "family_count": 4,
-        "trend_score": 66.8
+        "trend_score": 66.7
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1540,7 +1550,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 6,
         "family_count": 3,
-        "trend_score": 47.9
+        "trend_score": 47.8
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1600,6 +1610,52 @@
       "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "expert-finding:evaluation-as-system-design",
+      "origin": "expert-finding",
+      "title": "Evaluation is moving from a final benchmark into the system-design loop",
+      "description": "12 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
+      "source_analysis": "expert-pulse/evaluation-as-system-design",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "evidence_ids": [
+        "bluesky:1278ebf77949:3mw7n5pr7222t",
+        "bluesky:b3614927c6a2:3mupj3vhqo22k",
+        "bluesky:e810fac7fd93:3msw2bx5j7s2h",
+        "bluesky:2a5707251144:3mkbfcbtlbs2n",
+        "bluesky:e14dee24058c:3lbe443vxms2y"
+      ],
+      "strength": "strong",
+      "movement": "new",
+      "metrics": {
+        "evidence_count": 5,
+        "source_count": 5,
+        "source_types": [
+          "expert-social"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 0
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 25,
+        "source_breadth": 17,
+        "technical_support": 0,
+        "new_evidence": 4,
+        "operating_relevance": 0,
+        "total": 46
+      },
+      "change_reasons": [
+        "Movement changed from steady to new",
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 3
     },
     {
       "id": "early:simulation-first-physical-ai",
@@ -1883,48 +1939,6 @@
       "review_action": "review-existing-requirement"
     },
     {
-      "id": "expert-finding:evaluation-as-system-design",
-      "origin": "expert-finding",
-      "title": "Evaluation is moving from a final benchmark into the system-design loop",
-      "description": "11 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
-      "source_analysis": "expert-pulse/evaluation-as-system-design",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "evidence_ids": [
-        "bluesky:1278ebf77949:3mvneqxjm3s22",
-        "bluesky:b3614927c6a2:3mupj3vhqo22k",
-        "bluesky:e810fac7fd93:3msw2bx5j7s2h",
-        "bluesky:2a5707251144:3mkbfcbtlbs2n",
-        "bluesky:e14dee24058c:3lbe443vxms2y"
-      ],
-      "strength": "strong",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 5,
-        "source_count": 5,
-        "source_types": [
-          "expert-social"
-        ],
-        "recent_evidence_count": 0,
-        "technical_record_count": 0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 17,
-        "technical_support": 0,
-        "new_evidence": 0,
-        "operating_relevance": 0,
-        "total": 25
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
-    {
       "id": "theme:validation-release",
       "origin": "cross-source-theme",
       "title": "Validation & release infrastructure",
@@ -1949,7 +1963,7 @@
         "recent_evidence_count": 1,
         "technical_record_count": 1,
         "family_count": 2,
-        "trend_score": 46.9
+        "trend_score": 46.8
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -2146,7 +2160,7 @@
       "id": "operator-narrative:coding-agent-stack",
       "origin": "operator-narrative",
       "title": "The coding-agent opportunity is shifting below the assistant interface",
-      "description": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 84.6 and appears across 14 radar sources.",
+      "description": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 84.5 and appears across 14 radar sources.",
       "source_analysis": "operator-narratives/coding-agent-stack",
       "theme_ids": [
         "coding-agents"
@@ -2269,6 +2283,61 @@
   ],
   "adjudications": [
     {
+      "candidate_id": "theme:open-local-inference",
+      "title": "Open, local & efficient inference",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/open-local-inference",
+      "stage": "corroborated-source-concentrated",
+      "metrics": {
+        "evidence_count": 93,
+        "source_count": 15,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 18,
+        "technical_record_count": 54,
+        "family_count": 11,
+        "trend_score": 83.8
+      },
+      "linked_requirements": [
+        {
+          "id": "heterogeneous-model-routing",
+          "title": "Heterogeneous model routing",
+          "maturity": "experimental"
+        },
+        {
+          "id": "governed-proprietary-data-boundary",
+          "title": "Governed proprietary data boundary",
+          "maturity": "experimental"
+        }
+      ],
+      "reviewed_at": "2026-09-24",
+      "outcome": "covered-by-existing-requirements",
+      "requirement_ids": [
+        "heterogeneous-model-routing",
+        "governed-proprietary-data-boundary"
+      ],
+      "decision": "Treat open and local inference as an execution option, not a universal standalone requirement.",
+      "rationale": "Open weights, quantization, and local runtimes expand the available inference portfolio. They become operationally relevant when a task needs lower cost, lower latency, data control, offline behavior, or provider independence. Those decisions are already captured by heterogeneous routing and the governed proprietary-data boundary; requiring local inference everywhere would ignore quality, maintenance, and hardware tradeoffs.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 92,
+        "links_added": 3,
+        "finding": "Quantized runtime integration, adaptive inference research, and wider open-weight availability strengthen technical feasibility. The corpus still lacks independent production comparisons proving that local execution beats hosted inference after quality, operations, fallback, and hardware costs are included."
+      },
+      "status": "current"
+    },
+    {
       "candidate_id": "theme:voice-audio",
       "title": "Voice & audio interfaces",
       "origin": "cross-source-theme",
@@ -2294,7 +2363,7 @@
         "recent_evidence_count": 7,
         "technical_record_count": 11,
         "family_count": 12,
-        "trend_score": 80.0
+        "trend_score": 79.9
       },
       "linked_requirements": [
         {
@@ -2391,7 +2460,7 @@
         "recent_evidence_count": 14,
         "technical_record_count": 31,
         "family_count": 12,
-        "trend_score": 84.6
+        "trend_score": 84.5
       },
       "linked_requirements": [
         {
@@ -2422,61 +2491,6 @@
       "status": "current"
     },
     {
-      "candidate_id": "theme:open-local-inference",
-      "title": "Open, local & efficient inference",
-      "origin": "cross-source-theme",
-      "source_analysis": "themes/open-local-inference",
-      "stage": "corroborated-source-concentrated",
-      "metrics": {
-        "evidence_count": 92,
-        "source_count": 15,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 17,
-        "technical_record_count": 54,
-        "family_count": 11,
-        "trend_score": 83.8
-      },
-      "linked_requirements": [
-        {
-          "id": "heterogeneous-model-routing",
-          "title": "Heterogeneous model routing",
-          "maturity": "experimental"
-        },
-        {
-          "id": "governed-proprietary-data-boundary",
-          "title": "Governed proprietary data boundary",
-          "maturity": "experimental"
-        }
-      ],
-      "reviewed_at": "2026-09-24",
-      "outcome": "covered-by-existing-requirements",
-      "requirement_ids": [
-        "heterogeneous-model-routing",
-        "governed-proprietary-data-boundary"
-      ],
-      "decision": "Treat open and local inference as an execution option, not a universal standalone requirement.",
-      "rationale": "Open weights, quantization, and local runtimes expand the available inference portfolio. They become operationally relevant when a task needs lower cost, lower latency, data control, offline behavior, or provider independence. Those decisions are already captured by heterogeneous routing and the governed proprietary-data boundary; requiring local inference everywhere would ignore quality, maintenance, and hardware tradeoffs.",
-      "evidence_review": {
-        "status": "complete",
-        "records_screened": 92,
-        "links_added": 3,
-        "finding": "Quantized runtime integration, adaptive inference research, and wider open-weight availability strengthen technical feasibility. The corpus still lacks independent production comparisons proving that local execution beats hosted inference after quality, operations, fallback, and hardware costs are included."
-      },
-      "status": "current"
-    },
-    {
       "candidate_id": "theme:skills-integrations",
       "title": "Skills, protocols & integrations",
       "origin": "cross-source-theme",
@@ -2501,7 +2515,7 @@
         "recent_evidence_count": 10,
         "technical_record_count": 54,
         "family_count": 11,
-        "trend_score": 87.0
+        "trend_score": 86.9
       },
       "linked_requirements": [
         {
@@ -2546,7 +2560,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 20,
         "family_count": 7,
-        "trend_score": 77.4
+        "trend_score": 77.3
       },
       "linked_requirements": [
         {
@@ -2595,7 +2609,7 @@
         "recent_evidence_count": 8,
         "technical_record_count": 34,
         "family_count": 11,
-        "trend_score": 79.4
+        "trend_score": 79.3
       },
       "linked_requirements": [
         {
@@ -2670,7 +2684,7 @@
       "source_analysis": "themes/robotics-embodied-ai",
       "stage": "corroborated",
       "metrics": {
-        "evidence_count": 16,
+        "evidence_count": 17,
         "source_count": 8,
         "source_types": [
           "company-directory",
@@ -2684,7 +2698,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 8,
         "family_count": 7,
-        "trend_score": 69.7
+        "trend_score": 69.8
       },
       "linked_requirements": [
         {
@@ -2703,15 +2717,210 @@
       "status": "current"
     }
   ],
-  "assessment_queue": [],
+  "assessment_queue": [
+    {
+      "id": "theme:multimodal-3d",
+      "origin": "cross-source-theme",
+      "title": "Multimodal generation & 3D",
+      "description": "Systems that generate, edit, understand, or reconstruct images, video, spatial scenes, avatars, and three-dimensional environments.",
+      "source_analysis": "themes/multimodal-3d",
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "evidence_ids": [
+        "alphasignal:111e6fbcff6d492fbbb3",
+        "alphasignal:46d0001edf2628fce6c2",
+        "alphasignal:trend:multimodal-generation-and-3d",
+        "arxiv:2609.22055v1",
+        "arxiv:2609.22008v1",
+        "arxiv:2609.21906v1",
+        "arxiv:2609.21879v1",
+        "arxiv:2609.21849v1",
+        "arxiv:2609.21755v1",
+        "arxiv:2609.21748v1",
+        "hf-paper:2609.21465",
+        "arxiv:2609.20820v1",
+        "arxiv:2609.20817v1",
+        "arxiv:2609.20816v1",
+        "arxiv:2609.20800v1",
+        "arxiv:2609.20744v1",
+        "arxiv:2609.20723v1",
+        "hf-paper:2609.16679",
+        "hf-paper:2609.11638",
+        "hf-paper:2609.10522"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 48,
+        "source_count": 10,
+        "source_types": [
+          "company-directory",
+          "curated-newsletter",
+          "expert-social",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 10,
+        "technical_record_count": 27,
+        "family_count": 10,
+        "trend_score": 79.0
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 73
+      },
+      "change_reasons": [
+        "Evidence increased by 2",
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 1
+    },
+    {
+      "id": "theme:training-self-improvement",
+      "origin": "cross-source-theme",
+      "title": "Training, evaluation & self-improvement",
+      "description": "Methods and systems that improve model or agent performance through training, feedback, evaluation, optimization, or generated experience.",
+      "source_analysis": "themes/training-self-improvement",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "evidence_ids": [
+        "alphasignal:e32078afc6278482f336",
+        "alphasignal:878cd0da4350818f61b9",
+        "alphasignal:5e4d06e1b5148246bf48",
+        "alphasignal:28e88f0768d976bbfccb",
+        "bluesky:1278ebf77949:3mw7n5pr7222t",
+        "alphasignal:ed11042f47b8f05c3ace",
+        "alphasignal:cec6f55c7deff2c8dfc5",
+        "hn:49791343",
+        "hn:49788178",
+        "hn:49786635",
+        "hn:49783224",
+        "alphasignal:trend:training-evaluation-and-self-improvement",
+        "nvidia-developer-blog:127a999e24da184d5065",
+        "arxiv:2609.22086v1",
+        "arxiv:2609.22076v1",
+        "arxiv:2609.22068v1",
+        "arxiv:2609.22064v1",
+        "arxiv:2609.22056v1",
+        "arxiv:2609.22055v1",
+        "arxiv:2609.22053v1"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 166,
+        "source_count": 27,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "job-posting",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 40,
+        "technical_record_count": 101,
+        "family_count": 14,
+        "trend_score": 100.0
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 20,
+        "operating_relevance": 0,
+        "total": 73
+      },
+      "change_reasons": [
+        "Evidence increased by 5",
+        "5 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 2
+    },
+    {
+      "id": "expert-finding:evaluation-as-system-design",
+      "origin": "expert-finding",
+      "title": "Evaluation is moving from a final benchmark into the system-design loop",
+      "description": "12 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
+      "source_analysis": "expert-pulse/evaluation-as-system-design",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "evidence_ids": [
+        "bluesky:1278ebf77949:3mw7n5pr7222t",
+        "bluesky:b3614927c6a2:3mupj3vhqo22k",
+        "bluesky:e810fac7fd93:3msw2bx5j7s2h",
+        "bluesky:2a5707251144:3mkbfcbtlbs2n",
+        "bluesky:e14dee24058c:3lbe443vxms2y"
+      ],
+      "strength": "strong",
+      "movement": "new",
+      "metrics": {
+        "evidence_count": 5,
+        "source_count": 5,
+        "source_types": [
+          "expert-social"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 0
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 25,
+        "source_breadth": 17,
+        "technical_support": 0,
+        "new_evidence": 4,
+        "operating_relevance": 0,
+        "total": 46
+      },
+      "change_reasons": [
+        "Movement changed from steady to new",
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 3
+    }
+  ],
   "requirement_changes": [
     {
       "id": "modular-agent-operating-stack",
       "title": "Modular agent operating stack",
-      "change_type": "evidence-updated",
+      "change_type": "unchanged",
       "previous_maturity": "emerging",
       "current_maturity": "emerging",
-      "explanation": "Linked evidence changed from 13 to 18 records without changing maturity."
+      "explanation": "No maturity or linked-evidence change this cycle."
     },
     {
       "id": "evaluation-release-gates",
@@ -2724,18 +2933,18 @@
     {
       "id": "governed-proprietary-data-boundary",
       "title": "Governed proprietary data boundary",
-      "change_type": "added",
-      "previous_maturity": null,
+      "change_type": "unchanged",
+      "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "Added after formal candidate adjudication under the evidence policy."
+      "explanation": "No maturity or linked-evidence change this cycle."
     },
     {
       "id": "heterogeneous-model-routing",
       "title": "Heterogeneous model routing",
-      "change_type": "evidence-updated",
+      "change_type": "unchanged",
       "previous_maturity": "experimental",
       "current_maturity": "experimental",
-      "explanation": "Linked evidence changed from 14 to 17 records without changing maturity."
+      "explanation": "No maturity or linked-evidence change this cycle."
     },
     {
       "id": "shared-operational-context",
@@ -2784,12 +2993,12 @@
       "dimension": "market_pull",
       "evidence_limit": 8,
       "status": "active",
-      "record_count": 53,
+      "record_count": 57,
       "source_count": 1,
       "source_names": [
         "Y Combinator AI companies"
       ],
-      "new_record_count": 0,
+      "new_record_count": 4,
       "evidence_ids": [
         "yc-company:662",
         "yc-company:38492",
@@ -2798,9 +3007,11 @@
         "yc-company:37600",
         "yc-company:37566",
         "yc-company:37468",
+        "yc-company:37467",
         "yc-company:37273",
         "yc-company:37203",
         "yc-company:35850",
+        "yc-company:35784",
         "yc-company:35521",
         "yc-company:35454",
         "yc-company:35395",
@@ -2818,9 +3029,11 @@
         "yc-company:34464",
         "yc-company:33969",
         "yc-company:33344",
+        "yc-company:33279",
         "yc-company:33278",
         "yc-company:33250",
         "yc-company:33178",
+        "yc-company:33048",
         "yc-company:32981",
         "yc-company:32948",
         "yc-company:32752",
@@ -2853,7 +3066,7 @@
         "yc-company:37600",
         "yc-company:37566",
         "yc-company:37468",
-        "yc-company:37273"
+        "yc-company:37467"
       ],
       "boundary": "Supporting verification signal only; maturity still requires case-level review under the formal evidence policy."
     },
@@ -3036,20 +3249,21 @@
       "dimension": "operational_adoption",
       "evidence_limit": 8,
       "status": "active",
-      "record_count": 13,
+      "record_count": 14,
       "source_count": 1,
       "source_names": [
         "Y Combinator startup jobs"
       ],
-      "new_record_count": 0,
+      "new_record_count": 1,
       "evidence_ids": [
         "yc-job:108650",
+        "yc-job:107397",
         "yc-job:105591",
         "yc-job:105467",
         "yc-job:101589",
         "yc-job:97722",
-        "yc-job:96512",
         "yc-job:96450",
+        "yc-job:96512",
         "yc-job:92246",
         "yc-job:88769",
         "yc-job:88124",
@@ -3059,13 +3273,13 @@
       ],
       "sample_evidence_ids": [
         "yc-job:108650",
+        "yc-job:107397",
         "yc-job:105591",
         "yc-job:105467",
         "yc-job:101589",
         "yc-job:97722",
-        "yc-job:96512",
         "yc-job:96450",
-        "yc-job:92246"
+        "yc-job:96512"
       ],
       "boundary": "Supporting verification signal only; maturity still requires case-level review under the formal evidence policy."
     },

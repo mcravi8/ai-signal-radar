@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-09-25T06:54:45.048329+00:00",
+    "generated_at": "2026-09-25T06:57:49.555876+00:00",
     "status": "success",
-    "normalized_evidence_count": 1785,
-    "public_record_count": 1750,
+    "normalized_evidence_count": 1816,
+    "public_record_count": 1781,
     "active_source_count": 38,
     "theme_count": 20,
     "observed_theme_count": 20,
@@ -12,7 +12,7 @@
     "reviewed_project_count": 25,
     "queued_project_count": 25,
     "discovered_project_count": 208,
-    "classification_coverage": 0.312,
+    "classification_coverage": 0.311,
     "recent_source_count": 31,
     "model": "Every source is normalized into the same evidence contract. Source-specific analyses remain inspectable but do not define the global navigation."
   },
@@ -27,8 +27,8 @@
         "hacker-news",
         "github",
         "arxiv",
-        "simon-willison",
         "alphasignal",
+        "simon-willison",
         "huggingface-papers",
         "yc-companies",
         "bluesky-ethan-mollick",
@@ -44,18 +44,18 @@
         "mistral-news",
         "sequoia-essays",
         "the-batch",
+        "bluesky-mark-riedl",
         "bluesky-melanie-mitchell",
         "latent-space",
-        "bluesky-mark-riedl",
         "aws-machine-learning-blog",
         "cloudflare-ai-blog",
         "import-ai",
         "interconnects",
         "last-week-in-ai",
         "yc-essays",
+        "yc-jobs",
         "bluesky-emily-bender",
         "bluesky-margaret-mitchell",
-        "yc-jobs",
         "radical-ventures",
         "chip-huyen",
         "menlo-ventures",
@@ -63,8 +63,8 @@
         "bluesky-arvind-narayanan",
         "bluesky-karpathy"
       ],
-      "evidence_count": 1785,
-      "updated_at": "2026-09-25T06:54:45.048329+00:00"
+      "evidence_count": 1816,
+      "updated_at": "2026-09-25T06:57:49.555876+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -125,8 +125,8 @@
         "yc-essays",
         "yc-jobs"
       ],
-      "evidence_count": 1750,
-      "updated_at": "2026-09-25T06:54:45.048329+00:00"
+      "evidence_count": 1781,
+      "updated_at": "2026-09-25T06:57:49.555876+00:00"
     },
     {
       "id": "early-signal-tracker",
@@ -1187,13 +1187,13 @@
           "fading": "Historical or trailing-window support exists, but no supporting evidence appeared in the latest 30 days."
         }
       },
-      "updated_at": "2026-09-25T06:54:45.048329+00:00"
+      "updated_at": "2026-09-25T06:57:49.555876+00:00"
     },
     {
       "id": "expert-pulse",
       "title": "Expert pulse",
       "question": "Which technical ideas, tools, and capability claims are appearing across curated AI experts on Bluesky?",
-      "summary": "32 relevant public posts from 10 curated experts, classified with the same taxonomy as the rest of the radar.",
+      "summary": "33 relevant public posts from 10 curated experts, classified with the same taxonomy as the rest of the radar.",
       "status": "active",
       "source_ids": [
         "bluesky-arvind-narayanan",
@@ -1207,8 +1207,8 @@
         "latent-space",
         "simon-willison"
       ],
-      "evidence_count": 32,
-      "corpus_count": 202,
+      "evidence_count": 33,
+      "corpus_count": 215,
       "evidence_ids": [
         "bluesky:e14dee24058c:3lbe443vxms2y",
         "bluesky:2a5707251144:3mkbfcbtlbs2n",
@@ -1241,7 +1241,8 @@
         "bluesky:e810fac7fd93:3mvzo2lneqg2j",
         "bluesky:e810fac7fd93:3mvzupklbjz2u",
         "bluesky:b3614927c6a2:3mw2tsop42c2u",
-        "bluesky:b3614927c6a2:3mw7magyrwc2i"
+        "bluesky:b3614927c6a2:3mw7magyrwc2i",
+        "bluesky:1278ebf77949:3mw7n5pr7222t"
       ],
       "executive_summary": "The strongest shared expert signal is methodological: evaluation and feedback are becoming part of system design. A second cluster concerns the operating layer around agents—context, tools, permissions, execution, and recovery. Specialized and routed models are a plausible efficiency direction, but expert-social corroboration remains limited.",
       "findings": [
@@ -1250,7 +1251,7 @@
           "strength": "strong",
           "label": "Cross-expert pattern",
           "title": "Evaluation is moving from a final benchmark into the system-design loop",
-          "analysis": "11 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
+          "analysis": "12 classified posts across 5 experts discuss evaluation, training feedback, or self-improvement. The shared engineering direction is toward measuring behavior continuously while the system is being built, rather than treating one benchmark score as a release verdict.",
           "why_it_matters": "Agent quality depends on task-specific traces, failure categories, and feedback loops that reveal whether a change improves the complete system—not only the base model.",
           "workflow_opportunity": "Capture representative workflow traces, label failure modes, and run the same evaluation set whenever prompts, models, tools, or harness logic change.",
           "caveat": "The posts identify an engineering priority; they do not establish one accepted evaluation method or prove that self-improving systems are reliable.",
@@ -1258,14 +1259,14 @@
             "training-self-improvement"
           ],
           "evidence_ids": [
-            "bluesky:1278ebf77949:3mvneqxjm3s22",
+            "bluesky:1278ebf77949:3mw7n5pr7222t",
             "bluesky:b3614927c6a2:3mupj3vhqo22k",
             "bluesky:e810fac7fd93:3msw2bx5j7s2h",
             "bluesky:2a5707251144:3mkbfcbtlbs2n",
             "bluesky:e14dee24058c:3lbe443vxms2y"
           ],
           "metrics": {
-            "posts": 11,
+            "posts": 12,
             "experts": 5
           }
         },
@@ -1325,7 +1326,7 @@
       "theme_summary": [
         {
           "theme_id": "training-self-improvement",
-          "evidence_count": 11,
+          "evidence_count": 12,
           "source_ids": [
             "bluesky-ethan-mollick",
             "bluesky-melanie-mitchell",
@@ -1335,6 +1336,7 @@
           ],
           "source_count": 5,
           "evidence_ids": [
+            "bluesky:1278ebf77949:3mw7n5pr7222t",
             "bluesky:1278ebf77949:3mvneqxjm3s22",
             "bluesky:1278ebf77949:3muy6d3lnwk2u",
             "bluesky:b3614927c6a2:3mupj3vhqo22k",
@@ -1455,7 +1457,7 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-09-25T06:54:45.048329+00:00"
+      "updated_at": "2026-09-25T06:57:49.555876+00:00"
     },
     {
       "id": "operator-narratives",
@@ -1568,7 +1570,7 @@
           "strength": "strong",
           "label": "Corroborated infrastructure thesis",
           "title": "The coding-agent opportunity is shifting below the assistant interface",
-          "analysis": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 84.6 and appears across 14 radar sources.",
+          "analysis": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 84.5 and appears across 14 radar sources.",
           "why_it_matters": "The durable layer may be the context, execution environment, verification, and operational control that lets agents finish real work—not another chat surface around a frontier model.",
           "workflow_opportunity": "Prototype a repository task runner that provisions an isolated environment, assembles relevant context, executes the agent, tests the result, and presents a reviewable change with traces and rollback.",
           "caveat": "The evidence mixes coding, implementation, research, and operations. Their shared infrastructure needs are clearer than a single winning product category.",
@@ -1772,7 +1774,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-09-25T06:54:45.048329+00:00"
+      "updated_at": "2026-09-25T06:57:49.555876+00:00"
     },
     {
       "id": "project-opportunities",
@@ -1795,7 +1797,7 @@
     "as_of": "2026-09-25",
     "window_start": "2026-09-18",
     "previous_window_start": "2026-09-11",
-    "new_public_records": 583,
+    "new_public_records": 609,
     "movements": [
       {
         "theme_id": "small-specialized-models",
@@ -1808,18 +1810,18 @@
       {
         "theme_id": "training-self-improvement",
         "name": "Training, evaluation & self-improvement",
-        "recent": 34,
+        "recent": 39,
         "prior": 42,
-        "delta": -8,
+        "delta": -3,
         "direction": "steady"
       },
       {
         "theme_id": "open-local-inference",
         "name": "Open, local & efficient inference",
-        "recent": 16,
+        "recent": 17,
         "prior": 11,
-        "delta": 5,
-        "direction": "steady"
+        "delta": 6,
+        "direction": "rising"
       },
       {
         "theme_id": "coding-agents",
@@ -1827,6 +1829,14 @@
         "recent": 13,
         "prior": 11,
         "delta": 2,
+        "direction": "steady"
+      },
+      {
+        "theme_id": "multimodal-3d",
+        "name": "Multimodal generation & 3D",
+        "recent": 9,
+        "prior": 8,
+        "delta": 1,
         "direction": "steady"
       },
       {
@@ -1840,14 +1850,6 @@
       {
         "theme_id": "assurance-infrastructure",
         "name": "Assurance infrastructure",
-        "recent": 8,
-        "prior": 8,
-        "delta": 0,
-        "direction": "steady"
-      },
-      {
-        "theme_id": "multimodal-3d",
-        "name": "Multimodal generation & 3D",
         "recent": 8,
         "prior": 8,
         "delta": 0,
@@ -1903,14 +1905,14 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
-      "evidence_count": 161,
-      "support_units": 309,
+      "evidence_count": 166,
+      "support_units": 314,
       "source_count": 27,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
-          "observations": 4,
-          "support_units": 152
+          "observations": 8,
+          "support_units": 156
         },
         {
           "source_id": "arxiv",
@@ -1958,14 +1960,14 @@
           "support_units": 3
         },
         {
-          "source_id": "yc-companies",
+          "source_id": "bluesky-ethan-mollick",
           "observations": 3,
           "support_units": 3
         },
         {
-          "source_id": "bluesky-ethan-mollick",
-          "observations": 2,
-          "support_units": 2
+          "source_id": "yc-companies",
+          "observations": 3,
+          "support_units": 3
         },
         {
           "source_id": "eugene-yan",
@@ -2049,9 +2051,9 @@
         "2026-06": 22,
         "2026-07": 21,
         "2026-08": 47,
-        "2026-09": 120
+        "2026-09": 125
       },
-      "source_concentration": 0.49,
+      "source_concentration": 0.5,
       "maturity": "broadly-corroborated",
       "score": {
         "recurrence": 25.0,
@@ -2061,6 +2063,11 @@
         "total": 100.0
       },
       "evidence_ids": [
+        "alphasignal:e32078afc6278482f336",
+        "alphasignal:878cd0da4350818f61b9",
+        "alphasignal:5e4d06e1b5148246bf48",
+        "alphasignal:28e88f0768d976bbfccb",
+        "bluesky:1278ebf77949:3mw7n5pr7222t",
         "alphasignal:ed11042f47b8f05c3ace",
         "alphasignal:cec6f55c7deff2c8dfc5",
         "hn:49791343",
@@ -2333,11 +2340,11 @@
       "source_concentration": 0.43,
       "maturity": "broadly-corroborated",
       "score": {
-        "recurrence": 13.1,
+        "recurrence": 13.0,
         "acceleration": 23.9,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 87.0
+        "total": 86.9
       },
       "evidence_ids": [
         "hn:49791228",
@@ -2515,11 +2522,11 @@
       "source_concentration": 0.76,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 14.8,
+        "recurrence": 14.7,
         "acceleration": 19.8,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 84.6
+        "total": 84.5
       },
       "evidence_ids": [
         "alphasignal:ed11042f47b8f05c3ace",
@@ -2601,14 +2608,14 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
-      "evidence_count": 92,
-      "support_units": 364,
+      "evidence_count": 93,
+      "support_units": 365,
       "source_count": 15,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
-          "observations": 6,
-          "support_units": 278
+          "observations": 7,
+          "support_units": 279
         },
         {
           "source_id": "mistral-news",
@@ -2687,18 +2694,19 @@
         "2026-06": 40,
         "2026-07": 70,
         "2026-08": 58,
-        "2026-09": 86
+        "2026-09": 87
       },
       "source_concentration": 0.76,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 17.5,
-        "acceleration": 16.3,
+        "recurrence": 17.4,
+        "acceleration": 16.4,
         "persistence": 25.0,
         "breadth": 25,
         "total": 83.8
       },
       "evidence_ids": [
+        "alphasignal:111e6fbcff6d492fbbb3",
         "alphasignal:a8def2376d665f117870",
         "alphasignal:46d0001edf2628fce6c2",
         "latent-space:c5ef439db94fe95e2aa5",
@@ -2881,11 +2889,11 @@
       "source_concentration": 0.79,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 14.0,
+        "recurrence": 13.9,
         "acceleration": 16.5,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 80.5
+        "total": 80.4
       },
       "evidence_ids": [
         "hn:49799641",
@@ -3054,11 +3062,11 @@
       "source_concentration": 0.74,
       "maturity": "broadly-corroborated",
       "score": {
-        "recurrence": 8.7,
+        "recurrence": 8.6,
         "acceleration": 21.3,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 80.0
+        "total": 79.9
       },
       "evidence_ids": [
         "bluesky:b3614927c6a2:3mw7magyrwc2i",
@@ -3186,11 +3194,11 @@
       "source_concentration": 0.82,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 13.0,
+        "recurrence": 12.9,
         "acceleration": 16.4,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 79.4
+        "total": 79.3
       },
       "evidence_ids": [
         "aws-machine-learning-blog:16b9772b96509775d2ea",
@@ -3266,14 +3274,14 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 46,
-      "support_units": 144,
+      "evidence_count": 48,
+      "support_units": 146,
       "source_count": 10,
       "source_breakdown": [
         {
           "source_id": "alphasignal",
-          "observations": 4,
-          "support_units": 102
+          "observations": 5,
+          "support_units": 103
         },
         {
           "source_id": "arxiv",
@@ -3301,6 +3309,11 @@
           "support_units": 2
         },
         {
+          "source_id": "yc-companies",
+          "observations": 2,
+          "support_units": 2
+        },
+        {
           "source_id": "chip-huyen",
           "observations": 1,
           "support_units": 1
@@ -3314,11 +3327,6 @@
           "source_id": "the-batch",
           "observations": 1,
           "support_units": 1
-        },
-        {
-          "source_id": "yc-companies",
-          "observations": 1,
-          "support_units": 1
         }
       ],
       "monthly_counts": {
@@ -3327,18 +3335,19 @@
         "2026-06": 18,
         "2026-07": 23,
         "2026-08": 19,
-        "2026-09": 42
+        "2026-09": 43
       },
       "source_concentration": 0.71,
       "maturity": "broadly-corroborated",
       "score": {
-        "recurrence": 10.6,
-        "acceleration": 18.0,
+        "recurrence": 10.8,
+        "acceleration": 18.2,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 78.6
+        "total": 79.0
       },
       "evidence_ids": [
+        "alphasignal:111e6fbcff6d492fbbb3",
         "alphasignal:46d0001edf2628fce6c2",
         "alphasignal:trend:multimodal-generation-and-3d",
         "arxiv:2609.22055v1",
@@ -3384,6 +3393,7 @@
         "github:638513786",
         "lilian-weng:f9519c51d5d4feb4912d",
         "github:155220641",
+        "yc-company:33048",
         "yc-company:32206"
       ]
     },
@@ -3458,11 +3468,11 @@
       "source_concentration": 0.24,
       "maturity": "broadly-corroborated",
       "score": {
-        "recurrence": 6.6,
+        "recurrence": 6.5,
         "acceleration": 25,
         "persistence": 20.8,
         "breadth": 25,
-        "total": 77.4
+        "total": 77.3
       },
       "evidence_ids": [
         "nvidia-developer-blog:837464fefd470eaa54f6",
@@ -3605,11 +3615,11 @@
       "source_concentration": 0.82,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 13.6,
+        "recurrence": 13.5,
         "acceleration": 12.8,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 76.4
+        "total": 76.3
       },
       "evidence_ids": [
         "hn:49784037",
@@ -3671,8 +3681,8 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 16,
-      "support_units": 38,
+      "evidence_count": 17,
+      "support_units": 39,
       "source_count": 8,
       "source_breakdown": [
         {
@@ -3686,12 +3696,12 @@
           "support_units": 7
         },
         {
-          "source_id": "huggingface-papers",
-          "observations": 2,
-          "support_units": 2
+          "source_id": "yc-companies",
+          "observations": 3,
+          "support_units": 3
         },
         {
-          "source_id": "yc-companies",
+          "source_id": "huggingface-papers",
           "observations": 2,
           "support_units": 2
         },
@@ -3724,14 +3734,14 @@
         "2026-08": 4,
         "2026-09": 11
       },
-      "source_concentration": 0.61,
+      "source_concentration": 0.59,
       "maturity": "corroborated",
       "score": {
-        "recurrence": 6.3,
+        "recurrence": 6.4,
         "acceleration": 13.4,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 69.7
+        "total": 69.8
       },
       "evidence_ids": [
         "alphasignal:trend:robotics-and-embodied-ai",
@@ -3749,6 +3759,7 @@
         "yc-job:97722",
         "hf-paper:2506.01844",
         "yc-company:35850",
+        "yc-company:33279",
         "yc-company:32206"
       ]
     },
@@ -3891,11 +3902,11 @@
       "source_concentration": 0.73,
       "maturity": "corroborated",
       "score": {
-        "recurrence": 5.8,
+        "recurrence": 5.7,
         "acceleration": 11.0,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 66.8
+        "total": 66.7
       },
       "evidence_ids": [
         "alphasignal:trend:enterprise-and-vertical-ai",
@@ -4201,11 +4212,11 @@
       "source_concentration": 0.88,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 3.9,
+        "recurrence": 3.8,
         "acceleration": 4.0,
         "persistence": 25.0,
         "breadth": 15,
-        "total": 47.9
+        "total": 47.8
       },
       "evidence_ids": [
         "alphasignal:trend:documents-retrieval-and-structured-data",
@@ -4257,11 +4268,11 @@
       "source_concentration": 0.99,
       "maturity": "emerging",
       "score": {
-        "recurrence": 3.5,
+        "recurrence": 3.4,
         "acceleration": 8.4,
         "persistence": 25.0,
         "breadth": 10,
-        "total": 46.9
+        "total": 46.8
       },
       "evidence_ids": [
         "alphasignal:trend:validation-and-release-bottlenecks",
@@ -12501,7 +12512,7 @@
         "secondary_layer": "tools-skills-integrations",
         "maturity": "broadly-corroborated",
         "source_count": 10,
-        "evidence_count": 46,
+        "evidence_count": 48,
         "project_count": 14,
         "reviewed_project_count": 4,
         "queued_project_count": 1,
@@ -12544,7 +12555,7 @@
         "secondary_layer": "compute-inference-serving",
         "maturity": "corroborated-source-concentrated",
         "source_count": 15,
-        "evidence_count": 92,
+        "evidence_count": 93,
         "project_count": 18,
         "reviewed_project_count": 3,
         "queued_project_count": 7,
@@ -12567,7 +12578,7 @@
         "secondary_layer": "assurance",
         "maturity": "broadly-corroborated",
         "source_count": 27,
-        "evidence_count": 161,
+        "evidence_count": 166,
         "project_count": 27,
         "reviewed_project_count": 3,
         "queued_project_count": 4,
@@ -12745,10 +12756,10 @@
       }
     ],
     "quality": {
-      "classification_coverage": 0.312,
-      "classified_public_records": 546,
-      "unclassified_public_records": 1204,
-      "classification_review_records": 1204,
+      "classification_coverage": 0.311,
+      "classified_public_records": 554,
+      "unclassified_public_records": 1227,
+      "classification_review_records": 1227,
       "recent_sources": 31,
       "aging_sources": 3,
       "historical_sources": 4,
@@ -12785,12 +12796,720 @@
       ],
       "next_step": "Review recurring unmatched clusters before adding vocabulary or proposing a new theme; prefer precise phrases with inspected examples over generic words such as agent, model, or evaluation.",
       "limitation": "This was a taxonomy-gap audit, not a relevance judgment on all 1,162 records. The 108 sampled records left unresolved require further review or an explicit discard policy.",
-      "current_unclassified_records": 1204,
-      "current_classification_coverage": 0.312
+      "current_unclassified_records": 1227,
+      "current_classification_coverage": 0.311
     },
     "freshness_note": "Freshness is based on the latest dated evidence observed for each source, not a direct collector-uptime check. Recent means 30 days or less; aging means 31–90 days; historical means more than 90 days."
   },
   "evidence": [
+    {
+      "id": "bluesky:1278ebf77949:3mwctdxv7pc26",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "\"Hey Opus, I want you to make a Zine by Claude, expressing something fundamental about Claudishness or your perspective. Think the original 2600, Principia Discordia, punk zines, etc....\" Not bad....",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwctdxv7pc26",
+      "published_at": "2026-09-25T03:29:44.757Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwcpe6pdic26",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "In all seriousness, this is a startling achievement for GPT-6 Astra. kenforthewin.github.io/blog/posts/l... (This is GPT-6 Astra beating Nethack on its 3rd try. Nethack is the original roguelike an...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwcpe6pdic26",
+      "published_at": "2026-09-25T02:18:16.941Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwcncl2y5c23",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "heyyyy! Our new article in out in Nature Health: \"Implications of current litigation on the design of AI tools for healthcare delivery and related legal frameworks\" www.nature.com/articles/s44...",
+      "summary": "",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwcncl2y5c23",
+      "published_at": "2026-09-25T01:41:35.314Z",
+      "observed_at": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwckjd66qc2o",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Um, wow? Opus 5.5: \"make the same message much more interesting to a social media audience that loves anime and quick clips and compressed learning\" One shot. Also, please do stay for the closing s...",
+      "summary": "Hey Claude, \"Pick a problem or mystery that obsesses you and solve it as best you can & make a movie we can share on social media about it\" So it took a crac...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwckjd66qc2o",
+      "published_at": "2026-09-25T00:51:40.685Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwcedxq5x22o",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "All of this effort from the AI labs pouring into proofs, but there are so many other interesting problems in other fields For example, this historian used AI to make progress on the cyphers of John...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwcedxq5x22o",
+      "published_at": "2026-09-24T23:01:18.468Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwc2fyzarc2o",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "The cybersecurity threat from agents is increasingly more likely to come from a massed swarm of AIs whose only goal is to penetrate your system to figure out how much you paid for your company t-sh...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwc2fyzarc2o",
+      "published_at": "2026-09-24T20:03:29.505Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwbsy7mgfk2i",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "I propose this as the official replacement for the famous (and now saturated) METR Long Task Horizon chart that used to be in every AI presentation.",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwbsy7mgfk2i",
+      "published_at": "2026-09-24T17:50:30.466Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:e32078afc6278482f336",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "AI labs: turn thousands of never-public production codebases into frontier coding RL Tasks for post-training",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:cc3dc4af9a1c16678c1f",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "OpenAI upgrades ChatGPT Voice with plugins, GPT-6 models, and full work suite",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:bab25bbc8c0db790846f",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Recursive depth trick makes a 7.4B model match GPT-3 13B with 20x less compute",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:90c6d5a5a7443445b951",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "T e s t i n g & t e l e m e t r y c a t c h G P U f a i l u r e s e a r l y",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:878cd0da4350818f61b9",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "New attribution method tops interpretability benchmark by 2.9x, pinpoints Llama refusals to 1% of weights",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:67e6c2c145912f097d63",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "A P r a c t i c a l F r a m e w o r k f o r A I T h r e a t R e a d i n e s s",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:5e4d06e1b5148246bf48",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "pre.dev: AI labs: turn thousands of never-public production codebases into frontier coding RL Tasks for post-training",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:324bb0890b258e7ec4fc",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Anthropic launches Claude Code cloud sessions so your code runs without your laptop",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:2f6d8ed916266407f173",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "The AI Threat Readiness Playbook",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:28e88f0768d976bbfccb",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Claude Opus 5.5 tops visual design benchmarks across all tested models",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:2347f2dcbcf7e9dc1ca2",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Anthropic's Claude discovers a new CRISPR-like enzyme system in virus DNA",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:14a5789fce9a3ced1882",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Open-source text box generates live UI from plain text descriptions",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:111e6fbcff6d492fbbb3",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Unsloth ships quantized GGUF build of Qwen's image generation model",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "multimodal-3d",
+        "open-local-inference"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations",
+        "compute-inference-serving"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwbbytwuuc2k",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "I just got the first copies of my new book, Co-Existence (out October 20) & they look great! Also, there is a fun pre-order bonus: if you pre-order, you get a code to an AI interview that will help...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwbbytwuuc2k",
+      "published_at": "2026-09-24T12:46:38.167Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwb7k3pba22e",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "GPT doesn’t believe in the Kobayashi Maru",
+      "summary": "The latest update in the rogue A.I. saga: OpenAI agents that were supposed to be performing mundane data requests for things like health data, historic photo...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwb7k3pba22e",
+      "published_at": "2026-09-24T12:02:35.513Z",
+      "observed_at": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwa2mjely225",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Stuff is happening quite fast. When asked in September 2025 (yes, 2025), the best superforecasters put the chance of AI resolving a Millennium Problem by September 2026 at 1.7% and (much more optim...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwa2mjely225",
+      "published_at": "2026-09-24T01:01:48.504Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw7zndlglc2j",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "OpenAI accidentally hacked a foreign country. No biggie gizmodo.com/this-situati...",
+      "summary": "",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw7zndlglc2j",
+      "published_at": "2026-09-24T00:44:22.248Z",
+      "observed_at": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw7vpw22g22j",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "Anthropic might have discovered something. Or maybe not. Who knows? Not even Anthropic. www.anthropic.com/news/claude-... This is irresponsible science. The proper course of action is to figure out...",
+      "summary": "",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw7vpw22g22j",
+      "published_at": "2026-09-23T23:34:13.739Z",
+      "observed_at": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mw7n5pr7222t",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "evidence_kind": "public-source-item",
+      "title": "This is a really important graph showing the cost of achieving 25% or 75% scores in various hard math and science benchmarks. Costs are collapsing even as ability is increasing It is also why optim...",
+      "summary": "",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw7n5pr7222t",
+      "published_at": "2026-09-23T21:00:53.248Z",
+      "observed_at": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "projects": [],
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "assurance"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
     {
       "id": "bluesky:b3614927c6a2:3mw7magyrwc2i",
       "source_id": "simon-willison",
@@ -19633,9 +20352,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 728,
         "stars": 2891,
         "pushed_at": "2026-09-22T11:03:45Z",
+        "forks": 728,
         "license": "MIT"
       }
     },
@@ -25293,9 +26012,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 8,
         "pushed_at": "2026-09-19T19:09:14Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -25523,9 +26242,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 16,
         "stars": 636,
-        "pushed_at": "2026-09-19T17:02:33Z"
+        "pushed_at": "2026-09-19T17:02:33Z",
+        "forks": 16
       }
     },
     {
@@ -25726,9 +26445,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 331,
         "stars": 4830,
         "pushed_at": "2026-09-22T05:34:51Z",
+        "forks": 331,
         "license": "Apache-2.0"
       }
     },
@@ -25818,9 +26537,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 38,
         "stars": 255,
         "pushed_at": "2026-09-20T14:54:40Z",
+        "forks": 38,
         "license": "NOASSERTION"
       }
     },
@@ -27745,9 +28464,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 16,
         "stars": 101,
         "pushed_at": "2026-09-21T03:09:13Z",
+        "forks": 16,
         "license": "NOASSERTION"
       }
     },
@@ -29144,9 +29863,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1,
         "stars": 13,
         "pushed_at": "2026-09-22T10:36:56Z",
+        "forks": 1,
         "license": "NOASSERTION"
       }
     },
@@ -30181,9 +30900,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 65,
         "stars": 324,
         "pushed_at": "2026-09-22T11:37:19Z",
+        "forks": 65,
         "license": "CC0-1.0"
       }
     },
@@ -30219,9 +30938,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 29,
         "stars": 354,
         "pushed_at": "2026-09-22T11:21:04Z",
+        "forks": 29,
         "license": "MIT"
       }
     },
@@ -30282,9 +31001,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 30,
         "stars": 415,
         "pushed_at": "2026-09-21T22:07:22Z",
+        "forks": 30,
         "license": "Apache-2.0"
       }
     },
@@ -30781,9 +31500,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 31,
         "stars": 248,
-        "pushed_at": "2026-09-21T05:01:46Z"
+        "pushed_at": "2026-09-21T05:01:46Z",
+        "forks": 31
       }
     },
     {
@@ -31997,9 +32716,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1,
         "stars": 12,
         "pushed_at": "2026-09-21T14:09:19Z",
+        "forks": 1,
         "license": "MIT"
       }
     },
@@ -33087,9 +33806,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24,
         "stars": 328,
         "pushed_at": "2026-09-22T09:33:28Z",
+        "forks": 24,
         "license": "NOASSERTION"
       }
     },
@@ -34269,9 +34988,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 157,
         "stars": 1178,
-        "pushed_at": "2026-09-21T23:35:16Z"
+        "pushed_at": "2026-09-21T23:35:16Z",
+        "forks": 157
       }
     },
     {
@@ -34812,9 +35531,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2,
         "stars": 34,
         "pushed_at": "2026-09-20T11:48:30Z",
+        "forks": 2,
         "license": "MIT"
       }
     },
@@ -34902,9 +35621,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 80,
         "stars": 439,
         "pushed_at": "2026-09-22T09:04:27Z",
+        "forks": 80,
         "license": "MIT"
       }
     },
@@ -34963,9 +35682,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 39,
         "stars": 539,
         "pushed_at": "2026-09-20T22:08:28Z",
+        "forks": 39,
         "license": "MIT"
       }
     },
@@ -35496,9 +36215,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 61,
         "stars": 791,
         "pushed_at": "2026-09-21T17:05:28Z",
+        "forks": 61,
         "license": "MIT"
       }
     },
@@ -35881,9 +36600,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2,
         "stars": 10,
         "pushed_at": "2026-09-16T10:54:22Z",
+        "forks": 2,
         "license": "MIT"
       }
     },
@@ -36550,9 +37269,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 25,
         "stars": 317,
         "pushed_at": "2026-09-21T05:54:55Z",
+        "forks": 25,
         "license": "MIT"
       }
     },
@@ -36807,9 +37526,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 16,
         "pushed_at": "2026-09-16T19:43:23Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -37092,9 +37811,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5,
         "stars": 289,
         "pushed_at": "2026-09-22T03:11:24Z",
+        "forks": 5,
         "license": "MIT"
       }
     },
@@ -37130,9 +37849,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 8,
         "pushed_at": "2026-09-14T08:23:25Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -37574,9 +38293,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5,
         "stars": 55,
         "pushed_at": "2026-09-22T01:24:56Z",
+        "forks": 5,
         "license": "MIT"
       }
     },
@@ -37694,9 +38413,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 23,
-        "pushed_at": "2026-09-13T07:19:10Z"
+        "pushed_at": "2026-09-13T07:19:10Z",
+        "forks": 0
       }
     },
     {
@@ -38045,9 +38764,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 14,
         "stars": 362,
         "pushed_at": "2026-09-18T11:24:32Z",
+        "forks": 14,
         "license": "Apache-2.0"
       }
     },
@@ -38079,9 +38798,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 27,
         "stars": 539,
         "pushed_at": "2026-09-18T03:18:18Z",
+        "forks": 27,
         "license": "MIT"
       }
     },
@@ -38118,9 +38837,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 90,
         "stars": 896,
         "pushed_at": "2026-09-19T08:45:46Z",
+        "forks": 90,
         "license": "MIT"
       }
     },
@@ -38229,9 +38948,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3,
         "stars": 96,
         "pushed_at": "2026-09-16T07:40:41Z",
+        "forks": 3,
         "license": "MIT"
       }
     },
@@ -38568,9 +39287,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 64,
         "stars": 384,
         "pushed_at": "2026-09-21T06:28:44Z",
+        "forks": 64,
         "license": "Apache-2.0"
       }
     },
@@ -38943,9 +39662,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 298,
         "pushed_at": "2026-09-22T04:31:07Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -40731,9 +41450,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 25,
         "stars": 280,
-        "pushed_at": "2026-09-17T15:59:02Z"
+        "pushed_at": "2026-09-17T15:59:02Z",
+        "forks": 25
       }
     },
     {
@@ -41264,9 +41983,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 43,
         "stars": 273,
         "pushed_at": "2026-09-22T02:17:38Z",
+        "forks": 43,
         "license": "AGPL-3.0"
       }
     },
@@ -41588,9 +42307,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 281,
         "stars": 1971,
         "pushed_at": "2026-09-18T11:52:13Z",
+        "forks": 281,
         "license": "NOASSERTION"
       }
     },
@@ -41961,9 +42680,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 21,
         "pushed_at": "2026-09-10T16:29:20Z",
+        "forks": 0,
         "license": "NOASSERTION"
       }
     },
@@ -42234,11 +42953,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
+        "created_at": "17 days",
+        "company": "Vahan",
         "date_basis": "approximate-public-age",
-        "created_at": "15 days",
         "location": "Bengaluru, KA, IN / Bengaluru, Karnataka, IN",
         "batch": "S19",
-        "company": "Vahan",
         "role": "Engineering"
       }
     },
@@ -42295,9 +43014,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1,
         "stars": 53,
         "pushed_at": "2026-09-15T20:52:32Z",
+        "forks": 1,
         "license": "AGPL-3.0"
       }
     },
@@ -42361,9 +43080,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 9,
         "pushed_at": "2026-09-07T14:44:44Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -42454,9 +43173,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1,
         "stars": 11,
         "pushed_at": "2026-09-17T11:21:52Z",
+        "forks": 1,
         "license": "NOASSERTION"
       }
     },
@@ -42493,9 +43212,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 7,
         "stars": 67,
         "pushed_at": "2026-09-22T10:54:25Z",
+        "forks": 7,
         "license": "MIT"
       }
     },
@@ -42668,9 +43387,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 20,
         "pushed_at": "2026-09-18T18:22:21Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -42702,9 +43421,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4,
         "stars": 14,
         "pushed_at": "2026-09-11T17:13:42Z",
+        "forks": 4,
         "license": "GPL-3.0"
       }
     },
@@ -42736,9 +43455,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 67,
         "stars": 366,
         "pushed_at": "2026-09-21T07:37:38Z",
+        "forks": 67,
         "license": "MIT"
       }
     },
@@ -42778,9 +43497,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 52,
         "stars": 712,
         "pushed_at": "2026-09-22T04:33:18Z",
+        "forks": 52,
         "license": "MIT"
       }
     },
@@ -43099,9 +43818,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 28,
         "pushed_at": "2026-09-04T16:58:19Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -43192,9 +43911,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 9,
         "stars": 791,
         "pushed_at": "2026-09-16T01:37:16Z",
+        "forks": 9,
         "license": "Apache-2.0"
       }
     },
@@ -43284,9 +44003,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 10,
-        "pushed_at": "2026-09-04T13:15:37Z"
+        "pushed_at": "2026-09-04T13:15:37Z",
+        "forks": 0
       }
     },
     {
@@ -43539,9 +44258,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1,
         "stars": 12,
         "pushed_at": "2026-09-03T19:46:22Z",
+        "forks": 1,
         "license": "MIT"
       }
     },
@@ -43600,9 +44319,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 13,
         "pushed_at": "2026-09-14T16:24:38Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -43664,9 +44383,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 35,
         "pushed_at": "2026-09-03T08:24:07Z",
+        "forks": 0,
         "license": "Apache-2.0"
       }
     },
@@ -43703,9 +44422,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 21,
         "stars": 37,
         "pushed_at": "2026-09-22T02:28:51Z",
+        "forks": 21,
         "license": "NOASSERTION"
       }
     },
@@ -43867,9 +44586,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5,
         "stars": 223,
-        "pushed_at": "2026-09-17T22:32:29Z"
+        "pushed_at": "2026-09-17T22:32:29Z",
+        "forks": 5
       }
     },
     {
@@ -43958,9 +44677,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 115,
         "stars": 373,
         "pushed_at": "2026-09-19T09:21:49Z",
+        "forks": 115,
         "license": "MIT"
       }
     },
@@ -43992,9 +44711,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 32,
         "stars": 511,
         "pushed_at": "2026-09-09T05:47:19Z",
+        "forks": 32,
         "license": "MIT"
       }
     },
@@ -44058,9 +44777,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 11,
         "stars": 266,
         "pushed_at": "2026-09-03T16:17:23Z",
+        "forks": 11,
         "license": "CC0-1.0"
       }
     },
@@ -44200,9 +44919,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4,
         "stars": 17,
         "pushed_at": "2026-09-19T20:21:45Z",
+        "forks": 4,
         "license": "GPL-2.0"
       }
     },
@@ -44261,9 +44980,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 29,
         "pushed_at": "2026-09-02T08:22:56Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -44352,9 +45071,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 63,
         "stars": 963,
         "pushed_at": "2026-09-21T15:47:32Z",
+        "forks": 63,
         "license": "MIT"
       }
     },
@@ -44470,9 +45189,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5,
         "stars": 19,
         "pushed_at": "2026-09-10T12:33:01Z",
+        "forks": 5,
         "license": "MIT"
       }
     },
@@ -44509,9 +45228,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 35,
         "pushed_at": "2026-09-01T19:45:01Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -44575,9 +45294,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 9,
         "pushed_at": "2026-09-18T19:02:35Z",
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -44773,9 +45492,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24,
         "stars": 316,
         "pushed_at": "2026-09-22T10:01:25Z",
+        "forks": 24,
         "license": "NOASSERTION"
       }
     },
@@ -44807,9 +45526,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 61,
         "stars": 429,
         "pushed_at": "2026-09-20T00:14:16Z",
+        "forks": 61,
         "license": "MIT"
       }
     },
@@ -44839,6 +45558,40 @@
       "verification": {}
     },
     {
+      "id": "yc-job:107397",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Draftwise: Forward Deployed AI Engineer, Backend - West Palm Beach",
+      "summary": "Draftwise is hiring for Forward Deployed AI Engineer, Backend - West Palm Beach. Contract and negotiation AI built for lawyers Role: Engineering. Location: West Palm Beach, FL. Skills: .",
+      "url": "https://www.ycombinator.com/companies/draftwise/jobs/0kxugND-forward-deployed-ai-engineer-backend-west-palm-beach",
+      "published_at": "2026-09-01",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Draftwise"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "24 days",
+        "company": "Draftwise",
+        "date_basis": "approximate-public-age",
+        "location": "West Palm Beach, FL",
+        "batch": "S20",
+        "role": "Engineering"
+      }
+    },
+    {
       "id": "github:1352880998",
       "source_id": "github",
       "source_type": "repository",
@@ -44866,9 +45619,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3,
         "stars": 29,
         "pushed_at": "2026-09-17T22:29:04Z",
+        "forks": 3,
         "license": "Apache-2.0"
       }
     },
@@ -45040,9 +45793,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 7,
         "stars": 246,
         "pushed_at": "2026-09-21T07:25:34Z",
+        "forks": 7,
         "license": "MIT"
       }
     },
@@ -45105,9 +45858,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 7,
         "stars": 11,
         "pushed_at": "2026-09-20T19:50:59Z",
+        "forks": 7,
         "license": "GPL-3.0"
       }
     },
@@ -45171,9 +45924,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 333,
         "stars": 4040,
         "pushed_at": "2026-09-22T11:35:53Z",
+        "forks": 333,
         "license": "Apache-2.0"
       }
     },
@@ -45210,9 +45963,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 240,
         "stars": 1241,
         "pushed_at": "2026-09-07T10:12:07Z",
+        "forks": 240,
         "license": "MIT"
       }
     },
@@ -45249,9 +46002,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5,
         "stars": 27,
         "pushed_at": "2026-09-18T09:07:42Z",
+        "forks": 5,
         "license": "AGPL-3.0"
       }
     },
@@ -45310,9 +46063,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 10,
         "stars": 52,
         "pushed_at": "2026-08-30T10:52:48Z",
+        "forks": 10,
         "license": "MIT"
       }
     },
@@ -45344,9 +46097,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 58,
         "stars": 329,
         "pushed_at": "2026-09-15T12:11:26Z",
+        "forks": 58,
         "license": "AGPL-3.0"
       }
     },
@@ -45386,9 +46139,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24,
         "stars": 237,
         "pushed_at": "2026-09-15T21:06:29Z",
+        "forks": 24,
         "license": "MIT"
       }
     },
@@ -45425,9 +46178,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 6,
         "stars": 85,
         "pushed_at": "2026-09-22T10:00:18Z",
+        "forks": 6,
         "license": "MPL-2.0"
       }
     },
@@ -45464,9 +46217,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 65,
         "stars": 260,
         "pushed_at": "2026-09-22T02:50:22Z",
+        "forks": 65,
         "license": "Apache-2.0"
       }
     },
@@ -45562,9 +46315,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 25,
         "stars": 273,
         "pushed_at": "2026-09-22T10:47:42Z",
+        "forks": 25,
         "license": "AGPL-3.0"
       }
     },
@@ -45601,9 +46354,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 555,
         "stars": 5883,
         "pushed_at": "2026-09-13T03:22:46Z",
+        "forks": 555,
         "license": "MIT"
       }
     },
@@ -45640,9 +46393,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 10,
         "stars": 2907,
         "pushed_at": "2026-09-18T07:18:28Z",
+        "forks": 10,
         "license": "MIT"
       }
     },
@@ -45735,9 +46488,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 25,
         "stars": 390,
         "pushed_at": "2026-09-22T05:42:37Z",
+        "forks": 25,
         "license": "MIT"
       }
     },
@@ -45774,9 +46527,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 184,
         "stars": 2775,
         "pushed_at": "2026-09-20T21:48:13Z",
+        "forks": 184,
         "license": "MIT"
       }
     },
@@ -45860,9 +46613,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 54,
         "stars": 460,
         "pushed_at": "2026-09-22T08:37:28Z",
+        "forks": 54,
         "license": "MIT"
       }
     },
@@ -46006,9 +46759,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 30,
         "stars": 316,
         "pushed_at": "2026-09-15T08:34:41Z",
+        "forks": 30,
         "license": "MIT"
       }
     },
@@ -46044,9 +46797,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 96,
         "stars": 1229,
-        "pushed_at": "2026-09-20T06:34:56Z"
+        "pushed_at": "2026-09-20T06:34:56Z",
+        "forks": 96
       }
     },
     {
@@ -46199,9 +46952,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24,
         "stars": 548,
         "pushed_at": "2026-09-21T23:17:18Z",
+        "forks": 24,
         "license": "NOASSERTION"
       }
     },
@@ -46238,9 +46991,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 37,
         "stars": 644,
         "pushed_at": "2026-09-22T11:38:20Z",
+        "forks": 37,
         "license": "NOASSERTION"
       }
     },
@@ -46299,9 +47052,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24,
         "stars": 89,
-        "pushed_at": "2026-09-08T16:10:18Z"
+        "pushed_at": "2026-09-08T16:10:18Z",
+        "forks": 24
       }
     },
     {
@@ -46341,9 +47094,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3,
         "stars": 15,
         "pushed_at": "2026-08-26T05:57:13Z",
+        "forks": 3,
         "license": "NOASSERTION"
       }
     },
@@ -46381,9 +47134,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 62,
         "stars": 394,
         "pushed_at": "2026-09-11T07:43:39Z",
+        "forks": 62,
         "license": "MIT"
       }
     },
@@ -46415,9 +47168,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 56,
         "stars": 337,
         "pushed_at": "2026-09-22T00:20:25Z",
+        "forks": 56,
         "license": "MIT"
       }
     },
@@ -46489,6 +47242,74 @@
       "verification": {}
     },
     {
+      "id": "yc-job:105591",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Vouch: Senior Product Manager, AI Pod",
+      "summary": "Vouch is hiring for Senior Product Manager, AI Pod. Insurance and risk management tools for startups and growth-stage… Role: Product. Location: Chicago, IL, US. Skills: .",
+      "url": "https://www.ycombinator.com/companies/vouch/jobs/dkBidyx-senior-product-manager-ai-pod",
+      "published_at": "2026-08-26",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Vouch"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "about 1 month",
+        "company": "Vouch",
+        "date_basis": "approximate-public-age",
+        "location": "Chicago, IL, US",
+        "batch": "S19",
+        "role": "Product"
+      }
+    },
+    {
+      "id": "yc-job:105467",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Signadot: Developer Advocate (DevRel)",
+      "summary": "Signadot is hiring for Developer Advocate (DevRel). Scalable validation infrastructure for AI agents Role: Engineering. Location: CA / MX / US / BZ / CR / SV / GT / HN / NI / PA / AG / BS / BB / CU / DM / DO / Granada, AN, ES / Granada, Andalusia, ES / HT / JM / KN / LC / VC / TT / AR / BO / BR / CL / CO / EC / GY / PY / PE / SR / UY / VE / Remote (CA; MX; US; BZ; CR; SV; GT; HN; NI; PA; AG; BS; BB; CU; DM; DO; Granada, AN, ES; Granada, Andalusia, ES; HT; JM; KN; LC; VC; TT; AR; BO; BR; CL; CO; EC; GY; PY; PE; SR; UY; VE). Skills: Kubernetes, Docker, Microservices, AI Agents.",
+      "url": "https://www.ycombinator.com/companies/signadot/jobs/JE44NtI-developer-advocate-devrel",
+      "published_at": "2026-08-26",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Signadot"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-08": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "about 1 month",
+        "company": "Signadot",
+        "date_basis": "approximate-public-age",
+        "location": "CA / MX / US / BZ / CR / SV / GT / HN / NI / PA / AG / BS / BB / CU / DM / DO / Granada, AN, ES / Granada, Andalusia, ES / HT / JM / KN / LC / VC / TT / AR / BO / BR / CL / CO / EC / GY / PY / PE / SR / UY / VE / Remote (CA; MX; US; BZ; CR; SV; GT; HN; NI; PA; AG; BS; BB; CU; DM; DO; Granada, AN, ES; Granada, Andalusia, ES; HT; JM; KN; LC; VC; TT; AR; BO; BR; CL; CO; EC; GY; PY; PE; SR; UY; VE)",
+        "batch": "W20",
+        "role": "Engineering"
+      }
+    },
+    {
       "id": "radical-ventures:ac23f6a635d1537abf1d",
       "source_id": "radical-ventures",
       "source_type": "investor-essay",
@@ -46543,9 +47364,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 28,
-        "pushed_at": "2026-08-27T17:49:38Z"
+        "pushed_at": "2026-08-27T17:49:38Z",
+        "forks": 0
       }
     },
     {
@@ -46608,9 +47429,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 34,
         "stars": 255,
         "pushed_at": "2026-09-21T00:16:44Z",
+        "forks": 34,
         "license": "MIT"
       }
     },
@@ -46667,9 +47488,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 56,
         "stars": 353,
         "pushed_at": "2026-09-15T15:46:56Z",
+        "forks": 56,
         "license": "MIT"
       }
     },
@@ -46706,9 +47527,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 85,
         "stars": 852,
         "pushed_at": "2026-09-14T16:02:26Z",
+        "forks": 85,
         "license": "MIT"
       }
     },
@@ -46797,9 +47618,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 55,
-        "pushed_at": "2026-09-22T10:07:57Z"
+        "pushed_at": "2026-09-22T10:07:57Z",
+        "forks": 0
       }
     },
     {
@@ -46830,9 +47651,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 55,
-        "pushed_at": "2026-09-22T10:53:55Z"
+        "pushed_at": "2026-09-22T10:53:55Z",
+        "forks": 0
       }
     },
     {
@@ -46863,9 +47684,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 55,
-        "pushed_at": "2026-08-25T10:20:59Z"
+        "pushed_at": "2026-08-25T10:20:59Z",
+        "forks": 0
       }
     },
     {
@@ -46896,9 +47717,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 55,
-        "pushed_at": "2026-09-22T07:22:56Z"
+        "pushed_at": "2026-09-22T07:22:56Z",
+        "forks": 0
       }
     },
     {
@@ -46929,9 +47750,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 56,
-        "pushed_at": "2026-09-22T11:05:10Z"
+        "pushed_at": "2026-09-22T11:05:10Z",
+        "forks": 0
       }
     },
     {
@@ -46967,9 +47788,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 56,
-        "pushed_at": "2026-09-22T08:04:29Z"
+        "pushed_at": "2026-09-22T08:04:29Z",
+        "forks": 0
       }
     },
     {
@@ -47000,9 +47821,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 55,
-        "pushed_at": "2026-09-22T11:26:54Z"
+        "pushed_at": "2026-09-22T11:26:54Z",
+        "forks": 0
       }
     },
     {
@@ -47033,9 +47854,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 55,
-        "pushed_at": "2026-09-22T09:51:00Z"
+        "pushed_at": "2026-09-22T09:51:00Z",
+        "forks": 0
       }
     },
     {
@@ -47066,9 +47887,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1,
         "stars": 55,
-        "pushed_at": "2026-08-25T09:01:47Z"
+        "pushed_at": "2026-08-25T09:01:47Z",
+        "forks": 1
       }
     },
     {
@@ -47099,9 +47920,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 55,
-        "pushed_at": "2026-08-25T08:58:33Z"
+        "pushed_at": "2026-08-25T08:58:33Z",
+        "forks": 0
       }
     },
     {
@@ -47132,9 +47953,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 0,
         "stars": 55,
-        "pushed_at": "2026-08-25T08:58:25Z"
+        "pushed_at": "2026-08-25T08:58:25Z",
+        "forks": 0
       }
     },
     {
@@ -47170,9 +47991,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 35,
         "stars": 34,
         "pushed_at": "2026-09-22T03:58:05Z",
+        "forks": 35,
         "license": "MIT"
       }
     },
@@ -47260,9 +48081,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3,
         "stars": 15,
-        "pushed_at": "2026-09-17T19:43:01Z"
+        "pushed_at": "2026-09-17T19:43:01Z",
+        "forks": 3
       }
     },
     {
@@ -47332,9 +48153,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1,
         "stars": 99,
         "pushed_at": "2026-09-09T05:15:42Z",
+        "forks": 1,
         "license": "NOASSERTION"
       }
     },
@@ -47399,9 +48220,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 12,
         "stars": 101,
         "pushed_at": "2026-09-18T08:42:11Z",
+        "forks": 12,
         "license": "MIT"
       }
     },
@@ -47460,9 +48281,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24,
         "stars": 494,
         "pushed_at": "2026-09-04T07:13:36Z",
+        "forks": 24,
         "license": "MIT"
       }
     },
@@ -47500,9 +48321,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 41,
         "stars": 303,
         "pushed_at": "2026-09-20T08:13:26Z",
+        "forks": 41,
         "license": "Apache-2.0"
       }
     },
@@ -47539,9 +48360,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3,
         "stars": 15,
         "pushed_at": "2026-09-12T12:45:29Z",
+        "forks": 3,
         "license": "MIT"
       }
     },
@@ -47689,74 +48510,6 @@
       "verification": {}
     },
     {
-      "id": "yc-job:105591",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Vouch: Senior Product Manager, AI Pod",
-      "summary": "Vouch is hiring for Senior Product Manager, AI Pod. Insurance and risk management tools for startups and growth-stage… Role: Product. Location: Chicago, IL, US. Skills: .",
-      "url": "https://www.ycombinator.com/companies/vouch/jobs/dkBidyx-senior-product-manager-ai-pod",
-      "published_at": "2026-08-24",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Vouch"
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2026-08": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "about 1 month",
-        "location": "Chicago, IL, US",
-        "batch": "S19",
-        "company": "Vouch",
-        "role": "Product"
-      }
-    },
-    {
-      "id": "yc-job:105467",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Signadot: Developer Advocate (DevRel)",
-      "summary": "Signadot is hiring for Developer Advocate (DevRel). Scalable validation infrastructure for AI agents Role: Engineering. Location: CA / MX / US / BZ / CR / SV / GT / HN / NI / PA / AG / BS / BB / CU / DM / DO / Granada, AN, ES / Granada, Andalusia, ES / HT / JM / KN / LC / VC / TT / AR / BO / BR / CL / CO / EC / GY / PY / PE / SR / UY / VE / Remote (CA; MX; US; BZ; CR; SV; GT; HN; NI; PA; AG; BS; BB; CU; DM; DO; Granada, AN, ES; Granada, Andalusia, ES; HT; JM; KN; LC; VC; TT; AR; BO; BR; CL; CO; EC; GY; PY; PE; SR; UY; VE). Skills: Kubernetes, Docker, Microservices, AI Agents.",
-      "url": "https://www.ycombinator.com/companies/signadot/jobs/JE44NtI-developer-advocate-devrel",
-      "published_at": "2026-08-24",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Signadot"
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2026-08": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "about 1 month",
-        "location": "CA / MX / US / BZ / CR / SV / GT / HN / NI / PA / AG / BS / BB / CU / DM / DO / Granada, AN, ES / Granada, Andalusia, ES / HT / JM / KN / LC / VC / TT / AR / BO / BR / CL / CO / EC / GY / PY / PE / SR / UY / VE / Remote (CA; MX; US; BZ; CR; SV; GT; HN; NI; PA; AG; BS; BB; CU; DM; DO; Granada, AN, ES; Granada, Andalusia, ES; HT; JM; KN; LC; VC; TT; AR; BO; BR; CL; CO; EC; GY; PY; PE; SR; UY; VE)",
-        "batch": "W20",
-        "company": "Signadot",
-        "role": "Engineering"
-      }
-    },
-    {
       "id": "github:1344075823",
       "source_id": "github",
       "source_type": "repository",
@@ -47789,9 +48542,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 55,
         "stars": 461,
         "pushed_at": "2026-09-20T22:11:17Z",
+        "forks": 55,
         "license": "MIT"
       }
     },
@@ -47823,9 +48576,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4,
         "stars": 76,
         "pushed_at": "2026-08-24T21:44:32Z",
+        "forks": 4,
         "license": "NOASSERTION"
       }
     },
@@ -47857,9 +48610,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2,
         "stars": 16,
         "pushed_at": "2026-08-25T02:16:20Z",
+        "forks": 2,
         "license": "Apache-2.0"
       }
     },
@@ -47891,9 +48644,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 15,
         "stars": 64,
         "pushed_at": "2026-09-11T09:36:27Z",
+        "forks": 15,
         "license": "MIT"
       }
     },
@@ -47925,9 +48678,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4,
         "stars": 495,
         "pushed_at": "2026-08-25T11:22:16Z",
+        "forks": 4,
         "license": "Apache-2.0"
       }
     },
@@ -47959,9 +48712,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 41,
         "stars": 517,
         "pushed_at": "2026-09-22T11:35:49Z",
+        "forks": 41,
         "license": "MIT"
       }
     },
@@ -47993,9 +48746,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24,
         "stars": 492,
         "pushed_at": "2026-08-27T09:01:41Z",
+        "forks": 24,
         "license": "MIT"
       }
     },
@@ -48032,9 +48785,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 7,
         "stars": 173,
-        "pushed_at": "2026-09-19T10:53:52Z"
+        "pushed_at": "2026-09-19T10:53:52Z",
+        "forks": 7
       }
     },
     {
@@ -48070,9 +48823,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 90,
         "stars": 728,
         "pushed_at": "2026-09-20T00:15:23Z",
+        "forks": 90,
         "license": "AGPL-3.0"
       }
     },
@@ -48110,9 +48863,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 354,
         "stars": 4875,
         "pushed_at": "2026-09-19T14:01:37Z",
+        "forks": 354,
         "license": "Apache-2.0"
       }
     },
@@ -48149,9 +48902,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 206,
         "stars": 2029,
         "pushed_at": "2026-09-17T13:02:00Z",
+        "forks": 206,
         "license": "MIT"
       }
     },
@@ -48189,9 +48942,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24,
         "stars": 336,
         "pushed_at": "2026-09-15T06:08:09Z",
+        "forks": 24,
         "license": "AGPL-3.0"
       }
     },
@@ -48227,9 +48980,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 218,
         "stars": 4302,
         "pushed_at": "2026-09-21T12:44:18Z",
+        "forks": 218,
         "license": "Apache-2.0"
       }
     },
@@ -48266,9 +49019,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 51,
         "stars": 694,
         "pushed_at": "2026-09-09T04:08:08Z",
+        "forks": 51,
         "license": "MIT"
       }
     },
@@ -48367,9 +49120,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 12,
         "stars": 353,
         "pushed_at": "2026-09-20T18:26:34Z",
+        "forks": 12,
         "license": "Apache-2.0"
       }
     },
@@ -48433,9 +49186,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 41,
         "stars": 356,
         "pushed_at": "2026-09-20T19:51:37Z",
+        "forks": 41,
         "license": "NOASSERTION"
       }
     },
@@ -48492,9 +49245,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 47,
         "stars": 742,
         "pushed_at": "2026-09-21T04:59:21Z",
+        "forks": 47,
         "license": "MIT"
       }
     },
@@ -48526,9 +49279,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 37,
         "stars": 330,
         "pushed_at": "2026-09-20T22:23:28Z",
+        "forks": 37,
         "license": "NOASSERTION"
       }
     },
@@ -49480,9 +50233,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 27971,
         "stars": 233013,
         "pushed_at": "2026-09-22T06:16:26Z",
+        "forks": 27971,
         "license": "MIT"
       }
     },
@@ -52142,6 +52895,40 @@
       "verification": {}
     },
     {
+      "id": "yc-job:101589",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Tilt (f.k.a. Delphia): Principal Product Designer",
+      "summary": "Tilt (f.k.a. Delphia) is hiring for Principal Product Designer. GitHub for Investment Methodology Role: Design. Location: Remote (US). Skills: CSS, HTML, Design systems, Figma, AI Agents.",
+      "url": "https://www.ycombinator.com/companies/tilt-fka-delphia/jobs/uX5Z3wu-principal-product-designer",
+      "published_at": "2026-07-27",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Tilt (f.k.a. Delphia)"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-07": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "about 2 months",
+        "company": "Tilt (f.k.a. Delphia)",
+        "date_basis": "approximate-public-age",
+        "location": "Remote (US)",
+        "batch": "W18",
+        "role": "Design"
+      }
+    },
+    {
       "id": "bluesky:4ac5e6fe880a:3mrj3gcohrc2w",
       "source_id": "bluesky-margaret-mitchell",
       "source_type": "expert-social",
@@ -52167,40 +52954,6 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {}
-    },
-    {
-      "id": "yc-job:101589",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Tilt (f.k.a. Delphia): Principal Product Designer",
-      "summary": "Tilt (f.k.a. Delphia) is hiring for Principal Product Designer. GitHub for Investment Methodology Role: Design. Location: Remote (US). Skills: CSS, HTML, Design systems, Figma, AI Agents.",
-      "url": "https://www.ycombinator.com/companies/tilt-fka-delphia/jobs/uX5Z3wu-principal-product-designer",
-      "published_at": "2026-07-25",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Tilt (f.k.a. Delphia)"
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2026-07": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "about 2 months",
-        "location": "Remote (US)",
-        "batch": "W18",
-        "company": "Tilt (f.k.a. Delphia)",
-        "role": "Design"
-      }
     },
     {
       "id": "the-batch:4250bbbde6d356a8a75d",
@@ -53101,9 +53854,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5094,
         "stars": 27013,
         "pushed_at": "2026-09-19T17:08:04Z",
+        "forks": 5094,
         "license": "Apache-2.0"
       }
     },
@@ -53606,9 +54359,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3978,
         "stars": 37006,
         "pushed_at": "2026-09-22T08:22:47Z",
+        "forks": 3978,
         "license": "Apache-2.0"
       }
     },
@@ -53796,6 +54549,79 @@
       "verification": {}
     },
     {
+      "id": "yc-job:97722",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Sorting Robotics: Mechatronics Engineer, VLA Gripping & Assembly (Lead)",
+      "summary": "Sorting Robotics is hiring for Mechatronics Engineer, VLA Gripping & Assembly (Lead). We create automation technology for the cannabis industry. Role: Engineering. Location: Los Angeles, CA, US. Skills: C++, Python, Machine Learning, CAD Design.",
+      "url": "https://www.ycombinator.com/companies/sorting-robotics/jobs/GFPB2XH-mechatronics-engineer-vla-gripping-assembly-lead",
+      "published_at": "2026-06-27",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Sorting Robotics"
+      ],
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "3 months",
+        "company": "Sorting Robotics",
+        "date_basis": "approximate-public-age",
+        "location": "Los Angeles, CA, US",
+        "batch": "W19",
+        "role": "Engineering"
+      }
+    },
+    {
+      "id": "yc-job:96450",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Veryfi, Inc.: Technical Account Manager",
+      "summary": "Veryfi, Inc. is hiring for Technical Account Manager. Document AI. One API Call. Role: Support. Location: BR / Remote (BR). Skills: MySQL, Machine Learning, AI Agents, Multimodal AI.",
+      "url": "https://www.ycombinator.com/companies/veryfi-inc/jobs/EDR6YPh-technical-account-manager",
+      "published_at": "2026-06-27",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Veryfi, Inc."
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-06": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "3 months",
+        "company": "Veryfi, Inc.",
+        "date_basis": "approximate-public-age",
+        "location": "BR / Remote (BR)",
+        "batch": "W17",
+        "role": "Support"
+      }
+    },
+    {
       "id": "the-batch:99b7f97426bc4475aa48",
       "source_id": "the-batch",
       "source_type": "curated-newsletter",
@@ -53825,45 +54651,6 @@
       "verification": {}
     },
     {
-      "id": "yc-job:97722",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Sorting Robotics: Mechatronics Engineer, VLA Gripping & Assembly (Lead)",
-      "summary": "Sorting Robotics is hiring for Mechatronics Engineer, VLA Gripping & Assembly (Lead). We create automation technology for the cannabis industry. Role: Engineering. Location: Los Angeles, CA, US. Skills: C++, Python, Machine Learning, CAD Design.",
-      "url": "https://www.ycombinator.com/companies/sorting-robotics/jobs/GFPB2XH-mechatronics-engineer-vla-gripping-assembly-lead",
-      "published_at": "2026-06-25",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Sorting Robotics"
-      ],
-      "theme_ids": [
-        "robotics-embodied-ai"
-      ],
-      "disposition": "classified",
-      "stack_layers": [
-        "models-capabilities",
-        "tools-skills-integrations"
-      ],
-      "support_count": 1,
-      "monthly_counts": {
-        "2026-06": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "3 months",
-        "location": "Los Angeles, CA, US",
-        "batch": "W19",
-        "company": "Sorting Robotics",
-        "role": "Engineering"
-      }
-    },
-    {
       "id": "yc-job:96512",
       "source_id": "yc-jobs",
       "source_type": "job-posting",
@@ -53889,46 +54676,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "approximate-public-age",
         "created_at": "3 months",
+        "company": "MDalgorithms Inc.",
+        "date_basis": "approximate-public-age",
         "location": "GB / US / CA / Remote (GB; US; CA)",
         "batch": "W17",
-        "company": "MDalgorithms Inc.",
         "role": "Marketing"
-      }
-    },
-    {
-      "id": "yc-job:96450",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Veryfi, Inc.: Technical Account Manager",
-      "summary": "Veryfi, Inc. is hiring for Technical Account Manager. Document AI. One API Call. Role: Support. Location: BR / Remote (BR). Skills: MySQL, Machine Learning, AI Agents, Multimodal AI.",
-      "url": "https://www.ycombinator.com/companies/veryfi-inc/jobs/EDR6YPh-technical-account-manager",
-      "published_at": "2026-06-25",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Veryfi, Inc."
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2026-06": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "3 months",
-        "location": "BR / Remote (BR)",
-        "batch": "W17",
-        "company": "Veryfi, Inc.",
-        "role": "Support"
       }
     },
     {
@@ -54525,9 +55278,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 7715,
         "stars": 144067,
         "pushed_at": "2026-09-14T14:34:56Z",
+        "forks": 7715,
         "license": "MIT"
       }
     },
@@ -55881,9 +56634,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2164,
         "stars": 22627,
         "pushed_at": "2026-09-20T07:51:19Z",
+        "forks": 2164,
         "license": "MIT"
       }
     },
@@ -56238,9 +56991,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 11329,
         "stars": 97569,
         "pushed_at": "2026-09-22T11:38:24Z",
+        "forks": 11329,
         "license": "Apache-2.0"
       }
     },
@@ -56593,9 +57346,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4519,
         "stars": 30225,
         "pushed_at": "2026-09-22T02:53:09Z",
+        "forks": 4519,
         "license": "MIT"
       }
     },
@@ -56632,9 +57385,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 7566,
         "stars": 59217,
         "pushed_at": "2026-09-22T11:24:39Z",
+        "forks": 7566,
         "license": "MIT"
       }
     },
@@ -56673,9 +57426,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 11623,
         "stars": 120378,
         "pushed_at": "2026-09-20T17:53:37Z",
+        "forks": 11623,
         "license": "Apache-2.0"
       }
     },
@@ -56743,9 +57496,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5511,
         "stars": 33822,
         "pushed_at": "2026-09-22T04:06:04Z",
+        "forks": 5511,
         "license": "MIT"
       }
     },
@@ -56804,6 +57557,40 @@
       "verification": {}
     },
     {
+      "id": "yc-job:92246",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Turing Labs Inc.: Senior Software Engineer - Former founder preferred",
+      "summary": "Turing Labs Inc. is hiring for Senior Software Engineer - Former founder preferred. AI for R&D of consumer brands like P&G to develop better products Role: Engineering. Location: Palo Alto, CA / San Francisco, CA, US. Skills: Amazon Web Services (AWS), PostgreSQL, React, TypeScript, Natural Language Processing, LangChain.",
+      "url": "https://www.ycombinator.com/companies/turing-labs-inc/jobs/Z8ebn77-senior-software-engineer-former-founder-preferred",
+      "published_at": "2026-03-29",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Turing Labs Inc."
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-03": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "6 months",
+        "company": "Turing Labs Inc.",
+        "date_basis": "approximate-public-age",
+        "location": "Palo Alto, CA / San Francisco, CA, US",
+        "batch": "W20",
+        "role": "Engineering"
+      }
+    },
+    {
       "id": "the-batch:d405fea75a948dc62416",
       "source_id": "the-batch",
       "source_type": "curated-newsletter",
@@ -56827,40 +57614,6 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {}
-    },
-    {
-      "id": "yc-job:92246",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Turing Labs Inc.: Senior Software Engineer - Former founder preferred",
-      "summary": "Turing Labs Inc. is hiring for Senior Software Engineer - Former founder preferred. AI for R&D of consumer brands like P&G to develop better products Role: Engineering. Location: Palo Alto, CA / San Francisco, CA, US. Skills: Amazon Web Services (AWS), PostgreSQL, React, TypeScript, Natural Language Processing, LangChain.",
-      "url": "https://www.ycombinator.com/companies/turing-labs-inc/jobs/Z8ebn77-senior-software-engineer-former-founder-preferred",
-      "published_at": "2026-03-27",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Turing Labs Inc."
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2026-03": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "6 months",
-        "location": "Palo Alto, CA / San Francisco, CA, US",
-        "batch": "W20",
-        "company": "Turing Labs Inc.",
-        "role": "Engineering"
-      }
     },
     {
       "id": "github:1190778303",
@@ -56890,9 +57643,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 659,
         "stars": 4768,
         "pushed_at": "2026-09-21T09:33:34Z",
+        "forks": 659,
         "license": "CC0-1.0"
       }
     },
@@ -56961,9 +57714,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 567,
         "stars": 3154,
         "pushed_at": "2026-09-19T08:22:32Z",
+        "forks": 567,
         "license": "Apache-2.0"
       }
     },
@@ -57028,9 +57781,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 9721,
         "stars": 55210,
         "pushed_at": "2026-09-07T11:42:35Z",
+        "forks": 9721,
         "license": "MIT"
       }
     },
@@ -57101,9 +57854,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 7056,
         "stars": 83695,
         "pushed_at": "2026-09-12T05:31:43Z",
+        "forks": 7056,
         "license": "MIT"
       }
     },
@@ -57223,9 +57976,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4587,
         "stars": 49687,
         "pushed_at": "2026-09-22T02:01:29Z",
+        "forks": 4587,
         "license": "Apache-2.0"
       }
     },
@@ -57377,9 +58130,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4021,
         "stars": 33156,
         "pushed_at": "2026-08-31T04:32:44Z",
+        "forks": 4021,
         "license": "Apache-2.0"
       }
     },
@@ -57418,9 +58171,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3604,
         "stars": 44108,
         "pushed_at": "2026-09-22T01:04:09Z",
+        "forks": 3604,
         "license": "MIT"
       }
     },
@@ -57488,9 +58241,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3951,
         "stars": 40029,
         "pushed_at": "2026-09-22T09:11:15Z",
+        "forks": 3951,
         "license": "GPL-3.0"
       }
     },
@@ -57601,9 +58354,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 187,
         "stars": 1798,
         "pushed_at": "2026-09-21T08:26:02Z",
+        "forks": 187,
         "license": "MIT"
       }
     },
@@ -57689,6 +58442,40 @@
       "verification": {}
     },
     {
+      "id": "yc-job:88769",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Taktile: Senior Solutions Engineer",
+      "summary": "Taktile is hiring for Senior Solutions Engineer. Transform your decision-making with reliable AI agents in weeks, not… Role: Engineering. Location: New York Office. Skills: Python.",
+      "url": "https://www.ycombinator.com/companies/taktile/jobs/DFyRz0j-senior-solutions-engineer",
+      "published_at": "2026-01-28",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Taktile"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-01": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "8 months",
+        "company": "Taktile",
+        "date_basis": "approximate-public-age",
+        "location": "New York Office",
+        "batch": "S20",
+        "role": "Engineering"
+      }
+    },
+    {
       "id": "sequoia-essays:d6b89b5faf083623aeab",
       "source_id": "sequoia-essays",
       "source_type": "investor-essay",
@@ -57714,40 +58501,6 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {}
-    },
-    {
-      "id": "yc-job:88769",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Taktile: Senior Solutions Engineer",
-      "summary": "Taktile is hiring for Senior Solutions Engineer. Transform your decision-making with reliable AI agents in weeks, not… Role: Engineering. Location: New York Office. Skills: Python.",
-      "url": "https://www.ycombinator.com/companies/taktile/jobs/DFyRz0j-senior-solutions-engineer",
-      "published_at": "2026-01-26",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Taktile"
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2026-01": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "8 months",
-        "location": "New York Office",
-        "batch": "S20",
-        "company": "Taktile",
-        "role": "Engineering"
-      }
     },
     {
       "id": "yc-essays:4ce56c616ea8aa59b22d",
@@ -57864,9 +58617,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 39591,
         "stars": 265030,
         "pushed_at": "2026-09-21T19:00:51Z",
+        "forks": 39591,
         "license": "MIT"
       }
     },
@@ -57935,9 +58688,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 6810,
         "stars": 46760,
         "pushed_at": "2026-09-22T07:16:49Z",
+        "forks": 6810,
         "license": "MIT"
       }
     },
@@ -58086,10 +58839,78 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2986,
         "stars": 38408,
         "pushed_at": "2026-09-22T11:39:31Z",
+        "forks": 2986,
         "license": "AGPL-3.0"
+      }
+    },
+    {
+      "id": "yc-job:88124",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Nextera Robotics | DIDGE.ai: Wireless Network Engineer",
+      "summary": "Nextera Robotics | DIDGE.ai is hiring for Wireless Network Engineer. AI-native Robotics Role: Engineering. Location: Boston, MA, US. Skills: .",
+      "url": "https://www.ycombinator.com/companies/nextera-robotics-didgeai/jobs/80V6wga-wireless-network-engineer",
+      "published_at": "2025-12-29",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Nextera Robotics | DIDGE.ai"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-12": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "9 months",
+        "company": "Nextera Robotics | DIDGE.ai",
+        "date_basis": "approximate-public-age",
+        "location": "Boston, MA, US",
+        "batch": "S20",
+        "role": "Engineering"
+      }
+    },
+    {
+      "id": "yc-job:87990",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Overview: Head of Technical Special Projects",
+      "summary": "Overview is hiring for Head of Technical Special Projects. Reshaping industrial quality with AI, hardware, and software Role: Operations. Location: San Francisco, CA, US. Skills: .",
+      "url": "https://www.ycombinator.com/companies/overview/jobs/EtSRaQQ-head-of-technical-special-projects",
+      "published_at": "2025-12-29",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Overview"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2025-12": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "9 months",
+        "company": "Overview",
+        "date_basis": "approximate-public-age",
+        "location": "San Francisco, CA, US",
+        "batch": "W19",
+        "role": "Operations"
       }
     },
     {
@@ -58124,78 +58945,10 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5048,
         "stars": 40162,
         "pushed_at": "2026-09-22T01:55:20Z",
+        "forks": 5048,
         "license": "Apache-2.0"
-      }
-    },
-    {
-      "id": "yc-job:88124",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Nextera Robotics | DIDGE.ai: Wireless Network Engineer",
-      "summary": "Nextera Robotics | DIDGE.ai is hiring for Wireless Network Engineer. AI-native Robotics Role: Engineering. Location: Boston, MA, US. Skills: .",
-      "url": "https://www.ycombinator.com/companies/nextera-robotics-didgeai/jobs/80V6wga-wireless-network-engineer",
-      "published_at": "2025-12-27",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Nextera Robotics | DIDGE.ai"
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2025-12": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "9 months",
-        "location": "Boston, MA, US",
-        "batch": "S20",
-        "company": "Nextera Robotics | DIDGE.ai",
-        "role": "Engineering"
-      }
-    },
-    {
-      "id": "yc-job:87990",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Overview: Head of Technical Special Projects",
-      "summary": "Overview is hiring for Head of Technical Special Projects. Reshaping industrial quality with AI, hardware, and software Role: Operations. Location: San Francisco, CA, US. Skills: .",
-      "url": "https://www.ycombinator.com/companies/overview/jobs/EtSRaQQ-head-of-technical-special-projects",
-      "published_at": "2025-12-27",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Overview"
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2025-12": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "9 months",
-        "location": "San Francisco, CA, US",
-        "batch": "W19",
-        "company": "Overview",
-        "role": "Operations"
       }
     },
     {
@@ -58422,9 +59175,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5709,
         "stars": 69280,
         "pushed_at": "2026-09-22T10:38:17Z",
+        "forks": 5709,
         "license": "NOASSERTION"
       }
     },
@@ -58493,9 +59246,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 82087,
         "stars": 390241,
         "pushed_at": "2026-09-22T11:41:37Z",
+        "forks": 82087,
         "license": "NOASSERTION"
       }
     },
@@ -58532,9 +59285,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1433,
         "stars": 13468,
         "pushed_at": "2026-09-22T08:05:00Z",
+        "forks": 1433,
         "license": "NOASSERTION"
       }
     },
@@ -58850,9 +59603,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3699,
         "stars": 34721,
         "pushed_at": "2026-09-21T15:46:43Z",
+        "forks": 3699,
         "license": "MIT"
       }
     },
@@ -58933,9 +59686,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4176,
         "stars": 46049,
         "pushed_at": "2026-09-21T09:27:50Z",
+        "forks": 4176,
         "license": "MIT"
       }
     },
@@ -58973,9 +59726,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3692,
         "stars": 26209,
         "pushed_at": "2026-08-30T09:46:16Z",
+        "forks": 3692,
         "license": "MIT"
       }
     },
@@ -59032,9 +59785,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 159,
         "stars": 1254,
-        "pushed_at": "2026-09-08T12:50:39Z"
+        "pushed_at": "2026-09-08T12:50:39Z",
+        "forks": 159
       }
     },
     {
@@ -59092,9 +59845,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 8155,
         "stars": 58216,
         "pushed_at": "2026-09-07T20:06:43Z",
+        "forks": 8155,
         "license": "MIT"
       }
     },
@@ -59126,9 +59879,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 24865,
         "stars": 154081,
         "pushed_at": "2026-09-22T02:38:53Z",
+        "forks": 24865,
         "license": "MIT"
       }
     },
@@ -59224,9 +59977,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 393,
         "stars": 2507,
-        "pushed_at": "2026-09-18T21:33:39Z"
+        "pushed_at": "2026-09-18T21:33:39Z",
+        "forks": 393
       }
     },
     {
@@ -59412,9 +60165,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4302,
         "stars": 37882,
         "pushed_at": "2026-09-02T12:12:35Z",
+        "forks": 4302,
         "license": "Apache-2.0"
       }
     },
@@ -59560,9 +60313,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 8350,
         "stars": 94446,
         "pushed_at": "2026-09-22T03:14:26Z",
+        "forks": 8350,
         "license": "Apache-2.0"
       }
     },
@@ -59594,9 +60347,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 6136,
         "stars": 54454,
         "pushed_at": "2026-09-03T09:04:46Z",
+        "forks": 6136,
         "license": "MIT"
       }
     },
@@ -59720,9 +60473,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 13731,
         "stars": 108395,
         "pushed_at": "2026-09-22T10:22:06Z",
+        "forks": 13731,
         "license": "MIT"
       }
     },
@@ -59795,9 +60548,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5176,
         "stars": 47513,
         "pushed_at": "2026-09-22T09:51:04Z",
+        "forks": 5176,
         "license": "NOASSERTION"
       }
     },
@@ -59905,9 +60658,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4169,
         "stars": 29647,
         "pushed_at": "2026-09-22T08:35:26Z",
+        "forks": 4169,
         "license": "MIT"
       }
     },
@@ -59945,9 +60698,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4250,
         "stars": 39864,
         "pushed_at": "2026-09-21T01:09:57Z",
+        "forks": 4250,
         "license": "MIT"
       }
     },
@@ -60015,9 +60768,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 382,
         "stars": 10307,
         "pushed_at": "2026-09-22T09:21:48Z",
+        "forks": 382,
         "license": "NOASSERTION"
       }
     },
@@ -60173,9 +60926,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 12452,
         "stars": 77424,
         "pushed_at": "2026-08-26T16:38:22Z",
+        "forks": 12452,
         "license": "MIT"
       }
     },
@@ -60207,9 +60960,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 400,
         "stars": 1717,
         "pushed_at": "2026-08-25T11:12:30Z",
+        "forks": 400,
         "license": "MIT"
       }
     },
@@ -60522,9 +61275,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1170,
         "stars": 12951,
         "pushed_at": "2026-09-19T02:21:16Z",
+        "forks": 1170,
         "license": "MIT"
       }
     },
@@ -60556,9 +61309,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 12542,
         "stars": 94733,
         "pushed_at": "2026-09-22T06:26:01Z",
+        "forks": 12542,
         "license": "MIT"
       }
     },
@@ -60615,9 +61368,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 394,
         "stars": 2881,
         "pushed_at": "2026-09-20T20:12:46Z",
+        "forks": 394,
         "license": "MIT"
       }
     },
@@ -60655,9 +61408,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 8667,
         "stars": 73044,
         "pushed_at": "2026-09-22T06:48:40Z",
+        "forks": 8667,
         "license": "MIT"
       }
     },
@@ -60906,9 +61659,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 11454,
         "stars": 82844,
         "pushed_at": "2026-09-22T10:39:19Z",
+        "forks": 11454,
         "license": "MIT"
       }
     },
@@ -61022,9 +61775,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 381,
         "stars": 5819,
         "pushed_at": "2026-09-06T19:21:31Z",
+        "forks": 381,
         "license": "NOASSERTION"
       }
     },
@@ -61122,9 +61875,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4747,
         "stars": 54424,
         "pushed_at": "2026-09-22T09:11:02Z",
+        "forks": 4747,
         "license": "NOASSERTION"
       }
     },
@@ -61188,9 +61941,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 729,
         "stars": 6493,
         "pushed_at": "2026-09-22T08:05:09Z",
+        "forks": 729,
         "license": "Apache-2.0"
       }
     },
@@ -61252,9 +62005,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2024,
         "stars": 29705,
         "pushed_at": "2026-09-22T10:43:52Z",
+        "forks": 2024,
         "license": "NOASSERTION"
       }
     },
@@ -61291,9 +62044,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 134,
         "stars": 2489,
         "pushed_at": "2026-09-14T10:42:59Z",
+        "forks": 134,
         "license": "MIT"
       }
     },
@@ -61539,9 +62292,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 991,
         "stars": 10766,
         "pushed_at": "2026-09-22T09:19:49Z",
+        "forks": 991,
         "license": "Apache-2.0"
       }
     },
@@ -61573,9 +62326,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1704,
         "stars": 10866,
         "pushed_at": "2026-09-09T01:45:07Z",
+        "forks": 1704,
         "license": "Apache-2.0"
       }
     },
@@ -61879,9 +62632,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 16467,
         "stars": 95414,
         "pushed_at": "2026-09-21T04:51:35Z",
+        "forks": 16467,
         "license": "MIT"
       }
     },
@@ -61943,9 +62696,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2277,
         "stars": 6754,
         "pushed_at": "2026-09-17T13:45:56Z",
+        "forks": 2277,
         "license": "Apache-2.0"
       }
     },
@@ -62066,9 +62819,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 11676,
         "stars": 90544,
         "pushed_at": "2026-09-03T01:42:26Z",
+        "forks": 11676,
         "license": "NOASSERTION"
       }
     },
@@ -62155,9 +62908,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4574,
         "stars": 23549,
         "pushed_at": "2026-09-22T02:10:26Z",
+        "forks": 4574,
         "license": "Apache-2.0"
       }
     },
@@ -62259,9 +63012,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5610,
         "stars": 39813,
         "pushed_at": "2026-09-22T11:39:30Z",
+        "forks": 5610,
         "license": "MIT"
       }
     },
@@ -62273,7 +63026,7 @@
       "title": "SnapMagic: Head of Customer Success",
       "summary": "SnapMagic is hiring for Head of Customer Success. AI-assisted electronics design Role: Sales. Location: Redwood City, CA, US / San Francisco, CA, US / Palo Alto, CA, US / San Jose, CA, US / San Mateo, CA, US. Skills: .",
       "url": "https://www.ycombinator.com/companies/snapmagic/jobs/eriIncs-head-of-customer-success",
-      "published_at": "2024-09-23",
+      "published_at": "2024-09-25",
       "observed_at": "",
       "authors": [],
       "projects": [
@@ -62291,11 +63044,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "approximate-public-age",
         "created_at": "about 2 years",
+        "company": "SnapMagic",
+        "date_basis": "approximate-public-age",
         "location": "Redwood City, CA, US / San Francisco, CA, US / Palo Alto, CA, US / San Jose, CA, US / San Mateo, CA, US",
         "batch": "S15",
-        "company": "SnapMagic",
         "role": "Sales"
       }
     },
@@ -62382,9 +63135,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 75,
         "stars": 1403,
         "pushed_at": "2026-09-04T13:43:11Z",
+        "forks": 75,
         "license": "MIT"
       }
     },
@@ -62446,9 +63199,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3163,
         "stars": 31072,
         "pushed_at": "2026-09-21T19:49:00Z",
+        "forks": 3163,
         "license": "Apache-2.0"
       }
     },
@@ -62713,9 +63466,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1936,
         "stars": 11889,
         "pushed_at": "2026-09-22T10:16:13Z",
+        "forks": 1936,
         "license": "Apache-2.0"
       }
     },
@@ -62772,9 +63525,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 97,
         "stars": 1598,
-        "pushed_at": "2026-08-31T09:08:41Z"
+        "pushed_at": "2026-08-31T09:08:41Z",
+        "forks": 97
       }
     },
     {
@@ -62836,9 +63589,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 524,
         "stars": 3882,
         "pushed_at": "2026-09-09T00:15:59Z",
+        "forks": 524,
         "license": "MIT"
       }
     },
@@ -62875,9 +63628,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 20475,
         "stars": 139389,
         "pushed_at": "2026-09-22T07:39:59Z",
+        "forks": 20475,
         "license": "Apache-2.0"
       }
     },
@@ -62914,9 +63667,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 996,
         "stars": 8975,
         "pushed_at": "2026-09-21T01:46:58Z",
+        "forks": 996,
         "license": "Apache-2.0"
       }
     },
@@ -63008,9 +63761,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3798,
         "stars": 36066,
         "pushed_at": "2026-09-22T05:17:16Z",
+        "forks": 3798,
         "license": "MIT"
       }
     },
@@ -63166,9 +63919,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5957,
         "stars": 29521,
         "pushed_at": "2026-09-17T23:53:08Z",
+        "forks": 5957,
         "license": "MIT"
       }
     },
@@ -63230,9 +63983,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 771,
         "stars": 11212,
         "pushed_at": "2026-09-21T13:38:23Z",
+        "forks": 771,
         "license": "Apache-2.0"
       }
     },
@@ -63296,9 +64049,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 9059,
         "stars": 36321,
         "pushed_at": "2026-09-22T11:08:50Z",
+        "forks": 9059,
         "license": "Apache-2.0"
       }
     },
@@ -63330,9 +64083,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 149,
         "stars": 1438,
-        "pushed_at": "2026-09-20T14:27:00Z"
+        "pushed_at": "2026-09-20T14:27:00Z",
+        "forks": 149
       }
     },
     {
@@ -63363,9 +64116,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1302,
         "stars": 13165,
         "pushed_at": "2026-09-21T03:39:57Z",
+        "forks": 1302,
         "license": "Apache-2.0"
       }
     },
@@ -63397,9 +64150,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 60,
         "stars": 1330,
-        "pushed_at": "2026-09-16T06:18:48Z"
+        "pushed_at": "2026-09-16T06:18:48Z",
+        "forks": 60
       }
     },
     {
@@ -63566,9 +64319,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3084,
         "stars": 30905,
         "pushed_at": "2026-09-22T11:41:47Z",
+        "forks": 3084,
         "license": "Apache-2.0"
       }
     },
@@ -63632,9 +64385,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1022,
         "stars": 10032,
         "pushed_at": "2026-09-17T05:49:37Z",
+        "forks": 1022,
         "license": "Apache-2.0"
       }
     },
@@ -63674,9 +64427,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5885,
         "stars": 68400,
         "pushed_at": "2026-09-20T00:07:23Z",
+        "forks": 5885,
         "license": "Apache-2.0"
       }
     },
@@ -63739,9 +64492,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 63311,
         "stars": 120261,
         "pushed_at": "2026-09-18T13:48:35Z",
+        "forks": 63311,
         "license": "MIT"
       }
     },
@@ -63773,9 +64526,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 867,
         "stars": 9582,
         "pushed_at": "2026-09-21T05:05:34Z",
+        "forks": 867,
         "license": "Apache-2.0"
       }
     },
@@ -63832,9 +64585,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 132,
         "stars": 1875,
         "pushed_at": "2026-08-27T15:48:21Z",
+        "forks": 132,
         "license": "MIT"
       }
     },
@@ -63873,9 +64626,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 9179,
         "stars": 74965,
         "pushed_at": "2026-09-14T08:09:48Z",
+        "forks": 9179,
         "license": "Apache-2.0"
       }
     },
@@ -63938,9 +64691,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1023,
         "stars": 7194,
         "pushed_at": "2026-09-22T02:20:44Z",
+        "forks": 1023,
         "license": "Apache-2.0"
       }
     },
@@ -63977,9 +64730,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5287,
         "stars": 29024,
         "pushed_at": "2026-09-19T19:02:56Z",
+        "forks": 5287,
         "license": "MIT"
       }
     },
@@ -64011,9 +64764,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1504,
         "stars": 13677,
         "pushed_at": "2026-09-14T10:24:06Z",
+        "forks": 1504,
         "license": "Apache-2.0"
       }
     },
@@ -64049,9 +64802,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1384,
         "stars": 19159,
         "pushed_at": "2026-09-15T17:55:44Z",
+        "forks": 1384,
         "license": "Apache-2.0"
       }
     },
@@ -64083,9 +64836,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 791,
         "stars": 6190,
-        "pushed_at": "2026-09-22T11:26:55Z"
+        "pushed_at": "2026-09-22T11:26:55Z",
+        "forks": 791
       }
     },
     {
@@ -64146,9 +64899,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 318,
         "stars": 3440,
-        "pushed_at": "2026-09-08T00:43:01Z"
+        "pushed_at": "2026-09-08T00:43:01Z",
+        "forks": 318
       }
     },
     {
@@ -64179,9 +64932,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2156,
         "stars": 18282,
         "pushed_at": "2026-09-22T10:38:48Z",
+        "forks": 2156,
         "license": "MIT"
       }
     },
@@ -64267,9 +65020,43 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 343,
         "stars": 3792,
-        "pushed_at": "2026-09-20T08:31:07Z"
+        "pushed_at": "2026-09-20T08:31:07Z",
+        "forks": 343
+      }
+    },
+    {
+      "id": "yc-job:55696",
+      "source_id": "yc-jobs",
+      "source_type": "job-posting",
+      "evidence_kind": "public-source-item",
+      "title": "Numero: Senior Software Engineer, Backend",
+      "summary": "Numero is hiring for Senior Software Engineer, Backend. Modern fundraising software for political campaigns and nonprofits. Role: Engineering. Location: US / Remote (US). Skills: GraphQL, PostgreSQL, Ruby, Ruby on Rails, Elasticsearch, AI Agents.",
+      "url": "https://www.ycombinator.com/companies/numero/jobs/bLIP9PG-senior-software-engineer-backend",
+      "published_at": "2022-09-26",
+      "observed_at": "",
+      "authors": [],
+      "projects": [
+        "Numero"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2022-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "created_at": "about 4 years",
+        "company": "Numero",
+        "date_basis": "approximate-public-age",
+        "location": "US / Remote (US)",
+        "batch": "W19",
+        "role": "Engineering"
       }
     },
     {
@@ -64305,44 +65092,10 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 6187,
         "stars": 53854,
         "pushed_at": "2026-09-22T05:23:39Z",
+        "forks": 6187,
         "license": "MIT"
-      }
-    },
-    {
-      "id": "yc-job:55696",
-      "source_id": "yc-jobs",
-      "source_type": "job-posting",
-      "evidence_kind": "public-source-item",
-      "title": "Numero: Senior Software Engineer, Backend",
-      "summary": "Numero is hiring for Senior Software Engineer, Backend. Modern fundraising software for political campaigns and nonprofits. Role: Engineering. Location: US / Remote (US). Skills: GraphQL, PostgreSQL, Ruby, Ruby on Rails, Elasticsearch, AI Agents.",
-      "url": "https://www.ycombinator.com/companies/numero/jobs/bLIP9PG-senior-software-engineer-backend",
-      "published_at": "2022-09-24",
-      "observed_at": "",
-      "authors": [],
-      "projects": [
-        "Numero"
-      ],
-      "theme_ids": [],
-      "disposition": "classification-review",
-      "stack_layers": [],
-      "support_count": 1,
-      "monthly_counts": {
-        "2022-09": 1
-      },
-      "provenance": {
-        "mode": "direct-public-metadata",
-        "description": "Normalized from the linked public source."
-      },
-      "verification": {
-        "date_basis": "approximate-public-age",
-        "created_at": "about 4 years",
-        "location": "US / Remote (US)",
-        "batch": "W19",
-        "company": "Numero",
-        "role": "Engineering"
       }
     },
     {
@@ -64404,9 +65157,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 10369,
         "stars": 47076,
         "pushed_at": "2026-09-22T03:50:38Z",
+        "forks": 10369,
         "license": "MIT"
       }
     },
@@ -64438,9 +65191,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1061,
         "stars": 15964,
         "pushed_at": "2026-09-21T21:49:38Z",
+        "forks": 1061,
         "license": "Apache-2.0"
       }
     },
@@ -64547,9 +65300,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1360,
         "stars": 33053,
         "pushed_at": "2026-09-14T23:11:22Z",
+        "forks": 1360,
         "license": "NOASSERTION"
       }
     },
@@ -64735,9 +65488,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3153,
         "stars": 23815,
         "pushed_at": "2026-09-17T14:16:12Z",
+        "forks": 3153,
         "license": "CC-BY-SA-4.0"
       }
     },
@@ -64794,9 +65547,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 520,
         "stars": 5948,
         "pushed_at": "2026-09-22T01:02:07Z",
+        "forks": 520,
         "license": "MIT"
       }
     },
@@ -64833,9 +65586,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 299,
         "stars": 2605,
-        "pushed_at": "2026-09-19T09:43:00Z"
+        "pushed_at": "2026-09-19T09:43:00Z",
+        "forks": 299
       }
     },
     {
@@ -65002,9 +65755,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 1206,
         "stars": 11068,
         "pushed_at": "2026-09-21T15:07:23Z",
+        "forks": 1206,
         "license": "Apache-2.0"
       }
     },
@@ -65084,9 +65837,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 5221,
         "stars": 26757,
-        "pushed_at": "2026-09-22T04:42:21Z"
+        "pushed_at": "2026-09-22T04:42:21Z",
+        "forks": 5221
       }
     },
     {
@@ -65147,9 +65900,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 315,
         "stars": 2396,
         "pushed_at": "2026-09-22T03:20:53Z",
+        "forks": 315,
         "license": "MIT"
       }
     },
@@ -65215,9 +65968,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2448,
         "stars": 16127,
         "pushed_at": "2026-09-22T10:58:03Z",
+        "forks": 2448,
         "license": "Apache-2.0"
       }
     },
@@ -65249,9 +66002,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4548,
         "stars": 17975,
         "pushed_at": "2026-09-22T11:11:07Z",
+        "forks": 4548,
         "license": "NOASSERTION"
       }
     },
@@ -65288,9 +66041,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 34654,
         "stars": 166513,
         "pushed_at": "2026-09-22T11:36:13Z",
+        "forks": 34654,
         "license": "Apache-2.0"
       }
     },
@@ -65326,9 +66079,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3394,
         "stars": 10896,
         "pushed_at": "2026-09-22T11:27:21Z",
+        "forks": 3394,
         "license": "Apache-2.0"
       }
     },
@@ -65360,9 +66113,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2604,
         "stars": 20942,
         "pushed_at": "2026-09-06T16:54:10Z",
+        "forks": 2604,
         "license": "MIT"
       }
     },
@@ -65402,9 +66155,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 6244,
         "stars": 39762,
         "pushed_at": "2026-09-16T21:37:33Z",
+        "forks": 6244,
         "license": "MIT"
       }
     },
@@ -65441,9 +66194,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 4500,
         "stars": 19696,
         "pushed_at": "2026-09-17T19:34:51Z",
+        "forks": 4500,
         "license": "NOASSERTION"
       }
     },
@@ -65475,9 +66228,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 53246,
         "stars": 482206,
         "pushed_at": "2026-09-20T20:48:35Z",
+        "forks": 53246,
         "license": "MIT"
       }
     },
@@ -65509,9 +66262,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 2871,
         "stars": 19024,
         "pushed_at": "2026-09-07T10:42:10Z",
+        "forks": 2871,
         "license": "CC0-1.0"
       }
     },
@@ -65543,9 +66296,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 15068,
         "stars": 320942,
         "pushed_at": "2026-09-21T09:58:44Z",
+        "forks": 15068,
         "license": "NOASSERTION"
       }
     },
@@ -65577,9 +66330,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 17896,
         "stars": 46937,
         "pushed_at": "2026-09-22T10:49:19Z",
+        "forks": 17896,
         "license": "Apache-2.0"
       }
     },
@@ -65611,9 +66364,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 14554,
         "stars": 137977,
-        "pushed_at": "2026-09-21T19:51:30Z"
+        "pushed_at": "2026-09-21T19:51:30Z",
+        "forks": 14554
       }
     },
     {
@@ -65644,9 +66397,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 11848,
         "stars": 79099,
         "pushed_at": "2026-09-21T15:05:16Z",
+        "forks": 11848,
         "license": "MIT"
       }
     },
@@ -65678,9 +66431,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 3632,
         "stars": 59498,
         "pushed_at": "2026-09-22T05:49:01Z",
+        "forks": 3632,
         "license": "CC0-1.0"
       }
     },
@@ -65712,9 +66465,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 15652,
         "stars": 74400,
         "pushed_at": "2026-09-21T13:54:11Z",
+        "forks": 15652,
         "license": "NOASSERTION"
       }
     },
@@ -65746,9 +66499,9 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "forks": 28778,
         "stars": 322249,
         "pushed_at": "2026-09-20T15:48:45Z",
+        "forks": 28778,
         "license": "NOASSERTION"
       }
     },
@@ -65776,12 +66529,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 800,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/checkr",
         "batch": "S2014",
-        "status": "Active"
+        "github_url": "https://github.com/checkr"
       }
     },
     {
@@ -65808,12 +66561,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -65840,12 +66593,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Santiago, Santiago Metropolitan Region, Chile",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -65872,12 +66625,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -65904,12 +66657,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 0,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Salt Lake City, UT, USA",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -65936,12 +66689,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/The-Agentic-Data-Co",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/The-Agentic-Data-Co"
       }
     },
     {
@@ -65968,12 +66721,44 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/AGEOspatial",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/AGEOspatial"
+      }
+    },
+    {
+      "id": "yc-company:37467",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "evidence_kind": "public-source-item",
+      "title": "Cyclon (F2026)",
+      "summary": "a phone where AI is the interface. Cyclon is rebuilding the phone around AI. Instead of opening apps and tapping through screens, you tell your phone what you want and it does it for you. With one touch, you can spin up AI agents to control your phone or handle tasks in the background. AI isn’t just inside an app - it’s the phone itself",
+      "url": "https://www.ycombinator.com/companies/cyclon",
+      "published_at": "",
+      "observed_at": "2026-09-25",
+      "authors": [],
+      "projects": [
+        "Cyclon"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {},
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "F2026",
+        "github_url": "https://github.com/useoxygen"
       }
     },
     {
@@ -66000,12 +66785,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66032,12 +66817,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "New York City",
-        "github_url": "",
-        "batch": "F2026",
-        "status": "Active"
+        "batch": "F2026"
       }
     },
     {
@@ -66069,11 +66853,43 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "F2026"
+      }
+    },
+    {
+      "id": "yc-company:35784",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "evidence_kind": "public-source-item",
+      "title": "Vorelios (F2026)",
+      "summary": "A foundation model for engineering physics. Engineering is bottlenecked by slow, costly simulations. We're fixing that by building foundation models that learn physics end-to-end and deliver the same results in seconds, at a fraction of the cost",
+      "url": "https://www.ycombinator.com/companies/vorelios",
+      "published_at": "",
+      "observed_at": "2026-09-25",
+      "authors": [],
+      "projects": [
+        "Vorelios"
+      ],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {},
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/Vorelios"
       }
     },
     {
@@ -66105,12 +66921,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Vancouver, BC, Canada",
-        "github_url": "https://github.com/oro-ai",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/oro-ai"
       }
     },
     {
@@ -66137,12 +66953,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66169,12 +66985,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66201,12 +67017,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 8,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Munich, Germany",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66238,12 +67054,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66270,12 +67086,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66302,12 +67118,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66334,12 +67150,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66366,12 +67182,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66398,12 +67214,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 5,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66430,12 +67246,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66462,12 +67278,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66494,11 +67310,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
-        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66531,12 +67347,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66569,12 +67385,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Ankara, Turkey",
-        "github_url": "https://github.com/herdrdev",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/herdrdev"
       }
     },
     {
@@ -66601,11 +67417,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -66632,12 +67448,49 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
+      }
+    },
+    {
+      "id": "yc-company:33279",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "evidence_kind": "public-source-item",
+      "title": "Hebbian Robotics (S2026)",
+      "summary": "Automate Data Evaluations for Physical AI and Robotics. Hebbian Robotics automates data evaluation for physical AI and robotics. Our customers use us to build quality control pipelines in just a few lines of code, with custom models 10x faster and 8x cheaper than general foundation models. https://hebbianrobotics.com/ https://github.com/Hebbian-Robotics/hflow",
+      "url": "https://www.ycombinator.com/companies/hebbian-robotics",
+      "published_at": "",
+      "observed_at": "2026-09-25",
+      "authors": [],
+      "projects": [
+        "Hebbian Robotics"
+      ],
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {},
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "github_url": "https://github.com/Hebbian-Robotics"
       }
     },
     {
@@ -66664,11 +67517,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "London",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -66700,12 +67553,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66732,11 +67585,48 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
+        "batch": "S2026"
+      }
+    },
+    {
+      "id": "yc-company:33048",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "evidence_kind": "public-source-item",
+      "title": "Pennant (S2026)",
+      "summary": "The World Model for Corporate Governance. Led by former institutional proxy voters and technologists with a collective 20+ years of experience, Pennant gives institutional investors, public companies, and corporate advisors voting and governance intelligence to act on their own principles at scale",
+      "url": "https://www.ycombinator.com/companies/pennant",
+      "published_at": "",
+      "observed_at": "2026-09-25",
+      "authors": [],
+      "projects": [
+        "Pennant"
+      ],
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "disposition": "classified",
+      "stack_layers": [
+        "models-capabilities",
+        "tools-skills-integrations"
+      ],
+      "support_count": 1,
+      "monthly_counts": {},
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {
+        "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "New York City",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66763,12 +67653,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 5,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -66795,11 +67685,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Gurugram, Haryana, India",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -66826,11 +67716,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -66857,11 +67747,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -66888,11 +67778,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -66919,11 +67809,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -66950,11 +67840,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -66981,11 +67871,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 6,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67012,12 +67902,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/use-click/",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": "https://github.com/use-click/"
       }
     },
     {
@@ -67044,11 +67934,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67075,11 +67965,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 5,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Oslo, Norway",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67106,11 +67996,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Los Angeles",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67143,11 +68033,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 6,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67174,11 +68064,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67210,12 +68100,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -67242,11 +68132,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67279,12 +68169,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -67311,11 +68201,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67342,11 +68232,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67373,11 +68263,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67412,11 +68302,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67443,11 +68333,11 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "London",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -67479,12 +68369,12 @@
         "description": "Normalized from the linked public source."
       },
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 500,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/scaleapi",
         "batch": "S2016",
-        "status": "Active"
+        "github_url": "https://github.com/scaleapi"
       }
     }
   ],
@@ -67529,6 +68419,19 @@
       "freshness": "recent"
     },
     {
+      "id": "alphasignal",
+      "name": "AlphaSignal",
+      "channel": "newsletter",
+      "source_quality": "medium",
+      "commercial_bias": "disclosed-and-mixed",
+      "homepage_url": "https://alphasignal.ai/",
+      "logo_url": "https://alphasignal.ai/images/logo_alpha_signal_icon.svg",
+      "normalized_evidence_count": 73,
+      "status": "active",
+      "last_observed_at": "2026-09-24T15:24:05+00:00",
+      "freshness": "recent"
+    },
+    {
       "id": "simon-willison",
       "name": "Simon Willison's Weblog",
       "channel": "practitioner-blog",
@@ -67541,19 +68444,6 @@
       "normalized_evidence_count": 64,
       "status": "active",
       "last_observed_at": "2026-09-23T20:44:30.981000+00:00",
-      "freshness": "recent"
-    },
-    {
-      "id": "alphasignal",
-      "name": "AlphaSignal",
-      "channel": "newsletter",
-      "source_quality": "medium",
-      "commercial_bias": "disclosed-and-mixed",
-      "homepage_url": "https://alphasignal.ai/",
-      "logo_url": "https://alphasignal.ai/images/logo_alpha_signal_icon.svg",
-      "normalized_evidence_count": 60,
-      "status": "active",
-      "last_observed_at": "2026-09-23T15:43:41+00:00",
       "freshness": "recent"
     },
     {
@@ -67579,9 +68469,9 @@
       "evidence_role": "company-formation",
       "homepage_url": "https://www.ycombinator.com/companies/industry/artificial-intelligence",
       "logo_url": "https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico",
-      "normalized_evidence_count": 53,
+      "normalized_evidence_count": 57,
       "status": "active",
-      "last_observed_at": "2026-09-23T00:00:00+00:00",
+      "last_observed_at": "2026-09-25T00:00:00+00:00",
       "freshness": "recent"
     },
     {
@@ -67594,9 +68484,9 @@
       "evidence_role": "expert-observation",
       "homepage_url": "https://bsky.app/profile/emollick.bsky.social",
       "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 43,
+      "normalized_evidence_count": 52,
       "status": "active",
-      "last_observed_at": "2026-09-23T18:56:49.758000+00:00",
+      "last_observed_at": "2026-09-25T03:29:44.757000+00:00",
       "freshness": "recent"
     },
     {
@@ -67776,6 +68666,21 @@
       "freshness": "recent"
     },
     {
+      "id": "bluesky-mark-riedl",
+      "name": "Mark Riedl on Bluesky",
+      "channel": "expert-social",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "mark-riedl",
+      "evidence_role": "expert-observation",
+      "homepage_url": "https://bsky.app/profile/markriedl.bsky.social",
+      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
+      "normalized_evidence_count": 27,
+      "status": "active",
+      "last_observed_at": "2026-09-25T01:41:35.314000+00:00",
+      "freshness": "recent"
+    },
+    {
       "id": "bluesky-melanie-mitchell",
       "name": "Melanie Mitchell on Bluesky",
       "channel": "expert-social",
@@ -67803,21 +68708,6 @@
       "normalized_evidence_count": 26,
       "status": "active",
       "last_observed_at": "2026-09-22T06:30:56+00:00",
-      "freshness": "recent"
-    },
-    {
-      "id": "bluesky-mark-riedl",
-      "name": "Mark Riedl on Bluesky",
-      "channel": "expert-social",
-      "source_quality": "high",
-      "commercial_bias": "authorial",
-      "publisher_id": "mark-riedl",
-      "evidence_role": "expert-observation",
-      "homepage_url": "https://bsky.app/profile/markriedl.bsky.social",
-      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg",
-      "normalized_evidence_count": 23,
-      "status": "active",
-      "last_observed_at": "2026-09-23T18:12:43.637000+00:00",
       "freshness": "recent"
     },
     {
@@ -67909,6 +68799,21 @@
       "freshness": "historical"
     },
     {
+      "id": "yc-jobs",
+      "name": "Y Combinator startup jobs",
+      "channel": "job-posting",
+      "source_quality": "high",
+      "commercial_bias": "first-party-job-board",
+      "publisher_id": "y-combinator",
+      "evidence_role": "hiring-intent",
+      "homepage_url": "https://www.ycombinator.com/jobs/role/all",
+      "logo_url": "https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico",
+      "normalized_evidence_count": 14,
+      "status": "active",
+      "last_observed_at": "2026-09-08T00:00:00+00:00",
+      "freshness": "recent"
+    },
+    {
       "id": "bluesky-emily-bender",
       "name": "Emily M. Bender on Bluesky",
       "channel": "expert-social",
@@ -67936,21 +68841,6 @@
       "normalized_evidence_count": 13,
       "status": "active",
       "last_observed_at": "2026-09-21T17:30:34.278000+00:00",
-      "freshness": "recent"
-    },
-    {
-      "id": "yc-jobs",
-      "name": "Y Combinator startup jobs",
-      "channel": "job-posting",
-      "source_quality": "high",
-      "commercial_bias": "first-party-job-board",
-      "publisher_id": "y-combinator",
-      "evidence_role": "hiring-intent",
-      "homepage_url": "https://www.ycombinator.com/jobs/role/all",
-      "logo_url": "https://bookface-static.ycombinator.com/assets/ycdc/favicon-c8a914eeeba9fe6f7a863b35608b55aeedd7c1ff409c97b9ecb96b7a6c278d70.ico",
-      "normalized_evidence_count": 13,
-      "status": "active",
-      "last_observed_at": "2026-09-08T00:00:00+00:00",
       "freshness": "recent"
     },
     {

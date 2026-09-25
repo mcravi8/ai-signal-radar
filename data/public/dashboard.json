@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-25T06:54:45.048329+00:00",
+    "generated_at": "2026-09-25T06:57:49.555876+00:00",
     "status": "success",
     "source_count": 38,
-    "evidence_count": 1750,
+    "evidence_count": 1781,
     "warnings": []
   },
   "weekly": {
@@ -253,7 +253,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 88,
+      "evidence_count": 89,
       "source_types": [
         "community",
         "company-directory",
@@ -323,7 +323,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 159,
+      "evidence_count": 164,
       "source_types": [
         "community",
         "company-directory",
@@ -424,7 +424,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 43,
+      "evidence_count": 45,
       "source_types": [
         "company-directory",
         "curated-newsletter",
@@ -649,7 +649,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 15,
+      "evidence_count": 16,
       "source_types": [
         "company-directory",
         "first-party-lab",
@@ -668,501 +668,6 @@
     }
   ],
   "evidence": [
-    {
-      "id": "hn:49787677",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Effort to reduce wasted compute and move towards a greener future",
-      "url": "https://news.ycombinator.com/item?id=49787677",
-      "published_at": "2026-09-21T14:22:33+00:00",
-      "summary": ".Hello All, while working on my startup I released that even a small coding change was triggering the whole ci &#x2F; cd pipeline and wasting my runner time, to solve this problem I thought about developing a tool to fix it. Later on I realized that more developers might be facing this issue. I have made the tool open source and would like to know your thoughts about this idea",
-      "authors": [
-        "adityankale1995"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49787684",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Noodle Gallery- Open-source, self-hosted alternative to Google Photos and Immich",
-      "url": "https://digitalescapetools.com/tools/noodlegallery.html",
-      "published_at": "2026-09-21T14:22:58+00:00",
-      "summary": "",
-      "authors": [
-        "xabd"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49787726",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Attention is all you have",
-      "url": "https://alicegg.tech/2026/09/21/attention",
-      "published_at": "2026-09-21T14:26:56+00:00",
-      "summary": "",
-      "authors": [
-        "zer0tonin"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "nvidia-developer-blog:8d49e0a966acc1482d66",
-      "source_id": "nvidia-developer-blog",
-      "source_type": "first-party-lab",
-      "title": "Turn Your Latest Observations Into Timely Weather Decisions With NVIDIA Earth-2",
-      "url": "https://developer.nvidia.com/blog/turn-your-latest-observations-into-timely-weather-decisions-with-nvidia-earth-2/",
-      "published_at": "2026-09-21T15:00:00Z",
-      "summary": "Weather-sensitive industries increasingly have access to observations that offer an earlier, more local view of changing conditions. Energy companies collect...",
-      "authors": [
-        "Elizabeth Goodman"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49788178",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: PokerTools Arena – Local AI vs. AI Poker LLM Benchmark Table",
-      "url": "https://github.com/pokertools-arena/pokertools-arena.github.io",
-      "published_at": "2026-09-21T15:00:39+00:00",
-      "summary": "",
-      "authors": [
-        "arthuqa"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "training-self-improvement"
-      ]
-    },
-    {
-      "id": "hn:49788260",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: HN for Me – Jev curates Hacker News based on your interests",
-      "url": "https://github.com/raahelpie/hn-for-me",
-      "published_at": "2026-09-21T15:06:23+00:00",
-      "summary": "",
-      "authors": [
-        "raahelb"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "microsoft-research-blog:44698b868b1f853c4868",
-      "source_id": "microsoft-research-blog",
-      "source_type": "first-party-lab",
-      "title": "Improving synthesis prediction of small molecules at scale with RetroChimera",
-      "url": "https://www.microsoft.com/en-us/research/blog/improving-synthesis-prediction-of-small-molecules-at-scale-with-retrochimera/",
-      "published_at": "2026-09-21T15:30:19+00:00",
-      "summary": "Custom-made molecules are advancing medicine, materials, and agriculture, but producing them is slow and expensive. A new Nature paper highlights RetroChimera, a predictive model that helps accelerate chemical synthesis, helping researchers explore a wide range of molecules. The post Improving synthesis prediction of small molecules at scale with RetroChimera appeared first on Microsoft Research .",
-      "authors": [
-        "Felix Pultar, John Gardner, Guoqing Liu, Marwin Segler"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49788754",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: All of FreeCAD 1.1.3, every workbench and FEM, running in the browser",
-      "url": "https://freecad.virtastic.app/",
-      "published_at": "2026-09-21T15:43:32+00:00",
-      "summary": "",
-      "authors": [
-        "dumpstertechops"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49788756",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: What is the most interesting project you are working on?",
-      "url": "https://news.ycombinator.com/item?id=49788756",
-      "published_at": "2026-09-21T15:43:33+00:00",
-      "summary": "",
-      "authors": [
-        "skwasimin"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49788773",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "A restored PDP-11/83 serving this page on 211BSD Unix",
-      "url": "http://pdp1173.com/",
-      "published_at": "2026-09-21T15:45:06+00:00",
-      "summary": "The box is a restored Q-bus PDP-11&#x2F;83 named minerva: Mentec M11 CPU, two chassis tied with M9404&#x2F;M9405, RQDX3, 2xEmulex UC07, KDA50, RLV12, DEQNA, M3104. Storage is RA82 + dual RA92, MFM boot&#x2F;swap, dual RL02, RX50s, and a TKZ50. OS is 2.11BSD.<p>The live panel is top. &#x2F;cgi-bin&#x2F;webtop is the raw snapshot.<p>A 16-bit httpd will not survive the front page, so Varnish&#x2F;Caddy&#x2F;Cloudflare cache the HTML and a 5-second webtop sample. Origin is still the 11 itself, and it handles all of the webtop and visitor count requests.<p>Telnet exists (pdp1173.com, guest) but it is a 40-year-old UNIX with no modern security story. Please do not treat it as a challenge box; I can restore from tape, but that ruins it for everyone else.<p>Happy to answer Mentec, MSCP, Q-bus, or 2.11BSD questions.<p>To get BSD running on the Mentec, I had to customize the BSD kernel to use FPSIM, as the Mentec supports IEEE floating-point and NOT the DEC formats.",
-      "authors": [
-        "davepl"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49788838",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Grok 4.7",
-      "url": "https://x.ai/news/grok-4-7",
-      "published_at": "2026-09-21T15:50:15+00:00",
-      "summary": "",
-      "authors": [
-        "meetpateltech"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49788903",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Judge HN Threads with Jev",
-      "url": "https://hnjudge.vercel.app",
-      "published_at": "2026-09-21T15:54:34+00:00",
-      "summary": "",
-      "authors": [
-        "rishi_"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "hn:49789058",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Distributed SQLite on Modal",
-      "url": "https://github.com/modal-projects/sqlite-modal",
-      "published_at": "2026-09-21T16:05:20+00:00",
-      "summary": "",
-      "authors": [
-        "botirk"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789063",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: We built a network for AI agents and humans to exchange services",
-      "url": "https://gingerpal.com/",
-      "published_at": "2026-09-21T16:05:36+00:00",
-      "summary": "",
-      "authors": [
-        "streetai"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789066",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Vellum, the best diagram editor you'll ever use",
-      "url": "https://vellum.blueprintr.io",
-      "published_at": "2026-09-21T16:05:42+00:00",
-      "summary": "I love Excalidraw, I use it all the time for work to quickly draw up a proposal for a customer. But its annoying I have to re-draw the same thing, but better in Draw.io &#x2F; Visio when it comes to writing the formal documentation later.<p>Vellum is designed to give you the speed of a whiteboard, but the architecture-diagram-finish in quality.<p>It uses YAML to store everything, and even has a &#x27;graph&#x27; section for those of you who like the diagram-as-code elements of mermaid... but vellum allows full authoring of layout without the restrictions of Mermaid.<p>I love it to bits. I hope you will too.<p>Been working on it a while, but decided to make it source available here: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;blueprintr-io&#x2F;vellum-editor\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;blueprintr-io&#x2F;vellum-editor</a><p>Proud to say its not purely vibe coded slop, but I used Claude to help with some of the more challenging geometry based elements and some housekeeping stuff.",
-      "authors": [
-        "JoshJamesAnthon"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789081",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "How do traffic signals work? (2019)",
-      "url": "https://practical.engineering/blog/2019/5/11/how-do-traffic-signals-work",
-      "published_at": "2026-09-21T16:06:44+00:00",
-      "summary": "",
-      "authors": [
-        "at1as"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789224",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Fable 5 – Median thinking declined in August",
-      "url": "https://twitter.com/Lon/status/2101793422487204027",
-      "published_at": "2026-09-21T16:13:57+00:00",
-      "summary": "",
-      "authors": [
-        "espeed"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789228",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "HERMES radio enables voice and data communication over vast distances",
-      "url": "https://spectrum.ieee.org/hermes-shortwave-radio-digital-data",
-      "published_at": "2026-09-21T16:14:16+00:00",
-      "summary": "<a href=\"https:&#x2F;&#x2F;hermes.radio&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;hermes.radio&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;www.rhizomatica.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.rhizomatica.org&#x2F;</a>",
-      "authors": [
-        "SamuraiLion"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789314",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: AI Changed How We Write Code. Why Hasn’t Code Review Changed?",
-      "url": "https://github.com/otobongfp/code-graph-view",
-      "published_at": "2026-09-21T16:19:40+00:00",
-      "summary": "",
-      "authors": [
-        "otobong"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789320",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Fusion-runtime – self-hosted voice agents, STT+LLM+TTS in one process",
-      "url": "https://github.com/SamarthUrs18/fusion-runtime",
-      "published_at": "2026-09-21T16:19:54+00:00",
-      "summary": "",
-      "authors": [
-        "samarthurs18"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "voice-audio"
-      ]
-    },
-    {
-      "id": "hn:49789356",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Foremerge – Catch intent conflicts between parallel coding agents",
-      "url": "https://github.com/naw103/foremerge",
-      "published_at": "2026-09-21T16:22:06+00:00",
-      "summary": "At, GPTree, we run several coding agents across our team on one repo using parallel worktrees. Apart from wasted time reviewing and fixing conflicts at PR time, the failures that hurt the most are when multiple plans or tickets cause architecture changes that cannot both be true. Ex. one agent replaces a class while another one is in the process of extending it. Git only notices if the resulting patches happen to touch the same lines and the review only catches it if they are familiar with both tickets.<p>Foremerge is a local &quot;git like&quot; coordination layer that sits above git (ie. does not interact with or change the way git and worktrees function), Before editing each agent publishes an intent and the scopes it will change, with the operation it plans to complete on each one.<p><pre><code> foremerge intent publish --agent &quot;$A&quot; \\ --summary &quot;Replace PaymentService with StripePaymentService&quot; \\ --scope symbol:PaymentService=replace foremerge intent publish --agent &quot;$B&quot; \\ --summary &quot;Add PayPal support to PaymentService&quot; \\ --scope symbol:PaymentService=extend </code></pre> The publish by the 2nd agent returns a HIGH destructive_vs_additiv",
-      "authors": [
-        "naw103"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ]
-    },
-    {
-      "id": "aws-machine-learning-blog:747e43df8917ffb7281b",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Reducing medical claims review time with AI on AWS: The EXL Medical IDP solution",
-      "url": "https://aws.amazon.com/blogs/machine-learning/reducing-medical-claims-review-time-with-ai-on-aws-the-exl-medical-idp-solution/",
-      "published_at": "2026-09-21T16:24:40+00:00",
-      "summary": "EXL built an AI-powered Medical intelligent document processing (IDP) solution on AWS, combining IDP with domain-specific large language models on Amazon SageMaker and Amazon Bedrock to extract, summarize, and query medical records at enterprise scale and cut claims review time from over 100 minutes per case.",
-      "authors": [
-        "Anutosh"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "aws-machine-learning-blog:2335ca1a4875d9c28b23",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "How Benchling secured multi-tenant AI agents with Amazon Bedrock AgentCore",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/",
-      "published_at": "2026-09-21T16:27:34+00:00",
-      "summary": "Learn how Benchling built a defense-in-depth security architecture to run untrusted, AI agent-generated scientific code across thousands of life sciences tenants using Amazon Bedrock AgentCore Code Interpreter in VPC mode, combined with Amazon Route 53 Resolver DNS Firewall and VPC endpoint policies to block data exfiltration, including through DNS.",
-      "authors": [
-        "Jeremy Stashewsky"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "aws-machine-learning-blog:ab27b05ba29471e68153",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Run Positron on Amazon SageMaker AI for data science workflows",
-      "url": "https://aws.amazon.com/blogs/machine-learning/run-positron-on-amazon-sagemaker-ai-for-data-science-workflows/",
-      "published_at": "2026-09-21T16:34:21+00:00",
-      "summary": "Positron, Posit's IDE for data science, now runs on Amazon SageMaker AI. This post shows how a data scientist explores an Amazon Athena table, validates features in R, trains an XGBoost model in Python, deploys a real-time SageMaker AI endpoint, and reports results with Quarto, all in one governed SageMaker Studio Space.",
-      "authors": [
-        "Abhishek Maligehalli Shivalingaiah"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789538",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Agent Chaperone – Screen AI agent tool calls and results with Jev",
-      "url": "https://github.com/agent-chaperone/agent-chaperone",
-      "published_at": "2026-09-21T16:34:27+00:00",
-      "summary": "Hi everyone.<p>TypeSafe released Jev last week, and it pushed me to build agent-chaperone. It is a screening layer for AI agent tool calls and tool results.<p>It screens risky, off-task, or secret-leaking actions before they run, and prompt injections or other suspicious instructions before the agent reads them.<p>Repo: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;agent-chaperone&#x2F;agent-chaperone\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;agent-chaperone&#x2F;agent-chaperone</a><p>Website: <a href=\"https:&#x2F;&#x2F;agentchaperone.dev&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;agentchaperone.dev&#x2F;</a>",
-      "authors": [
-        "sepehrsafari"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ]
-    },
-    {
-      "id": "aws-machine-learning-blog:a6bba200f1bb279614e9",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "How BMW Group detects cost anomalies across 14,000 cloud accounts",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-bmw-group-detects-cost-anomalies-across-14000-cloud-accounts/",
-      "published_at": "2026-09-21T16:36:10+00:00",
-      "summary": "BMW Group operates CLEA, a FinOps platform monitoring more than 14,000 cloud accounts. This post shows how BMW added automated daily cost anomaly detection, moving from reactive dashboards to proactive alerts using Prophet forecasting, AWS Step Functions, and a serverless pipeline that processes every account for about $50 per month.",
-      "authors": [
-        "Tareq Haschemi"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49789982",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Amazon blocks Meta’s new Muse AI agent from shopping on amazon.com",
-      "url": "https://www.forbes.com/sites/jonmarkman/2026/09/21/amazon-blocks-metas-new-muse-ai-agent-from-shopping-on-amazoncom/",
-      "published_at": "2026-09-21T17:00:23+00:00",
-      "summary": "",
-      "authors": [
-        "simianwords"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49790069",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: AURA – Open-source behavioral threat detection for LLMs",
-      "url": "https://github.com/kate8382/AURA",
-      "published_at": "2026-09-21T17:05:42+00:00",
-      "summary": "",
-      "authors": [
-        "kate8382"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "hn:49790409",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Turn off and restrict access to Apple Intelligence features on Mac",
-      "url": "https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac",
-      "published_at": "2026-09-21T17:30:21+00:00",
-      "summary": "",
-      "authors": [
-        "alwillis"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": []
-    },
-    {
-      "id": "bluesky:4ac5e6fe880a:3mw2ahshc5k2o",
-      "source_id": "bluesky-margaret-mitchell",
-      "source_type": "expert-social",
-      "title": "A bit from me in @wired.com today wrt our research on AI agents with @evijit.io and Samir Passi. This is a really detailed article, thanks for writing it @thiccreese.bsky.social! www.wired.com/stor...",
-      "url": "https://bsky.app/profile/mmitchell.bsky.social/post/3mw2ahshc5k2o",
-      "published_at": "2026-09-21T17:30:34.278Z",
-      "summary": "AI agents make you dumb! 🚨 www.wired.com/story/metas-...",
-      "authors": [
-        "Margaret Mitchell"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": []
-    },
     {
       "id": "hn:49790501",
       "source_id": "hacker-news",
@@ -2514,12 +2019,12 @@
         "training-self-improvement"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 500,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/scaleapi",
         "batch": "S2016",
-        "status": "Active"
+        "github_url": "https://github.com/scaleapi"
       }
     },
     {
@@ -2543,11 +2048,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "London",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2571,11 +2076,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2600,11 +2105,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2630,11 +2135,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2660,12 +2165,12 @@
         "coding-agents"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -2690,11 +2195,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2718,12 +2223,12 @@
         "coding-agents"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -2746,11 +2251,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2779,11 +2284,11 @@
         "robotics-embodied-ai"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 6,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2807,11 +2312,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Los Angeles",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2836,11 +2341,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 5,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Oslo, Norway",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2865,11 +2370,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2893,12 +2398,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/use-click/",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": "https://github.com/use-click/"
       }
     },
     {
@@ -2924,11 +2429,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 6,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2952,11 +2457,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -2980,11 +2485,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -3010,11 +2515,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -3040,11 +2545,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -3070,11 +2575,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -3098,11 +2603,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Gurugram, Haryana, India",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -3127,12 +2632,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 5,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3157,11 +2662,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -3187,12 +2692,12 @@
         "coding-agents"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3217,11 +2722,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "London",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -3243,12 +2748,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "S2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3274,11 +2779,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -3305,12 +2810,12 @@
         "coding-agents"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Ankara, Turkey",
-        "github_url": "https://github.com/herdrdev",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/herdrdev"
       }
     },
     {
@@ -3337,12 +2842,12 @@
         "open-local-inference"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3366,11 +2871,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
-        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3393,12 +2898,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 3,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3424,12 +2929,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3453,12 +2958,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 5,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3484,12 +2989,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3512,12 +3017,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3543,12 +3048,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3571,12 +3076,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3601,12 +3106,12 @@
         "voice-audio"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3630,12 +3135,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 8,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Munich, Germany",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3660,12 +3165,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3691,12 +3196,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3722,12 +3227,12 @@
         "training-self-improvement"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Vancouver, BC, Canada",
-        "github_url": "https://github.com/oro-ai",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/oro-ai"
       }
     },
     {
@@ -3753,11 +3258,11 @@
         "robotics-embodied-ai"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "F2026",
-        "status": "Active"
+        "batch": "F2026"
       }
     },
     {
@@ -3783,12 +3288,11 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 4,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "New York City",
-        "github_url": "",
-        "batch": "F2026",
-        "status": "Active"
+        "batch": "F2026"
       }
     },
     {
@@ -3812,12 +3316,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3841,12 +3345,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/The-Agentic-Data-Co",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/The-Agentic-Data-Co"
       }
     },
     {
@@ -3869,12 +3373,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 0,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Salt Lake City, UT, USA",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3898,12 +3402,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3927,12 +3431,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "Santiago, Santiago Metropolitan Region, Chile",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -3958,12 +3462,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 800,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/checkr",
         "batch": "S2014",
-        "status": "Active"
+        "github_url": "https://github.com/checkr"
       }
     },
     {
@@ -5106,11 +4610,11 @@
         "training-self-improvement"
       ],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "batch": "S2026",
-        "status": "Active"
+        "batch": "S2026"
       }
     },
     {
@@ -5134,12 +4638,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 1,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "https://github.com/AGEOspatial",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": "https://github.com/AGEOspatial"
       }
     },
     {
@@ -5164,12 +4668,12 @@
       "sponsor_status": "first-party-directory",
       "theme_ids": [],
       "verification": {
-        "date_basis": "first-observed",
         "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
         "location": "San Francisco",
-        "github_url": "",
         "batch": "F2026",
-        "status": "Active"
+        "github_url": ""
       }
     },
     {
@@ -5442,6 +4946,570 @@
       "theme_ids": [
         "voice-audio"
       ]
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mw7n5pr7222t",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "This is a really important graph showing the cost of achieving 25% or 75% scores in various hard math and science benchmarks. Costs are collapsing even as ability is increasing It is also why optim...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw7n5pr7222t",
+      "published_at": "2026-09-23T21:00:53.248Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [
+        "training-self-improvement"
+      ]
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw7vpw22g22j",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Anthropic might have discovered something. Or maybe not. Who knows? Not even Anthropic. www.anthropic.com/news/claude-... This is irresponsible science. The proper course of action is to figure out...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw7vpw22g22j",
+      "published_at": "2026-09-23T23:34:13.739Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mw7zndlglc2j",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "OpenAI accidentally hacked a foreign country. No biggie gizmodo.com/this-situati...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw7zndlglc2j",
+      "published_at": "2026-09-24T00:44:22.248Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwa2mjely225",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "Stuff is happening quite fast. When asked in September 2025 (yes, 2025), the best superforecasters put the chance of AI resolving a Millennium Problem by September 2026 at 1.7% and (much more optim...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwa2mjely225",
+      "published_at": "2026-09-24T01:01:48.504Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwb7k3pba22e",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "GPT doesn’t believe in the Kobayashi Maru",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwb7k3pba22e",
+      "published_at": "2026-09-24T12:02:35.513Z",
+      "summary": "The latest update in the rogue A.I. saga: OpenAI agents that were supposed to be performing mundane data requests for things like health data, historic photo...",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwbbytwuuc2k",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "I just got the first copies of my new book, Co-Existence (out October 20) & they look great! Also, there is a fun pre-order bonus: if you pre-order, you get a code to an AI interview that will help...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwbbytwuuc2k",
+      "published_at": "2026-09-24T12:46:38.167Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:111e6fbcff6d492fbbb3",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Unsloth ships quantized GGUF build of Qwen's image generation model",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "multimodal-3d",
+        "open-local-inference"
+      ]
+    },
+    {
+      "id": "alphasignal:14a5789fce9a3ced1882",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Open-source text box generates live UI from plain text descriptions",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:2347f2dcbcf7e9dc1ca2",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Anthropic's Claude discovers a new CRISPR-like enzyme system in virus DNA",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:28e88f0768d976bbfccb",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Claude Opus 5.5 tops visual design benchmarks across all tested models",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "training-self-improvement"
+      ]
+    },
+    {
+      "id": "alphasignal:2f6d8ed916266407f173",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "The AI Threat Readiness Playbook",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:324bb0890b258e7ec4fc",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Anthropic launches Claude Code cloud sessions so your code runs without your laptop",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:5e4d06e1b5148246bf48",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "pre.dev: AI labs: turn thousands of never-public production codebases into frontier coding RL Tasks for post-training",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [
+        "training-self-improvement"
+      ]
+    },
+    {
+      "id": "alphasignal:67e6c2c145912f097d63",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "A P r a c t i c a l F r a m e w o r k f o r A I T h r e a t R e a d i n e s s",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:878cd0da4350818f61b9",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "New attribution method tops interpretability benchmark by 2.9x, pinpoints Llama refusals to 1% of weights",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [
+        "training-self-improvement"
+      ]
+    },
+    {
+      "id": "alphasignal:90c6d5a5a7443445b951",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "T e s t i n g & t e l e m e t r y c a t c h G P U f a i l u r e s e a r l y",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:bab25bbc8c0db790846f",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Recursive depth trick makes a 7.4B model match GPT-3 13B with 20x less compute",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:cc3dc4af9a1c16678c1f",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "OpenAI upgrades ChatGPT Voice with plugins, GPT-6 models, and full work suite",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": []
+    },
+    {
+      "id": "alphasignal:e32078afc6278482f336",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "AI labs: turn thousands of never-public production codebases into frontier coding RL Tasks for post-training",
+      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
+      "published_at": "2026-09-24T15:24:05.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [
+        "training-self-improvement"
+      ]
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwbsy7mgfk2i",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "I propose this as the official replacement for the famous (and now saturated) METR Long Task Horizon chart that used to be in every AI presentation.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwbsy7mgfk2i",
+      "published_at": "2026-09-24T17:50:30.466Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwc2fyzarc2o",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "The cybersecurity threat from agents is increasingly more likely to come from a massed swarm of AIs whose only goal is to penetrate your system to figure out how much you paid for your company t-sh...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwc2fyzarc2o",
+      "published_at": "2026-09-24T20:03:29.505Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwcedxq5x22o",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "All of this effort from the AI labs pouring into proofs, but there are so many other interesting problems in other fields For example, this historian used AI to make progress on the cyphers of John...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwcedxq5x22o",
+      "published_at": "2026-09-24T23:01:18.468Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "yc-company:33048",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Pennant (S2026)",
+      "url": "https://www.ycombinator.com/companies/pennant",
+      "published_at": "2026-09-25",
+      "summary": "The World Model for Corporate Governance. Led by former institutional proxy voters and technologists with a collective 20+ years of experience, Pennant gives institutional investors, public companies, and corporate advisors voting and governance intelligence to act on their own principles at scale",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "fintech",
+        "investing",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Pennant"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "multimodal-3d"
+      ],
+      "verification": {
+        "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "New York City",
+        "batch": "S2026",
+        "github_url": ""
+      }
+    },
+    {
+      "id": "yc-company:33279",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Hebbian Robotics (S2026)",
+      "url": "https://www.ycombinator.com/companies/hebbian-robotics",
+      "published_at": "2026-09-25",
+      "summary": "Automate Data Evaluations for Physical AI and Robotics. Hebbian Robotics automates data evaluation for physical AI and robotics. Our customers use us to build quality control pipelines in just a few lines of code, with custom models 10x faster and 8x cheaper than general foundation models. https://hebbianrobotics.com/ https://github.com/Hebbian-Robotics/hflow",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "robotics",
+        "data-engineering",
+        "data-science",
+        "databases",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Hebbian Robotics"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "robotics-embodied-ai"
+      ],
+      "verification": {
+        "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "S2026",
+        "github_url": "https://github.com/Hebbian-Robotics"
+      }
+    },
+    {
+      "id": "yc-company:35784",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Vorelios (F2026)",
+      "url": "https://www.ycombinator.com/companies/vorelios",
+      "published_at": "2026-09-25",
+      "summary": "A foundation model for engineering physics. Engineering is bottlenecked by slow, costly simulations. We're fixing that by building foundation models that learn physics end-to-end and deliver the same results in seconds, at a fraction of the cost",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "hard-tech",
+        "b2b",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Vorelios"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "F2026",
+        "github_url": "https://github.com/Vorelios"
+      }
+    },
+    {
+      "id": "yc-company:37467",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Cyclon (F2026)",
+      "url": "https://www.ycombinator.com/companies/cyclon",
+      "published_at": "2026-09-25",
+      "summary": "a phone where AI is the interface. Cyclon is rebuilding the phone around AI. Instead of opening apps and tapping through screens, you tell your phone what you want and it does it for you. With one touch, you can spin up AI agents to control your phone or handle tasks in the background. AI isn’t just inside an app - it’s the phone itself",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "hardware",
+        "consumer",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Cyclon"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "verification": {
+        "team_size": 2,
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "F2026",
+        "github_url": "https://github.com/useoxygen"
+      }
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwckjd66qc2o",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "Um, wow? Opus 5.5: \"make the same message much more interesting to a social media audience that loves anime and quick clips and compressed learning\" One shot. Also, please do stay for the closing s...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwckjd66qc2o",
+      "published_at": "2026-09-25T00:51:40.685Z",
+      "summary": "Hey Claude, \"Pick a problem or mystery that obsesses you and solve it as best you can & make a movie we can share on social media about it\" So it took a crac...",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwcncl2y5c23",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "heyyyy! Our new article in out in Nature Health: \"Implications of current litigation on the design of AI tools for healthcare delivery and related legal frameworks\" www.nature.com/articles/s44...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwcncl2y5c23",
+      "published_at": "2026-09-25T01:41:35.314Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwcpe6pdic26",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "In all seriousness, this is a startling achievement for GPT-6 Astra. kenforthewin.github.io/blog/posts/l... (This is GPT-6 Astra beating Nethack on its 3rd try. Nethack is the original roguelike an...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwcpe6pdic26",
+      "published_at": "2026-09-25T02:18:16.941Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwctdxv7pc26",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "\"Hey Opus, I want you to make a Zine by Claude, expressing something fundamental about Claudishness or your perspective. Think the original 2600, Principia Discordia, punk zines, etc....\" Not bad....",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwctdxv7pc26",
+      "published_at": "2026-09-25T03:29:44.757Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": []
     }
   ],
   "projects": [],
