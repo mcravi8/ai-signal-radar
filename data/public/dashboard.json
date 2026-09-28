@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T23:01:22.331053+00:00",
+    "generated_at": "2026-09-28T23:02:30.477849+00:00",
     "status": "success",
-    "source_count": 38,
-    "evidence_count": 2075,
+    "source_count": 39,
+    "evidence_count": 2076,
     "warnings": []
   },
   "weekly": {
@@ -728,23 +728,6 @@
   ],
   "evidence": [
     {
-      "id": "openai-news:f2ff7f76056120414cf0",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "How invideo improves color grading 3x with GPT‑6 Astra",
-      "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
-      "published_at": "2026-09-23T12:00:00+00:00",
-      "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
       "id": "hn:49814780",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -888,8 +871,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-26T09:50:17Z",
-        "stars": 964,
         "forks": 66,
+        "stars": 964,
         "license": "MIT"
       }
     },
@@ -1215,8 +1198,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-26T11:26:00Z",
-        "stars": 838,
         "forks": 51,
+        "stars": 838,
         "license": "MIT"
       }
     },
@@ -1288,8 +1271,8 @@
       "classification_rule_id": "unresolved-review",
       "verification": {
         "pushed_at": "2026-09-23T18:16:08Z",
-        "stars": 714,
         "forks": 82,
+        "stars": 714,
         "license": "MIT"
       }
     },
@@ -1478,8 +1461,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-24T23:10:28Z",
-        "stars": 2269,
         "forks": 197,
+        "stars": 2269,
         "license": "Apache-2.0"
       }
     },
@@ -1863,8 +1846,8 @@
       "classification_rule_id": "unresolved-review",
       "verification": {
         "pushed_at": "2026-09-24T13:09:04Z",
-        "stars": 18,
         "forks": 0,
+        "stars": 18,
         "license": "MIT"
       }
     },
@@ -2766,12 +2749,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "date_basis": "first-observed",
-        "github_url": "",
-        "batch": "S2026",
+        "team_size": 2,
         "location": "New York City",
-        "status": "Active",
-        "team_size": 2
+        "batch": "S2026",
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active"
       }
     },
     {
@@ -2802,12 +2785,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "date_basis": "first-observed",
-        "github_url": "https://github.com/Hebbian-Robotics",
-        "batch": "S2026",
+        "team_size": 2,
         "location": "San Francisco",
-        "status": "Active",
-        "team_size": 2
+        "batch": "S2026",
+        "github_url": "https://github.com/Hebbian-Robotics",
+        "date_basis": "first-observed",
+        "status": "Active"
       }
     },
     {
@@ -2834,12 +2817,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "date_basis": "first-observed",
-        "github_url": "https://github.com/Vorelios",
-        "batch": "F2026",
+        "team_size": 2,
         "location": "San Francisco",
-        "status": "Active",
-        "team_size": 2
+        "batch": "F2026",
+        "github_url": "https://github.com/Vorelios",
+        "date_basis": "first-observed",
+        "status": "Active"
       }
     },
     {
@@ -2866,12 +2849,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "date_basis": "first-observed",
-        "github_url": "https://github.com/useoxygen",
-        "batch": "F2026",
+        "team_size": 2,
         "location": "San Francisco",
-        "status": "Active",
-        "team_size": 2
+        "batch": "F2026",
+        "github_url": "https://github.com/useoxygen",
+        "date_basis": "first-observed",
+        "status": "Active"
       }
     },
     {
@@ -3092,8 +3075,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-25T04:53:31Z",
-        "stars": 271,
         "forks": 36,
+        "stars": 271,
         "license": "Apache-2.0"
       }
     },
@@ -3359,8 +3342,8 @@
       "classification_rule_id": "unresolved-review",
       "verification": {
         "pushed_at": "2026-09-25T14:18:29Z",
-        "stars": 8,
         "forks": 1,
+        "stars": 8,
         "license": "MIT"
       }
     },
@@ -4296,12 +4279,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "date_basis": "first-observed",
-        "github_url": "",
-        "batch": "F2026",
+        "team_size": 2,
         "location": "San Francisco",
-        "status": "Active",
-        "team_size": 2
+        "batch": "F2026",
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active"
       }
     },
     {
@@ -4328,12 +4311,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "date_basis": "first-observed",
-        "github_url": "",
-        "batch": "F2026",
+        "team_size": 2,
         "location": "San Francisco",
-        "status": "Active",
-        "team_size": 2
+        "batch": "F2026",
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active"
       }
     },
     {
@@ -4360,12 +4343,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "date_basis": "first-observed",
-        "github_url": "https://github.com/openhackai",
-        "batch": "F2026",
+        "team_size": 1,
         "location": "San Francisco",
-        "status": "Active",
-        "team_size": 1
+        "batch": "F2026",
+        "github_url": "https://github.com/openhackai",
+        "date_basis": "first-observed",
+        "status": "Active"
       }
     },
     {
@@ -5790,6 +5773,23 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "frontier-signal:cd4574fc159d90dd451a",
+      "source_id": "frontier-signal",
+      "source_type": "investor-newsletter",
+      "title": "Welcome, let me show you around",
+      "url": "https://frontier.m1c.vc/",
+      "published_at": "2026-09-28T22:45:30.000Z",
+      "summary": "Newsletter issue metadata; no raw mailbox content is published.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
       "theme_ids": [],
       "classification_disposition": "classification-review",
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",

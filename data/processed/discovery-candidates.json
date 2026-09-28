@@ -1,11 +1,11 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-28T23:01:22.331053+00:00",
+    "generated_at": "2026-09-28T23:02:30.477849+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1432,
-    "input_changed_document_count": 0,
-    "cluster_count": 476,
+    "input_document_count": 1433,
+    "input_changed_document_count": 2,
+    "cluster_count": 477,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 169,
     "coherent_cluster_count": 195,
@@ -19,7 +19,7 @@
     "disposition_counts": {
       "covered-by-existing-theme": 123,
       "merge-existing-direction": 7,
-      "novel": 346
+      "novel": 347
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -18323,6 +18323,78 @@
       },
       "source_cap_exclusions": [],
       "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:newsletter-issue-metadata-085312987e",
+      "anchor_ids": [
+        "phrase:newsletter-issue-metadata",
+        "phrase:raw-mailbox-content"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:newsletter-issue-metadata",
+          "label": "newsletter issue metadata",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        },
+        {
+          "id": "phrase:raw-mailbox-content",
+          "label": "raw mailbox content",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "alphasignal:b334cf2a8fb36dfa32e9",
+        "frontier-signal:cd4574fc159d90dd451a"
+      ],
+      "source_ids": [
+        "alphasignal",
+        "frontier-signal"
+      ],
+      "source_family_ids": [
+        "attention",
+        "investor-newsletter"
+      ],
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "skills-integrations": 1
+      },
+      "first_seen": "2026-09-27T17:11:39.000Z",
+      "last_seen": "2026-09-28T22:45:30.000Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 2
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": true,
       "disposition": "novel",
       "nearest_known": null
     },

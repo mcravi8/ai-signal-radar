@@ -1,11 +1,11 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-28T23:01:22.331053+00:00",
+    "generated_at": "2026-09-28T23:02:30.477849+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1432,
-    "input_changed_document_count": 0,
-    "cluster_count": 476,
+    "input_document_count": 1433,
+    "input_changed_document_count": 2,
+    "cluster_count": 477,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 169,
     "coherent_cluster_count": 195,
@@ -19,7 +19,7 @@
     "disposition_counts": {
       "covered-by-existing-theme": 123,
       "merge-existing-direction": 7,
-      "novel": 346
+      "novel": 347
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
