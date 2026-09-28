@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-28T22:41:47.091829+00:00",
+    "generated_at": "2026-09-28T23:01:22.331053+00:00",
     "as_of": "2026-09-28",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -57,6 +57,7 @@
         "simon-willison:eee7ce72da23ef2f47be",
         "hn:49833867",
         "alphasignal:324bb0890b258e7ec4fc",
+        "github:1384094559",
         "aws-machine-learning-blog:abc4f7e609e383bd6c09",
         "github:1383809012",
         "nvidia-developer-blog:0a65e7be039d0fbfaafe",
@@ -67,13 +68,12 @@
         "alphasignal:ed11042f47b8f05c3ace",
         "alphasignal:cec6f55c7deff2c8dfc5",
         "hn:49799287",
-        "hn:49798257",
-        "hn:49792067"
+        "hn:49798257"
       ],
       "stage": "broadly-corroborated",
       "movement": "steady",
       "metrics": {
-        "evidence_count": 117,
+        "evidence_count": 118,
         "source_count": 16,
         "source_types": [
           "community",
@@ -89,8 +89,8 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 19,
-        "technical_record_count": 65,
+        "recent_evidence_count": 20,
+        "technical_record_count": 66,
         "family_count": 12,
         "trend_score": 90.9
       },
@@ -299,7 +299,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 37,
         "family_count": 11,
-        "trend_score": 79.6
+        "trend_score": 79.5
       },
       "linked_requirements": [
         {
@@ -744,6 +744,7 @@
         "alphasignal:5e4d06e1b5148246bf48",
         "alphasignal:28e88f0768d976bbfccb",
         "bluesky:1278ebf77949:3mw7n5pr7222t",
+        "github:1384094559",
         "openai-news:3d7b9aab56c8f4fe22c0",
         "hf-paper:2609.27308",
         "hn:49807413",
@@ -752,13 +753,12 @@
         "alphasignal:cec6f55c7deff2c8dfc5",
         "hn:49800574",
         "huggingface-blog:e9f63aa1f7aaa02f4024",
-        "hn:49791343",
-        "hn:49788178"
+        "hn:49791343"
       ],
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 226,
+        "evidence_count": 227,
         "source_count": 27,
         "source_types": [
           "community",
@@ -776,8 +776,8 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 18,
-        "technical_record_count": 135,
+        "recent_evidence_count": 19,
+        "technical_record_count": 136,
         "family_count": 14,
         "trend_score": 100.0
       },
@@ -823,6 +823,71 @@
       "review_action": "review-existing-requirement",
       "pending_from_previous_review": true,
       "queue_rank": 7
+    },
+    {
+      "id": "early:validation-as-release",
+      "origin": "early-signal",
+      "title": "Validation is becoming the release gate for AI-generated work",
+      "description": "As agents produce code and operational changes, evaluation, observability, security, and reversible deployment become one continuous release discipline.",
+      "source_analysis": "early-signal-tracker/validation-as-release",
+      "theme_ids": [
+        "assurance-infrastructure",
+        "coding-agents",
+        "training-self-improvement",
+        "validation-release"
+      ],
+      "evidence_ids": [
+        "github:1384094559",
+        "hf-paper:2609.27308",
+        "alphasignal:ed11042f47b8f05c3ace",
+        "arxiv:2609.22068v1",
+        "the-batch:2622ee409c0a925f8cee",
+        "alphasignal:cec6f55c7deff2c8dfc5",
+        "alphasignal:trend:validation-and-release-bottlenecks",
+        "arxiv:2609.21841v1"
+      ],
+      "stage": "corroborating",
+      "movement": "accelerating",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 5,
+        "source_types": [
+          "curated-newsletter",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 4,
+        "technical_record_count": 3,
+        "family_count": 3,
+        "technical_family_count": 2
+      },
+      "linked_requirements": [
+        {
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "evaluation-release-gates",
+        "title": "Evaluation and release gates",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 21,
+        "technical_support": 9,
+        "new_evidence": 16,
+        "operating_relevance": 10,
+        "total": 78
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "review-existing-requirement"
     },
     {
       "id": "theme:robotics-embodied-ai",
@@ -1006,6 +1071,73 @@
       "queue_rank": 9
     },
     {
+      "id": "early:heterogeneous-inference",
+      "origin": "early-signal",
+      "title": "Heterogeneous model portfolios are becoming the default inference architecture",
+      "description": "Teams will combine frontier, small, open, local, and specialized models through routing and purpose-built serving rather than standardizing on one endpoint.",
+      "source_analysis": "early-signal-tracker/heterogeneous-inference",
+      "theme_ids": [
+        "frontier-inference-infrastructure",
+        "model-routing",
+        "open-local-inference",
+        "small-specialized-models",
+        "specialized-inference-silicon"
+      ],
+      "evidence_ids": [
+        "github:1384094559",
+        "alphasignal:trend:open-local-models-and-inference-efficiency",
+        "arxiv:2609.21849v1",
+        "hn:49736660",
+        "hf-paper:2609.18063",
+        "bluesky:e810fac7fd93:3mtmlkcbuoc2x",
+        "interconnects:9347a64bc25f44ccdf21",
+        "arxiv:2609.21774v1"
+      ],
+      "stage": "corroborating",
+      "movement": "accelerating",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 7,
+        "source_types": [
+          "community",
+          "expert-newsletter",
+          "expert-social",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 3,
+        "family_count": 4,
+        "technical_family_count": 2
+      },
+      "linked_requirements": [
+        {
+          "id": "heterogeneous-model-routing",
+          "title": "Heterogeneous model routing",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "heterogeneous-model-routing",
+        "title": "Heterogeneous model routing",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 22,
+        "source_breadth": 25,
+        "technical_support": 9,
+        "new_evidence": 4,
+        "operating_relevance": 10,
+        "total": 70
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "review-existing-requirement"
+    },
+    {
       "id": "theme:assurance-infrastructure",
       "origin": "cross-source-theme",
       "title": "Assurance infrastructure",
@@ -1018,6 +1150,7 @@
         "hn:49855238",
         "aws-machine-learning-blog:e04ff4872cafc6979144",
         "last-week-in-ai:bc937539f4106521fc5b",
+        "github:1384094559",
         "openai-news:347b65ce144a221e189c",
         "openai-news:60efaf744a4d6c2c20e9",
         "anthropic-news-research:b44c829b27028fd75a53",
@@ -1033,13 +1166,12 @@
         "arxiv:2609.21858v1",
         "arxiv:2609.21841v1",
         "arxiv:2609.21828v1",
-        "arxiv:2609.21793v1",
-        "arxiv:2609.21713v1"
+        "arxiv:2609.21793v1"
       ],
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 72,
+        "evidence_count": 73,
         "source_count": 23,
         "source_types": [
           "community",
@@ -1053,10 +1185,10 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 6,
-        "technical_record_count": 45,
+        "recent_evidence_count": 7,
+        "technical_record_count": 46,
         "family_count": 10,
-        "trend_score": 82.5
+        "trend_score": 82.7
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1176,6 +1308,7 @@
         "hn:49845172",
         "hn:49823332",
         "hn:49821438",
+        "github:1384094559",
         "simon-willison:0d7b498b4e4acf535362",
         "hn:49800574",
         "hn:49799641",
@@ -1185,13 +1318,12 @@
         "simon-willison:b3e5263fa8976c3c350c",
         "latent-space:7409d5ffee8a2c05841b",
         "hn:49791429",
-        "hn:49790936",
-        "hn:49789538"
+        "hn:49790936"
       ],
       "stage": "corroborated-source-concentrated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 96,
+        "evidence_count": 97,
         "source_count": 13,
         "source_types": [
           "community",
@@ -1205,10 +1337,10 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 16,
-        "technical_record_count": 39,
+        "recent_evidence_count": 17,
+        "technical_record_count": 40,
         "family_count": 10,
-        "trend_score": 81.7
+        "trend_score": 81.8
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1224,138 +1356,6 @@
       "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "early:heterogeneous-inference",
-      "origin": "early-signal",
-      "title": "Heterogeneous model portfolios are becoming the default inference architecture",
-      "description": "Teams will combine frontier, small, open, local, and specialized models through routing and purpose-built serving rather than standardizing on one endpoint.",
-      "source_analysis": "early-signal-tracker/heterogeneous-inference",
-      "theme_ids": [
-        "frontier-inference-infrastructure",
-        "model-routing",
-        "open-local-inference",
-        "small-specialized-models",
-        "specialized-inference-silicon"
-      ],
-      "evidence_ids": [
-        "alphasignal:trend:open-local-models-and-inference-efficiency",
-        "arxiv:2609.21849v1",
-        "github:1375922101",
-        "hn:49736660",
-        "hf-paper:2609.18063",
-        "bluesky:e810fac7fd93:3mtmlkcbuoc2x",
-        "interconnects:9347a64bc25f44ccdf21",
-        "arxiv:2609.21774v1"
-      ],
-      "stage": "corroborating",
-      "movement": "accelerating",
-      "metrics": {
-        "evidence_count": 8,
-        "source_count": 7,
-        "source_types": [
-          "community",
-          "expert-newsletter",
-          "expert-social",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 0,
-        "technical_record_count": 3,
-        "family_count": 4,
-        "technical_family_count": 2
-      },
-      "linked_requirements": [
-        {
-          "id": "heterogeneous-model-routing",
-          "title": "Heterogeneous model routing",
-          "maturity": "experimental"
-        }
-      ],
-      "linked_requirement": {
-        "id": "heterogeneous-model-routing",
-        "title": "Heterogeneous model routing",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 22,
-        "source_breadth": 25,
-        "technical_support": 9,
-        "new_evidence": 0,
-        "operating_relevance": 10,
-        "total": 66
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "review-existing-requirement"
-    },
-    {
-      "id": "early:validation-as-release",
-      "origin": "early-signal",
-      "title": "Validation is becoming the release gate for AI-generated work",
-      "description": "As agents produce code and operational changes, evaluation, observability, security, and reversible deployment become one continuous release discipline.",
-      "source_analysis": "early-signal-tracker/validation-as-release",
-      "theme_ids": [
-        "assurance-infrastructure",
-        "coding-agents",
-        "training-self-improvement",
-        "validation-release"
-      ],
-      "evidence_ids": [
-        "hf-paper:2609.27308",
-        "alphasignal:ed11042f47b8f05c3ace",
-        "arxiv:2609.22068v1",
-        "github:1370498337",
-        "the-batch:2622ee409c0a925f8cee",
-        "alphasignal:cec6f55c7deff2c8dfc5",
-        "alphasignal:trend:validation-and-release-bottlenecks",
-        "arxiv:2609.21841v1"
-      ],
-      "stage": "corroborating",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 8,
-        "source_count": 5,
-        "source_types": [
-          "curated-newsletter",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 3,
-        "technical_record_count": 3,
-        "family_count": 3,
-        "technical_family_count": 2
-      },
-      "linked_requirements": [
-        {
-          "id": "evaluation-release-gates",
-          "title": "Evaluation and release gates",
-          "maturity": "experimental"
-        }
-      ],
-      "linked_requirement": {
-        "id": "evaluation-release-gates",
-        "title": "Evaluation and release gates",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 21,
-        "technical_support": 9,
-        "new_evidence": 12,
-        "operating_relevance": 10,
-        "total": 60
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "review-existing-requirement"
     },
     {
       "id": "theme:document-knowledge-systems",
@@ -1954,6 +1954,53 @@
       "review_action": "assess-new-requirement"
     },
     {
+      "id": "theme:model-routing",
+      "origin": "cross-source-theme",
+      "title": "Model routing & heterogeneous stacks",
+      "description": "Systems that select or combine models according to task, cost, latency, capability, privacy, or reliability requirements.",
+      "source_analysis": "themes/model-routing",
+      "theme_ids": [
+        "model-routing"
+      ],
+      "evidence_ids": [
+        "github:1384094559",
+        "alphasignal:trend:model-routing-and-heterogeneous-stacks",
+        "alphasignal:project:typesafe-ai-jev",
+        "menlo-ventures:357c545badf007e3def4",
+        "chip-huyen:a3c6e30055307ca7c6f4"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 5,
+        "source_count": 4,
+        "source_types": [
+          "investor-essay",
+          "newsletter-analysis",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 2,
+        "family_count": 4,
+        "trend_score": 60.7
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 20,
+        "technical_support": 6,
+        "new_evidence": 4,
+        "operating_relevance": 0,
+        "total": 38
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "assess-new-requirement"
+    },
+    {
       "id": "expert-finding:agent-operating-layer",
       "origin": "expert-finding",
       "title": "Attention is shifting from agent demos to the operating layer around them",
@@ -2028,51 +2075,6 @@
         "status": "current"
       },
       "review_action": "source-analysis-covered-by-existing-requirements"
-    },
-    {
-      "id": "theme:model-routing",
-      "origin": "cross-source-theme",
-      "title": "Model routing & heterogeneous stacks",
-      "description": "Systems that select or combine models according to task, cost, latency, capability, privacy, or reliability requirements.",
-      "source_analysis": "themes/model-routing",
-      "theme_ids": [
-        "model-routing"
-      ],
-      "evidence_ids": [
-        "alphasignal:trend:model-routing-and-heterogeneous-stacks",
-        "alphasignal:project:typesafe-ai-jev",
-        "menlo-ventures:357c545badf007e3def4",
-        "chip-huyen:a3c6e30055307ca7c6f4"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 4,
-        "source_count": 3,
-        "source_types": [
-          "investor-essay",
-          "newsletter-analysis",
-          "practitioner-blog"
-        ],
-        "recent_evidence_count": 0,
-        "technical_record_count": 1,
-        "family_count": 3,
-        "trend_score": 53.0
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 15,
-        "technical_support": 3,
-        "new_evidence": 0,
-        "operating_relevance": 0,
-        "total": 26
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
     },
     {
       "id": "operator-narrative:workflow-ownership",
@@ -2350,7 +2352,7 @@
       "id": "operator-narrative:assurance-layer",
       "origin": "operator-narrative",
       "title": "Assurance is becoming a separate infrastructure layer for agents",
-      "description": "7 essays across 3 publishers converge on runtime controls: vulnerability discovery, penetration testing, identity, data sovereignty, defensive models, and detection of abnormal agent intent. In the wider radar this theme appears across 23 sources and 250 support units.",
+      "description": "7 essays across 3 publishers converge on runtime controls: vulnerability discovery, penetration testing, identity, data sovereignty, defensive models, and detection of abnormal agent intent. In the wider radar this theme appears across 23 sources and 251 support units.",
       "source_analysis": "operator-narratives/assurance-layer",
       "theme_ids": [
         "assurance-infrastructure"
@@ -2563,7 +2565,7 @@
       "source_analysis": "themes/coding-agents",
       "stage": "broadly-corroborated",
       "metrics": {
-        "evidence_count": 117,
+        "evidence_count": 118,
         "source_count": 16,
         "source_types": [
           "community",
@@ -2579,8 +2581,8 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 19,
-        "technical_record_count": 65,
+        "recent_evidence_count": 20,
+        "technical_record_count": 66,
         "family_count": 12,
         "trend_score": 90.9
       },
@@ -2693,7 +2695,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 37,
         "family_count": 11,
-        "trend_score": 79.6
+        "trend_score": 79.5
       },
       "linked_requirements": [
         {
@@ -2922,7 +2924,7 @@
       "source_analysis": "themes/training-self-improvement",
       "stage": "broadly-corroborated",
       "metrics": {
-        "evidence_count": 226,
+        "evidence_count": 227,
         "source_count": 27,
         "source_types": [
           "community",
@@ -2940,8 +2942,8 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 18,
-        "technical_record_count": 135,
+        "recent_evidence_count": 19,
+        "technical_record_count": 136,
         "family_count": 14,
         "trend_score": 100.0
       },
@@ -3330,6 +3332,7 @@
         "simon-willison:eee7ce72da23ef2f47be",
         "hn:49833867",
         "alphasignal:324bb0890b258e7ec4fc",
+        "github:1384094559",
         "aws-machine-learning-blog:abc4f7e609e383bd6c09",
         "github:1383809012",
         "nvidia-developer-blog:0a65e7be039d0fbfaafe",
@@ -3340,13 +3343,12 @@
         "alphasignal:ed11042f47b8f05c3ace",
         "alphasignal:cec6f55c7deff2c8dfc5",
         "hn:49799287",
-        "hn:49798257",
-        "hn:49792067"
+        "hn:49798257"
       ],
       "stage": "broadly-corroborated",
       "movement": "steady",
       "metrics": {
-        "evidence_count": 117,
+        "evidence_count": 118,
         "source_count": 16,
         "source_types": [
           "community",
@@ -3362,8 +3364,8 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 19,
-        "technical_record_count": 65,
+        "recent_evidence_count": 20,
+        "technical_record_count": 66,
         "family_count": 12,
         "trend_score": 90.9
       },
@@ -3393,8 +3395,7 @@
         "total": 83
       },
       "change_reasons": [
-        "Evidence increased by 16",
-        "Source breadth increased by 1"
+        "1 additional dated records entered the latest seven-day window"
       ],
       "materially_changed": true,
       "adjudication": {
@@ -3416,7 +3417,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 1
+      "queue_rank": 1,
+      "pending_from_previous_review": true
     },
     {
       "id": "theme:voice-audio",
@@ -3498,11 +3500,8 @@
         "operating_relevance": 10,
         "total": 83
       },
-      "change_reasons": [
-        "Evidence increased by 5",
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:voice-audio",
         "reviewed_at": "2026-09-24",
@@ -3522,6 +3521,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 2
     },
     {
@@ -3576,7 +3576,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 37,
         "family_count": 11,
-        "trend_score": 79.6
+        "trend_score": 79.5
       },
       "linked_requirements": [
         {
@@ -3598,11 +3598,8 @@
         "operating_relevance": 10,
         "total": 79
       },
-      "change_reasons": [
-        "Evidence increased by 6",
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:frontier-inference-infrastructure",
         "reviewed_at": "2026-09-25",
@@ -3621,6 +3618,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 3
     },
     {
@@ -3699,10 +3697,8 @@
         "operating_relevance": 10,
         "total": 78
       },
-      "change_reasons": [
-        "Evidence increased by 6"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:agent-harnesses",
         "reviewed_at": "2026-09-25",
@@ -3721,6 +3717,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 4
     },
     {
@@ -3803,10 +3800,8 @@
         "operating_relevance": 10,
         "total": 78
       },
-      "change_reasons": [
-        "Evidence increased by 3"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:open-local-inference",
         "reviewed_at": "2026-09-25",
@@ -3826,6 +3821,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 5
     },
     {
@@ -3903,10 +3899,8 @@
         "operating_relevance": 10,
         "total": 78
       },
-      "change_reasons": [
-        "Evidence increased by 13"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:skills-integrations",
         "reviewed_at": "2026-09-25",
@@ -3925,6 +3919,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 6
     },
     {
@@ -3947,6 +3942,7 @@
         "alphasignal:5e4d06e1b5148246bf48",
         "alphasignal:28e88f0768d976bbfccb",
         "bluesky:1278ebf77949:3mw7n5pr7222t",
+        "github:1384094559",
         "openai-news:3d7b9aab56c8f4fe22c0",
         "hf-paper:2609.27308",
         "hn:49807413",
@@ -3955,13 +3951,12 @@
         "alphasignal:cec6f55c7deff2c8dfc5",
         "hn:49800574",
         "huggingface-blog:e9f63aa1f7aaa02f4024",
-        "hn:49791343",
-        "hn:49788178"
+        "hn:49791343"
       ],
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 226,
+        "evidence_count": 227,
         "source_count": 27,
         "source_types": [
           "community",
@@ -3979,8 +3974,8 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 18,
-        "technical_record_count": 135,
+        "recent_evidence_count": 19,
+        "technical_record_count": 136,
         "family_count": 14,
         "trend_score": 100.0
       },
@@ -4005,7 +4000,7 @@
         "total": 78
       },
       "change_reasons": [
-        "Evidence increased by 22"
+        "1 additional dated records entered the latest seven-day window"
       ],
       "materially_changed": true,
       "adjudication": {
@@ -4026,7 +4021,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 7
+      "queue_rank": 7,
+      "pending_from_previous_review": true
     },
     {
       "id": "theme:robotics-embodied-ai",
@@ -4101,11 +4097,8 @@
         "operating_relevance": 10,
         "total": 74
       },
-      "change_reasons": [
-        "Evidence increased by 5",
-        "Source breadth increased by 2"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:robotics-embodied-ai",
         "reviewed_at": "2026-09-25",
@@ -4124,6 +4117,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 8
     },
     {
@@ -4188,11 +4182,8 @@
         "operating_relevance": 10,
         "total": 71
       },
-      "change_reasons": [
-        "Evidence increased by 3",
-        "Source breadth increased by 2"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:proprietary-data-boundary",
         "reviewed_at": "2026-09-25",
@@ -4211,6 +4202,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 9
     },
     {
@@ -4274,10 +4266,8 @@
         "operating_relevance": 10,
         "total": 56
       },
-      "change_reasons": [
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "early:modular-agent-stack",
         "reviewed_at": "2026-09-25",
@@ -4296,6 +4286,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 10
     }
   ],
@@ -4384,7 +4375,7 @@
       "source_names": [
         "Y Combinator AI companies"
       ],
-      "new_record_count": 3,
+      "new_record_count": 0,
       "evidence_ids": [
         "yc-company:662",
         "yc-company:38492",
@@ -4580,7 +4571,7 @@
         "OpenAI News",
         "Simon Willison's Weblog"
       ],
-      "new_record_count": 9,
+      "new_record_count": 0,
       "evidence_ids": [
         "aws-machine-learning-blog:f90422bc324ab9f24caa",
         "aws-machine-learning-blog:a56b3cba6cf92f496341",
@@ -4652,7 +4643,7 @@
       "source_names": [
         "Y Combinator startup jobs"
       ],
-      "new_record_count": 3,
+      "new_record_count": 0,
       "evidence_ids": [
         "yc-job:108650",
         "yc-job:107397",
@@ -4697,16 +4688,17 @@
       "dimension": "technical_reality",
       "evidence_limit": 8,
       "status": "active",
-      "record_count": 280,
+      "record_count": 281,
       "source_count": 1,
       "source_names": [
         "GitHub"
       ],
-      "new_record_count": 38,
+      "new_record_count": 1,
       "evidence_ids": [
         "github:1387641169",
         "github:1386778170",
         "github:1385230825",
+        "github:1384094559",
         "github:1383988294",
         "github:1383809012",
         "github:1383518430",
@@ -4989,11 +4981,11 @@
         "github:1387641169",
         "github:1386778170",
         "github:1385230825",
+        "github:1384094559",
         "github:1383988294",
         "github:1383809012",
         "github:1383518430",
-        "github:1382454774",
-        "github:1381702970"
+        "github:1382454774"
       ],
       "boundary": "Supporting verification signal only; maturity still requires case-level review under the formal evidence policy."
     },
@@ -5051,7 +5043,7 @@
         "Simon Willison's Weblog",
         "Y Combinator essays"
       ],
-      "new_record_count": 14,
+      "new_record_count": 0,
       "evidence_ids": [
         "aws-machine-learning-blog:1c1105e33f0f4d325d80",
         "aws-machine-learning-blog:f90422bc324ab9f24caa",

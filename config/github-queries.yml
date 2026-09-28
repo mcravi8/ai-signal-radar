@@ -11,6 +11,8 @@ queries:
     query: '"inference engine" in:name,description,readme pushed:>={since}'
   - id: small-models
     query: '"small language model" in:name,description,readme pushed:>={since}'
+  - id: contrastive-language-models
+    query: '"contrastive language model" in:name,description,readme pushed:>={since}'
   - id: agent-harness
     query: '"agent harness" in:name,description,readme pushed:>={since}'
   - id: ontology

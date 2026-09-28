@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-28T22:41:47.091829+00:00",
+    "generated_at": "2026-09-28T23:01:22.331053+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1431,
-    "input_changed_document_count": 1,
-    "cluster_count": 471,
+    "input_document_count": 1432,
+    "input_changed_document_count": 0,
+    "cluster_count": 476,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 169,
-    "coherent_cluster_count": 191,
-    "quality_eligible_cluster_count": 11,
-    "explained_cluster_count": 127,
+    "coherent_cluster_count": 195,
+    "quality_eligible_cluster_count": 13,
+    "explained_cluster_count": 130,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 121,
-      "merge-existing-direction": 6,
-      "novel": 344
+      "covered-by-existing-theme": 123,
+      "merge-existing-direction": 7,
+      "novel": 346
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -112,6 +112,35 @@
         "arxiv:2609.20532v1",
         "arxiv:2609.21728v1",
         "nvidia-developer-blog:414469594f15a132e944"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:inference-control-plane-7964efa6ac",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "heterogeneous-inference",
+        "title": "Heterogeneous model portfolios are becoming the default inference architecture",
+        "theme_recall": 0.2,
+        "matched_theme_ids": [
+          "small-specialized-models"
+        ],
+        "matched_anchor_ids": [
+          "primitive:inference-control-plane"
+        ],
+        "matched_anchor_phrases": [],
+        "basis": "explicit-anchor"
+      },
+      "anchor_labels": [
+        "Inference control plane"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20497v1",
+        "github:1375694187",
+        "github:1384094559"
       ],
       "source_count": 2,
       "source_family_count": 2,
@@ -616,7 +645,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:evidence-grounded-bc1e3fa9bf",
@@ -640,31 +669,6 @@
       "source_count": 2,
       "source_family_count": 2,
       "materially_changed": false
-    },
-    {
-      "cluster_id": "discovery:fine-tuning-03c735a407",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "matched_anchor_phrases": [
-          "fine tuning"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 1.0
-      },
-      "anchor_labels": [
-        "fine-tuning"
-      ],
-      "evidence_ids": [
-        "github:1347394075",
-        "github:1366280840",
-        "yc-job:108650"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": true
     }
   ],
   "history": []

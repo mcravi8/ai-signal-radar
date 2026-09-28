@@ -21,3 +21,40 @@ items:
     projects:
       - sadia-sigma-lab/BLINDSPOT
     sponsor_status: unknown
+
+  - id: github:1384094559
+    source_id: github
+    source_type: repository
+    title: Contrastive-LM/CLM
+    url: https://github.com/Contrastive-LM/CLM
+    published_at: "2026-09-23T19:29:56Z"
+    summary: >-
+      Open-source implementation of CLM-8B, a contrastively trained System One
+      decision model that ranks candidate actions from separately cacheable
+      state and action embeddings. The maintainers report performance comparable
+      with Jev at up to nine times lower latency and strong agentic-code verifier
+      results; those benchmark claims have not been independently reproduced.
+    authors:
+      - Jacky Kwok
+      - Hangoo Kang
+      - Tarun Suresh
+      - Jon Saad-Falcon
+      - Marco Pavone
+      - Christopher Ré
+      - Azalia Mirhoseini
+    tags:
+      - contrastive language model
+      - system one model
+      - decision model
+      - model routing
+      - model evaluation
+      - agentic coding
+      - tool calling
+    projects:
+      - Contrastive-LM/CLM
+    sponsor_status: unknown
+    metadata:
+      stars: 2269
+      forks: 197
+      pushed_at: "2026-09-24T23:10:28Z"
+      license: Apache-2.0

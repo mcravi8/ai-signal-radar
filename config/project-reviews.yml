@@ -1,4 +1,29 @@
 reviews:
+  Contrastive-LM/CLM:
+    category: Contrastive decision model
+    why_it_matters: Separates state understanding from candidate-action scoring so reusable action embeddings can support fast typed decisions, tool selection, routing, and verification without autoregressive generation for every choice.
+    workflow_opportunity: Pilot CLM beside Jev and a general-purpose LLM on one bounded workflow such as tool routing or best-of-N output verification; compare accepted-output quality, p95 latency, GPU cost, calibration, and failure behavior on the same held-out cases.
+    caveat: The zero-shot and verifier results are reported by the project authors and have not been independently reproduced. The reference system still uses an 8B Qwen encoder and a GPU serving stack, accepts closed candidate sets, and truncates states at 2,048 tokens by default unless operators allocate more memory.
+    primary_layer: Models & capabilities
+    secondary_layer: Harness & orchestration
+    cross_layer: true
+    ratings:
+      leverage: 4
+      maturity: 3
+      composability: 4
+      cost_accessibility: 4
+      ease: 3
+      relevance: 5
+    opportunity_score: 78
+    action: Pilot / benchmark
+    hype_risk: Medium
+    verification_level: Documentation and repository review
+    reviewed_at: "2026-09-28"
+    review_basis:
+      - Official repository architecture, TypeSafe-compatible API, training recipe, and evaluation disclosures
+      - Apache-2.0 code, published weights and data, reproducible benchmark commands, and visible test suite
+      - Repository metadata and benchmark claims were reviewed but not independently reproduced
+
   okf-memory/okf-agent-memory:
     category: Git-native agent memory
     why_it_matters: Separates compact always-on operating rules from selectively retrieved project knowledge, while keeping the memory inspectable and versioned as ordinary files.

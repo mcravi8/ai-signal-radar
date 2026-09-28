@@ -62,12 +62,12 @@
 
 ## Verification coverage
 
-- **AI company formation** — 60 records across 1 sources; 3 newly observed in this review history.
+- **AI company formation** — 60 records across 1 sources; 0 newly observed in this review history.
 - **Funding activity** — 24 records across 3 sources; 0 newly observed in this review history.
-- **Customer case studies** — 39 records across 12 sources; 9 newly observed in this review history.
-- **AI job postings** — 17 records across 1 sources; 3 newly observed in this review history.
-- **GitHub adoption proxies** — 280 records across 1 sources; 38 newly observed in this review history.
-- **Production architecture reports** — 91 records across 13 sources; 14 newly observed in this review history.
+- **Customer case studies** — 39 records across 12 sources; 0 newly observed in this review history.
+- **AI job postings** — 17 records across 1 sources; 0 newly observed in this review history.
+- **GitHub adoption proxies** — 281 records across 1 sources; 1 newly observed in this review history.
+- **Production architecture reports** — 91 records across 13 sources; 0 newly observed in this review history.
 
 ## Commitment boundary
 

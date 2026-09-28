@@ -31,6 +31,17 @@ class ClassificationRegressionTests(unittest.TestCase):
         )
         self.assertTrue({"small-specialized-models", "model-routing", "agent-harnesses", "assurance-infrastructure"}.issubset(themes))
 
+    def test_clm_is_recognized_without_matching_generic_causal_language_models(self):
+        themes = classify_text(
+            "CLM-8B is a contrastive language model for System One decisions.",
+            self.keywords,
+        )
+        self.assertIn("small-specialized-models", themes)
+        self.assertNotIn(
+            "small-specialized-models",
+            classify_text("We train a standard causal language model objective.", self.keywords),
+        )
+
     def test_short_terms_use_word_boundaries(self):
         self.assertIn("skills-integrations", classify_text("An MCP server exposes tools.", self.keywords))
         self.assertNotIn("skills-integrations", classify_text("A compliance report was published.", self.keywords))

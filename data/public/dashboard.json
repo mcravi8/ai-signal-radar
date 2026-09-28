@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T22:41:47.091829+00:00",
+    "generated_at": "2026-09-28T23:01:22.331053+00:00",
     "status": "success",
     "source_count": 38,
-    "evidence_count": 2074,
+    "evidence_count": 2075,
     "warnings": []
   },
   "weekly": {
@@ -56,7 +56,7 @@
       ],
       "primary_layer": "models-capabilities",
       "maturity": "emerging",
-      "evidence_count": 93,
+      "evidence_count": 94,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -225,7 +225,7 @@
       ],
       "primary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 68,
+      "evidence_count": 69,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -295,18 +295,19 @@
       ],
       "primary_layer": "harness-orchestration",
       "secondary_layer": "models-capabilities",
-      "maturity": "watchlist",
-      "evidence_count": 2,
+      "maturity": "emerging",
+      "evidence_count": 3,
       "source_types": [
         "investor-essay",
-        "practitioner-blog"
+        "practitioner-blog",
+        "repository"
       ],
       "score": {
-        "recurrence": 5.0,
-        "acceleration": 0.0,
-        "persistence": 10.0,
-        "breadth": 10.0,
-        "total": 25.0
+        "recurrence": 7.5,
+        "acceleration": 8.0,
+        "persistence": 15.0,
+        "breadth": 15.0,
+        "total": 45.5
       }
     },
     {
@@ -332,7 +333,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 224,
+      "evidence_count": 225,
       "source_types": [
         "community",
         "company-directory",
@@ -370,7 +371,7 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 115,
+      "evidence_count": 116,
       "source_types": [
         "community",
         "company-directory",
@@ -727,23 +728,6 @@
   ],
   "evidence": [
     {
-      "id": "openai-news:52b80abd4e046c041ffb",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "Harvey turns legal context into stronger drafts with GPT-6 Astra",
-      "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
-      "published_at": "2026-09-23T12:00:00+00:00",
-      "summary": "GPT-6 Astra produces more structured, context-aware legal documents, freeing lawyers to focus on strategy.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
       "id": "openai-news:f2ff7f76056120414cf0",
       "source_id": "openai-news",
       "source_type": "first-party-lab",
@@ -903,10 +887,10 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "pushed_at": "2026-09-26T09:50:17Z",
         "stars": 964,
-        "license": "MIT",
         "forks": 66,
-        "pushed_at": "2026-09-26T09:50:17Z"
+        "license": "MIT"
       }
     },
     {
@@ -1230,10 +1214,10 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "pushed_at": "2026-09-26T11:26:00Z",
         "stars": 838,
-        "license": "MIT",
         "forks": 51,
-        "pushed_at": "2026-09-26T11:26:00Z"
+        "license": "MIT"
       }
     },
     {
@@ -1303,10 +1287,10 @@
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
       "classification_rule_id": "unresolved-review",
       "verification": {
+        "pushed_at": "2026-09-23T18:16:08Z",
         "stars": 714,
-        "license": "MIT",
         "forks": 82,
-        "pushed_at": "2026-09-23T18:16:08Z"
+        "license": "MIT"
       }
     },
     {
@@ -1451,6 +1435,53 @@
       "classification_disposition": "classification-review",
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
       "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "github:1384094559",
+      "source_id": "github",
+      "source_type": "repository",
+      "title": "Contrastive-LM/CLM",
+      "url": "https://github.com/Contrastive-LM/CLM",
+      "published_at": "2026-09-23T19:29:56Z",
+      "summary": "Open-source implementation of CLM-8B, a contrastively trained System One decision model that ranks candidate actions from separately cacheable state and action embeddings. The maintainers report performance comparable with Jev at up to nine times lower latency and strong agentic-code verifier results; those benchmark claims have not been independently reproduced.",
+      "authors": [
+        "Jacky Kwok",
+        "Hangoo Kang",
+        "Tarun Suresh",
+        "Jon Saad-Falcon",
+        "Marco Pavone",
+        "Christopher Ré",
+        "Azalia Mirhoseini"
+      ],
+      "tags": [
+        "contrastive language model",
+        "system one model",
+        "decision model",
+        "model routing",
+        "model evaluation",
+        "agentic coding",
+        "tool calling"
+      ],
+      "projects": [
+        "Contrastive-LM/CLM"
+      ],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "assurance-infrastructure",
+        "coding-agents",
+        "model-routing",
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
+      "verification": {
+        "pushed_at": "2026-09-24T23:10:28Z",
+        "stars": 2269,
+        "forks": 197,
+        "license": "Apache-2.0"
+      }
     },
     {
       "id": "hn:49821438",
@@ -1831,10 +1862,10 @@
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
       "classification_rule_id": "unresolved-review",
       "verification": {
+        "pushed_at": "2026-09-24T13:09:04Z",
         "stars": 18,
-        "license": "MIT",
         "forks": 0,
-        "pushed_at": "2026-09-24T13:09:04Z"
+        "license": "MIT"
       }
     },
     {
@@ -2735,12 +2766,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
-        "batch": "S2026",
         "date_basis": "first-observed",
         "github_url": "",
-        "team_size": 2,
-        "location": "New York City"
+        "batch": "S2026",
+        "location": "New York City",
+        "status": "Active",
+        "team_size": 2
       }
     },
     {
@@ -2771,12 +2802,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "status": "Active",
-        "batch": "S2026",
         "date_basis": "first-observed",
         "github_url": "https://github.com/Hebbian-Robotics",
-        "team_size": 2,
-        "location": "San Francisco"
+        "batch": "S2026",
+        "location": "San Francisco",
+        "status": "Active",
+        "team_size": 2
       }
     },
     {
@@ -2803,12 +2834,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
-        "batch": "F2026",
         "date_basis": "first-observed",
         "github_url": "https://github.com/Vorelios",
-        "team_size": 2,
-        "location": "San Francisco"
+        "batch": "F2026",
+        "location": "San Francisco",
+        "status": "Active",
+        "team_size": 2
       }
     },
     {
@@ -2835,12 +2866,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
-        "batch": "F2026",
         "date_basis": "first-observed",
         "github_url": "https://github.com/useoxygen",
-        "team_size": 2,
-        "location": "San Francisco"
+        "batch": "F2026",
+        "location": "San Francisco",
+        "status": "Active",
+        "team_size": 2
       }
     },
     {
@@ -3060,10 +3091,10 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "pushed_at": "2026-09-25T04:53:31Z",
         "stars": 271,
-        "license": "Apache-2.0",
         "forks": 36,
-        "pushed_at": "2026-09-25T04:53:31Z"
+        "license": "Apache-2.0"
       }
     },
     {
@@ -3327,10 +3358,10 @@
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
       "classification_rule_id": "unresolved-review",
       "verification": {
+        "pushed_at": "2026-09-25T14:18:29Z",
         "stars": 8,
-        "license": "MIT",
         "forks": 1,
-        "pushed_at": "2026-09-25T14:18:29Z"
+        "license": "MIT"
       }
     },
     {
@@ -4265,12 +4296,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
-        "batch": "F2026",
         "date_basis": "first-observed",
         "github_url": "",
-        "team_size": 2,
-        "location": "San Francisco"
+        "batch": "F2026",
+        "location": "San Francisco",
+        "status": "Active",
+        "team_size": 2
       }
     },
     {
@@ -4297,12 +4328,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
-        "batch": "F2026",
         "date_basis": "first-observed",
         "github_url": "",
-        "team_size": 2,
-        "location": "San Francisco"
+        "batch": "F2026",
+        "location": "San Francisco",
+        "status": "Active",
+        "team_size": 2
       }
     },
     {
@@ -4329,12 +4360,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "status": "Active",
-        "batch": "F2026",
         "date_basis": "first-observed",
         "github_url": "https://github.com/openhackai",
-        "team_size": 1,
-        "location": "San Francisco"
+        "batch": "F2026",
+        "location": "San Francisco",
+        "status": "Active",
+        "team_size": 1
       }
     },
     {

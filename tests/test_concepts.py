@@ -95,6 +95,7 @@ class ConceptExtractionTests(unittest.TestCase):
         entity_ids = {entity["id"] for entity in paper["entities"]}
         action_ids = {action["id"] for action in paper["actions"]}
         self.assertIn("theme:model-routing", concept_ids)
+        self.assertIn("primitive:inference-control-plane", concept_ids)
         self.assertIn("primitive:proprietary-data-boundary", concept_ids)
         self.assertIn("phrase:policy-firewall", concept_ids)
         self.assertIn("project:boundarykit", entity_ids)
@@ -154,6 +155,43 @@ class ConceptExtractionTests(unittest.TestCase):
         )
         self.assertIn("paper:one", third["changed_document_ids"])
         validate_public_payload(third)
+
+    def test_adding_a_document_does_not_mark_existing_phrase_scores_as_changes(self):
+        first = build_concept_catalog(
+            self.items,
+            self.sources,
+            self.discovery_policy,
+            self.taxonomy,
+            self.keywords,
+            self.concept_policy,
+            as_of=datetime(2026, 9, 23, tzinfo=timezone.utc),
+        )
+        added = [
+            *self.items,
+            {
+                "id": "repo:four",
+                "source_id": "repo-source",
+                "source_type": "repository",
+                "title": "A separate evaluation runtime",
+                "summary": "A release gate evaluates an unrelated workflow.",
+                "url": "https://example.com/repo-four",
+                "published_at": "2026-09-23",
+                "tags": ["release gate"],
+                "projects": ["EvalRuntime"],
+                "theme_ids": ["validation-release"],
+            },
+        ]
+        second = build_concept_catalog(
+            added,
+            self.sources,
+            self.discovery_policy,
+            self.taxonomy,
+            self.keywords,
+            self.concept_policy,
+            as_of=datetime(2026, 9, 24, tzinfo=timezone.utc),
+            previous_catalog=first,
+        )
+        self.assertEqual(second["changed_document_ids"], ["repo:four"])
 
 
 if __name__ == "__main__":

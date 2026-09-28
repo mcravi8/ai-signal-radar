@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-28T22:41:47.091829+00:00",
+    "generated_at": "2026-09-28T23:01:22.331053+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1431,
-    "input_changed_document_count": 1,
-    "cluster_count": 471,
+    "input_document_count": 1432,
+    "input_changed_document_count": 0,
+    "cluster_count": 476,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 169,
-    "coherent_cluster_count": 191,
-    "quality_eligible_cluster_count": 11,
-    "explained_cluster_count": 127,
+    "coherent_cluster_count": 195,
+    "quality_eligible_cluster_count": 13,
+    "explained_cluster_count": 130,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 121,
-      "merge-existing-direction": 6,
-      "novel": 344
+      "covered-by-existing-theme": 123,
+      "merge-existing-direction": 7,
+      "novel": 346
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -112,6 +112,35 @@
         "arxiv:2609.20532v1",
         "arxiv:2609.21728v1",
         "nvidia-developer-blog:414469594f15a132e944"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:inference-control-plane-7964efa6ac",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "heterogeneous-inference",
+        "title": "Heterogeneous model portfolios are becoming the default inference architecture",
+        "theme_recall": 0.2,
+        "matched_theme_ids": [
+          "small-specialized-models"
+        ],
+        "matched_anchor_ids": [
+          "primitive:inference-control-plane"
+        ],
+        "matched_anchor_phrases": [],
+        "basis": "explicit-anchor"
+      },
+      "anchor_labels": [
+        "Inference control plane"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20497v1",
+        "github:1375694187",
+        "github:1384094559"
       ],
       "source_count": 2,
       "source_family_count": 2,
@@ -616,7 +645,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:evidence-grounded-bc1e3fa9bf",
@@ -640,31 +669,6 @@
       "source_count": 2,
       "source_family_count": 2,
       "materially_changed": false
-    },
-    {
-      "cluster_id": "discovery:fine-tuning-03c735a407",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "matched_anchor_phrases": [
-          "fine tuning"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 1.0
-      },
-      "anchor_labels": [
-        "fine-tuning"
-      ],
-      "evidence_ids": [
-        "github:1347394075",
-        "github:1366280840",
-        "yc-job:108650"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": true
     }
   ],
   "clusters": [
@@ -4385,7 +4389,7 @@
         "dominant_publisher_share": 0.667,
         "raw_evidence_count": 15,
         "capped_evidence_count": 3,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -4519,7 +4523,7 @@
           ]
         }
       ],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -4889,7 +4893,7 @@
         "dominant_publisher_share": 0.667,
         "raw_evidence_count": 4,
         "capped_evidence_count": 3,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -4934,7 +4938,7 @@
           ]
         }
       ],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -5497,6 +5501,132 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
+    },
+    {
+      "id": "discovery:inference-control-plane-7964efa6ac",
+      "anchor_ids": [
+        "primitive:inference-control-plane"
+      ],
+      "anchors": [
+        {
+          "id": "primitive:inference-control-plane",
+          "label": "Inference control plane",
+          "kind": "primitive",
+          "document_count": 3,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20497v1",
+        "github:1375694187",
+        "github:1384094559"
+      ],
+      "source_ids": [
+        "arxiv",
+        "github"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "research"
+      ],
+      "theme_ids": [
+        "assurance-infrastructure",
+        "coding-agents",
+        "model-routing",
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [
+        "assurance-infrastructure",
+        "small-specialized-models"
+      ],
+      "theme_document_counts": {
+        "assurance-infrastructure": 2,
+        "coding-agents": 1,
+        "model-routing": 1,
+        "small-specialized-models": 2,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-17T14:45:21Z",
+      "last_seen": "2026-09-23T19:29:56Z",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 3,
+        "dominant_publisher_share": 0.667,
+        "raw_evidence_count": 4,
+        "capped_evidence_count": 3,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": true,
+        "phrase_only": false,
+        "entity_only": false,
+        "recurrent_theme_count": 2,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:route",
+            "document_count": 3
+          },
+          {
+            "id": "action:reason",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:assurance-infrastructure",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:model-routing",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:small-specialized-models",
+            "document_count": 2
+          },
+          {
+            "id": "theme:assurance-infrastructure",
+            "document_count": 2
+          },
+          {
+            "id": "theme:small-specialized-models",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": true,
+        "candidate_quality_met": true
+      },
+      "source_cap_exclusions": [
+        {
+          "evidence_id": "github:1348826110",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        }
+      ],
+      "materially_changed": false,
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "heterogeneous-inference",
+        "title": "Heterogeneous model portfolios are becoming the default inference architecture",
+        "theme_recall": 0.2,
+        "matched_theme_ids": [
+          "small-specialized-models"
+        ],
+        "matched_anchor_ids": [
+          "primitive:inference-control-plane"
+        ],
+        "matched_anchor_phrases": [],
+        "basis": "explicit-anchor"
+      }
     },
     {
       "id": "discovery:jev-typesafe-80fc00b6b6",
@@ -6587,7 +6717,7 @@
         "dominant_publisher_share": 0.667,
         "raw_evidence_count": 4,
         "capped_evidence_count": 3,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -6640,7 +6770,7 @@
           ]
         }
       ],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -16469,7 +16599,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -16494,7 +16624,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -16817,6 +16947,80 @@
         "source_count": 2,
         "source_family_count": 2,
         "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:lower-latency-2cab306eed",
+      "anchor_ids": [
+        "phrase:lower-latency"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:lower-latency",
+          "label": "lower latency",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "github:1384094559",
+        "yc-company:35850"
+      ],
+      "source_ids": [
+        "github",
+        "yc-companies"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "formation"
+      ],
+      "theme_ids": [
+        "assurance-infrastructure",
+        "coding-agents",
+        "model-routing",
+        "robotics-embodied-ai",
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "assurance-infrastructure": 1,
+        "coding-agents": 1,
+        "model-routing": 1,
+        "robotics-embodied-ai": 1,
+        "small-specialized-models": 1,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-23T19:29:56Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 1,
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
@@ -19151,6 +19355,107 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
+    },
+    {
+      "id": "discovery:performance-comparable-5d069cd31c",
+      "anchor_ids": [
+        "phrase:performance-comparable"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:performance-comparable",
+          "label": "performance comparable",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20519v1",
+        "github:1384094559"
+      ],
+      "source_ids": [
+        "arxiv",
+        "github"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "research"
+      ],
+      "theme_ids": [
+        "agent-harnesses",
+        "assurance-infrastructure",
+        "coding-agents",
+        "model-routing",
+        "skills-integrations",
+        "small-specialized-models"
+      ],
+      "recurrent_theme_ids": [
+        "coding-agents"
+      ],
+      "theme_document_counts": {
+        "agent-harnesses": 1,
+        "assurance-infrastructure": 1,
+        "coding-agents": 2,
+        "model-routing": 1,
+        "skills-integrations": 1,
+        "small-specialized-models": 1,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-17T14:58:29Z",
+      "last_seen": "2026-09-23T19:29:56Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 1,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:evaluate",
+            "document_count": 2
+          },
+          {
+            "id": "action:reason",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:coding-agents",
+            "document_count": 2
+          },
+          {
+            "id": "theme:coding-agents",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "coding-agents",
+        "title": "Coding agents & developer tooling",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
     },
     {
       "id": "discovery:personal-assistant-ae715dfdb2",
@@ -24102,6 +24407,117 @@
       }
     },
     {
+      "id": "discovery:theme-small-specialized-models-evaluate-th-4d968c5abf",
+      "anchor_ids": [
+        "relation:theme:small-specialized-models|evaluate|theme:training-self-improvement"
+      ],
+      "anchors": [
+        {
+          "id": "relation:theme:small-specialized-models|evaluate|theme:training-self-improvement",
+          "label": "theme:small-specialized-models evaluate theme:training-self-improvement",
+          "kind": "relationship",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20612v1",
+        "github:1384094559"
+      ],
+      "source_ids": [
+        "arxiv",
+        "github"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "research"
+      ],
+      "theme_ids": [
+        "assurance-infrastructure",
+        "coding-agents",
+        "model-routing",
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "theme_document_counts": {
+        "assurance-infrastructure": 1,
+        "coding-agents": 1,
+        "model-routing": 1,
+        "small-specialized-models": 2,
+        "training-self-improvement": 2
+      },
+      "first_seen": "2026-09-17T15:57:10Z",
+      "last_seen": "2026-09-23T19:29:56Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": true,
+        "phrase_only": false,
+        "entity_only": false,
+        "recurrent_theme_count": 2,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:evaluate",
+            "document_count": 2
+          },
+          {
+            "id": "action:reason",
+            "document_count": 2
+          },
+          {
+            "id": "action:train",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:small-specialized-models",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:training-self-improvement",
+            "document_count": 2
+          },
+          {
+            "id": "theme:small-specialized-models",
+            "document_count": 2
+          },
+          {
+            "id": "theme:training-self-improvement",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": true,
+        "candidate_quality_met": true
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
+    },
+    {
       "id": "discovery:theme-training-self-improvement-train-them-2a26191857",
       "anchor_ids": [
         "relation:theme:training-self-improvement|train|theme:small-specialized-models"
@@ -24253,6 +24669,90 @@
         "context_coherence_met": false,
         "context_features": [],
         "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:tool-calling-5d742a6e33",
+      "anchor_ids": [
+        "phrase:tool-calling"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:tool-calling",
+          "label": "tool calling",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21967v1",
+        "github:1384094559"
+      ],
+      "source_ids": [
+        "arxiv",
+        "github"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "research"
+      ],
+      "theme_ids": [
+        "assurance-infrastructure",
+        "coding-agents",
+        "model-routing",
+        "open-local-inference",
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "assurance-infrastructure": 1,
+        "coding-agents": 1,
+        "model-routing": 1,
+        "open-local-inference": 1,
+        "small-specialized-models": 1,
+        "training-self-improvement": 1,
+        "voice-audio": 1
+      },
+      "first_seen": "2026-09-18T16:27:22Z",
+      "last_seen": "2026-09-23T19:29:56Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:evaluate",
+            "document_count": 2
+          },
+          {
+            "id": "action:reason",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
         "spark_quality_met": false,
         "candidate_quality_met": false
       },

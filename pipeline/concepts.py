@@ -347,9 +347,24 @@ def extract_concept_documents(
 
 
 def _document_signature(document: dict[str, Any]) -> str:
+    # Corpus-level phrase frequency and score move whenever an unrelated record
+    # enters or leaves the window. They are useful ranking metadata, but they do
+    # not make every document materially changed. Keep the signature limited to
+    # the concepts actually observed in this document.
+    stable_concepts = [
+        {
+            key: concept[key]
+            for key in ("id", "label", "kind", "matched_terms")
+            if key in concept
+        }
+        for concept in document["concepts"]
+    ]
     payload = {
-        key: document[key]
-        for key in ("theme_ids", "concepts", "entities", "actions", "relationships")
+        "theme_ids": document["theme_ids"],
+        "concepts": stable_concepts,
+        "entities": document["entities"],
+        "actions": document["actions"],
+        "relationships": document["relationships"],
     }
     encoded = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()

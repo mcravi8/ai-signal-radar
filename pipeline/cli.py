@@ -190,7 +190,24 @@ def synthesize() -> None:
     validate_clustering_policy(clustering_policy)
     generated_at = datetime.now(timezone.utc)
     manual_rows = _yaml(ROOT / "data/manual/items.yml").get("items", [])
-    rows = deduplicate([*read_jsonl(ROOT / "data/processed/items.jsonl"), *manual_rows])
+    processed_rows = read_jsonl(ROOT / "data/processed/items.jsonl")
+    processed_by_id = {row["id"]: row for row in processed_rows}
+    # Reviewed manual records are authoritative when an automated collector has
+    # already stored the same URL/title with sparse metadata (for example, a
+    # GitHub repository whose API description is empty). Fresh collector
+    # metadata still wins so repository metrics can continue to update.
+    reviewed_rows = [
+        {
+            **processed_by_id.get(row["id"], {}),
+            **row,
+            "metadata": {
+                **row.get("metadata", {}),
+                **processed_by_id.get(row["id"], {}).get("metadata", {}),
+            },
+        }
+        for row in manual_rows
+    ]
+    rows = deduplicate([*reviewed_rows, *processed_rows])
     keywords = _yaml(ROOT / "config/keywords.yml").get("themes", {})
     classification_policy = _yaml(ROOT / "config/classification-policy.yml")
     validate_classification_policy(classification_policy)
@@ -204,6 +221,7 @@ def synthesize() -> None:
         row["classification_reason"] = classification["reason"]
         row["classification_rule_id"] = classification["rule_id"]
 
+    rows.sort(key=lambda row: (row.get("published_at", ""), row["id"]))
     write_jsonl(ROOT / "data/processed/items.jsonl", rows)
     grouped = group_by_theme(rows)
     themes = []

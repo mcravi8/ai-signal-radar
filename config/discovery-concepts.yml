@@ -105,7 +105,7 @@ primitive_concepts:
     aliases: [governed context, permission-aware context, permission aware context, access-controlled context]
   - id: inference-control-plane
     label: Inference control plane
-    aliases: [inference control plane, inference routing, request routing, route requests]
+    aliases: [inference control plane, inference routing, model routing, model router, request routing, route requests]
   - id: agent-control-loop
     label: Agent control loop
     aliases: [agent control loop, agent loop, execution loop, tool loop]

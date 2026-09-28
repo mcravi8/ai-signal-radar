@@ -57,7 +57,7 @@ class CrossSourceResearchTests(unittest.TestCase):
         reviewed = [project for project in self.payload["projects"] if project["review_status"] == "reviewed"]
         queued = [project for project in self.payload["projects"] if project["review_status"] == "queued"]
         discovered = [project for project in self.payload["projects"] if project["review_status"] == "discovered"]
-        self.assertEqual(len(reviewed), 25)
+        self.assertEqual(len(reviewed), 26)
         self.assertEqual(len(queued), 25)
         self.assertGreater(len(discovered), 100)
         self.assertTrue(all(project["opportunity_score"] is None for project in queued + discovered))
@@ -67,11 +67,14 @@ class CrossSourceResearchTests(unittest.TestCase):
         signature_counts = Counter(tuple(project["theme_ids"]) for project in queued)
         self.assertLessEqual(max(signature_counts.values()), 3)
         public_reviews = [project for project in reviewed if project.get("verification_level")]
-        self.assertEqual(len(public_reviews), 5)
+        self.assertEqual(len(public_reviews), 6)
         self.assertTrue(all(project.get("review_basis") for project in public_reviews))
         self.assertTrue(all("github" in project["source_ids"] for project in public_reviews))
         blindspot = next(project for project in public_reviews if project["name"] == "sadia-sigma-lab/BLINDSPOT")
         self.assertIn("arxiv", blindspot["source_ids"])
+        clm = next(project for project in public_reviews if project["name"] == "Contrastive-LM/CLM")
+        self.assertEqual(clm["action"], "Pilot / benchmark")
+        self.assertIn("not been independently reproduced", clm["caveat"])
 
     def test_alphasignal_is_one_analysis_and_one_source(self):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}
@@ -166,7 +169,7 @@ class CrossSourceResearchTests(unittest.TestCase):
             atlas["quality"]["raw_classification_coverage"],
         )
         self.assertEqual(atlas["quality"]["queued_projects"], 25)
-        self.assertEqual(atlas["quality"]["reviewed_projects"], 25)
+        self.assertEqual(atlas["quality"]["reviewed_projects"], 26)
         self.assertIn("not a direct collector-uptime check", atlas["freshness_note"])
         self.assertTrue(all({"project_count", "reviewed_project_count", "queued_project_count"}.issubset(concept) for concept in atlas["concepts"]))
         active_sources = [source for source in self.payload["sources"] if source["status"] == "active"]
