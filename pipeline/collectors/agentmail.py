@@ -36,6 +36,8 @@ class NewsletterDefinition:
     source_type: str
     sender_domains: tuple[str, ...]
     parser: str
+    sender_addresses: tuple[str, ...] = ()
+    homepage_url: str = ""
 
 
 @dataclass(slots=True)
@@ -160,6 +162,8 @@ def load_definitions(path: Path) -> list[NewsletterDefinition]:
                 source_type=row.get("source_type", "newsletter"),
                 sender_domains=tuple(value.lower() for value in row.get("sender_domains", [])),
                 parser=row.get("parser", "issue"),
+                sender_addresses=tuple(value.lower() for value in row.get("sender_addresses", [])),
+                homepage_url=str(row.get("homepage_url", "")),
             )
         )
     return definitions
@@ -171,8 +175,11 @@ def _sender_domain(value: str) -> str:
 
 
 def _definition_for(message: dict[str, Any], definitions: list[NewsletterDefinition]) -> NewsletterDefinition | None:
-    domain = _sender_domain(str(message.get("from", "")))
+    address = parseaddr(str(message.get("from", "")))[1].lower()
+    domain = _sender_domain(address)
     for definition in definitions:
+        if address in definition.sender_addresses:
+            return definition
         if any(domain == allowed or domain.endswith(f".{allowed}") for allowed in definition.sender_domains):
             return definition
     return None
@@ -256,7 +263,7 @@ def parse_alphasignal(message: dict[str, Any], definition: NewsletterDefinition)
 def parse_issue(message: dict[str, Any], definition: NewsletterDefinition) -> list[SourceItem]:
     title = compact_text(str(message.get("subject") or "Untitled newsletter issue"))
     published_at = str(message.get("timestamp") or message.get("created_at") or "")
-    homepage = ALPHASIGNAL_ARCHIVE if definition.source_id == "alphasignal" else ""
+    homepage = definition.homepage_url or (ALPHASIGNAL_ARCHIVE if definition.source_id == "alphasignal" else "")
     return [
         SourceItem(
             id=_stable_item_id(definition.source_id, published_at, title),

@@ -498,6 +498,30 @@ sources:
     source_quality: medium
     commercial_bias: disclosed-and-mixed
 
+  - id: agent-news
+    name: agentNews by AgentMail
+    channel: operator-newsletter
+    homepage_url: https://www.agentmail.to/
+    logo_url: https://www.agentmail.to/favicon.ico
+    enabled: true
+    collection: agentmail-sanitized
+    publisher_id: agentmail
+    evidence_role: operator-interpretation
+    source_quality: medium
+    commercial_bias: first-party
+
+  - id: frontier-signal
+    name: Frontier // Signal from the edge
+    channel: investor-newsletter
+    homepage_url: https://frontier.m1c.vc/
+    logo_url: https://frontier.m1c.vc/favicon.ico
+    enabled: true
+    collection: agentmail-sanitized
+    publisher_id: m1c
+    evidence_role: investor-thesis
+    source_quality: medium
+    commercial_bias: disclosed
+
   - id: manual-public-evidence
     name: Curated public evidence
     channel: mixed

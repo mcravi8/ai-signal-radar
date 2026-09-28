@@ -5,3 +5,19 @@ newsletters:
       - alphasignal.ai
     parser: alphasignal
     enabled: true
+
+  - source_id: agent-news
+    source_type: operator-newsletter
+    sender_addresses:
+      - adi@agentmail.to
+    homepage_url: https://www.agentmail.to/
+    parser: issue
+    enabled: true
+
+  - source_id: frontier-signal
+    source_type: investor-newsletter
+    sender_addresses:
+      - frontier@m1c.vc
+    homepage_url: https://frontier.m1c.vc/
+    parser: issue
+    enabled: true

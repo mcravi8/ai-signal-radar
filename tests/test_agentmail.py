@@ -63,6 +63,31 @@ class FakeClient:
         }
 
 
+class ExactAddressClient:
+    def list_messages(self, inbox_id, after=None):
+        return [
+            {
+                "message_id": "agent-news-message",
+                "from": "Adi <adi@agentmail.to>",
+                "timestamp": "2026-09-28T14:00:00Z",
+            },
+            {
+                "message_id": "unrelated-agentmail-message",
+                "from": "Support <support@agentmail.to>",
+                "timestamp": "2026-09-28T15:00:00Z",
+            },
+        ]
+
+    def get_message(self, inbox_id, message_id):
+        return {
+            "message_id": message_id,
+            "from": "Adi <adi@agentmail.to>",
+            "timestamp": "2026-09-28T14:00:00Z",
+            "subject": "agentNews issue 1",
+            "html": "<p>Issue body remains private.</p>",
+        }
+
+
 class AgentMailCollectorTests(unittest.TestCase):
     def test_alphasignal_parser_extracts_editorial_and_sponsored_items(self):
         items = parse_alphasignal(
@@ -108,6 +133,27 @@ class AgentMailCollectorTests(unittest.TestCase):
             client=client,
         )
         self.assertEqual(client.list_call, ("radar@agentmail.to", "2026-09-22T15:27:33.000Z"))
+
+    def test_exact_sender_address_does_not_trust_the_shared_domain(self):
+        definition = NewsletterDefinition(
+            source_id="agent-news",
+            source_type="operator-newsletter",
+            sender_domains=(),
+            sender_addresses=("adi@agentmail.to",),
+            homepage_url="https://www.agentmail.to/",
+            parser="issue",
+        )
+        result = collect(
+            "unused-test-key",
+            "radar@agentmail.to",
+            [definition],
+            client=ExactAddressClient(),
+        )
+        self.assertEqual(result.messages_seen, 2)
+        self.assertEqual(result.messages_matched, 1)
+        self.assertEqual(len(result.items), 1)
+        self.assertEqual(result.items[0].source_id, "agent-news")
+        self.assertEqual(result.items[0].url, "https://www.agentmail.to/")
 
     def test_cursor_contains_only_public_safe_timestamps(self):
         with tempfile.TemporaryDirectory() as directory:
