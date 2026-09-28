@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-09-28T22:23:16.738907+00:00",
+    "generated_at": "2026-09-28T22:41:47.091829+00:00",
     "as_of": "2026-09-28",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,10 +12,11 @@
       "expert-finding": 3,
       "operator-narrative": 6
     },
-    "materially_changed_count": 17,
+    "materially_changed_count": 0,
     "assessment_queue_count": 10,
     "adjudication_count": 16,
-    "requirement_change_count": 0
+    "requirement_change_count": 0,
+    "idempotent_regeneration": true
   },
   "summary": {
     "headline": "16 candidate decisions are recorded; 10 candidates remain in the bounded assessment queue.",
@@ -118,11 +119,8 @@
         "operating_relevance": 10,
         "total": 83
       },
-      "change_reasons": [
-        "Evidence increased by 16",
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:coding-agents",
         "reviewed_at": "2026-09-25",
@@ -142,6 +140,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 1
     },
     {
@@ -224,11 +223,8 @@
         "operating_relevance": 10,
         "total": 83
       },
-      "change_reasons": [
-        "Evidence increased by 5",
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:voice-audio",
         "reviewed_at": "2026-09-24",
@@ -248,6 +244,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 2
     },
     {
@@ -324,11 +321,8 @@
         "operating_relevance": 10,
         "total": 79
       },
-      "change_reasons": [
-        "Evidence increased by 6",
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:frontier-inference-infrastructure",
         "reviewed_at": "2026-09-25",
@@ -347,6 +341,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 3
     },
     {
@@ -504,10 +499,8 @@
         "operating_relevance": 10,
         "total": 78
       },
-      "change_reasons": [
-        "Evidence increased by 6"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:agent-harnesses",
         "reviewed_at": "2026-09-25",
@@ -526,6 +519,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 4
     },
     {
@@ -608,10 +602,8 @@
         "operating_relevance": 10,
         "total": 78
       },
-      "change_reasons": [
-        "Evidence increased by 3"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:open-local-inference",
         "reviewed_at": "2026-09-25",
@@ -631,6 +623,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 5
     },
     {
@@ -708,10 +701,8 @@
         "operating_relevance": 10,
         "total": 78
       },
-      "change_reasons": [
-        "Evidence increased by 13"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:skills-integrations",
         "reviewed_at": "2026-09-25",
@@ -730,6 +721,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 6
     },
     {
@@ -809,10 +801,8 @@
         "operating_relevance": 10,
         "total": 78
       },
-      "change_reasons": [
-        "Evidence increased by 22"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:training-self-improvement",
         "reviewed_at": "2026-09-25",
@@ -831,6 +821,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 7
     },
     {
@@ -906,11 +897,8 @@
         "operating_relevance": 10,
         "total": 74
       },
-      "change_reasons": [
-        "Evidence increased by 5",
-        "Source breadth increased by 2"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:robotics-embodied-ai",
         "reviewed_at": "2026-09-25",
@@ -929,6 +917,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 8
     },
     {
@@ -993,11 +982,8 @@
         "operating_relevance": 10,
         "total": 71
       },
-      "change_reasons": [
-        "Evidence increased by 3",
-        "Source breadth increased by 2"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:proprietary-data-boundary",
         "reviewed_at": "2026-09-25",
@@ -1016,6 +1002,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 9
     },
     {
@@ -1081,11 +1068,8 @@
         "operating_relevance": 0,
         "total": 68
       },
-      "change_reasons": [
-        "Evidence increased by 5",
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
     },
@@ -1154,11 +1138,8 @@
         "operating_relevance": 0,
         "total": 68
       },
-      "change_reasons": [
-        "Evidence increased by 6",
-        "Source breadth increased by 2"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:multimodal-3d",
         "reviewed_at": "2026-09-25",
@@ -1239,11 +1220,8 @@
         "operating_relevance": 0,
         "total": 68
       },
-      "change_reasons": [
-        "Evidence increased by 21",
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
     },
@@ -1440,10 +1418,8 @@
         "operating_relevance": 0,
         "total": 57
       },
-      "change_reasons": [
-        "Evidence increased by 7"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
     },
@@ -1576,10 +1552,8 @@
         "operating_relevance": 10,
         "total": 56
       },
-      "change_reasons": [
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "early:modular-agent-stack",
         "reviewed_at": "2026-09-25",
@@ -1598,6 +1572,7 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 10
     },
     {
@@ -1736,10 +1711,8 @@
         "operating_relevance": 0,
         "total": 53
       },
-      "change_reasons": [
-        "Evidence increased by 2"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
     },
@@ -1855,10 +1828,8 @@
         "operating_relevance": 0,
         "total": 46
       },
-      "change_reasons": [
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
     },
@@ -1977,11 +1948,8 @@
         "operating_relevance": 0,
         "total": 44
       },
-      "change_reasons": [
-        "Finding strength changed from emerging to strong",
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
     },

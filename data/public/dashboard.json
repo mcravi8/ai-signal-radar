@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T22:23:16.738907+00:00",
+    "generated_at": "2026-09-28T22:41:47.091829+00:00",
     "status": "success",
     "source_count": 38,
     "evidence_count": 2074,
@@ -903,10 +903,10 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "stars": 964,
         "license": "MIT",
         "forks": 66,
-        "pushed_at": "2026-09-26T09:50:17Z",
-        "stars": 964
+        "pushed_at": "2026-09-26T09:50:17Z"
       }
     },
     {
@@ -1230,10 +1230,10 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "stars": 838,
         "license": "MIT",
         "forks": 51,
-        "pushed_at": "2026-09-26T11:26:00Z",
-        "stars": 838
+        "pushed_at": "2026-09-26T11:26:00Z"
       }
     },
     {
@@ -1303,10 +1303,10 @@
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
       "classification_rule_id": "unresolved-review",
       "verification": {
+        "stars": 714,
         "license": "MIT",
         "forks": 82,
-        "pushed_at": "2026-09-23T18:16:08Z",
-        "stars": 714
+        "pushed_at": "2026-09-23T18:16:08Z"
       }
     },
     {
@@ -1831,10 +1831,10 @@
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
       "classification_rule_id": "unresolved-review",
       "verification": {
+        "stars": 18,
         "license": "MIT",
         "forks": 0,
-        "pushed_at": "2026-09-24T13:09:04Z",
-        "stars": 18
+        "pushed_at": "2026-09-24T13:09:04Z"
       }
     },
     {
@@ -2735,12 +2735,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "github_url": "",
-        "batch": "S2026",
         "status": "Active",
-        "location": "New York City",
+        "batch": "S2026",
+        "date_basis": "first-observed",
+        "github_url": "",
         "team_size": 2,
-        "date_basis": "first-observed"
+        "location": "New York City"
       }
     },
     {
@@ -2771,12 +2771,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "github_url": "https://github.com/Hebbian-Robotics",
-        "batch": "S2026",
         "status": "Active",
-        "location": "San Francisco",
+        "batch": "S2026",
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/Hebbian-Robotics",
         "team_size": 2,
-        "date_basis": "first-observed"
+        "location": "San Francisco"
       }
     },
     {
@@ -2803,12 +2803,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "github_url": "https://github.com/Vorelios",
-        "batch": "F2026",
         "status": "Active",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/Vorelios",
         "team_size": 2,
-        "date_basis": "first-observed"
+        "location": "San Francisco"
       }
     },
     {
@@ -2835,12 +2835,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "github_url": "https://github.com/useoxygen",
-        "batch": "F2026",
         "status": "Active",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/useoxygen",
         "team_size": 2,
-        "date_basis": "first-observed"
+        "location": "San Francisco"
       }
     },
     {
@@ -3060,10 +3060,10 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
+        "stars": 271,
         "license": "Apache-2.0",
         "forks": 36,
-        "pushed_at": "2026-09-25T04:53:31Z",
-        "stars": 271
+        "pushed_at": "2026-09-25T04:53:31Z"
       }
     },
     {
@@ -3327,10 +3327,10 @@
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
       "classification_rule_id": "unresolved-review",
       "verification": {
+        "stars": 8,
         "license": "MIT",
         "forks": 1,
-        "pushed_at": "2026-09-25T14:18:29Z",
-        "stars": 8
+        "pushed_at": "2026-09-25T14:18:29Z"
       }
     },
     {
@@ -4265,12 +4265,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
         "status": "Active",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "date_basis": "first-observed",
+        "github_url": "",
         "team_size": 2,
-        "date_basis": "first-observed"
+        "location": "San Francisco"
       }
     },
     {
@@ -4297,12 +4297,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "github_url": "",
-        "batch": "F2026",
         "status": "Active",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "date_basis": "first-observed",
+        "github_url": "",
         "team_size": 2,
-        "date_basis": "first-observed"
+        "location": "San Francisco"
       }
     },
     {
@@ -4329,12 +4329,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "github_url": "https://github.com/openhackai",
-        "batch": "F2026",
         "status": "Active",
-        "location": "San Francisco",
+        "batch": "F2026",
+        "date_basis": "first-observed",
+        "github_url": "https://github.com/openhackai",
         "team_size": 1,
-        "date_basis": "first-observed"
+        "location": "San Francisco"
       }
     },
     {
@@ -6164,6 +6164,28 @@
       "commercial_bias": "disclosed-and-mixed",
       "homepage_url": "https://alphasignal.ai/",
       "logo_url": "https://alphasignal.ai/images/logo_alpha_signal_icon.svg"
+    },
+    {
+      "id": "agent-news",
+      "name": "agentNews by AgentMail",
+      "channel": "operator-newsletter",
+      "source_quality": "medium",
+      "commercial_bias": "first-party",
+      "publisher_id": "agentmail",
+      "evidence_role": "operator-interpretation",
+      "homepage_url": "https://www.agentmail.to/",
+      "logo_url": "https://www.agentmail.to/favicon.ico"
+    },
+    {
+      "id": "frontier-signal",
+      "name": "Frontier // Signal from the edge",
+      "channel": "investor-newsletter",
+      "source_quality": "medium",
+      "commercial_bias": "disclosed",
+      "publisher_id": "m1c",
+      "evidence_role": "investor-thesis",
+      "homepage_url": "https://frontier.m1c.vc/",
+      "logo_url": "https://frontier.m1c.vc/favicon.ico"
     },
     {
       "id": "manual-public-evidence",

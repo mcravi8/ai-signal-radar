@@ -1,19 +1,19 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-28T22:23:16.738907+00:00",
+    "generated_at": "2026-09-28T22:41:47.091829+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1431,
-    "input_changed_document_count": 1058,
+    "input_changed_document_count": 1,
     "cluster_count": 471,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 169,
     "coherent_cluster_count": 191,
     "quality_eligible_cluster_count": 11,
     "explained_cluster_count": 127,
-    "unexplained_quality_eligible_count": 1,
-    "active_record_count": 1,
-    "spark_count": 1,
+    "unexplained_quality_eligible_count": 0,
+    "active_record_count": 0,
+    "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
@@ -26,99 +26,7 @@
     "baseline_complete": true,
     "baseline_version": 1
   },
-  "records": [
-    {
-      "id": "discovery:agent-control-loop-f09a926fa3",
-      "cluster_id": "discovery:agent-control-loop-f09a926fa3",
-      "title": "Agent control loop",
-      "state": "spark",
-      "observed_pattern": "Agent control loop recur across 2 independent records from 2 sources and 2 source families, alongside no recurrent established theme.",
-      "hypothesis": "The recurring combination of Agent control loop may represent a distinct engineering direction rather than isolated implementations.",
-      "why_now": "2 retained evidence records are new or materially changed in the current run.",
-      "novelty": "No existing theme or tracked direction meets the configured coverage threshold for this cluster.",
-      "evidence_ids": [
-        "arxiv:2609.20804v1",
-        "hn:49821438"
-      ],
-      "source_ids": [
-        "arxiv",
-        "hacker-news"
-      ],
-      "source_family_ids": [
-        "attention",
-        "research"
-      ],
-      "theme_ids": [
-        "agent-harnesses",
-        "coding-agents",
-        "memory-context",
-        "skills-integrations",
-        "small-specialized-models"
-      ],
-      "concepts": [
-        "Agent control loop"
-      ],
-      "alternative_explanations": [
-        "The records may share vocabulary because they describe one release cycle or copied framing rather than a durable direction.",
-        "The apparent connection may disappear when implementation details and counterexamples are reviewed."
-      ],
-      "confirmation_conditions": [
-        "Independent source families repeat the pattern in a later weekly cycle.",
-        "A technical artifact or production account demonstrates the combined pattern rather than naming it only."
-      ],
-      "invalidation_conditions": [
-        "The evidence resolves to one syndicated event, publisher, or product campaign.",
-        "No independent reinforcement appears before the Spark becomes dormant."
-      ],
-      "first_seen": "2026-09-17T17:58:07Z",
-      "last_seen": "2026-09-23T19:42:58+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 1,
-        "dominant_publisher_share": 0.5
-      },
-      "eligibility": {
-        "decision": "eligible",
-        "reason_codes": [
-          "spark-gate-met",
-          "novel",
-          "structural-anchor",
-          "anchor-support-met"
-        ],
-        "novelty_reviewed": false
-      },
-      "review": {
-        "status": "pending",
-        "action": null,
-        "rationale": "",
-        "target_id": ""
-      },
-      "proposed_disposition": "novel",
-      "nearest_known": null,
-      "materially_changed": true,
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": true,
-        "phrase_only": false,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:evaluate",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": true,
-        "candidate_quality_met": true
-      }
-    }
-  ],
+  "records": [],
   "merge_suggestions": [
     {
       "cluster_id": "discovery:long-running-0b1aa70e84",
@@ -148,7 +56,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:horizon-task-bbbaaee1cf",
@@ -180,7 +88,7 @@
       ],
       "source_count": 3,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:confidential-computing-4ff4177a68",
@@ -207,7 +115,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:long-horizon-tool-using-b0604038be",
@@ -237,7 +145,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:model-replaceability-24ff553ea4",
@@ -263,7 +171,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:data-sovereignty-5980424c41",
@@ -291,7 +199,7 @@
       ],
       "source_count": 2,
       "source_family_count": 1,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:api-keys-c177b8ad02",
@@ -315,7 +223,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:deployed-engineer-b5a37ba8ec",
@@ -340,7 +248,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:rule-based-d5bc3cb86a",
@@ -364,7 +272,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:agents-coding-ed09e70153",
@@ -387,7 +295,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:device-inference-8160109f2a",
@@ -412,7 +320,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:long-term-0ee888073b",
@@ -440,7 +348,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:experts-moe-71e61b30c7",
@@ -464,7 +372,7 @@
       ],
       "source_count": 4,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:complex-reasoning-4b5525cc62",
@@ -487,7 +395,7 @@
       ],
       "source_count": 3,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:developer-tools-e8508fddf7",
@@ -511,7 +419,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:robotics-50d12628fd",
@@ -535,7 +443,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:satellite-imagery-94c2007468",
@@ -562,7 +470,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:vibe-coding-a7c0b1a9d6",
@@ -586,7 +494,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:agent-framework-724333d367",
@@ -609,7 +517,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:agentic-post-training-c4f87db853",
@@ -634,7 +542,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:code-review-1eea82899d",
@@ -659,7 +567,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:deep-neural-9178e272c3",
@@ -684,7 +592,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:engineering-python-8133f5f1b0",
@@ -731,7 +639,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:fine-tuning-03c735a407",
