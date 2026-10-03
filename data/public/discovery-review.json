@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T01:55:26.755302+00:00",
+    "generated_at": "2026-10-03T01:56:44.076905+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1376,
-    "input_changed_document_count": 0,
-    "cluster_count": 458,
+    "input_document_count": 1423,
+    "input_changed_document_count": 80,
+    "cluster_count": 483,
     "overbroad_cluster_count": 0,
-    "filtered_anchor_count": 163,
-    "coherent_cluster_count": 183,
+    "filtered_anchor_count": 171,
+    "coherent_cluster_count": 187,
     "quality_eligible_cluster_count": 12,
-    "explained_cluster_count": 115,
+    "explained_cluster_count": 117,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 108,
+      "covered-by-existing-theme": 110,
       "merge-existing-direction": 7,
-      "novel": 343
+      "novel": 366
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -28,6 +28,39 @@
   },
   "records": [],
   "merge_suggestions": [
+    {
+      "cluster_id": "discovery:horizon-task-bbbaaee1cf",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "simulation-first-physical-ai",
+        "title": "Simulation is becoming the development environment for physical AI",
+        "theme_recall": 0.667,
+        "matched_theme_ids": [
+          "multimodal-3d",
+          "robotics-embodied-ai"
+        ],
+        "matched_anchor_ids": [],
+        "matched_anchor_phrases": [],
+        "basis": "recurrent-theme-recall"
+      },
+      "anchor_labels": [
+        "long horizon",
+        "horizon task",
+        "horizon tasks"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20800v1",
+        "arxiv:2609.21788v1",
+        "bluesky:c2ef00c3e14c:3mwnqqicy5s2b",
+        "hf-paper:2609.27308",
+        "hf-paper:2609.28466",
+        "yc-company:30923"
+      ],
+      "source_count": 4,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
     {
       "cluster_id": "discovery:long-running-0b1aa70e84",
       "disposition": "merge-existing-direction",
@@ -56,38 +89,6 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": false
-    },
-    {
-      "cluster_id": "discovery:horizon-task-bbbaaee1cf",
-      "disposition": "merge-existing-direction",
-      "nearest_known": {
-        "kind": "early-signal-direction",
-        "id": "simulation-first-physical-ai",
-        "title": "Simulation is becoming the development environment for physical AI",
-        "theme_recall": 0.667,
-        "matched_theme_ids": [
-          "multimodal-3d",
-          "robotics-embodied-ai"
-        ],
-        "matched_anchor_ids": [],
-        "matched_anchor_phrases": [],
-        "basis": "recurrent-theme-recall"
-      },
-      "anchor_labels": [
-        "long horizon",
-        "horizon task",
-        "horizon tasks"
-      ],
-      "evidence_ids": [
-        "arxiv:2609.20800v1",
-        "arxiv:2609.21788v1",
-        "hf-paper:2609.27308",
-        "hf-paper:2609.28466",
-        "yc-company:30923"
-      ],
-      "source_count": 3,
-      "source_family_count": 2,
       "materially_changed": false
     },
     {
@@ -277,7 +278,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": false
+      "materially_changed": true
     },
     {
       "cluster_id": "discovery:rule-based-d5bc3cb86a",
@@ -514,17 +515,17 @@
       },
       "anchor_labels": [
         "recursive self improvement",
-        "agentic post training",
-        "self improvement rsi"
+        "self improvement rsi",
+        "agentic post training"
       ],
       "evidence_ids": [
         "github:1356900025",
-        "hf-paper:2609.14858",
-        "hf-paper:2609.17523"
+        "hf-paper:2609.17523",
+        "hf-paper:2609.24972"
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": false
+      "materially_changed": true
     },
     {
       "cluster_id": "discovery:code-review-1eea82899d",
@@ -588,7 +589,7 @@
         "document_share": 0.667
       },
       "anchor_labels": [
-        "RAG",
+        "rag",
         "Fine-tuning"
       ],
       "evidence_ids": [
@@ -598,7 +599,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": false
+      "materially_changed": true
     },
     {
       "cluster_id": "discovery:frontier-lab-d1a1540ba1",

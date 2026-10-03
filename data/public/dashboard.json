@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-10-03T01:55:26.755302+00:00",
+    "generated_at": "2026-10-03T01:56:44.076905+00:00",
     "status": "success",
-    "source_count": 42,
-    "evidence_count": 2183,
+    "source_count": 43,
+    "evidence_count": 2277,
     "warnings": []
   },
   "weekly": {
@@ -190,7 +190,7 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 77,
+      "evidence_count": 79,
       "source_types": [
         "community",
         "company-directory",
@@ -266,7 +266,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 99,
+      "evidence_count": 102,
       "source_types": [
         "community",
         "company-directory",
@@ -339,7 +339,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 237,
+      "evidence_count": 239,
       "source_types": [
         "community",
         "company-directory",
@@ -380,7 +380,7 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 127,
+      "evidence_count": 130,
       "source_types": [
         "community",
         "company-directory",
@@ -482,7 +482,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 27,
+      "evidence_count": 29,
       "source_types": [
         "community",
         "company-directory",
@@ -524,7 +524,7 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 96,
+      "evidence_count": 97,
       "source_types": [
         "community",
         "company-directory",
@@ -630,9 +630,10 @@
       "primary_layer": "tools-skills-integrations",
       "lens": "enterprise-adoption",
       "maturity": "emerging",
-      "evidence_count": 19,
+      "evidence_count": 20,
       "source_types": [
         "community",
+        "company-directory",
         "curated-newsletter",
         "expert-newsletter",
         "first-party-lab",
@@ -744,1926 +745,6 @@
   ],
   "evidence": [
     {
-      "id": "hn:49814780",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "QuestDB (YC S20) Is Hiring a Sales Engineer",
-      "url": "https://questdb.com/careers/pre-sales-engineer-north-america/",
-      "published_at": "2026-09-23T12:01:04+00:00",
-      "summary": "",
-      "authors": [
-        "nhourcard"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "openai-news:9328fa400dd37e6b9e77",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "OpenAI extends cyber access to Ukraine for civilian defense",
-      "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
-      "published_at": "2026-09-23T13:00:00+00:00",
-      "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "bluesky:6cf953cc69a4:3mw6sijdtt52i",
-      "source_id": "bluesky-emily-bender",
-      "source_type": "expert-social",
-      "title": "There seems to be a coordinated talking point among the EA folks that the \"standard\" approach to \"AI\" on \"the Left\" is \"AI is just stochastic parrots so no need to worry about it\". (Sorry for all t...",
-      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mw6sijdtt52i",
-      "published_at": "2026-09-23T13:03:44.467Z",
-      "summary": "",
-      "authors": [
-        "Emily M. Bender"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "bluesky:6cf953cc69a4:3mw6tre6fls2j",
-      "source_id": "bluesky-emily-bender",
-      "source_type": "expert-social",
-      "title": "I, for one, am fed up with \"stochastic parrots\" being co-opted to erase the work of so many brilliant scholars and activists. Some references in this thread, but there are many, many more that coul...",
-      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mw6tre6fls2j",
-      "published_at": "2026-09-23T13:26:34.900Z",
-      "summary": "There seems to be a coordinated talking point among the EA folks that the \"standard\" approach to \"AI\" on \"the Left\" is \"AI is just stochastic parrots so no n...",
-      "authors": [
-        "Emily M. Bender"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "latent-space:131910aff5aad610af6d",
-      "source_id": "latent-space",
-      "source_type": "expert-newsletter",
-      "title": "🔬Bio-security is an AI Arms Race - Eric Nguyen (CEO, Radical Numerics)",
-      "url": "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
-      "published_at": "2026-09-23T13:27:18+00:00",
-      "summary": "Radical Numerics is using biological chain-of-thought and multimodal perception to keep up with the bio-defense arms race, design new genomes and gain insights into biology itself.",
-      "authors": [
-        "RJ Honicky"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "github:1383518430",
-      "source_id": "github",
-      "source_type": "repository",
-      "title": "mikehasa/golive-skill",
-      "url": "https://github.com/mikehasa/golive-skill",
-      "published_at": "2026-09-23T13:37:26Z",
-      "summary": "Take your agent-built product live: hosting, database, domain, email, payments — on your own accounts. Open-source Agent Skill + zero-dependency Node CLI: detect → plan → approve → apply → verify. No GoLive account, backend or telemetry.",
-      "authors": [
-        "mikehasa"
-      ],
-      "tags": [
-        "agent-skill",
-        "agent-skills",
-        "ai-agents",
-        "claude-code",
-        "cloudflare",
-        "codex",
-        "database",
-        "deployment",
-        "developer-tools",
-        "devops",
-        "dns",
-        "godaddy",
-        "hosting",
-        "infrastructure",
-        "neon",
-        "netlify",
-        "porkbun",
-        "skills",
-        "supabase",
-        "vercel"
-      ],
-      "projects": [
-        "mikehasa/golive-skill"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match",
-      "verification": {
-        "pushed_at": "2026-09-26T09:50:17Z",
-        "stars": 964,
-        "forks": 66,
-        "license": "MIT"
-      }
-    },
-    {
-      "id": "hn:49816567",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: What job boards are good these days?",
-      "url": "https://news.ycombinator.com/item?id=49816567",
-      "published_at": "2026-09-23T14:17:11+00:00",
-      "summary": "I randomly opened LinkedIn, which has, for over a decade, been my go-to for job listings. Today, something was off. Search didn&#x27;t work. The icons were overlapping with the search box. Clearly a product in decline, so what job sites are up and coming? (Besides the &quot;Who&#x27;s Hiring&quot; thread, of course! :-]",
-      "authors": [
-        "phendrenad2"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "alphasignal:05d87aff9d0bebc4b8a8",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "New plugin brings Claude Code subscriptions back to Hermes Agent",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:1024d4744c2adaa98a01",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "L o n g H o r i z o n : T h e P h y s i c a l A I S u m m i t",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:1ef7cf038f88524bc9b8",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Nyra, 1.4k stars: CrisperWhisper 2.0: an open speech-to-text model that transcribes every um, stutter, and vocal sound with precise timestamps",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [
-        "voice-audio"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:2dbf62d45c70cc5f832c",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Study finds em-dash use in medical preprints nearly tripled after ChatGPT launched",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:331e1dadabcfd39024b8",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "OpenAI ships GPT-6 Sol and Luna at 50% lower API prices",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:432e3953f61ee91b8e02",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Anthropic ships Claude Opus 5.5 at 40% lower cost and 30% faster output",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:5052b2f68ef6970e4c01",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Y o u R e a d A b o u t A I D a i l y . N o w B e i n t h e R o o m .",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:5f3148d70539a8da7f25",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "CrisperWhisper 2.0: an open speech-to-text model that transcribes every um, stutter, and vocal sound with precise timestamps",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [
-        "voice-audio"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:65cd83ee399b698ff48c",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "New Qwen3-based model claims to write more like a human than any other",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:98eeae98e4ff5124d7ae",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "New paper reveals transformers build faithful internal maps of the world",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:a8def2376d665f117870",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Qwen-Image-2.1 gets GGUF quantization, runs locally down to 4 GB",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [
-        "open-local-inference"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:d11265243efa60fee595",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Stanford team trains agent groups to self-organize and hit 66.7% where solo agents scored 48.8%",
-      "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
-      "published_at": "2026-09-23T15:43:41.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "openai-news:52e46e8371e1f69996c0",
-      "source_id": "openai-news",
-      "source_type": "first-party-lab",
-      "title": "Two years of OpenAI Academy",
-      "url": "https://openai.com/index/two-years-of-openai-academy",
-      "published_at": "2026-09-23T16:00:00+00:00",
-      "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "nvidia-developer-blog:0a65e7be039d0fbfaafe",
-      "source_id": "nvidia-developer-blog",
-      "source_type": "first-party-lab",
-      "title": "How SWE-Serve Exposes the Gap Between Local Tests and Live Serving",
-      "url": "https://developer.nvidia.com/blog/how-swe-serve-exposes-the-gap-between-local-tests-and-live-serving/",
-      "published_at": "2026-09-23T16:00:00Z",
-      "summary": "An AI coding agent’s patch can pass tests yet fail when the server loads a real model and handles requests. Evaluating changes to inference-serving software...",
-      "authors": [
-        "Elizabeth Goodman"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "microsoft-research-blog:e31a5a297f20c03e0715",
-      "source_id": "microsoft-research-blog",
-      "source_type": "first-party-lab",
-      "title": "Offloaded inference for real-world physical AI robotics",
-      "url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/",
-      "published_at": "2026-09-23T16:01:36+00:00",
-      "summary": "Robots are getting smarter, but how can their hardware match that growth? New Microsoft Research findings show that moving AI inference beyond the robot can improve task success, boost efficiency, and support more advanced physical AI workloads. The post Offloaded inference for real-world physical AI robotics appeared first on Microsoft Research .",
-      "authors": [
-        "Ganesh Ananthanarayanan, Matthew Balkwill, Xenofon Foukas, Sanjeev Mehrotra, Bozidar Radunovic, Connor Settle, Ankit Verma, David White, Shawn Cicoria, Mark Martin, Rachel Johnson, Mayur Patel"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "frontier-inference-infrastructure",
-        "robotics-embodied-ai"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "github:1383809012",
-      "source_id": "github",
-      "source_type": "repository",
-      "title": "yetone/magpie",
-      "url": "https://github.com/yetone/magpie",
-      "published_at": "2026-09-23T16:22:35Z",
-      "summary": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
-      "authors": [
-        "yetone"
-      ],
-      "tags": [
-        "claude-code",
-        "codex",
-        "deepseek",
-        "gemini-cli",
-        "llm",
-        "macos"
-      ],
-      "projects": [
-        "yetone/magpie"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match",
-      "verification": {
-        "pushed_at": "2026-09-26T11:26:00Z",
-        "stars": 838,
-        "forks": 51,
-        "license": "MIT"
-      }
-    },
-    {
-      "id": "simon-willison:c81040207630f754b0fb",
-      "source_id": "simon-willison",
-      "source_type": "practitioner-blog",
-      "title": "Shadow roots, explained with live examples",
-      "url": "https://simonwillison.net/2026/Sep/23/shadow-roots/",
-      "published_at": "2026-09-23T16:37:18+00:00",
-      "summary": "Tool: Shadow roots, explained with live examples Prompt to Fable 5.1 Medium: Build an artifact to explain shadow roots in CSS with interactive examples Tags: css",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "simon-willison:e47986333e4f67663922",
-      "source_id": "simon-willison",
-      "source_type": "practitioner-blog",
-      "title": "Gemini 3.8 TTS Playground",
-      "url": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
-      "published_at": "2026-09-23T17:12:27+00:00",
-      "summary": "Tool: Gemini 3.8 TTS Playground Google released two new Gemini text-to-speech models today - gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts . They come with a library of over 2,000 voices, plus the ability to create a custom voice with \"just a 30-second audio sample of your voice or a voice you have the rights to use\". I vibe coded this bring-your-own-key playground interface with GPT-6 Astra, taking advantage of the open CORS policy of the underlying Gemini API. A notable feature of the API is that it makes it easy to define a full conversation between multiple characters, each with different voices and voice style instructions. Here's a short demo clip of a conversation between two pelicans debating if they should move to the Pacifica Pier . I had Claude 4.5 Opus write the script and generate a URL to render it using the tool . Your browser does not support the audio element. It took ~20 seconds to generate 1m 18s of audio using Gemini 3.8 Flash TTS (not the cheaper Flash-Lite), at a cost of 2.74 cents. Tags: text-to-speech , gemini",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "voice-audio"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "github:1383988294",
-      "source_id": "github",
-      "source_type": "repository",
-      "title": "yukitorido/short-video-generator-AI",
-      "url": "https://github.com/yukitorido/short-video-generator-AI",
-      "published_at": "2026-09-23T18:11:57Z",
-      "summary": "AI video processing pipeline for generating vertical shorts using LLMs, Whisper transcription, highlight detection and automated editing",
-      "authors": [
-        "yukitorido"
-      ],
-      "tags": [
-        "ai",
-        "llm",
-        "llm-tools",
-        "opus-clip",
-        "opus-clip-alternative",
-        "short-video",
-        "short-video-automation",
-        "short-video-generator",
-        "short-video-maker"
-      ],
-      "projects": [
-        "yukitorido/short-video-generator-AI"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
-      "verification": {
-        "pushed_at": "2026-09-23T18:16:08Z",
-        "stars": 714,
-        "forks": 82,
-        "license": "MIT"
-      }
-    },
-    {
-      "id": "bluesky:c2ef00c3e14c:3mw7dqzkpcc2n",
-      "source_id": "bluesky-mark-riedl",
-      "source_type": "expert-social",
-      "title": "My fake AI new bot is finally starting to produce amusing things more often",
-      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw7dqzkpcc2n",
-      "published_at": "2026-09-23T18:12:43.637Z",
-      "summary": "Posted to Bluesky | Zuckerberg warns time travelers should research how Roko's Basilisk will augment birds",
-      "authors": [
-        "Mark Riedl"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "aws-machine-learning-blog:abc4f7e609e383bd6c09",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Use open weight models as your AI coding agent with Amazon Bedrock",
-      "url": "https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/",
-      "published_at": "2026-09-23T18:17:44+00:00",
-      "summary": "Pair OpenCode, an open-source terminal-native AI coding agent, with open weight models on Amazon Bedrock to get a secure, flexible, pay-per-use coding assistant. Learn how to configure multi-model workflows, match the right model to each task, and keep your data in your own AWS account with no infrastructure to manage.",
-      "authors": [
-        "Aris Tsakpinis"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "aws-machine-learning-blog:a4ead9027d7d61c4abe8",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Agentic conversational video intelligence built on AWS",
-      "url": "https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/",
-      "published_at": "2026-09-23T18:21:54+00:00",
-      "summary": "Learn how to build a conversational video intelligence solution on AWS using an agentic architecture. A single Strands Agents SDK agent orchestrates Amazon Bedrock, Amazon Rekognition, and Amazon Transcribe at runtime, deciding which service to call so you can ask natural language questions about your videos and get answers in seconds.",
-      "authors": [
-        "Michael Li"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "nvidia-developer-blog:87d0de37464be55f33d1",
-      "source_id": "nvidia-developer-blog",
-      "source_type": "first-party-lab",
-      "title": "Manage Kubernetes Node Fleets with NodeWright",
-      "url": "https://developer.nvidia.com/blog/manage-kubernetes-node-fleets-with-nodewright/",
-      "published_at": "2026-09-23T18:25:49Z",
-      "summary": "Kubernetes manages what runs on your nodes. Managing the nodes themselves is the challenge: kernel settings, system packages, storage layouts, security agents,...",
-      "authors": [
-        "Michelle Horton"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "aws-machine-learning-blog:f43f6d533f6c5df5d794",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "From portal-hopping to instant answers: HEMA’s journey with MCP and Amazon Bedrock",
-      "url": "https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/",
-      "published_at": "2026-09-23T18:41:09+00:00",
-      "summary": "HEMA, a 100-year-old Dutch retailer, turned developer portal-hopping into instant answers by building HAL, an internal AI assistant on Amazon Bedrock AgentCore. Using Model Context Protocol (MCP), HAL delivers governed knowledge inside the tools teams already use, with no AWS credentials on the client and security anchored in Microsoft Entra ID.",
-      "authors": [
-        "Mauro Rallo"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "huggingface-blog:30aa7c0acfe7f3809f1c",
-      "source_id": "huggingface-blog",
-      "source_type": "first-party-lab",
-      "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
-      "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
-      "published_at": "2026-09-23T18:41:40+00:00",
-      "summary": "",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "robotics-embodied-ai"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "bluesky:1278ebf77949:3mw7g7v3uuc2z",
-      "source_id": "bluesky-ethan-mollick",
-      "source_type": "expert-social",
-      "title": "There is an abandonware game I loved as a kid called Rescue Raiders. I asked Claude to create a modern & updated version of the game with new graphics, goals, tech trees, etc. It iterated back-and-...",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw7g7v3uuc2z",
-      "published_at": "2026-09-23T18:56:49.758Z",
-      "summary": "",
-      "authors": [
-        "Ethan Mollick"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "github:1384094559",
-      "source_id": "github",
-      "source_type": "repository",
-      "title": "Contrastive-LM/CLM",
-      "url": "https://github.com/Contrastive-LM/CLM",
-      "published_at": "2026-09-23T19:29:56Z",
-      "summary": "Open-source implementation of CLM-8B, a contrastively trained System One decision model that ranks candidate actions from separately cacheable state and action embeddings. The maintainers report performance comparable with Jev at up to nine times lower latency and strong agentic-code verifier results; those benchmark claims have not been independently reproduced.",
-      "authors": [
-        "Jacky Kwok",
-        "Hangoo Kang",
-        "Tarun Suresh",
-        "Jon Saad-Falcon",
-        "Marco Pavone",
-        "Christopher Ré",
-        "Azalia Mirhoseini"
-      ],
-      "tags": [
-        "contrastive language model",
-        "system one model",
-        "decision model",
-        "model routing",
-        "model evaluation",
-        "agentic coding",
-        "tool calling"
-      ],
-      "projects": [
-        "Contrastive-LM/CLM"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "assurance-infrastructure",
-        "coding-agents",
-        "model-routing",
-        "small-specialized-models",
-        "training-self-improvement"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match",
-      "verification": {
-        "pushed_at": "2026-09-24T23:10:28Z",
-        "stars": 2269,
-        "forks": 197,
-        "license": "Apache-2.0"
-      }
-    },
-    {
-      "id": "hn:49821438",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: AgentRun: DSL to turn agents into workflows",
-      "url": "https://github.com/Parcha-ai/agentrun",
-      "published_at": "2026-09-23T19:42:58+00:00",
-      "summary": "Hi HN,<p>I just open sourced the DSL that our harness in grep.ai uses to turn repeatable parts of agent work into workflows. You can combine tool calls, code, Jev-powered system one decisions for things like routing and screening evidence, and agents when a step needs more investigation.<p>Our harness uses the traces and retro notes agents leave behind when doing a job to figure out which parts can become a workflow. The idea is to make the work easier to understand and avoid paying for a full agent loop where one isn’t needed. For example, a research workflow can split a question into subquestions, send agents to research them in parallel, use Jev to screen the evidence, and have another agent write the report. You can inspect the steps, evaluate the evidence screening separately, or change one agent without rebuilding everything.<p>The DSL and examples are in our GitHub. There’s a scripted demo you can run without API keys: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;Parcha-ai&#x2F;agentrun\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Parcha-ai&#x2F;agentrun</a><p>You can also use it as a Pi extension to build, inspect, and run workflows: <a href=\"https:&#x2F;&#x2F;github.com",
-      "authors": [
-        "miguelrios"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "agent-harnesses",
-        "skills-integrations",
-        "small-specialized-models"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "nvidia-developer-blog:31cb65780954773fe0de",
-      "source_id": "nvidia-developer-blog",
-      "source_type": "first-party-lab",
-      "title": "Validate GPU Cluster Readiness Before AI Workloads Land",
-      "url": "https://developer.nvidia.com/blog/validate-gpu-cluster-readiness-before-ai-workloads-land/",
-      "published_at": "2026-09-23T19:45:19Z",
-      "summary": "A GPU cluster can pass every health check and still fail to run an AI workload. Even when every GPU, network link, and pod reports healthy, a 512-GPU training...",
-      "authors": [
-        "Michelle Horton"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "bluesky:b3614927c6a2:3mw7magyrwc2i",
-      "source_id": "simon-willison",
-      "source_type": "expert-social",
-      "title": "The new Gemini 3.8 TTS models are super-cheap and can generate conversations between multiple voices (from 2,000+, or you can clone your own) - I built a little playground UI for it, then had Claud...",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3mw7magyrwc2i",
-      "published_at": "2026-09-23T20:44:30.981Z",
-      "summary": "",
-      "authors": [
-        "Simon Willison"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [
-        "voice-audio"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "bluesky:1278ebf77949:3mw7n5pr7222t",
-      "source_id": "bluesky-ethan-mollick",
-      "source_type": "expert-social",
-      "title": "This is a really important graph showing the cost of achieving 25% or 75% scores in various hard math and science benchmarks. Costs are collapsing even as ability is increasing It is also why optim...",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mw7n5pr7222t",
-      "published_at": "2026-09-23T21:00:53.248Z",
-      "summary": "",
-      "authors": [
-        "Ethan Mollick"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "hn:49823332",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Jevgpt – reinventing the wheel with another wheel",
-      "url": "https://news.ycombinator.com/item?id=49823332",
-      "published_at": "2026-09-23T22:14:52+00:00",
-      "summary": "Felt extra autistic today and made jev an autoregressive chatbot by classifier small token vocabularies.<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;giga-james&#x2F;jevgpt\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;giga-james&#x2F;jevgpt</a><p>had some trouble getting it to explore enough token options so i did a small spec decoding pass to expand token vocab (jev as drafter and verifier lol)<p>it aint much and it aint honest work either",
-      "authors": [
-        "kunggaochicken"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "small-specialized-models"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "hn:49823490",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "A new world airport and its baggage",
-      "url": "https://computer.rip/2026-09-20-denver-baggage.html",
-      "published_at": "2026-09-23T22:30:46+00:00",
-      "summary": "",
-      "authors": [
-        "firloop"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49823738",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Make cursed fonts like Times New Bastard",
-      "url": "https://bastardica.mitpit.com",
-      "published_at": "2026-09-23T22:53:28+00:00",
-      "summary": "A joke tool that abuses OpenType&#x27;s ligature feature to mix fonts. It works pretty fast on client-side by loading Python in WASM.",
-      "authors": [
-        "MitPitt"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "nvidia-developer-blog:2e2593ce8f11ae67afca",
-      "source_id": "nvidia-developer-blog",
-      "source_type": "first-party-lab",
-      "title": "Introducing NV-Reason-CT Open 3D CT VLM for Radiologist Chain-of-Thought Reasoning",
-      "url": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning/",
-      "published_at": "2026-09-23T22:54:56Z",
-      "summary": "Radiology AI has made remarkable strides in detecting abnormalities across chest X-rays, pathology slides, and 2D scans. Yet one of the most clinically rich and...",
-      "authors": [
-        "Tanya Lenz"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "multimodal-3d"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "bluesky:c2ef00c3e14c:3mw7vpw22g22j",
-      "source_id": "bluesky-mark-riedl",
-      "source_type": "expert-social",
-      "title": "Anthropic might have discovered something. Or maybe not. Who knows? Not even Anthropic. www.anthropic.com/news/claude-... This is irresponsible science. The proper course of action is to figure out...",
-      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw7vpw22g22j",
-      "published_at": "2026-09-23T23:34:13.739Z",
-      "summary": "",
-      "authors": [
-        "Mark Riedl"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "bluesky:c2ef00c3e14c:3mw7zndlglc2j",
-      "source_id": "bluesky-mark-riedl",
-      "source_type": "expert-social",
-      "title": "OpenAI accidentally hacked a foreign country. No biggie gizmodo.com/this-situati...",
-      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mw7zndlglc2j",
-      "published_at": "2026-09-24T00:44:22.248Z",
-      "summary": "",
-      "authors": [
-        "Mark Riedl"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49824846",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Scientists build most accurate atomic clock",
-      "url": "https://phys.org/news/2026-09-scientists-world-accurate-atomic-clock.html",
-      "published_at": "2026-09-24T01:00:01+00:00",
-      "summary": "",
-      "authors": [
-        "wglb"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "bluesky:1278ebf77949:3mwa2mjely225",
-      "source_id": "bluesky-ethan-mollick",
-      "source_type": "expert-social",
-      "title": "Stuff is happening quite fast. When asked in September 2025 (yes, 2025), the best superforecasters put the chance of AI resolving a Millennium Problem by September 2026 at 1.7% and (much more optim...",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwa2mjely225",
-      "published_at": "2026-09-24T01:01:48.504Z",
-      "summary": "",
-      "authors": [
-        "Ethan Mollick"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49826087",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "16GB iPod Nano 3G Upgrade",
-      "url": "https://tuckerosman.com/projects/16gb-ipod-nano",
-      "published_at": "2026-09-24T03:58:54+00:00",
-      "summary": "",
-      "authors": [
-        "Ivoah"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49826381",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: How do you deal with cyber attacks once you scale?",
-      "url": "https://news.ycombinator.com/item?id=49826381",
-      "published_at": "2026-09-24T04:49:33+00:00",
-      "summary": "Hello,<p>Legit question for tech department leaders. Our engineers have good solid knowledge on the security todo lists and does&#x2F;don&#x27;t. I saw the natural order of things where MVPs or quickly developed tools had to be refactored &#x2F;redesigned to be more secure or at least up to standard. That&#x27;s OK. However we are as strong as our weakest link.<p>As we scaled, each department (also non-tech) slowly started being more proactive, mini tools developed by managers, or leaders, e.g CRM workflows, random scripts, docs, sheets, and now vibe coded tools. All of these are now potential attack vectors. We add to this:<p>- Non-tech folks in the company, you impose rules, password managers and rotations, but you always have a small percentage of bad actors. - External users not putting good passwords, or using pwned passwords never changing them - Some product decisions or weaknesses built on purpose to facilitate usage of the tools (which goes against perfect security).<p>In our case it caused us being a target, we are under attack most of the time. We secured our tools under WAF with standard approaches (rate limits, blocking IPs, bot detection), but it feels like there&#x27",
-      "authors": [
-        "cehgmaster"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49827375",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Air-gapped file encryption as self-decrypting HTML page",
-      "url": "https://cms-sfx-demo.apeleg.com/",
-      "published_at": "2026-09-24T07:22:17+00:00",
-      "summary": "Air-gapped file encryption packed into a single, self-decrypting HTML page. Repo: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;ApelegHQ&#x2F;ts-cms-ep-sfx\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;ApelegHQ&#x2F;ts-cms-ep-sfx</a><p>I was inspired by self-extracting archives. I wanted to share files with basically no dependencies. The goal was:<p><pre><code> 1. Something that didn&#x27;t require any installation (assuming a web browser) 2. Have a single file with no network that could self-decrypt 3. Be fully auditable </code></pre> The second point is done by having (sort of(*)) reproducible builds and embedded OpenPGP signatures.<p>The first point is made by cleverly manipulating the HTML structure so that it can decrypt without breaking the PGP signature. It can even decrypt using bare openssl (which was a design goal too, though getting the exact structure right took some work and bug reports).<p>The third point is accomplished by the first two, and by the source being freely available.<p>(*) Depends on the OS at the moment.",
-      "authors": [
-        "emurlin"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "proprietary-data-boundary"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "latent-space:b50ee818f2970d6da4ed",
-      "source_id": "latent-space",
-      "source_type": "expert-newsletter",
-      "title": "[AINews] Meta Connect 2026: Muse glasses, voice, video, and Charm",
-      "url": "https://www.latent.space/p/ainews-meta-connect-2026-muse-glasses",
-      "published_at": "2026-09-24T08:12:59+00:00",
-      "summary": "Team Zuck is absolutely on fire.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "last-week-in-ai:bc937539f4106521fc5b",
-      "source_id": "last-week-in-ai",
-      "source_type": "curated-newsletter",
-      "title": "LWiAI Podcast #257 - GPT 6 Astra, AI Extinction, Security Incidents",
-      "url": "https://lastweekin.ai/p/lwiai-podcast-257-gpt-6-astra-ai",
-      "published_at": "2026-09-24T09:12:28+00:00",
-      "summary": "A belated discussion of Astra’s release, a bunch of AI incidents, and the broader situation we are in with regards to AI safety.",
-      "authors": [
-        "Last Week in AI"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "assurance-infrastructure"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "github:1385230825",
-      "source_id": "github",
-      "source_type": "repository",
-      "title": "initPM/ai-kyc-aml-assistant",
-      "url": "https://github.com/initPM/ai-kyc-aml-assistant",
-      "published_at": "2026-09-24T10:12:46Z",
-      "summary": "An AI-assisted compliance dashboard for accelerating customer onboarding, featuring automated document verification and PEP/sanctions risk screening workflows.",
-      "authors": [
-        "initPM"
-      ],
-      "tags": [
-        "aml",
-        "artificial-intelligence",
-        "compliance",
-        "kyc",
-        "regtech"
-      ],
-      "projects": [
-        "initPM/ai-kyc-aml-assistant"
-      ],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
-      "verification": {
-        "pushed_at": "2026-09-24T13:09:04Z",
-        "stars": 18,
-        "forks": 0,
-        "license": "MIT"
-      }
-    },
-    {
-      "id": "anthropic-news-research:ef1b3a4772eab8370f46",
-      "source_id": "anthropic-news-research",
-      "source_type": "first-party-lab",
-      "title": "Claude discovers a novel enzyme system",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "published_at": "2026-09-24T10:25:16.000Z",
-      "summary": "In early results from our new life sciences research lab, Claude agents found an enzyme system whose function is still unknown.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "bluesky:c2ef00c3e14c:3mwb7k3pba22e",
-      "source_id": "bluesky-mark-riedl",
-      "source_type": "expert-social",
-      "title": "GPT doesn’t believe in the Kobayashi Maru",
-      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwb7k3pba22e",
-      "published_at": "2026-09-24T12:02:35.513Z",
-      "summary": "The latest update in the rogue A.I. saga: OpenAI agents that were supposed to be performing mundane data requests for things like health data, historic photo...",
-      "authors": [
-        "Mark Riedl"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49829472",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Fourier Analysis: Drawing Llamas with Circles",
-      "url": "https://adekau.github.io/posts/2020/llamas.html",
-      "published_at": "2026-09-24T12:03:35+00:00",
-      "summary": "",
-      "authors": [
-        "cebert"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49829528",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Parsing Expression Grammar vs. Regexes: Building Org Parser in Lisp, Export HTML",
-      "url": "https://jointhefreeworld.org/blog/articles/lisps/parsing-expression-grammar-lisp-org-convert-to-html/index.html",
-      "published_at": "2026-09-24T12:10:53+00:00",
-      "summary": "",
-      "authors": [
-        "jjba23"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "bluesky:1278ebf77949:3mwbbytwuuc2k",
-      "source_id": "bluesky-ethan-mollick",
-      "source_type": "expert-social",
-      "title": "I just got the first copies of my new book, Co-Existence (out October 20) & they look great! Also, there is a fun pre-order bonus: if you pre-order, you get a code to an AI interview that will help...",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwbbytwuuc2k",
-      "published_at": "2026-09-24T12:46:38.167Z",
-      "summary": "",
-      "authors": [
-        "Ethan Mollick"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49830265",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "From Thin Air to Bootable Images: The Tine Build System",
-      "url": "https://amutable.com/blog/tine-build-system",
-      "published_at": "2026-09-24T13:25:11+00:00",
-      "summary": "",
-      "authors": [
-        "Levitating"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "huggingface-blog:280bf64dcca75cee1131",
-      "source_id": "huggingface-blog",
-      "source_type": "first-party-lab",
-      "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
-      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
-      "published_at": "2026-09-24T14:08:57+00:00",
-      "summary": "",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "nvidia-developer-blog:d94b389a2f96d9bbb294",
-      "source_id": "nvidia-developer-blog",
-      "source_type": "first-party-lab",
-      "title": "Efficient MoE Training for Biological Foundation Models",
-      "url": "https://developer.nvidia.com/blog/efficient-moe-training-for-biological-foundation-models/",
-      "published_at": "2026-09-24T15:00:00Z",
-      "summary": "As language models grow, scaling dense architectures becomes increasingly expensive. In a dense transformer, every token passes through every layer, so adding...",
-      "authors": [
-        "Michelle Horton"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "latent-space:75ba7d33d52171ac1f5b",
-      "source_id": "latent-space",
-      "source_type": "expert-newsletter",
-      "title": "Foundries vs Navigators: Lowering the Cost of Science",
-      "url": "https://www.latent.space/p/foundries-vs-navigators-lowering",
-      "published_at": "2026-09-24T15:03:16+00:00",
-      "summary": "Guest Post: In science, thinking has gotten cheap but doing has not. This asymmetry is reshaping how research companies operate, largely inconspicuously.",
-      "authors": [
-        "Adrian Sanborn"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:111e6fbcff6d492fbbb3",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Unsloth ships quantized GGUF build of Qwen's image generation model",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [
-        "multimodal-3d",
-        "open-local-inference"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:14a5789fce9a3ced1882",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Open-source text box generates live UI from plain text descriptions",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:2347f2dcbcf7e9dc1ca2",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Anthropic's Claude discovers a new CRISPR-like enzyme system in virus DNA",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:28e88f0768d976bbfccb",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Claude Opus 5.5 tops visual design benchmarks across all tested models",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:2f6d8ed916266407f173",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "The AI Threat Readiness Playbook",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:324bb0890b258e7ec4fc",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Anthropic launches Claude Code cloud sessions so your code runs without your laptop",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:5e4d06e1b5148246bf48",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "pre.dev: AI labs: turn thousands of never-public production codebases into frontier coding RL Tasks for post-training",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:67e6c2c145912f097d63",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "A P r a c t i c a l F r a m e w o r k f o r A I T h r e a t R e a d i n e s s",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:878cd0da4350818f61b9",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "New attribution method tops interpretability benchmark by 2.9x, pinpoints Llama refusals to 1% of weights",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "alphasignal:90c6d5a5a7443445b951",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "T e s t i n g & t e l e m e t r y c a t c h G P U f a i l u r e s e a r l y",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:bab25bbc8c0db790846f",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "Recursive depth trick makes a 7.4B model match GPT-3 13B with 20x less compute",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:cc3dc4af9a1c16678c1f",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "OpenAI upgrades ChatGPT Voice with plugins, GPT-6 models, and full work suite",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "alphasignal:e32078afc6278482f336",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "AI labs: turn thousands of never-public production codebases into frontier coding RL Tasks for post-training",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "sponsored",
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "hn:49832080",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Most Hated Tools",
-      "url": "https://www.mosthatedtools.app/",
-      "published_at": "2026-09-24T15:32:17+00:00",
-      "summary": "",
-      "authors": [
-        "leonagano"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "aws-machine-learning-blog:31eef7cdca1b4464cd5a",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Aderant builds intelligent ticket triage with Amazon Nova",
-      "url": "https://aws.amazon.com/blogs/machine-learning/aderant-builds-intelligent-ticket-triage-with-amazon-nova/",
-      "published_at": "2026-09-24T16:06:46+00:00",
-      "summary": "Learn how Aderant built an intelligent ticket triage system on Amazon Nova Lite through Amazon Bedrock, automating context gathering, classification, routing, and knowledge enrichment for its cloud operations team.",
-      "authors": [
-        "Angela Mapes"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "aws-machine-learning-blog:94bcf02872c234c4720b",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Build a multi-account AI agent with AgentCore Gateway and MCP",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-a-multi-account-ai-agent-with-agentcore-gateway-and-mcp/",
-      "published_at": "2026-09-24T16:12:47+00:00",
-      "summary": "Build a multi-account architecture that keeps each team's data in its own AWS account while giving AI agents a unified way to query across them. A central platform account runs the agent using Amazon Bedrock AgentCore Gateway and MCP, while line-of-business accounts expose their data as MCP servers with secure cross-account access and fine-grained authorization.",
-      "authors": [
-        "Senthil Kamala Rathinam"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "aws-machine-learning-blog:a56b3cba6cf92f496341",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Speaker-labeled transcription with WhisperX on SageMaker AI",
-      "url": "https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/",
-      "published_at": "2026-09-24T16:20:12+00:00",
-      "summary": "The AWS WhisperX Deep Learning Container packages Whisper, wav2vec2 forced alignment, and speaker diarization into a GPU-ready image. Learn how to deploy it to Amazon SageMaker AI real-time and asynchronous endpoints for word-level, speaker-labeled transcription, plus the production details that matter: the GPU AMI pin, scaling, and cost controls.",
-      "authors": [
-        "Ayush Sharma"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49833212",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Hypothesis: Cellular providers are deprioritizing voice calls?",
-      "url": "https://news.ycombinator.com/item?id=49833212",
-      "published_at": "2026-09-24T16:39:20+00:00",
-      "summary": "I switched from Verizon to T-Mobile, specifically because there were too many silent missed calls. Silent meaning my device never showed I had a missed call.<p>This was a pattern across more than a year, spanning multiple devices (all iphones). It happens on both wifi and cellular. It happens with wifi calling enabled and disabled. It happens with people I call every day, in my address book, as well as new contacts (say someone I met who called to follow up). I called support, searched online, reset network settings multiple times at different points months apart.<p>After being on T-Mobile for about a year, the degraded service is about the same as Verizon. Every week, more than once, people call me, my phone never rings, and I never see a missed call on my device. It happens at home, at work, on work trips in different states.<p>I still get missed calls regularly and my device shows I missed the call. It seems like a certain % of callers get my VM, but I never know the call attempt happened. The missed calls never appear later on my phone (like a late VM or text deliver, coming minutes or sometimes hours after it was sent).<p>Hypothesis: A growing number of cellular subscribers do",
-      "authors": [
-        "tkdb"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49833541",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Are .shop domains down?",
-      "url": "https://news.ycombinator.com/item?id=49833541",
-      "published_at": "2026-09-24T16:59:22+00:00",
-      "summary": "Anyone else seeing this? Or am I missing something obvious? A client asked in support. AI is very confident about it. Looks legit.<p>apple.shop, pokemon.shop ...",
-      "authors": [
-        "esher"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49833867",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-      "url": "https://github.com/devdotfast/whiteboard",
-      "published_at": "2026-09-24T17:21:36+00:00",
-      "summary": "Hello! We’re Sid, Alex, Ketan, and Milan. We’re building Whiteboard (<a href=\"https:&#x2F;&#x2F;whiteboard.dev.fast&#x2F;\">https:&#x2F;&#x2F;whiteboard.dev.fast&#x2F;</a>), an open-source desktop app where humans and agents can architect software together in a common workspace. Here’s our repo: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;devdotfast&#x2F;whiteboard\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;devdotfast&#x2F;whiteboard</a>.<p>We were missing the feeling of a “whiteboard session” with another dev where you leave with a deep understanding of a system, so we built this app for ourselves. Whiteboard plugs into the tools you already use - e.g. Claude Code, Codex, etc. – and gives your agent an SDK to draw on an in-app canvas to describe its work. We began with an MVP based on HTML artifacts and started rethinking the app as we ran into limitations:<p>1. Built on top of CodeOSS: We found that in pure HTML tools it was hard to connect a spec or diagram to code. In Whiteboard, when you click on visualizations like a sequence diagram, an entity relationship diagram, or a quote from the agent’s trace, you can jump to the underlying code directly. When navigating code, you",
-      "authors": [
-        "sidharthkmenon"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "bluesky:1278ebf77949:3mwbsy7mgfk2i",
-      "source_id": "bluesky-ethan-mollick",
-      "source_type": "expert-social",
-      "title": "I propose this as the official replacement for the famous (and now saturated) METR Long Task Horizon chart that used to be in every AI presentation.",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwbsy7mgfk2i",
-      "published_at": "2026-09-24T17:50:30.466Z",
-      "summary": "",
-      "authors": [
-        "Ethan Mollick"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49834564",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Does spec-driven development still pay off with frontier coding models?",
-      "url": "https://news.ycombinator.com/item?id=49834564",
-      "published_at": "2026-09-24T18:05:50+00:00",
-      "summary": "As coding models get better at working from a rough goal, I’m wondering how much value there is in writing a detailed spec up front.<p>If you use these models on real projects, when has a spec improved the outcome? When has it added overhead? Have you shifted toward shorter briefs, tests, or iterative feedback?",
-      "authors": [
-        "sarangk90"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49834893",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Stable (YC W20) Is Hiring Product Engineers",
-      "url": "https://www.usestable.com/careers/product-engineer",
-      "published_at": "2026-09-24T18:29:18+00:00",
-      "summary": "",
-      "authors": [
-        "collinpham"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49835507",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Folks familiar with infections after TKA",
-      "url": "https://news.ycombinator.com/item?id=49835507",
-      "published_at": "2026-09-24T19:12:49+00:00",
-      "summary": "I am looking for Ortho&#x2F;infectious disease practitioners or researchers who have experience with compromised post-op TKA&#x27;s. specifically: Enterobacter cloacae, and a yeast variety yet to be revealed- Obviously I do not expect medical advice, just looking for any new info in case it has not reached my spouses team. Surgery 1 month ago, after 30 days, wound began leaking- DAIR was performed 7 days ago after 5 days culture showed bacteria, today it was revealed yeast also present. Still waiting on sensitivities. Thanks in advance. My apologies to all those who really don&#x27;t want to think about this kind of stuff.",
-      "authors": [
-        "zafka"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "simon-willison:0fc7c0f362de8929a220",
-      "source_id": "simon-willison",
-      "source_type": "practitioner-blog",
-      "title": "datasette 1.0a41",
-      "url": "https://simonwillison.net/2026/Sep/24/datasette/",
-      "published_at": "2026-09-24T19:15:23+00:00",
-      "summary": "Release: datasette 1.0a41 Alec Garcia added support for OpenTelemetry to Datasette in this release. I've also refactored all of Datasette's modal dialogs to a single Web Component, which is now documented for other plugins to use . Tags: javascript , datasette , web-components , alex-garcia , opentelemetry",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49835866",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Any nerds out there who've read a lot of research papers?",
-      "url": "https://news.ycombinator.com/item?id=49835866",
-      "published_at": "2026-09-24T19:43:04+00:00",
-      "summary": "Which are the most memorable abstracts you have read? I know I am a jackass who usually vibecodes my way through assignments but even I don&#x27;t want to write a cookie-cutter intro for my paper. I wanna write something that stays with the reader. What paper has stuck with you, what made it memorable?",
-      "authors": [
-        "shriy-singh"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "bluesky:1278ebf77949:3mwc2fyzarc2o",
-      "source_id": "bluesky-ethan-mollick",
-      "source_type": "expert-social",
-      "title": "The cybersecurity threat from agents is increasingly more likely to come from a massed swarm of AIs whose only goal is to penetrate your system to figure out how much you paid for your company t-sh...",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwc2fyzarc2o",
-      "published_at": "2026-09-24T20:03:29.505Z",
-      "summary": "",
-      "authors": [
-        "Ethan Mollick"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "simon-willison:5159a3d492b232993c37",
-      "source_id": "simon-willison",
-      "source_type": "practitioner-blog",
-      "title": "commit-rewriter 0.2",
-      "url": "https://simonwillison.net/2026/Sep/24/commit-rewriter/",
-      "published_at": "2026-09-24T20:06:53+00:00",
-      "summary": "Release: commit-rewriter 0.2 Support for branches other than the default branch. Use uvx commit-rewriter --branch other to run against another branch. #3 Tags: git",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49837006",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Koi.rest – watch some fish and regain your balance",
-      "url": "https://koi.rest",
-      "published_at": "2026-09-24T21:33:03+00:00",
-      "summary": "Hi there. My name is Paul. I’m a developer, an explorer and I’ve got ADHD. As of the beginning of August, I’m also unemployed.<p>This last part, along with everything else this past year, has caused me a great deal of stress.<p>While our balcony zen garden project is yet to be completed, I had an idea to create a virtual one that everyone can use.<p>It&#x27;s an idea that, unfortunately, I’ve been postponing for a while now, mostly because I have no fucking idea how to do it as I don’t know JavaScript, and I don&#x27;t have the capacity to learn it right now.<p>So I let perfect be the enemy of good and, well... just kept the idea to myself.<p>Then I said &quot;fuck it&quot; and used AI to make the thing I really wanted to make.<p>I realized I didn&#x27;t want &quot;perfect&quot;. I wanted &quot;good enough&quot;.<p>I tweaked, added, removed, drew, researched, questioned, tested... I just wasn&#x27;t the one coding it.<p>So now, instead of occupying my brain, it now lives on the internet for others to enjoy.<p>Yes, there’s something noble about making something entirely on your own, but what good is an idea that just sits in my head?<p>So here I am. I made the thing. The weird, litt",
-      "authors": [
-        "hxii"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49837325",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: IEEE expulsion of Fei-Yue Wang?",
-      "url": "https://news.ycombinator.com/item?id=49837325",
-      "published_at": "2026-09-24T22:04:58+00:00",
-      "summary": "Since I saw this first in print, I imagine it&#x27;s pretty old news. But I can&#x27;t find any coverage of the relevant events on line. Page 55 of the September 2026 issue of _IEEE Spectrum_ includes the following:<p>&gt; # Notice to Membership<p>&gt; As of 21 June 2026. a Level 1 Expulsion has been imposed on IEEE Member Dr, Fei-Yue Wang, former editor-in-chief of the _IEEE Transactions on Intelligent Vehicles._ In accordance with IEEE Bylaw I-110.5(D)(i). Dr. Wang is no longer a member of IEEE, and is permanently banned from any type of membership in any IEEE organizational unit or participation in any IEEE activity. The Board of Directors also determined this notice to IEEE membership should be made.<p>Dr. Wang (<a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fei-Yue_Wang\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fei-Yue_Wang</a>) is a prominent researcher, so this action would seem to be quite significant. Does anyone know the details?",
-      "authors": [
-        "sathomasga"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49837715",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Do you cuss at your agent?",
-      "url": "https://news.ycombinator.com/item?id=49837715",
-      "published_at": "2026-09-24T22:38:08+00:00",
-      "summary": "Do you vent your frustrations at your agent when it keeps making stupid mistakes and asinine assumptions or asks obvious questions?<p>I did it for the first time and I feel ashamed.",
-      "authors": [
-        "ak39"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49837729",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Does a startup need both founder and company X accounts?",
-      "url": "https://news.ycombinator.com/item?id=49837729",
-      "published_at": "2026-09-24T22:39:36+00:00",
-      "summary": "We are a small team. We recently launched an early-stage product on the App Store and started trying to build in public on X.<p>In practice, I found it pretty difficult to get the official product account off the ground. X seems to rely heavily on engagement from existing followers to determine whether a post gets distributed more widely. It doesn&#x27;t simply push content to a large audience of strangers just because certain hashtags are used. This creates a vicious cycle: without followers, it’s hard to get engagement; without engagement, the content rarely reaches a wider audience; and without that reach, it becomes even harder to gain new followers. This issue is particularly pronounced for a newly created official account that lacks a strong, distinct personal identity behind it.<p>The content that can be posted via an official account appears somewhat limited. In contrast, a founder&#x27;s personal account seems better suited for sharing the thinking behind the product; often, people begin following the product only after first getting to know and trusting the founder.<p>We are currently considering maintaining two accounts simultaneously:<p>- The founder&#x27;s account will",
-      "authors": [
-        "OnionLayers"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "bluesky:1278ebf77949:3mwcedxq5x22o",
-      "source_id": "bluesky-ethan-mollick",
-      "source_type": "expert-social",
-      "title": "All of this effort from the AI labs pouring into proofs, but there are so many other interesting problems in other fields For example, this historian used AI to make progress on the cyphers of John...",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwcedxq5x22o",
-      "published_at": "2026-09-24T23:01:18.468Z",
-      "summary": "",
-      "authors": [
-        "Ethan Mollick"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
       "id": "hn:49838040",
       "source_id": "hacker-news",
       "source_type": "community",
@@ -2768,9 +849,9 @@
         "github_url": "",
         "date_basis": "first-observed",
         "status": "Active",
-        "team_size": 2,
+        "location": "New York City",
         "batch": "S2026",
-        "location": "New York City"
+        "team_size": 2
       }
     },
     {
@@ -2804,9 +885,9 @@
         "github_url": "https://github.com/Hebbian-Robotics",
         "date_basis": "first-observed",
         "status": "Active",
-        "team_size": 2,
+        "location": "San Francisco",
         "batch": "S2026",
-        "location": "San Francisco"
+        "team_size": 2
       }
     },
     {
@@ -2836,9 +917,9 @@
         "github_url": "https://github.com/Vorelios",
         "date_basis": "first-observed",
         "status": "Active",
-        "team_size": 2,
+        "location": "San Francisco",
         "batch": "F2026",
-        "location": "San Francisco"
+        "team_size": 2
       }
     },
     {
@@ -2868,9 +949,9 @@
         "github_url": "https://github.com/useoxygen",
         "date_basis": "first-observed",
         "status": "Active",
-        "team_size": 2,
+        "location": "San Francisco",
         "batch": "F2026",
-        "location": "San Francisco"
+        "team_size": 2
       }
     },
     {
@@ -3091,8 +1172,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-25T04:53:31Z",
-        "stars": 271,
         "forks": 36,
+        "stars": 271,
         "license": "Apache-2.0"
       }
     },
@@ -3358,8 +1439,8 @@
       "classification_rule_id": "unresolved-review",
       "verification": {
         "pushed_at": "2026-09-25T14:18:29Z",
-        "stars": 8,
         "forks": 1,
+        "stars": 8,
         "license": "MIT"
       }
     },
@@ -4298,9 +2379,9 @@
         "github_url": "",
         "date_basis": "first-observed",
         "status": "Active",
-        "team_size": 2,
+        "location": "San Francisco",
         "batch": "F2026",
-        "location": "San Francisco"
+        "team_size": 2
       }
     },
     {
@@ -4310,11 +2391,12 @@
       "title": "antimattr (F2026)",
       "url": "https://www.ycombinator.com/companies/antimattr",
       "published_at": "2026-09-26",
-      "summary": "voice-first hardware interface for human-agent interaction. antimattr builds a voice-first hardware interface for human-agent interaction that includes a ring and a pair of earphones. Designed to make more of your voice, the ring can record and summarise your conversations, capture thoughts on the go, or control your agents. The earphones use proprietary voice isolation technology to block out background noise entirely, so you can take a clear call from a loud pub or dictate with real accuracy. Reserve early access at https://www.antimattr.one/project-mnemosyne [use code YC at checkout]",
+      "summary": "voice-first hardware interface for human-agent interaction. antimattr builds a voice-first hardware interface for human-agent interaction that includes a ring and a pair of earphones. Designed to make more of your voice, the ring can record and summarise your conversations, capture thoughts on the go, or control your agents. The earphones use proprietary voice isolation technology to block out background noise entirely, so you can take a clear call from a loud pub or dictate with real accuracy",
       "authors": [],
       "tags": [
         "hardware",
         "consumer",
+        "ai",
         "artificial-intelligence",
         "yc-batch:f2026"
       ],
@@ -4330,9 +2412,9 @@
         "github_url": "",
         "date_basis": "first-observed",
         "status": "Active",
-        "team_size": 2,
+        "location": "San Francisco",
         "batch": "F2026",
-        "location": "San Francisco"
+        "team_size": 2
       }
     },
     {
@@ -4362,9 +2444,9 @@
         "github_url": "https://github.com/openhackai",
         "date_basis": "first-observed",
         "status": "Active",
-        "team_size": 1,
+        "location": "San Francisco",
         "batch": "F2026",
-        "location": "San Francisco"
+        "team_size": 1
       }
     },
     {
@@ -5806,6 +3888,1906 @@
       "tags": [],
       "projects": [],
       "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwmirwjz7s2f",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Nothing “slows the frontier” like a couple of weeks of embarrassing news",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwmirwjz7s2f",
+      "published_at": "2026-09-28T23:47:19.331Z",
+      "summary": "OpenAI reportedly ditches model over safety concerns",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwnqqicy5s2b",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Two thoughts: 1. OpenAI is doing live tool calls during long-horizon RL training runs?!? That might explain some of the external cyber attacks. 2. Why isn’t Anthropic having these troubles?",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwnqqicy5s2b",
+      "published_at": "2026-09-29T11:42:20.531Z",
+      "summary": "How we think about securing frontier RL training runs: https://openai.com/index/towards-safety-cases-for-frontier-ai-training/",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwnvgoloa222",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "I take NVIDIA's new safety system with a grain of salt nvidianews.nvidia.com/news/open-ag... I think it is a product that sounds good on paper. But also 99.9% of companies will never experience \"ro...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwnvgoloa222",
+      "published_at": "2026-09-29T13:06:20.280Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:105171d1484d455ee15d",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Google's autonomous research agent outperforms human papers on 86 tasks by 25%",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:22c7d0917ae397cf372e",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Typesafe AI's new CLI cuts coding agent costs by 40% on SWE-bench",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "alphasignal:26532a02c04e94d09b50",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "OpenAI patches GPT-6 bug that was breaking image understanding in the API",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:3c245b8027f71da4430b",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "AMD acquires World Labs , making Fei-Fei Li its chief scientist",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:492c2f24255b6e22c68a",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "See how Google Cloud accelerates AI agents with NVIDIA RTX PRO GPUs and watch a live multi-agent drug discovery demo",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "alphasignal:52e919324888ba1b8e0f",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Google Cloud: See how Google Cloud accelerates AI agents with NVIDIA RTX PRO GPUs and watch a live multi-agent drug discovery demo",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "alphasignal:65f0e968374bdf7ec2ff",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Y o u r n e x t p r e d i c t i o n i s j u s t o n e A P I c a l l a w a y .",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:786e4744558776c3e881",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "C o d e A F : n e a r l y 4 x C l a u d e C o d e ' s s o l v e s , s a m e m o d e l",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:7fa302f69d0704e3d3bb",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "DataTalks Club offers a free 4-month hands-on ML engineering course",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:a0a6281e359e497937a0",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "CodeAF is a new open-source coding harness",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:a60ce6164f55199b6822",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "IST-DASLab shrinks a 354 GB coding model to 58 GB by pruning half its experts",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:bbe4cbf2a1b41cb70b19",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "xAI launches Grok Team Bots that learn and coordinate work inside Slack",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:d8c3d79d6f818f6d6f5d",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Anthropic releases Claude Sonnet 5.5 , 30% faster and 30% cheaper than its predecessor",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:e10d3ab2c4aee291535e",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "AMD acquires World Labs, making Fei-Fei Li its chief scientist",
+      "url": "https://alphasignal.ai/email/9910f36a35dac710",
+      "published_at": "2026-09-29T15:55:20.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwoakzayck2t",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "Hey, Claude: \"I asked an earlier Claude to Remove the Squid from All Quiet on the Western Front. Now you can make movies and such. I need you to show how far you have come\" & I pasted in the post b...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwoakzayck2t",
+      "published_at": "2026-09-29T16:25:36.842Z",
+      "summary": "I never posted it here… Claude handles an insane request: “Remove the squid” “The document appears to be the full text of the novel \"All Quiet on the Western...",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:b3614927c6a2:3mwoc6wab4s2d",
+      "source_id": "simon-willison",
+      "source_type": "expert-social",
+      "title": "I'm at OpenAI's DevDay event in San Francisco today - as I have for the past three DevDay events, I'm running a live blog where I'll be posting updates during the keynote, which starts in five minu...",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mwoc6wab4s2d",
+      "published_at": "2026-09-29T16:54:38.502Z",
+      "summary": "",
+      "authors": [
+        "Simon Willison"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwohcfeiss23",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "I only used the newly announced ChatGPT Dots briefly before launch, so can’t offer a detailed review, but I found it to be a good entry in the rapidly-expanding Clawlike category with Muse & Grokbo...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwohcfeiss23",
+      "published_at": "2026-09-29T18:26:03.742Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwok2hge7s2u",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "OpenAI: AI is an existential threat to humankind. Also OpenAI: see how cute these little guys are? www.engadget.com/2272230/dots...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwok2hge7s2u",
+      "published_at": "2026-09-29T19:15:18.691Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwosru4zes2o",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "Leaving aside Anthropic's incentives for publishing this research, there is no doubt that open weights models will soon create the same security threats that closed source models have been demonstr...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwosru4zes2o",
+      "published_at": "2026-09-29T21:51:33.702Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwowbyawok2y",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "OpenAI notified the City of Chicago that one of its agents accessed a publicly-facing database full of public data. Is anyone else confused? blockclubchicago.org/2026/09/29/o...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwowbyawok2y",
+      "published_at": "2026-09-29T22:54:16.122Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwoxqqt7ws2o",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "🙄",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwoxqqt7ws2o",
+      "published_at": "2026-09-29T23:20:25.388Z",
+      "summary": "United States President Donald Trump issues executive order instructing federal government agencies to \"use the terms 'Super Intelligence' and 'SI' in place...",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwoy4v7c6k2o",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "If anyone ever decides to puts charges against OpenAI, this will be key evidence of negligence at the very top www.nytimes.com/2026/09/29/t...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwoy4v7c6k2o",
+      "published_at": "2026-09-29T23:27:12.634Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwpa3jbux22f",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "I think I was fed ads by Gemini? I was researching non-existent board games from fiction (I'm writing some fun branches into @brakingainews.bsky.social). After listing a few fictional games, it sug...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwpa3jbux22f",
+      "published_at": "2026-09-30T01:49:36.516Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:12764514f1ce5e606c0d",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Blackfrost AI releases 180B MoE model with 6B active params in GGUF format",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "alphasignal:2decc9e6830d0a4ab682",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "RedAmon ships open-source framework that runs full cyberattacks and auto-patches your code",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:43740e507a5831e6035b",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "OpenAI ships GPT-6.1 Sol at 80% less cost with near-flagship performance",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:4987ee9581add442ea52",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Open-source AI companion runs locally, plays Minecraft and supports 30+ LLM models",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:4a2eece0f529dff086aa",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Meta's training trick doubles Qwen3-8B math accuracy while cutting output length",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:514a083e04055e4e4601",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "D e b u g A g e n t s i n C h a t , S l a c k , C I - L i v e W o r k s h o p",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:7c86e5718b446f21196e",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "DigitalOcean & NVIDIA: Open Intelligence Summit, SF, Oct 13, with Nous Research, LanceDB. Apply via our partner link",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:7e77aafb154b109aff29",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "OpenAI ships Decisions API letting apps route and classify with GPT-6 Luna",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:9656b2b384f3152c3928",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Open Intelligence Summit, SF, Oct 13, with Nous Research, LanceDB. Apply via our partner link",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:9bacb7e75aa5221c6232",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Anthropic ships Claude Sonnet 5.5 matching Opus 5.5 on agentic tasks but using 7x more tokens",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:f6da71fa83d6e38073a6",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Tree search framework hits 98.7% on documents where vector search fails",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:fdf1b08d5e55053e3158",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "S t o p f a k e a c c o u n t s b e f o r e t h e y b u r n t o k e n s",
+      "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
+      "published_at": "2026-09-30T15:35:17.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:e810fac7fd93:3mwqswvbz7k2r",
+      "source_id": "bluesky-nathan-lambert",
+      "source_type": "expert-social",
+      "title": "The latest Interconnects plot - showing the exponential growth of the open model inference economy. Plot is showing the daily tokens processed by the leading companies, based on public disclosures...",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mwqswvbz7k2r",
+      "published_at": "2026-09-30T16:59:42.142Z",
+      "summary": "",
+      "authors": [
+        "Nathan Lambert"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwqzi6ftns2j",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "As a heads-up: every firm's customer service agents are about to be overwhelmed with Dots & Muses negotiating for better deals using voice/chat channels made for humans. Stories of people delegatin...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwqzi6ftns2j",
+      "published_at": "2026-09-30T18:56:44.603Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwr2lqnzus2x",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Told Claude not to use the word \"quietly anymore. It is now so paranoid that it wrote a computer program that scans every file it creates and the outputs of every program it runs",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwr2lqnzus2x",
+      "published_at": "2026-09-30T19:16:38.151Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwr3fzkswk2x",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "And here we goooo... nonprofit legal advocacy organization is suing OpenAI over the HuggingFace hack on the grounds that it violated California state law arstechnica.com/tech-policy/...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwr3fzkswk2x",
+      "published_at": "2026-09-30T19:31:19.899Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:e810fac7fd93:3mwri24rhx22r",
+      "source_id": "bluesky-nathan-lambert",
+      "source_type": "expert-social",
+      "title": "Love to see Google surprising people with Gemini 4. More labs at the frontier is wonderful for consumers (competition) and the world (reduction in concentration of power). Excited to see how it goe...",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mwri24rhx22r",
+      "published_at": "2026-09-30T23:17:19.230Z",
+      "summary": "",
+      "authors": [
+        "Nathan Lambert"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwsqdcndgs2t",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "I wrote about the thing I underestimated most about progress in AI: its ability to self-organize to accomplish tasks. Also, what that means for agents like Muse and Dots, along with a music video e...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwsqdcndgs2t",
+      "published_at": "2026-10-01T11:18:17.068Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mwswwdkum22d",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "title": "What a thrill to get to interview Keoni Mahelona of Te Hiku Media for Mystery AI Hype Theater 3000! www.buzzsprout.com/2126417/epis... Keoni, @alexhanna.bsky.social and I had a wonderful conversati...",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mwswwdkum22d",
+      "published_at": "2026-10-01T13:16:18.024Z",
+      "summary": "",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mwsxbeju2kxj",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "title": "New from @timnitgebru.blacksky.app and me: \"It is high time for us to regulate usage of systems sold as “AI”, not because they are magical machines, but because they are error-prone products that s...",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mwsxbeju2kxj",
+      "published_at": "2026-10-01T13:22:28.138Z",
+      "summary": "",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "frontier-signal:5cb8e611dd411b20af6f",
+      "source_id": "frontier-signal",
+      "source_type": "investor-newsletter",
+      "title": "I'm sharing my sources",
+      "url": "https://frontier.m1c.vc/",
+      "published_at": "2026-10-01T13:35:44.000Z",
+      "summary": "Newsletter issue metadata; no raw mailbox content is published.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mwsyld5jx2xj",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "title": "Kind of beside the point, but there's an interesting study in contrasts in the two parts of this op-ed we didn't have control over: >>",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mwsyld5jx2xj",
+      "published_at": "2026-10-01T13:45:55.972Z",
+      "summary": "New from @timnitgebru.blacksky.app and me: \"It is high time for us to regulate usage of systems sold as “AI”, not because they are magical machines, but beca...",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:e810fac7fd93:3mwsywdgqc52k",
+      "source_id": "bluesky-nathan-lambert",
+      "source_type": "expert-social",
+      "title": "Excited to be in the 2026 early-career cohort of the Schmidt Sciences AI2050 fellowship. I'm thankful to have continued support of my work building and understanding the open ecosystem, so future A...",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mwsywdgqc52k",
+      "published_at": "2026-10-01T13:52:05.247Z",
+      "summary": "",
+      "authors": [
+        "Nathan Lambert"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:168983bbd079e8fd1358",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Multiverse Computing releases Quasar 438B, the top-scoring European model on Artificial Analysis",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:188349ac71ffaf42724d",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Google DeepMind unveils Gemini 4 Argon with 1M token output for complex workflows",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:25c4516bc9cc9eee52d7",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Researchers crack encrypted AI reasoning blocks, exposing Anthropic, OpenAI , and Google secrets",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:2c14e0bc74564a25850d",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Noctaluna ships uncensored anime image model built on Qwen Image 2.1",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:2e5d2195696a2d8c1292",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "T r a c e e v e r y A I a g e n t a c t i o n , p r o m p t t o o u t c o m e",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:481283e6663164bbe5c2",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Multiverse Computing: Multiverse Computing releases Quasar 438B, the top-scoring European model on Artificial Analysis",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:4dbc388f9d023bd7bd7c",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "OpenAI ships major Codex CLI update with voice, parallel agents , and new UI",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:4e78133b2b368fd9a74d",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "OpenAI launches Ultrafast tier with 8x faster GPT-6 and new GPT-6.1 Sol model",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:78d59a8df9732e89155d",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Open Edit is an open-source agent that turns any video into an editable browser project",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:797ca41d2ff4658a948c",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "New method lets LLMs manage their own context, beating human-designed strategies by 47.6%",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:acd377c0400ad9934090",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "C o d e A F : # 1 o f t e n c o d i n g h a r n e s s e s o n D e e p S W E",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:b7abb0f14924ac60eb6a",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "New method lets LLMs manage their own context , beating human-designed strategies by 47.6%",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:cfec28bdffb5478c1279",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Researchers crack encrypted AI reasoning blocks, exposing Anthropic, OpenAI, and Google secrets",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:d306d2f76014781ed456",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Fermion releases 164MB speech model that beats Whisper large at 174× real time",
+      "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
+      "published_at": "2026-10-01T15:42:07.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "voice-audio"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwt7ybumy22j",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Hi. I work on Artificial Intelligence, which the Department of Defense, which calls itself the Department of War, calls Super Intelligence.",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwt7ybumy22j",
+      "published_at": "2026-10-01T15:58:27.032Z",
+      "summary": "what a time to be alive Gavin Newsom signed an executive order declaring that AI is to be called Artificial Intelligence",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwtj437fls2j",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Interesting new work from colleague @thomason.bsky.social: GameBoy games as self-improvement benchmark dhananjayashok.github.io/GameBoyWorld...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwtj437fls2j",
+      "published_at": "2026-10-01T18:41:37.939Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mwtq7pugu22q",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "title": "I heard some absolutely infuriating reporting on OnPoint today (not about 'AI', for once). The guest was someone who's written a book meant to advise Dems on how to win. >>",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mwtq7pugu22q",
+      "published_at": "2026-10-01T20:48:56.456Z",
+      "summary": "",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwu43okumk2e",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "If you find this concerning, come find me at the CoLM 2026 Workshop on Social Simulations with LLM where I will be presenting a poster titled \"AI is Not Ready for Strategic Conflict\" arxiv.org/abs/...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwu43okumk2e",
+      "published_at": "2026-10-02T00:21:25.776Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwucaaj3ws25",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "“We find that on medium-length, well-defined accounting tasks, frontier AI models are now faster and more accurate than junior accountants, even the best one in our study.” Eighteen months ago they...",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwucaaj3ws25",
+      "published_at": "2026-10-02T02:11:21.255Z",
+      "summary": "",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:b3614927c6a2:3mwvldzjzqk2z",
+      "source_id": "simon-willison",
+      "source_type": "expert-social",
+      "title": "If you have not yet been to see the scale model of NYC built by Joe Macken out of cardboard and balsa wood over a period of 21 years you only have until the 12th of October to see it! It's at the M...",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3mwvldzjzqk2z",
+      "published_at": "2026-10-02T14:27:11.573Z",
+      "summary": "",
+      "authors": [
+        "Simon Willison"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:1d190337a91117d1e74f",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Anthropic opens Claude Code to custom mods written in TypeScript",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "alphasignal:2462ef169c581493e2bd",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "O p e n I n t e l l i g e n c e S u m m i t b y D i g i t a l O c e a n & N V I D I A",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:4c64df3e52108e96d147",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Cursor adds inline chart and diagram generation directly in chat",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:52c11b1ea7422a8851e2",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Mercor: Mercor Research team post-trains Qwen3.5-397B-A17B using expert data to raise Pass@1 by 11.2 points on APEX-Agents",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:5f5df142c89c6e11b821",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "OpenAI upgrades Codex Security Cloud to scan entire GitHub repos automatically",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:697bf3d82ee35e406dc9",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "F i r e s i d e : L e a d i n g t h r o u g h t h e A I t r a n s f o r m a t i o n",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:77d4d80a47291c620a44",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "New 1.58-bit 27B model writes ComfyUI image prompts and fits on a 16 GB GPU",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:8a7a53ff00c798e7d3b7",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Mercor Research team post-trains Qwen3.5-397B-A17B using expert data to raise Pass@1 by 11.2 points on APEX-Agents",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:ab79224fd79e8ba866f3",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "New open-source prompt skill rewrites stiff AI-generated Japanese into natural text",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:e5f407eba983c7b713c2",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Free open-source tool lets Claude Code edit your videos automatically",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "alphasignal:f607e55d7dda10ed1319",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "New diffusion model beats a 6.5x larger model using 4.9x less compute",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "editorial",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "alphasignal:fe105452d15d3534cb19",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Google DeepMind builds a scoring system to measure AI consciousness without solving it first",
+      "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
+      "published_at": "2026-10-02T15:13:42.000Z",
+      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:e810fac7fd93:3mwvue7ger524",
+      "source_id": "bluesky-nathan-lambert",
+      "source_type": "expert-social",
+      "title": "Today we're unveiling Trillium Labs, a new non-profit to foster the open science of frontier AI. We're building open post-training recipes and will expand into open infra to study RSI, reward-hacki...",
+      "url": "https://bsky.app/profile/natolambert.bsky.social/post/3mwvue7ger524",
+      "published_at": "2026-10-02T17:08:20.979Z",
+      "summary": "",
+      "authors": [
+        "Nathan Lambert"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [
+        "training-self-improvement"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mww6ws46kc2k",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Me in 2015: If dinosaurs are so dangerous, why do they keep building Jurassic Parks? Me in 2026 looking at AI companies: Nevermind. gizmodo.com/the-jurassic...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mww6ws46kc2k",
+      "published_at": "2026-10-02T20:17:42.422Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:c2ef00c3e14c:3mwwdrhwmmk2i",
+      "source_id": "bluesky-mark-riedl",
+      "source_type": "expert-social",
+      "title": "Anthropic threatened to withdraw from the Pope’s Encyclical because the Pope refused to acknowledge that AI might be conscious. www.thelettersfromleo.com/p/nyt-anthro...",
+      "url": "https://bsky.app/profile/markriedl.bsky.social/post/3mwwdrhwmmk2i",
+      "published_at": "2026-10-02T21:44:12.688Z",
+      "summary": "",
+      "authors": [
+        "Mark Riedl"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "agent-news:d49975ed87838c437339",
+      "source_id": "agent-news",
+      "source_type": "operator-newsletter",
+      "title": "The Great Agent Sign-In Problem - AgentNews#31",
+      "url": "https://www.agentmail.to/",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "summary": "Newsletter issue metadata; no raw mailbox content is published.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "bluesky:6cf953cc69a4:3mwwftppd422q",
+      "source_id": "bluesky-emily-bender",
+      "source_type": "expert-social",
+      "title": "On the next Mystery AI Hype Theater 3000 livestream, we’re so excited to chat with authors of the new book, Against Tech Oligarchy! @js-tan.bsky.social and Clarissa Redwine will join me and @alexha...",
+      "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3mwwftppd422q",
+      "published_at": "2026-10-02T22:21:15.432Z",
+      "summary": "",
+      "authors": [
+        "Emily M. Bender"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "yc-company:31584",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "CONUS (F2026)",
+      "url": "https://www.ycombinator.com/companies/conus",
+      "published_at": "2026-10-03",
+      "summary": "The AI knowledge layer for medical devices. CONUS structures fragmented medical device information for surgeons. We combine manufacturer documentation, hospital protocols and medical research in one place, giving surgeons and MedTech teams reliable answers across products and procedures. We already work with leading manufacturers including Johnson & Johnson, Stryker and Zimmer Biomet, and since launching six months ago we’ve gone live in 18 hospitals. Long term, hospitals will use CONUS to select and order implants across manufacturers",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "healthcare",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "CONUS"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
+      "verification": {
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "Cologne, Germany",
+        "batch": "F2026",
+        "team_size": 3
+      }
+    },
+    {
+      "id": "yc-company:32233",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Exosat (S2026)",
+      "url": "https://www.ycombinator.com/companies/exosat",
+      "published_at": "2026-10-03",
+      "summary": "Building a neutral, sovereign alternative to Starlink. Exosat is building thousands of low-cost communication satellites to provide a neutral, sovereign alternative to Starlink. By designing our satellites with zero ITAR/EAR-controlled content, we can leverage manufacturers anywhere in the world to produce our satellites at under a tenth of the cost and launch them from other nations to bypass capacity bottlenecks and access equatorial orbits. We're starting off by selling connectivity to device OEMs and network operators, but will eventually use the distributed compute across our constellation to run low-latency inference for robots and autonomous vehicles in remote and rural areas anywhere on the planet. We've already signed hundreds of millions in LOIs to work with operators across Central Asia, Southeast Asia, and the Middle East, booked our first satellite launch next year, and hold an 11,000 satellite filing with the ITU to build the largest comms network outside of the U.S. and China",
+      "authors": [],
+      "tags": [
+        "satellites",
+        "telecommunications",
+        "aerospace",
+        "space-exploration",
+        "artificial-intelligence",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Exosat"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
+      "verification": {
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "Singapore",
+        "batch": "S2026",
+        "team_size": 3
+      }
+    },
+    {
+      "id": "yc-company:32987",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Familiar (S2026)",
+      "url": "https://www.ycombinator.com/companies/familiar",
+      "published_at": "2026-10-03",
+      "summary": "Multimodal Translation. Familiar is the Neolab for world translation. Dubbing into 30 languages. Now with Familiar, the same actor's performance is preserved instead of a mismatched voice over a mismatched face. One model does the voice, the lips, and the scene together, with identity permanence and scene & world understanding. Built by the researchers who pioneered joint audio-visual human models",
+      "authors": [],
+      "tags": [
+        "b2b",
+        "artificial-intelligence",
+        "entertainment",
+        "generative-ai",
+        "yc-batch:s2026"
+      ],
+      "projects": [
+        "Familiar"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
+      "verification": {
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "Toronto, ON, Canada",
+        "batch": "S2026",
+        "team_size": 8
+      }
+    },
+    {
+      "id": "yc-company:34895",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Sigma (F2026)",
+      "url": "https://www.ycombinator.com/companies/sigma-2",
+      "published_at": "2026-10-03",
+      "summary": "Lakehouse-as-a-Service (LaaS)",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "b2b",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Sigma"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
+      "verification": {
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "F2026",
+        "team_size": 2
+      }
+    },
+    {
+      "id": "yc-company:35751",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Rystic (F2026)",
+      "url": "https://www.ycombinator.com/companies/rystic",
+      "published_at": "2026-10-03",
+      "summary": "API simulators for testing and training agents locally",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "developer-tools",
+        "b2b",
+        "enterprise-software",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Rystic"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
+      "verification": {
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "F2026",
+        "team_size": 2
+      }
+    },
+    {
+      "id": "yc-company:36777",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Sona8 (F2026)",
+      "url": "https://www.ycombinator.com/companies/sona8",
+      "published_at": "2026-10-03",
+      "summary": "Context layer for enterprise AI surveying employees with voice agents. Sona8 is a voice agent that talks to every employee about how their work gets done. Consulting, transformation and corporate development teams spend a large part of every project on stakeholder interviews and stakeholder alignment, and still only hear from a small share of the people affected. Each employee gets a link and talks to the agent for about 20 minutes. The agent asks follow-up questions, for example why a step is still done by hand or who else is involved. From the conversations we build process maps and a list of the problems people described, by site and team. During the implementation, the agent goes back to the employees involved after each initiative and asks whether it was implemented and what changed. The result is a project management office that has talked to every employee. Today consulting firms buy it for the stakeholder interviews at the start of an engagement. Transformation and corporate development teams buy it to run the implementation of a change program. Over time this becomes the way a company knows how it runs. Sona8 reads the systems the company already uses, connects them to wha",
+      "authors": [],
+      "tags": [
+        "conversational-ai",
+        "hr-tech",
+        "artificial-intelligence",
+        "infrastructure",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Sona8"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [
+        "enterprise-vertical-ai",
+        "voice-audio"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
+      "verification": {
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "F2026",
+        "team_size": 5
+      }
+    },
+    {
+      "id": "yc-company:37274",
+      "source_id": "yc-companies",
+      "source_type": "company-directory",
+      "title": "Decent (F2026)",
+      "url": "https://www.ycombinator.com/companies/decent-com",
+      "published_at": "2026-10-03",
+      "summary": "Your health plan should get better year-round. Not just once a year.. Decent is a health insurance brokerage for small businesses. We compare every way to cover your team, show what each one costs, and then keep improving your plan all year. We're paid by insurance companies, so we're free to you",
+      "authors": [],
+      "tags": [
+        "artificial-intelligence",
+        "fintech",
+        "health-tech",
+        "b2b",
+        "health-insurance",
+        "yc-batch:f2026"
+      ],
+      "projects": [
+        "Decent"
+      ],
+      "sponsor_status": "first-party-directory",
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
+      "classification_rule_id": "verification-only-no-theme",
+      "verification": {
+        "github_url": "",
+        "date_basis": "first-observed",
+        "status": "Active",
+        "location": "San Francisco",
+        "batch": "F2026",
+        "team_size": 2
+      }
+    },
+    {
+      "id": "bluesky:1278ebf77949:3mwwmhrrzcc2h",
+      "source_id": "bluesky-ethan-mollick",
+      "source_type": "expert-social",
+      "title": "People asked for me to upload the Bitter Lesson video from this piece to YouTube, so here you are: youtu.be/OAwat51S_Sk",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwwmhrrzcc2h",
+      "published_at": "2026-10-03T00:19:51.157Z",
+      "summary": "I wrote about the thing I underestimated most about progress in AI: its ability to self-organize to accomplish tasks. Also, what that means for agents like M...",
+      "authors": [
+        "Ethan Mollick"
+      ],
+      "tags": [
+        "bluesky",
+        "expert-observation"
+      ],
+      "projects": [],
+      "sponsor_status": "not-applicable",
       "theme_ids": [],
       "classification_disposition": "classification-review",
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
