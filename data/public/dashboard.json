@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-10-03T05:01:49.828896+00:00",
+    "generated_at": "2026-10-03T05:09:54.867372+00:00",
     "status": "success",
     "source_count": 45,
-    "evidence_count": 2246,
+    "evidence_count": 2259,
     "warnings": []
   },
   "weekly": {
@@ -13,8 +13,8 @@
       "training-self-improvement",
       "coding-agents",
       "open-local-inference",
-      "skills-integrations",
-      "small-specialized-models"
+      "small-specialized-models",
+      "skills-integrations"
     ]
   },
   "themes": [
@@ -56,7 +56,7 @@
       ],
       "primary_layer": "models-capabilities",
       "maturity": "emerging",
-      "evidence_count": 95,
+      "evidence_count": 97,
       "source_types": [
         "community",
         "curated-newsletter",
@@ -64,6 +64,7 @@
         "expert-newsletter",
         "expert-social",
         "first-party-lab",
+        "newsletter",
         "paper",
         "paper-curation",
         "practitioner-blog",
@@ -190,7 +191,7 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 78,
+      "evidence_count": 77,
       "source_types": [
         "community",
         "company-directory",
@@ -339,7 +340,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 237,
+      "evidence_count": 235,
       "source_types": [
         "community",
         "company-directory",
@@ -482,7 +483,7 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 28,
+      "evidence_count": 27,
       "source_types": [
         "community",
         "company-directory",
@@ -744,256 +745,6 @@
     }
   ],
   "evidence": [
-    {
-      "id": "alphasignal:cc3dc4af9a1c16678c1f",
-      "source_id": "alphasignal",
-      "source_type": "newsletter",
-      "title": "OpenAI upgrades ChatGPT Voice with plugins, GPT-6 models, and full work suite",
-      "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
-      "published_at": "2026-09-24T15:24:05.000Z",
-      "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "editorial",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49832080",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Most Hated Tools",
-      "url": "https://www.mosthatedtools.app/",
-      "published_at": "2026-09-24T15:32:17+00:00",
-      "summary": "",
-      "authors": [
-        "leonagano"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "aws-machine-learning-blog:31eef7cdca1b4464cd5a",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Aderant builds intelligent ticket triage with Amazon Nova",
-      "url": "https://aws.amazon.com/blogs/machine-learning/aderant-builds-intelligent-ticket-triage-with-amazon-nova/",
-      "published_at": "2026-09-24T16:06:46+00:00",
-      "summary": "Learn how Aderant built an intelligent ticket triage system on Amazon Nova Lite through Amazon Bedrock, automating context gathering, classification, routing, and knowledge enrichment for its cloud operations team.",
-      "authors": [
-        "Angela Mapes"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "aws-machine-learning-blog:94bcf02872c234c4720b",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Build a multi-account AI agent with AgentCore Gateway and MCP",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-a-multi-account-ai-agent-with-agentcore-gateway-and-mcp/",
-      "published_at": "2026-09-24T16:12:47+00:00",
-      "summary": "Build a multi-account architecture that keeps each team's data in its own AWS account while giving AI agents a unified way to query across them. A central platform account runs the agent using Amazon Bedrock AgentCore Gateway and MCP, while line-of-business accounts expose their data as MCP servers with secure cross-account access and fine-grained authorization.",
-      "authors": [
-        "Senthil Kamala Rathinam"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "aws-machine-learning-blog:a56b3cba6cf92f496341",
-      "source_id": "aws-machine-learning-blog",
-      "source_type": "first-party-lab",
-      "title": "Speaker-labeled transcription with WhisperX on SageMaker AI",
-      "url": "https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/",
-      "published_at": "2026-09-24T16:20:12+00:00",
-      "summary": "The AWS WhisperX Deep Learning Container packages Whisper, wav2vec2 forced alignment, and speaker diarization into a GPU-ready image. Learn how to deploy it to Amazon SageMaker AI real-time and asynchronous endpoints for word-level, speaker-labeled transcription, plus the production details that matter: the GPU AMI pin, scaling, and cost controls.",
-      "authors": [
-        "Ayush Sharma"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49833212",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Hypothesis: Cellular providers are deprioritizing voice calls?",
-      "url": "https://news.ycombinator.com/item?id=49833212",
-      "published_at": "2026-09-24T16:39:20+00:00",
-      "summary": "I switched from Verizon to T-Mobile, specifically because there were too many silent missed calls. Silent meaning my device never showed I had a missed call.<p>This was a pattern across more than a year, spanning multiple devices (all iphones). It happens on both wifi and cellular. It happens with wifi calling enabled and disabled. It happens with people I call every day, in my address book, as well as new contacts (say someone I met who called to follow up). I called support, searched online, reset network settings multiple times at different points months apart.<p>After being on T-Mobile for about a year, the degraded service is about the same as Verizon. Every week, more than once, people call me, my phone never rings, and I never see a missed call on my device. It happens at home, at work, on work trips in different states.<p>I still get missed calls regularly and my device shows I missed the call. It seems like a certain % of callers get my VM, but I never know the call attempt happened. The missed calls never appear later on my phone (like a late VM or text deliver, coming minutes or sometimes hours after it was sent).<p>Hypothesis: A growing number of cellular subscribers do",
-      "authors": [
-        "tkdb"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49833541",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Are .shop domains down?",
-      "url": "https://news.ycombinator.com/item?id=49833541",
-      "published_at": "2026-09-24T16:59:22+00:00",
-      "summary": "Anyone else seeing this? Or am I missing something obvious? A client asked in support. AI is very confident about it. Looks legit.<p>apple.shop, pokemon.shop ...",
-      "authors": [
-        "esher"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49833867",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-      "url": "https://github.com/devdotfast/whiteboard",
-      "published_at": "2026-09-24T17:21:36+00:00",
-      "summary": "Hello! We’re Sid, Alex, Ketan, and Milan. We’re building Whiteboard (<a href=\"https:&#x2F;&#x2F;whiteboard.dev.fast&#x2F;\">https:&#x2F;&#x2F;whiteboard.dev.fast&#x2F;</a>), an open-source desktop app where humans and agents can architect software together in a common workspace. Here’s our repo: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;devdotfast&#x2F;whiteboard\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;devdotfast&#x2F;whiteboard</a>.<p>We were missing the feeling of a “whiteboard session” with another dev where you leave with a deep understanding of a system, so we built this app for ourselves. Whiteboard plugs into the tools you already use - e.g. Claude Code, Codex, etc. – and gives your agent an SDK to draw on an in-app canvas to describe its work. We began with an MVP based on HTML artifacts and started rethinking the app as we ran into limitations:<p>1. Built on top of CodeOSS: We found that in pure HTML tools it was hard to connect a spec or diagram to code. In Whiteboard, when you click on visualizations like a sequence diagram, an entity relationship diagram, or a quote from the agent’s trace, you can jump to the underlying code directly. When navigating code, you",
-      "authors": [
-        "sidharthkmenon"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
-    },
-    {
-      "id": "bluesky:1278ebf77949:3mwbsy7mgfk2i",
-      "source_id": "bluesky-ethan-mollick",
-      "source_type": "expert-social",
-      "title": "I propose this as the official replacement for the famous (and now saturated) METR Long Task Horizon chart that used to be in every AI presentation.",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mwbsy7mgfk2i",
-      "published_at": "2026-09-24T17:50:30.466Z",
-      "summary": "",
-      "authors": [
-        "Ethan Mollick"
-      ],
-      "tags": [
-        "bluesky",
-        "expert-observation"
-      ],
-      "projects": [],
-      "sponsor_status": "not-applicable",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
-    {
-      "id": "hn:49834564",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Does spec-driven development still pay off with frontier coding models?",
-      "url": "https://news.ycombinator.com/item?id=49834564",
-      "published_at": "2026-09-24T18:05:50+00:00",
-      "summary": "As coding models get better at working from a rough goal, I’m wondering how much value there is in writing a detailed spec up front.<p>If you use these models on real projects, when has a spec improved the outcome? When has it added overhead? Have you shifted toward shorter briefs, tests, or iterative feedback?",
-      "authors": [
-        "sarangk90"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49834893",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Stable (YC W20) Is Hiring Product Engineers",
-      "url": "https://www.usestable.com/careers/product-engineer",
-      "published_at": "2026-09-24T18:29:18+00:00",
-      "summary": "",
-      "authors": [
-        "collinpham"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "hn:49835507",
-      "source_id": "hacker-news",
-      "source_type": "community",
-      "title": "Ask HN: Folks familiar with infections after TKA",
-      "url": "https://news.ycombinator.com/item?id=49835507",
-      "published_at": "2026-09-24T19:12:49+00:00",
-      "summary": "I am looking for Ortho&#x2F;infectious disease practitioners or researchers who have experience with compromised post-op TKA&#x27;s. specifically: Enterobacter cloacae, and a yeast variety yet to be revealed- Obviously I do not expect medical advice, just looking for any new info in case it has not reached my spouses team. Surgery 1 month ago, after 30 days, wound began leaking- DAIR was performed 7 days ago after 5 days culture showed bacteria, today it was revealed yeast also present. Still waiting on sensitivities. Thanks in advance. My apologies to all those who really don&#x27;t want to think about this kind of stuff.",
-      "authors": [
-        "zafka"
-      ],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "out-of-scope",
-      "classification_reason": "General community material with no explicit AI-system term is outside the radar's engineering and operating taxonomy.",
-      "classification_rule_id": "community-no-ai-system-signal"
-    },
-    {
-      "id": "simon-willison:0fc7c0f362de8929a220",
-      "source_id": "simon-willison",
-      "source_type": "practitioner-blog",
-      "title": "datasette 1.0a41",
-      "url": "https://simonwillison.net/2026/Sep/24/datasette/",
-      "published_at": "2026-09-24T19:15:23+00:00",
-      "summary": "Release: datasette 1.0a41 Alec Garcia added support for OpenTelemetry to Datasette in this release. I've also refactored all of Datasette's modal dialogs to a single Web Component, which is now documented for other plugins to use . Tags: javascript , datasette , web-components , alex-garcia , opentelemetry",
-      "authors": [],
-      "tags": [],
-      "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
-    },
     {
       "id": "hn:49835866",
       "source_id": "hacker-news",
@@ -1956,11 +1707,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:395eb5f88099f4c5b7d2",
@@ -2026,11 +1777,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:b85c889a9b6e76025d46",
@@ -3851,6 +3602,42 @@
       "classification_rule_id": "unresolved-review"
     },
     {
+      "id": "alphasignal:56888202a458559aabe4",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "System One Model",
+      "url": "https://app.alphasignal.ai/c?lid=12NigLUcssjA0SB6U&mid=f5dfdffd-c7ca-407d-a45d-dbc35710e109",
+      "published_at": "2026-09-27T17:11:39.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "alphasignal:8a0f602616769e037ef4",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Try Ory Today ↗",
+      "url": "https://app.alphasignal.ai/c?lid=1qbiLcWgJVcVcygHs&mid=f5dfdffd-c7ca-407d-a45d-dbc35710e109",
+      "published_at": "2026-09-27T17:11:39.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
       "id": "alphasignal:b334cf2a8fb36dfa32e9",
       "source_id": "alphasignal",
       "source_type": "newsletter",
@@ -3864,6 +3651,25 @@
       "sponsor_status": "unknown",
       "theme_ids": [
         "skills-integrations"
+      ],
+      "classification_disposition": "classified",
+      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match"
+    },
+    {
+      "id": "alphasignal:cb35346305c271fcbbe3",
+      "source_id": "alphasignal",
+      "source_type": "newsletter",
+      "title": "Contrastive Language Models",
+      "url": "https://app.alphasignal.ai/c?lid=zxjZV825yy1VfIOP&mid=f5dfdffd-c7ca-407d-a45d-dbc35710e109",
+      "published_at": "2026-09-27T17:11:39.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [
+        "small-specialized-models"
       ],
       "classification_disposition": "classified",
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
@@ -3997,11 +3803,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:77402edfcac44cf96c33",
@@ -4069,11 +3875,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:d08e346f2bf86a1ef39d",
@@ -4175,6 +3981,40 @@
       ],
       "projects": [],
       "sponsor_status": "not-applicable",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "frontier-signal:182e819d9b4d8ecc9b66",
+      "source_id": "frontier-signal",
+      "source_type": "investor-newsletter",
+      "title": "See if you qualify",
+      "url": "https://b2c40845.click.kit-mail3.com/v8ue2367mdtmuxn4ee8fghvzr4x38h9h0n72m/l2hehmhld4pvz9b6h0/aHR0cHM6Ly9mb3JtLnR5cGVmb3JtLmNvbS90by9HUUI1cEt5dg==",
+      "published_at": "2026-09-28T22:45:30.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "frontier-signal:3e1cebe834491c9e06a0",
+      "source_id": "frontier-signal",
+      "source_type": "investor-newsletter",
+      "title": "Join the Frontier Membership",
+      "url": "https://b2c40845.click.kit-mail3.com/v8ue2367mdtmuxn4ee8fghvzr4x38h9h0n72m/vqh3hrhoq463drtghl/aHR0cHM6Ly9mcm9udGllcm1lbWJlcnNoaXAuY2lyY2xlLnNvL2NoZWNrb3V0L2Zyb250aWVyLW1lbWJlcnNoaXA=",
+      "published_at": "2026-09-28T22:45:30.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
       "theme_ids": [],
       "classification_disposition": "classification-review",
       "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
@@ -4329,13 +4169,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
-      "theme_ids": [
-        "agent-harnesses"
-      ],
-      "classification_disposition": "classified",
-      "classification_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match"
+      "sponsor_status": "sponsored",
+      "theme_ids": [],
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:7fa302f69d0704e3d3bb",
@@ -4348,11 +4186,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:a0a6281e359e497937a0",
@@ -4365,11 +4203,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:a60ce6164f55199b6822",
@@ -4669,11 +4507,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:43740e507a5831e6035b",
@@ -4737,11 +4575,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:7e77aafb154b109aff29",
@@ -4973,6 +4811,23 @@
       "classification_rule_id": "unresolved-review"
     },
     {
+      "id": "frontier-signal:2a1e71a65ba2bd34e059",
+      "source_id": "frontier-signal",
+      "source_type": "investor-newsletter",
+      "title": "Join the Frontier Membership",
+      "url": "https://b2c40845.click.kit-mail3.com/qdu4p8v6g0i7h43x4g2hlh8n4od5gc4hkzr9x/7qh7h8h9x38l0lszh6/aHR0cHM6Ly9mcm9udGllcm1lbWJlcnNoaXAuY2lyY2xlLnNvL2NoZWNrb3V0L2Zyb250aWVyLW1lbWJlcnNoaXA=",
+      "published_at": "2026-10-01T13:35:44.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
       "id": "frontier-signal:5cb8e611dd411b20af6f",
       "source_id": "frontier-signal",
       "source_type": "investor-newsletter",
@@ -4980,6 +4835,23 @@
       "url": "https://frontier.m1c.vc/",
       "published_at": "2026-10-01T13:35:44.000Z",
       "summary": "Newsletter issue metadata; no raw mailbox content is published.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "frontier-signal:cf56296f80e6ce0c51d0",
+      "source_id": "frontier-signal",
+      "source_type": "investor-newsletter",
+      "title": "Update your profile",
+      "url": "https://preferences.kit-mail3.com/qdu4p8v6g0i7h43x4g2hlh8n4od5gc4hkzr9x",
+      "published_at": "2026-10-01T13:35:44.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
       "authors": [],
       "tags": [],
       "projects": [],
@@ -5095,11 +4967,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:4e78133b2b368fd9a74d",
@@ -5146,11 +5018,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:cfec28bdffb5478c1279",
@@ -5369,11 +5241,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "alphasignal:5f5df142c89c6e11b821",
@@ -5473,11 +5345,11 @@
       "authors": [],
       "tags": [],
       "projects": [],
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "theme_ids": [],
-      "classification_disposition": "classification-review",
-      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review"
+      "classification_disposition": "out-of-scope",
+      "classification_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement"
     },
     {
       "id": "bluesky:e810fac7fd93:3mwvue7ger524",
@@ -5548,6 +5420,74 @@
       "classification_rule_id": "unresolved-review"
     },
     {
+      "id": "agent-news:3ffc5dea9593bd8404e0",
+      "source_id": "agent-news",
+      "source_type": "operator-newsletter",
+      "title": "Read the blog →",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly93d3cuYWdlbnRtYWlsLnRvL2Jsb2cvd2hhdC1pcy1hbi1hZ2VudC1pZD91dG1fc291cmNlPWFnZW50bWFpbF9uZXdzbGV0dGVyXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj1hZ2VudF9uZXdzXzAzMSIsImludGVybmFsIjoiYjhkZDBjMDRlM2RlMDFhNDg4MDkiLCJsaW5rX2lkIjoxODYxNn0/2275526c4d6c39b5daf20571ed8d2eb664779d27fc3d6d354106c44c7301fc45",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "agent-news:46e1e0e7a0f3aff3a867",
+      "source_id": "agent-news",
+      "source_type": "operator-newsletter",
+      "title": "Check out Skydive →",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly93d3cuc2t5ZGl2ZS5jb20vP3V0bV9zb3VyY2U9YWdlbnRtYWlsX25ld3NsZXR0ZXJcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPWFnZW50X25ld3NfMDMxIiwiaW50ZXJuYWwiOiJiOGRkMGMwNGUzZGUwMWE0ODgwOSIsImxpbmtfaWQiOjE4NjIwfQ/1111b7f2fe8bd7b530f542c44e2274df376300fc68e21cfba44937bcf4938d36",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "agent-news:600c2c07bf9ad803c75b",
+      "source_id": "agent-news",
+      "source_type": "operator-newsletter",
+      "title": "Register now →",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly9sdW1hLmNvbS9idWlsZGUtbWtlZD91dG1fc291cmNlPWFnZW50bWFpbF9uZXdzbGV0dGVyXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj1hZ2VudF9uZXdzXzAzMSIsImludGVybmFsIjoiYjhkZDBjMDRlM2RlMDFhNDg4MDkiLCJsaW5rX2lkIjoxODYxOH0/c9a394865b1b5ee55f40f6d2e15f53bb1307079fb2632de5d8f41700a949adc7",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "agent-news:68e34b9e7b34ba05116d",
+      "source_id": "agent-news",
+      "source_type": "operator-newsletter",
+      "title": "Get started free",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly9jb25zb2xlLmFnZW50bWFpbC50by9zaWduLXVwP3V0bV9zb3VyY2U9YWdlbnRtYWlsX25ld3NsZXR0ZXJcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPWFnZW50X25ld3NfMDMxIiwiaW50ZXJuYWwiOiJiOGRkMGMwNGUzZGUwMWE0ODgwOSIsImxpbmtfaWQiOjE4NjE0fQ/0d642722429b24b4915ffcbd8a13edcfc22692f28f1067d7b234849c65421e41",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
       "id": "agent-news:d49975ed87838c437339",
       "source_id": "agent-news",
       "source_type": "operator-newsletter",
@@ -5555,6 +5495,40 @@
       "url": "https://www.agentmail.to/",
       "published_at": "2026-10-02T22:03:33.000Z",
       "summary": "Newsletter issue metadata; no raw mailbox content is published.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "agent-news:f105d9452611449e72d2",
+      "source_id": "agent-news",
+      "source_type": "operator-newsletter",
+      "title": "Read the full thread on X →",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly94LmNvbS9oYWFrYW1hdWpsYS9zdGF0dXMvMjEwNTcxNjM2MDc1MjA5NTU1OSIsImludGVybmFsIjoiYjhkZDBjMDRlM2RlMDFhNDg4MDkiLCJsaW5rX2lkIjoxODYxN30/33ca18f2ee059693f00f8079c8df75993b1b3eec22d778a56c8ad5d465e474ff",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "authors": [],
+      "tags": [],
+      "projects": [],
+      "sponsor_status": "unknown",
+      "theme_ids": [],
+      "classification_disposition": "classification-review",
+      "classification_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review"
+    },
+    {
+      "id": "agent-news:f3fd460f7533312741d6",
+      "source_id": "agent-news",
+      "source_type": "operator-newsletter",
+      "title": "Haakam wrote the full thread on X. If this is useful, share it with someone building agents. Read and repost on X →",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly94LmNvbS9oYWFrYW1hdWpsYS9zdGF0dXMvMjEwNTcxNjM2MDc1MjA5NTU1OSIsImludGVybmFsIjoiYjhkZDBjMDRlM2RlMDFhNDg4MDkiLCJsaW5rX2lkIjoxODYxN30/33ca18f2ee059693f00f8079c8df75993b1b3eec22d778a56c8ad5d465e474ff",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
       "authors": [],
       "tags": [],
       "projects": [],

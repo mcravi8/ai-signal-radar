@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T05:01:49.828896+00:00",
+    "generated_at": "2026-10-03T05:09:54.867372+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1423,
-    "input_changed_document_count": 0,
-    "cluster_count": 490,
+    "input_document_count": 1434,
+    "input_changed_document_count": 14,
+    "cluster_count": 493,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 172,
-    "coherent_cluster_count": 191,
+    "coherent_cluster_count": 192,
     "quality_eligible_cluster_count": 12,
-    "explained_cluster_count": 119,
+    "explained_cluster_count": 120,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 112,
+      "covered-by-existing-theme": 113,
       "merge-existing-direction": 7,
-      "novel": 371
+      "novel": 373
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -145,7 +145,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": false
+      "materially_changed": true
     },
     {
       "cluster_id": "discovery:long-horizon-tool-using-b0604038be",
@@ -845,6 +845,191 @@
         "matched_anchor_phrases": [],
         "basis": "recurrent-theme-recall"
       }
+    },
+    {
+      "id": "discovery:independently-verified-b1618e6cef",
+      "anchor_ids": [
+        "phrase:independently-verified",
+        "phrase:underlying-claim",
+        "phrase:newsletter-curated-public-link"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:independently-verified",
+          "label": "independently verified",
+          "kind": "emergent-phrase",
+          "document_count": 6,
+          "source_count": 3
+        },
+        {
+          "id": "phrase:underlying-claim",
+          "label": "underlying claim",
+          "kind": "emergent-phrase",
+          "document_count": 6,
+          "source_count": 3
+        },
+        {
+          "id": "phrase:newsletter-curated-public-link",
+          "label": "newsletter curated public link",
+          "kind": "emergent-phrase",
+          "document_count": 4,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "agent-news:3ffc5dea9593bd8404e0",
+        "agent-news:46e1e0e7a0f3aff3a867",
+        "alphasignal:188349ac71ffaf42724d",
+        "alphasignal:1d190337a91117d1e74f",
+        "frontier-signal:2a1e71a65ba2bd34e059",
+        "frontier-signal:cf56296f80e6ce0c51d0"
+      ],
+      "source_ids": [
+        "agent-news",
+        "alphasignal",
+        "frontier-signal"
+      ],
+      "source_family_ids": [
+        "attention",
+        "investor-newsletter",
+        "operator-newsletter"
+      ],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "coding-agents": 1
+      },
+      "first_seen": "2026-10-01T13:35:44.000Z",
+      "last_seen": "2026-10-02T22:03:33.000Z",
+      "metrics": {
+        "evidence_count": 6,
+        "independent_event_count": 6,
+        "source_count": 3,
+        "source_family_count": 3,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 0.333,
+        "raw_evidence_count": 20,
+        "capped_evidence_count": 6,
+        "changed_evidence_count": 4
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 6,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [
+        {
+          "evidence_id": "alphasignal:12764514f1ce5e606c0d",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:105171d1484d455ee15d",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:2f3c1fafd885b87ad2af",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:56888202a458559aabe4",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:8a0f602616769e037ef4",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:cb35346305c271fcbbe3",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:0f40762c80330c35ac8a",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:111e6fbcff6d492fbbb3",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:05d87aff9d0bebc4b8a8",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "alphasignal:1454af9586eaae4c2d8c",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "agent-news:600c2c07bf9ad803c75b",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "agent-news:68e34b9e7b34ba05116d",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "agent-news:f105d9452611449e72d2",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "frontier-signal:182e819d9b4d8ecc9b66",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        }
+      ],
+      "materially_changed": true,
+      "disposition": "novel",
+      "nearest_known": null
     },
     {
       "id": "discovery:api-keys-c177b8ad02",
@@ -5560,7 +5745,7 @@
         "dominant_publisher_share": 0.667,
         "raw_evidence_count": 3,
         "capped_evidence_count": 3,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -5605,7 +5790,7 @@
         "candidate_quality_met": true
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "merge-existing-direction",
       "nearest_known": {
         "kind": "early-signal-direction",
@@ -11630,6 +11815,96 @@
       "nearest_known": null
     },
     {
+      "id": "discovery:contrastive-language-612dca8f13",
+      "anchor_ids": [
+        "phrase:contrastive-language"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:contrastive-language",
+          "label": "contrastive language",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "alphasignal:cb35346305c271fcbbe3",
+        "github:1384094559"
+      ],
+      "source_ids": [
+        "alphasignal",
+        "github"
+      ],
+      "source_family_ids": [
+        "attention",
+        "engineering"
+      ],
+      "theme_ids": [
+        "assurance-infrastructure",
+        "coding-agents",
+        "model-routing",
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [
+        "small-specialized-models"
+      ],
+      "theme_document_counts": {
+        "assurance-infrastructure": 1,
+        "coding-agents": 1,
+        "model-routing": 1,
+        "small-specialized-models": 2,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-23T19:29:56Z",
+      "last_seen": "2026-09-27T17:11:39.000Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 1,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 2
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 1,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "concept:theme:small-specialized-models",
+            "document_count": 2
+          },
+          {
+            "id": "theme:small-specialized-models",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": true,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
+    },
+    {
       "id": "discovery:critical-infrastructure-ca2e82d1c5",
       "anchor_ids": [
         "phrase:critical-infrastructure"
@@ -14562,6 +14837,70 @@
       "nearest_known": null
     },
     {
+      "id": "discovery:get-started-449e505937",
+      "anchor_ids": [
+        "phrase:get-started"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:get-started",
+          "label": "get started",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "agent-news:68e34b9e7b34ba05116d",
+        "bluesky:e810fac7fd93:3mvs4salrn72j"
+      ],
+      "source_ids": [
+        "agent-news",
+        "bluesky-nathan-lambert"
+      ],
+      "source_family_ids": [
+        "experts",
+        "operator-newsletter"
+      ],
+      "theme_ids": [
+        "open-local-inference"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "open-local-inference": 1
+      },
+      "first_seen": "2026-09-18T12:03:31.741Z",
+      "last_seen": "2026-10-02T22:03:33.000Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 2
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": true,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
       "id": "discovery:gets-done-667b245fbd",
       "anchor_ids": [
         "phrase:gets-done"
@@ -15634,7 +15973,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -15663,7 +16002,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -17216,7 +17555,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -17232,7 +17571,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -17820,7 +18159,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -17836,7 +18175,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -19933,7 +20272,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -19966,7 +20305,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -24604,7 +24943,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -24649,7 +24988,7 @@
         "candidate_quality_met": true
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -24875,7 +25214,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -24900,7 +25239,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -29944,7 +30283,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -29960,7 +30299,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -33857,7 +34196,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 0
+        "changed_evidence_count": 1
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -33873,7 +34212,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
+      "materially_changed": true,
       "disposition": "novel",
       "nearest_known": null
     },

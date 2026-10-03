@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T05:01:49.828896+00:00",
+    "generated_at": "2026-10-03T05:09:54.867372+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1423,
-    "input_changed_document_count": 0,
-    "cluster_count": 490,
+    "input_document_count": 1434,
+    "input_changed_document_count": 14,
+    "cluster_count": 493,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 172,
-    "coherent_cluster_count": 191,
+    "coherent_cluster_count": 192,
     "quality_eligible_cluster_count": 12,
-    "explained_cluster_count": 119,
+    "explained_cluster_count": 120,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 112,
+      "covered-by-existing-theme": 113,
       "merge-existing-direction": 7,
-      "novel": 371
+      "novel": 373
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -145,7 +145,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": false
+      "materially_changed": true
     },
     {
       "cluster_id": "discovery:long-horizon-tool-using-b0604038be",

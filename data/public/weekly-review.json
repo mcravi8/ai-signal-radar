@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-10-03T05:01:49.828896+00:00",
+    "generated_at": "2026-10-03T05:09:54.867372+00:00",
     "as_of": "2026-10-03",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,14 +12,14 @@
       "early-signal": 7,
       "operator-narrative": 6
     },
-    "materially_changed_count": 2,
-    "assessment_queue_count": 9,
+    "materially_changed_count": 1,
+    "assessment_queue_count": 10,
     "carried_queue_count": 9,
     "adjudication_count": 16,
     "requirement_change_count": 0
   },
   "summary": {
-    "headline": "16 candidate decisions are recorded; 9 candidates remain in the bounded assessment queue.",
+    "headline": "16 candidate decisions are recorded; 10 candidates remain in the bounded assessment queue.",
     "interpretation": "Candidate priority controls analyst attention only. It cannot create, promote, or demote an Operating Model requirement."
   },
   "selection_policy": {
@@ -366,8 +366,6 @@
         "alphasignal:b85c889a9b6e76025d46",
         "alphasignal:395eb5f88099f4c5b7d2",
         "hn:49842596",
-        "alphasignal:878cd0da4350818f61b9",
-        "alphasignal:5e4d06e1b5148246bf48",
         "alphasignal:28e88f0768d976bbfccb",
         "bluesky:1278ebf77949:3mw7n5pr7222t",
         "github:1384094559",
@@ -378,12 +376,14 @@
         "alphasignal:ed11042f47b8f05c3ace",
         "hn:49800574",
         "huggingface-blog:e9f63aa1f7aaa02f4024",
-        "hn:49791343"
+        "hn:49791343",
+        "hn:49788178",
+        "hn:49787069"
       ],
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 239,
+        "evidence_count": 237,
         "source_count": 30,
         "source_types": [
           "community",
@@ -407,7 +407,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 136,
         "family_count": 17,
-        "trend_score": 99.8
+        "trend_score": 99.6
       },
       "linked_requirements": [
         {
@@ -429,10 +429,8 @@
         "operating_relevance": 10,
         "total": 66
       },
-      "change_reasons": [
-        "Evidence increased by 2"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:training-self-improvement",
         "reviewed_at": "2026-09-25",
@@ -451,8 +449,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 6,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 6
     },
     {
       "id": "theme:voice-audio",
@@ -469,7 +467,6 @@
         "aws-machine-learning-blog:aaca847ab96b8bddf45b",
         "bluesky:b3614927c6a2:3mw7magyrwc2i",
         "simon-willison:e47986333e4f67663922",
-        "alphasignal:1ef7cf038f88524bc9b8",
         "hn:49789320",
         "alphasignal:trend:voice-and-audio-interfaces",
         "arxiv:2609.21967v1",
@@ -483,12 +480,13 @@
         "alphasignal:project:voicestudio",
         "deepmind-blog:ac6eb9276806c2f8127d",
         "the-batch:ab4caab4fe2b8644e7ea",
-        "huggingface-blog:e3ddd7a65cd3a566e91c"
+        "huggingface-blog:e3ddd7a65cd3a566e91c",
+        "huggingface-blog:5890b1cfd4cc38aa3885"
       ],
       "stage": "corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 31,
+        "evidence_count": 30,
         "source_count": 14,
         "source_types": [
           "community",
@@ -508,7 +506,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.2
+        "trend_score": 68.7
       },
       "linked_requirements": [
         {
@@ -558,6 +556,107 @@
       "review_action": "review-existing-requirement",
       "pending_from_previous_review": true,
       "queue_rank": 8
+    },
+    {
+      "id": "theme:agent-harnesses",
+      "origin": "cross-source-theme",
+      "title": "Agent harnesses",
+      "description": "Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.",
+      "source_analysis": "themes/agent-harnesses",
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "evidence_ids": [
+        "hn:49850553",
+        "hn:49847249",
+        "alphasignal:1206dbc2b8c74248e62f",
+        "hn:49821438",
+        "aws-machine-learning-blog:29c650c1b20939ddf6d9",
+        "aws-machine-learning-blog:16b9772b96509775d2ea",
+        "hn:49785562",
+        "hf-paper:2609.24972",
+        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+        "alphasignal:trend:agent-orchestration-and-autonomy",
+        "bluesky:1278ebf77949:3mvxrv6krzs22",
+        "bluesky:e810fac7fd93:3mvxajmx5cz2n",
+        "arxiv:2609.21944v1",
+        "arxiv:2609.21859v1",
+        "arxiv:2609.21843v1",
+        "hf-paper:2609.21465",
+        "simon-willison:0c114974aa55eb9d7222",
+        "arxiv:2609.20620v1",
+        "aws-machine-learning-blog:5d4f323bd0d514800a8a",
+        "arxiv:2609.20519v1"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "steady",
+      "metrics": {
+        "evidence_count": 81,
+        "source_count": 18,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "event-paper",
+          "event-session",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 0,
+        "technical_record_count": 41,
+        "family_count": 15,
+        "trend_score": 65.8
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "linked_requirement": {
+        "id": "modular-agent-operating-stack",
+        "title": "Modular agent operating stack",
+        "maturity": "emerging"
+      },
+      "priority": {
+        "momentum": 8,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 0,
+        "operating_relevance": 10,
+        "total": 63
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:agent-harnesses",
+        "reviewed_at": "2026-09-25",
+        "outcome": "covered-by-existing-requirement",
+        "requirement_ids": [
+          "modular-agent-operating-stack"
+        ],
+        "decision": "Do not create a duplicate requirement.",
+        "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 67,
+          "links_added": 4,
+          "finding": "Sixteen sources now support the orchestration layer, while the generic-agent cluster was deliberately left unresolved. The industrial comparison favoring a simpler single-agent baseline remains material counterevidence, so the modular-stack requirement stays emerging and conditional."
+        },
+        "status": "revisit-required"
+      },
+      "review_action": "review-existing-requirement",
+      "pending_from_previous_review": true,
+      "queue_rank": 2
     },
     {
       "id": "theme:frontier-inference-infrastructure",
@@ -658,89 +757,6 @@
       "queue_rank": 3
     },
     {
-      "id": "theme:proprietary-data-boundary",
-      "origin": "cross-source-theme",
-      "title": "Governed proprietary-data boundaries",
-      "description": "Architectures that keep proprietary, regulated, or customer-confidential data inside controlled systems while exposing only permitted context or computation to models.",
-      "source_analysis": "themes/proprietary-data-boundary",
-      "theme_ids": [
-        "proprietary-data-boundary"
-      ],
-      "evidence_ids": [
-        "hn:49827375",
-        "nvidia-developer-blog:414469594f15a132e944",
-        "arxiv:2609.21829v1",
-        "arxiv:2609.21728v1",
-        "arxiv:2609.20650v1",
-        "aws-machine-learning-blog:5a658dac9f90bae77e02",
-        "arxiv:2609.20532v1",
-        "arxiv:2609.20501v1",
-        "nvidia-developer-blog:c6cbeb9f9f96e88e05d7",
-        "anthropic-news-research:f4efc55098543f59e5e3",
-        "greylock-essays:16bf0805df87e8f7760d",
-        "hf-paper:2508.04660",
-        "github:144863525"
-      ],
-      "stage": "corroborated",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 13,
-        "source_count": 8,
-        "source_types": [
-          "community",
-          "first-party-lab",
-          "investor-essay",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 0,
-        "technical_record_count": 10,
-        "family_count": 6,
-        "trend_score": 57.6
-      },
-      "linked_requirements": [
-        {
-          "id": "governed-proprietary-data-boundary",
-          "title": "Governed proprietary data boundary",
-          "maturity": "experimental"
-        }
-      ],
-      "linked_requirement": {
-        "id": "governed-proprietary-data-boundary",
-        "title": "Governed proprietary data boundary",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 0,
-        "operating_relevance": 10,
-        "total": 63
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:proprietary-data-boundary",
-        "reviewed_at": "2026-09-25",
-        "outcome": "covered-by-existing-requirement",
-        "requirement_ids": [
-          "governed-proprietary-data-boundary"
-        ],
-        "decision": "Use the new canonical theme to support the existing governed proprietary-data requirement.",
-        "rationale": "Federated execution, confidential computing, tenant isolation, sovereignty, and explicit training-use controls are technical expressions of the same controlled data boundary. Creating another requirement would duplicate the already calibrated obligation.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 10,
-          "links_added": 0,
-          "finding": "Six independent sources establish a corroborated technical category, but repeatable production comparisons and verified provider guarantees remain thin. The corresponding startup requirement therefore remains experimental."
-        },
-        "status": "revisit-required"
-      },
-      "review_action": "review-existing-requirement"
-    },
-    {
       "id": "theme:robotics-embodied-ai",
       "origin": "cross-source-theme",
       "title": "Robotics & embodied AI",
@@ -837,109 +853,6 @@
       "queue_rank": 5
     },
     {
-      "id": "theme:agent-harnesses",
-      "origin": "cross-source-theme",
-      "title": "Agent harnesses",
-      "description": "Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.",
-      "source_analysis": "themes/agent-harnesses",
-      "theme_ids": [
-        "agent-harnesses"
-      ],
-      "evidence_ids": [
-        "alphasignal:52e919324888ba1b8e0f",
-        "hn:49850553",
-        "hn:49847249",
-        "alphasignal:1206dbc2b8c74248e62f",
-        "hn:49821438",
-        "aws-machine-learning-blog:29c650c1b20939ddf6d9",
-        "aws-machine-learning-blog:16b9772b96509775d2ea",
-        "hn:49785562",
-        "hf-paper:2609.24972",
-        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
-        "alphasignal:trend:agent-orchestration-and-autonomy",
-        "bluesky:1278ebf77949:3mvxrv6krzs22",
-        "bluesky:e810fac7fd93:3mvxajmx5cz2n",
-        "arxiv:2609.21944v1",
-        "arxiv:2609.21859v1",
-        "arxiv:2609.21843v1",
-        "hf-paper:2609.21465",
-        "simon-willison:0c114974aa55eb9d7222",
-        "arxiv:2609.20620v1",
-        "aws-machine-learning-blog:5d4f323bd0d514800a8a"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "falling",
-      "metrics": {
-        "evidence_count": 82,
-        "source_count": 18,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "event-paper",
-          "event-session",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 1,
-        "technical_record_count": 41,
-        "family_count": 15,
-        "trend_score": 65.9
-      },
-      "linked_requirements": [
-        {
-          "id": "modular-agent-operating-stack",
-          "title": "Modular agent operating stack",
-          "maturity": "emerging"
-        }
-      ],
-      "linked_requirement": {
-        "id": "modular-agent-operating-stack",
-        "title": "Modular agent operating stack",
-        "maturity": "emerging"
-      },
-      "priority": {
-        "momentum": 3,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 4,
-        "operating_relevance": 10,
-        "total": 62
-      },
-      "change_reasons": [
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
-      "adjudication": {
-        "candidate_id": "theme:agent-harnesses",
-        "reviewed_at": "2026-09-25",
-        "outcome": "covered-by-existing-requirement",
-        "requirement_ids": [
-          "modular-agent-operating-stack"
-        ],
-        "decision": "Do not create a duplicate requirement.",
-        "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 67,
-          "links_added": 4,
-          "finding": "Sixteen sources now support the orchestration layer, while the generic-agent cluster was deliberately left unresolved. The industrial comparison favoring a simpler single-agent baseline remains material counterevidence, so the modular-stack requirement stays emerging and conditional."
-        },
-        "status": "revisit-required"
-      },
-      "review_action": "review-existing-requirement",
-      "queue_rank": 2,
-      "pending_from_previous_review": true
-    },
-    {
       "id": "expert-finding:evaluation-as-system-design",
       "origin": "expert-finding",
       "title": "Evaluation is moving from a final benchmark into the system-design loop",
@@ -1006,6 +919,163 @@
         "status": "current"
       },
       "review_action": "source-analysis-covered-by-existing-requirement"
+    },
+    {
+      "id": "theme:small-specialized-models",
+      "origin": "cross-source-theme",
+      "title": "Small & specialized models",
+      "description": "Compact or task-specific models optimized for cost, latency, privacy, or a narrow operational decision.",
+      "source_analysis": "themes/small-specialized-models",
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "evidence_ids": [
+        "alphasignal:cb35346305c271fcbbe3",
+        "alphasignal:56888202a458559aabe4",
+        "bluesky:c2ef00c3e14c:3mwgdtghpo22j",
+        "hn:49853175",
+        "hn:49852920",
+        "hn:49851853",
+        "hn:49848269",
+        "hn:49846953",
+        "hn:49845172",
+        "hn:49823332",
+        "hn:49821438",
+        "github:1384094559",
+        "simon-willison:0d7b498b4e4acf535362",
+        "hn:49800574",
+        "hn:49799641",
+        "github:1380762959",
+        "hn:49795109",
+        "bluesky:b3614927c6a2:3mw2tsop42c2u",
+        "simon-willison:b3e5263fa8976c3c350c",
+        "latent-space:7409d5ffee8a2c05841b"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "falling",
+      "metrics": {
+        "evidence_count": 100,
+        "source_count": 14,
+        "source_types": [
+          "community",
+          "curated-newsletter",
+          "event-paper",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 3,
+        "technical_record_count": 40,
+        "family_count": 12,
+        "trend_score": 71.8
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 3,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 12,
+        "operating_relevance": 0,
+        "total": 60
+      },
+      "change_reasons": [
+        "Evidence increased by 2",
+        "2 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 10
+    },
+    {
+      "id": "theme:proprietary-data-boundary",
+      "origin": "cross-source-theme",
+      "title": "Governed proprietary-data boundaries",
+      "description": "Architectures that keep proprietary, regulated, or customer-confidential data inside controlled systems while exposing only permitted context or computation to models.",
+      "source_analysis": "themes/proprietary-data-boundary",
+      "theme_ids": [
+        "proprietary-data-boundary"
+      ],
+      "evidence_ids": [
+        "hn:49827375",
+        "nvidia-developer-blog:414469594f15a132e944",
+        "arxiv:2609.21829v1",
+        "arxiv:2609.21728v1",
+        "arxiv:2609.20650v1",
+        "aws-machine-learning-blog:5a658dac9f90bae77e02",
+        "arxiv:2609.20532v1",
+        "arxiv:2609.20501v1",
+        "nvidia-developer-blog:c6cbeb9f9f96e88e05d7",
+        "anthropic-news-research:f4efc55098543f59e5e3",
+        "greylock-essays:16bf0805df87e8f7760d",
+        "hf-paper:2508.04660",
+        "github:144863525"
+      ],
+      "stage": "corroborated",
+      "movement": "falling",
+      "metrics": {
+        "evidence_count": 13,
+        "source_count": 8,
+        "source_types": [
+          "community",
+          "first-party-lab",
+          "investor-essay",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 0,
+        "technical_record_count": 10,
+        "family_count": 6,
+        "trend_score": 57.6
+      },
+      "linked_requirements": [
+        {
+          "id": "governed-proprietary-data-boundary",
+          "title": "Governed proprietary data boundary",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "governed-proprietary-data-boundary",
+        "title": "Governed proprietary data boundary",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 3,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 0,
+        "operating_relevance": 10,
+        "total": 58
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": {
+        "candidate_id": "theme:proprietary-data-boundary",
+        "reviewed_at": "2026-09-25",
+        "outcome": "covered-by-existing-requirement",
+        "requirement_ids": [
+          "governed-proprietary-data-boundary"
+        ],
+        "decision": "Use the new canonical theme to support the existing governed proprietary-data requirement.",
+        "rationale": "Federated execution, confidential computing, tenant isolation, sovereignty, and explicit training-use controls are technical expressions of the same controlled data boundary. Creating another requirement would duplicate the already calibrated obligation.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 10,
+          "links_added": 0,
+          "finding": "Six independent sources establish a corroborated technical category, but repeatable production comparisons and verified provider guarantees remain thin. The corresponding startup requirement therefore remains experimental."
+        },
+        "status": "revisit-required"
+      },
+      "review_action": "review-existing-requirement"
     },
     {
       "id": "early:enterprise-data-boundary",
@@ -1357,75 +1427,6 @@
         "technical_record_count": 46,
         "family_count": 11,
         "trend_score": 66.4
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 3,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 4,
-        "operating_relevance": 0,
-        "total": 52
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
-    {
-      "id": "theme:small-specialized-models",
-      "origin": "cross-source-theme",
-      "title": "Small & specialized models",
-      "description": "Compact or task-specific models optimized for cost, latency, privacy, or a narrow operational decision.",
-      "source_analysis": "themes/small-specialized-models",
-      "theme_ids": [
-        "small-specialized-models"
-      ],
-      "evidence_ids": [
-        "bluesky:c2ef00c3e14c:3mwgdtghpo22j",
-        "hn:49853175",
-        "hn:49852920",
-        "hn:49851853",
-        "hn:49848269",
-        "hn:49846953",
-        "hn:49845172",
-        "hn:49823332",
-        "hn:49821438",
-        "github:1384094559",
-        "simon-willison:0d7b498b4e4acf535362",
-        "hn:49800574",
-        "hn:49799641",
-        "github:1380762959",
-        "hn:49795109",
-        "bluesky:b3614927c6a2:3mw2tsop42c2u",
-        "simon-willison:b3e5263fa8976c3c350c",
-        "latent-space:7409d5ffee8a2c05841b",
-        "hn:49791429",
-        "hn:49790936"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "falling",
-      "metrics": {
-        "evidence_count": 98,
-        "source_count": 14,
-        "source_types": [
-          "community",
-          "curated-newsletter",
-          "event-paper",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 1,
-        "technical_record_count": 40,
-        "family_count": 11,
-        "trend_score": 71.6
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -2751,7 +2752,7 @@
       "source_analysis": "themes/training-self-improvement",
       "stage": "broadly-corroborated",
       "metrics": {
-        "evidence_count": 239,
+        "evidence_count": 237,
         "source_count": 30,
         "source_types": [
           "community",
@@ -2775,7 +2776,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 136,
         "family_count": 17,
-        "trend_score": 99.8
+        "trend_score": 99.6
       },
       "linked_requirements": [
         {
@@ -2806,7 +2807,7 @@
       "source_analysis": "themes/voice-audio",
       "stage": "corroborated",
       "metrics": {
-        "evidence_count": 31,
+        "evidence_count": 30,
         "source_count": 14,
         "source_types": [
           "community",
@@ -2826,7 +2827,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.2
+        "trend_score": 68.7
       },
       "linked_requirements": [
         {
@@ -2853,6 +2854,59 @@
         "records_screened": 23,
         "links_added": 0,
         "finding": "Full-duplex models, self-hosted stacks, multilingual systems, and practitioner tooling show strong capability breadth. The corpus does not establish that voice is a default operating layer, and impersonation risk plus domain-specific recognition failures make it unsuitable as a universal requirement."
+      },
+      "status": "revisit-required"
+    },
+    {
+      "candidate_id": "theme:agent-harnesses",
+      "title": "Agent harnesses",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/agent-harnesses",
+      "stage": "corroborated-source-concentrated",
+      "metrics": {
+        "evidence_count": 81,
+        "source_count": 18,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "event-paper",
+          "event-session",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 0,
+        "technical_record_count": 41,
+        "family_count": 15,
+        "trend_score": 65.8
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "reviewed_at": "2026-09-25",
+      "outcome": "covered-by-existing-requirement",
+      "requirement_ids": [
+        "modular-agent-operating-stack"
+      ],
+      "decision": "Do not create a duplicate requirement.",
+      "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 67,
+        "links_added": 4,
+        "finding": "Sixteen sources now support the orchestration layer, while the generic-agent cluster was deliberately left unresolved. The industrial comparison favoring a simpler single-agent baseline remains material counterevidence, so the modular-stack requirement stays emerging and conditional."
       },
       "status": "revisit-required"
     },
@@ -2907,50 +2961,6 @@
       "status": "revisit-required"
     },
     {
-      "candidate_id": "theme:proprietary-data-boundary",
-      "title": "Governed proprietary-data boundaries",
-      "origin": "cross-source-theme",
-      "source_analysis": "themes/proprietary-data-boundary",
-      "stage": "corroborated",
-      "metrics": {
-        "evidence_count": 13,
-        "source_count": 8,
-        "source_types": [
-          "community",
-          "first-party-lab",
-          "investor-essay",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 0,
-        "technical_record_count": 10,
-        "family_count": 6,
-        "trend_score": 57.6
-      },
-      "linked_requirements": [
-        {
-          "id": "governed-proprietary-data-boundary",
-          "title": "Governed proprietary data boundary",
-          "maturity": "experimental"
-        }
-      ],
-      "reviewed_at": "2026-09-25",
-      "outcome": "covered-by-existing-requirement",
-      "requirement_ids": [
-        "governed-proprietary-data-boundary"
-      ],
-      "decision": "Use the new canonical theme to support the existing governed proprietary-data requirement.",
-      "rationale": "Federated execution, confidential computing, tenant isolation, sovereignty, and explicit training-use controls are technical expressions of the same controlled data boundary. Creating another requirement would duplicate the already calibrated obligation.",
-      "evidence_review": {
-        "status": "complete",
-        "records_screened": 10,
-        "links_added": 0,
-        "finding": "Six independent sources establish a corroborated technical category, but repeatable production comparisons and verified provider guarantees remain thin. The corresponding startup requirement therefore remains experimental."
-      },
-      "status": "revisit-required"
-    },
-    {
       "candidate_id": "theme:robotics-embodied-ai",
       "title": "Robotics & embodied AI",
       "origin": "cross-source-theme",
@@ -2999,59 +3009,6 @@
       "status": "revisit-required"
     },
     {
-      "candidate_id": "theme:agent-harnesses",
-      "title": "Agent harnesses",
-      "origin": "cross-source-theme",
-      "source_analysis": "themes/agent-harnesses",
-      "stage": "corroborated-source-concentrated",
-      "metrics": {
-        "evidence_count": 82,
-        "source_count": 18,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "event-paper",
-          "event-session",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 1,
-        "technical_record_count": 41,
-        "family_count": 15,
-        "trend_score": 65.9
-      },
-      "linked_requirements": [
-        {
-          "id": "modular-agent-operating-stack",
-          "title": "Modular agent operating stack",
-          "maturity": "emerging"
-        }
-      ],
-      "reviewed_at": "2026-09-25",
-      "outcome": "covered-by-existing-requirement",
-      "requirement_ids": [
-        "modular-agent-operating-stack"
-      ],
-      "decision": "Do not create a duplicate requirement.",
-      "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
-      "evidence_review": {
-        "status": "complete",
-        "records_screened": 67,
-        "links_added": 4,
-        "finding": "Sixteen sources now support the orchestration layer, while the generic-agent cluster was deliberately left unresolved. The industrial comparison favoring a simpler single-agent baseline remains material counterevidence, so the modular-stack requirement stays emerging and conditional."
-      },
-      "status": "revisit-required"
-    },
-    {
       "candidate_id": "expert-finding:evaluation-as-system-design",
       "title": "Evaluation is moving from a final benchmark into the system-design loop",
       "origin": "expert-finding",
@@ -3087,6 +3044,50 @@
         "finding": "Five experts provide independent narrative breadth, but social observations do not verify deployment or effectiveness. The finding is retained as directional context; technical support comes from the calibrated benchmark, authorization, abstention, and regression-testing records linked to the existing requirement."
       },
       "status": "current"
+    },
+    {
+      "candidate_id": "theme:proprietary-data-boundary",
+      "title": "Governed proprietary-data boundaries",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/proprietary-data-boundary",
+      "stage": "corroborated",
+      "metrics": {
+        "evidence_count": 13,
+        "source_count": 8,
+        "source_types": [
+          "community",
+          "first-party-lab",
+          "investor-essay",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 0,
+        "technical_record_count": 10,
+        "family_count": 6,
+        "trend_score": 57.6
+      },
+      "linked_requirements": [
+        {
+          "id": "governed-proprietary-data-boundary",
+          "title": "Governed proprietary data boundary",
+          "maturity": "experimental"
+        }
+      ],
+      "reviewed_at": "2026-09-25",
+      "outcome": "covered-by-existing-requirement",
+      "requirement_ids": [
+        "governed-proprietary-data-boundary"
+      ],
+      "decision": "Use the new canonical theme to support the existing governed proprietary-data requirement.",
+      "rationale": "Federated execution, confidential computing, tenant isolation, sovereignty, and explicit training-use controls are technical expressions of the same controlled data boundary. Creating another requirement would duplicate the already calibrated obligation.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 10,
+        "links_added": 0,
+        "finding": "Six independent sources establish a corroborated technical category, but repeatable production comparisons and verified provider guarantees remain thin. The corresponding startup requirement therefore remains experimental."
+      },
+      "status": "revisit-required"
     },
     {
       "candidate_id": "early:enterprise-data-boundary",
@@ -3454,7 +3455,6 @@
         "agent-harnesses"
       ],
       "evidence_ids": [
-        "alphasignal:52e919324888ba1b8e0f",
         "hn:49850553",
         "hn:49847249",
         "alphasignal:1206dbc2b8c74248e62f",
@@ -3473,12 +3473,13 @@
         "hf-paper:2609.21465",
         "simon-willison:0c114974aa55eb9d7222",
         "arxiv:2609.20620v1",
-        "aws-machine-learning-blog:5d4f323bd0d514800a8a"
+        "aws-machine-learning-blog:5d4f323bd0d514800a8a",
+        "arxiv:2609.20519v1"
       ],
       "stage": "corroborated-source-concentrated",
-      "movement": "falling",
+      "movement": "steady",
       "metrics": {
-        "evidence_count": 82,
+        "evidence_count": 81,
         "source_count": 18,
         "source_types": [
           "community",
@@ -3497,10 +3498,10 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 1,
+        "recent_evidence_count": 0,
         "technical_record_count": 41,
         "family_count": 15,
-        "trend_score": 65.9
+        "trend_score": 65.8
       },
       "linked_requirements": [
         {
@@ -3515,17 +3516,15 @@
         "maturity": "emerging"
       },
       "priority": {
-        "momentum": 3,
+        "momentum": 8,
         "source_breadth": 25,
         "technical_support": 20,
-        "new_evidence": 4,
+        "new_evidence": 0,
         "operating_relevance": 10,
-        "total": 62
+        "total": 63
       },
-      "change_reasons": [
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:agent-harnesses",
         "reviewed_at": "2026-09-25",
@@ -3544,8 +3543,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 2,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 2
     },
     {
       "id": "theme:frontier-inference-infrastructure",
@@ -3863,8 +3862,6 @@
         "alphasignal:b85c889a9b6e76025d46",
         "alphasignal:395eb5f88099f4c5b7d2",
         "hn:49842596",
-        "alphasignal:878cd0da4350818f61b9",
-        "alphasignal:5e4d06e1b5148246bf48",
         "alphasignal:28e88f0768d976bbfccb",
         "bluesky:1278ebf77949:3mw7n5pr7222t",
         "github:1384094559",
@@ -3875,12 +3872,14 @@
         "alphasignal:ed11042f47b8f05c3ace",
         "hn:49800574",
         "huggingface-blog:e9f63aa1f7aaa02f4024",
-        "hn:49791343"
+        "hn:49791343",
+        "hn:49788178",
+        "hn:49787069"
       ],
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 239,
+        "evidence_count": 237,
         "source_count": 30,
         "source_types": [
           "community",
@@ -3904,7 +3903,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 136,
         "family_count": 17,
-        "trend_score": 99.8
+        "trend_score": 99.6
       },
       "linked_requirements": [
         {
@@ -3926,10 +3925,8 @@
         "operating_relevance": 10,
         "total": 66
       },
-      "change_reasons": [
-        "Evidence increased by 2"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:training-self-improvement",
         "reviewed_at": "2026-09-25",
@@ -3948,8 +3945,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 6,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 6
     },
     {
       "id": "theme:coding-agents",
@@ -4072,7 +4069,6 @@
         "aws-machine-learning-blog:aaca847ab96b8bddf45b",
         "bluesky:b3614927c6a2:3mw7magyrwc2i",
         "simon-willison:e47986333e4f67663922",
-        "alphasignal:1ef7cf038f88524bc9b8",
         "hn:49789320",
         "alphasignal:trend:voice-and-audio-interfaces",
         "arxiv:2609.21967v1",
@@ -4086,12 +4082,13 @@
         "alphasignal:project:voicestudio",
         "deepmind-blog:ac6eb9276806c2f8127d",
         "the-batch:ab4caab4fe2b8644e7ea",
-        "huggingface-blog:e3ddd7a65cd3a566e91c"
+        "huggingface-blog:e3ddd7a65cd3a566e91c",
+        "huggingface-blog:5890b1cfd4cc38aa3885"
       ],
       "stage": "corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 31,
+        "evidence_count": 30,
         "source_count": 14,
         "source_types": [
           "community",
@@ -4111,7 +4108,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.2
+        "trend_score": 68.7
       },
       "linked_requirements": [
         {
@@ -4207,6 +4204,80 @@
       "review_action": "assess-new-requirement",
       "pending_from_previous_review": true,
       "queue_rank": 9
+    },
+    {
+      "id": "theme:small-specialized-models",
+      "origin": "cross-source-theme",
+      "title": "Small & specialized models",
+      "description": "Compact or task-specific models optimized for cost, latency, privacy, or a narrow operational decision.",
+      "source_analysis": "themes/small-specialized-models",
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "evidence_ids": [
+        "alphasignal:cb35346305c271fcbbe3",
+        "alphasignal:56888202a458559aabe4",
+        "bluesky:c2ef00c3e14c:3mwgdtghpo22j",
+        "hn:49853175",
+        "hn:49852920",
+        "hn:49851853",
+        "hn:49848269",
+        "hn:49846953",
+        "hn:49845172",
+        "hn:49823332",
+        "hn:49821438",
+        "github:1384094559",
+        "simon-willison:0d7b498b4e4acf535362",
+        "hn:49800574",
+        "hn:49799641",
+        "github:1380762959",
+        "hn:49795109",
+        "bluesky:b3614927c6a2:3mw2tsop42c2u",
+        "simon-willison:b3e5263fa8976c3c350c",
+        "latent-space:7409d5ffee8a2c05841b"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "falling",
+      "metrics": {
+        "evidence_count": 100,
+        "source_count": 14,
+        "source_types": [
+          "community",
+          "curated-newsletter",
+          "event-paper",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 3,
+        "technical_record_count": 40,
+        "family_count": 12,
+        "trend_score": 71.8
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 3,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 12,
+        "operating_relevance": 0,
+        "total": 60
+      },
+      "change_reasons": [
+        "Evidence increased by 2",
+        "2 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": null,
+      "review_action": "assess-new-requirement",
+      "queue_rank": 10
     }
   ],
   "requirement_changes": [

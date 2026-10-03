@@ -1,0 +1,23 @@
+{
+  "collected_at": "2026-10-03T05:09:54.686903+00:00",
+  "items": 96,
+  "added": 13,
+  "errors": [],
+  "collectors": [
+    {
+      "source_id": "alphasignal",
+      "status": "healthy",
+      "items": 86
+    },
+    {
+      "source_id": "agent-news",
+      "status": "healthy",
+      "items": 6
+    },
+    {
+      "source_id": "frontier-signal",
+      "status": "healthy",
+      "items": 4
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-10-03T05:01:49.828896+00:00",
+    "generated_at": "2026-10-03T05:09:54.867372+00:00",
     "status": "success",
-    "normalized_evidence_count": 2281,
-    "public_record_count": 2246,
+    "normalized_evidence_count": 2294,
+    "public_record_count": 2259,
     "active_source_count": 45,
     "observed_source_count": 45,
     "theme_count": 21,
@@ -14,11 +14,11 @@
     "queued_project_count": 25,
     "discovered_project_count": 276,
     "classification_coverage": 0.443,
-    "raw_classification_coverage": 0.364,
+    "raw_classification_coverage": 0.361,
     "recent_source_count": 34,
     "collection_health": {
       "status": "degraded",
-      "latest_receipt_at": "2026-10-03T01:55:26.642034+00:00",
+      "latest_receipt_at": "2026-10-03T05:09:54.686903+00:00",
       "latest_failed_receipt_at": "2026-09-26T11:28:59.571686+00:00",
       "failed_source_count": 5,
       "failed_source_ids": [
@@ -29,6 +29,30 @@
         "the-batch"
       ],
       "runs": [
+        {
+          "id": "newsletters",
+          "collected_at": "2026-10-03T05:09:54.686903+00:00",
+          "status": "healthy",
+          "source_count": 3,
+          "failed_source_count": 0,
+          "failed_source_ids": []
+        },
+        {
+          "id": "bluesky",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "status": "healthy",
+          "source_count": 10,
+          "failed_source_count": 0,
+          "failed_source_ids": []
+        },
+        {
+          "id": "verification",
+          "collected_at": "2026-10-03T05:09:50.449494+00:00",
+          "status": "healthy",
+          "source_count": 2,
+          "failed_source_count": 0,
+          "failed_source_ids": []
+        },
         {
           "id": "events",
           "collected_at": "2026-10-03T01:55:26.642034+00:00",
@@ -216,9 +240,9 @@
         },
         "yc-companies": {
           "status": "healthy",
-          "collected_at": "2026-09-26T11:28:59.571686+00:00",
+          "collected_at": "2026-10-03T05:09:50.449494+00:00",
           "items": 50,
-          "run_id": "public-collection"
+          "run_id": "verification"
         },
         "yc-essays": {
           "status": "healthy",
@@ -228,9 +252,9 @@
         },
         "yc-jobs": {
           "status": "healthy",
-          "collected_at": "2026-09-26T11:28:59.571686+00:00",
-          "items": 13,
-          "run_id": "public-collection"
+          "collected_at": "2026-10-03T05:09:50.449494+00:00",
+          "items": 12,
+          "run_id": "verification"
         },
         "ai-engineer-worlds-fair-2026-program": {
           "status": "healthy",
@@ -251,82 +275,82 @@
           "run_id": "events"
         },
         "bluesky-simon-willison": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
-        },
-        "bluesky-swyx": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 26,
+          "run_id": "bluesky"
         },
         "bluesky-karpathy": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 1,
+          "run_id": "bluesky"
+        },
+        "bluesky-swyx": {
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 4,
+          "run_id": "bluesky"
         },
         "bluesky-nathan-lambert": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 41,
+          "run_id": "bluesky"
         },
         "bluesky-mark-riedl": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 20,
+          "run_id": "bluesky"
         },
         "bluesky-ethan-mollick": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 41,
+          "run_id": "bluesky"
         },
         "bluesky-arvind-narayanan": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 4,
+          "run_id": "bluesky"
         },
         "bluesky-melanie-mitchell": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 27,
+          "run_id": "bluesky"
         },
         "bluesky-margaret-mitchell": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 13,
+          "run_id": "bluesky"
         },
         "bluesky-emily-bender": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:51.868420+00:00",
+          "items": 7,
+          "run_id": "bluesky"
         },
         "alphasignal": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:54.686903+00:00",
+          "items": 86,
+          "run_id": "newsletters"
         },
         "agent-news": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:54.686903+00:00",
+          "items": 6,
+          "run_id": "newsletters"
         },
         "frontier-signal": {
-          "status": "no-run-receipt",
-          "collected_at": null,
-          "items": 0,
-          "run_id": null
+          "status": "healthy",
+          "collected_at": "2026-10-03T05:09:54.686903+00:00",
+          "items": 4,
+          "run_id": "newsletters"
         },
         "linkedin-event-links": {
           "status": "no-run-receipt",
@@ -401,30 +425,30 @@
         "radical-ventures",
         "chip-huyen",
         "menlo-ventures",
+        "agent-news",
+        "frontier-signal",
         "bluesky-arvind-narayanan",
         "bluesky-swyx",
-        "frontier-signal",
-        "bluesky-karpathy",
-        "agent-news"
+        "bluesky-karpathy"
       ],
-      "evidence_count": 2281,
-      "updated_at": "2026-10-03T05:01:49.828896+00:00"
+      "evidence_count": 2294,
+      "updated_at": "2026-10-03T05:09:54.867372+00:00"
     },
     {
       "id": "alphasignal-corpus",
       "title": "AlphaSignal corpus",
       "question": "What capabilities, projects, and stack shifts recurred across the private newsletter archive?",
-      "summary": "Reviewed analysis of 130 emails and 899 unique catalog records; supplemented by 84 sanitized records collected after the deep review.",
+      "summary": "Reviewed analysis of 130 emails and 899 unique catalog records; supplemented by 87 sanitized records collected after the deep review.",
       "status": "active",
       "source_ids": [
         "alphasignal"
       ],
-      "evidence_count": 119,
+      "evidence_count": 122,
       "underlying_records": 899,
       "updated_at": "2026-10-02T15:13:42.000Z",
       "live_update": {
-        "record_count": 84,
-        "classified_record_count": 22,
+        "record_count": 87,
+        "classified_record_count": 20,
         "first_observed_at": "2026-09-22T15:32:33.000Z",
         "last_observed_at": "2026-10-02T15:13:42.000Z",
         "leading_themes": [
@@ -434,23 +458,18 @@
             "evidence_count": 6
           },
           {
-            "theme_id": "training-self-improvement",
-            "name": "Training, evaluation & self-improvement",
-            "evidence_count": 6
-          },
-          {
             "theme_id": "open-local-inference",
             "name": "Open, local & efficient inference",
             "evidence_count": 4
           },
           {
-            "theme_id": "voice-audio",
-            "name": "Voice & audio interfaces",
-            "evidence_count": 3
+            "theme_id": "training-self-improvement",
+            "name": "Training, evaluation & self-improvement",
+            "evidence_count": 4
           },
           {
-            "theme_id": "agent-harnesses",
-            "name": "Agent harnesses",
+            "theme_id": "voice-audio",
+            "name": "Voice & audio interfaces",
             "evidence_count": 2
           },
           {
@@ -459,9 +478,19 @@
             "evidence_count": 2
           },
           {
+            "theme_id": "small-specialized-models",
+            "name": "Small & specialized models",
+            "evidence_count": 2
+          },
+          {
             "theme_id": "multimodal-3d",
             "name": "Multimodal generation & 3D",
             "evidence_count": 2
+          },
+          {
+            "theme_id": "agent-harnesses",
+            "name": "Agent harnesses",
+            "evidence_count": 1
           }
         ],
         "recent_evidence_ids": [
@@ -530,8 +559,8 @@
         "yc-essays",
         "yc-jobs"
       ],
-      "evidence_count": 2246,
-      "updated_at": "2026-10-03T05:01:49.828896+00:00"
+      "evidence_count": 2259,
+      "updated_at": "2026-10-03T05:09:54.867372+00:00"
     },
     {
       "id": "early-signal-tracker",
@@ -1633,7 +1662,7 @@
           "fading": "Historical or trailing-window support exists, but no supporting evidence appeared in the latest 30 days."
         }
       },
-      "updated_at": "2026-10-03T05:01:49.828896+00:00"
+      "updated_at": "2026-10-03T05:09:54.867372+00:00"
     },
     {
       "id": "event-pulse",
@@ -2263,7 +2292,7 @@
         "persistence": "Each completed event is revisited after 30 and 90 days. Absence of later evidence is reported as not observed, never silently treated as confirmation.",
         "copyright": "Store titles, short descriptions, public URLs, dates, authors, and analyst observations. Do not store full social posts, transcripts, or copied article bodies."
       },
-      "updated_at": "2026-10-03T05:01:49.828896+00:00"
+      "updated_at": "2026-10-03T05:09:54.867372+00:00"
     },
     {
       "id": "expert-pulse",
@@ -2585,7 +2614,7 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-10-03T05:01:49.828896+00:00"
+      "updated_at": "2026-10-03T05:09:54.867372+00:00"
     },
     {
       "id": "operator-narratives",
@@ -2603,7 +2632,7 @@
         "yc-essays"
       ],
       "evidence_count": 39,
-      "corpus_count": 97,
+      "corpus_count": 107,
       "classified_source_count": 5,
       "evidence_ids": [
         "greylock-essays:b2f832aeaa3a7520dce3",
@@ -2914,7 +2943,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-10-03T05:01:49.828896+00:00"
+      "updated_at": "2026-10-03T05:09:54.867372+00:00"
     },
     {
       "id": "project-opportunities",
@@ -2937,7 +2966,7 @@
     "as_of": "2026-10-03",
     "window_start": "2026-09-26",
     "previous_window_start": "2026-09-19",
-    "new_public_records": 133,
+    "new_public_records": 146,
     "movements": [
       {
         "theme_id": "skills-integrations",
@@ -2964,27 +2993,27 @@
         "direction": "falling"
       },
       {
+        "theme_id": "small-specialized-models",
+        "name": "Small & specialized models",
+        "recent": 3,
+        "prior": 54,
+        "delta": -51,
+        "direction": "falling"
+      },
+      {
         "theme_id": "voice-audio",
         "name": "Voice & audio interfaces",
         "recent": 2,
-        "prior": 5,
-        "delta": -3,
+        "prior": 4,
+        "delta": -2,
         "direction": "falling"
       },
       {
         "theme_id": "training-self-improvement",
         "name": "Training, evaluation & self-improvement",
         "recent": 2,
-        "prior": 27,
-        "delta": -25,
-        "direction": "falling"
-      },
-      {
-        "theme_id": "agent-harnesses",
-        "name": "Agent harnesses",
-        "recent": 1,
-        "prior": 10,
-        "delta": -9,
+        "prior": 25,
+        "delta": -23,
         "direction": "falling"
       },
       {
@@ -2993,14 +3022,6 @@
         "recent": 1,
         "prior": 10,
         "delta": -9,
-        "direction": "falling"
-      },
-      {
-        "theme_id": "small-specialized-models",
-        "name": "Small & specialized models",
-        "recent": 1,
-        "prior": 54,
-        "delta": -53,
         "direction": "falling"
       },
       {
@@ -3017,6 +3038,14 @@
         "recent": 0,
         "prior": 1,
         "delta": -1,
+        "direction": "falling"
+      },
+      {
+        "theme_id": "proprietary-data-boundary",
+        "name": "Governed proprietary-data boundaries",
+        "recent": 0,
+        "prior": 2,
+        "delta": -2,
         "direction": "falling"
       }
     ],
@@ -3045,8 +3074,8 @@
       ],
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
-      "evidence_count": 239,
-      "support_units": 387,
+      "evidence_count": 237,
+      "support_units": 385,
       "source_count": 30,
       "source_breakdown": [
         {
@@ -3055,8 +3084,8 @@
           "source_ids": [
             "alphasignal"
           ],
-          "observations": 8,
-          "support_units": 156
+          "observations": 6,
+          "support_units": 154
         },
         {
           "source_id": "arxiv",
@@ -3327,17 +3356,17 @@
         "2026-06": 33,
         "2026-07": 21,
         "2026-08": 48,
-        "2026-09": 162,
+        "2026-09": 160,
         "2026-10": 2
       },
       "source_concentration": 0.4,
       "maturity": "broadly-corroborated",
       "score": {
         "recurrence": 25.0,
-        "acceleration": 24.8,
+        "acceleration": 24.6,
         "persistence": 25.0,
         "breadth": 25,
-        "total": 99.8
+        "total": 99.6
       },
       "evidence_ids": [
         "bluesky:e810fac7fd93:3mwvue7ger524",
@@ -3347,8 +3376,6 @@
         "alphasignal:b85c889a9b6e76025d46",
         "alphasignal:395eb5f88099f4c5b7d2",
         "hn:49842596",
-        "alphasignal:878cd0da4350818f61b9",
-        "alphasignal:5e4d06e1b5148246bf48",
         "alphasignal:28e88f0768d976bbfccb",
         "bluesky:1278ebf77949:3mw7n5pr7222t",
         "github:1384094559",
@@ -4453,8 +4480,8 @@
         "task-specific model"
       ],
       "primary_layer": "models-capabilities",
-      "evidence_count": 98,
-      "support_units": 370,
+      "evidence_count": 100,
+      "support_units": 372,
       "source_count": 14,
       "source_breakdown": [
         {
@@ -4463,8 +4490,8 @@
           "source_ids": [
             "alphasignal"
           ],
-          "observations": 3,
-          "support_units": 275
+          "observations": 5,
+          "support_units": 277
         },
         {
           "source_id": "hacker-news",
@@ -4590,19 +4617,21 @@
         "2026-06": 41,
         "2026-07": 64,
         "2026-08": 45,
-        "2026-09": 116,
+        "2026-09": 118,
         "2026-10": 0
       },
       "source_concentration": 0.74,
       "maturity": "broadly-corroborated",
       "score": {
         "recurrence": 12.4,
-        "acceleration": 13.4,
+        "acceleration": 13.6,
         "persistence": 20.8,
         "breadth": 25,
-        "total": 71.6
+        "total": 71.8
       },
       "evidence_ids": [
+        "alphasignal:cb35346305c271fcbbe3",
+        "alphasignal:56888202a458559aabe4",
         "bluesky:c2ef00c3e14c:3mwgdtghpo22j",
         "hn:49853175",
         "hn:49852920",
@@ -5116,202 +5145,6 @@
       ]
     },
     {
-      "id": "voice-audio",
-      "name": "Voice & audio interfaces",
-      "definition": "Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.",
-      "aliases": [
-        "voice agent",
-        "speech model",
-        "text to speech",
-        "voice cloning",
-        "audio generation"
-      ],
-      "primary_layer": "models-capabilities",
-      "secondary_layer": "tools-skills-integrations",
-      "evidence_count": 31,
-      "support_units": 76,
-      "source_count": 14,
-      "source_breakdown": [
-        {
-          "source_id": "alphasignal",
-          "publisher_id": "alphasignal",
-          "source_ids": [
-            "alphasignal"
-          ],
-          "observations": 6,
-          "support_units": 51
-        },
-        {
-          "source_id": "github",
-          "publisher_id": "github",
-          "source_ids": [
-            "github"
-          ],
-          "observations": 5,
-          "support_units": 5
-        },
-        {
-          "source_id": "arxiv",
-          "publisher_id": "arxiv",
-          "source_ids": [
-            "arxiv"
-          ],
-          "observations": 3,
-          "support_units": 3
-        },
-        {
-          "source_id": "simon-willison",
-          "publisher_id": "simon-willison",
-          "source_ids": [
-            "bluesky-simon-willison",
-            "simon-willison"
-          ],
-          "observations": 3,
-          "support_units": 3
-        },
-        {
-          "source_id": "ai-engineer-worlds-fair-2026-program",
-          "publisher_id": "ai-engineer",
-          "source_ids": [
-            "ai-engineer-worlds-fair-2026-program"
-          ],
-          "observations": 2,
-          "support_units": 2
-        },
-        {
-          "source_id": "greylock-essays",
-          "publisher_id": "greylock-essays",
-          "source_ids": [
-            "greylock-essays"
-          ],
-          "observations": 2,
-          "support_units": 2
-        },
-        {
-          "source_id": "huggingface-blog",
-          "publisher_id": "huggingface",
-          "source_ids": [
-            "huggingface-blog"
-          ],
-          "observations": 2,
-          "support_units": 2
-        },
-        {
-          "source_id": "yc-companies",
-          "publisher_id": "y-combinator",
-          "source_ids": [
-            "yc-companies"
-          ],
-          "observations": 2,
-          "support_units": 2
-        },
-        {
-          "source_id": "aws-machine-learning-blog",
-          "publisher_id": "aws",
-          "source_ids": [
-            "aws-machine-learning-blog"
-          ],
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "chip-huyen",
-          "publisher_id": "chip-huyen",
-          "source_ids": [
-            "chip-huyen"
-          ],
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "the-batch",
-          "publisher_id": "deeplearning-ai",
-          "source_ids": [
-            "the-batch"
-          ],
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "deepmind-blog",
-          "publisher_id": "google-deepmind",
-          "source_ids": [
-            "deepmind-blog"
-          ],
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "hacker-news",
-          "publisher_id": "hacker-news",
-          "source_ids": [
-            "hacker-news"
-          ],
-          "observations": 1,
-          "support_units": 1
-        },
-        {
-          "source_id": "huggingface-papers",
-          "publisher_id": "huggingface-papers",
-          "source_ids": [
-            "huggingface-papers"
-          ],
-          "observations": 1,
-          "support_units": 1
-        }
-      ],
-      "monthly_counts": {
-        "2026-05": 6,
-        "2026-06": 6,
-        "2026-07": 13,
-        "2026-08": 14,
-        "2026-09": 23,
-        "2026-10": 1
-      },
-      "source_concentration": 0.67,
-      "maturity": "corroborated",
-      "score": {
-        "recurrence": 8.3,
-        "acceleration": 10.9,
-        "persistence": 25.0,
-        "breadth": 25,
-        "total": 69.2
-      },
-      "evidence_ids": [
-        "alphasignal:d306d2f76014781ed456",
-        "alphasignal:77402edfcac44cf96c33",
-        "aws-machine-learning-blog:aaca847ab96b8bddf45b",
-        "bluesky:b3614927c6a2:3mw7magyrwc2i",
-        "simon-willison:e47986333e4f67663922",
-        "alphasignal:1ef7cf038f88524bc9b8",
-        "hn:49789320",
-        "alphasignal:trend:voice-and-audio-interfaces",
-        "arxiv:2609.21967v1",
-        "arxiv:2609.21683v1",
-        "hf-paper:2609.21465",
-        "arxiv:2609.20504v1",
-        "simon-willison:219c439494be37cebb69",
-        "github:1367455741",
-        "github:1363640102",
-        "github:1361693766",
-        "alphasignal:project:voicestudio",
-        "deepmind-blog:ac6eb9276806c2f8127d",
-        "the-batch:ab4caab4fe2b8644e7ea",
-        "huggingface-blog:e3ddd7a65cd3a566e91c",
-        "huggingface-blog:5890b1cfd4cc38aa3885",
-        "ai-engineer-worlds-fair-2026-program:f54335c63c7adf8de4c2",
-        "ai-engineer-worlds-fair-2026-program:e5cc38c08fa9af67e8af",
-        "alphasignal:project:dograh",
-        "github:1057664813",
-        "greylock-essays:7ae3d96ba71e4e63c7f2",
-        "greylock-essays:b5d0a493521b25d69daf",
-        "chip-huyen:17001c4976bcaeda4a08",
-        "github:541269386",
-        "yc-company:36777",
-        "yc-company:35265"
-      ]
-    },
-    {
       "id": "open-local-inference",
       "name": "Open, local & efficient inference",
       "definition": "Open-weight, quantized, on-device, and efficiency-focused approaches that reduce dependence on hosted frontier APIs.",
@@ -5618,6 +5451,201 @@
         "github:201991558",
         "github:143328315",
         "yc-company:34597"
+      ]
+    },
+    {
+      "id": "voice-audio",
+      "name": "Voice & audio interfaces",
+      "definition": "Speech recognition, synthesis, cloning, audio generation, and real-time voice systems used as human or agent interfaces.",
+      "aliases": [
+        "voice agent",
+        "speech model",
+        "text to speech",
+        "voice cloning",
+        "audio generation"
+      ],
+      "primary_layer": "models-capabilities",
+      "secondary_layer": "tools-skills-integrations",
+      "evidence_count": 30,
+      "support_units": 75,
+      "source_count": 14,
+      "source_breakdown": [
+        {
+          "source_id": "alphasignal",
+          "publisher_id": "alphasignal",
+          "source_ids": [
+            "alphasignal"
+          ],
+          "observations": 5,
+          "support_units": 50
+        },
+        {
+          "source_id": "github",
+          "publisher_id": "github",
+          "source_ids": [
+            "github"
+          ],
+          "observations": 5,
+          "support_units": 5
+        },
+        {
+          "source_id": "arxiv",
+          "publisher_id": "arxiv",
+          "source_ids": [
+            "arxiv"
+          ],
+          "observations": 3,
+          "support_units": 3
+        },
+        {
+          "source_id": "simon-willison",
+          "publisher_id": "simon-willison",
+          "source_ids": [
+            "bluesky-simon-willison",
+            "simon-willison"
+          ],
+          "observations": 3,
+          "support_units": 3
+        },
+        {
+          "source_id": "ai-engineer-worlds-fair-2026-program",
+          "publisher_id": "ai-engineer",
+          "source_ids": [
+            "ai-engineer-worlds-fair-2026-program"
+          ],
+          "observations": 2,
+          "support_units": 2
+        },
+        {
+          "source_id": "greylock-essays",
+          "publisher_id": "greylock-essays",
+          "source_ids": [
+            "greylock-essays"
+          ],
+          "observations": 2,
+          "support_units": 2
+        },
+        {
+          "source_id": "huggingface-blog",
+          "publisher_id": "huggingface",
+          "source_ids": [
+            "huggingface-blog"
+          ],
+          "observations": 2,
+          "support_units": 2
+        },
+        {
+          "source_id": "yc-companies",
+          "publisher_id": "y-combinator",
+          "source_ids": [
+            "yc-companies"
+          ],
+          "observations": 2,
+          "support_units": 2
+        },
+        {
+          "source_id": "aws-machine-learning-blog",
+          "publisher_id": "aws",
+          "source_ids": [
+            "aws-machine-learning-blog"
+          ],
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "chip-huyen",
+          "publisher_id": "chip-huyen",
+          "source_ids": [
+            "chip-huyen"
+          ],
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "the-batch",
+          "publisher_id": "deeplearning-ai",
+          "source_ids": [
+            "the-batch"
+          ],
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "deepmind-blog",
+          "publisher_id": "google-deepmind",
+          "source_ids": [
+            "deepmind-blog"
+          ],
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "hacker-news",
+          "publisher_id": "hacker-news",
+          "source_ids": [
+            "hacker-news"
+          ],
+          "observations": 1,
+          "support_units": 1
+        },
+        {
+          "source_id": "huggingface-papers",
+          "publisher_id": "huggingface-papers",
+          "source_ids": [
+            "huggingface-papers"
+          ],
+          "observations": 1,
+          "support_units": 1
+        }
+      ],
+      "monthly_counts": {
+        "2026-05": 6,
+        "2026-06": 6,
+        "2026-07": 13,
+        "2026-08": 14,
+        "2026-09": 22,
+        "2026-10": 1
+      },
+      "source_concentration": 0.67,
+      "maturity": "corroborated",
+      "score": {
+        "recurrence": 8.3,
+        "acceleration": 10.4,
+        "persistence": 25.0,
+        "breadth": 25,
+        "total": 68.7
+      },
+      "evidence_ids": [
+        "alphasignal:d306d2f76014781ed456",
+        "alphasignal:77402edfcac44cf96c33",
+        "aws-machine-learning-blog:aaca847ab96b8bddf45b",
+        "bluesky:b3614927c6a2:3mw7magyrwc2i",
+        "simon-willison:e47986333e4f67663922",
+        "hn:49789320",
+        "alphasignal:trend:voice-and-audio-interfaces",
+        "arxiv:2609.21967v1",
+        "arxiv:2609.21683v1",
+        "hf-paper:2609.21465",
+        "arxiv:2609.20504v1",
+        "simon-willison:219c439494be37cebb69",
+        "github:1367455741",
+        "github:1363640102",
+        "github:1361693766",
+        "alphasignal:project:voicestudio",
+        "deepmind-blog:ac6eb9276806c2f8127d",
+        "the-batch:ab4caab4fe2b8644e7ea",
+        "huggingface-blog:e3ddd7a65cd3a566e91c",
+        "huggingface-blog:5890b1cfd4cc38aa3885",
+        "ai-engineer-worlds-fair-2026-program:f54335c63c7adf8de4c2",
+        "ai-engineer-worlds-fair-2026-program:e5cc38c08fa9af67e8af",
+        "alphasignal:project:dograh",
+        "github:1057664813",
+        "greylock-essays:7ae3d96ba71e4e63c7f2",
+        "greylock-essays:b5d0a493521b25d69daf",
+        "chip-huyen:17001c4976bcaeda4a08",
+        "github:541269386",
+        "yc-company:36777",
+        "yc-company:35265"
       ]
     },
     {
@@ -6474,8 +6502,8 @@
         "system prompt"
       ],
       "primary_layer": "harness-orchestration",
-      "evidence_count": 82,
-      "support_units": 321,
+      "evidence_count": 81,
+      "support_units": 320,
       "source_count": 18,
       "source_breakdown": [
         {
@@ -6484,8 +6512,8 @@
           "source_ids": [
             "alphasignal"
           ],
-          "observations": 6,
-          "support_units": 245
+          "observations": 5,
+          "support_units": 244
         },
         {
           "source_id": "github",
@@ -6647,20 +6675,19 @@
         "2026-06": 47,
         "2026-07": 50,
         "2026-08": 65,
-        "2026-09": 73,
+        "2026-09": 72,
         "2026-10": 0
       },
       "source_concentration": 0.76,
       "maturity": "corroborated-source-concentrated",
       "score": {
-        "recurrence": 14.0,
-        "acceleration": 6.1,
+        "recurrence": 14.1,
+        "acceleration": 5.9,
         "persistence": 20.8,
         "breadth": 25,
-        "total": 65.9
+        "total": 65.8
       },
       "evidence_ids": [
-        "alphasignal:52e919324888ba1b8e0f",
         "hn:49850553",
         "hn:49847249",
         "alphasignal:1206dbc2b8c74248e62f",
@@ -17607,7 +17634,7 @@
         "secondary_layer": "assurance",
         "maturity": "broadly-corroborated",
         "source_count": 30,
-        "evidence_count": 239,
+        "evidence_count": 237,
         "project_count": 33,
         "reviewed_project_count": 4,
         "queued_project_count": 4,
@@ -17630,7 +17657,7 @@
         "secondary_layer": null,
         "maturity": "corroborated-source-concentrated",
         "source_count": 18,
-        "evidence_count": 82,
+        "evidence_count": 81,
         "project_count": 27,
         "reviewed_project_count": 4,
         "queued_project_count": 3,
@@ -17699,7 +17726,7 @@
         "secondary_layer": null,
         "maturity": "broadly-corroborated",
         "source_count": 14,
-        "evidence_count": 98,
+        "evidence_count": 100,
         "project_count": 26,
         "reviewed_project_count": 3,
         "queued_project_count": 10,
@@ -17745,7 +17772,7 @@
         "secondary_layer": "tools-skills-integrations",
         "maturity": "corroborated",
         "source_count": 14,
-        "evidence_count": 31,
+        "evidence_count": 30,
         "project_count": 7,
         "reviewed_project_count": 3,
         "queued_project_count": 0,
@@ -17892,16 +17919,16 @@
     ],
     "quality": {
       "classification_coverage": 0.443,
-      "raw_classification_coverage": 0.364,
-      "classified_public_records": 818,
-      "unclassified_public_records": 1029,
-      "classification_review_records": 1029,
-      "out_of_scope_public_records": 399,
-      "scope_eligible_public_records": 1847,
+      "raw_classification_coverage": 0.361,
+      "classified_public_records": 816,
+      "unclassified_public_records": 1024,
+      "classification_review_records": 1024,
+      "out_of_scope_public_records": 419,
+      "scope_eligible_public_records": 1840,
       "disposition_counts": {
-        "classification-review": 1029,
-        "classified": 818,
-        "out-of-scope": 399
+        "classification-review": 1024,
+        "classified": 816,
+        "out-of-scope": 419
       },
       "recent_sources": 34,
       "aging_sources": 2,
@@ -18177,19 +18204,20 @@
       },
       "next_step": "Monitor the remaining review pool for genuinely new multi-source architectures. Re-run this ranked audit only when a cluster gains independent-source breadth or precise vocabulary; do not reduce the backlog merely to improve a percentage.",
       "limitation": "The first-pass cluster counts partition the September 25 backlog after precise theme matches take precedence. The second-pass ranked clusters overlap and use representative inspection; neither snapshot claims that every record was manually read.",
-      "current_newly_classified_records": 264,
-      "current_classified_records": 818,
-      "current_unclassified_records": 1029,
-      "current_classification_review_records": 1029,
-      "current_out_of_scope_records": 399,
-      "current_scope_eligible_records": 1847,
+      "current_newly_classified_records": 262,
+      "current_classified_records": 816,
+      "current_unclassified_records": 1024,
+      "current_classification_review_records": 1024,
+      "current_out_of_scope_records": 419,
+      "current_scope_eligible_records": 1840,
       "current_classification_coverage": 0.443,
-      "current_raw_classification_coverage": 0.364,
+      "current_raw_classification_coverage": 0.361,
       "current_out_of_scope_reason_counts": {
         "community-no-ai-system-signal": 329,
         "investor-fund-housekeeping": 1,
         "operator-personnel-housekeeping": 7,
         "publisher-housekeeping": 5,
+        "sponsored-newsletter-placement": 20,
         "verification-only-no-theme": 57
       }
     },
@@ -18259,6 +18287,64 @@
       "verification": {}
     },
     {
+      "id": "agent-news:f3fd460f7533312741d6",
+      "source_id": "agent-news",
+      "publisher_id": "agentmail",
+      "source_type": "operator-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Haakam wrote the full thread on X. If this is useful, share it with someone building agents. Read and repost on X →",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly94LmNvbS9oYWFrYW1hdWpsYS9zdGF0dXMvMjEwNTcxNjM2MDc1MjA5NTU1OSIsImludGVybmFsIjoiYjhkZDBjMDRlM2RlMDFhNDg4MDkiLCJsaW5rX2lkIjoxODYxN30/33ca18f2ee059693f00f8079c8df75993b1b3eec22d778a56c8ad5d465e474ff",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-10": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "agent-news:f105d9452611449e72d2",
+      "source_id": "agent-news",
+      "publisher_id": "agentmail",
+      "source_type": "operator-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Read the full thread on X →",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly94LmNvbS9oYWFrYW1hdWpsYS9zdGF0dXMvMjEwNTcxNjM2MDc1MjA5NTU1OSIsImludGVybmFsIjoiYjhkZDBjMDRlM2RlMDFhNDg4MDkiLCJsaW5rX2lkIjoxODYxN30/33ca18f2ee059693f00f8079c8df75993b1b3eec22d778a56c8ad5d465e474ff",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-10": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
       "id": "agent-news:d49975ed87838c437339",
       "source_id": "agent-news",
       "publisher_id": "agentmail",
@@ -18268,6 +18354,122 @@
       "summary": "Newsletter issue metadata; no raw mailbox content is published.",
       "sponsor_status": "unknown",
       "url": "https://www.agentmail.to/",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-10": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "agent-news:68e34b9e7b34ba05116d",
+      "source_id": "agent-news",
+      "publisher_id": "agentmail",
+      "source_type": "operator-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Get started free",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly9jb25zb2xlLmFnZW50bWFpbC50by9zaWduLXVwP3V0bV9zb3VyY2U9YWdlbnRtYWlsX25ld3NsZXR0ZXJcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPWFnZW50X25ld3NfMDMxIiwiaW50ZXJuYWwiOiJiOGRkMGMwNGUzZGUwMWE0ODgwOSIsImxpbmtfaWQiOjE4NjE0fQ/0d642722429b24b4915ffcbd8a13edcfc22692f28f1067d7b234849c65421e41",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-10": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "agent-news:600c2c07bf9ad803c75b",
+      "source_id": "agent-news",
+      "publisher_id": "agentmail",
+      "source_type": "operator-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Register now →",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly9sdW1hLmNvbS9idWlsZGUtbWtlZD91dG1fc291cmNlPWFnZW50bWFpbF9uZXdzbGV0dGVyXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj1hZ2VudF9uZXdzXzAzMSIsImludGVybmFsIjoiYjhkZDBjMDRlM2RlMDFhNDg4MDkiLCJsaW5rX2lkIjoxODYxOH0/c9a394865b1b5ee55f40f6d2e15f53bb1307079fb2632de5d8f41700a949adc7",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-10": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "agent-news:46e1e0e7a0f3aff3a867",
+      "source_id": "agent-news",
+      "publisher_id": "agentmail",
+      "source_type": "operator-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Check out Skydive →",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly93d3cuc2t5ZGl2ZS5jb20vP3V0bV9zb3VyY2U9YWdlbnRtYWlsX25ld3NsZXR0ZXJcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPWFnZW50X25ld3NfMDMxIiwiaW50ZXJuYWwiOiJiOGRkMGMwNGUzZGUwMWE0ODgwOSIsImxpbmtfaWQiOjE4NjIwfQ/1111b7f2fe8bd7b530f542c44e2274df376300fc68e21cfba44937bcf4938d36",
+      "published_at": "2026-10-02T22:03:33.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-10": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "agent-news:3ffc5dea9593bd8404e0",
+      "source_id": "agent-news",
+      "publisher_id": "agentmail",
+      "source_type": "operator-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Read the blog →",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6ImRnUzQzUXdEQUtTSUNhT0lDUUdnX3FUZ29uQzRPY3dIUzlOWWpOZz0iLCJocmVmIjoiaHR0cHM6Ly93d3cuYWdlbnRtYWlsLnRvL2Jsb2cvd2hhdC1pcy1hbi1hZ2VudC1pZD91dG1fc291cmNlPWFnZW50bWFpbF9uZXdzbGV0dGVyXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj1hZ2VudF9uZXdzXzAzMSIsImludGVybmFsIjoiYjhkZDBjMDRlM2RlMDFhNDg4MDkiLCJsaW5rX2lkIjoxODYxNn0/2275526c4d6c39b5daf20571ed8d2eb664779d27fc3d6d354106c44c7301fc45",
       "published_at": "2026-10-02T22:03:33.000Z",
       "observed_at": "",
       "authors": [],
@@ -18393,16 +18595,16 @@
       "evidence_kind": "public-source-item",
       "title": "Google DeepMind builds a scoring system to measure AI consciousness without solving it first",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
       "published_at": "2026-10-02T15:13:42.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -18572,16 +18774,16 @@
       "evidence_kind": "public-source-item",
       "title": "Mercor: Mercor Research team post-trains Qwen3.5-397B-A17B using expert data to raise Pass@1 by 11.2 points on APEX-Agents",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/2b46af0fa283cac5",
       "published_at": "2026-10-02T15:13:42.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -18918,16 +19120,16 @@
       "evidence_kind": "public-source-item",
       "title": "New method lets LLMs manage their own context, beating human-designed strategies by 47.6%",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
       "published_at": "2026-10-01T15:42:07.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -19005,16 +19207,16 @@
       "evidence_kind": "public-source-item",
       "title": "Multiverse Computing: Multiverse Computing releases Quasar 438B, the top-scoring European model on Artificial Analysis",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/5e6bb95e325df69d",
       "published_at": "2026-10-01T15:42:07.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -19176,6 +19378,35 @@
       "verification": {}
     },
     {
+      "id": "frontier-signal:cf56296f80e6ce0c51d0",
+      "source_id": "frontier-signal",
+      "publisher_id": "m1c",
+      "source_type": "investor-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Update your profile",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://preferences.kit-mail3.com/qdu4p8v6g0i7h43x4g2hlh8n4od5gc4hkzr9x",
+      "published_at": "2026-10-01T13:35:44.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-10": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
       "id": "frontier-signal:5cb8e611dd411b20af6f",
       "source_id": "frontier-signal",
       "publisher_id": "m1c",
@@ -19185,6 +19416,35 @@
       "summary": "Newsletter issue metadata; no raw mailbox content is published.",
       "sponsor_status": "unknown",
       "url": "https://frontier.m1c.vc/",
+      "published_at": "2026-10-01T13:35:44.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-10": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "frontier-signal:2a1e71a65ba2bd34e059",
+      "source_id": "frontier-signal",
+      "publisher_id": "m1c",
+      "source_type": "investor-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Join the Frontier Membership",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://b2c40845.click.kit-mail3.com/qdu4p8v6g0i7h43x4g2hlh8n4od5gc4hkzr9x/7qh7h8h9x38l0lszh6/aHR0cHM6Ly9mcm9udGllcm1lbWJlcnNoaXAuY2lyY2xlLnNvL2NoZWNrb3V0L2Zyb250aWVyLW1lbWJlcnNoaXA=",
       "published_at": "2026-10-01T13:35:44.000Z",
       "observed_at": "",
       "authors": [],
@@ -19552,16 +19812,16 @@
       "evidence_kind": "public-source-item",
       "title": "DigitalOcean & NVIDIA: Open Intelligence Summit, SF, Oct 13, with Nous Research, LanceDB. Apply via our partner link",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
       "published_at": "2026-09-30T15:35:17.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -19668,16 +19928,16 @@
       "evidence_kind": "public-source-item",
       "title": "RedAmon ships open-source framework that runs full cyberattacks and auto-patches your code",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/a6b1cdbf68ca1c19",
       "published_at": "2026-09-30T15:35:17.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -20131,16 +20391,16 @@
       "evidence_kind": "public-source-item",
       "title": "CodeAF is a new open-source coding harness",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/9910f36a35dac710",
       "published_at": "2026-09-29T15:55:20.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -20160,16 +20420,16 @@
       "evidence_kind": "public-source-item",
       "title": "DataTalks Club offers a free 4-month hands-on ML engineering course",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/9910f36a35dac710",
       "published_at": "2026-09-29T15:55:20.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -20189,21 +20449,17 @@
       "evidence_kind": "public-source-item",
       "title": "Google Cloud: See how Google Cloud accelerates AI agents with NVIDIA RTX PRO GPUs and watch a live multi-agent drug discovery demo",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/9910f36a35dac710",
       "published_at": "2026-09-29T15:55:20.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
-      "theme_ids": [
-        "agent-harnesses"
-      ],
-      "disposition": "classified",
-      "disposition_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match",
-      "stack_layers": [
-        "harness-orchestration"
-      ],
+      "theme_ids": [],
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -20434,6 +20690,64 @@
       "verification": {}
     },
     {
+      "id": "frontier-signal:3e1cebe834491c9e06a0",
+      "source_id": "frontier-signal",
+      "publisher_id": "m1c",
+      "source_type": "investor-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Join the Frontier Membership",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://b2c40845.click.kit-mail3.com/v8ue2367mdtmuxn4ee8fghvzr4x38h9h0n72m/vqh3hrhoq463drtghl/aHR0cHM6Ly9mcm9udGllcm1lbWJlcnNoaXAuY2lyY2xlLnNvL2NoZWNrb3V0L2Zyb250aWVyLW1lbWJlcnNoaXA=",
+      "published_at": "2026-09-28T22:45:30.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "frontier-signal:182e819d9b4d8ecc9b66",
+      "source_id": "frontier-signal",
+      "publisher_id": "m1c",
+      "source_type": "investor-newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "See if you qualify",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://b2c40845.click.kit-mail3.com/v8ue2367mdtmuxn4ee8fghvzr4x38h9h0n72m/l2hehmhld4pvz9b6h0/aHR0cHM6Ly9mb3JtLnR5cGVmb3JtLmNvbS90by9HUUI1cEt5dg==",
+      "published_at": "2026-09-28T22:45:30.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
       "id": "bluesky:2a5707251144:3mwmdipgntk2z",
       "source_id": "bluesky-melanie-mitchell",
       "publisher_id": "melanie-mitchell",
@@ -20594,16 +20908,16 @@
       "evidence_kind": "public-source-item",
       "title": "Voices: DNSMOS scores don't mean your speech data is model-ready. See Voices' CTO's 4-step calibration framework",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/d39b96dcb21e2a50",
       "published_at": "2026-09-28T14:56:46.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -20720,16 +21034,16 @@
       "evidence_kind": "public-source-item",
       "title": "Open-source Wi-Fi auditing tool runs on any OS with zero extra installs",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/d39b96dcb21e2a50",
       "published_at": "2026-09-28T14:56:46.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -20922,6 +21236,39 @@
       "verification": {}
     },
     {
+      "id": "alphasignal:cb35346305c271fcbbe3",
+      "source_id": "alphasignal",
+      "publisher_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Contrastive Language Models",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://app.alphasignal.ai/c?lid=zxjZV825yy1VfIOP&mid=f5dfdffd-c7ca-407d-a45d-dbc35710e109",
+      "published_at": "2026-09-27T17:11:39.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "disposition_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
+      "stack_layers": [
+        "models-capabilities"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
       "id": "alphasignal:b334cf2a8fb36dfa32e9",
       "source_id": "alphasignal",
       "publisher_id": "alphasignal",
@@ -20944,6 +21291,68 @@
       "stack_layers": [
         "tools-skills-integrations",
         "harness-orchestration"
+      ],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:8a0f602616769e037ef4",
+      "source_id": "alphasignal",
+      "publisher_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "Try Ory Today ↗",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://app.alphasignal.ai/c?lid=1qbiLcWgJVcVcygHs&mid=f5dfdffd-c7ca-407d-a45d-dbc35710e109",
+      "published_at": "2026-09-27T17:11:39.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [],
+      "disposition": "classification-review",
+      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
+      "classification_rule_id": "unresolved-review",
+      "stack_layers": [],
+      "support_count": 1,
+      "monthly_counts": {
+        "2026-09": 1
+      },
+      "provenance": {
+        "mode": "direct-public-metadata",
+        "description": "Normalized from the linked public source."
+      },
+      "verification": {}
+    },
+    {
+      "id": "alphasignal:56888202a458559aabe4",
+      "source_id": "alphasignal",
+      "publisher_id": "alphasignal",
+      "source_type": "newsletter",
+      "evidence_kind": "public-source-item",
+      "title": "System One Model",
+      "summary": "Newsletter-curated public link; the underlying claim has not been independently verified.",
+      "sponsor_status": "unknown",
+      "url": "https://app.alphasignal.ai/c?lid=12NigLUcssjA0SB6U&mid=f5dfdffd-c7ca-407d-a45d-dbc35710e109",
+      "published_at": "2026-09-27T17:11:39.000Z",
+      "observed_at": "",
+      "authors": [],
+      "projects": [],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "disposition": "classified",
+      "disposition_reason": "Matched reviewed canonical-theme vocabulary.",
+      "classification_rule_id": "canonical-theme-match",
+      "stack_layers": [
+        "models-capabilities"
       ],
       "support_count": 1,
       "monthly_counts": {
@@ -23759,16 +24168,16 @@
       "evidence_kind": "public-source-item",
       "title": "Open-source stock monitor uses a 9-agent AI team to analyze your portfolio",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/e53c1b581ec9b101",
       "published_at": "2026-09-25T15:51:15.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -23880,16 +24289,16 @@
       "evidence_kind": "public-source-item",
       "title": "Sentry: How to tell whether your agent's bad answer came from the prompt or the tool. Live Oct 7. Save your spot",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/e53c1b581ec9b101",
       "published_at": "2026-09-25T15:51:15.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -25624,22 +26033,17 @@
       "evidence_kind": "public-source-item",
       "title": "New attribution method tops interpretability benchmark by 2.9x, pinpoints Llama refusals to 1% of weights",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
       "published_at": "2026-09-24T15:24:05.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "disposition": "classified",
-      "disposition_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match",
-      "stack_layers": [
-        "models-capabilities",
-        "assurance"
-      ],
+      "theme_ids": [],
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -25658,22 +26062,17 @@
       "evidence_kind": "public-source-item",
       "title": "pre.dev: AI labs: turn thousands of never-public production codebases into frontier coding RL Tasks for post-training",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
       "published_at": "2026-09-24T15:24:05.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "disposition": "classified",
-      "disposition_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match",
-      "stack_layers": [
-        "models-capabilities",
-        "assurance"
-      ],
+      "theme_ids": [],
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -25726,16 +26125,16 @@
       "evidence_kind": "public-source-item",
       "title": "The AI Threat Readiness Playbook",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/328b8c3f25ea2a39",
       "published_at": "2026-09-24T15:24:05.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -27289,16 +27688,16 @@
       "evidence_kind": "public-source-item",
       "title": "Stanford team trains agent groups to self-organize and hit 66.7% where solo agents scored 48.8%",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
       "published_at": "2026-09-23T15:43:41.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -27497,22 +27896,17 @@
       "evidence_kind": "public-source-item",
       "title": "Nyra, 1.4k stars: CrisperWhisper 2.0: an open speech-to-text model that transcribes every um, stutter, and vocal sound with precise timestamps",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/3b0069ed2fa97e1b",
       "published_at": "2026-09-23T15:43:41.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
-      "theme_ids": [
-        "voice-audio"
-      ],
-      "disposition": "classified",
-      "disposition_reason": "Matched reviewed canonical-theme vocabulary.",
-      "classification_rule_id": "canonical-theme-match",
-      "stack_layers": [
-        "models-capabilities",
-        "tools-skills-integrations"
-      ],
+      "theme_ids": [],
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
+      "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
         "2026-09": 1
@@ -29047,16 +29441,16 @@
       "evidence_kind": "public-source-item",
       "title": "Prior Labs: Your strongest baseline deserves a challenger. Run TabPFN-3.5 against the model you trust & compare using your own data",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
       "published_at": "2026-09-22T15:32:33.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -29076,16 +29470,16 @@
       "evidence_kind": "public-source-item",
       "title": "Talking AI agents beat solo agents 4-to-1 on hard reasoning tasks",
       "summary": "Newsletter-curated item; the underlying claim has not been independently verified.",
-      "sponsor_status": "unknown",
+      "sponsor_status": "sponsored",
       "url": "https://alphasignal.ai/email/3652621d1eb3a9f5",
       "published_at": "2026-09-22T15:32:33.000Z",
       "observed_at": "",
       "authors": [],
       "projects": [],
       "theme_ids": [],
-      "disposition": "classification-review",
-      "disposition_reason": "No canonical theme matched and no reviewed exclusion rule applies.",
-      "classification_rule_id": "unresolved-review",
+      "disposition": "out-of-scope",
+      "disposition_reason": "Disclosed sponsored newsletter placement is retained for provenance but excluded from thematic support so paid distribution cannot raise a trend score.",
+      "classification_rule_id": "sponsored-newsletter-placement",
       "stack_layers": [],
       "support_count": 1,
       "monthly_counts": {
@@ -98268,14 +98662,14 @@
       "commercial_bias": "disclosed-and-mixed",
       "homepage_url": "https://alphasignal.ai/",
       "logo_url": "https://alphasignal.ai/images/logo_alpha_signal_icon.svg",
-      "normalized_evidence_count": 119,
+      "normalized_evidence_count": 122,
       "status": "active",
       "last_observed_at": "2026-10-02T15:13:42+00:00",
       "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:54.686903+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "newsletters"
     },
     {
       "id": "huggingface-papers",
@@ -98309,9 +98703,9 @@
       "last_observed_at": "2026-10-03T00:00:00+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-09-26T11:28:59.571686+00:00",
+      "last_collection_at": "2026-10-03T05:09:50.449494+00:00",
       "last_collection_error": null,
-      "collection_run_id": "public-collection"
+      "collection_run_id": "verification"
     },
     {
       "id": "bluesky-ethan-mollick",
@@ -98327,10 +98721,10 @@
       "status": "active",
       "last_observed_at": "2026-10-03T00:19:51.157000+00:00",
       "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "bluesky-nathan-lambert",
@@ -98346,10 +98740,10 @@
       "status": "active",
       "last_observed_at": "2026-10-02T17:08:20.979000+00:00",
       "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "simon-willison",
@@ -98384,10 +98778,10 @@
       "status": "active",
       "last_observed_at": "2026-10-02T21:44:12.688000+00:00",
       "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "openai-news",
@@ -98534,10 +98928,10 @@
       "status": "active",
       "last_observed_at": "2026-10-02T14:27:11.573000+00:00",
       "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "anthropic-news-research",
@@ -98722,10 +99116,10 @@
       "status": "active",
       "last_observed_at": "2026-09-28T22:12:41.183000+00:00",
       "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "bluesky-emily-bender",
@@ -98741,10 +99135,10 @@
       "status": "active",
       "last_observed_at": "2026-10-02T22:21:15.432000+00:00",
       "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "cloudflare-ai-blog",
@@ -98837,9 +99231,9 @@
       "last_observed_at": "2026-09-08T00:00:00+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-09-26T11:28:59.571686+00:00",
+      "last_collection_at": "2026-10-03T05:09:50.449494+00:00",
       "last_collection_error": null,
-      "collection_run_id": "public-collection"
+      "collection_run_id": "verification"
     },
     {
       "id": "yc-essays",
@@ -98872,10 +99266,10 @@
       "status": "active",
       "last_observed_at": "2026-09-21T17:30:34.278000+00:00",
       "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "microsoft-research-blog",
@@ -98950,6 +99344,44 @@
       "collection_run_id": "public-collection"
     },
     {
+      "id": "agent-news",
+      "name": "agentNews by AgentMail",
+      "channel": "operator-newsletter",
+      "source_quality": "medium",
+      "commercial_bias": "first-party",
+      "publisher_id": "agentmail",
+      "evidence_role": "operator-interpretation",
+      "homepage_url": "https://www.agentmail.to/",
+      "logo_url": "https://www.agentmail.to/favicon.ico",
+      "normalized_evidence_count": 7,
+      "status": "active",
+      "last_observed_at": "2026-10-02T22:03:33+00:00",
+      "freshness": "recent",
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:54.686903+00:00",
+      "last_collection_error": null,
+      "collection_run_id": "newsletters"
+    },
+    {
+      "id": "frontier-signal",
+      "name": "Frontier // Signal from the edge",
+      "channel": "investor-newsletter",
+      "source_quality": "medium",
+      "commercial_bias": "disclosed",
+      "publisher_id": "m1c",
+      "evidence_role": "investor-thesis",
+      "homepage_url": "https://frontier.m1c.vc/",
+      "logo_url": "https://frontier.m1c.vc/favicon.ico",
+      "normalized_evidence_count": 6,
+      "status": "active",
+      "last_observed_at": "2026-10-01T13:35:44+00:00",
+      "freshness": "recent",
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:54.686903+00:00",
+      "last_collection_error": null,
+      "collection_run_id": "newsletters"
+    },
+    {
       "id": "bluesky-arvind-narayanan",
       "name": "Arvind Narayanan on Bluesky",
       "channel": "expert-social",
@@ -98963,10 +99395,10 @@
       "status": "active",
       "last_observed_at": "2026-07-29T14:25:28.434000+00:00",
       "freshness": "aging",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "bluesky-swyx",
@@ -98982,29 +99414,10 @@
       "status": "active",
       "last_observed_at": "2025-10-13T06:12:22.993000+00:00",
       "freshness": "historical",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
-    },
-    {
-      "id": "frontier-signal",
-      "name": "Frontier // Signal from the edge",
-      "channel": "investor-newsletter",
-      "source_quality": "medium",
-      "commercial_bias": "disclosed",
-      "publisher_id": "m1c",
-      "evidence_role": "investor-thesis",
-      "homepage_url": "https://frontier.m1c.vc/",
-      "logo_url": "https://frontier.m1c.vc/favicon.ico",
-      "normalized_evidence_count": 2,
-      "status": "active",
-      "last_observed_at": "2026-10-01T13:35:44+00:00",
-      "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
-      "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "bluesky-karpathy",
@@ -99020,29 +99433,10 @@
       "status": "active",
       "last_observed_at": "2023-05-27T03:56:08.230000+00:00",
       "freshness": "historical",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
+      "collection_status": "healthy",
+      "last_collection_at": "2026-10-03T05:09:51.868420+00:00",
       "last_collection_error": null,
-      "collection_run_id": null
-    },
-    {
-      "id": "agent-news",
-      "name": "agentNews by AgentMail",
-      "channel": "operator-newsletter",
-      "source_quality": "medium",
-      "commercial_bias": "first-party",
-      "publisher_id": "agentmail",
-      "evidence_role": "operator-interpretation",
-      "homepage_url": "https://www.agentmail.to/",
-      "logo_url": "https://www.agentmail.to/favicon.ico",
-      "normalized_evidence_count": 1,
-      "status": "active",
-      "last_observed_at": "2026-10-02T22:03:33+00:00",
-      "freshness": "recent",
-      "collection_status": "no-run-receipt",
-      "last_collection_at": null,
-      "last_collection_error": null,
-      "collection_run_id": null
+      "collection_run_id": "bluesky"
     },
     {
       "id": "manual-public-evidence",
