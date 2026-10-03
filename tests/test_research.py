@@ -80,6 +80,8 @@ class CrossSourceResearchTests(unittest.TestCase):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}
         self.assertIn("cross-source-landscape", analyses)
         self.assertIn("alphasignal-corpus", analyses)
+        self.assertGreater(analyses["alphasignal-corpus"]["live_update"]["record_count"], 0)
+        self.assertIn("silently recalculate", analyses["alphasignal-corpus"]["live_update"]["boundary"])
         self.assertIn("operator-narratives", analyses)
         self.assertEqual(analyses["operator-narratives"]["status"], "complete")
         self.assertGreaterEqual(len(analyses["operator-narratives"]["source_ids"]), 5)

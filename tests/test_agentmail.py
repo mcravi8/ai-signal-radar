@@ -7,6 +7,7 @@ from pipeline.collectors.agentmail import (
     NewsletterDefinition,
     collect,
     parse_alphasignal,
+    parse_issue,
     read_after,
     write_after,
 )
@@ -89,6 +90,33 @@ class ExactAddressClient:
 
 
 class AgentMailCollectorTests(unittest.TestCase):
+    def test_generic_issue_extracts_public_links_and_removes_tracking(self):
+        definition = NewsletterDefinition(
+            source_id="agent-news",
+            source_type="operator-newsletter",
+            sender_domains=(),
+            sender_addresses=("adi@agentmail.to",),
+            homepage_url="https://www.agentmail.to/",
+            parser="issue",
+        )
+        items = parse_issue(
+            {
+                "timestamp": "2026-09-28T14:00:00Z",
+                "subject": "AgentNews issue 1",
+                "html": """
+                    <a href="https://example.com/agent-auth?utm_source=email&amp;ref=private-user">
+                      The Great Agent Sign-In Problem
+                    </a>
+                    <a href="https://example.com/unsubscribe">Unsubscribe</a>
+                """,
+            },
+            definition,
+        )
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0].title, "The Great Agent Sign-In Problem")
+        self.assertEqual(items[0].url, "https://example.com/agent-auth")
+        self.assertEqual(items[0].metadata["extraction"], "public-link")
+
     def test_alphasignal_parser_extracts_editorial_and_sponsored_items(self):
         items = parse_alphasignal(
             {
@@ -117,7 +145,7 @@ class AgentMailCollectorTests(unittest.TestCase):
             after="2026-09-21T00:00:00Z",
             client=client,
         )
-        self.assertEqual(client.list_call, ("radar@agentmail.to", "2026-09-20T23:55:00.000Z"))
+        self.assertEqual(client.list_call, ("radar@agentmail.to", "2026-08-17T00:00:00.000Z"))
         self.assertEqual(result.messages_seen, 2)
         self.assertEqual(result.messages_matched, 1)
         self.assertEqual(len(result.items), 2)
@@ -132,7 +160,7 @@ class AgentMailCollectorTests(unittest.TestCase):
             after="2026-09-22T15:32:33.000+00:00",
             client=client,
         )
-        self.assertEqual(client.list_call, ("radar@agentmail.to", "2026-09-22T15:27:33.000Z"))
+        self.assertEqual(client.list_call, ("radar@agentmail.to", "2026-08-18T15:32:33.000Z"))
 
     def test_exact_sender_address_does_not_trust_the_shared_domain(self):
         definition = NewsletterDefinition(

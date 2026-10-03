@@ -139,6 +139,8 @@ SOURCE_FAMILIES = {
     "practitioner-blog": ("experts", "Expert interpretation"),
     "operator-essay": ("narratives", "Operator & capital narratives"),
     "investor-essay": ("narratives", "Operator & capital narratives"),
+    "operator-newsletter": ("narratives", "Operator & capital narratives"),
+    "investor-newsletter": ("narratives", "Operator & capital narratives"),
     "community": ("attention", "Market attention"),
     "newsletter": ("attention", "Market attention"),
     "curated-newsletter": ("attention", "Market attention"),
@@ -1052,7 +1054,9 @@ def build_research(
     narrative_source_ids = sorted(
         source["id"]
         for source in sources
-        if source["status"] == "active" and source.get("channel") in {"operator-essay", "investor-essay"}
+        if source["status"] == "active" and source.get("channel") in {
+            "operator-essay", "investor-essay", "operator-newsletter", "investor-newsletter"
+        }
     )
     non_narrative_prefixes = ("welcome", "congratulations", "meet ", "adding ", "demo day")
     narrative_items = [
@@ -1307,6 +1311,28 @@ def build_research(
         "freshness_note": "Freshness is based on the latest dated evidence observed for each source, not a direct collector-uptime check. Recent means 30 days or less; aging means 31–90 days; historical means more than 90 days.",
     }
 
+    alpha_live_items = sorted(
+        (item for item in public_evidence if item["source_id"] == "alphasignal"),
+        key=lambda item: (item.get("published_at", ""), item["id"]),
+        reverse=True,
+    )
+    alpha_live_theme_counts = Counter(
+        theme_id for item in alpha_live_items for theme_id in item.get("theme_ids", [])
+    )
+    alpha_live_themes = [
+        {
+            "theme_id": theme_id,
+            "name": theme_by_id[theme_id]["name"],
+            "evidence_count": count,
+        }
+        for theme_id, count in alpha_live_theme_counts.most_common(8)
+        if theme_id in theme_by_id
+    ]
+    alpha_live_latest = max(
+        (item.get("published_at", "") for item in alpha_live_items),
+        default=alpha["meta"]["analysis_date"],
+    )
+
     analyses = [
         {
             "id": "cross-source-landscape",
@@ -1325,13 +1351,26 @@ def build_research(
             "summary": (
                 f"Reviewed analysis of {alpha['meta']['email_count']} emails and "
                 f"{alpha['meta']['unique_catalog_records']} unique catalog records; "
-                "published as aggregates and project assessments."
+                f"supplemented by {len(alpha_live_items)} sanitized records collected after the deep review."
             ),
-            "status": "complete",
+            "status": "active" if alpha_live_items else "complete",
             "source_ids": ["alphasignal"],
-            "evidence_count": len(alpha_evidence),
+            "evidence_count": len(alpha_evidence) + len(alpha_live_items),
             "underlying_records": alpha["meta"]["unique_catalog_records"],
-            "updated_at": alpha["meta"]["analysis_date"],
+            "updated_at": alpha_live_latest,
+            "live_update": {
+                "record_count": len(alpha_live_items),
+                "classified_record_count": sum(bool(item.get("theme_ids")) for item in alpha_live_items),
+                "first_observed_at": min(
+                    (item.get("published_at", "") for item in alpha_live_items), default=None
+                ),
+                "last_observed_at": max(
+                    (item.get("published_at", "") for item in alpha_live_items), default=None
+                ),
+                "leading_themes": alpha_live_themes,
+                "recent_evidence_ids": [item["id"] for item in alpha_live_items[:8]],
+                "boundary": "The historical findings and scores remain the last deep corpus review. Live records are classified into the shared taxonomy but do not silently recalculate those historical conclusions.",
+            },
         },
         {
             "id": "public-signal-monitor",

@@ -1207,6 +1207,29 @@ function renderAnalysisDetail() {
     }
     trends.append(rows);
     detail.append(findings, trends);
+    if (analysis.live_update) {
+      const live = node("section", "detail-section");
+      live.append(
+        node("h3", "", "Live corpus update"),
+        node("p", "interpretation-note", analysis.live_update.boundary),
+      );
+      const metrics = node("div", "metric-strip signal-metrics");
+      metrics.append(
+        metric("New sanitized records", formatNumber(analysis.live_update.record_count), `${formatNumber(analysis.live_update.classified_record_count)} classified`),
+        metric("First observed", formatDate(analysis.live_update.first_observed_at), "After the historical deep review"),
+        metric("Latest observed", formatDate(analysis.live_update.last_observed_at), "Current live corpus edge"),
+      );
+      const rows = node("div", "compact-rows");
+      for (const theme of analysis.live_update.leading_themes || []) {
+        const row = node("div", "compact-row");
+        const link = node("a", "", theme.name);
+        link.href = `#themes/${theme.theme_id}`;
+        row.append(link, node("span", "tabular", `${formatNumber(theme.evidence_count)} live records`));
+        rows.append(row);
+      }
+      live.append(metrics, node("h4", "", "Leading live themes"), rows);
+      detail.append(live);
+    }
   } else if (analysis.id === "cross-source-landscape") {
     const section = node("section", "detail-section");
     section.append(node("h3", "", "Leading assessments"));

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-10-03T04:45:41.475402+00:00",
+    "generated_at": "2026-10-03T04:49:25.989608+00:00",
     "status": "success",
     "normalized_evidence_count": 2312,
     "public_record_count": 2277,
@@ -394,20 +394,74 @@
         "agent-news"
       ],
       "evidence_count": 2312,
-      "updated_at": "2026-10-03T04:45:41.475402+00:00"
+      "updated_at": "2026-10-03T04:49:25.989608+00:00"
     },
     {
       "id": "alphasignal-corpus",
       "title": "AlphaSignal corpus",
       "question": "What capabilities, projects, and stack shifts recurred across the private newsletter archive?",
-      "summary": "Reviewed analysis of 130 emails and 899 unique catalog records; published as aggregates and project assessments.",
-      "status": "complete",
+      "summary": "Reviewed analysis of 130 emails and 899 unique catalog records; supplemented by 115 sanitized records collected after the deep review.",
+      "status": "active",
       "source_ids": [
         "alphasignal"
       ],
-      "evidence_count": 35,
+      "evidence_count": 150,
       "underlying_records": 899,
-      "updated_at": "2026-09-21"
+      "updated_at": "2026-10-02T15:13:42.000Z",
+      "live_update": {
+        "record_count": 115,
+        "classified_record_count": 26,
+        "first_observed_at": "2026-09-22T15:32:33.000Z",
+        "last_observed_at": "2026-10-02T15:13:42.000Z",
+        "leading_themes": [
+          {
+            "theme_id": "training-self-improvement",
+            "name": "Training, evaluation & self-improvement",
+            "evidence_count": 8
+          },
+          {
+            "theme_id": "coding-agents",
+            "name": "Coding agents & developer tooling",
+            "evidence_count": 7
+          },
+          {
+            "theme_id": "voice-audio",
+            "name": "Voice & audio interfaces",
+            "evidence_count": 4
+          },
+          {
+            "theme_id": "open-local-inference",
+            "name": "Open, local & efficient inference",
+            "evidence_count": 4
+          },
+          {
+            "theme_id": "agent-harnesses",
+            "name": "Agent harnesses",
+            "evidence_count": 3
+          },
+          {
+            "theme_id": "skills-integrations",
+            "name": "Skills, protocols & integrations",
+            "evidence_count": 2
+          },
+          {
+            "theme_id": "multimodal-3d",
+            "name": "Multimodal generation & 3D",
+            "evidence_count": 2
+          }
+        ],
+        "recent_evidence_ids": [
+          "alphasignal:fe105452d15d3534cb19",
+          "alphasignal:f607e55d7dda10ed1319",
+          "alphasignal:e5f407eba983c7b713c2",
+          "alphasignal:ab79224fd79e8ba866f3",
+          "alphasignal:8a7a53ff00c798e7d3b7",
+          "alphasignal:77d4d80a47291c620a44",
+          "alphasignal:697bf3d82ee35e406dc9",
+          "alphasignal:5f5df142c89c6e11b821"
+        ],
+        "boundary": "The historical findings and scores remain the last deep corpus review. Live records are classified into the shared taxonomy but do not silently recalculate those historical conclusions."
+      }
     },
     {
       "id": "public-signal-monitor",
@@ -461,7 +515,7 @@
         "yc-jobs"
       ],
       "evidence_count": 2277,
-      "updated_at": "2026-10-03T04:45:41.475402+00:00"
+      "updated_at": "2026-10-03T04:49:25.989608+00:00"
     },
     {
       "id": "early-signal-tracker",
@@ -1563,7 +1617,7 @@
           "fading": "Historical or trailing-window support exists, but no supporting evidence appeared in the latest 30 days."
         }
       },
-      "updated_at": "2026-10-03T04:45:41.475402+00:00"
+      "updated_at": "2026-10-03T04:49:25.989608+00:00"
     },
     {
       "id": "event-pulse",
@@ -2193,7 +2247,7 @@
         "persistence": "Each completed event is revisited after 30 and 90 days. Absence of later evidence is reported as not observed, never silently treated as confirmation.",
         "copyright": "Store titles, short descriptions, public URLs, dates, authors, and analyst observations. Do not store full social posts, transcripts, or copied article bodies."
       },
-      "updated_at": "2026-10-03T04:45:41.475402+00:00"
+      "updated_at": "2026-10-03T04:49:25.989608+00:00"
     },
     {
       "id": "expert-pulse",
@@ -2515,15 +2569,17 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-10-03T04:45:41.475402+00:00"
+      "updated_at": "2026-10-03T04:49:25.989608+00:00"
     },
     {
       "id": "operator-narratives",
       "title": "Operator and investor narratives",
       "question": "Which categories are being named or framed by startup operators and investors before broad technical corroboration?",
-      "summary": "Official writing from Greylock essays, Menlo Ventures perspectives, Radical Ventures insights, Sequoia essays, Y Combinator essays analyzed against the shared taxonomy and compared with the wider evidence base.",
+      "summary": "Official writing from agentNews by AgentMail, Frontier // Signal from the edge, Greylock essays, Menlo Ventures perspectives, Radical Ventures insights, Sequoia essays, Y Combinator essays analyzed against the shared taxonomy and compared with the wider evidence base.",
       "status": "complete",
       "source_ids": [
+        "agent-news",
+        "frontier-signal",
         "greylock-essays",
         "menlo-ventures",
         "radical-ventures",
@@ -2531,7 +2587,7 @@
         "yc-essays"
       ],
       "evidence_count": 39,
-      "corpus_count": 95,
+      "corpus_count": 97,
       "classified_source_count": 5,
       "evidence_ids": [
         "greylock-essays:b2f832aeaa3a7520dce3",
@@ -2842,7 +2898,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-10-03T04:45:41.475402+00:00"
+      "updated_at": "2026-10-03T04:49:25.989608+00:00"
     },
     {
       "id": "project-opportunities",

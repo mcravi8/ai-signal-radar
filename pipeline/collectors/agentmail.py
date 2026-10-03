@@ -20,12 +20,25 @@ from pipeline.normalize import compact_text
 
 API_ROOT = "https://api.agentmail.to/v0"
 ALPHASIGNAL_ARCHIVE = "https://alphasignal.ai/archive"
+NEWSLETTER_REPLAY_DAYS = 35
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
 IGNORED_LINK_TEXT = re.compile(
     r"^(?:sign\s*up|work with us|follow on|archive|read more|forward|partner with us|"
     r"register|awesome|decent|not great|unsubscribe|get \$|start a trial)",
     re.I,
 )
+GENERIC_IGNORED_LINK_TEXT = re.compile(
+    r"^(?:view (?:this )?(?:email|issue) in (?:your )?browser|manage preferences|"
+    r"email preferences|privacy policy|terms(?: of service)?|unsubscribe|forward|"
+    r"sign\s*up|subscribe|read online|view online|advertise|sponsor)",
+    re.I,
+)
+TRACKING_QUERY_KEYS = {
+    "campaign", "cid", "email", "mc_cid", "mc_eid", "recipient", "ref",
+    "trk", "uid", "user", "utm_campaign", "utm_content", "utm_medium",
+    "utm_source", "utm_term",
+}
+REDIRECT_QUERY_KEYS = ("url", "u", "target", "redirect", "redirect_url")
 SPONSOR_CONTEXT = re.compile(r"\b(?:presented by|in partnership with|partner with us)\b", re.I)
 LEADING_MARKER = re.compile(r"^(?:[▸▶→•]\s*)?(?:\d+[.)]\s*)?")
 
@@ -210,8 +223,38 @@ def _overlap_after(value: str | None) -> str | None:
     if not value:
         return None
     parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    overlapped = (parsed - timedelta(minutes=5)).astimezone(timezone.utc)
+    # Re-fetch a bounded window so parser improvements can enrich recent issues.
+    # Stable item IDs and merge_items keep the replay idempotent.
+    overlapped = (parsed - timedelta(days=NEWSLETTER_REPLAY_DAYS)).astimezone(timezone.utc)
     return overlapped.isoformat(timespec="milliseconds").replace("+00:00", "Z")
+
+
+def _public_link(value: str) -> str | None:
+    parsed = urlparse(value.replace("&amp;", "&"))
+    if parsed.scheme not in {"http", "https"} or not parsed.hostname:
+        return None
+    query = parse_qs(parsed.query)
+    for key in REDIRECT_QUERY_KEYS:
+        target = query.get(key, [""])[0]
+        target_parsed = urlparse(target)
+        if target_parsed.scheme in {"http", "https"} and target_parsed.hostname:
+            parsed = target_parsed
+            query = parse_qs(parsed.query)
+            break
+    clean_query = [
+        (key, item)
+        for key, values in query.items()
+        if key.casefold() not in TRACKING_QUERY_KEYS and not key.casefold().startswith("utm_")
+        for item in values
+    ]
+    return parsed._replace(query=urlencode(clean_query, doseq=True), fragment="").geturl()
+
+
+def _generic_candidate_title(value: str) -> str | None:
+    title = compact_text(LEADING_MARKER.sub("", value)).strip(" -|•")
+    if len(title) < 14 or len(title.split()) < 3 or GENERIC_IGNORED_LINK_TEXT.search(title):
+        return None
+    return title
 
 
 def parse_alphasignal(message: dict[str, Any], definition: NewsletterDefinition) -> list[SourceItem]:
@@ -264,6 +307,34 @@ def parse_issue(message: dict[str, Any], definition: NewsletterDefinition) -> li
     title = compact_text(str(message.get("subject") or "Untitled newsletter issue"))
     published_at = str(message.get("timestamp") or message.get("created_at") or "")
     homepage = definition.homepage_url or (ALPHASIGNAL_ARCHIVE if definition.source_id == "alphasignal" else "")
+    html = str(message.get("extracted_html") or message.get("html") or "")
+    parser = _LinkDocumentParser()
+    parser.feed(html)
+    candidates: dict[str, tuple[str, str]] = {}
+    for token in parser.tokens:
+        if not token.href:
+            continue
+        candidate_title = _generic_candidate_title(token.text)
+        public_url = _public_link(token.href)
+        if not candidate_title or not public_url:
+            continue
+        key = compact_text(candidate_title).casefold()
+        candidates.setdefault(key, (candidate_title, public_url))
+    if candidates:
+        return [
+            SourceItem(
+                id=_stable_item_id(definition.source_id, published_at, candidate_title),
+                source_id=definition.source_id,
+                source_type=definition.source_type,
+                title=candidate_title,
+                url=public_url,
+                published_at=published_at,
+                summary="Newsletter-curated public link; the underlying claim has not been independently verified.",
+                sponsor_status="unknown",
+                metadata={"extraction": "public-link", "issue_title": title},
+            )
+            for candidate_title, public_url in candidates.values()
+        ]
     return [
         SourceItem(
             id=_stable_item_id(definition.source_id, published_at, title),
@@ -274,6 +345,7 @@ def parse_issue(message: dict[str, Any], definition: NewsletterDefinition) -> li
             published_at=published_at,
             summary="Newsletter issue metadata; no raw mailbox content is published.",
             sponsor_status="unknown",
+            metadata={"extraction": "issue-metadata"},
         )
     ]
 
