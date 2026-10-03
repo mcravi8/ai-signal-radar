@@ -14,6 +14,9 @@ policy:
   echo_control: >-
     Exact repeated titles or URLs inside one event are collapsed before breadth is counted.
     Several posts about one talk remain one underlying observation.
+  sampling: >-
+    Every event discloses its collection boundary. Bounded samples describe only the
+    selected record and are never presented as representative of the full event.
   claims: >-
     Programs, talks, social posts, and sponsor descriptions establish what was presented or
     claimed. Papers, code, demos, and later independent evidence are shown separately.
@@ -45,6 +48,9 @@ events:
     source_ids: [neurips-2025-proceedings]
     pilot: true
     review_windows_days: [30, 90]
+    sampling_note: >-
+      Bounded sample of 36 accepted papers whose titles match the configured AI-engineering
+      terms. This is not a representative sample of the full proceedings.
     framing: >-
       Use the proceedings to identify concrete research artifacts and compare their themes
       with later repositories, practitioner discussion, and product work. Conference
@@ -62,6 +68,9 @@ events:
     source_ids: [genai-genesis-2026-projects]
     pilot: true
     review_windows_days: [30, 90]
+    sampling_note: >-
+      Bounded sample of 30 public Devpost project pages from the first three gallery pages,
+      with winners shown first. A project page proves submission, not implementation quality.
     framing: >-
       Treat submitted projects as evidence of what builders attempted under event
       constraints. Winner status and likes are attention signals, not proof of technical
@@ -79,6 +88,9 @@ events:
     source_ids: [ai-engineer-worlds-fair-2026-program]
     pilot: true
     review_windows_days: [30, 90]
+    sampling_note: >-
+      Bounded program sample capped at three sessions per configured priority track. It
+      describes the selected engineering agenda, not the full conference program.
     framing: >-
       Use the official program to measure which engineering problems occupied the agenda,
       then require artifacts or later independent evidence before treating repeated session
@@ -96,6 +108,9 @@ events:
     source_ids: []
     pilot: false
     review_windows_days: [30, 90]
+    sampling_note: >-
+      No event program has been collected. The event is a configured watchlist entry and
+      remains unassessed until a bounded public sample is connected.
     framing: >-
       Retain as a watchlist event until an official machine-readable program or a bounded
       reviewed sample is connected. Vendor agenda volume must remain source-concentrated.

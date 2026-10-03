@@ -1255,6 +1255,7 @@
         "neurips-2025-proceedings"
       ],
       "evidence_count": 107,
+      "artifact_count": 66,
       "event_count": 4,
       "active_event_count": 3,
       "executive_summary": "3 events currently have linked evidence. High event volume is not treated as corroboration: each dossier reports concrete artifacts, source concentration, and later independent follow-through separately.",
@@ -1281,14 +1282,17 @@
             30,
             90
           ],
+          "sampling_note": "Bounded program sample capped at three sessions per configured priority track. It describes the selected engineering agenda, not the full conference program.",
           "framing": "Use the official program to measure which engineering problems occupied the agenda, then require artifacts or later independent evidence before treating repeated session language as technical corroboration.",
           "analysis_status": "active",
           "evidence_count": 41,
           "independent_observation_count": 41,
           "echo_records_collapsed": 0,
           "source_count": 1,
+          "independent_source_count": 1,
           "source_family_count": 1,
           "artifact_count": 0,
+          "weighted_artifact_count": 0,
           "social_observation_count": 0,
           "record_counts": {
             "claim": 41
@@ -1307,15 +1311,15 @@
             "interpretation": "Observed event attention only; agenda size and social repetition do not establish quality or adoption."
           },
           "technical_substance": {
-            "score": 25,
+            "score": 6,
             "label": "limited",
             "components": {
               "artifact_points": 0,
-              "technical_share_points": 25,
+              "technical_share_points": 6,
               "artifact_diversity_points": 0,
               "independent_followthrough_points": 0
             },
-            "interpretation": "Concrete papers, projects, repositories, and independent follow-through drive this score; claims alone do not."
+            "interpretation": "Papers and repositories receive full artifact weight; hackathon submission pages receive partial weight until implementation is inspectable. Independent follow-through remains separate."
           },
           "persistence_checks": [
             {
@@ -1377,7 +1381,7 @@
               "evidence_count": 2
             }
           ],
-          "finding": "The observed event record concentrates on Coding agents & developer tooling, Training, evaluation & self-improvement, Skills, protocols & integrations. It contains 0 concrete artifacts across one source; this establishes what appeared around the event, not whether it became adopted.",
+          "finding": "The observed event record concentrates on Coding agents & developer tooling, Training, evaluation & self-improvement, Skills, protocols & integrations. It contains 0 artifact records across one source; this establishes what appeared around the event, not whether it became adopted.",
           "why_it_matters": "Use the official program to measure which engineering problems occupied the agenda, then require artifacts or later independent evidence before treating repeated session language as technical corroboration.",
           "verification_read": "Only event claims or observations are present; technical substance is not yet demonstrated.",
           "next_confirmation": "Look for independent repositories, deployment reports, benchmarks, hiring demand, or repeated cross-source evidence after the event.",
@@ -1450,14 +1454,17 @@
             30,
             90
           ],
+          "sampling_note": "Bounded sample of 30 public Devpost project pages from the first three gallery pages, with winners shown first. A project page proves submission, not implementation quality.",
           "framing": "Treat submitted projects as evidence of what builders attempted under event constraints. Winner status and likes are attention signals, not proof of technical quality, durability, or demand.",
           "analysis_status": "active",
           "evidence_count": 30,
           "independent_observation_count": 30,
           "echo_records_collapsed": 0,
           "source_count": 1,
+          "independent_source_count": 1,
           "source_family_count": 1,
           "artifact_count": 30,
+          "weighted_artifact_count": 15.0,
           "social_observation_count": 0,
           "record_counts": {
             "artifact": 30
@@ -1476,15 +1483,15 @@
             "interpretation": "Observed event attention only; agenda size and social repetition do not establish quality or adoption."
           },
           "technical_substance": {
-            "score": 70,
-            "label": "high",
+            "score": 55,
+            "label": "moderate",
             "components": {
-              "artifact_points": 35,
-              "technical_share_points": 25,
+              "artifact_points": 33,
+              "technical_share_points": 12,
               "artifact_diversity_points": 10,
               "independent_followthrough_points": 0
             },
-            "interpretation": "Concrete papers, projects, repositories, and independent follow-through drive this score; claims alone do not."
+            "interpretation": "Papers and repositories receive full artifact weight; hackathon submission pages receive partial weight until implementation is inspectable. Independent follow-through remains separate."
           },
           "persistence_checks": [
             {
@@ -1516,9 +1523,9 @@
               "evidence_count": 1
             }
           ],
-          "finding": "The observed event record concentrates on Coding agents & developer tooling, Training, evaluation & self-improvement. It contains 30 concrete artifacts across one source; this establishes what appeared around the event, not whether it became adopted.",
+          "finding": "The observed event record concentrates on Coding agents & developer tooling, Training, evaluation & self-improvement. It contains 30 artifact records across one source; this establishes what appeared around the event, not whether it became adopted.",
           "why_it_matters": "Treat submitted projects as evidence of what builders attempted under event constraints. Winner status and likes are attention signals, not proof of technical quality, durability, or demand.",
-          "verification_read": "Technical artifacts are present, but event affiliation is not independent validation.",
+          "verification_read": "Project submission pages are present, but implementation quality is not independently verified.",
           "next_confirmation": "Look for independent repositories, deployment reports, benchmarks, hiring demand, or repeated cross-source evidence after the event.",
           "counter_signal": "The concept disappears after the event, remains confined to sponsor language, or produces no inspectable artifact or later independent use.",
           "evidence_ids": [
@@ -1623,14 +1630,17 @@
             30,
             90
           ],
+          "sampling_note": "Bounded sample of 36 accepted papers whose titles match the configured AI-engineering terms. This is not a representative sample of the full proceedings.",
           "framing": "Use the proceedings to identify concrete research artifacts and compare their themes with later repositories, practitioner discussion, and product work. Conference acceptance is not treated as production validation.",
           "analysis_status": "active",
           "evidence_count": 36,
           "independent_observation_count": 36,
           "echo_records_collapsed": 0,
           "source_count": 1,
+          "independent_source_count": 1,
           "source_family_count": 1,
           "artifact_count": 36,
+          "weighted_artifact_count": 36.0,
           "social_observation_count": 0,
           "record_counts": {
             "artifact": 36
@@ -1657,7 +1667,7 @@
               "artifact_diversity_points": 10,
               "independent_followthrough_points": 0
             },
-            "interpretation": "Concrete papers, projects, repositories, and independent follow-through drive this score; claims alone do not."
+            "interpretation": "Papers and repositories receive full artifact weight; hackathon submission pages receive partial weight until implementation is inspectable. Independent follow-through remains separate."
           },
           "persistence_checks": [
             {
@@ -1694,9 +1704,9 @@
               "evidence_count": 1
             }
           ],
-          "finding": "The observed event record concentrates on Training, evaluation & self-improvement, Agent harnesses, Small & specialized models. It contains 36 concrete artifacts across one source; this establishes what appeared around the event, not whether it became adopted.",
+          "finding": "The observed event record concentrates on Training, evaluation & self-improvement, Agent harnesses, Small & specialized models. It contains 36 artifact records across one source; this establishes what appeared around the event, not whether it became adopted.",
           "why_it_matters": "Use the proceedings to identify concrete research artifacts and compare their themes with later repositories, practitioner discussion, and product work. Conference acceptance is not treated as production validation.",
-          "verification_read": "Technical artifacts are present, but event affiliation is not independent validation.",
+          "verification_read": "Inspectable papers or repositories are present, but event affiliation is not independent validation.",
           "next_confirmation": "Look for independent repositories, deployment reports, benchmarks, hiring demand, or repeated cross-source evidence after the event.",
           "counter_signal": "The concept disappears after the event, remains confined to sponsor language, or produces no inspectable artifact or later independent use.",
           "evidence_ids": [
@@ -1773,21 +1783,24 @@
             30,
             90
           ],
+          "sampling_note": "No event program has been collected. The event is a configured watchlist entry and remains unassessed until a bounded public sample is connected.",
           "framing": "Retain as a watchlist event until an official machine-readable program or a bounded reviewed sample is connected. Vendor agenda volume must remain source-concentrated.",
           "analysis_status": "configured",
           "evidence_count": 0,
           "independent_observation_count": 0,
           "echo_records_collapsed": 0,
           "source_count": 0,
+          "independent_source_count": 0,
           "source_family_count": 0,
           "artifact_count": 0,
+          "weighted_artifact_count": 0,
           "social_observation_count": 0,
           "record_counts": {},
           "technical_record_count": 0,
           "narrative_record_count": 0,
           "attention": {
             "score": null,
-            "label": "not-observed",
+            "label": "not-assessed",
             "components": {
               "volume_points": 0,
               "source_breadth_points": 0,
@@ -1798,20 +1811,20 @@
           },
           "technical_substance": {
             "score": null,
-            "label": "not-observed",
+            "label": "not-assessed",
             "components": {
               "artifact_points": 0,
               "technical_share_points": 0,
               "artifact_diversity_points": 0,
               "independent_followthrough_points": 0
             },
-            "interpretation": "Concrete papers, projects, repositories, and independent follow-through drive this score; claims alone do not."
+            "interpretation": "Papers and repositories receive full artifact weight; hackathon submission pages receive partial weight until implementation is inspectable. Independent follow-through remains separate."
           },
           "persistence_checks": [
             {
               "days": 30,
               "due_at": "2026-04-18",
-              "status": "not-observed",
+              "status": "not-assessed",
               "evidence_count": 0,
               "source_count": 0,
               "evidence_ids": []
@@ -1819,7 +1832,7 @@
             {
               "days": 90,
               "due_at": "2026-06-17",
-              "status": "not-observed",
+              "status": "not-assessed",
               "evidence_count": 0,
               "source_count": 0,
               "evidence_ids": []
@@ -1853,6 +1866,7 @@
         "event_attention": "Measures observed volume, source breadth, evidence-family breadth, and follow-through. It is an attention score, not a quality or adoption score.",
         "technical_substance": "Measures concrete artifacts, technical-record share, artifact diversity, and independent follow-through. A crowded agenda alone cannot earn a high score.",
         "echo_control": "Exact repeated titles or URLs inside one event are collapsed before breadth is counted. Several posts about one talk remain one underlying observation.",
+        "sampling": "Every event discloses its collection boundary. Bounded samples describe only the selected record and are never presented as representative of the full event.",
         "claims": "Programs, talks, social posts, and sponsor descriptions establish what was presented or claimed. Papers, code, demos, and later independent evidence are shown separately.",
         "persistence": "Each completed event is revisited after 30 and 90 days. Absence of later evidence is reported as not observed, never silently treated as confirmation.",
         "copyright": "Store titles, short descriptions, public URLs, dates, authors, and analyst observations. Do not store full social posts, transcripts, or copied article bodies."

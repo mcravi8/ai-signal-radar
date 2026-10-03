@@ -978,7 +978,7 @@ function analysisHeader(analysis, includeFacts = true) {
 function renderEventPulse(analysis, detail) {
   const events = analysis.events || [];
   const activeEvents = events.filter((event) => event.analysis_status === "active");
-  const artifactCount = activeEvents.reduce((total, event) => total + event.artifact_count, 0);
+  const artifactCount = analysis.artifact_count ?? activeEvents.reduce((total, event) => total + event.artifact_count, 0);
   const synthesis = node("section", "detail-section event-synthesis");
   synthesis.append(
     node("h3", "", "Current event read"),
@@ -989,14 +989,17 @@ function renderEventPulse(analysis, detail) {
   const metrics = node("div", "metric-strip event-metrics");
   metrics.append(
     metric("Tracked events", formatNumber(analysis.event_count), `${activeEvents.length} with linked evidence`),
-    metric("Event evidence", formatNumber(analysis.evidence_count), "Echo-controlled inside each dossier"),
-    metric("Concrete artifacts", formatNumber(artifactCount), "Papers, projects, and repositories"),
+    metric("Event evidence", formatNumber(analysis.evidence_count), "Raw linked records; dossiers show echo-adjusted counts"),
+    metric("Artifact records", formatNumber(artifactCount), "Distinct papers, project pages, and repositories"),
     metric("Social inbox", formatNumber(analysis.social_inbox?.record_count), analysis.social_inbox?.status === "empty" ? "Ready for reviewed links" : "Reviewed observations"),
   );
 
   const indexSection = node("section", "detail-section");
   indexSection.append(node("h3", "", "Event comparison"));
   const shell = node("div", "table-shell");
+  shell.tabIndex = 0;
+  shell.setAttribute("role", "region");
+  shell.setAttribute("aria-label", "Event comparison table");
   const table = node("table", "data-table event-table");
   const thead = document.createElement("thead");
   const head = node("tr");
@@ -1046,7 +1049,10 @@ function renderEventPulse(analysis, detail) {
     summary.append(title, scores);
 
     const body = node("div", "event-dossier-body");
+    const sourceNoun = event.source_count === 1 ? "source" : "sources";
     body.append(node("p", "event-finding", event.finding));
+    body.append(node("p", "section-note", `${formatNumber(event.evidence_count)} linked records · ${formatNumber(event.independent_observation_count)} echo-adjusted observations · ${formatNumber(event.source_count)} observed ${sourceNoun}`));
+    if (event.sampling_note) body.append(node("p", "interpretation-note", `Coverage: ${event.sampling_note}`));
     const scoreGrid = node("div", "event-score-grid");
     for (const [heading, score] of [["Event attention", event.attention], ["Technical substance", event.technical_substance]]) {
       const card = node("div", "event-score-card");

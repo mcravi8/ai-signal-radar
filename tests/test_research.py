@@ -171,6 +171,10 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertGreater(conference["attention"]["score"], conference["technical_substance"]["score"])
         hackathon = next(event for event in pulse["events"] if event["id"] == "genai-genesis-2026")
         self.assertEqual(hackathon["artifact_count"], 30)
+        self.assertLess(hackathon["technical_substance"]["score"], 60)
+        configured = next(event for event in pulse["events"] if event["id"] == "nvidia-gtc-2026")
+        self.assertTrue(all(item["status"] == "not-assessed" for item in configured["persistence_checks"]))
+        self.assertTrue(all(event.get("sampling_note") for event in pulse["events"]))
 
     def test_engineering_atlas_exposes_quality_and_review_states(self):
         atlas = self.payload["engineering_atlas"]

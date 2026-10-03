@@ -51,13 +51,13 @@ PUBLIC_ITEM_FIELDS = set(PUBLIC_ITEM_FIELD_ORDER)
 
 
 VERIFICATION_FIELDS = {
-    "repository": {"stars", "forks", "pushed_at", "license"},
-    "company-directory": {"batch", "status", "team_size", "location", "github_url", "date_basis"},
-    "job-posting": {"company", "batch", "role", "location", "created_at", "date_basis"},
-    "event-session": {"event_id", "event_record_type", "event_track", "event_day"},
-    "event-paper": {"event_id", "event_record_type", "artifact_url"},
-    "hackathon-project": {"event_id", "event_record_type", "winner", "artifact_url"},
-    "curated-social": {"event_id", "event_record_type", "platform", "author_url"},
+    "repository": ("stars", "forks", "pushed_at", "license"),
+    "company-directory": ("batch", "status", "team_size", "location", "github_url", "date_basis"),
+    "job-posting": ("company", "batch", "role", "location", "created_at", "date_basis"),
+    "event-session": ("event_id", "event_record_type", "event_track", "event_day"),
+    "event-paper": ("event_id", "event_record_type", "artifact_url"),
+    "hackathon-project": ("event_id", "event_record_type", "winner", "artifact_url"),
+    "curated-social": ("event_id", "event_record_type", "platform", "author_url"),
 }
 
 
@@ -70,7 +70,7 @@ def sanitize_item(row: dict[str, Any]) -> dict[str, Any]:
     if blocked:
         raise PublicDataError(f"Blocked fields present: {', '.join(sorted(blocked))}")
     clean = {key: row[key] for key in PUBLIC_ITEM_FIELD_ORDER if key in row}
-    allowed = VERIFICATION_FIELDS.get(row.get("source_type", ""), set())
+    allowed = VERIFICATION_FIELDS.get(row.get("source_type", ""), ())
     metadata = row.get("metadata", {})
     verification = {key: metadata[key] for key in allowed if metadata.get(key) is not None}
     if verification:

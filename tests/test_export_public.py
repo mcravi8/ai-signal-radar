@@ -26,6 +26,7 @@ class PublicExportTests(unittest.TestCase):
             }
         )
         self.assertEqual(clean["verification"], {"stars": 12, "forks": 3})
+        self.assertEqual(list(clean["verification"]), ["stars", "forks"])
         self.assertNotIn("metadata", clean)
 
     def test_rejects_raw_email_fields(self):

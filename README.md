@@ -77,7 +77,7 @@ Event Pulse is an analysis inside the shared research library. It links programs
 
 The first calibration set covers NeurIPS 2025, GenAI Genesis 2026, and AI Engineer World's Fair 2026; NVIDIA GTC 2026 remains configured until a bounded official dataset is connected. Exact duplicate titles or artifact URLs collapse inside an event, and every dossier states what would confirm or contradict its current read.
 
-LinkedIn and X remain human-assisted because direct scraping is brittle and policy-sensitive. A public link can be proposed with the repository's **Submit an event signal** issue form. The form accepts only the URL, event, author, date, linked public artifacts, and an original observation. Nothing enters the weekly corpus until a maintainer applies the `event-signal-reviewed` label. Full post bodies and transcripts are prohibited. The same contract is available locally in `data/manual/social-links.yml`.
+LinkedIn and X remain human-assisted because direct scraping is brittle and policy-sensitive. A public link can be proposed with the repository's **Submit an event signal** issue form. The form accepts only the URL, event, author, date, linked public artifacts, and an original observation. Nothing enters the weekly corpus until a maintainer applies the `event-signal-reviewed` label. Full post bodies and transcripts are prohibited. The same contract is available locally in `data/manual/social-links.yml`. Event samples are deliberately bounded and disclose their selection limits in each dossier. Echoes are collapsed before attention breadth and persistence are scored; a configured event with no collected evidence is shown as **not assessed**, not **not observed**.
 
 Validate or backfill this layer with:
 

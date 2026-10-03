@@ -145,6 +145,7 @@ class EventPolicyTests(unittest.TestCase):
                 "source_ids": ["program"],
                 "pilot": True,
                 "review_windows_days": [30, 90],
+                "sampling_note": "Bounded sample.",
                 "framing": "Inspect the event without treating it as validation.",
             }],
         }
@@ -170,8 +171,138 @@ class EventPolicyTests(unittest.TestCase):
         self.assertNotEqual(result["attention"]["score"], result["technical_substance"]["score"])
         self.assertEqual(result["independent_observation_count"], 1)
         self.assertEqual(result["echo_records_collapsed"], 1)
+        self.assertEqual(result["independent_source_count"], 1)
+        self.assertEqual(result["attention"]["components"]["source_breadth_points"], 8)
         self.assertEqual(result["technical_substance"]["components"]["artifact_points"], 0)
         self.assertEqual(result["persistence_checks"][-1]["status"], "not-observed")
+
+    def test_social_artifact_url_collapses_with_the_artifact_record(self):
+        config = {
+            **self.config,
+            "events": [{
+                "id": "example-event", "name": "Example Event", "event_type": "developer-conference",
+                "status": "completed", "start_date": "2026-01-01", "end_date": "2026-01-02",
+                "location": "Online", "official_url": "https://example.com/event",
+                "aliases": ["Example Event"], "source_ids": [], "pilot": True,
+                "review_windows_days": [30, 90], "framing": "Inspect evidence.",
+                "sampling_note": "Bounded sample.",
+            }],
+        }
+        repository_url = "https://github.com/example/tool"
+        evidence = [
+            {
+                "id": "repo", "source_id": "github", "source_type": "repository", "title": "example/tool",
+                "url": repository_url, "published_at": "2026-01-03", "event_ids": ["example-event"],
+                "artifact_urls": [], "projects": ["Tool"], "theme_ids": ["agents"],
+            },
+            {
+                "id": "post", "source_id": "x-event-links", "source_type": "curated-social", "title": "Demo recap",
+                "url": "https://x.com/example/status/1", "published_at": "2026-01-03", "event_ids": ["example-event"],
+                "artifact_urls": [repository_url], "projects": [], "theme_ids": ["agents"],
+            },
+        ]
+        event = build_event_pulse(
+            evidence, config,
+            [{"id": "github", "channel": "repository"}, {"id": "x-event-links", "channel": "curated-social"}],
+            [{"id": "agents", "name": "Agents"}], as_of=datetime(2026, 1, 10, tzinfo=timezone.utc),
+        )["analysis"]["events"][0]
+        self.assertEqual(event["independent_observation_count"], 1)
+        self.assertEqual(event["artifact_count"], 1)
+        self.assertEqual(event["independent_source_count"], 1)
+        self.assertEqual(event["themes"][0]["evidence_count"], 1)
+
+    def test_later_repost_of_an_event_artifact_is_not_persistence(self):
+        config = {
+            **self.config,
+            "events": [{
+                "id": "example-event", "name": "Example Event", "event_type": "research-conference",
+                "status": "completed", "start_date": "2026-01-01", "end_date": "2026-01-02",
+                "location": "Online", "official_url": "https://example.com/event",
+                "aliases": ["Example Event"], "source_ids": ["proceedings"], "pilot": True,
+                "review_windows_days": [30, 90], "framing": "Inspect evidence.",
+                "sampling_note": "Bounded sample.",
+            }],
+        }
+        paper_url = "https://example.com/paper"
+        evidence = [
+            {
+                "id": "paper", "source_id": "proceedings", "source_type": "event-paper", "title": "Paper",
+                "url": paper_url, "published_at": "2026-01-01", "event_ids": ["example-event"],
+                "artifact_urls": [paper_url], "projects": [], "theme_ids": [],
+            },
+            {
+                "id": "repost", "source_id": "x-event-links", "source_type": "curated-social", "title": "Paper recap",
+                "url": "https://x.com/example/status/2", "published_at": "2026-01-20", "event_ids": ["example-event"],
+                "artifact_urls": [paper_url], "projects": [], "theme_ids": [],
+            },
+        ]
+        event = build_event_pulse(
+            evidence, config,
+            [{"id": "proceedings", "channel": "event-program"}, {"id": "x-event-links", "channel": "curated-social"}],
+            [], as_of=datetime(2026, 5, 1, tzinfo=timezone.utc),
+        )["analysis"]["events"][0]
+        self.assertTrue(all(check["status"] == "not-observed" for check in event["persistence_checks"]))
+
+    def test_uncollected_event_is_not_assessed_not_not_observed(self):
+        config = {
+            **self.config,
+            "events": [{
+                "id": "configured-event",
+                "name": "Configured Event",
+                "event_type": "vendor-conference",
+                "status": "configured",
+                "start_date": "2026-01-01",
+                "end_date": "2026-01-02",
+                "location": "Online",
+                "official_url": "https://example.com/event",
+                "aliases": ["Configured Event"],
+                "source_ids": [],
+                "pilot": False,
+                "review_windows_days": [30, 90],
+                "framing": "Wait for public evidence.",
+                "sampling_note": "No sample collected.",
+            }],
+        }
+        event = build_event_pulse(
+            [], config, [], [], as_of=datetime(2026, 5, 1, tzinfo=timezone.utc)
+        )["analysis"]["events"][0]
+        self.assertEqual(event["attention"]["label"], "not-assessed")
+        self.assertTrue(all(check["status"] == "not-assessed" for check in event["persistence_checks"]))
+
+    def test_hackathon_pages_receive_partial_artifact_weight(self):
+        config = {
+            **self.config,
+            "events": [{
+                "id": "hackathon",
+                "name": "Hackathon",
+                "event_type": "hackathon",
+                "status": "completed",
+                "start_date": "2026-01-01",
+                "end_date": "2026-01-02",
+                "location": "Online",
+                "official_url": "https://example.com/event",
+                "aliases": ["Example Hackathon"],
+                "source_ids": ["gallery"],
+                "pilot": True,
+                "review_windows_days": [30, 90],
+                "framing": "Inspect project pages.",
+                "sampling_note": "Bounded sample.",
+            }],
+        }
+        evidence = [{
+            "id": f"project-{index}", "source_id": "gallery", "source_type": "hackathon-project",
+            "title": f"Project {index}", "url": f"https://example.com/project/{index}",
+            "published_at": "2026-01-01", "event_ids": ["hackathon"],
+            "artifact_urls": [f"https://example.com/project/{index}"], "projects": [f"Project {index}"],
+            "theme_ids": [],
+        } for index in range(30)]
+        event = build_event_pulse(
+            evidence, config, [{"id": "gallery", "channel": "hackathon-gallery"}], [],
+            as_of=datetime(2026, 5, 1, tzinfo=timezone.utc),
+        )["analysis"]["events"][0]
+        self.assertEqual(event["artifact_count"], 30)
+        self.assertEqual(event["weighted_artifact_count"], 15.0)
+        self.assertLess(event["technical_substance"]["score"], 60)
 
 
 if __name__ == "__main__":

@@ -20,6 +20,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertTrue((ROOT / "dist/data/event-pulse.json").exists())
         html = (ROOT / "dist/index.html").read_text(encoding="utf-8")
         app = (ROOT / "dist/app.js").read_text(encoding="utf-8")
+        styles = (ROOT / "dist/styles.css").read_text(encoding="utf-8")
         self.assertIn('id="source-type"', html)
         self.assertIn('data-route="operating-model"', html)
         self.assertIn('data-route="weekly-review"', html)
@@ -35,6 +36,8 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn("discovery-review.json", app)
         self.assertIn("what_it_looks_like", app)
         self.assertIn("renderEventPulse", app)
+        self.assertIn('shell.setAttribute("aria-label", "Event comparison table")', app)
+        self.assertIn(".table-shell { overflow: auto hidden;", styles)
 
 
 if __name__ == "__main__":
