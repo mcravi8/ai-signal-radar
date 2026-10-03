@@ -1,10 +1,10 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T05:09:54.867372+00:00",
+    "generated_at": "2026-10-03T05:12:12.565664+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1434,
-    "input_changed_document_count": 14,
+    "input_changed_document_count": 0,
     "cluster_count": 493,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 172,
@@ -145,7 +145,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:long-horizon-tool-using-b0604038be",
@@ -912,7 +912,7 @@
         "dominant_publisher_share": 0.333,
         "raw_evidence_count": 20,
         "capped_evidence_count": 6,
-        "changed_evidence_count": 4
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -1027,7 +1027,7 @@
           ]
         }
       ],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -5745,7 +5745,7 @@
         "dominant_publisher_share": 0.667,
         "raw_evidence_count": 3,
         "capped_evidence_count": 3,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -5790,7 +5790,7 @@
         "candidate_quality_met": true
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "merge-existing-direction",
       "nearest_known": {
         "kind": "early-signal-direction",
@@ -11868,7 +11868,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 2
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -11893,7 +11893,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -14880,7 +14880,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 2
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -14896,7 +14896,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -15973,7 +15973,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -16002,7 +16002,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -17555,7 +17555,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -17571,7 +17571,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -18159,7 +18159,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -18175,7 +18175,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -20272,7 +20272,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -20305,7 +20305,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -24943,7 +24943,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -24988,7 +24988,7 @@
         "candidate_quality_met": true
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
@@ -25214,7 +25214,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -25239,7 +25239,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -30283,7 +30283,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -30299,7 +30299,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -34196,7 +34196,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 1
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -34212,7 +34212,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
     },

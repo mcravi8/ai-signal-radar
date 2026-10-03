@@ -1,31 +1,16 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T05:09:54.867372+00:00",
+    "generated_at": "2026-10-03T05:12:12.565664+00:00",
     "method": "deterministic-lexical-v1",
     "window_days": 35,
     "document_count": 1434,
-    "changed_document_count": 14,
+    "changed_document_count": 0,
     "removed_document_count": 0,
     "excluded_record_count": 825,
     "interpretation": "Lexical observations for clustering; not themes, trends, or findings."
   },
-  "changed_document_ids": [
-    "agent-news:3ffc5dea9593bd8404e0",
-    "agent-news:46e1e0e7a0f3aff3a867",
-    "agent-news:600c2c07bf9ad803c75b",
-    "agent-news:68e34b9e7b34ba05116d",
-    "agent-news:f105d9452611449e72d2",
-    "alphasignal:111e6fbcff6d492fbbb3",
-    "alphasignal:56888202a458559aabe4",
-    "alphasignal:8a0f602616769e037ef4",
-    "alphasignal:cb35346305c271fcbbe3",
-    "bluesky:e810fac7fd93:3mvs4salrn72j",
-    "frontier-signal:182e819d9b4d8ecc9b66",
-    "frontier-signal:2a1e71a65ba2bd34e059",
-    "frontier-signal:cf56296f80e6ce0c51d0",
-    "github:1384094559"
-  ],
+  "changed_document_ids": [],
   "removed_document_ids": [],
   "fingerprints": {
     "agent-news:3ffc5dea9593bd8404e0": "9ee6d687855194891cd1afd01d61d8b9b2a664047bf7e90cb0c7fdc20bfca2d0",

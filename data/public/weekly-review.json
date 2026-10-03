@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-10-03T05:09:54.867372+00:00",
+    "generated_at": "2026-10-03T05:12:12.565664+00:00",
     "as_of": "2026-10-03",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,11 +12,12 @@
       "early-signal": 7,
       "operator-narrative": 6
     },
-    "materially_changed_count": 1,
+    "materially_changed_count": 0,
     "assessment_queue_count": 10,
-    "carried_queue_count": 9,
+    "carried_queue_count": 10,
     "adjudication_count": 16,
-    "requirement_change_count": 0
+    "requirement_change_count": 0,
+    "idempotent_regeneration": true
   },
   "summary": {
     "headline": "16 candidate decisions are recorded; 10 candidates remain in the bounded assessment queue.",
@@ -985,13 +986,11 @@
         "operating_relevance": 0,
         "total": 60
       },
-      "change_reasons": [
-        "Evidence increased by 2",
-        "2 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 10
     },
     {
@@ -4270,13 +4269,11 @@
         "operating_relevance": 0,
         "total": 60
       },
-      "change_reasons": [
-        "Evidence increased by 2",
-        "2 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 10
     }
   ],

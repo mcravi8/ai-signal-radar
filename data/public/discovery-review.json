@@ -1,10 +1,10 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T05:09:54.867372+00:00",
+    "generated_at": "2026-10-03T05:12:12.565664+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1434,
-    "input_changed_document_count": 14,
+    "input_changed_document_count": 0,
     "cluster_count": 493,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 172,
@@ -145,7 +145,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:long-horizon-tool-using-b0604038be",
