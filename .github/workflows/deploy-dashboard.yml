@@ -1,13 +1,9 @@
 name: Deploy dashboard
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "site/**"
-      - "data/public/**"
-      - "scripts/build_site.py"
-      - ".github/workflows/deploy-dashboard.yml"
+  workflow_run:
+    workflows: ["Synthesize weekly radar"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -21,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

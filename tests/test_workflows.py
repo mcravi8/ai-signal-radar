@@ -13,10 +13,18 @@ class WorkflowContractTests(unittest.TestCase):
                 self.assertIn("group: radar-data-writer", text)
                 self.assertIn("cancel-in-progress: false", text)
 
-    def test_pages_deploy_has_one_trigger_after_synthesis(self):
+    def test_pages_deploy_runs_once_after_successful_synthesis(self):
         text = (ROOT / ".github/workflows/deploy-dashboard.yml").read_text(encoding="utf-8")
-        self.assertIn('"data/public/**"', text)
-        self.assertNotIn("workflow_run:", text)
+        self.assertIn("workflow_run:", text)
+        self.assertIn('workflows: ["Synthesize weekly radar"]', text)
+        self.assertNotIn("  push:", text)
+        self.assertIn("workflow_run.conclusion == 'success'", text)
+
+    def test_frontend_changes_enter_the_single_synthesis_then_deploy_path(self):
+        text = (ROOT / ".github/workflows/synthesize-weekly.yml").read_text(encoding="utf-8")
+        self.assertIn("- site/**", text)
+        self.assertIn("- scripts/build_site.py", text)
+        self.assertIn("- schemas/**", text)
 
     def test_weekly_collector_name_matches_its_schedule(self):
         self.assertTrue((ROOT / ".github/workflows/collect-weekly.yml").exists())

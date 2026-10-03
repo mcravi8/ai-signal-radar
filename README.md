@@ -61,7 +61,7 @@ Open `http://localhost:8000`.
 - `collect-weekly.yml` collects free public metadata from first-party AI labs, expert newsletters, practitioner blogs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds each Saturday.
 - The same weekly collection backfills bounded official event programs, proceedings, and hackathon galleries. Event-specific caps prevent one large agenda from dominating the corpus.
 - `synthesize-weekly.yml` retrieves relevant posts from a curated Bluesky expert list and new AgentMail newsletters, reduces them to sanitized evidence, normalizes every source, recalculates cross-source scores, and produces a weekly brief.
-- `deploy-dashboard.yml` validates the public boundary and deploys the static site to GitHub Pages.
+- `deploy-dashboard.yml` runs once after a successful synthesis, validates the public boundary again, and deploys the static site to GitHub Pages.
 
 Gmail ingestion remains local. Future subscribed newsletters arrive in the dedicated AgentMail inbox and are ingested weekly with a read-only API key. The collector replays a bounded 35-day window so recent issues can be enriched when extraction improves; stable IDs keep this idempotent. Raw bodies exist only in AgentMail and runner memory; only sanitized public-link records enter Git. `pipeline.collectors.email_import` still accepts previously sanitized local exports.
 
