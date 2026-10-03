@@ -5,6 +5,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from jsonschema import Draft202012Validator
+
 BLOCKED_KEYS = {
     "raw_body",
     "html_body",
@@ -65,6 +67,17 @@ class PublicDataError(ValueError):
     pass
 
 
+PUBLIC_SCHEMA_FILES = {
+    "alphasignal-research.json": "alphasignal-research.schema.json",
+    "dashboard.json": "public-dashboard.schema.json",
+    "discovery-review.json": "discovery-review.schema.json",
+    "event-pulse.json": "event-pulse.schema.json",
+    "operating-model.json": "operating-model.schema.json",
+    "research.json": "cross-source-research.schema.json",
+    "weekly-review.json": "weekly-review.schema.json",
+}
+
+
 def sanitize_item(row: dict[str, Any]) -> dict[str, Any]:
     blocked = BLOCKED_KEYS.intersection(row)
     if blocked:
@@ -96,6 +109,17 @@ def validate_public_payload(payload: Any) -> None:
                 walk(child)
 
     walk(payload)
+
+
+def validate_schema(payload: Any, schema_path: Path) -> None:
+    schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    Draft202012Validator.check_schema(schema)
+    errors = sorted(Draft202012Validator(schema).iter_errors(payload), key=lambda error: list(error.path))
+    if not errors:
+        return
+    first = errors[0]
+    location = ".".join(str(part) for part in first.absolute_path) or "<root>"
+    raise PublicDataError(f"Schema validation failed at {location}: {first.message}")
 
 
 def write_public_dashboard(path: Path, payload: dict[str, Any]) -> None:

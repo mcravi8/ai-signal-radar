@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ai-signal-radar/weekly-review.schema.json",
+  "title": "AI Signal Radar weekly operating-model review",
+  "type": "object",
+  "required": ["meta", "summary", "selection_policy", "candidate_pool", "adjudications", "assessment_queue", "requirement_changes", "verification_families"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "generated_at", "as_of", "policy_version", "candidate_pool_count", "materially_changed_count", "assessment_queue_count", "carried_queue_count", "adjudication_count"]
+    },
+    "summary": {"type": "object", "required": ["headline", "interpretation"]},
+    "selection_policy": {"type": "object", "required": ["maximum_queue", "minimum_priority_score", "commitment_boundary"]},
+    "candidate_pool": {"type": "array", "items": {"$ref": "#/$defs/candidate"}},
+    "adjudications": {"type": "array", "items": {"type": "object", "required": ["candidate_id", "title", "status", "outcome", "decision", "rationale"]}},
+    "assessment_queue": {"type": "array", "items": {"$ref": "#/$defs/candidate"}},
+    "requirement_changes": {"type": "array", "items": {"type": "object", "required": ["id", "title", "change_type", "explanation"]}},
+    "verification_families": {"type": "array", "items": {"type": "object", "required": ["id", "title", "status", "record_count", "source_count", "boundary"]}}
+  },
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "required": ["id", "title", "origin", "description", "metrics", "priority", "materially_changed", "change_reasons"]
+    }
+  }
+}

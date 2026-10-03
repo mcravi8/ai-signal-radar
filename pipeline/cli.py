@@ -16,7 +16,13 @@ from .discovery import validate_discovery_policy
 from .discovery_cluster import build_discovery_candidates, validate_clustering_policy
 from .evidence_policy import build_operating_model, format_calibration, run_calibration
 from .events import assign_event_ids, build_event_pulse, load_social_links, validate_event_config
-from .export_public import sanitize_item, validate_public_payload, write_public_dashboard
+from .export_public import (
+    PUBLIC_SCHEMA_FILES,
+    sanitize_item,
+    validate_public_payload,
+    validate_schema,
+    write_public_dashboard,
+)
 from .research import EARLY_SIGNAL_DIRECTIONS, build_research, write_weekly_report
 from .score import score_theme
 from .storage import merge_items, read_jsonl, write_jsonl
@@ -521,8 +527,15 @@ def synthesize() -> None:
 
 
 def validate_public() -> None:
-    for path in sorted((ROOT / "data/public").rglob("*.json")):
-        validate_public_payload(json.loads(path.read_text(encoding="utf-8")))
+    public_paths = sorted((ROOT / "data/public").rglob("*.json"))
+    unmapped = sorted(path.name for path in public_paths if path.name not in PUBLIC_SCHEMA_FILES)
+    missing = sorted(name for name in PUBLIC_SCHEMA_FILES if not (ROOT / "data/public" / name).exists())
+    if unmapped or missing:
+        raise SystemExit(f"Public schema coverage mismatch; unmapped={unmapped}, missing={missing}")
+    for path in public_paths:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        validate_public_payload(payload)
+        validate_schema(payload, ROOT / "schemas" / PUBLIC_SCHEMA_FILES[path.name])
         print(f"valid: {path.relative_to(ROOT)}")
 
 

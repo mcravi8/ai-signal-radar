@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ai-signal-radar/alphasignal-research.schema.json",
+  "title": "AI Signal Radar AlphaSignal research",
+  "type": "object",
+  "required": ["meta", "layers", "findings", "trends", "projects", "methodology"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "analysis_date", "coverage_start", "coverage_end", "email_count", "unique_catalog_records", "publication_boundary"],
+      "properties": {
+        "email_count": {"type": "integer", "minimum": 0},
+        "unique_catalog_records": {"type": "integer", "minimum": 0}
+      }
+    },
+    "layers": {"type": "array", "items": {"type": "object", "required": ["name", "catalog_records", "definition"]}},
+    "findings": {"type": "array", "items": {"type": "object", "required": ["finding", "evidence"]}},
+    "trends": {"type": "array", "items": {"type": "object", "required": ["name", "mentions", "finding", "score"]}},
+    "projects": {"type": "array", "items": {"type": "object", "required": ["name", "category", "why_it_matters", "workflow_opportunity"]}},
+    "methodology": {"type": "object"}
+  }
+}

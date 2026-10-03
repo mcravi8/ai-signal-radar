@@ -20,7 +20,7 @@
   "$defs": {
     "evidence": {
       "type": "object",
-      "required": ["id", "source_id", "source_type", "evidence_kind", "title", "published_at", "theme_ids", "stack_layers", "support_count", "monthly_counts", "provenance"]
+      "required": ["id", "source_id", "publisher_id", "source_type", "evidence_kind", "title", "published_at", "theme_ids", "stack_layers", "support_count", "monthly_counts", "provenance"]
     },
     "theme": {
       "type": "object",

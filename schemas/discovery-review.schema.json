@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ai-signal-radar/discovery-review.schema.json",
+  "title": "AI Signal Radar discovery review",
+  "type": "object",
+  "required": ["meta", "records", "merge_suggestions", "history"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["schema_version", "generated_at", "active_record_count", "spark_count", "candidate_count", "merge_suggestion_count"]
+    },
+    "records": {"type": "array", "items": {"type": "object", "required": ["id", "title", "state", "evidence_ids"]}},
+    "merge_suggestions": {"type": "array", "items": {"type": "object", "required": ["cluster_id", "disposition", "nearest_known", "evidence_ids"]}},
+    "history": {"type": "array", "items": {"type": "object", "required": ["id", "state"]}}
+  }
+}
