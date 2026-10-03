@@ -10,7 +10,7 @@ permissions:
   issues: read
 
 concurrency:
-  group: collect-daily
+  group: radar-data-writer
   cancel-in-progress: false
 
 jobs:

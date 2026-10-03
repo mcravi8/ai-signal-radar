@@ -58,12 +58,12 @@ Open `http://localhost:8000`.
 
 ## Automation
 
-- `collect-daily.yml` collects free public metadata from first-party AI labs, expert newsletters, practitioner blogs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds.
+- `collect-weekly.yml` collects free public metadata from first-party AI labs, expert newsletters, practitioner blogs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds each Saturday.
 - The same weekly collection backfills bounded official event programs, proceedings, and hackathon galleries. Event-specific caps prevent one large agenda from dominating the corpus.
 - `synthesize-weekly.yml` retrieves relevant posts from a curated Bluesky expert list and new AgentMail newsletters, reduces them to sanitized evidence, normalizes every source, recalculates cross-source scores, and produces a weekly brief.
 - `deploy-dashboard.yml` validates the public boundary and deploys the static site to GitHub Pages.
 
-Gmail ingestion remains local. Future subscribed newsletters arrive in the dedicated AgentMail inbox and are ingested weekly with a read-only API key. Raw bodies exist only in AgentMail and runner memory; only allowlisted derivative records enter Git. `pipeline.collectors.email_import` still accepts previously sanitized local exports.
+Gmail ingestion remains local. Future subscribed newsletters arrive in the dedicated AgentMail inbox and are ingested weekly with a read-only API key. The collector replays a bounded 35-day window so recent issues can be enriched when extraction improves; stable IDs keep this idempotent. Raw bodies exist only in AgentMail and runner memory; only sanitized public-link records enter Git. `pipeline.collectors.email_import` still accepts previously sanitized local exports.
 
 The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only inbox and message permissions. The public cursor in `data/state/agentmail.json` stores only the last processed timestamp—never mailbox or message identifiers.
 
@@ -143,7 +143,7 @@ The Engineering workspace connects canonical concepts to reviewed AlphaSignal pr
 - **Queued** means a classified discovery is among the next 25 candidates for review, ranked by concept breadth, independent corroboration, and recency. Identical concept combinations are capped at three candidates so one activity burst cannot monopolize the queue.
 - **Discovered** means the tool or repository is retained as evidence but has not received an analyst judgment.
 
-The Atlas also reports source freshness from the newest dated evidence seen for each source. This is an evidence-recency signal, not a claim that every collector ran successfully. True collector uptime requires a separate run ledger.
+The Atlas reports evidence freshness and collection health separately. Freshness comes from the newest dated evidence observed for a source. Collection health comes from the newest stored receipt for each collector family, including partial failures; one does not stand in for the other.
 
 The Expert Pulse analysis turns classified Bluesky observations into bounded findings with a stated interpretation, why it matters, a workflow opportunity, caveat, and inspectable supporting posts. Social engagement is never treated as corroboration.
 
@@ -162,10 +162,12 @@ python scripts/export_alphasignal_research.py /path/to/private/alpha_analysis_da
 python -m pipeline.cli validate-public
 ```
 
+`validate-public` applies both the privacy boundary and a Draft 2020-12 schema to every public JSON file. An unmapped dataset, missing dataset, structural contract violation, or blocked sensitive field fails the command.
+
 Trend score and opportunity score remain separate: the first measures persistence inside the newsletter corpus; the second measures whether a specific project appears worth testing for workflow automation. See [docs/alphasignal-methodology.md](docs/alphasignal-methodology.md).
 
 ## Current status
 
 The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, official YC AI-company and startup-job records, a narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures, and three active event corpora. Expert social observations are labeled separately from expert interpretation, curated roundups, first-party claims, and event affiliation. Event Pulse lives inside Analyses, so the interface retains nine direct workspaces rather than adding another top-level destination.
 
-The Weekly Review is the controlled path from observation to judgment. It considers a 36-item pool made from seven Early Signal directions, three expert findings, six operator/investor narratives, and twenty cross-source themes. Only unresolved new or materially changed candidates can enter a ten-item assessment queue. Reviewed candidates retain an explicit adjudication explaining whether they created a conditional requirement, strengthened an existing requirement, or remained outside the model. Priority allocates reviewer attention; it cannot change requirement maturity. The public artifact lives at `data/public/weekly-review.json`.
+The Weekly Review is the controlled path from observation to judgment. It currently considers a 37-item pool made from seven Early Signal directions, three expert findings, six operator/investor narratives, and twenty-one cross-source themes. New or materially changed candidates can enter a ten-item assessment queue; unresolved cases remain there, explicitly marked as carried, until a decision is recorded. Reviewed candidates retain an adjudication explaining whether they created a conditional requirement, strengthened an existing requirement, or remained outside the model. Priority allocates reviewer attention; it cannot change requirement maturity. The public artifact lives at `data/public/weekly-review.json`.

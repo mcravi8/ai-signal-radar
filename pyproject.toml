@@ -8,9 +8,9 @@ version = "0.1.0"
 description = "A public, evidence-linked radar for emerging AI categories, papers, projects, and narratives."
 requires-python = ">=3.11"
 dependencies = [
-  "PyYAML>=6.0",
-  "huggingface-hub>=0.30",
-  "jsonschema>=4.23",
+  "PyYAML>=6.0,<7",
+  "huggingface-hub>=0.30,<3",
+  "jsonschema>=4.23,<5",
 ]
 
 [project.scripts]
