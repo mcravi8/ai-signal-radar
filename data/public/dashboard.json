@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-10-03T04:49:25.989608+00:00",
+    "generated_at": "2026-10-03T04:55:52.313051+00:00",
     "status": "success",
-    "source_count": 43,
+    "source_count": 45,
     "evidence_count": 2277,
     "warnings": []
   },
@@ -3453,7 +3453,7 @@
     },
     {
       "id": "bluesky:b3614927c6a2:3mwhjlrkyx22f",
-      "source_id": "simon-willison",
+      "source_id": "bluesky-simon-willison",
       "source_type": "expert-social",
       "title": "I included a few references to this year's record-breaking Kākāpō breeding season in a talk I gave yesterday, and since Claude Opus 5.5 is surprisingly capable at pixel art animation I had it creat...",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mwhjlrkyx22f",
@@ -3834,7 +3834,7 @@
     },
     {
       "id": "bluesky:b3614927c6a2:3mwm5kkl5e22s",
-      "source_id": "simon-willison",
+      "source_id": "bluesky-simon-willison",
       "source_type": "expert-social",
       "title": "I really like how @reckless.bsky.social described this: \"The people do not yearn for automation\" www.theverge.com/podcast/9170...",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mwm5kkl5e22s",
@@ -4229,7 +4229,7 @@
     },
     {
       "id": "bluesky:b3614927c6a2:3mwoc6wab4s2d",
-      "source_id": "simon-willison",
+      "source_id": "bluesky-simon-willison",
       "source_type": "expert-social",
       "title": "I'm at OpenAI's DevDay event in San Francisco today - as I have for the past three DevDay events, I'm running a live blog where I'll be posting updates during the keynote, which starts in five minu...",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mwoc6wab4s2d",
@@ -5204,7 +5204,7 @@
     },
     {
       "id": "bluesky:b3614927c6a2:3mwvldzjzqk2z",
-      "source_id": "simon-willison",
+      "source_id": "bluesky-simon-willison",
       "source_type": "expert-social",
       "title": "If you have not yet been to see the scale model of NYC built by Joe Macken out of cardboard and balsa wood over a period of 21 years you only have until the 12th of October to see it! It's at the M...",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mwvldzjzqk2z",
@@ -6051,6 +6051,28 @@
       "evidence_role": "expert-interpretation",
       "homepage_url": "https://lilianweng.github.io/",
       "logo_url": "https://avatars.githubusercontent.com/lilianweng"
+    },
+    {
+      "id": "bluesky-simon-willison",
+      "name": "Simon Willison on Bluesky",
+      "channel": "expert-social",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "simon-willison",
+      "evidence_role": "expert-observation",
+      "homepage_url": "https://bsky.app/profile/simonwillison.net",
+      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg"
+    },
+    {
+      "id": "bluesky-swyx",
+      "name": "Shawn \"swyx\" Wang on Bluesky",
+      "channel": "expert-social",
+      "source_quality": "high",
+      "commercial_bias": "authorial",
+      "publisher_id": "latent-space",
+      "evidence_role": "expert-observation",
+      "homepage_url": "https://bsky.app/profile/swyx.io",
+      "logo_url": "https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg"
     },
     {
       "id": "bluesky-karpathy",

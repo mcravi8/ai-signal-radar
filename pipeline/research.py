@@ -188,6 +188,7 @@ def _signal_snapshot(
         family_names[family_id] = family_name
 
     source_ids = sorted({item["source_id"] for item in trailing})
+    publisher_ids = sorted({item.get("publisher_id", item["source_id"]) for item in trailing})
     technical_family_count = len({"builders", "research", "engineering"}.intersection(family_items))
     active_periods = sum(
         any(end - timedelta(days=period_end) < published <= end - timedelta(days=period_start) for published, _ in dated)
@@ -199,11 +200,11 @@ def _signal_snapshot(
         stage = "unobserved"
     elif not trailing or not recent:
         stage = "fading"
-    elif family_count >= 5 and len(source_ids) >= 6 and technical_family_count >= 2 and active_periods >= 2:
+    elif family_count >= 5 and len(publisher_ids) >= 6 and technical_family_count >= 2 and active_periods >= 2:
         stage = "established"
-    elif family_count >= 3 and len(source_ids) >= 5 and technical_family_count >= 2:
+    elif family_count >= 3 and len(publisher_ids) >= 5 and technical_family_count >= 2:
         stage = "corroborating"
-    elif family_count >= 2 and len(source_ids) >= 2 and technical_family_count >= 1:
+    elif family_count >= 2 and len(publisher_ids) >= 2 and technical_family_count >= 1:
         stage = "emerging"
     else:
         stage = "weak-signal"
@@ -221,12 +222,15 @@ def _signal_snapshot(
             "id": family_id,
             "name": family_names[family_id],
             "source_ids": sorted({item["source_id"] for item in family_evidence}),
-            "source_count": len({item["source_id"] for item in family_evidence}),
+            "source_count": len({item.get("publisher_id", item["source_id"]) for item in family_evidence}),
             "evidence_count": len(family_evidence),
         }
         for family_id, family_evidence in sorted(
             family_items.items(),
-            key=lambda pair: (-len({item["source_id"] for item in pair[1]}), pair[0]),
+            key=lambda pair: (
+                -len({item.get("publisher_id", item["source_id"]) for item in pair[1]}),
+                pair[0],
+            ),
         )
     ]
     return {
@@ -235,7 +239,8 @@ def _signal_snapshot(
         "items": trailing,
         "recent_items": recent,
         "source_ids": source_ids,
-        "source_count": len(source_ids),
+        "publisher_ids": publisher_ids,
+        "source_count": len(publisher_ids),
         "source_families": family_summary,
         "family_count": family_count,
         "technical_family_count": technical_family_count,
@@ -332,6 +337,7 @@ def _normalize_public_evidence(row: dict[str, Any], themes: dict[str, dict[str, 
     return {
         "id": row["id"],
         "source_id": row.get("source_id", "unknown"),
+        "publisher_id": row.get("source_id", "unknown"),
         "source_type": row.get("source_type", "unknown"),
         "evidence_kind": "public-source-item",
         "title": row.get("title", "Untitled evidence"),
@@ -380,6 +386,7 @@ def _normalize_alpha_evidence(
             {
                 "id": f"alphasignal:trend:{slugify(trend['name'])}",
                 "source_id": "alphasignal",
+                "publisher_id": "alphasignal",
                 "source_type": "newsletter-analysis",
                 "evidence_kind": "aggregate-analysis",
                 "title": trend["name"],
@@ -417,6 +424,7 @@ def _normalize_alpha_evidence(
             {
                 "id": evidence_id,
                 "source_id": "alphasignal",
+                "publisher_id": "alphasignal",
                 "source_type": "newsletter-analysis",
                 "evidence_kind": "project-assessment",
                 "title": project["name"],
@@ -477,7 +485,7 @@ def _theme_analyses(
     for definition in theme_defs:
         by_source = Counter()
         for item in grouped.get(definition["id"], []):
-            by_source[item["source_id"]] += item.get("support_count", 1)
+            by_source[item.get("publisher_id", item["source_id"])] += item.get("support_count", 1)
         effective_totals[definition["id"]] = sum(math.log1p(value) for value in by_source.values())
     max_effective_support = max(effective_totals.values(), default=1) or 1
     analyses = []
@@ -485,12 +493,15 @@ def _theme_analyses(
     for definition in theme_defs:
         theme_id = definition["id"]
         items = grouped.get(theme_id, [])
-        source_groups: dict[str, dict[str, int]] = defaultdict(lambda: {"observations": 0, "support_units": 0})
+        source_groups: dict[str, dict[str, Any]] = defaultdict(
+            lambda: {"observations": 0, "support_units": 0, "source_ids": set()}
+        )
         monthly = Counter({month: 0 for month in months})
         for item in items:
-            source = source_groups[item["source_id"]]
+            source = source_groups[item.get("publisher_id", item["source_id"])]
             source["observations"] += 1
             source["support_units"] += item.get("support_count", 1)
+            source["source_ids"].add(item["source_id"])
             for month, count in item.get("monthly_counts", {}).items():
                 if month in monthly:
                     monthly[month] += count
@@ -520,8 +531,14 @@ def _theme_analyses(
             maturity = "corroborated"
 
         source_breakdown = [
-            {"source_id": source_id, **counts}
-            for source_id, counts in sorted(source_groups.items(), key=lambda pair: (-pair[1]["support_units"], pair[0]))
+            {
+                "source_id": publisher_id if publisher_id in counts["source_ids"] else sorted(counts["source_ids"])[0],
+                "publisher_id": publisher_id,
+                "source_ids": sorted(counts["source_ids"]),
+                "observations": counts["observations"],
+                "support_units": counts["support_units"],
+            }
+            for publisher_id, counts in sorted(source_groups.items(), key=lambda pair: (-pair[1]["support_units"], pair[0]))
         ]
         analyses.append(
             {
@@ -724,10 +741,11 @@ def _early_signal_directions(
             source = source_defs.get(item["source_id"], {})
             channel = source.get("channel", item.get("source_type", "unknown"))
             family_id = SOURCE_FAMILIES.get(channel, (channel, ""))[0]
-            if family_id not in selected_families or item["source_id"] not in selected_sources:
+            publisher_id = source.get("publisher_id", item.get("publisher_id", item["source_id"]))
+            if family_id not in selected_families or publisher_id not in selected_sources:
                 selected.append(item)
                 selected_families.add(family_id)
-                selected_sources.add(item["source_id"])
+                selected_sources.add(publisher_id)
             if len(selected) == 8:
                 break
         if len(selected) < 8:
@@ -826,7 +844,20 @@ def build_research(
     theme_defs = taxonomy.get("seed_themes", [])
     theme_by_id = {theme["id"]: theme for theme in theme_defs}
     layer_names = {layer["id"]: layer["name"] for layer in taxonomy.get("stack_layers", [])}
+    source_defs = {source["id"]: dict(source) for source in public_payload.get("sources", [])}
+    source_defs.setdefault(
+        "alphasignal",
+        {
+            "id": "alphasignal",
+            "name": "AlphaSignal",
+            "channel": "newsletter",
+            "source_quality": "medium",
+            "commercial_bias": "disclosed-and-mixed",
+        },
+    )
     public_evidence = [_normalize_public_evidence(row, theme_by_id) for row in public_payload.get("evidence", [])]
+    for item in public_evidence:
+        item["publisher_id"] = source_defs.get(item["source_id"], {}).get("publisher_id", item["source_id"])
     alpha_evidence, project_ids = _normalize_alpha_evidence(alpha, theme_by_id, mappings)
     evidence = sorted(public_evidence + alpha_evidence, key=lambda item: (item.get("published_at", ""), item["id"]), reverse=True)
     themes = _theme_analyses(evidence, theme_defs, as_of)
@@ -908,17 +939,6 @@ def build_research(
     queued_projects = [project for project in projects if project["review_status"] == "queued"]
     discovered_projects = [project for project in projects if project["review_status"] == "discovered"]
 
-    source_defs = {source["id"]: dict(source) for source in public_payload.get("sources", [])}
-    source_defs.setdefault(
-        "alphasignal",
-        {
-            "id": "alphasignal",
-            "name": "AlphaSignal",
-            "channel": "newsletter",
-            "source_quality": "medium",
-            "commercial_bias": "disclosed-and-mixed",
-        },
-    )
     counts = Counter(item["source_id"] for item in evidence)
     dates_by_source: dict[str, list[datetime]] = defaultdict(list)
     for item in evidence:

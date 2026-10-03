@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T04:49:25.989608+00:00",
+    "generated_at": "2026-10-03T04:55:52.313051+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1423,
     "input_changed_document_count": 0,
-    "cluster_count": 483,
+    "cluster_count": 488,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 171,
-    "coherent_cluster_count": 187,
+    "coherent_cluster_count": 191,
     "quality_eligible_cluster_count": 12,
-    "explained_cluster_count": 117,
+    "explained_cluster_count": 119,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 110,
+      "covered-by-existing-theme": 112,
       "merge-existing-direction": 7,
-      "novel": 366
+      "novel": 369
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -2695,6 +2695,138 @@
         "source_family_count": 2,
         "technical_record_count": 2,
         "dominant_publisher_share": 0.333,
+        "raw_evidence_count": 3,
+        "capped_evidence_count": 3,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 3,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:really-like-8051ae33d5",
+      "anchor_ids": [
+        "phrase:really-like"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:really-like",
+          "label": "really like",
+          "kind": "emergent-phrase",
+          "document_count": 3,
+          "source_count": 3
+        }
+      ],
+      "evidence_ids": [
+        "bluesky:b3614927c6a2:3mwm5kkl5e22s",
+        "hn:49855468",
+        "simon-willison:078f2955607a3f9c4ad4"
+      ],
+      "source_ids": [
+        "bluesky-simon-willison",
+        "hacker-news",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "attention",
+        "experts"
+      ],
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "skills-integrations": 1
+      },
+      "first_seen": "2026-09-25T02:07:04+00:00",
+      "last_seen": "2026-09-28T20:26:20.741Z",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 3,
+        "source_family_count": 2,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 0.667,
+        "raw_evidence_count": 3,
+        "capped_evidence_count": 3,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 3,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:san-francisco-2beccf7f4a",
+      "anchor_ids": [
+        "phrase:san-francisco"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:san-francisco",
+          "label": "san francisco",
+          "kind": "emergent-phrase",
+          "document_count": 3,
+          "source_count": 3
+        }
+      ],
+      "evidence_ids": [
+        "bluesky:b3614927c6a2:3mwoc6wab4s2d",
+        "github:1355092388",
+        "simon-willison:327f7261ab07f68689eb"
+      ],
+      "source_ids": [
+        "bluesky-simon-willison",
+        "github",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "experts"
+      ],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "coding-agents": 1
+      },
+      "first_seen": "2026-09-02T18:19:55Z",
+      "last_seen": "2026-09-29T16:54:38.502Z",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 3,
+        "source_family_count": 2,
+        "technical_record_count": 1,
+        "dominant_publisher_share": 0.667,
         "raw_evidence_count": 3,
         "capped_evidence_count": 3,
         "changed_evidence_count": 0
@@ -6583,136 +6715,6 @@
         "matched_anchor_phrases": [],
         "basis": "document-share"
       }
-    },
-    {
-      "id": "discovery:really-like-8051ae33d5",
-      "anchor_ids": [
-        "phrase:really-like"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:really-like",
-          "label": "really like",
-          "kind": "emergent-phrase",
-          "document_count": 3,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "bluesky:b3614927c6a2:3mwm5kkl5e22s",
-        "hn:49855468",
-        "simon-willison:078f2955607a3f9c4ad4"
-      ],
-      "source_ids": [
-        "hacker-news",
-        "simon-willison"
-      ],
-      "source_family_ids": [
-        "attention",
-        "experts"
-      ],
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "skills-integrations": 1
-      },
-      "first_seen": "2026-09-25T02:07:04+00:00",
-      "last_seen": "2026-09-28T20:26:20.741Z",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 0,
-        "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 3,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:san-francisco-2beccf7f4a",
-      "anchor_ids": [
-        "phrase:san-francisco"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:san-francisco",
-          "label": "san francisco",
-          "kind": "emergent-phrase",
-          "document_count": 3,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "bluesky:b3614927c6a2:3mwoc6wab4s2d",
-        "github:1355092388",
-        "simon-willison:327f7261ab07f68689eb"
-      ],
-      "source_ids": [
-        "github",
-        "simon-willison"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "experts"
-      ],
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "coding-agents": 1
-      },
-      "first_seen": "2026-09-02T18:19:55Z",
-      "last_seen": "2026-09-29T16:54:38.502Z",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 1,
-        "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 3,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
     },
     {
       "id": "discovery:seems-like-8c7bef198b",
@@ -17397,7 +17399,7 @@
       ],
       "source_ids": [
         "arxiv",
-        "simon-willison"
+        "bluesky-simon-willison"
       ],
       "source_family_ids": [
         "experts",
@@ -18162,8 +18164,8 @@
         "openai-news:2c827cba158d2f26e6e9"
       ],
       "source_ids": [
-        "openai-news",
-        "simon-willison"
+        "bluesky-simon-willison",
+        "openai-news"
       ],
       "source_family_ids": [
         "builders",
@@ -20014,8 +20016,8 @@
         "hn:49768336"
       ],
       "source_ids": [
-        "hacker-news",
-        "simon-willison"
+        "bluesky-simon-willison",
+        "hacker-news"
       ],
       "source_family_ids": [
         "attention",
@@ -21520,7 +21522,7 @@
       ],
       "source_ids": [
         "arxiv",
-        "simon-willison"
+        "bluesky-simon-willison"
       ],
       "source_family_ids": [
         "experts",
@@ -22096,8 +22098,8 @@
         "greylock-essays:aacd57b6bec14e3c9da1"
       ],
       "source_ids": [
-        "greylock-essays",
-        "simon-willison"
+        "bluesky-simon-willison",
+        "greylock-essays"
       ],
       "source_family_ids": [
         "experts",
@@ -25361,7 +25363,7 @@
       ],
       "source_ids": [
         "anthropic-news-research",
-        "simon-willison"
+        "bluesky-simon-willison"
       ],
       "source_family_ids": [
         "builders",
@@ -26946,6 +26948,91 @@
       "nearest_known": null
     },
     {
+      "id": "discovery:openai-agent-swarm-bb53a64e08",
+      "anchor_ids": [
+        "phrase:openai-agent-swarm"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:openai-agent-swarm",
+          "label": "openai agent swarm",
+          "kind": "emergent-phrase",
+          "document_count": 3,
+          "source_count": 3
+        }
+      ],
+      "evidence_ids": [
+        "bluesky:b3614927c6a2:3mvbu4gg2ic2m",
+        "latent-space:2906695f474f1c030c6a",
+        "simon-willison:7b2efff004017f358a30"
+      ],
+      "source_ids": [
+        "bluesky-simon-willison",
+        "latent-space",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "experts"
+      ],
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "recurrent_theme_ids": [
+        "agent-harnesses"
+      ],
+      "theme_document_counts": {
+        "agent-harnesses": 3
+      },
+      "first_seen": "2026-09-05T04:32:00+00:00",
+      "last_seen": "2026-09-12T00:45:33.933Z",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 3,
+        "source_family_count": 1,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 0.667,
+        "raw_evidence_count": 3,
+        "capped_evidence_count": 3,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 1,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "concept:theme:agent-harnesses",
+            "document_count": 3
+          },
+          {
+            "id": "theme:agent-harnesses",
+            "document_count": 3
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "agent-harnesses",
+        "title": "Agent harnesses",
+        "matched_anchor_phrases": [
+          "openai agent swarm"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 1.0
+      }
+    },
+    {
       "id": "discovery:new-book-f4a7d1bf17",
       "anchor_ids": [
         "phrase:new-book"
@@ -28308,90 +28395,6 @@
       }
     },
     {
-      "id": "discovery:openai-agent-swarm-bb53a64e08",
-      "anchor_ids": [
-        "phrase:openai-agent-swarm"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:openai-agent-swarm",
-          "label": "openai agent swarm",
-          "kind": "emergent-phrase",
-          "document_count": 3,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "bluesky:b3614927c6a2:3mvbu4gg2ic2m",
-        "latent-space:2906695f474f1c030c6a",
-        "simon-willison:7b2efff004017f358a30"
-      ],
-      "source_ids": [
-        "latent-space",
-        "simon-willison"
-      ],
-      "source_family_ids": [
-        "experts"
-      ],
-      "theme_ids": [
-        "agent-harnesses"
-      ],
-      "recurrent_theme_ids": [
-        "agent-harnesses"
-      ],
-      "theme_document_counts": {
-        "agent-harnesses": 3
-      },
-      "first_seen": "2026-09-05T04:32:00+00:00",
-      "last_seen": "2026-09-12T00:45:33.933Z",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 2,
-        "source_family_count": 1,
-        "technical_record_count": 0,
-        "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:agent-harnesses",
-            "document_count": 3
-          },
-          {
-            "id": "theme:agent-harnesses",
-            "document_count": 3
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "agent-harnesses",
-        "title": "Agent harnesses",
-        "matched_anchor_phrases": [
-          "openai agent swarm"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 1.0
-      }
-    },
-    {
       "id": "discovery:public-benchmarks-d0880cac0a",
       "anchor_ids": [
         "phrase:public-benchmarks"
@@ -28999,6 +29002,99 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
+    },
+    {
+      "id": "discovery:aka-decision-models-2805ea074f",
+      "anchor_ids": [
+        "phrase:aka-decision-models",
+        "phrase:new-category"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:aka-decision-models",
+          "label": "aka decision models",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        },
+        {
+          "id": "phrase:new-category",
+          "label": "new category",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "bluesky:b3614927c6a2:3mw2tsop42c2u",
+        "simon-willison:b3e5263fa8976c3c350c"
+      ],
+      "source_ids": [
+        "bluesky-simon-willison",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "experts"
+      ],
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "recurrent_theme_ids": [
+        "small-specialized-models"
+      ],
+      "theme_document_counts": {
+        "small-specialized-models": 2
+      },
+      "first_seen": "2026-09-21T23:09:20+00:00",
+      "last_seen": "2026-09-21T23:16:40.533Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 1,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 1.0,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 1,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:reason",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:small-specialized-models",
+            "document_count": 2
+          },
+          {
+            "id": "theme:small-specialized-models",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
     },
     {
       "id": "discovery:anything-interesting-42c070cc84",
@@ -30342,6 +30438,113 @@
         "matched_anchor_phrases": [],
         "basis": "document-share"
       }
+    },
+    {
+      "id": "discovery:cutting-edge-software-still-100a494a8f",
+      "anchor_ids": [
+        "phrase:cutting-edge-software-still",
+        "phrase:developer-roles-like-mine",
+        "phrase:edge-software-still-requires",
+        "phrase:must-admit",
+        "phrase:slowly-realizing",
+        "phrase:software-developer-roles-like",
+        "phrase:truly-cutting-edge-software"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:cutting-edge-software-still",
+          "label": "cutting edge software still",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        },
+        {
+          "id": "phrase:developer-roles-like-mine",
+          "label": "developer roles like mine",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        },
+        {
+          "id": "phrase:edge-software-still-requires",
+          "label": "edge software still requires",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        },
+        {
+          "id": "phrase:must-admit",
+          "label": "must admit",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        },
+        {
+          "id": "phrase:slowly-realizing",
+          "label": "slowly realizing",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        },
+        {
+          "id": "phrase:software-developer-roles-like",
+          "label": "software developer roles like",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        },
+        {
+          "id": "phrase:truly-cutting-edge-software",
+          "label": "truly cutting edge software",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "bluesky:b3614927c6a2:3mvdokksrl223",
+        "simon-willison:b30b0408a14795de68c8"
+      ],
+      "source_ids": [
+        "bluesky-simon-willison",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "experts"
+      ],
+      "theme_ids": [],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {},
+      "first_seen": "2026-09-12T18:00:21+00:00",
+      "last_seen": "2026-09-12T18:11:25.315Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 1,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 1.0,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
     },
     {
       "id": "discovery:data-sovereignty-5980424c41",
@@ -33906,7 +34109,7 @@
       ],
       "source_ids": [
         "bluesky-ethan-mollick",
-        "simon-willison"
+        "bluesky-simon-willison"
       ],
       "source_family_ids": [
         "experts"
@@ -34018,6 +34221,91 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
+    },
+    {
+      "id": "discovery:new-gemini-c3df987c9e",
+      "anchor_ids": [
+        "phrase:new-gemini"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:new-gemini",
+          "label": "new gemini",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "bluesky:b3614927c6a2:3mw7magyrwc2i",
+        "simon-willison:e47986333e4f67663922"
+      ],
+      "source_ids": [
+        "bluesky-simon-willison",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "experts"
+      ],
+      "theme_ids": [
+        "voice-audio"
+      ],
+      "recurrent_theme_ids": [
+        "voice-audio"
+      ],
+      "theme_document_counts": {
+        "voice-audio": 2
+      },
+      "first_seen": "2026-09-23T17:12:27+00:00",
+      "last_seen": "2026-09-23T20:44:30.981Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 1,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 1.0,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 1,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:generate",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:voice-audio",
+            "document_count": 2
+          },
+          {
+            "id": "theme:voice-audio",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "voice-audio",
+        "title": "Voice & audio interfaces",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
     },
     {
       "id": "discovery:often-leaves-0e065d97ab",
@@ -34511,6 +34799,82 @@
         "context_coherence_met": false,
         "context_features": [],
         "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:osm-data-5125ba6bdb",
+      "anchor_ids": [
+        "phrase:osm-data"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:osm-data",
+          "label": "osm data",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "bluesky:b3614927c6a2:3mved4krjbs2b",
+        "simon-willison:56ed9309de330598a4e5"
+      ],
+      "source_ids": [
+        "bluesky-simon-willison",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "experts"
+      ],
+      "theme_ids": [
+        "skills-integrations"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "skills-integrations": 1
+      },
+      "first_seen": "2026-09-12T23:56:42+00:00",
+      "last_seen": "2026-09-13T00:19:24.106Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 1,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 1.0,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:route",
+            "document_count": 2
+          },
+          {
+            "id": "concept:phrase:chatgpt-work",
+            "document_count": 2
+          },
+          {
+            "id": "concept:phrase:gpt-6-astra",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
         "spark_quality_met": false,
         "candidate_quality_met": false
       },
@@ -35187,6 +35551,78 @@
         "context_features": [
           {
             "id": "action:deploy",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:security-releases-5f7413e4d6",
+      "anchor_ids": [
+        "phrase:security-releases"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:security-releases",
+          "label": "security releases",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "bluesky:b3614927c6a2:3mv7nb6bezk23",
+        "simon-willison:ac293d7ca39f3bdc6e8b"
+      ],
+      "source_ids": [
+        "bluesky-simon-willison",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "experts"
+      ],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "coding-agents": 1
+      },
+      "first_seen": "2026-09-11T03:37:37.495Z",
+      "last_seen": "2026-09-14T00:28:10+00:00",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 1,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 1.0,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:deploy",
+            "document_count": 2
+          },
+          {
+            "id": "action:secure",
             "document_count": 2
           }
         ],

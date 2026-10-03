@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-10-03T04:49:25.989608+00:00",
+    "generated_at": "2026-10-03T04:55:52.313051+00:00",
     "as_of": "2026-10-03",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -95,7 +95,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 66,
         "family_count": 14,
-        "trend_score": 83.0
+        "trend_score": 83.2
       },
       "linked_requirements": [
         {
@@ -200,7 +200,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 64,
         "family_count": 13,
-        "trend_score": 73.6
+        "trend_score": 73.7
       },
       "linked_requirements": [
         {
@@ -299,7 +299,7 @@
         "recent_evidence_count": 3,
         "technical_record_count": 59,
         "family_count": 13,
-        "trend_score": 68.8
+        "trend_score": 69.0
       },
       "linked_requirements": [
         {
@@ -406,7 +406,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 41,
         "family_count": 15,
-        "trend_score": 66.0
+        "trend_score": 66.1
       },
       "linked_requirements": [
         {
@@ -486,7 +486,7 @@
       "movement": "falling",
       "metrics": {
         "evidence_count": 241,
-        "source_count": 31,
+        "source_count": 30,
         "source_types": [
           "community",
           "company-directory",
@@ -608,7 +608,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.7
+        "trend_score": 69.8
       },
       "linked_requirements": [
         {
@@ -875,7 +875,7 @@
       "movement": "steady",
       "metrics": {
         "evidence_count": 41,
-        "source_count": 14,
+        "source_count": 13,
         "source_types": [
           "company-directory",
           "curated-newsletter",
@@ -891,7 +891,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 18,
         "family_count": 10,
-        "trend_score": 67.0
+        "trend_score": 66.5
       },
       "linked_requirements": [
         {
@@ -1118,7 +1118,7 @@
       "movement": "steady",
       "metrics": {
         "evidence_count": 66,
-        "source_count": 10,
+        "source_count": 9,
         "source_types": [
           "community",
           "company-directory",
@@ -1200,7 +1200,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 15,
         "family_count": 9,
-        "trend_score": 66.1
+        "trend_score": 66.2
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1270,7 +1270,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 32,
         "family_count": 12,
-        "trend_score": 71.2
+        "trend_score": 71.3
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1353,7 +1353,7 @@
         "recent_evidence_count": 1,
         "technical_record_count": 46,
         "family_count": 11,
-        "trend_score": 66.2
+        "trend_score": 66.4
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1422,7 +1422,7 @@
         "recent_evidence_count": 1,
         "technical_record_count": 40,
         "family_count": 11,
-        "trend_score": 71.4
+        "trend_score": 71.6
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1734,7 +1734,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 6,
         "family_count": 4,
-        "trend_score": 44.7
+        "trend_score": 44.8
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -1800,7 +1800,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 4,
         "family_count": 8,
-        "trend_score": 65.9
+        "trend_score": 66.0
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -2171,7 +2171,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 1,
         "family_count": 3,
-        "trend_score": 38.8
+        "trend_score": 38.9
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -2410,7 +2410,7 @@
       "id": "operator-narrative:coding-agent-stack",
       "origin": "operator-narrative",
       "title": "The coding-agent opportunity is shifting below the assistant interface",
-      "description": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 83.0 and appears across 18 radar sources.",
+      "description": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 83.2 and appears across 18 radar sources.",
       "source_analysis": "operator-narratives/coding-agent-stack",
       "theme_ids": [
         "coding-agents"
@@ -2473,7 +2473,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 0,
         "family_count": 2,
-        "trend_score": 39.7
+        "trend_score": 39.8
       },
       "linked_requirements": [],
       "linked_requirement": null,
@@ -2603,7 +2603,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 66,
         "family_count": 14,
-        "trend_score": 83.0
+        "trend_score": 83.2
       },
       "linked_requirements": [
         {
@@ -2660,7 +2660,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 64,
         "family_count": 13,
-        "trend_score": 73.6
+        "trend_score": 73.7
       },
       "linked_requirements": [
         {
@@ -2711,7 +2711,7 @@
         "recent_evidence_count": 3,
         "technical_record_count": 59,
         "family_count": 13,
-        "trend_score": 68.8
+        "trend_score": 69.0
       },
       "linked_requirements": [
         {
@@ -2770,7 +2770,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 41,
         "family_count": 15,
-        "trend_score": 66.0
+        "trend_score": 66.1
       },
       "linked_requirements": [
         {
@@ -2802,7 +2802,7 @@
       "stage": "broadly-corroborated",
       "metrics": {
         "evidence_count": 241,
-        "source_count": 31,
+        "source_count": 30,
         "source_types": [
           "community",
           "company-directory",
@@ -2876,7 +2876,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.7
+        "trend_score": 69.8
       },
       "linked_requirements": [
         {
@@ -3008,7 +3008,7 @@
       "stage": "corroborated",
       "metrics": {
         "evidence_count": 41,
-        "source_count": 14,
+        "source_count": 13,
         "source_types": [
           "company-directory",
           "curated-newsletter",
@@ -3024,7 +3024,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 18,
         "family_count": 10,
-        "trend_score": 67.0
+        "trend_score": 66.5
       },
       "linked_requirements": [
         {
@@ -3152,7 +3152,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 32,
         "family_count": 12,
-        "trend_score": 71.2
+        "trend_score": 71.3
       },
       "linked_requirements": [],
       "reviewed_at": "2026-09-25",
@@ -3396,7 +3396,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 64,
         "family_count": 13,
-        "trend_score": 73.6
+        "trend_score": 73.7
       },
       "linked_requirements": [
         {
@@ -3497,7 +3497,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 41,
         "family_count": 15,
-        "trend_score": 66.0
+        "trend_score": 66.1
       },
       "linked_requirements": [
         {
@@ -3694,7 +3694,7 @@
         "recent_evidence_count": 3,
         "technical_record_count": 59,
         "family_count": 13,
-        "trend_score": 68.8
+        "trend_score": 69.0
       },
       "linked_requirements": [
         {
@@ -3780,7 +3780,7 @@
       "movement": "steady",
       "metrics": {
         "evidence_count": 41,
-        "source_count": 14,
+        "source_count": 13,
         "source_types": [
           "company-directory",
           "curated-newsletter",
@@ -3796,7 +3796,7 @@
         "recent_evidence_count": 0,
         "technical_record_count": 18,
         "family_count": 10,
-        "trend_score": 67.0
+        "trend_score": 66.5
       },
       "linked_requirements": [
         {
@@ -3876,7 +3876,7 @@
       "movement": "falling",
       "metrics": {
         "evidence_count": 241,
-        "source_count": 31,
+        "source_count": 30,
         "source_types": [
           "community",
           "company-directory",
@@ -3999,7 +3999,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 66,
         "family_count": 14,
-        "trend_score": 83.0
+        "trend_score": 83.2
       },
       "linked_requirements": [
         {
@@ -4104,7 +4104,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.7
+        "trend_score": 69.8
       },
       "linked_requirements": [
         {

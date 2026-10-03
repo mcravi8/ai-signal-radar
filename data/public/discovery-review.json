@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T04:49:25.989608+00:00",
+    "generated_at": "2026-10-03T04:55:52.313051+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1423,
     "input_changed_document_count": 0,
-    "cluster_count": 483,
+    "cluster_count": 488,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 171,
-    "coherent_cluster_count": 187,
+    "coherent_cluster_count": 191,
     "quality_eligible_cluster_count": 12,
-    "explained_cluster_count": 117,
+    "explained_cluster_count": 119,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 110,
+      "covered-by-existing-theme": 112,
       "merge-existing-direction": 7,
-      "novel": 366
+      "novel": 369
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,

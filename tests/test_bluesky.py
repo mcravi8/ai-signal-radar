@@ -92,6 +92,10 @@ class BlueskyCollectorTests(unittest.TestCase):
     def test_curated_identity_and_gpt_vocabulary_regressions(self):
         config = yaml.safe_load((ROOT / "config/bluesky.yml").read_text(encoding="utf-8"))
         accounts = {account["source_id"]: account for account in config["accounts"]}
+        self.assertIn("bluesky-simon-willison", accounts)
+        self.assertIn("bluesky-swyx", accounts)
+        self.assertEqual(accounts["bluesky-simon-willison"]["publisher_id"], "simon-willison")
+        self.assertEqual(accounts["bluesky-swyx"]["publisher_id"], "latent-space")
         margaret = accounts["bluesky-margaret-mitchell"]
         self.assertEqual(margaret["handle"], "mmitchell.bsky.social")
         self.assertEqual(margaret["did"], "did:plc:3tmaleaxipegsectvamyrkyi")

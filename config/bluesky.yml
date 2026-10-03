@@ -44,7 +44,7 @@ artifact_domains:
   - paperswithcode.com
 
 accounts:
-  - source_id: simon-willison
+  - source_id: bluesky-simon-willison
     publisher_id: simon-willison
     display_name: Simon Willison
     handle: simonwillison.net
@@ -60,7 +60,7 @@ accounts:
     focus: LLM architectures, neural networks, and minimalist agent systems.
     identity_confidence: profile-match
 
-  - source_id: latent-space
+  - source_id: bluesky-swyx
     publisher_id: latent-space
     display_name: Shawn "swyx" Wang
     handle: swyx.io

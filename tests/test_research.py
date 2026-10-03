@@ -18,7 +18,7 @@ class CrossSourceResearchTests(unittest.TestCase):
     def test_every_active_source_uses_common_evidence_contract(self):
         required = {
             "id", "source_id", "source_type", "evidence_kind", "title", "published_at",
-            "theme_ids", "stack_layers", "support_count", "monthly_counts", "provenance",
+            "publisher_id", "theme_ids", "stack_layers", "support_count", "monthly_counts", "provenance",
         }
         self.assertGreaterEqual(self.payload["meta"]["active_source_count"], 28)
         expected_sources = {
@@ -40,6 +40,10 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertTrue(any(theme["source_count"] >= 4 for theme in observed))
         for theme in observed:
             self.assertEqual(theme["source_count"], len(theme["source_breakdown"]))
+            self.assertEqual(
+                theme["source_count"],
+                len({item["publisher_id"] for item in theme["source_breakdown"]}),
+            )
             self.assertIsNotNone(theme["source_concentration"])
             self.assertIsNotNone(theme["score"])
 
@@ -151,9 +155,12 @@ class CrossSourceResearchTests(unittest.TestCase):
             source for source in self.payload["sources"]
             if source.get("channel") == "expert-social"
         ]
-        self.assertEqual(len(bluesky_sources), 8)
+        self.assertEqual(len(bluesky_sources), 10)
         self.assertTrue(all(source["evidence_role"] == "expert-observation" for source in bluesky_sources))
         self.assertTrue(all("bsky.social/about/brand-assets/" in source["logo_url"] for source in bluesky_sources))
+        by_id = {source["id"]: source for source in bluesky_sources}
+        self.assertEqual(by_id["bluesky-simon-willison"]["publisher_id"], "simon-willison")
+        self.assertEqual(by_id["bluesky-swyx"]["publisher_id"], "latent-space")
 
     def test_event_pulse_separates_attention_substance_and_persistence(self):
         analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}

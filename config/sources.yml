@@ -332,6 +332,30 @@ sources:
     source_quality: high
     commercial_bias: authorial
 
+  - id: bluesky-simon-willison
+    name: Simon Willison on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/simonwillison.net
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: simon-willison
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
+  - id: bluesky-swyx
+    name: Shawn "swyx" Wang on Bluesky
+    channel: expert-social
+    homepage_url: https://bsky.app/profile/swyx.io
+    logo_url: https://bsky.social/about/brand-assets/butterfly/bluesky_media_kit_logo_transparent_1.svg
+    enabled: true
+    collection: official-public-api
+    publisher_id: latent-space
+    evidence_role: expert-observation
+    source_quality: high
+    commercial_bias: authorial
+
   - id: bluesky-karpathy
     name: Andrej Karpathy on Bluesky
     channel: expert-social

@@ -334,6 +334,13 @@ def synthesize() -> None:
         for item in load_social_links(_yaml(ROOT / "data/manual/social-links.yml"), event_config)
     ]
     processed_rows = read_jsonl(ROOT / "data/processed/items.jsonl")
+    legacy_social_source_ids = {
+        "simon-willison": "bluesky-simon-willison",
+        "latent-space": "bluesky-swyx",
+    }
+    for row in processed_rows:
+        if row.get("source_type") == "expert-social" and row.get("source_id") in legacy_social_source_ids:
+            row["source_id"] = legacy_social_source_ids[row["source_id"]]
     processed_by_id = {row["id"]: row for row in processed_rows}
     # Reviewed manual records are authoritative when an automated collector has
     # already stored the same URL/title with sparse metadata (for example, a
