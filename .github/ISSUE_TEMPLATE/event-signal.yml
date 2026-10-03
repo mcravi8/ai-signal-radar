@@ -1,0 +1,64 @@
+name: Submit an event signal
+description: Propose a public LinkedIn or X post for Event Pulse review.
+title: "Event signal: "
+labels: [event-signal]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Submit only public links and your own short observation. Do not paste the full post,
+        private messages, email addresses, phone numbers, or other personal information.
+        A maintainer must add the `event-signal-reviewed` label before this can enter the radar.
+  - type: dropdown
+    id: event
+    attributes:
+      label: Event ID
+      options:
+        - neurips-2025
+        - genai-genesis-2026
+        - ai-engineer-worlds-fair-2026
+        - nvidia-gtc-2026
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - linkedin
+        - x
+    validations:
+      required: true
+  - type: input
+    id: post_url
+    attributes:
+      label: Public post URL
+      placeholder: https://www.linkedin.com/posts/... or https://x.com/.../status/...
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author name
+    validations:
+      required: true
+  - type: input
+    id: published_at
+    attributes:
+      label: Published date
+      description: Use YYYY-MM-DD.
+      placeholder: "2026-10-02"
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Original observation
+      description: In your own words, identify the claim, artifact, or repeated idea. Maximum 700 characters.
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Linked public artifacts
+      description: Optional. Add one public paper, repository, demo, or project URL per line.

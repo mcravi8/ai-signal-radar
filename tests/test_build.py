@@ -17,6 +17,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertTrue((ROOT / "dist/data/operating-model.json").exists())
         self.assertTrue((ROOT / "dist/data/weekly-review.json").exists())
         self.assertTrue((ROOT / "dist/data/discovery-review.json").exists())
+        self.assertTrue((ROOT / "dist/data/event-pulse.json").exists())
         html = (ROOT / "dist/index.html").read_text(encoding="utf-8")
         app = (ROOT / "dist/app.js").read_text(encoding="utf-8")
         self.assertIn('id="source-type"', html)
@@ -33,6 +34,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn("renderDiscovery", app)
         self.assertIn("discovery-review.json", app)
         self.assertIn("what_it_looks_like", app)
+        self.assertIn("renderEventPulse", app)
 
 
 if __name__ == "__main__":

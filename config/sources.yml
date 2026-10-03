@@ -522,6 +522,111 @@ sources:
     source_quality: medium
     commercial_bias: disclosed
 
+  - id: neurips-2025-proceedings
+    name: NeurIPS 2025 Proceedings
+    channel: event-program
+    homepage_url: https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference
+    logo_url: https://neurips.cc/favicon.ico
+    enabled: true
+    collection: conference-proceedings
+    event_id: neurips-2025
+    proceedings_url: https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference
+    published_at: "2025-12-02"
+    limit: 36
+    include_terms:
+      - agent
+      - language model
+      - inference
+      - evaluation
+      - reasoning
+      - memory
+      - retrieval
+      - multimodal
+      - robot
+      - safety
+      - privacy
+      - efficient
+    publisher_id: neurips
+    evidence_role: event-research-artifact
+    source_quality: high
+    commercial_bias: low
+
+  - id: genai-genesis-2026-projects
+    name: GenAI Genesis 2026 projects
+    channel: hackathon-gallery
+    homepage_url: https://genai-genesis-2026.devpost.com/project-gallery
+    logo_url: https://d2dmyh35ffsxbl.cloudfront.net/assets/reimagine2/devpost-logo-mobile-f3aff76bfc0b6ada9bb4ddd773bfc534769ed793f962612804a1e84c305a5f94.svg
+    enabled: true
+    collection: devpost-gallery
+    event_id: genai-genesis-2026
+    gallery_url: https://genai-genesis-2026.devpost.com/project-gallery
+    published_at: "2026-03-15"
+    pages: 3
+    limit: 30
+    publisher_id: genai-genesis-foundation
+    evidence_role: event-project-artifact
+    source_quality: medium
+    commercial_bias: sponsor-and-participant
+
+  - id: ai-engineer-worlds-fair-2026-program
+    name: AI Engineer World's Fair 2026 program
+    channel: event-program
+    homepage_url: https://ai.engineer/worldsfair/2026
+    logo_url: https://ai.engineer/favicon.ico
+    enabled: true
+    collection: event-json
+    event_id: ai-engineer-worlds-fair-2026
+    data_url: https://ai.engineer/worldsfair/2026/sessions.json
+    published_at: "2026-06-29"
+    limit: 48
+    max_per_track: 3
+    include_types: [keynote, session, workshop]
+    priority_tracks:
+      - Harness Engineering
+      - Agentic Engineering
+      - Inference
+      - Evals
+      - Security
+      - Context Engineering
+      - Memory & Continual Learning
+      - Data Quality
+      - Local AI
+      - Search & Retrieval
+      - Voice & Realtime AI
+      - Sandbox & Platform Engineering
+      - AI-Native Enterprises
+      - Software Factories
+      - Autoresearch
+      - AI in GTM
+    publisher_id: ai-engineer
+    evidence_role: event-program-claim
+    source_quality: high
+    commercial_bias: sponsor-and-organizer
+
+  - id: linkedin-event-links
+    name: LinkedIn event link inbox
+    channel: curated-social
+    homepage_url: https://www.linkedin.com/
+    logo_url: https://static.licdn.com/sc/h/akt4ae504epesldzj74dzred8
+    enabled: true
+    collection: reviewed-social-inbox
+    publisher_id: mixed-linkedin-authors
+    evidence_role: event-observation
+    source_quality: reviewed
+    commercial_bias: recorded-per-item
+
+  - id: x-event-links
+    name: X event link inbox
+    channel: curated-social
+    homepage_url: https://x.com/
+    logo_url: https://abs.twimg.com/favicons/twitter.3.ico
+    enabled: true
+    collection: reviewed-social-inbox
+    publisher_id: mixed-x-authors
+    evidence_role: event-observation
+    source_quality: reviewed
+    commercial_bias: recorded-per-item
+
   - id: manual-public-evidence
     name: Curated public evidence
     channel: mixed

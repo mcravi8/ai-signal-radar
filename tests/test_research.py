@@ -153,6 +153,25 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertTrue(all(source["evidence_role"] == "expert-observation" for source in bluesky_sources))
         self.assertTrue(all("bsky.social/about/brand-assets/" in source["logo_url"] for source in bluesky_sources))
 
+    def test_event_pulse_separates_attention_substance_and_persistence(self):
+        analyses = {analysis["id"]: analysis for analysis in self.payload["analyses"]}
+        pulse = analyses["event-pulse"]
+        self.assertEqual(pulse["status"], "active")
+        self.assertEqual(pulse["event_count"], 4)
+        self.assertEqual(pulse["active_event_count"], 3)
+        self.assertEqual(pulse["social_inbox"]["status"], "empty")
+        self.assertTrue(pulse["social_inbox"]["submission_url"].startswith("https://github.com/"))
+        evidence_ids = {item["id"] for item in self.payload["evidence"]}
+        for event in pulse["events"]:
+            self.assertTrue(set(event["evidence_ids"]).issubset(evidence_ids))
+            self.assertIn("score", event["attention"])
+            self.assertIn("score", event["technical_substance"])
+            self.assertEqual([item["days"] for item in event["persistence_checks"]], [30, 90])
+        conference = next(event for event in pulse["events"] if event["id"] == "ai-engineer-worlds-fair-2026")
+        self.assertGreater(conference["attention"]["score"], conference["technical_substance"]["score"])
+        hackathon = next(event for event in pulse["events"] if event["id"] == "genai-genesis-2026")
+        self.assertEqual(hackathon["artifact_count"], 30)
+
     def test_engineering_atlas_exposes_quality_and_review_states(self):
         atlas = self.payload["engineering_atlas"]
         self.assertGreaterEqual(len(atlas["concepts"]), 10)

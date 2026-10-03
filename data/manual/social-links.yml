@@ -1,0 +1,17 @@
+version: 1
+
+# Human-assisted inbox for public LinkedIn and X observations.
+# Store only a link plus an analyst-written observation. Never paste the full post body.
+# Example:
+# - id: social-link:example
+#   platform: linkedin
+#   post_url: https://www.linkedin.com/posts/example
+#   author_name: Example Person
+#   author_url: https://www.linkedin.com/in/example
+#   published_at: "2026-10-01"
+#   event_ids: [ai-engineer-worlds-fair-2026]
+#   observation: A short original note about the claim, artifact, or repeated idea.
+#   linked_urls: [https://github.com/example/project]
+#   tags: [agent evaluation]
+
+links: []

@@ -29,7 +29,7 @@ Recovery promise: failed or partial runs preserve the previous valid public snap
 ## Information hierarchy
 
 1. **Overview:** research inventory, five important weekly changes, strongest cross-source themes, an analyses index, and collection coverage.
-2. **Analyses:** research questions and source-specific studies, including AlphaSignal.
+2. **Analyses:** research questions and source-specific studies, including AlphaSignal and Event Pulse. Event Pulse compares event attention, technical substance, and 30/90-day persistence without adding another top-level navigation item.
 3. **Themes:** durable category dossiers with score inputs, source contribution, and evidence.
 4. **Projects:** reviewed tools default to a decision-oriented assessment: why the project matters, the workflow it unlocks, its caveat, testing value, risk, and corroboration. Unreviewed discoveries remain separately filterable and never inherit analyst judgment.
 5. **Evidence:** one filterable normalized corpus across every source.
@@ -44,3 +44,4 @@ The operator and investor narrative analysis is complete only when at least five
 | Weekly brief | Stable skeleton | Explain first collection | Label missing channels | Dated brief | Keep last valid brief and offer retry |
 | Category radar | Stable row heights | Show seed watchlist | Mark N/O components | Sortable evidence-backed themes | Explain unavailable data |
 | Evidence explorer | Preserve filters | Suggest source setup | Show available channels | Linked evidence | Preserve query and retry |
+| Event Pulse | Stable dossier shells | Explain configured event | Show available events and missing channels | Separate attention, substance, and persistence | Preserve the last validated dossiers |

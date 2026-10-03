@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ai-signal-radar/event-pulse.schema.json",
+  "title": "AI Signal Radar Event Pulse",
+  "type": "object",
+  "required": ["meta", "analysis"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["generated_at", "status", "event_count", "active_event_count", "evidence_count", "source_count"]
+    },
+    "analysis": {
+      "type": "object",
+      "required": ["id", "title", "question", "summary", "source_ids", "evidence_count", "events", "social_inbox", "method"],
+      "properties": {
+        "id": {"const": "event-pulse"},
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "event_type", "start_date", "end_date", "attention", "technical_substance", "persistence_checks", "evidence_ids"]
+          }
+        }
+      }
+    }
+  }
+}

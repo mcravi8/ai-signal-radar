@@ -30,3 +30,5 @@ Public records may contain:
 5. Deployment stops if validation fails; the last valid Pages deployment remains available.
 6. AgentMail processing happens in runner memory. The workflow persists only sanitized source items and a timestamp cursor, and the API key is stored as an encrypted GitHub Actions secret.
 7. Bluesky collection uses only public feeds and publishes a bounded post excerpt, author name, date, canonical post link, and classification. It stores no account credentials, follower graph, or engagement counters.
+8. LinkedIn and X event observations are link-only and human-reviewed. The public submission form prohibits full post bodies and personal contact details; only issues carrying the explicit review label are collected.
+9. Event collectors retain public titles, short descriptions, dates, authors, artifact URLs, and event context. They do not store conference video, full transcripts, or copied papers.

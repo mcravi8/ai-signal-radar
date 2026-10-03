@@ -29,6 +29,8 @@ class SourceItem:
     authors: list[str] = field(default_factory=list)
     tags: list[str] = field(default_factory=list)
     projects: list[str] = field(default_factory=list)
+    event_ids: list[str] = field(default_factory=list)
+    artifact_urls: list[str] = field(default_factory=list)
     sponsor_status: str = "unknown"
     metadata: dict[str, Any] = field(default_factory=dict)
 

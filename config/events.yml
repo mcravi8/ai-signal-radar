@@ -1,0 +1,101 @@
+version: 1
+
+policy:
+  purpose: >-
+    Events are evidence contexts. They help explain where an observation appeared and
+    whether it persisted after the room moved on; they do not become a parallel theme
+    taxonomy or independent proof of adoption.
+  event_attention: >-
+    Measures observed volume, source breadth, evidence-family breadth, and follow-through.
+    It is an attention score, not a quality or adoption score.
+  technical_substance: >-
+    Measures concrete artifacts, technical-record share, artifact diversity, and
+    independent follow-through. A crowded agenda alone cannot earn a high score.
+  echo_control: >-
+    Exact repeated titles or URLs inside one event are collapsed before breadth is counted.
+    Several posts about one talk remain one underlying observation.
+  claims: >-
+    Programs, talks, social posts, and sponsor descriptions establish what was presented or
+    claimed. Papers, code, demos, and later independent evidence are shown separately.
+  persistence: >-
+    Each completed event is revisited after 30 and 90 days. Absence of later evidence is
+    reported as not observed, never silently treated as confirmation.
+  copyright: >-
+    Store titles, short descriptions, public URLs, dates, authors, and analyst observations.
+    Do not store full social posts, transcripts, or copied article bodies.
+
+social_inbox:
+  path: data/manual/social-links.yml
+  submission_url: https://github.com/mcravi8/ai-signal-radar/issues/new?template=event-signal.yml
+  review_label: event-signal-reviewed
+  accepted_platforms: [linkedin, x]
+  required_fields: [id, platform, post_url, author_name, published_at, event_ids, observation]
+  prohibited_fields: [post_body, raw_post_text, transcript, html_body]
+
+events:
+  - id: neurips-2025
+    name: NeurIPS 2025
+    event_type: research-conference
+    status: completed
+    start_date: "2025-12-02"
+    end_date: "2025-12-07"
+    location: San Diego, CA and Mexico City, Mexico
+    official_url: https://neurips.cc/Conferences/2025
+    aliases: [NeurIPS 2025, NeurIPS '25, NeurIPS25]
+    source_ids: [neurips-2025-proceedings]
+    pilot: true
+    review_windows_days: [30, 90]
+    framing: >-
+      Use the proceedings to identify concrete research artifacts and compare their themes
+      with later repositories, practitioner discussion, and product work. Conference
+      acceptance is not treated as production validation.
+
+  - id: genai-genesis-2026
+    name: GenAI Genesis 2026
+    event_type: hackathon
+    status: completed
+    start_date: "2026-03-13"
+    end_date: "2026-03-15"
+    location: Toronto and online
+    official_url: https://genai-genesis-2026.devpost.com/
+    aliases: [GenAI Genesis 2026, GenAI Genesis]
+    source_ids: [genai-genesis-2026-projects]
+    pilot: true
+    review_windows_days: [30, 90]
+    framing: >-
+      Treat submitted projects as evidence of what builders attempted under event
+      constraints. Winner status and likes are attention signals, not proof of technical
+      quality, durability, or demand.
+
+  - id: ai-engineer-worlds-fair-2026
+    name: AI Engineer World's Fair 2026
+    event_type: developer-conference
+    status: completed
+    start_date: "2026-06-29"
+    end_date: "2026-07-02"
+    location: San Francisco, CA
+    official_url: https://ai.engineer/worldsfair/2026
+    aliases: [AI Engineer World's Fair 2026, AI Engineer World’s Fair 2026, World's Fair 2026]
+    source_ids: [ai-engineer-worlds-fair-2026-program]
+    pilot: true
+    review_windows_days: [30, 90]
+    framing: >-
+      Use the official program to measure which engineering problems occupied the agenda,
+      then require artifacts or later independent evidence before treating repeated session
+      language as technical corroboration.
+
+  - id: nvidia-gtc-2026
+    name: NVIDIA GTC 2026
+    event_type: vendor-conference
+    status: configured
+    start_date: "2026-03-15"
+    end_date: "2026-03-19"
+    location: San Jose, CA and online
+    official_url: https://www.nvidia.com/gtc/conference-schedule/
+    aliases: [NVIDIA GTC 2026, GTC 2026]
+    source_ids: []
+    pilot: false
+    review_windows_days: [30, 90]
+    framing: >-
+      Retain as a watchlist event until an official machine-readable program or a bounded
+      reviewed sample is connected. Vendor agenda volume must remain source-concentrated.

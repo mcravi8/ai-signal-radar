@@ -15,6 +15,9 @@ BLOCKED_KEYS = {
     "cookie",
     "gmail_message_id",
     "mailbox_id",
+    "post_body",
+    "raw_post_text",
+    "transcript",
 }
 
 SENSITIVE_PATTERNS = {
@@ -35,6 +38,8 @@ PUBLIC_ITEM_FIELD_ORDER = (
     "authors",
     "tags",
     "projects",
+    "event_ids",
+    "artifact_urls",
     "sponsor_status",
     "theme_ids",
     "classification_disposition",
@@ -49,6 +54,10 @@ VERIFICATION_FIELDS = {
     "repository": {"stars", "forks", "pushed_at", "license"},
     "company-directory": {"batch", "status", "team_size", "location", "github_url", "date_basis"},
     "job-posting": {"company", "batch", "role", "location", "created_at", "date_basis"},
+    "event-session": {"event_id", "event_record_type", "event_track", "event_day"},
+    "event-paper": {"event_id", "event_record_type", "artifact_url"},
+    "hackathon-project": {"event_id", "event_record_type", "winner", "artifact_url"},
+    "curated-social": {"event_id", "event_record_type", "platform", "author_url"},
 }
 
 

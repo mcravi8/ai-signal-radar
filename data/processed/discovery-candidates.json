@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-28T23:02:30.477849+00:00",
+    "generated_at": "2026-10-03T01:55:26.755302+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1433,
-    "input_changed_document_count": 2,
-    "cluster_count": 477,
+    "input_document_count": 1376,
+    "input_changed_document_count": 0,
+    "cluster_count": 458,
     "overbroad_cluster_count": 0,
-    "filtered_anchor_count": 169,
-    "coherent_cluster_count": 195,
-    "quality_eligible_cluster_count": 13,
-    "explained_cluster_count": 130,
+    "filtered_anchor_count": 163,
+    "coherent_cluster_count": 183,
+    "quality_eligible_cluster_count": 12,
+    "explained_cluster_count": 115,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 123,
+      "covered-by-existing-theme": 108,
       "merge-existing-direction": 7,
-      "novel": 347
+      "novel": 343
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -404,36 +404,13 @@
       "materially_changed": false
     },
     {
-      "cluster_id": "discovery:complex-reasoning-4b5525cc62",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "frontier-inference-infrastructure",
-        "title": "Frontier inference infrastructure",
-        "document_share": 0.667,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "complex reasoning"
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21704v1",
-        "hf-paper:2609.23986",
-        "nvidia-developer-blog:655e6fb2eee2feb6b510"
-      ],
-      "source_count": 3,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
       "cluster_id": "discovery:developer-tools-e8508fddf7",
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
         "id": "skills-integrations",
         "title": "Skills, protocols & integrations",
-        "document_share": 0.5,
+        "document_share": 0.75,
         "matched_anchor_phrases": [],
         "basis": "document-share"
       },
@@ -441,7 +418,7 @@
         "developer tools"
       ],
       "evidence_ids": [
-        "github:1353965369",
+        "github:1358571386",
         "github:1383518430",
         "yc-company:33250",
         "yc-company:35258"
@@ -496,30 +473,6 @@
         "github:1382454774",
         "yc-company:32206",
         "yc-company:37468"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
-      "cluster_id": "discovery:vibe-coding-a7c0b1a9d6",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "coding-agents",
-        "title": "Coding agents & developer tooling",
-        "document_share": 0.5,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "vibe coding"
-      ],
-      "evidence_ids": [
-        "github:1349818659",
-        "github:1369759058",
-        "hn:49781443",
-        "hn:49849986"
       ],
       "source_count": 2,
       "source_family_count": 2,
@@ -599,55 +552,6 @@
       "materially_changed": false
     },
     {
-      "cluster_id": "discovery:deep-neural-9178e272c3",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "matched_anchor_phrases": [
-          "deep neural"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 0.333
-      },
-      "anchor_labels": [
-        "deep neural"
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21815v1",
-        "arxiv:2609.21829v1",
-        "github:1345901466"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
-      "cluster_id": "discovery:engineering-python-8133f5f1b0",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "document-knowledge-systems",
-        "title": "Documents, retrieval & knowledge systems",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "python",
-        "engineering python"
-      ],
-      "evidence_ids": [
-        "github:1379617146",
-        "github:1379929433",
-        "yc-job:108650"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
       "cluster_id": "discovery:evidence-grounded-bc1e3fa9bf",
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
@@ -665,6 +569,101 @@
         "github:1351859098",
         "github:1354377874",
         "hf-paper:2609.23377"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:fine-tuning-95b3a4154d",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "matched_anchor_phrases": [
+          "fine tuning"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.667
+      },
+      "anchor_labels": [
+        "RAG",
+        "Fine-tuning"
+      ],
+      "evidence_ids": [
+        "github:1366280840",
+        "github:1367068508",
+        "yc-job:108650"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:frontier-lab-d1a1540ba1",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "open-local-inference",
+        "title": "Open, local & efficient inference",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "frontier lab"
+      ],
+      "evidence_ids": [
+        "hn:49736660",
+        "latent-space:1d6b63efae6a0d6226fa",
+        "latent-space:c5ef439db94fe95e2aa5"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:jev-typesafe-80fc00b6b6",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "jev typesafe"
+      ],
+      "evidence_ids": [
+        "github:1377399471",
+        "github:1380762959",
+        "hn:49786725"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:json-schema-dcf53414b7",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "json schema"
+      ],
+      "evidence_ids": [
+        "github:1353051646",
+        "github:1380762959",
+        "hn:49736660"
       ],
       "source_count": 2,
       "source_family_count": 2,
@@ -2060,7 +2059,7 @@
         "source_family_count": 2,
         "technical_record_count": 4,
         "dominant_publisher_share": 0.4,
-        "raw_evidence_count": 9,
+        "raw_evidence_count": 8,
         "capped_evidence_count": 5,
         "changed_evidence_count": 0
       },
@@ -2135,13 +2134,6 @@
         },
         {
           "evidence_id": "hf-paper:2609.14858",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "hf-paper:2608.26005",
           "reason_codes": [
             "source-cap",
             "publisher-cap"
@@ -2240,112 +2232,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:complex-reasoning-4b5525cc62",
-      "anchor_ids": [
-        "phrase:complex-reasoning"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:complex-reasoning",
-          "label": "complex reasoning",
-          "kind": "emergent-phrase",
-          "document_count": 3,
-          "source_count": 3
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21704v1",
-        "hf-paper:2609.23986",
-        "nvidia-developer-blog:655e6fb2eee2feb6b510"
-      ],
-      "source_ids": [
-        "arxiv",
-        "huggingface-papers",
-        "nvidia-developer-blog"
-      ],
-      "source_family_ids": [
-        "builders",
-        "research"
-      ],
-      "theme_ids": [
-        "frontier-inference-infrastructure",
-        "open-local-inference",
-        "small-specialized-models",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "frontier-inference-infrastructure"
-      ],
-      "theme_document_counts": {
-        "frontier-inference-infrastructure": 2,
-        "open-local-inference": 1,
-        "small-specialized-models": 1,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-08-26T21:06:58Z",
-      "last_seen": "2026-09-21T00:00:00+00:00",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 3,
-        "source_family_count": 2,
-        "technical_record_count": 3,
-        "dominant_publisher_share": 0.333,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:reason",
-            "document_count": 3
-          },
-          {
-            "id": "action:generate",
-            "document_count": 2
-          },
-          {
-            "id": "action:retrieve",
-            "document_count": 2
-          },
-          {
-            "id": "action:route",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:frontier-inference-infrastructure",
-            "document_count": 2
-          },
-          {
-            "id": "theme:frontier-inference-infrastructure",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": true,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "frontier-inference-infrastructure",
-        "title": "Frontier inference infrastructure",
-        "document_share": 0.667,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
-    },
-    {
       "id": "discovery:generally-available-5276ced031",
       "anchor_ids": [
         "phrase:generally-available",
@@ -2392,6 +2278,76 @@
         "source_count": 3,
         "source_family_count": 2,
         "technical_record_count": 2,
+        "dominant_publisher_share": 0.333,
+        "raw_evidence_count": 3,
+        "capped_evidence_count": 3,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 3,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:llm-agent-2fecd427c2",
+      "anchor_ids": [
+        "phrase:llm-agent"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:llm-agent",
+          "label": "llm agent",
+          "kind": "emergent-phrase",
+          "document_count": 3,
+          "source_count": 3
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20543v1",
+        "github:1367193650",
+        "hf-paper:2609.24972"
+      ],
+      "source_ids": [
+        "arxiv",
+        "github",
+        "huggingface-papers"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "research"
+      ],
+      "theme_ids": [
+        "agent-harnesses",
+        "memory-context",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "agent-harnesses": 1,
+        "memory-context": 1,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-12T10:32:29Z",
+      "last_seen": "2026-09-21T00:00:00+00:00",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 3,
+        "source_family_count": 2,
+        "technical_record_count": 3,
         "dominant_publisher_share": 0.333,
         "raw_evidence_count": 3,
         "capped_evidence_count": 3,
@@ -2832,7 +2788,7 @@
         "source_family_count": 2,
         "technical_record_count": 2,
         "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 20,
+        "raw_evidence_count": 14,
         "capped_evidence_count": 4,
         "changed_evidence_count": 0
       },
@@ -2919,48 +2875,6 @@
             "source-cap",
             "publisher-cap"
           ]
-        },
-        {
-          "evidence_id": "github:1345901330",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1345901466",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1345954486",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1345975126",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1345975185",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1345979051",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
         }
       ],
       "materially_changed": false,
@@ -2982,7 +2896,7 @@
         }
       ],
       "evidence_ids": [
-        "github:1353965369",
+        "github:1358571386",
         "github:1383518430",
         "yc-company:33250",
         "yc-company:35258"
@@ -2997,16 +2911,19 @@
       ],
       "theme_ids": [
         "coding-agents",
+        "memory-context",
         "skills-integrations"
       ],
       "recurrent_theme_ids": [
+        "coding-agents",
         "skills-integrations"
       ],
       "theme_document_counts": {
-        "coding-agents": 1,
-        "skills-integrations": 2
+        "coding-agents": 2,
+        "memory-context": 1,
+        "skills-integrations": 3
       },
-      "first_seen": "2026-09-01T19:44:23Z",
+      "first_seen": "2026-09-05T21:26:04Z",
       "last_seen": "2026-09-23T13:37:26Z",
       "metrics": {
         "evidence_count": 4,
@@ -3025,23 +2942,23 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 1,
+        "recurrent_theme_count": 2,
         "context_coherence_met": true,
         "context_features": [
           {
-            "id": "concept:phrase:agents-agent",
-            "document_count": 2
-          },
-          {
             "id": "concept:theme:coding-agents",
-            "document_count": 2
+            "document_count": 3
           },
           {
             "id": "concept:theme:skills-integrations",
-            "document_count": 2
+            "document_count": 3
           },
           {
             "id": "theme:skills-integrations",
+            "document_count": 3
+          },
+          {
+            "id": "theme:coding-agents",
             "document_count": 2
           }
         ],
@@ -3051,14 +2968,14 @@
       },
       "source_cap_exclusions": [
         {
-          "evidence_id": "github:1351859098",
+          "evidence_id": "github:1353965369",
           "reason_codes": [
             "source-cap",
             "publisher-cap"
           ]
         },
         {
-          "evidence_id": "github:1349818659",
+          "evidence_id": "github:1351859098",
           "reason_codes": [
             "source-cap",
             "publisher-cap"
@@ -3078,7 +2995,7 @@
         "kind": "theme",
         "id": "skills-integrations",
         "title": "Skills, protocols & integrations",
-        "document_share": 0.5,
+        "document_share": 0.75,
         "matched_anchor_phrases": [],
         "basis": "document-share"
       }
@@ -3354,7 +3271,7 @@
         "source_family_count": 2,
         "technical_record_count": 2,
         "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 7,
+        "raw_evidence_count": 6,
         "capped_evidence_count": 4,
         "changed_evidence_count": 0
       },
@@ -3390,13 +3307,6 @@
             "source-cap",
             "publisher-cap"
           ]
-        },
-        {
-          "evidence_id": "github:1348914714",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
         }
       ],
       "materially_changed": false,
@@ -3410,89 +3320,6 @@
         ],
         "basis": "anchor-phrase",
         "document_share": 0.25
-      }
-    },
-    {
-      "id": "discovery:vibe-coding-a7c0b1a9d6",
-      "anchor_ids": [
-        "phrase:vibe-coding"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:vibe-coding",
-          "label": "vibe coding",
-          "kind": "emergent-phrase",
-          "document_count": 4,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "github:1349818659",
-        "github:1369759058",
-        "hn:49781443",
-        "hn:49849986"
-      ],
-      "source_ids": [
-        "github",
-        "hacker-news"
-      ],
-      "source_family_ids": [
-        "attention",
-        "engineering"
-      ],
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "recurrent_theme_ids": [
-        "coding-agents"
-      ],
-      "theme_document_counts": {
-        "coding-agents": 2
-      },
-      "first_seen": "2026-08-28T16:30:26Z",
-      "last_seen": "2026-09-25T21:09:28+00:00",
-      "metrics": {
-        "evidence_count": 4,
-        "independent_event_count": 4,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 5,
-        "capped_evidence_count": 4,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 4,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [
-        {
-          "evidence_id": "github:1346230651",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        }
-      ],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "coding-agents",
-        "title": "Coding agents & developer tooling",
-        "document_share": 0.5,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
       }
     },
     {
@@ -4093,99 +3920,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:deep-neural-9178e272c3",
-      "anchor_ids": [
-        "phrase:deep-neural"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:deep-neural",
-          "label": "deep neural",
-          "kind": "emergent-phrase",
-          "document_count": 3,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21815v1",
-        "arxiv:2609.21829v1",
-        "github:1345901466"
-      ],
-      "source_ids": [
-        "arxiv",
-        "github"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "research"
-      ],
-      "theme_ids": [
-        "proprietary-data-boundary",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "proprietary-data-boundary": 1,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-08-25T08:57:21Z",
-      "last_seen": "2026-09-18T14:29:31Z",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 3,
-        "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:training-self-improvement",
-            "document_count": 3
-          },
-          {
-            "id": "action:train",
-            "document_count": 2
-          },
-          {
-            "id": "concept:phrase:cs-lg-cs-ai",
-            "document_count": 2
-          },
-          {
-            "id": "concept:phrase:neural-network",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "matched_anchor_phrases": [
-          "deep neural"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 0.333
-      }
-    },
-    {
       "id": "discovery:determine-whether-65e89b1c99",
       "anchor_ids": [
         "phrase:determine-whether"
@@ -4247,59 +3981,57 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:docker-4f3b9ba3c1",
+      "id": "discovery:diffusion-models-82ece58a6b",
       "anchor_ids": [
-        "technology:docker",
-        "technology:kubernetes"
+        "phrase:diffusion-models"
       ],
       "anchors": [
         {
-          "id": "technology:docker",
-          "label": "Docker",
-          "kind": "technology",
+          "id": "phrase:diffusion-models",
+          "label": "diffusion models",
+          "kind": "emergent-phrase",
           "document_count": 3,
-          "source_count": 2
-        },
-        {
-          "id": "technology:kubernetes",
-          "label": "kubernetes",
-          "kind": "technology",
-          "document_count": 2,
           "source_count": 2
         }
       ],
       "evidence_ids": [
-        "github:1354668889",
-        "github:1369187725",
-        "yc-job:105467"
+        "arxiv:2609.20744v1",
+        "arxiv:2609.21960v1",
+        "github:1366280840"
       ],
       "source_ids": [
-        "github",
-        "yc-jobs"
+        "arxiv",
+        "github"
       ],
       "source_family_ids": [
         "engineering",
-        "operations"
+        "research"
       ],
       "theme_ids": [
-        "assurance-infrastructure",
-        "document-knowledge-systems"
+        "document-knowledge-systems",
+        "multimodal-3d",
+        "skills-integrations",
+        "small-specialized-models",
+        "training-self-improvement"
       ],
       "recurrent_theme_ids": [],
       "theme_document_counts": {
-        "assurance-infrastructure": 1,
-        "document-knowledge-systems": 1
+        "document-knowledge-systems": 1,
+        "multimodal-3d": 1,
+        "skills-integrations": 1,
+        "small-specialized-models": 1,
+        "training-self-improvement": 1
       },
-      "first_seen": "2026-08-29",
-      "last_seen": "2026-09-14T02:59:54Z",
+      "first_seen": "2026-09-11T14:27:35Z",
+      "last_seen": "2026-09-18T16:18:26Z",
       "metrics": {
         "evidence_count": 3,
         "independent_event_count": 3,
         "source_count": 2,
         "source_family_count": 2,
-        "technical_record_count": 2,
+        "technical_record_count": 3,
         "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 4,
+        "raw_evidence_count": 3,
         "capped_evidence_count": 3,
         "changed_evidence_count": 0
       },
@@ -4307,8 +4039,8 @@
         "anchor_support_share": 1.0,
         "anchor_support_met": true,
         "has_structural_anchor": false,
-        "phrase_only": false,
-        "entity_only": true,
+        "phrase_only": true,
+        "entity_only": false,
         "recurrent_theme_count": 0,
         "context_coherence_met": false,
         "context_features": [],
@@ -4316,223 +4048,10 @@
         "spark_quality_met": false,
         "candidate_quality_met": false
       },
-      "source_cap_exclusions": [
-        {
-          "evidence_id": "github:1345661504",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        }
-      ],
+      "source_cap_exclusions": [],
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
-    },
-    {
-      "id": "discovery:engineering-python-8133f5f1b0",
-      "anchor_ids": [
-        "technology:python",
-        "phrase:engineering-python"
-      ],
-      "anchors": [
-        {
-          "id": "technology:python",
-          "label": "python",
-          "kind": "technology",
-          "document_count": 3,
-          "source_count": 2
-        },
-        {
-          "id": "phrase:engineering-python",
-          "label": "engineering python",
-          "kind": "emergent-phrase",
-          "document_count": 1,
-          "source_count": 1
-        }
-      ],
-      "evidence_ids": [
-        "github:1379617146",
-        "github:1379929433",
-        "yc-job:108650"
-      ],
-      "source_ids": [
-        "github",
-        "yc-jobs"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "operations"
-      ],
-      "theme_ids": [
-        "document-knowledge-systems",
-        "small-specialized-models",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "document-knowledge-systems",
-        "small-specialized-models"
-      ],
-      "theme_document_counts": {
-        "document-knowledge-systems": 3,
-        "small-specialized-models": 2,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-21T14:37:14Z",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 15,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": false,
-        "entity_only": false,
-        "recurrent_theme_count": 2,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:document-knowledge-systems",
-            "document_count": 3
-          },
-          {
-            "id": "theme:document-knowledge-systems",
-            "document_count": 3
-          },
-          {
-            "id": "concept:phrase:chat-jev",
-            "document_count": 2
-          },
-          {
-            "id": "concept:phrase:jev-chat",
-            "document_count": 2
-          },
-          {
-            "id": "concept:phrase:llm-local",
-            "document_count": 2
-          },
-          {
-            "id": "concept:phrase:ocr-privacy",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:small-specialized-models",
-            "document_count": 2
-          },
-          {
-            "id": "theme:small-specialized-models",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [
-        {
-          "evidence_id": "github:1375397100",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1368432039",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1363431253",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1363640102",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1358948316",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1359059989",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1356626567",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1355507861",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1354377874",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1354059245",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1345661504",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "github:1345901610",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        }
-      ],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "document-knowledge-systems",
-        "title": "Documents, retrieval & knowledge systems",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
     },
     {
       "id": "discovery:even-harder-39ab3692be",
@@ -4840,22 +4359,30 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:fine-tuning-03c735a407",
+      "id": "discovery:fine-tuning-95b3a4154d",
       "anchor_ids": [
+        "technology:rag",
         "technology:fine-tuning"
       ],
       "anchors": [
         {
-          "id": "technology:fine-tuning",
-          "label": "fine-tuning",
+          "id": "technology:rag",
+          "label": "RAG",
           "kind": "technology",
           "document_count": 3,
+          "source_count": 2
+        },
+        {
+          "id": "technology:fine-tuning",
+          "label": "Fine-tuning",
+          "kind": "technology",
+          "document_count": 2,
           "source_count": 2
         }
       ],
       "evidence_ids": [
-        "github:1347394075",
         "github:1366280840",
+        "github:1367068508",
         "yc-job:108650"
       ],
       "source_ids": [
@@ -4868,22 +4395,21 @@
       ],
       "theme_ids": [
         "document-knowledge-systems",
-        "open-local-inference",
         "skills-integrations",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [
         "document-knowledge-systems",
+        "skills-integrations",
         "training-self-improvement"
       ],
       "theme_document_counts": {
-        "document-knowledge-systems": 2,
-        "open-local-inference": 1,
-        "skills-integrations": 1,
-        "training-self-improvement": 3
+        "document-knowledge-systems": 3,
+        "skills-integrations": 2,
+        "training-self-improvement": 2
       },
-      "first_seen": "2026-08-26T13:49:24Z",
-      "last_seen": "2026-09-11T14:27:35Z",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-12T07:33:31Z",
       "metrics": {
         "evidence_count": 3,
         "independent_event_count": 3,
@@ -4901,27 +4427,35 @@
         "has_structural_anchor": false,
         "phrase_only": false,
         "entity_only": true,
-        "recurrent_theme_count": 2,
+        "recurrent_theme_count": 3,
         "context_coherence_met": true,
         "context_features": [
           {
-            "id": "action:train",
-            "document_count": 3
-          },
-          {
-            "id": "concept:theme:training-self-improvement",
-            "document_count": 3
-          },
-          {
-            "id": "theme:training-self-improvement",
-            "document_count": 3
-          },
-          {
             "id": "concept:theme:document-knowledge-systems",
-            "document_count": 2
+            "document_count": 3
           },
           {
             "id": "theme:document-knowledge-systems",
+            "document_count": 3
+          },
+          {
+            "id": "action:train",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:skills-integrations",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:training-self-improvement",
+            "document_count": 2
+          },
+          {
+            "id": "theme:skills-integrations",
+            "document_count": 2
+          },
+          {
+            "id": "theme:training-self-improvement",
             "document_count": 2
           }
         ],
@@ -4931,7 +4465,7 @@
       },
       "source_cap_exclusions": [
         {
-          "evidence_id": "github:1345931063",
+          "evidence_id": "github:1360627135",
           "reason_codes": [
             "source-cap",
             "publisher-cap"
@@ -4948,7 +4482,7 @@
           "fine tuning"
         ],
         "basis": "anchor-phrase",
-        "document_share": 1.0
+        "document_share": 0.667
       }
     },
     {
@@ -5017,93 +4551,6 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
-    },
-    {
-      "id": "discovery:flow-matching-7be45b9585",
-      "anchor_ids": [
-        "phrase:flow-matching"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:flow-matching",
-          "label": "flow matching",
-          "kind": "emergent-phrase",
-          "document_count": 3,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21989v1",
-        "arxiv:2609.22041v1",
-        "github:1345931063"
-      ],
-      "source_ids": [
-        "arxiv",
-        "github"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "research"
-      ],
-      "theme_ids": [
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "training-self-improvement"
-      ],
-      "theme_document_counts": {
-        "training-self-improvement": 3
-      },
-      "first_seen": "2026-08-25T09:30:13Z",
-      "last_seen": "2026-09-18T17:33:38Z",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 3,
-        "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:train",
-            "document_count": 3
-          },
-          {
-            "id": "concept:theme:training-self-improvement",
-            "document_count": 3
-          },
-          {
-            "id": "theme:training-self-improvement",
-            "document_count": 3
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
     },
     {
       "id": "discovery:frontier-lab-d1a1540ba1",
@@ -5383,7 +4830,7 @@
         "source_family_count": 2,
         "technical_record_count": 2,
         "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 4,
+        "raw_evidence_count": 3,
         "capped_evidence_count": 3,
         "changed_evidence_count": 0
       },
@@ -5400,15 +4847,7 @@
         "spark_quality_met": false,
         "candidate_quality_met": false
       },
-      "source_cap_exclusions": [
-        {
-          "evidence_id": "github:1348826110",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        }
-      ],
+      "source_cap_exclusions": [],
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
@@ -5556,7 +4995,7 @@
         "source_family_count": 2,
         "technical_record_count": 3,
         "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 4,
+        "raw_evidence_count": 3,
         "capped_evidence_count": 3,
         "changed_evidence_count": 0
       },
@@ -5602,15 +5041,7 @@
         "spark_quality_met": true,
         "candidate_quality_met": true
       },
-      "source_cap_exclusions": [
-        {
-          "evidence_id": "github:1348826110",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        }
-      ],
+      "source_cap_exclusions": [],
       "materially_changed": false,
       "disposition": "merge-existing-direction",
       "nearest_known": {
@@ -6062,86 +5493,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:low-cost-91bfa02fce",
-      "anchor_ids": [
-        "phrase:low-cost"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:low-cost",
-          "label": "low cost",
-          "kind": "emergent-phrase",
-          "document_count": 3,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "aws-machine-learning-blog:fff6059482d0fe129531",
-        "hf-paper:2608.26005",
-        "hf-paper:2609.14858"
-      ],
-      "source_ids": [
-        "aws-machine-learning-blog",
-        "huggingface-papers"
-      ],
-      "source_family_ids": [
-        "builders",
-        "research"
-      ],
-      "theme_ids": [
-        "agent-harnesses",
-        "coding-agents",
-        "small-specialized-models",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "training-self-improvement"
-      ],
-      "theme_document_counts": {
-        "agent-harnesses": 1,
-        "coding-agents": 1,
-        "small-specialized-models": 1,
-        "training-self-improvement": 2
-      },
-      "first_seen": "2026-08-26T00:00:00+00:00",
-      "last_seen": "2026-09-17T15:42:31+00:00",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 3,
-        "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 3,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "document_share": 0.667,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
-    },
-    {
       "id": "discovery:many-many-14b45edd80",
       "anchor_ids": [
         "phrase:many-many"
@@ -6207,58 +5558,57 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:multimodal-models-67349bdcec",
+      "id": "discovery:model-context-b3e4393a75",
       "anchor_ids": [
-        "phrase:multimodal-models"
+        "phrase:model-context"
       ],
       "anchors": [
         {
-          "id": "phrase:multimodal-models",
-          "label": "multimodal models",
+          "id": "phrase:model-context",
+          "label": "model context",
           "kind": "emergent-phrase",
           "document_count": 3,
           "source_count": 2
         }
       ],
       "evidence_ids": [
-        "github:1347394075",
-        "github:1360344248",
-        "nvidia-developer-blog:93db95fb6cd1a35dc083"
+        "github:1354377874",
+        "github:1358571386",
+        "simon-willison:e133d02a1d698c5d1f75"
       ],
       "source_ids": [
         "github",
-        "nvidia-developer-blog"
+        "simon-willison"
       ],
       "source_family_ids": [
-        "builders",
-        "engineering"
+        "engineering",
+        "experts"
       ],
       "theme_ids": [
-        "frontier-inference-infrastructure",
-        "multimodal-3d",
-        "open-local-inference",
-        "training-self-improvement"
+        "coding-agents",
+        "memory-context",
+        "skills-integrations"
       ],
       "recurrent_theme_ids": [
-        "multimodal-3d"
+        "coding-agents",
+        "skills-integrations"
       ],
       "theme_document_counts": {
-        "frontier-inference-infrastructure": 1,
-        "multimodal-3d": 2,
-        "open-local-inference": 1,
-        "training-self-improvement": 1
+        "coding-agents": 2,
+        "memory-context": 1,
+        "skills-integrations": 3
       },
-      "first_seen": "2026-08-26T13:49:24Z",
-      "last_seen": "2026-09-09T20:31:04Z",
+      "first_seen": "2026-09-02T05:59:46Z",
+      "last_seen": "2026-09-20T20:24:41+00:00",
       "metrics": {
         "evidence_count": 3,
         "independent_event_count": 3,
         "source_count": 2,
         "source_family_count": 2,
-        "technical_record_count": 3,
+        "technical_record_count": 2,
         "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
+        "raw_evidence_count": 4,
+        "capped_evidence_count": 4,
         "changed_evidence_count": 0
       },
       "quality": {
@@ -6267,23 +5617,39 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 1,
+        "recurrent_theme_count": 2,
         "context_coherence_met": true,
         "context_features": [
           {
-            "id": "concept:phrase:large-language-models-llm",
+            "id": "concept:theme:skills-integrations",
+            "document_count": 3
+          },
+          {
+            "id": "theme:skills-integrations",
+            "document_count": 3
+          },
+          {
+            "id": "action:reason",
             "document_count": 2
           },
           {
-            "id": "concept:theme:multimodal-3d",
+            "id": "concept:theme:coding-agents",
             "document_count": 2
           },
           {
-            "id": "theme:multimodal-3d",
+            "id": "concept:theme:document-knowledge-systems",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:operational-ontology",
+            "document_count": 2
+          },
+          {
+            "id": "theme:coding-agents",
             "document_count": 2
           }
         ],
-        "context_outlier_count": 0,
+        "context_outlier_count": 1,
         "spark_quality_met": false,
         "candidate_quality_met": false
       },
@@ -6292,11 +5658,13 @@
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
-        "id": "multimodal-3d",
-        "title": "Multimodal generation & 3D",
-        "document_share": 0.667,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
+        "id": "skills-integrations",
+        "title": "Skills, protocols & integrations",
+        "matched_anchor_phrases": [
+          "model context"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 1.0
       }
     },
     {
@@ -6665,22 +6033,22 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:rag-17727be06e",
+      "id": "discovery:python-ec858480b0",
       "anchor_ids": [
-        "technology:rag"
+        "technology:python"
       ],
       "anchors": [
         {
-          "id": "technology:rag",
-          "label": "RAG",
+          "id": "technology:python",
+          "label": "python",
           "kind": "technology",
           "document_count": 3,
           "source_count": 2
         }
       ],
       "evidence_ids": [
-        "github:1366280840",
-        "github:1367068508",
+        "github:1379617146",
+        "github:1379929433",
         "yc-job:108650"
       ],
       "source_ids": [
@@ -6693,21 +6061,20 @@
       ],
       "theme_ids": [
         "document-knowledge-systems",
-        "skills-integrations",
+        "small-specialized-models",
         "training-self-improvement"
       ],
       "recurrent_theme_ids": [
         "document-knowledge-systems",
-        "skills-integrations",
-        "training-self-improvement"
+        "small-specialized-models"
       ],
       "theme_document_counts": {
         "document-knowledge-systems": 3,
-        "skills-integrations": 2,
-        "training-self-improvement": 2
+        "small-specialized-models": 2,
+        "training-self-improvement": 1
       },
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-12T07:33:31Z",
+      "last_seen": "2026-09-21T14:37:14Z",
       "metrics": {
         "evidence_count": 3,
         "independent_event_count": 3,
@@ -6715,7 +6082,7 @@
         "source_family_count": 2,
         "technical_record_count": 2,
         "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 4,
+        "raw_evidence_count": 13,
         "capped_evidence_count": 3,
         "changed_evidence_count": 0
       },
@@ -6725,7 +6092,7 @@
         "has_structural_anchor": false,
         "phrase_only": false,
         "entity_only": true,
-        "recurrent_theme_count": 3,
+        "recurrent_theme_count": 2,
         "context_coherence_met": true,
         "context_features": [
           {
@@ -6737,23 +6104,27 @@
             "document_count": 3
           },
           {
-            "id": "action:train",
+            "id": "concept:phrase:chat-jev",
             "document_count": 2
           },
           {
-            "id": "concept:theme:skills-integrations",
+            "id": "concept:phrase:jev-chat",
             "document_count": 2
           },
           {
-            "id": "concept:theme:training-self-improvement",
+            "id": "concept:phrase:llm-local",
             "document_count": 2
           },
           {
-            "id": "theme:skills-integrations",
+            "id": "concept:phrase:ocr-privacy",
             "document_count": 2
           },
           {
-            "id": "theme:training-self-improvement",
+            "id": "concept:theme:small-specialized-models",
+            "document_count": 2
+          },
+          {
+            "id": "theme:small-specialized-models",
             "document_count": 2
           }
         ],
@@ -6763,7 +6134,70 @@
       },
       "source_cap_exclusions": [
         {
-          "evidence_id": "github:1360627135",
+          "evidence_id": "github:1375397100",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1368432039",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1363431253",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1363640102",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1358948316",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1359059989",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1356626567",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1355507861",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1354377874",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "github:1354059245",
           "reason_codes": [
             "source-cap",
             "publisher-cap"
@@ -6845,101 +6279,6 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
-    },
-    {
-      "id": "discovery:retrieval-augmented-8b3486c9dd",
-      "anchor_ids": [
-        "phrase:retrieval-augmented"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:retrieval-augmented",
-          "label": "retrieval augmented",
-          "kind": "emergent-phrase",
-          "document_count": 3,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.20754v1",
-        "github:1345661504",
-        "github:1374667371"
-      ],
-      "source_ids": [
-        "arxiv",
-        "github"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "research"
-      ],
-      "theme_ids": [
-        "document-knowledge-systems",
-        "skills-integrations",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "document-knowledge-systems"
-      ],
-      "theme_document_counts": {
-        "document-knowledge-systems": 2,
-        "skills-integrations": 1,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-08-25T04:08:44Z",
-      "last_seen": "2026-09-17T17:41:31Z",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 3,
-        "dominant_publisher_share": 0.667,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:retrieve",
-            "document_count": 3
-          },
-          {
-            "id": "action:generate",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:document-knowledge-systems",
-            "document_count": 2
-          },
-          {
-            "id": "theme:document-knowledge-systems",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "document-knowledge-systems",
-        "title": "Documents, retrieval & knowledge systems",
-        "document_share": 0.667,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
     },
     {
       "id": "discovery:seems-like-8c7bef198b",
@@ -7581,6 +6920,71 @@
           ]
         }
       ],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:vibe-coding-a7c0b1a9d6",
+      "anchor_ids": [
+        "phrase:vibe-coding"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:vibe-coding",
+          "label": "vibe coding",
+          "kind": "emergent-phrase",
+          "document_count": 3,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "github:1369759058",
+        "hn:49781443",
+        "hn:49849986"
+      ],
+      "source_ids": [
+        "github",
+        "hacker-news"
+      ],
+      "source_family_ids": [
+        "attention",
+        "engineering"
+      ],
+      "theme_ids": [
+        "coding-agents"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "coding-agents": 1
+      },
+      "first_seen": "2026-09-14T10:50:30Z",
+      "last_seen": "2026-09-25T21:09:28+00:00",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 1,
+        "dominant_publisher_share": 0.667,
+        "raw_evidence_count": 3,
+        "capped_evidence_count": 3,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 3,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
@@ -8659,70 +8063,6 @@
         "source_count": 2,
         "source_family_count": 2,
         "technical_record_count": 0,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:agentic-workflows-0d6e61fa94",
-      "anchor_ids": [
-        "phrase:agentic-workflows"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:agentic-workflows",
-          "label": "agentic workflows",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "github:1346337331",
-        "hn:49787614"
-      ],
-      "source_ids": [
-        "github",
-        "hacker-news"
-      ],
-      "source_family_ids": [
-        "attention",
-        "engineering"
-      ],
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "coding-agents": 1
-      },
-      "first_seen": "2026-08-25T15:53:56Z",
-      "last_seen": "2026-09-21T14:17:22+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 1,
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
@@ -10758,88 +10098,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:codex-harness-5e1cdcf3fb",
-      "anchor_ids": [
-        "phrase:codex-harness"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:codex-harness",
-          "label": "codex harness",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "github:1349601607",
-        "openai-news:b32e9b847135398762b9"
-      ],
-      "source_ids": [
-        "github",
-        "openai-news"
-      ],
-      "source_family_ids": [
-        "builders",
-        "engineering"
-      ],
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "recurrent_theme_ids": [
-        "skills-integrations"
-      ],
-      "theme_document_counts": {
-        "skills-integrations": 2
-      },
-      "first_seen": "2026-08-28T12:57:24Z",
-      "last_seen": "2026-09-10T00:00:00+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:skills-integrations",
-            "document_count": 2
-          },
-          {
-            "id": "theme:skills-integrations",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "skills-integrations",
-        "title": "Skills, protocols & integrations",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
-    },
-    {
       "id": "discovery:coding-agent-harness-77415516df",
       "anchor_ids": [
         "phrase:coding-agent-harness"
@@ -12282,70 +11540,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:deepseek-harness-dsh-76e9d31b10",
-      "anchor_ids": [
-        "phrase:deepseek-harness-dsh"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:deepseek-harness-dsh",
-          "label": "deepseek harness dsh",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "github:1346337331",
-        "hn:49770744"
-      ],
-      "source_ids": [
-        "github",
-        "hacker-news"
-      ],
-      "source_family_ids": [
-        "attention",
-        "engineering"
-      ],
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "coding-agents": 1
-      },
-      "first_seen": "2026-08-25T15:53:56Z",
-      "last_seen": "2026-09-19T22:46:43+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 1,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
       "id": "discovery:demo-app-907508df6c",
       "anchor_ids": [
         "phrase:demo-app"
@@ -12608,37 +11802,35 @@
         }
       ],
       "evidence_ids": [
-        "github:1346337331",
-        "hn:49855391"
+        "hn:49855391",
+        "simon-willison:b3a971b72e2de3b7e5ee"
       ],
       "source_ids": [
-        "github",
-        "hacker-news"
+        "hacker-news",
+        "simon-willison"
       ],
       "source_family_ids": [
         "attention",
-        "engineering"
+        "experts"
       ],
       "theme_ids": [
         "coding-agents"
       ],
-      "recurrent_theme_ids": [
-        "coding-agents"
-      ],
+      "recurrent_theme_ids": [],
       "theme_document_counts": {
-        "coding-agents": 2
+        "coding-agents": 1
       },
-      "first_seen": "2026-08-25T15:53:56Z",
+      "first_seen": "2026-09-21T22:25:44+00:00",
       "last_seen": "2026-09-26T11:09:32+00:00",
       "metrics": {
         "evidence_count": 2,
         "independent_event_count": 2,
         "source_count": 2,
         "source_family_count": 2,
-        "technical_record_count": 1,
+        "technical_record_count": 0,
         "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
         "changed_evidence_count": 0
       },
       "quality": {
@@ -12647,33 +11839,17 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:coding-agents",
-            "document_count": 2
-          },
-          {
-            "id": "theme:coding-agents",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 1,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
         "spark_quality_met": false,
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
       "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "coding-agents",
-        "title": "Coding agents & developer tooling",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
+      "disposition": "novel",
+      "nearest_known": null
     },
     {
       "id": "discovery:development-process-33a965ee79",
@@ -12866,94 +12042,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:distributed-training-5a64aa052e",
-      "anchor_ids": [
-        "phrase:distributed-training"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:distributed-training",
-          "label": "distributed training",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "aws-machine-learning-blog:0ef56137fe741d0cfda6",
-        "github:1347394075"
-      ],
-      "source_ids": [
-        "aws-machine-learning-blog",
-        "github"
-      ],
-      "source_family_ids": [
-        "builders",
-        "engineering"
-      ],
-      "theme_ids": [
-        "open-local-inference",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "training-self-improvement"
-      ],
-      "theme_document_counts": {
-        "open-local-inference": 1,
-        "training-self-improvement": 2
-      },
-      "first_seen": "2026-08-26T13:49:24Z",
-      "last_seen": "2026-09-16T18:59:25+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:train",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:training-self-improvement",
-            "document_count": 2
-          },
-          {
-            "id": "theme:training-self-improvement",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
-    },
-    {
       "id": "discovery:e-commerce-3c0b3470d2",
       "anchor_ids": [
         "technology:e-commerce"
@@ -13007,66 +12095,6 @@
         "has_structural_anchor": false,
         "phrase_only": false,
         "entity_only": true,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:early-stopping-7560fd76eb",
-      "anchor_ids": [
-        "phrase:early-stopping"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:early-stopping",
-          "label": "early stopping",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.20543v1",
-        "github:1345975185"
-      ],
-      "source_ids": [
-        "arxiv",
-        "github"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "research"
-      ],
-      "theme_ids": [],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {},
-      "first_seen": "2026-08-25T10:18:02Z",
-      "last_seen": "2026-09-17T15:11:08Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
         "recurrent_theme_count": 0,
         "context_coherence_met": false,
         "context_features": [],
@@ -13208,6 +12236,96 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
+    },
+    {
+      "id": "discovery:evidence-based-1b9d935abd",
+      "anchor_ids": [
+        "phrase:evidence-based"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:evidence-based",
+          "label": "evidence based",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21857v1",
+        "github:1376451596"
+      ],
+      "source_ids": [
+        "arxiv",
+        "github"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "research"
+      ],
+      "theme_ids": [
+        "open-local-inference",
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [
+        "training-self-improvement"
+      ],
+      "theme_document_counts": {
+        "open-local-inference": 1,
+        "small-specialized-models": 1,
+        "training-self-improvement": 2
+      },
+      "first_seen": "2026-09-18T14:52:26Z",
+      "last_seen": "2026-09-18T21:30:40Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 1,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:evaluate",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:training-self-improvement",
+            "document_count": 2
+          },
+          {
+            "id": "theme:training-self-improvement",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
     },
     {
       "id": "discovery:existing-agent-38be5a3d61",
@@ -13642,94 +12760,6 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
-    },
-    {
-      "id": "discovery:framework-built-cf62d9da25",
-      "anchor_ids": [
-        "phrase:framework-built"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:framework-built",
-          "label": "framework built",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.22000v1",
-        "github:1347394075"
-      ],
-      "source_ids": [
-        "arxiv",
-        "github"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "research"
-      ],
-      "theme_ids": [
-        "open-local-inference",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "training-self-improvement"
-      ],
-      "theme_document_counts": {
-        "open-local-inference": 1,
-        "training-self-improvement": 2
-      },
-      "first_seen": "2026-08-26T13:49:24Z",
-      "last_seen": "2026-09-18T17:00:56Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:train",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:training-self-improvement",
-            "document_count": 2
-          },
-          {
-            "id": "theme:training-self-improvement",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
     },
     {
       "id": "discovery:free-self-a0c771637a",
@@ -14228,92 +13258,6 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
-    },
-    {
-      "id": "discovery:full-precision-f99fc0087b",
-      "anchor_ids": [
-        "phrase:full-precision"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:full-precision",
-          "label": "full precision",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21704v1",
-        "huggingface-blog:f1c76f23a788b6884a28"
-      ],
-      "source_ids": [
-        "arxiv",
-        "huggingface-blog"
-      ],
-      "source_family_ids": [
-        "builders",
-        "research"
-      ],
-      "theme_ids": [
-        "frontier-inference-infrastructure",
-        "open-local-inference",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "open-local-inference"
-      ],
-      "theme_document_counts": {
-        "frontier-inference-infrastructure": 1,
-        "open-local-inference": 2,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-08-25T11:39:24+00:00",
-      "last_seen": "2026-09-18T12:39:47Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:open-local-inference",
-            "document_count": 2
-          },
-          {
-            "id": "theme:open-local-inference",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "open-local-inference",
-        "title": "Open, local & efficient inference",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
     },
     {
       "id": "discovery:fully-open-abd6ab6c22",
@@ -16148,96 +15092,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:llm-agent-2fecd427c2",
-      "anchor_ids": [
-        "phrase:llm-agent"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:llm-agent",
-          "label": "llm agent",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "github:1348178527",
-        "hf-paper:2609.24972"
-      ],
-      "source_ids": [
-        "github",
-        "huggingface-papers"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "research"
-      ],
-      "theme_ids": [
-        "agent-harnesses",
-        "assurance-infrastructure",
-        "memory-context",
-        "skills-integrations",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "memory-context"
-      ],
-      "theme_document_counts": {
-        "agent-harnesses": 1,
-        "assurance-infrastructure": 1,
-        "memory-context": 2,
-        "skills-integrations": 1,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-08-27T07:06:55Z",
-      "last_seen": "2026-09-21T00:00:00+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 4,
-        "capped_evidence_count": 4,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:memory-context",
-            "document_count": 2
-          },
-          {
-            "id": "theme:memory-context",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "memory-context",
-        "title": "Memory & context engineering",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
-    },
-    {
       "id": "discovery:llm-agents-abcfcecef5",
       "anchor_ids": [
         "phrase:llm-agents"
@@ -16907,6 +15761,74 @@
       "nearest_known": null
     },
     {
+      "id": "discovery:low-cost-91bfa02fce",
+      "anchor_ids": [
+        "phrase:low-cost"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:low-cost",
+          "label": "low cost",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "aws-machine-learning-blog:fff6059482d0fe129531",
+        "hf-paper:2609.14858"
+      ],
+      "source_ids": [
+        "aws-machine-learning-blog",
+        "huggingface-papers"
+      ],
+      "source_family_ids": [
+        "builders",
+        "research"
+      ],
+      "theme_ids": [
+        "agent-harnesses",
+        "coding-agents",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "agent-harnesses": 1,
+        "coding-agents": 1,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-14T00:00:00+00:00",
+      "last_seen": "2026-09-17T15:42:31+00:00",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
       "id": "discovery:lower-cost-307ed37511",
       "anchor_ids": [
         "phrase:lower-cost"
@@ -17309,103 +16231,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:model-context-b3e4393a75",
-      "anchor_ids": [
-        "phrase:model-context"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:model-context",
-          "label": "model context",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "github:1358571386",
-        "simon-willison:e133d02a1d698c5d1f75"
-      ],
-      "source_ids": [
-        "github",
-        "simon-willison"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "experts"
-      ],
-      "theme_ids": [
-        "coding-agents",
-        "memory-context",
-        "skills-integrations"
-      ],
-      "recurrent_theme_ids": [
-        "coding-agents",
-        "skills-integrations"
-      ],
-      "theme_document_counts": {
-        "coding-agents": 2,
-        "memory-context": 1,
-        "skills-integrations": 2
-      },
-      "first_seen": "2026-09-05T21:26:04Z",
-      "last_seen": "2026-09-20T20:24:41+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 1,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 3,
-        "capped_evidence_count": 3,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 2,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:coding-agents",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:skills-integrations",
-            "document_count": 2
-          },
-          {
-            "id": "theme:coding-agents",
-            "document_count": 2
-          },
-          {
-            "id": "theme:skills-integrations",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 1,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "skills-integrations",
-        "title": "Skills, protocols & integrations",
-        "matched_anchor_phrases": [
-          "model context"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 1.0
-      }
-    },
-    {
       "id": "discovery:model-performance-e813b6007b",
       "anchor_ids": [
         "phrase:model-performance"
@@ -17675,6 +16500,98 @@
       "nearest_known": null
     },
     {
+      "id": "discovery:models-fine-tuning-77dc0b345e",
+      "anchor_ids": [
+        "phrase:models-fine-tuning"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:models-fine-tuning",
+          "label": "models fine tuning",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "github:1366280840",
+        "openai-news:7f82d995c515e5ba429e"
+      ],
+      "source_ids": [
+        "github",
+        "openai-news"
+      ],
+      "source_family_ids": [
+        "builders",
+        "engineering"
+      ],
+      "theme_ids": [
+        "document-knowledge-systems",
+        "skills-integrations",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [
+        "training-self-improvement"
+      ],
+      "theme_document_counts": {
+        "document-knowledge-systems": 1,
+        "skills-integrations": 1,
+        "training-self-improvement": 2
+      },
+      "first_seen": "2026-09-11T14:27:35Z",
+      "last_seen": "2026-09-14T12:00:00+00:00",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 1,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:train",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:training-self-improvement",
+            "document_count": 2
+          },
+          {
+            "id": "theme:training-self-improvement",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "matched_anchor_phrases": [
+          "models fine tuning"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 1.0
+      }
+    },
+    {
       "id": "discovery:models-get-better-fb9e5ab624",
       "anchor_ids": [
         "phrase:models-get-better"
@@ -17866,6 +16783,90 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
+    },
+    {
+      "id": "discovery:multimodal-models-67349bdcec",
+      "anchor_ids": [
+        "phrase:multimodal-models"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:multimodal-models",
+          "label": "multimodal models",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "github:1360344248",
+        "nvidia-developer-blog:93db95fb6cd1a35dc083"
+      ],
+      "source_ids": [
+        "github",
+        "nvidia-developer-blog"
+      ],
+      "source_family_ids": [
+        "builders",
+        "engineering"
+      ],
+      "theme_ids": [
+        "frontier-inference-infrastructure",
+        "multimodal-3d"
+      ],
+      "recurrent_theme_ids": [
+        "multimodal-3d"
+      ],
+      "theme_document_counts": {
+        "frontier-inference-infrastructure": 1,
+        "multimodal-3d": 2
+      },
+      "first_seen": "2026-09-07T14:44:38Z",
+      "last_seen": "2026-09-09T20:31:04Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 1,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "concept:theme:multimodal-3d",
+            "document_count": 2
+          },
+          {
+            "id": "theme:multimodal-3d",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "multimodal-3d",
+        "title": "Multimodal generation & 3D",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      }
     },
     {
       "id": "discovery:navier-stokes-millennium-prize-39ca4f37cb",
@@ -18378,7 +17379,7 @@
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
-        "changed_evidence_count": 2
+        "changed_evidence_count": 0
       },
       "quality": {
         "anchor_support_share": 1.0,
@@ -18394,7 +17395,7 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": true,
+      "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
     },
@@ -18863,72 +17864,6 @@
         "source_count": 2,
         "source_family_count": 2,
         "technical_record_count": 0,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:openai-api-0ddc1c0f04",
-      "anchor_ids": [
-        "phrase:openai-api"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:openai-api",
-          "label": "openai api",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "github:1346917581",
-        "hn:49849976"
-      ],
-      "source_ids": [
-        "github",
-        "hacker-news"
-      ],
-      "source_family_ids": [
-        "attention",
-        "engineering"
-      ],
-      "theme_ids": [
-        "agent-harnesses",
-        "assurance-infrastructure"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "agent-harnesses": 1,
-        "assurance-infrastructure": 1
-      },
-      "first_seen": "2026-08-26T04:57:19Z",
-      "last_seen": "2026-09-25T21:08:39+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 1,
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
@@ -19528,66 +18463,6 @@
         "matched_anchor_phrases": [],
         "basis": "document-share"
       }
-    },
-    {
-      "id": "discovery:personal-assistant-ae715dfdb2",
-      "anchor_ids": [
-        "phrase:personal-assistant"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:personal-assistant",
-          "label": "personal assistant",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "bluesky:1278ebf77949:3mvzue3njs226",
-        "github:1346252450"
-      ],
-      "source_ids": [
-        "bluesky-ethan-mollick",
-        "github"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "experts"
-      ],
-      "theme_ids": [],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {},
-      "first_seen": "2026-08-25T14:42:47Z",
-      "last_seen": "2026-09-21T13:53:44.800Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 1,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
     },
     {
       "id": "discovery:physical-world-d38e2b293c",
@@ -20361,92 +19236,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:prompt-evaluation-6e0938a651",
-      "anchor_ids": [
-        "phrase:prompt-evaluation"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:prompt-evaluation",
-          "label": "prompt evaluation",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "aws-machine-learning-blog:fe2475d963a81fbb0dda",
-        "github:1348719501"
-      ],
-      "source_ids": [
-        "aws-machine-learning-blog",
-        "github"
-      ],
-      "source_family_ids": [
-        "builders",
-        "engineering"
-      ],
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "recurrent_theme_ids": [
-        "skills-integrations"
-      ],
-      "theme_document_counts": {
-        "skills-integrations": 2
-      },
-      "first_seen": "2026-08-27T16:42:58Z",
-      "last_seen": "2026-09-16T19:00:00+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:evaluate",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:skills-integrations",
-            "document_count": 2
-          },
-          {
-            "id": "theme:skills-integrations",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "skills-integrations",
-        "title": "Skills, protocols & integrations",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
-    },
-    {
       "id": "discovery:prompt-injections-0cad51c6e8",
       "anchor_ids": [
         "phrase:prompt-injections"
@@ -20581,92 +19370,6 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
-    },
-    {
-      "id": "discovery:quantization-aware-b66e1d773d",
-      "anchor_ids": [
-        "phrase:quantization-aware"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:quantization-aware",
-          "label": "quantization aware",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.20441v1",
-        "huggingface-blog:f1c76f23a788b6884a28"
-      ],
-      "source_ids": [
-        "arxiv",
-        "huggingface-blog"
-      ],
-      "source_family_ids": [
-        "builders",
-        "research"
-      ],
-      "theme_ids": [
-        "open-local-inference",
-        "small-specialized-models"
-      ],
-      "recurrent_theme_ids": [
-        "open-local-inference"
-      ],
-      "theme_document_counts": {
-        "open-local-inference": 2,
-        "small-specialized-models": 1
-      },
-      "first_seen": "2026-08-25T11:39:24+00:00",
-      "last_seen": "2026-09-17T14:15:01Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:open-local-inference",
-            "document_count": 2
-          },
-          {
-            "id": "theme:open-local-inference",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "open-local-inference",
-        "title": "Open, local & efficient inference",
-        "matched_anchor_phrases": [
-          "quantization aware"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 1.0
-      }
     },
     {
       "id": "discovery:quantum-computing-486406c057",
@@ -21663,6 +20366,77 @@
       "nearest_known": null
     },
     {
+      "id": "discovery:retrieval-augmented-8b3486c9dd",
+      "anchor_ids": [
+        "phrase:retrieval-augmented"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:retrieval-augmented",
+          "label": "retrieval augmented",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20754v1",
+        "github:1374667371"
+      ],
+      "source_ids": [
+        "arxiv",
+        "github"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "research"
+      ],
+      "theme_ids": [
+        "document-knowledge-systems",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "document-knowledge-systems": 1,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-17T15:40:52Z",
+      "last_seen": "2026-09-17T17:41:31Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:retrieve",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
       "id": "discovery:robot-policies-fc9673e326",
       "anchor_ids": [
         "phrase:robot-policies"
@@ -22320,70 +21094,6 @@
         "source_count": 2,
         "source_family_count": 2,
         "technical_record_count": 1,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:scientific-computing-a16b35d9aa",
-      "anchor_ids": [
-        "phrase:scientific-computing"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:scientific-computing",
-          "label": "scientific computing",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.22049v1",
-        "github:1346539416"
-      ],
-      "source_ids": [
-        "arxiv",
-        "github"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "research"
-      ],
-      "theme_ids": [
-        "coding-agents"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "coding-agents": 1
-      },
-      "first_seen": "2026-08-25T19:19:19Z",
-      "last_seen": "2026-09-18T17:41:39Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
         "dominant_publisher_share": 0.5,
         "raw_evidence_count": 2,
         "capped_evidence_count": 2,
@@ -23622,70 +22332,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:stable-movement-e2c83c3d88",
-      "anchor_ids": [
-        "phrase:stable-movement"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:stable-movement",
-          "label": "stable movement",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.20701v1",
-        "nvidia-developer-blog:669a2bcff9f93697746c"
-      ],
-      "source_ids": [
-        "arxiv",
-        "nvidia-developer-blog"
-      ],
-      "source_family_ids": [
-        "builders",
-        "research"
-      ],
-      "theme_ids": [
-        "robotics-embodied-ai"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "robotics-embodied-ai": 1
-      },
-      "first_seen": "2026-08-26T20:05:06Z",
-      "last_seen": "2026-09-17T17:02:55Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
       "id": "discovery:started-building-3df5d51e4a",
       "anchor_ids": [
         "phrase:started-building"
@@ -24395,88 +23041,6 @@
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
-    },
-    {
-      "id": "discovery:text-transcription-6d50cbd4af",
-      "anchor_ids": [
-        "phrase:text-transcription"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:text-transcription",
-          "label": "text transcription",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "deepmind-blog:ac6eb9276806c2f8127d",
-        "github:1363640102"
-      ],
-      "source_ids": [
-        "deepmind-blog",
-        "github"
-      ],
-      "source_family_ids": [
-        "builders",
-        "engineering"
-      ],
-      "theme_ids": [
-        "voice-audio"
-      ],
-      "recurrent_theme_ids": [
-        "voice-audio"
-      ],
-      "theme_document_counts": {
-        "voice-audio": 2
-      },
-      "first_seen": "2026-08-26T17:01:00+00:00",
-      "last_seen": "2026-09-10T06:50:24Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "concept:theme:voice-audio",
-            "document_count": 2
-          },
-          {
-            "id": "theme:voice-audio",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "voice-audio",
-        "title": "Voice & audio interfaces",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
     },
     {
       "id": "discovery:theme-small-specialized-models-evaluate-th-4d968c5abf",
@@ -25730,70 +24294,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:version-control-system-fcb294987f",
-      "anchor_ids": [
-        "phrase:version-control-system"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:version-control-system",
-          "label": "version control system",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "github:1348719501",
-        "hn:49785168"
-      ],
-      "source_ids": [
-        "github",
-        "hacker-news"
-      ],
-      "source_family_ids": [
-        "attention",
-        "engineering"
-      ],
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "skills-integrations": 1
-      },
-      "first_seen": "2026-08-27T16:42:58Z",
-      "last_seen": "2026-09-21T09:50:25+00:00",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 1,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
       "id": "discovery:video-editing-3bc45bca7e",
       "anchor_ids": [
         "phrase:video-editing"
@@ -26997,168 +25497,6 @@
         "candidate_quality_met": false
       },
       "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:zero-code-e49f1c63d6",
-      "anchor_ids": [
-        "phrase:zero-code"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:zero-code",
-          "label": "zero code",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.20722v1",
-        "github:1345975185"
-      ],
-      "source_ids": [
-        "arxiv",
-        "github"
-      ],
-      "source_family_ids": [
-        "engineering",
-        "research"
-      ],
-      "theme_ids": [],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {},
-      "first_seen": "2026-08-25T10:18:02Z",
-      "last_seen": "2026-09-17T17:16:31Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:results-show-e1e7bba2b4",
-      "anchor_ids": [
-        "phrase:results-show"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:results-show",
-          "label": "results show",
-          "kind": "emergent-phrase",
-          "document_count": 4,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.20451v1",
-        "arxiv:2609.21697v1",
-        "hf-paper:2608.26005",
-        "hf-paper:2609.24981"
-      ],
-      "source_ids": [
-        "arxiv",
-        "huggingface-papers"
-      ],
-      "source_family_ids": [
-        "research"
-      ],
-      "theme_ids": [
-        "small-specialized-models",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "small-specialized-models": 1,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-08-26T00:00:00+00:00",
-      "last_seen": "2026-09-21T00:00:00+00:00",
-      "metrics": {
-        "evidence_count": 4,
-        "independent_event_count": 4,
-        "source_count": 2,
-        "source_family_count": 1,
-        "technical_record_count": 4,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 8,
-        "capped_evidence_count": 5,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:train",
-            "document_count": 3
-          },
-          {
-            "id": "action:evaluate",
-            "document_count": 2
-          },
-          {
-            "id": "action:integrate",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 1,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [
-        {
-          "evidence_id": "arxiv:2609.20593v1",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "arxiv:2609.20765v1",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        },
-        {
-          "evidence_id": "arxiv:2609.20814v1",
-          "reason_codes": [
-            "source-cap",
-            "publisher-cap"
-          ]
-        }
-      ],
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
@@ -28713,6 +27051,97 @@
       }
     },
     {
+      "id": "discovery:results-show-e1e7bba2b4",
+      "anchor_ids": [
+        "phrase:results-show"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:results-show",
+          "label": "results show",
+          "kind": "emergent-phrase",
+          "document_count": 3,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.20451v1",
+        "arxiv:2609.21697v1",
+        "hf-paper:2609.24981"
+      ],
+      "source_ids": [
+        "arxiv",
+        "huggingface-papers"
+      ],
+      "source_family_ids": [
+        "research"
+      ],
+      "theme_ids": [],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {},
+      "first_seen": "2026-09-17T14:18:05Z",
+      "last_seen": "2026-09-21T00:00:00+00:00",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 2,
+        "source_family_count": 1,
+        "technical_record_count": 3,
+        "dominant_publisher_share": 0.667,
+        "raw_evidence_count": 7,
+        "capped_evidence_count": 4,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:integrate",
+            "document_count": 2
+          },
+          {
+            "id": "action:train",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 1,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [
+        {
+          "evidence_id": "arxiv:2609.20593v1",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "arxiv:2609.20765v1",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        },
+        {
+          "evidence_id": "arxiv:2609.20814v1",
+          "reason_codes": [
+            "source-cap",
+            "publisher-cap"
+          ]
+        }
+      ],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
       "id": "discovery:world-modeling-a9c235720d",
       "anchor_ids": [
         "phrase:world-modeling"
@@ -29177,78 +27606,6 @@
         "context_coherence_met": false,
         "context_features": [],
         "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:art-performance-2d2e34096d",
-      "anchor_ids": [
-        "phrase:art-performance"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:art-performance",
-          "label": "art performance",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21858v1",
-        "hf-paper:2608.26005"
-      ],
-      "source_ids": [
-        "arxiv",
-        "huggingface-papers"
-      ],
-      "source_family_ids": [
-        "research"
-      ],
-      "theme_ids": [
-        "assurance-infrastructure",
-        "small-specialized-models",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "assurance-infrastructure": 1,
-        "small-specialized-models": 1,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-08-26T00:00:00+00:00",
-      "last_seen": "2026-09-18T14:52:39Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 1,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:deploy",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
         "spark_quality_met": false,
         "candidate_quality_met": false
       },
@@ -30092,6 +28449,88 @@
         "matched_anchor_phrases": [],
         "basis": "document-share"
       }
+    },
+    {
+      "id": "discovery:complex-reasoning-4b5525cc62",
+      "anchor_ids": [
+        "phrase:complex-reasoning"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:complex-reasoning",
+          "label": "complex reasoning",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21704v1",
+        "hf-paper:2609.23986"
+      ],
+      "source_ids": [
+        "arxiv",
+        "huggingface-papers"
+      ],
+      "source_family_ids": [
+        "research"
+      ],
+      "theme_ids": [
+        "frontier-inference-infrastructure",
+        "open-local-inference",
+        "small-specialized-models",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "frontier-inference-infrastructure": 1,
+        "open-local-inference": 1,
+        "small-specialized-models": 1,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-18T12:39:47Z",
+      "last_seen": "2026-09-21T00:00:00+00:00",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 1,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:reason",
+            "document_count": 2
+          },
+          {
+            "id": "action:retrieve",
+            "document_count": 2
+          },
+          {
+            "id": "action:route",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
     },
     {
       "id": "discovery:consumer-hardware-357f486fc0",
@@ -30996,80 +29435,6 @@
       },
       "first_seen": "2026-09-14T00:00:00+00:00",
       "last_seen": "2026-09-18T17:54:32Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 1,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:evaluate",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
-    },
-    {
-      "id": "discovery:duplex-speech-fb3914d517",
-      "anchor_ids": [
-        "phrase:duplex-speech"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:duplex-speech",
-          "label": "duplex speech",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21967v1",
-        "hf-paper:2608.26005"
-      ],
-      "source_ids": [
-        "arxiv",
-        "huggingface-papers"
-      ],
-      "source_family_ids": [
-        "research"
-      ],
-      "theme_ids": [
-        "open-local-inference",
-        "small-specialized-models",
-        "training-self-improvement",
-        "voice-audio"
-      ],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {
-        "open-local-inference": 1,
-        "small-specialized-models": 1,
-        "training-self-improvement": 1,
-        "voice-audio": 1
-      },
-      "first_seen": "2026-08-26T00:00:00+00:00",
-      "last_seen": "2026-09-18T16:27:22Z",
       "metrics": {
         "evidence_count": 2,
         "independent_event_count": 2,
@@ -32931,97 +31296,6 @@
       "nearest_known": null
     },
     {
-      "id": "discovery:language-models-slms-557f275398",
-      "anchor_ids": [
-        "phrase:language-models-slms"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:language-models-slms",
-          "label": "language models slms",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21676v1",
-        "hf-paper:2608.26005"
-      ],
-      "source_ids": [
-        "arxiv",
-        "huggingface-papers"
-      ],
-      "source_family_ids": [
-        "research"
-      ],
-      "theme_ids": [
-        "small-specialized-models",
-        "training-self-improvement"
-      ],
-      "recurrent_theme_ids": [
-        "small-specialized-models"
-      ],
-      "theme_document_counts": {
-        "small-specialized-models": 2,
-        "training-self-improvement": 1
-      },
-      "first_seen": "2026-08-26T00:00:00+00:00",
-      "last_seen": "2026-09-18T12:13:06Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 1,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 1,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:evaluate",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:small-specialized-models",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:training-self-improvement",
-            "document_count": 2
-          },
-          {
-            "id": "theme:small-specialized-models",
-            "document_count": 2
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "small-specialized-models",
-        "title": "Small & specialized models",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      }
-    },
-    {
       "id": "discovery:larger-gains-35844f8976",
       "anchor_ids": [
         "phrase:larger-gains"
@@ -34148,6 +32422,90 @@
         "context_coherence_met": false,
         "context_features": [],
         "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:omni-models-67a491b8c9",
+      "anchor_ids": [
+        "phrase:omni-models"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:omni-models",
+          "label": "omni models",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21676v1",
+        "hf-paper:2609.21465"
+      ],
+      "source_ids": [
+        "arxiv",
+        "huggingface-papers"
+      ],
+      "source_family_ids": [
+        "research"
+      ],
+      "theme_ids": [
+        "agent-harnesses",
+        "multimodal-3d",
+        "small-specialized-models",
+        "training-self-improvement",
+        "voice-audio"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "agent-harnesses": 1,
+        "multimodal-3d": 1,
+        "small-specialized-models": 1,
+        "training-self-improvement": 1,
+        "voice-audio": 1
+      },
+      "first_seen": "2026-09-18T00:00:00+00:00",
+      "last_seen": "2026-09-18T12:13:06Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 1,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:evaluate",
+            "document_count": 2
+          },
+          {
+            "id": "action:generate",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:training-self-improvement",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
         "spark_quality_met": false,
         "candidate_quality_met": false
       },

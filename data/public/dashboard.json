@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T23:02:30.477849+00:00",
+    "generated_at": "2026-10-03T01:55:26.755302+00:00",
     "status": "success",
-    "source_count": 39,
-    "evidence_count": 2076,
+    "source_count": 42,
+    "evidence_count": 2183,
     "warnings": []
   },
   "weekly": {
@@ -13,8 +13,8 @@
       "training-self-improvement",
       "coding-agents",
       "open-local-inference",
-      "small-specialized-models",
-      "skills-integrations"
+      "skills-integrations",
+      "small-specialized-models"
     ]
   },
   "themes": [
@@ -56,10 +56,11 @@
       ],
       "primary_layer": "models-capabilities",
       "maturity": "emerging",
-      "evidence_count": 94,
+      "evidence_count": 95,
       "source_types": [
         "community",
         "curated-newsletter",
+        "event-paper",
         "expert-newsletter",
         "expert-social",
         "first-party-lab",
@@ -120,11 +121,12 @@
       ],
       "primary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 52,
+      "evidence_count": 55,
       "source_types": [
         "community",
         "company-directory",
         "curated-newsletter",
+        "event-session",
         "expert-newsletter",
         "expert-social",
         "first-party-lab",
@@ -188,11 +190,13 @@
       ],
       "primary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 69,
+      "evidence_count": 77,
       "source_types": [
         "community",
         "company-directory",
         "curated-newsletter",
+        "event-paper",
+        "event-session",
         "expert-newsletter",
         "expert-social",
         "first-party-lab",
@@ -225,10 +229,11 @@
       ],
       "primary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 69,
+      "evidence_count": 70,
       "source_types": [
         "community",
         "curated-newsletter",
+        "event-session",
         "expert-social",
         "first-party-lab",
         "investor-essay",
@@ -261,11 +266,12 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "compute-inference-serving",
       "maturity": "emerging",
-      "evidence_count": 97,
+      "evidence_count": 99,
       "source_types": [
         "community",
         "company-directory",
         "curated-newsletter",
+        "event-session",
         "expert-newsletter",
         "expert-social",
         "first-party-lab",
@@ -333,14 +339,17 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 225,
+      "evidence_count": 237,
       "source_types": [
         "community",
         "company-directory",
         "curated-newsletter",
+        "event-paper",
+        "event-session",
         "expert-newsletter",
         "expert-social",
         "first-party-lab",
+        "hackathon-project",
         "investor-essay",
         "job-posting",
         "newsletter",
@@ -371,13 +380,15 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 116,
+      "evidence_count": 127,
       "source_types": [
         "community",
         "company-directory",
         "curated-newsletter",
+        "event-session",
         "expert-social",
         "first-party-lab",
+        "hackathon-project",
         "investor-essay",
         "newsletter",
         "paper",
@@ -406,16 +417,17 @@
       "primary_layer": "assurance",
       "secondary_layer": "harness-orchestration",
       "maturity": "watchlist",
-      "evidence_count": 1,
+      "evidence_count": 2,
       "source_types": [
+        "event-session",
         "paper"
       ],
       "score": {
-        "recurrence": 2.5,
+        "recurrence": 5.0,
         "acceleration": 12.0,
-        "persistence": 5.0,
-        "breadth": 5.0,
-        "total": 24.5
+        "persistence": 10.0,
+        "breadth": 10.0,
+        "total": 37.0
       }
     },
     {
@@ -470,11 +482,12 @@
       "primary_layer": "models-capabilities",
       "secondary_layer": "tools-skills-integrations",
       "maturity": "emerging",
-      "evidence_count": 25,
+      "evidence_count": 27,
       "source_types": [
         "community",
         "company-directory",
         "curated-newsletter",
+        "event-session",
         "expert-social",
         "first-party-lab",
         "investor-essay",
@@ -511,10 +524,11 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 89,
+      "evidence_count": 96,
       "source_types": [
         "community",
         "company-directory",
+        "event-session",
         "expert-social",
         "first-party-lab",
         "investor-essay",
@@ -550,10 +564,11 @@
       "primary_layer": "tools-skills-integrations",
       "secondary_layer": "harness-orchestration",
       "maturity": "emerging",
-      "evidence_count": 59,
+      "evidence_count": 61,
       "source_types": [
         "community",
         "company-directory",
+        "event-session",
         "first-party-lab",
         "job-posting",
         "paper",
@@ -583,9 +598,10 @@
       "primary_layer": "harness-orchestration",
       "secondary_layer": "assurance",
       "maturity": "emerging",
-      "evidence_count": 20,
+      "evidence_count": 26,
       "source_types": [
         "community",
+        "event-session",
         "first-party-lab",
         "investor-essay",
         "paper",
@@ -871,8 +887,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-26T09:50:17Z",
-        "forks": 66,
         "stars": 964,
+        "forks": 66,
         "license": "MIT"
       }
     },
@@ -1198,8 +1214,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-26T11:26:00Z",
-        "forks": 51,
         "stars": 838,
+        "forks": 51,
         "license": "MIT"
       }
     },
@@ -1271,8 +1287,8 @@
       "classification_rule_id": "unresolved-review",
       "verification": {
         "pushed_at": "2026-09-23T18:16:08Z",
-        "forks": 82,
         "stars": 714,
+        "forks": 82,
         "license": "MIT"
       }
     },
@@ -1461,8 +1477,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-24T23:10:28Z",
-        "forks": 197,
         "stars": 2269,
+        "forks": 197,
         "license": "Apache-2.0"
       }
     },
@@ -1846,8 +1862,8 @@
       "classification_rule_id": "unresolved-review",
       "verification": {
         "pushed_at": "2026-09-24T13:09:04Z",
-        "forks": 0,
         "stars": 18,
+        "forks": 0,
         "license": "MIT"
       }
     },
@@ -2749,12 +2765,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "team_size": 2,
-        "location": "New York City",
-        "batch": "S2026",
         "github_url": "",
         "date_basis": "first-observed",
-        "status": "Active"
+        "status": "Active",
+        "team_size": 2,
+        "batch": "S2026",
+        "location": "New York City"
       }
     },
     {
@@ -2785,12 +2801,12 @@
       "classification_reason": "Matched reviewed canonical-theme vocabulary.",
       "classification_rule_id": "canonical-theme-match",
       "verification": {
-        "team_size": 2,
-        "location": "San Francisco",
-        "batch": "S2026",
         "github_url": "https://github.com/Hebbian-Robotics",
         "date_basis": "first-observed",
-        "status": "Active"
+        "status": "Active",
+        "team_size": 2,
+        "batch": "S2026",
+        "location": "San Francisco"
       }
     },
     {
@@ -2817,12 +2833,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "team_size": 2,
-        "location": "San Francisco",
-        "batch": "F2026",
         "github_url": "https://github.com/Vorelios",
         "date_basis": "first-observed",
-        "status": "Active"
+        "status": "Active",
+        "team_size": 2,
+        "batch": "F2026",
+        "location": "San Francisco"
       }
     },
     {
@@ -2849,12 +2865,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "team_size": 2,
-        "location": "San Francisco",
-        "batch": "F2026",
         "github_url": "https://github.com/useoxygen",
         "date_basis": "first-observed",
-        "status": "Active"
+        "status": "Active",
+        "team_size": 2,
+        "batch": "F2026",
+        "location": "San Francisco"
       }
     },
     {
@@ -3075,8 +3091,8 @@
       "classification_rule_id": "canonical-theme-match",
       "verification": {
         "pushed_at": "2026-09-25T04:53:31Z",
-        "forks": 36,
         "stars": 271,
+        "forks": 36,
         "license": "Apache-2.0"
       }
     },
@@ -3342,8 +3358,8 @@
       "classification_rule_id": "unresolved-review",
       "verification": {
         "pushed_at": "2026-09-25T14:18:29Z",
-        "forks": 1,
         "stars": 8,
+        "forks": 1,
         "license": "MIT"
       }
     },
@@ -4279,12 +4295,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "team_size": 2,
-        "location": "San Francisco",
-        "batch": "F2026",
         "github_url": "",
         "date_basis": "first-observed",
-        "status": "Active"
+        "status": "Active",
+        "team_size": 2,
+        "batch": "F2026",
+        "location": "San Francisco"
       }
     },
     {
@@ -4311,12 +4327,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "team_size": 2,
-        "location": "San Francisco",
-        "batch": "F2026",
         "github_url": "",
         "date_basis": "first-observed",
-        "status": "Active"
+        "status": "Active",
+        "team_size": 2,
+        "batch": "F2026",
+        "location": "San Francisco"
       }
     },
     {
@@ -4343,12 +4359,12 @@
       "classification_reason": "Retained as company-formation or hiring verification, but it does not map to a canonical engineering theme. Verification evidence remains available outside thematic coverage.",
       "classification_rule_id": "verification-only-no-theme",
       "verification": {
-        "team_size": 1,
-        "location": "San Francisco",
-        "batch": "F2026",
         "github_url": "https://github.com/openhackai",
         "date_basis": "first-observed",
-        "status": "Active"
+        "status": "Active",
+        "team_size": 1,
+        "batch": "F2026",
+        "location": "San Francisco"
       }
     },
     {
@@ -6217,6 +6233,61 @@
       "evidence_role": "investor-thesis",
       "homepage_url": "https://frontier.m1c.vc/",
       "logo_url": "https://frontier.m1c.vc/favicon.ico"
+    },
+    {
+      "id": "neurips-2025-proceedings",
+      "name": "NeurIPS 2025 Proceedings",
+      "channel": "event-program",
+      "source_quality": "high",
+      "commercial_bias": "low",
+      "publisher_id": "neurips",
+      "evidence_role": "event-research-artifact",
+      "homepage_url": "https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference",
+      "logo_url": "https://neurips.cc/favicon.ico"
+    },
+    {
+      "id": "genai-genesis-2026-projects",
+      "name": "GenAI Genesis 2026 projects",
+      "channel": "hackathon-gallery",
+      "source_quality": "medium",
+      "commercial_bias": "sponsor-and-participant",
+      "publisher_id": "genai-genesis-foundation",
+      "evidence_role": "event-project-artifact",
+      "homepage_url": "https://genai-genesis-2026.devpost.com/project-gallery",
+      "logo_url": "https://d2dmyh35ffsxbl.cloudfront.net/assets/reimagine2/devpost-logo-mobile-f3aff76bfc0b6ada9bb4ddd773bfc534769ed793f962612804a1e84c305a5f94.svg"
+    },
+    {
+      "id": "ai-engineer-worlds-fair-2026-program",
+      "name": "AI Engineer World's Fair 2026 program",
+      "channel": "event-program",
+      "source_quality": "high",
+      "commercial_bias": "sponsor-and-organizer",
+      "publisher_id": "ai-engineer",
+      "evidence_role": "event-program-claim",
+      "homepage_url": "https://ai.engineer/worldsfair/2026",
+      "logo_url": "https://ai.engineer/favicon.ico"
+    },
+    {
+      "id": "linkedin-event-links",
+      "name": "LinkedIn event link inbox",
+      "channel": "curated-social",
+      "source_quality": "reviewed",
+      "commercial_bias": "recorded-per-item",
+      "publisher_id": "mixed-linkedin-authors",
+      "evidence_role": "event-observation",
+      "homepage_url": "https://www.linkedin.com/",
+      "logo_url": "https://static.licdn.com/sc/h/akt4ae504epesldzj74dzred8"
+    },
+    {
+      "id": "x-event-links",
+      "name": "X event link inbox",
+      "channel": "curated-social",
+      "source_quality": "reviewed",
+      "commercial_bias": "recorded-per-item",
+      "publisher_id": "mixed-x-authors",
+      "evidence_role": "event-observation",
+      "homepage_url": "https://x.com/",
+      "logo_url": "https://abs.twimg.com/favicons/twitter.3.ico"
     },
     {
       "id": "manual-public-evidence",

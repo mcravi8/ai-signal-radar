@@ -41,6 +41,9 @@ const sourceChannelOrder = [
   "repository",
   "company-directory",
   "job-posting",
+  "event-program",
+  "hackathon-gallery",
+  "curated-social",
   "expert-newsletter",
   "curated-newsletter",
   "practitioner-blog",
@@ -89,6 +92,9 @@ function channelLabel(value) {
     "expert-newsletter": "Expert newsletter",
     "curated-newsletter": "Curated newsletter",
     "practitioner-blog": "Practitioner blog",
+    "event-program": "Event program",
+    "hackathon-gallery": "Hackathon projects",
+    "curated-social": "Reviewed social links",
   })[value] || label(value);
 }
 
@@ -969,11 +975,170 @@ function analysisHeader(analysis, includeFacts = true) {
   return fragment;
 }
 
+function renderEventPulse(analysis, detail) {
+  const events = analysis.events || [];
+  const activeEvents = events.filter((event) => event.analysis_status === "active");
+  const artifactCount = activeEvents.reduce((total, event) => total + event.artifact_count, 0);
+  const synthesis = node("section", "detail-section event-synthesis");
+  synthesis.append(
+    node("h3", "", "Current event read"),
+    node("p", "synthesis-lead", analysis.executive_summary),
+    node("p", "interpretation-note", "Event affiliation is provenance, not corroboration. Attention and technical substance are scored independently; 30- and 90-day checks look for evidence after the event."),
+  );
+
+  const metrics = node("div", "metric-strip event-metrics");
+  metrics.append(
+    metric("Tracked events", formatNumber(analysis.event_count), `${activeEvents.length} with linked evidence`),
+    metric("Event evidence", formatNumber(analysis.evidence_count), "Echo-controlled inside each dossier"),
+    metric("Concrete artifacts", formatNumber(artifactCount), "Papers, projects, and repositories"),
+    metric("Social inbox", formatNumber(analysis.social_inbox?.record_count), analysis.social_inbox?.status === "empty" ? "Ready for reviewed links" : "Reviewed observations"),
+  );
+
+  const indexSection = node("section", "detail-section");
+  indexSection.append(node("h3", "", "Event comparison"));
+  const shell = node("div", "table-shell");
+  const table = node("table", "data-table event-table");
+  const thead = document.createElement("thead");
+  const head = node("tr");
+  for (const heading of ["Event", "Window", "Evidence", "Attention", "Substance", "Persistence"]) {
+    head.append(node("th", ["Evidence", "Attention", "Substance"].includes(heading) ? "numeric-header" : "", heading));
+  }
+  thead.append(head);
+  const tbody = document.createElement("tbody");
+  for (const event of events) {
+    const row = node("tr");
+    const eventCell = node("td", "event-table-title");
+    const jump = node("button", "event-jump", event.name);
+    jump.type = "button";
+    jump.dataset.eventId = event.id;
+    eventCell.append(jump, node("small", "", `${label(event.event_type)} · ${event.location}`));
+    const persistence = (event.persistence_checks || []).at(-1);
+    row.append(
+      eventCell,
+      node("td", "tabular", `${formatDate(event.start_date)} – ${formatDate(event.end_date)}`),
+      node("td", "number-cell tabular", formatNumber(event.evidence_count)),
+      node("td", "number-cell tabular", event.attention.score === null ? "N/O" : String(event.attention.score)),
+      node("td", "number-cell tabular", event.technical_substance.score === null ? "N/O" : String(event.technical_substance.score)),
+      node("td", `event-persistence event-persistence-${persistence?.status || "pending"}`, label(persistence?.status || "pending")),
+    );
+    tbody.append(row);
+  }
+  table.append(thead, tbody);
+  shell.append(table);
+  indexSection.append(shell);
+
+  const dossiers = node("section", "detail-section");
+  dossiers.append(node("h3", "", "Event dossiers"));
+  const evidenceById = new Map(state.research.evidence.map((item) => [item.id, item]));
+  const dossierList = node("div", "event-dossiers");
+  for (const [index, event] of events.entries()) {
+    const dossier = node("details", `event-dossier event-dossier-${event.analysis_status}`);
+    dossier.id = `event-${event.id}`;
+    if (index === 0) dossier.open = true;
+    const summary = node("summary", "event-dossier-summary");
+    const title = node("span", "event-dossier-title");
+    title.append(node("small", "", `${label(event.event_type)} · ${formatDate(event.start_date)}`), node("strong", "", event.name));
+    const scores = node("span", "event-score-pair");
+    scores.append(
+      node("span", "", `Attention ${event.attention.score === null ? "N/O" : event.attention.score}`),
+      node("span", "", `Substance ${event.technical_substance.score === null ? "N/O" : event.technical_substance.score}`),
+    );
+    summary.append(title, scores);
+
+    const body = node("div", "event-dossier-body");
+    body.append(node("p", "event-finding", event.finding));
+    const scoreGrid = node("div", "event-score-grid");
+    for (const [heading, score] of [["Event attention", event.attention], ["Technical substance", event.technical_substance]]) {
+      const card = node("div", "event-score-card");
+      card.append(node("small", "", heading), node("strong", "tabular", score.score === null ? "N/O" : `${score.score}/100`), node("span", "", label(score.label)), node("p", "", score.interpretation));
+      const components = node("dl", "event-score-components");
+      for (const [name, value] of Object.entries(score.components || {})) components.append(node("dt", "", label(name)), node("dd", "tabular", String(value)));
+      card.append(components);
+      scoreGrid.append(card);
+    }
+    body.append(scoreGrid);
+
+    const reading = node("div", "signal-reading-grid event-reading-grid");
+    for (const [heading, copy] of [
+      ["Why it matters", event.why_it_matters],
+      ["Verification read", event.verification_read],
+      ["What would confirm it", event.next_confirmation],
+      ["Counter-signal", event.counter_signal],
+    ]) {
+      const item = node("div", "finding-implication");
+      item.append(node("strong", "", heading), node("p", "", copy));
+      reading.append(item);
+    }
+    body.append(reading);
+
+    const themeLinks = node("div", "signal-theme-links");
+    themeLinks.append(node("strong", "", "Connected themes"));
+    for (const eventTheme of event.themes || []) {
+      const theme = state.research.themes.find((item) => item.id === eventTheme.id);
+      if (theme) themeLinks.append(themeButton(theme, true), node("small", "tabular", `${eventTheme.evidence_count}`));
+    }
+    if ((event.themes || []).length) body.append(themeLinks);
+
+    const checks = node("div", "event-checkpoints");
+    checks.append(node("strong", "", "Post-event verification"));
+    for (const checkpoint of event.persistence_checks || []) {
+      const item = node("div", `event-checkpoint event-persistence-${checkpoint.status}`);
+      item.append(node("span", "tabular", `${checkpoint.days}-day`), badge(label(checkpoint.status), checkpoint.status), node("small", "", `${checkpoint.evidence_count} later records · ${checkpoint.source_count} sources`));
+      checks.append(item);
+    }
+    body.append(checks);
+
+    const cited = (event.evidence_ids || []).map((id) => evidenceById.get(id)).filter(Boolean);
+    const evidenceDetails = node("details", "finding-evidence");
+    evidenceDetails.append(node("summary", "", `Inspect ${cited.length} linked records`));
+    const evidenceRows = node("div", "evidence-list");
+    for (const item of cited.slice(0, 18)) {
+      const record = node("article", "evidence-list-item");
+      record.append(linkOrText(item), node("span", "", `${sourceName(item.source_id)} · ${formatDate(item.published_at)} · ${label(item.source_type)}`));
+      evidenceRows.append(record);
+    }
+    if (cited.length > 18) evidenceRows.append(node("p", "section-note", `${cited.length - 18} additional records remain available in the Evidence explorer.`));
+    evidenceDetails.append(evidenceRows);
+    body.append(evidenceDetails);
+
+    if ((event.project_names || []).length) {
+      const projectLink = node("a", "event-project-link", `Open ${event.project_names.length} event projects in the Engineering Atlas →`);
+      projectLink.href = "#projects";
+      body.append(projectLink);
+    }
+    dossier.append(summary, body);
+    dossierList.append(dossier);
+  }
+  dossiers.append(dossierList);
+
+  const inbox = node("section", "detail-section event-inbox");
+  inbox.append(node("h3", "", "Reviewed social-link inbox"));
+  if (analysis.social_inbox?.record_count) {
+    inbox.append(node("p", "", `${analysis.social_inbox.record_count} public observations are linked to an event dossier. Full post bodies are never copied into the repository.`));
+  } else {
+    inbox.append(node("p", "empty-state", "No LinkedIn or X links are awaiting analysis. The inbox contract is ready: save the public URL, event, author, date, and a short original observation—never the full post text."));
+  }
+  if (analysis.social_inbox?.submission_url) {
+    const submit = node("a", "event-project-link", "Submit a public event link for review →");
+    submit.href = analysis.social_inbox.submission_url;
+    submit.target = "_blank";
+    submit.rel = "noreferrer";
+    inbox.append(submit, node("p", "section-note", `Submissions enter the corpus only after the ${analysis.social_inbox.review_label} review label is applied.`));
+  }
+
+  const method = node("details", "detail-section event-method");
+  method.append(node("summary", "", "Scoring and evidence policy"));
+  const methodList = node("dl", "definition-list");
+  for (const [name, copy] of Object.entries(analysis.method || {})) methodList.append(node("dt", "", label(name)), node("dd", "", copy));
+  method.append(methodList);
+  detail.append(synthesis, metrics, indexSection, dossiers, inbox, method);
+}
+
 function renderAnalysisDetail() {
   const analysis = state.research.analyses.find((item) => item.id === state.selectedAnalysis) || state.research.analyses[0];
   state.selectedAnalysis = analysis.id;
   const detail = $("#analysis-detail");
-  detail.replaceChildren(analysisHeader(analysis, !["operator-narratives", "early-signal-tracker", "expert-pulse"].includes(analysis.id)));
+  detail.replaceChildren(analysisHeader(analysis, !["operator-narratives", "early-signal-tracker", "expert-pulse", "event-pulse"].includes(analysis.id)));
 
   if (analysis.id === "alphasignal-corpus") {
     if (!state.alpha) {
@@ -1021,6 +1186,8 @@ function renderAnalysisDetail() {
     }
     section.append(rows);
     detail.append(section);
+  } else if (analysis.id === "event-pulse") {
+    renderEventPulse(analysis, detail);
   } else if (analysis.id === "early-signal-tracker") {
     const synthesis = node("section", "detail-section narrative-synthesis signal-synthesis");
     synthesis.append(node("h3", "", "Current directional read"), node("p", "synthesis-lead", analysis.executive_summary));
@@ -1826,6 +1993,15 @@ function bindControls() {
     if (signalJump) {
       const target = document.getElementById(`signal-${signalJump.dataset.signalId}`);
       if (target) {
+        target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+        target.focus({ preventScroll: true });
+      }
+    }
+    const eventJump = event.target.closest("[data-event-id]");
+    if (eventJump) {
+      const target = document.getElementById(`event-${eventJump.dataset.eventId}`);
+      if (target) {
+        target.open = true;
         target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
         target.focus({ preventScroll: true });
       }

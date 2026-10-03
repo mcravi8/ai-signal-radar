@@ -13,6 +13,7 @@ from .deduplicate import deduplicate
 from .discovery import validate_discovery_policy
 from .discovery_cluster import build_discovery_candidates, validate_clustering_policy
 from .evidence_policy import build_operating_model, format_calibration, run_calibration
+from .events import assign_event_ids, build_event_pulse, load_social_links, validate_event_config
 from .export_public import sanitize_item, validate_public_payload, write_public_dashboard
 from .research import EARLY_SIGNAL_DIRECTIONS, build_research, write_weekly_report
 from .score import score_theme
@@ -29,7 +30,7 @@ def _yaml(path: Path) -> dict:
 
 
 def collect() -> None:
-    from .collectors import arxiv, github, hackernews, huggingface, rss, sitemap, yc
+    from .collectors import arxiv, events, github, hackernews, huggingface, rss, sitemap, yc
 
     source_config = _yaml(ROOT / "config/sources.yml")["sources"]
     enabled = {source["id"]: source for source in source_config if source.get("enabled")}
@@ -55,6 +56,16 @@ def collect() -> None:
         attempt("github", lambda: github.collect(queries, since))
     if "hacker-news" in enabled:
         attempt("hacker-news", lambda: hackernews.collect(enabled["hacker-news"]["feeds"]))
+    if {"linkedin-event-links", "x-event-links"}.intersection(enabled):
+        event_config = _yaml(ROOT / "config/events.yml")
+        attempt(
+            "reviewed-social-inbox",
+            lambda: events.collect_reviewed_social_issues(
+                os.getenv("GITHUB_REPOSITORY", "mcravi8/ai-signal-radar"),
+                os.getenv("AI_RADAR_GITHUB_TOKEN", ""),
+                event_config,
+            ),
+        )
     for source_id, source in enabled.items():
         if source.get("collection") == "rss":
             attempt(
@@ -88,6 +99,8 @@ def collect() -> None:
                 source_id,
                 lambda source=source: yc.collect_jobs(source["jobs_url"], source.get("terms", []), source.get("limit", 50)),
             )
+        elif source.get("collection") in {"event-json", "conference-proceedings", "devpost-gallery"}:
+            attempt(source_id, lambda source=source: events.collect_source(source))
 
     snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "items.jsonl"
     write_jsonl(snapshot, [item.to_dict() for item in collected])
@@ -96,6 +109,52 @@ def collect() -> None:
     (snapshot.parent / "status.json").write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
     if not collected and errors:
         raise SystemExit("All enabled collectors failed")
+
+
+def collect_events() -> None:
+    from .collectors import events
+
+    source_config = _yaml(ROOT / "config/sources.yml")["sources"]
+    event_sources = [
+        source for source in source_config
+        if source.get("enabled") and source.get("collection") in {"event-json", "conference-proceedings", "devpost-gallery"}
+    ]
+    collected = []
+    errors: list[str] = []
+    for source in event_sources:
+        try:
+            rows = events.collect_source(source)
+            collected.extend(rows)
+            print(f"{source['id']}: collected {len(rows)}")
+        except Exception as exc:
+            errors.append(f"{source['id']}: {exc}")
+            print(f"{source['id']}: failed: {exc}")
+    try:
+        social_rows = events.collect_reviewed_social_issues(
+            os.getenv("GITHUB_REPOSITORY", "mcravi8/ai-signal-radar"),
+            os.getenv("AI_RADAR_GITHUB_TOKEN", ""),
+            _yaml(ROOT / "config/events.yml"),
+        )
+        collected.extend(social_rows)
+        print(f"reviewed-social-inbox: collected {len(social_rows)}")
+    except Exception as exc:
+        errors.append(f"reviewed-social-inbox: {exc}")
+        print(f"reviewed-social-inbox: failed: {exc}")
+    sanitized = [sanitize_item(item.to_dict()) for item in collected]
+    validate_public_payload({"items": sanitized})
+    added = merge_items(ROOT / "data/processed/items.jsonl", collected)
+    snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "event-items.jsonl"
+    write_jsonl(snapshot, sanitized)
+    status = {
+        "collected_at": datetime.now(timezone.utc).isoformat(),
+        "items": len(collected),
+        "added": added,
+        "errors": errors,
+    }
+    (snapshot.parent / "event-status.json").write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
+    print(f"events: extracted {len(collected)} public records, added {added}")
+    if not collected and errors:
+        raise SystemExit("All event collectors failed")
 
 
 def collect_verification() -> None:
@@ -188,8 +247,14 @@ def synthesize() -> None:
     validate_discovery_policy(discovery_policy)
     validate_concept_policy(concept_policy)
     validate_clustering_policy(clustering_policy)
+    event_config = _yaml(ROOT / "config/events.yml")
+    validate_event_config(event_config)
     generated_at = datetime.now(timezone.utc)
     manual_rows = _yaml(ROOT / "data/manual/items.yml").get("items", [])
+    social_rows = [
+        item.to_dict()
+        for item in load_social_links(_yaml(ROOT / "data/manual/social-links.yml"), event_config)
+    ]
     processed_rows = read_jsonl(ROOT / "data/processed/items.jsonl")
     processed_by_id = {row["id"]: row for row in processed_rows}
     # Reviewed manual records are authoritative when an automated collector has
@@ -207,7 +272,8 @@ def synthesize() -> None:
         }
         for row in manual_rows
     ]
-    rows = deduplicate([*reviewed_rows, *processed_rows])
+    rows = deduplicate([*reviewed_rows, *social_rows, *processed_rows])
+    assign_event_ids(rows, event_config)
     keywords = _yaml(ROOT / "config/keywords.yml").get("themes", {})
     classification_policy = _yaml(ROOT / "config/classification-policy.yml")
     validate_classification_policy(classification_policy)
@@ -325,6 +391,20 @@ def synthesize() -> None:
             project_reviews,
             classification_audit,
         )
+        event_pulse = build_event_pulse(
+            research["evidence"],
+            event_config,
+            research["sources"],
+            taxonomy.get("seed_themes", []),
+            as_of=generated_at,
+        )
+        research["analyses"].insert(4, event_pulse["analysis"])
+        research["meta"]["event_count"] = event_pulse["meta"]["event_count"]
+        research["meta"]["active_event_count"] = event_pulse["meta"]["active_event_count"]
+        research["methodology"]["limits"].append(
+            "Event programs, talks, projects, and social observations establish event context. Event attention, technical substance, and post-event persistence remain separate measures."
+        )
+        write_public_dashboard(ROOT / "data/public/event-pulse.json", event_pulse)
         write_public_dashboard(ROOT / "data/public/research.json", research)
         policy = _yaml(ROOT / "config/evidence-policy.yml")
         calibration = _yaml(ROOT / "config/evidence-policy-calibration.yml")
@@ -377,15 +457,25 @@ def validate_discovery() -> None:
     print("valid: config/discovery-clustering.yml")
 
 
+def validate_events() -> None:
+    config = _yaml(ROOT / "config/events.yml")
+    validate_event_config(config)
+    load_social_links(_yaml(ROOT / "data/manual/social-links.yml"), config)
+    print("valid: config/events.yml")
+    print("valid: data/manual/social-links.yml")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(prog="ai-signal-radar")
     parser.add_argument(
         "command",
-        choices=["collect", "collect-verification", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public", "calibrate-evidence", "validate-discovery"],
+        choices=["collect", "collect-events", "collect-verification", "collect-bluesky", "collect-newsletters", "synthesize", "validate-public", "calibrate-evidence", "validate-discovery", "validate-events"],
     )
     args = parser.parse_args()
     if args.command == "collect":
         collect()
+    elif args.command == "collect-events":
+        collect_events()
     elif args.command == "collect-verification":
         collect_verification()
     elif args.command == "collect-bluesky":
@@ -398,6 +488,8 @@ def main() -> None:
         calibrate_evidence()
     elif args.command == "validate-discovery":
         validate_discovery()
+    elif args.command == "validate-events":
+        validate_events()
     else:
         validate_public()
 

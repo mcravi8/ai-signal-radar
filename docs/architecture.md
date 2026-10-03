@@ -3,7 +3,7 @@
 ## Data flow
 
 ```text
-official public collectors + weekly expert/social + newsletter ingestion
+official public collectors + event artifacts + weekly expert/social + newsletters
                          ↓
            common normalized evidence contract
                          ↓
@@ -27,6 +27,8 @@ official public collectors + weekly expert/social + newsletter ingestion
 - `Theme`: a canonical abstraction with aliases, definition, layer, and maturity.
 - `Evidence`: a typed relationship from a source item to a theme, claim, or project.
 - `ScoreSnapshot`: dated, reproducible score components.
+- `Event`: a conference or hackathon context with dates, aliases, official sources, and review windows.
+- `Event observation`: a program item, artifact, or reviewed public link associated with an event without changing its canonical theme.
 
 JSONL is used for transparent early-stage storage. The contracts are intentionally compatible with a later move to SQLite or DuckDB.
 
@@ -71,6 +73,16 @@ GitHub-hosted runners collect public metadata, first-party AI lab publications, 
 The weekly runner also reads public author feeds from Bluesky's unauthenticated AppView API. Accounts are pinned by DID so a changed or reused handle cannot silently redirect collection. Replies, repost-only activity, off-topic posts, and engagement counters are excluded. Simon Willison and swyx reuse their existing publisher IDs so cross-posting across social, blog, and newsletter channels cannot inflate source breadth.
 
 The same runner collects two official YC public surfaces without authentication: the AI company directory and recent startup jobs. Company formation and hiring intent are supporting verification signals only. GitHub popularity, funding announcements, case studies, and architecture reports are likewise kept inside their stated proof boundaries.
+
+Official event data uses the same free runner. The first collectors read a bounded sample from the AI Engineer World's Fair JSON program, NeurIPS proceedings metadata, and the GenAI Genesis Devpost gallery. Event volume is capped by track or item count before it enters the shared corpus.
+
+LinkedIn and X are not scraped directly. Public URLs enter through a GitHub issue form or the reviewed local YAML inbox. GitHub issues must carry the `event-signal-reviewed` label before collection; the collector then stores only the public URL, author name, date, linked artifacts, and the submitter's short original observation.
+
+## Event Pulse boundary
+
+Event Pulse preserves `event_id` as provenance while continuing to classify each record with the normal theme taxonomy. Its attention score uses unique observations, source breadth, evidence-family breadth, and later follow-through. Its technical-substance score uses artifacts, technical-record share, artifact diversity, and independent follow-through. Scores remain separate and disclose their components.
+
+Exact title or artifact duplication collapses within an event before breadth is measured. A conference program is a claim about what occupied the agenda; a paper or project is an inspectable artifact; neither establishes adoption. Completed events receive 30- and 90-day persistence checks, including an explicit `not-observed` result when no independent later evidence is found.
 
 ## Weekly decision path
 

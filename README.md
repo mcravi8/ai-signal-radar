@@ -1,6 +1,6 @@
 # AI Signal Radar
 
-AI Signal Radar is one cross-source research system for first-party AI labs, newsletters, papers, repositories, public essays, expert social observations, and technical discussion.
+AI Signal Radar is one cross-source research system for first-party AI labs, newsletters, papers, repositories, public essays, expert social observations, event programs, conference artifacts, hackathon projects, and technical discussion.
 
 Every source enters the same evidence contract. The public site is organized around analyses, theme dossiers, an engineering atlas, and inspectable evidence—not around a privileged newsletter or a blog feed.
 
@@ -59,12 +59,33 @@ Open `http://localhost:8000`.
 ## Automation
 
 - `collect-daily.yml` collects free public metadata from first-party AI labs, expert newsletters, practitioner blogs, arXiv, Hugging Face, GitHub, Hacker News, and official operator/investor feeds.
+- The same weekly collection backfills bounded official event programs, proceedings, and hackathon galleries. Event-specific caps prevent one large agenda from dominating the corpus.
 - `synthesize-weekly.yml` retrieves relevant posts from a curated Bluesky expert list and new AgentMail newsletters, reduces them to sanitized evidence, normalizes every source, recalculates cross-source scores, and produces a weekly brief.
 - `deploy-dashboard.yml` validates the public boundary and deploys the static site to GitHub Pages.
 
 Gmail ingestion remains local. Future subscribed newsletters arrive in the dedicated AgentMail inbox and are ingested weekly with a read-only API key. Raw bodies exist only in AgentMail and runner memory; only allowlisted derivative records enter Git. `pipeline.collectors.email_import` still accepts previously sanitized local exports.
 
 The weekly job requires an `AGENTMAIL_API_KEY` repository secret with read-only inbox and message permissions. The public cursor in `data/state/agentmail.json` stores only the last processed timestamp—never mailbox or message identifiers.
+
+## Event Pulse
+
+Event Pulse is an analysis inside the shared research library. It links programs, papers, projects, and reviewed social observations to an `event_id`, then reports three different things rather than blending them:
+
+- **Event attention:** observed volume and breadth around the event.
+- **Technical substance:** concrete papers, projects, repositories, technical-record share, and later independent evidence.
+- **Persistence:** explicit 30- and 90-day checks for evidence after the event.
+
+The first calibration set covers NeurIPS 2025, GenAI Genesis 2026, and AI Engineer World's Fair 2026; NVIDIA GTC 2026 remains configured until a bounded official dataset is connected. Exact duplicate titles or artifact URLs collapse inside an event, and every dossier states what would confirm or contradict its current read.
+
+LinkedIn and X remain human-assisted because direct scraping is brittle and policy-sensitive. A public link can be proposed with the repository's **Submit an event signal** issue form. The form accepts only the URL, event, author, date, linked public artifacts, and an original observation. Nothing enters the weekly corpus until a maintainer applies the `event-signal-reviewed` label. Full post bodies and transcripts are prohibited. The same contract is available locally in `data/manual/social-links.yml`.
+
+Validate or backfill this layer with:
+
+```bash
+python -m pipeline.cli validate-events
+python -m pipeline.cli collect-events
+python -m pipeline.cli synthesize
+```
 
 ## Operating-model evidence policy
 
@@ -145,6 +166,6 @@ Trend score and opportunity score remain separate: the first measures persistenc
 
 ## Current status
 
-The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, official YC AI-company and startup-job records, and a narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures. Expert social observations are labeled separately from expert interpretation, curated roundups, and first-party claims. The interface provides nine direct workspaces: Overview, Weekly Review, Operating Model, Discovery, Analyses, Themes, Engineering, Evidence, and Method.
+The unified dataset currently includes AlphaSignal, arXiv, Hugging Face Daily Papers, GitHub, Hacker News, nine first-party AI lab publication streams, nine expert newsletter and practitioner streams, a curated Bluesky expert list, official YC AI-company and startup-job records, a narrative portfolio spanning Y Combinator, Sequoia, Menlo Ventures, Greylock, and Radical Ventures, and three active event corpora. Expert social observations are labeled separately from expert interpretation, curated roundups, first-party claims, and event affiliation. Event Pulse lives inside Analyses, so the interface retains nine direct workspaces rather than adding another top-level destination.
 
 The Weekly Review is the controlled path from observation to judgment. It considers a 36-item pool made from seven Early Signal directions, three expert findings, six operator/investor narratives, and twenty cross-source themes. Only unresolved new or materially changed candidates can enter a ten-item assessment queue. Reviewed candidates retain an explicit adjudication explaining whether they created a conditional requirement, strengthened an existing requirement, or remained outside the model. Priority allocates reviewer attention; it cannot change requirement maturity. The public artifact lives at `data/public/weekly-review.json`.

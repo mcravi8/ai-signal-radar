@@ -12,6 +12,7 @@ on:
       - config/discovery-clustering.yml
       - config/evidence-policy-calibration.yml
       - config/evidence-policy.yml
+      - config/events.yml
       - config/keywords.yml
       - config/newsletters.yml
       - config/project-reviews.yml
@@ -20,11 +21,13 @@ on:
       - config/taxonomy.yml
       - config/weekly-review.yml
       - data/manual/**
+      - pipeline/collectors/events.py
       - pipeline/collectors/agentmail.py
       - pipeline/collectors/bluesky.py
       - pipeline/collectors/yc.py
       - pipeline/cli.py
       - pipeline/evidence_policy.py
+      - pipeline/events.py
       - pipeline/discovery.py
       - pipeline/concepts.py
       - pipeline/discovery_cluster.py

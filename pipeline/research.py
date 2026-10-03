@@ -144,6 +144,9 @@ SOURCE_FAMILIES = {
     "curated-newsletter": ("attention", "Market attention"),
     "company-directory": ("formation", "Company formation"),
     "job-posting": ("operations", "Operating demand"),
+    "event-program": ("events", "Event programs"),
+    "hackathon-gallery": ("engineering", "Open engineering"),
+    "curated-social": ("events", "Reviewed event observations"),
 }
 
 
@@ -336,6 +339,8 @@ def _normalize_public_evidence(row: dict[str, Any], themes: dict[str, dict[str, 
         "observed_at": row.get("published_at", "") if first_observed_only else "",
         "authors": row.get("authors", []),
         "projects": row.get("projects", []),
+        **({"event_ids": row["event_ids"]} if row.get("event_ids") else {}),
+        **({"artifact_urls": row["artifact_urls"]} if row.get("artifact_urls") else {}),
         "theme_ids": theme_ids,
         "disposition": disposition,
         "disposition_reason": row.get(
@@ -615,7 +620,7 @@ def _projects(
         )
     repository_items = [
         item for item in public_evidence
-        if item["source_type"] == "repository" and item["id"] not in matched_public_ids
+        if item["source_type"] in {"repository", "hackathon-project"} and item["id"] not in matched_public_ids
     ]
     for item in repository_items:
         project_name = (item.get("projects") or [item["title"]])[0]
@@ -634,10 +639,18 @@ def _projects(
             "rank": None,
             "editorial_rank": None,
             "source_date": item.get("published_at", ""),
-            "category": "Discovered public repository",
-            "why_it_matters": item.get("summary") or "Public repository discovered by the configured GitHub queries.",
+            "category": "Event project" if item["source_type"] == "hackathon-project" else "Discovered public repository",
+            "why_it_matters": item.get("summary") or (
+                "Public project observed in a configured event gallery."
+                if item["source_type"] == "hackathon-project"
+                else "Public repository discovered by the configured GitHub queries."
+            ),
             "workflow_opportunity": "Not yet assessed. Inspect the repository and linked evidence before deciding whether to test it.",
-            "caveat": "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned.",
+            "caveat": (
+                "Unreviewed hackathon submission; inclusion and winner status are not endorsements, and no opportunity score has been assigned."
+                if item["source_type"] == "hackathon-project"
+                else "Unreviewed discovery; inclusion is not an endorsement and no opportunity score has been assigned."
+            ),
             "official_url": item.get("url", ""),
             "primary_layer": layer_names.get(primary_layer_id, "Unclassified"),
             "secondary_layer": None,

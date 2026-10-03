@@ -1,25 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-09-28T23:02:30.477849+00:00",
+    "generated_at": "2026-10-03T01:55:26.755302+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1433,
-    "input_changed_document_count": 2,
-    "cluster_count": 477,
+    "input_document_count": 1376,
+    "input_changed_document_count": 0,
+    "cluster_count": 458,
     "overbroad_cluster_count": 0,
-    "filtered_anchor_count": 169,
-    "coherent_cluster_count": 195,
-    "quality_eligible_cluster_count": 13,
-    "explained_cluster_count": 130,
+    "filtered_anchor_count": 163,
+    "coherent_cluster_count": 183,
+    "quality_eligible_cluster_count": 12,
+    "explained_cluster_count": 115,
     "unexplained_quality_eligible_count": 0,
     "active_record_count": 0,
     "spark_count": 0,
     "candidate_count": 0,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 123,
+      "covered-by-existing-theme": 108,
       "merge-existing-direction": 7,
-      "novel": 347
+      "novel": 343
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -404,36 +404,13 @@
       "materially_changed": false
     },
     {
-      "cluster_id": "discovery:complex-reasoning-4b5525cc62",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "frontier-inference-infrastructure",
-        "title": "Frontier inference infrastructure",
-        "document_share": 0.667,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "complex reasoning"
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21704v1",
-        "hf-paper:2609.23986",
-        "nvidia-developer-blog:655e6fb2eee2feb6b510"
-      ],
-      "source_count": 3,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
       "cluster_id": "discovery:developer-tools-e8508fddf7",
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
         "id": "skills-integrations",
         "title": "Skills, protocols & integrations",
-        "document_share": 0.5,
+        "document_share": 0.75,
         "matched_anchor_phrases": [],
         "basis": "document-share"
       },
@@ -441,7 +418,7 @@
         "developer tools"
       ],
       "evidence_ids": [
-        "github:1353965369",
+        "github:1358571386",
         "github:1383518430",
         "yc-company:33250",
         "yc-company:35258"
@@ -496,30 +473,6 @@
         "github:1382454774",
         "yc-company:32206",
         "yc-company:37468"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
-      "cluster_id": "discovery:vibe-coding-a7c0b1a9d6",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "coding-agents",
-        "title": "Coding agents & developer tooling",
-        "document_share": 0.5,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "vibe coding"
-      ],
-      "evidence_ids": [
-        "github:1349818659",
-        "github:1369759058",
-        "hn:49781443",
-        "hn:49849986"
       ],
       "source_count": 2,
       "source_family_count": 2,
@@ -599,55 +552,6 @@
       "materially_changed": false
     },
     {
-      "cluster_id": "discovery:deep-neural-9178e272c3",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "matched_anchor_phrases": [
-          "deep neural"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 0.333
-      },
-      "anchor_labels": [
-        "deep neural"
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21815v1",
-        "arxiv:2609.21829v1",
-        "github:1345901466"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
-      "cluster_id": "discovery:engineering-python-8133f5f1b0",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "document-knowledge-systems",
-        "title": "Documents, retrieval & knowledge systems",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "python",
-        "engineering python"
-      ],
-      "evidence_ids": [
-        "github:1379617146",
-        "github:1379929433",
-        "yc-job:108650"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": false
-    },
-    {
       "cluster_id": "discovery:evidence-grounded-bc1e3fa9bf",
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
@@ -665,6 +569,101 @@
         "github:1351859098",
         "github:1354377874",
         "hf-paper:2609.23377"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:fine-tuning-95b3a4154d",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "matched_anchor_phrases": [
+          "fine tuning"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.667
+      },
+      "anchor_labels": [
+        "RAG",
+        "Fine-tuning"
+      ],
+      "evidence_ids": [
+        "github:1366280840",
+        "github:1367068508",
+        "yc-job:108650"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:frontier-lab-d1a1540ba1",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "open-local-inference",
+        "title": "Open, local & efficient inference",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "frontier lab"
+      ],
+      "evidence_ids": [
+        "hn:49736660",
+        "latent-space:1d6b63efae6a0d6226fa",
+        "latent-space:c5ef439db94fe95e2aa5"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:jev-typesafe-80fc00b6b6",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "jev typesafe"
+      ],
+      "evidence_ids": [
+        "github:1377399471",
+        "github:1380762959",
+        "hn:49786725"
+      ],
+      "source_count": 2,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
+      "cluster_id": "discovery:json-schema-dcf53414b7",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "small-specialized-models",
+        "title": "Small & specialized models",
+        "document_share": 0.667,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "json schema"
+      ],
+      "evidence_ids": [
+        "github:1353051646",
+        "github:1380762959",
+        "hn:49736660"
       ],
       "source_count": 2,
       "source_family_count": 2,
