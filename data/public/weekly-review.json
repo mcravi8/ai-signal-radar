@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-10-03T02:34:33.274496+00:00",
+    "generated_at": "2026-10-03T04:42:50.610023+00:00",
     "as_of": "2026-10-03",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -1004,75 +1004,6 @@
       "review_action": "source-analysis-covered-by-existing-requirement"
     },
     {
-      "id": "theme:small-specialized-models",
-      "origin": "cross-source-theme",
-      "title": "Small & specialized models",
-      "description": "Compact or task-specific models optimized for cost, latency, privacy, or a narrow operational decision.",
-      "source_analysis": "themes/small-specialized-models",
-      "theme_ids": [
-        "small-specialized-models"
-      ],
-      "evidence_ids": [
-        "bluesky:c2ef00c3e14c:3mwgdtghpo22j",
-        "hn:49853175",
-        "hn:49852920",
-        "hn:49851853",
-        "hn:49848269",
-        "hn:49846953",
-        "hn:49845172",
-        "hn:49823332",
-        "hn:49821438",
-        "github:1384094559",
-        "simon-willison:0d7b498b4e4acf535362",
-        "hn:49800574",
-        "hn:49799641",
-        "github:1380762959",
-        "hn:49795109",
-        "bluesky:b3614927c6a2:3mw2tsop42c2u",
-        "simon-willison:b3e5263fa8976c3c350c",
-        "latent-space:7409d5ffee8a2c05841b",
-        "hn:49791429",
-        "hn:49790936"
-      ],
-      "stage": "broadly-corroborated",
-      "movement": "falling",
-      "metrics": {
-        "evidence_count": 98,
-        "source_count": 14,
-        "source_types": [
-          "community",
-          "curated-newsletter",
-          "event-paper",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 3,
-        "technical_record_count": 40,
-        "family_count": 11,
-        "trend_score": 71.4
-      },
-      "linked_requirements": [],
-      "linked_requirement": null,
-      "priority": {
-        "momentum": 3,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 12,
-        "operating_relevance": 0,
-        "total": 60
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "assess-new-requirement"
-    },
-    {
       "id": "early:enterprise-data-boundary",
       "origin": "early-signal",
       "title": "Proprietary enterprise data is moving behind a governed model boundary",
@@ -1422,6 +1353,75 @@
         "technical_record_count": 46,
         "family_count": 11,
         "trend_score": 66.2
+      },
+      "linked_requirements": [],
+      "linked_requirement": null,
+      "priority": {
+        "momentum": 3,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 4,
+        "operating_relevance": 0,
+        "total": 52
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "theme:small-specialized-models",
+      "origin": "cross-source-theme",
+      "title": "Small & specialized models",
+      "description": "Compact or task-specific models optimized for cost, latency, privacy, or a narrow operational decision.",
+      "source_analysis": "themes/small-specialized-models",
+      "theme_ids": [
+        "small-specialized-models"
+      ],
+      "evidence_ids": [
+        "bluesky:c2ef00c3e14c:3mwgdtghpo22j",
+        "hn:49853175",
+        "hn:49852920",
+        "hn:49851853",
+        "hn:49848269",
+        "hn:49846953",
+        "hn:49845172",
+        "hn:49823332",
+        "hn:49821438",
+        "github:1384094559",
+        "simon-willison:0d7b498b4e4acf535362",
+        "hn:49800574",
+        "hn:49799641",
+        "github:1380762959",
+        "hn:49795109",
+        "bluesky:b3614927c6a2:3mw2tsop42c2u",
+        "simon-willison:b3e5263fa8976c3c350c",
+        "latent-space:7409d5ffee8a2c05841b",
+        "hn:49791429",
+        "hn:49790936"
+      ],
+      "stage": "broadly-corroborated",
+      "movement": "falling",
+      "metrics": {
+        "evidence_count": 98,
+        "source_count": 14,
+        "source_types": [
+          "community",
+          "curated-newsletter",
+          "event-paper",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 40,
+        "family_count": 11,
+        "trend_score": 71.4
       },
       "linked_requirements": [],
       "linked_requirement": null,

@@ -200,6 +200,9 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertTrue(all(source["freshness"] in {"recent", "aging", "historical"} for source in active_sources))
         self.assertTrue(all(item["disposition"] in {"classified", "classification-review", "out-of-scope"} for item in self.payload["evidence"]))
         self.assertTrue(all(item.get("disposition_reason") for item in self.payload["evidence"]))
+        health = self.payload["meta"]["collection_health"]
+        self.assertIn(health["status"], {"healthy", "degraded", "not-observed"})
+        self.assertTrue(all("collection_status" in source for source in self.payload["sources"]))
         audit = atlas["classification_audit"]
         self.assertLessEqual(audit["baseline_public_records"], self.payload["meta"]["public_record_count"])
         self.assertGreaterEqual(audit["current_newly_classified_records"], 100)

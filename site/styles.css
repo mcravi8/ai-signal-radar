@@ -51,6 +51,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .sidebar-status strong, .sidebar-status small { display: block; }
 .sidebar-status strong { font-size: .7rem; }
 .sidebar-status small { margin-top: .2rem; color: var(--muted); font: .59rem var(--mono); }
+.status-dot.is-degraded { background: #b56a1f; }
+
+.collection-health { display: grid; gap: .3rem; margin: 0 0 1rem; padding: .85rem 1rem; border: 1px solid var(--line); background: #f7f8f8; }
+.collection-health strong { font-size: .78rem; }
+.collection-health span { color: var(--muted); font-size: .72rem; line-height: 1.45; }
+.collection-health small { color: var(--faint); font: .58rem var(--mono); }
+.collection-health-degraded { border-left: 3px solid #b56a1f; background: #fff9f1; }
+.collection-health-healthy { border-left: 3px solid #2e7d57; }
+.collection-state { color: var(--faint); font-family: var(--mono); }
+.collection-failed { color: #925019; }
+.source-failed { background: #fffaf3; }
 .repo-link { padding: .7rem .45rem 0; border-top: 1px solid var(--line); color: var(--muted); font: .62rem var(--mono); text-decoration: none; }
 
 .workspace { min-width: 0; margin-left: 232px; }

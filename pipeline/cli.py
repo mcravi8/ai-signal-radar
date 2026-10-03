@@ -3,11 +3,13 @@ from __future__ import annotations
 import argparse
 import json
 import os
+from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from .classify import classify_record, validate_classification_policy
 from .cluster import group_by_theme
+from .collection_health import build_collection_health
 from .concepts import build_concept_catalog, validate_concept_policy
 from .deduplicate import deduplicate
 from .discovery import validate_discovery_policy
@@ -36,14 +38,25 @@ def collect() -> None:
     enabled = {source["id"]: source for source in source_config if source.get("enabled")}
     collected = []
     errors: list[str] = []
+    collectors: list[dict] = []
 
-    def attempt(name: str, fn) -> None:
+    def attempt(name: str, fn, source_ids: list[str] | None = None) -> None:
+        expected = source_ids or [name]
         try:
             rows = fn()
             collected.extend(rows)
+            counts = Counter(item.source_id for item in rows)
+            collectors.extend(
+                {"source_id": source_id, "status": "healthy", "items": counts[source_id]}
+                for source_id in expected
+            )
             print(f"{name}: collected {len(rows)}")
         except Exception as exc:  # individual source failure must not erase other evidence
             errors.append(f"{name}: {exc}")
+            collectors.extend(
+                {"source_id": source_id, "status": "failed", "items": 0, "error": str(exc)}
+                for source_id in expected
+            )
             print(f"{name}: failed: {exc}")
 
     if "arxiv" in enabled:
@@ -65,6 +78,7 @@ def collect() -> None:
                 os.getenv("AI_RADAR_GITHUB_TOKEN", ""),
                 event_config,
             ),
+            ["linkedin-event-links", "x-event-links"],
         )
     for source_id, source in enabled.items():
         if source.get("collection") == "rss":
@@ -105,7 +119,13 @@ def collect() -> None:
     snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "items.jsonl"
     write_jsonl(snapshot, [item.to_dict() for item in collected])
     added = merge_items(ROOT / "data/processed/items.jsonl", collected)
-    status = {"collected_at": datetime.now(timezone.utc).isoformat(), "items": len(collected), "added": added, "errors": errors}
+    status = {
+        "collected_at": datetime.now(timezone.utc).isoformat(),
+        "items": len(collected),
+        "added": added,
+        "errors": errors,
+        "collectors": collectors,
+    }
     (snapshot.parent / "status.json").write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
     if not collected and errors:
         raise SystemExit("All enabled collectors failed")
@@ -121,13 +141,16 @@ def collect_events() -> None:
     ]
     collected = []
     errors: list[str] = []
+    collectors: list[dict] = []
     for source in event_sources:
         try:
             rows = events.collect_source(source)
             collected.extend(rows)
+            collectors.append({"source_id": source["id"], "status": "healthy", "items": len(rows)})
             print(f"{source['id']}: collected {len(rows)}")
         except Exception as exc:
             errors.append(f"{source['id']}: {exc}")
+            collectors.append({"source_id": source["id"], "status": "failed", "items": 0, "error": str(exc)})
             print(f"{source['id']}: failed: {exc}")
     try:
         social_rows = events.collect_reviewed_social_issues(
@@ -136,9 +159,18 @@ def collect_events() -> None:
             _yaml(ROOT / "config/events.yml"),
         )
         collected.extend(social_rows)
+        social_counts = Counter(item.source_id for item in social_rows)
+        collectors.extend(
+            {"source_id": source_id, "status": "healthy", "items": social_counts[source_id]}
+            for source_id in ("linkedin-event-links", "x-event-links")
+        )
         print(f"reviewed-social-inbox: collected {len(social_rows)}")
     except Exception as exc:
         errors.append(f"reviewed-social-inbox: {exc}")
+        collectors.extend(
+            {"source_id": source_id, "status": "failed", "items": 0, "error": str(exc)}
+            for source_id in ("linkedin-event-links", "x-event-links")
+        )
         print(f"reviewed-social-inbox: failed: {exc}")
     sanitized = [sanitize_item(item.to_dict()) for item in collected]
     validate_public_payload({"items": sanitized})
@@ -150,6 +182,7 @@ def collect_events() -> None:
         "items": len(collected),
         "added": added,
         "errors": errors,
+        "collectors": collectors,
     }
     (snapshot.parent / "event-status.json").write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
     print(f"events: extracted {len(collected)} public records, added {added}")
@@ -164,6 +197,7 @@ def collect_verification() -> None:
     enabled = {source["id"]: source for source in source_config if source.get("enabled")}
     collected = []
     errors: list[str] = []
+    collectors: list[dict] = []
     for source_id in ("yc-companies", "yc-jobs"):
         source = enabled.get(source_id)
         if not source:
@@ -174,9 +208,11 @@ def collect_verification() -> None:
             else:
                 rows = yc.collect_jobs(source["jobs_url"], source.get("terms", []), source.get("limit", 50))
             collected.extend(rows)
+            collectors.append({"source_id": source_id, "status": "healthy", "items": len(rows)})
             print(f"{source_id}: collected {len(rows)}")
         except Exception as exc:
             errors.append(f"{source_id}: {exc}")
+            collectors.append({"source_id": source_id, "status": "failed", "items": 0, "error": str(exc)})
             print(f"{source_id}: failed: {exc}")
 
     sanitized = [sanitize_item(item.to_dict()) for item in collected]
@@ -185,6 +221,15 @@ def collect_verification() -> None:
     if sanitized:
         snapshot = ROOT / "data/snapshots" / date.today().isoformat() / "verification-items.jsonl"
         write_jsonl(snapshot, sanitized)
+    status_path = ROOT / "data/snapshots" / date.today().isoformat() / "verification-status.json"
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    status_path.write_text(json.dumps({
+        "collected_at": datetime.now(timezone.utc).isoformat(),
+        "items": len(collected),
+        "added": added,
+        "errors": errors,
+        "collectors": collectors,
+    }, indent=2) + "\n", encoding="utf-8")
     print(f"verification: extracted {len(collected)} public records, added {added}")
     if not collected and errors:
         raise SystemExit("All verification collectors failed")
@@ -216,6 +261,19 @@ def collect_newsletters() -> None:
 
     if result.next_after and result.next_after != after:
         agentmail.write_after(cursor_path, result.next_after)
+    counts = Counter(item.source_id for item in result.items)
+    status_path = ROOT / "data/snapshots" / date.today().isoformat() / "newsletter-status.json"
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    status_path.write_text(json.dumps({
+        "collected_at": datetime.now(timezone.utc).isoformat(),
+        "items": len(result.items),
+        "added": added,
+        "errors": [],
+        "collectors": [
+            {"source_id": definition.source_id, "status": "healthy", "items": counts[definition.source_id]}
+            for definition in definitions
+        ],
+    }, indent=2) + "\n", encoding="utf-8")
     print(
         f"agentmail: saw {result.messages_seen} messages, matched {result.messages_matched}, "
         f"extracted {len(result.items)} sanitized records, added {added}"
@@ -225,7 +283,8 @@ def collect_newsletters() -> None:
 def collect_bluesky() -> None:
     from .collectors import bluesky
 
-    result = bluesky.collect(_yaml(ROOT / "config/bluesky.yml"))
+    config = _yaml(ROOT / "config/bluesky.yml")
+    result = bluesky.collect(config)
     sanitized = [sanitize_item(item.to_dict()) for item in result.items]
     validate_public_payload({"items": sanitized})
     added = merge_items(ROOT / "data/processed/items.jsonl", result.items)
@@ -234,6 +293,25 @@ def collect_bluesky() -> None:
         write_jsonl(snapshot, sanitized)
     for error in result.errors:
         print(f"bluesky: partial failure: {error}")
+    counts = Counter(item.source_id for item in result.items)
+    errors_by_handle = {str(error).partition(":")[0]: str(error).partition(":")[2].strip() for error in result.errors}
+    status_path = ROOT / "data/snapshots" / date.today().isoformat() / "bluesky-status.json"
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    status_path.write_text(json.dumps({
+        "collected_at": datetime.now(timezone.utc).isoformat(),
+        "items": len(result.items),
+        "added": added,
+        "errors": result.errors,
+        "collectors": [
+            {
+                "source_id": account["source_id"],
+                "status": "failed" if account["handle"] in errors_by_handle else "healthy",
+                "items": counts[account["source_id"]],
+                **({"error": errors_by_handle[account["handle"]]} if account["handle"] in errors_by_handle else {}),
+            }
+            for account in config.get("accounts", [])
+        ],
+    }, indent=2) + "\n", encoding="utf-8")
     print(
         f"bluesky: collected {result.accounts_collected} accounts, "
         f"extracted {len(result.items)} relevant public posts, added {added}"
@@ -307,6 +385,7 @@ def synthesize() -> None:
 
     public_items = [sanitize_item(row) for row in rows]
     source_config = _yaml(ROOT / "config/sources.yml")["sources"]
+    collection_health = build_collection_health(ROOT / "data/snapshots", source_config)
     concept_path = ROOT / "data/processed/discovery-concepts.json"
     candidate_path = ROOT / "data/processed/discovery-candidates.json"
     previous_concepts = json.loads(concept_path.read_text(encoding="utf-8")) if concept_path.exists() else None
@@ -390,6 +469,7 @@ def synthesize() -> None:
             mappings,
             project_reviews,
             classification_audit,
+            collection_health,
         )
         event_pulse = build_event_pulse(
             research["evidence"],

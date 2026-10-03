@@ -817,6 +817,7 @@ def build_research(
     mappings: dict[str, Any],
     project_reviews: dict[str, dict[str, Any]] | None = None,
     classification_audit: dict[str, Any] | None = None,
+    collection_health: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     generated_at = public_payload["meta"]["generated_at"]
     as_of = _parse_date(generated_at) or datetime.now(timezone.utc)
@@ -932,6 +933,11 @@ def build_research(
         else:
             age_days = max(0, (as_of - latest).days)
             source["freshness"] = "recent" if age_days <= 30 else "aging" if age_days <= 90 else "historical"
+        receipt = (collection_health or {}).get("sources", {}).get(source_id, {})
+        source["collection_status"] = receipt.get("status", "no-run-receipt")
+        source["last_collection_at"] = receipt.get("collected_at")
+        source["last_collection_error"] = receipt.get("error")
+        source["collection_run_id"] = receipt.get("run_id")
         sources.append(source)
     sources.sort(key=lambda source: (-source["normalized_evidence_count"], source["name"]))
     active_source_ids = [source["id"] for source in sources if source["status"] == "active"]
@@ -1423,6 +1429,7 @@ def build_research(
             "normalized_evidence_count": len(evidence),
             "public_record_count": len(public_evidence),
             "active_source_count": len(active_source_ids),
+            "observed_source_count": len(active_source_ids),
             "theme_count": len(themes),
             "observed_theme_count": sum(theme["evidence_count"] > 0 for theme in themes),
             "project_count": len(projects),
@@ -1432,6 +1439,14 @@ def build_research(
             "classification_coverage": classification_coverage,
             "raw_classification_coverage": raw_classification_coverage,
             "recent_source_count": recent_source_count,
+            "collection_health": collection_health or {
+                "status": "not-observed",
+                "latest_receipt_at": None,
+                "failed_source_count": 0,
+                "failed_source_ids": [],
+                "runs": [],
+                "interpretation": "No collection run receipt is available.",
+            },
             "model": "Every source is normalized into the same evidence contract. Source-specific analyses remain inspectable but do not define the global navigation.",
         },
         "analyses": analyses,

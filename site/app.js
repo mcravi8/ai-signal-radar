@@ -98,6 +98,14 @@ function channelLabel(value) {
   })[value] || label(value);
 }
 
+function collectionStatusLabel(source) {
+  const status = source.collection_status || "no-run-receipt";
+  if (status === "healthy") return `Collection healthy · ${formatDate(source.last_collection_at)}`;
+  if (status === "failed") return `Collection failed · ${formatDate(source.last_collection_at)}`;
+  if (status === "not-automated") return "Manual source · no automated collector";
+  return "Collection status not yet recorded";
+}
+
 function compactAssessment(value) {
   return ({
     "broadly-corroborated": "Broadly corroborated",
@@ -204,9 +212,31 @@ function renderOverview() {
   const { meta, weekly, themes, sources } = state.research;
   const structuralTrendCount = state.alpha?.trends.filter((trend) => trend.score?.tier === "Structural").length;
   const emergingCategoryCount = Math.min(3, themes.filter((theme) => ["source-specific", "emerging"].includes(theme.maturity)).length);
+  const collectionHealth = meta.collection_health || {};
+  const healthPanel = $("#collection-health");
+  if (collectionHealth.status === "degraded") {
+    const failedNames = (collectionHealth.failed_source_ids || []).map(sourceName);
+    healthPanel.hidden = false;
+    healthPanel.className = "collection-health collection-health-degraded";
+    healthPanel.replaceChildren(
+      node("strong", "", `${failedNames.length} source collector${failedNames.length === 1 ? "" : "s"} failed in their latest stored receipts`),
+      node("span", "", `${failedNames.join(" · ")} · Evidence remains visible, but freshness does not prove collection succeeded.`),
+      node("small", "", `Failed receipt ${formatDate(collectionHealth.latest_failed_receipt_at, true)} · newest receipt of any collector family ${formatDate(collectionHealth.latest_receipt_at, true)}`),
+    );
+  } else if (collectionHealth.status === "healthy") {
+    healthPanel.hidden = false;
+    healthPanel.className = "collection-health collection-health-healthy";
+    healthPanel.replaceChildren(
+      node("strong", "", "Latest recorded collection completed without source failures"),
+      node("small", "", `Latest run receipt ${formatDate(collectionHealth.latest_receipt_at, true)}`),
+    );
+  } else {
+    healthPanel.hidden = true;
+    healthPanel.replaceChildren();
+  }
   $("#overview-metrics").replaceChildren(
     metric("Normalized evidence", formatNumber(meta.normalized_evidence_count), `${formatNumber(meta.public_record_count)} direct public records`),
-    metric("Active sources", formatNumber(meta.active_source_count), "One shared evidence contract"),
+    metric("Observed sources", formatNumber(meta.observed_source_count ?? meta.active_source_count), "Evidence exists; collection health is separate"),
     metric("Structural trends", structuralTrendCount === undefined ? "N/O" : formatNumber(structuralTrendCount), "Reviewed AlphaSignal corpus"),
     metric("Emerging categories", formatNumber(emergingCategoryCount), "Priority watchlist to validate"),
     metric("Reviewed projects", formatNumber(meta.reviewed_project_count), `${meta.queued_project_count} queued · ${meta.discovered_project_count} discovered`),
@@ -277,8 +307,8 @@ function renderOverview() {
   const sourceGrid = $("#overview-sources");
   sourceGrid.replaceChildren();
   const filteredSources = sources.filter((source) => !state.sourceType || source.channel === state.sourceType);
-  const activeCount = filteredSources.filter((source) => source.status === "active").length;
-  $("#source-count").textContent = `${filteredSources.length} ${filteredSources.length === 1 ? "source" : "sources"} · ${activeCount} active`;
+  const observedCount = filteredSources.filter((source) => source.status === "active").length;
+  $("#source-count").textContent = `${filteredSources.length} ${filteredSources.length === 1 ? "source" : "sources"} · ${observedCount} observed`;
 
   const grouped = new Map();
   for (const source of filteredSources) {
@@ -302,11 +332,13 @@ function renderOverview() {
     );
     const grid = node("div", "source-grid");
     for (const source of groupSources) {
-      const item = node("article", `source-item ${source.status === "configured" ? "source-muted" : ""}`);
+      const item = node("article", `source-item ${source.status === "configured" ? "source-muted" : ""} ${source.collection_status === "failed" ? "source-failed" : ""}`);
+      const evidenceState = source.status === "active" ? `Observed · ${label(source.freshness)} · latest ${formatDate(source.last_observed_at)}` : "Configured · no evidence observed";
       item.append(
         sourceIdentity(source),
         node("span", "source-record-count tabular", `${formatNumber(source.normalized_evidence_count)} records`),
-        node("small", "", source.status === "active" ? `Active · ${label(source.freshness)} · latest ${formatDate(source.last_observed_at)}` : "Configured · no evidence observed"),
+        node("small", "", evidenceState),
+        node("small", `collection-state collection-${source.collection_status || "unknown"}`, collectionStatusLabel(source)),
       );
       grid.append(item);
     }
@@ -2056,7 +2088,8 @@ async function load() {
   renderAll();
   routeFromHash();
   const { meta } = state.research;
-  $("#sidebar-state").textContent = `${meta.active_source_count} active sources`;
+  $("#sidebar-state").textContent = `${meta.observed_source_count ?? meta.active_source_count} observed sources`;
+  $(".status-dot").classList.toggle("is-degraded", meta.collection_health?.status === "degraded");
   $("#sidebar-updated").textContent = `Updated ${formatDate(meta.generated_at)}`;
   $("#header-coverage").textContent = `${formatNumber(meta.normalized_evidence_count)} normalized records · ${meta.observed_theme_count} observed themes`;
   $("#header-date").textContent = formatDate(meta.generated_at, true);
