@@ -1,10 +1,10 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T01:56:44.076905+00:00",
+    "generated_at": "2026-10-03T02:34:33.274496+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1423,
-    "input_changed_document_count": 80,
+    "input_changed_document_count": 0,
     "cluster_count": 483,
     "overbroad_cluster_count": 0,
     "filtered_anchor_count": 171,
@@ -59,7 +59,7 @@
       ],
       "source_count": 4,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:long-running-0b1aa70e84",
@@ -278,7 +278,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:rule-based-d5bc3cb86a",
@@ -525,7 +525,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:code-review-1eea82899d",
@@ -599,7 +599,7 @@
       ],
       "source_count": 2,
       "source_family_count": 2,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:frontier-lab-d1a1540ba1",

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-10-03T01:56:44.076905+00:00",
+    "generated_at": "2026-10-03T02:34:33.274496+00:00",
     "as_of": "2026-10-03",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,10 +12,11 @@
       "early-signal": 7,
       "operator-narrative": 6
     },
-    "materially_changed_count": 9,
+    "materially_changed_count": 0,
     "assessment_queue_count": 9,
     "adjudication_count": 16,
-    "requirement_change_count": 0
+    "requirement_change_count": 0,
+    "idempotent_regeneration": true
   },
   "summary": {
     "headline": "16 candidate decisions are recorded; 9 candidates remain in the bounded assessment queue.",
@@ -120,11 +121,8 @@
         "operating_relevance": 10,
         "total": 74
       },
-      "change_reasons": [
-        "Evidence increased by 3",
-        "3 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:coding-agents",
         "reviewed_at": "2026-09-25",
@@ -144,8 +142,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 7,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 7
     },
     {
       "id": "theme:skills-integrations",
@@ -223,11 +221,8 @@
         "operating_relevance": 10,
         "total": 74
       },
-      "change_reasons": [
-        "Source breadth increased by 1",
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:skills-integrations",
         "reviewed_at": "2026-09-25",
@@ -246,8 +241,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 1,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 1
     },
     {
       "id": "theme:open-local-inference",
@@ -330,12 +325,8 @@
         "operating_relevance": 10,
         "total": 70
       },
-      "change_reasons": [
-        "Evidence increased by 3",
-        "Source breadth increased by 1",
-        "3 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:open-local-inference",
         "reviewed_at": "2026-09-25",
@@ -355,8 +346,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 4,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 4
     },
     {
       "id": "theme:agent-harnesses",
@@ -436,11 +427,8 @@
         "operating_relevance": 10,
         "total": 66
       },
-      "change_reasons": [
-        "Evidence increased by 2",
-        "2 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:agent-harnesses",
         "reviewed_at": "2026-09-25",
@@ -459,8 +447,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 2,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 2
     },
     {
       "id": "theme:training-self-improvement",
@@ -542,12 +530,8 @@
         "operating_relevance": 10,
         "total": 66
       },
-      "change_reasons": [
-        "Evidence increased by 2",
-        "Source breadth increased by 1",
-        "2 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:training-self-improvement",
         "reviewed_at": "2026-09-25",
@@ -566,8 +550,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 6,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 6
     },
     {
       "id": "theme:voice-audio",
@@ -650,11 +634,8 @@
         "operating_relevance": 10,
         "total": 66
       },
-      "change_reasons": [
-        "Evidence increased by 2",
-        "1 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "theme:voice-audio",
         "reviewed_at": "2026-09-24",
@@ -674,8 +655,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "queue_rank": 8,
-      "pending_from_previous_review": true
+      "pending_from_previous_review": true,
+      "queue_rank": 8
     },
     {
       "id": "theme:frontier-inference-infrastructure",
@@ -1001,11 +982,8 @@
         "operating_relevance": 10,
         "total": 60
       },
-      "change_reasons": [
-        "Movement changed from steady to new",
-        "2 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": {
         "candidate_id": "expert-finding:evaluation-as-system-design",
         "reviewed_at": "2026-09-25",
@@ -1499,13 +1477,11 @@
         "operating_relevance": 0,
         "total": 51
       },
-      "change_reasons": [
-        "Source breadth increased by 1",
-        "2 additional dated records entered the latest seven-day window"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement",
+      "pending_from_previous_review": true,
       "queue_rank": 9
     },
     {
@@ -1835,10 +1811,8 @@
         "operating_relevance": 0,
         "total": 40
       },
-      "change_reasons": [
-        "Source breadth increased by 1"
-      ],
-      "materially_changed": true,
+      "change_reasons": [],
+      "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
     },
