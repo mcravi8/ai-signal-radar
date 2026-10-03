@@ -34,7 +34,23 @@ class WeeklyReviewTests(unittest.TestCase):
     def test_second_identical_cycle_preserves_the_published_review(self):
         first = build_weekly_review(self.research, self.operating, self.operating, None, self.config)
         second = build_weekly_review(self.research, self.operating, self.operating, first, self.config)
-        self.assertEqual(second["assessment_queue"], first["assessment_queue"])
+        self.assertEqual(
+            [item["id"] for item in second["assessment_queue"]],
+            [item["id"] for item in first["assessment_queue"]],
+        )
+        self.assertTrue(
+            all(item["pending_from_previous_review"] for item in second["assessment_queue"])
+        )
+        self.assertTrue(
+            all(not item["materially_changed"] for item in second["assessment_queue"])
+        )
+        self.assertTrue(
+            all(not item["change_reasons"] for item in second["assessment_queue"])
+        )
+        self.assertEqual(
+            second["meta"]["carried_queue_count"],
+            len(second["assessment_queue"]),
+        )
         self.assertTrue(second["meta"]["idempotent_regeneration"])
 
     def test_unresolved_queue_item_survives_an_unrelated_same_cycle_update(self):

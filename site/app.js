@@ -398,12 +398,13 @@ function renderWeeklyReview() {
   const meaningfulChanges = data.requirement_changes.filter((item) => !["unchanged", "baseline"].includes(item.change_type));
   const activeVerification = data.verification_families.filter((item) => item.status === "active").length;
   const originCounts = data.meta.candidate_origin_counts || {};
+  const carriedQueueCount = data.meta.carried_queue_count || 0;
   const originSummary = `${originCounts["early-signal"] || 0} signals · ${originCounts["expert-finding"] || 0} expert findings · ${originCounts["operator-narrative"] || 0} narratives · ${originCounts["cross-source-theme"] || 0} themes`;
   metrics.replaceChildren(
     metric("Candidate pool", formatNumber(data.meta.candidate_pool_count), originSummary),
     metric("Materially changed", formatNumber(data.meta.materially_changed_count), data.meta.baseline_cycle ? "First tracked baseline" : "Compared with prior weekly cycle"),
     metric("Adjudicated", formatNumber(data.meta.adjudication_count || 0), "Explicit evidence-policy decisions"),
-    metric("Assessment queue", formatNumber(data.meta.assessment_queue_count), `Hard cap ${data.selection_policy.maximum_queue}`),
+    metric("Assessment queue", formatNumber(data.meta.assessment_queue_count), carriedQueueCount ? `${formatNumber(carriedQueueCount)} awaiting a decision · cap ${data.selection_policy.maximum_queue}` : `Hard cap ${data.selection_policy.maximum_queue}`),
     metric("Requirement changes", formatNumber(meaningfulChanges.length), "Human-reviewed policy outcomes"),
     metric("Verification families", `${activeVerification}/${data.verification_families.length}`, "Active public evidence channels"),
   );
@@ -475,6 +476,7 @@ function renderWeeklyReview() {
     title.href = candidateHref(candidate);
     head.append(
       node("span", "queue-origin", label(candidate.origin)),
+      ...(candidate.pending_from_previous_review ? [badge("Awaiting decision", "carried")] : []),
       title,
       node("p", "", candidate.description),
     );
@@ -492,6 +494,9 @@ function renderWeeklyReview() {
     }
     const reasons = node("ul", "queue-reasons");
     for (const reason of candidate.change_reasons) reasons.append(node("li", "", reason));
+    if (candidate.pending_from_previous_review && !candidate.change_reasons.length) {
+      reasons.append(node("li", "", "No new material change this cycle; retained until the earlier review is resolved."));
+    }
     const footer = node("div", "queue-footer");
     footer.append(
       node("span", "tabular", `${candidate.metrics.evidence_count} evidence · ${candidate.metrics.source_count} sources · ${candidate.metrics.recent_evidence_count} recent`),

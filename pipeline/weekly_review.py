@@ -435,13 +435,12 @@ def build_weekly_review(
         )
         preserved["adjudications"] = adjudications
         preserved["meta"]["adjudication_count"] = len(adjudications)
-        retained_queue_ids = {item["id"] for item in queue}
-        preserved["assessment_queue"] = [
-            item
-            for item in previous_review.get("assessment_queue", [])
-            if item["id"] in retained_queue_ids
-        ]
+        preserved["assessment_queue"] = queue
         preserved["meta"]["assessment_queue_count"] = len(preserved["assessment_queue"])
+        preserved["meta"]["carried_queue_count"] = sum(
+            item.get("pending_from_previous_review", False)
+            for item in preserved["assessment_queue"]
+        )
         preserved["summary"] = {**previous_review["summary"]}
         preserved["summary"]["headline"] = _review_headline(
             len(preserved.get("adjudications", [])),
@@ -461,6 +460,9 @@ def build_weekly_review(
             "candidate_origin_counts": origin_counts,
             "materially_changed_count": sum(item["materially_changed"] for item in candidates),
             "assessment_queue_count": len(queue),
+            "carried_queue_count": sum(
+                item.get("pending_from_previous_review", False) for item in queue
+            ),
             "adjudication_count": len(adjudications),
             "requirement_change_count": len(changed_requirements),
         },
