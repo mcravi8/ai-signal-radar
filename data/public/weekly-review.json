@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Weekly Operating Model Review",
-    "generated_at": "2026-10-03T04:55:52.313051+00:00",
+    "generated_at": "2026-10-03T05:01:49.828896+00:00",
     "as_of": "2026-10-03",
     "policy_version": 1,
     "baseline_cycle": false,
@@ -12,12 +12,11 @@
       "early-signal": 7,
       "operator-narrative": 6
     },
-    "materially_changed_count": 0,
+    "materially_changed_count": 2,
     "assessment_queue_count": 9,
+    "carried_queue_count": 9,
     "adjudication_count": 16,
-    "requirement_change_count": 0,
-    "idempotent_regeneration": true,
-    "carried_queue_count": 9
+    "requirement_change_count": 0
   },
   "summary": {
     "headline": "16 candidate decisions are recorded; 9 candidates remain in the bounded assessment queue.",
@@ -74,7 +73,7 @@
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 132,
+        "evidence_count": 131,
         "source_count": 18,
         "source_types": [
           "community",
@@ -95,7 +94,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 66,
         "family_count": 14,
-        "trend_score": 83.2
+        "trend_score": 83.0
       },
       "linked_requirements": [
         {
@@ -351,107 +350,6 @@
       "queue_rank": 4
     },
     {
-      "id": "theme:agent-harnesses",
-      "origin": "cross-source-theme",
-      "title": "Agent harnesses",
-      "description": "Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.",
-      "source_analysis": "themes/agent-harnesses",
-      "theme_ids": [
-        "agent-harnesses"
-      ],
-      "evidence_ids": [
-        "alphasignal:52e919324888ba1b8e0f",
-        "alphasignal:492c2f24255b6e22c68a",
-        "hn:49850553",
-        "hn:49847249",
-        "alphasignal:1206dbc2b8c74248e62f",
-        "hn:49821438",
-        "aws-machine-learning-blog:29c650c1b20939ddf6d9",
-        "aws-machine-learning-blog:16b9772b96509775d2ea",
-        "hn:49785562",
-        "hf-paper:2609.24972",
-        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
-        "alphasignal:trend:agent-orchestration-and-autonomy",
-        "bluesky:1278ebf77949:3mvxrv6krzs22",
-        "bluesky:e810fac7fd93:3mvxajmx5cz2n",
-        "arxiv:2609.21944v1",
-        "arxiv:2609.21859v1",
-        "arxiv:2609.21843v1",
-        "hf-paper:2609.21465",
-        "simon-willison:0c114974aa55eb9d7222",
-        "arxiv:2609.20620v1"
-      ],
-      "stage": "corroborated-source-concentrated",
-      "movement": "falling",
-      "metrics": {
-        "evidence_count": 83,
-        "source_count": 18,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "event-paper",
-          "event-session",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 2,
-        "technical_record_count": 41,
-        "family_count": 15,
-        "trend_score": 66.1
-      },
-      "linked_requirements": [
-        {
-          "id": "modular-agent-operating-stack",
-          "title": "Modular agent operating stack",
-          "maturity": "emerging"
-        }
-      ],
-      "linked_requirement": {
-        "id": "modular-agent-operating-stack",
-        "title": "Modular agent operating stack",
-        "maturity": "emerging"
-      },
-      "priority": {
-        "momentum": 3,
-        "source_breadth": 25,
-        "technical_support": 20,
-        "new_evidence": 8,
-        "operating_relevance": 10,
-        "total": 66
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": {
-        "candidate_id": "theme:agent-harnesses",
-        "reviewed_at": "2026-09-25",
-        "outcome": "covered-by-existing-requirement",
-        "requirement_ids": [
-          "modular-agent-operating-stack"
-        ],
-        "decision": "Do not create a duplicate requirement.",
-        "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
-        "evidence_review": {
-          "status": "complete",
-          "records_screened": 67,
-          "links_added": 4,
-          "finding": "Sixteen sources now support the orchestration layer, while the generic-agent cluster was deliberately left unresolved. The industrial comparison favoring a simpler single-agent baseline remains material counterevidence, so the modular-stack requirement stays emerging and conditional."
-        },
-        "status": "revisit-required"
-      },
-      "review_action": "review-existing-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 2
-    },
-    {
       "id": "theme:training-self-improvement",
       "origin": "cross-source-theme",
       "title": "Training, evaluation & self-improvement",
@@ -468,7 +366,6 @@
         "alphasignal:b85c889a9b6e76025d46",
         "alphasignal:395eb5f88099f4c5b7d2",
         "hn:49842596",
-        "alphasignal:e32078afc6278482f336",
         "alphasignal:878cd0da4350818f61b9",
         "alphasignal:5e4d06e1b5148246bf48",
         "alphasignal:28e88f0768d976bbfccb",
@@ -479,13 +376,14 @@
         "hn:49807413",
         "aws-machine-learning-blog:eb69714bbf90b702d8c1",
         "alphasignal:ed11042f47b8f05c3ace",
-        "alphasignal:cec6f55c7deff2c8dfc5",
-        "hn:49800574"
+        "hn:49800574",
+        "huggingface-blog:e9f63aa1f7aaa02f4024",
+        "hn:49791343"
       ],
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 241,
+        "evidence_count": 239,
         "source_count": 30,
         "source_types": [
           "community",
@@ -509,7 +407,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 136,
         "family_count": 17,
-        "trend_score": 99.9
+        "trend_score": 99.8
       },
       "linked_requirements": [
         {
@@ -531,8 +429,10 @@
         "operating_relevance": 10,
         "total": 66
       },
-      "change_reasons": [],
-      "materially_changed": false,
+      "change_reasons": [
+        "Evidence increased by 2"
+      ],
+      "materially_changed": true,
       "adjudication": {
         "candidate_id": "theme:training-self-improvement",
         "reviewed_at": "2026-09-25",
@@ -551,8 +451,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 6
+      "queue_rank": 6,
+      "pending_from_previous_review": true
     },
     {
       "id": "theme:voice-audio",
@@ -569,7 +469,6 @@
         "aws-machine-learning-blog:aaca847ab96b8bddf45b",
         "bluesky:b3614927c6a2:3mw7magyrwc2i",
         "simon-willison:e47986333e4f67663922",
-        "alphasignal:5f3148d70539a8da7f25",
         "alphasignal:1ef7cf038f88524bc9b8",
         "hn:49789320",
         "alphasignal:trend:voice-and-audio-interfaces",
@@ -583,12 +482,13 @@
         "github:1361693766",
         "alphasignal:project:voicestudio",
         "deepmind-blog:ac6eb9276806c2f8127d",
-        "the-batch:ab4caab4fe2b8644e7ea"
+        "the-batch:ab4caab4fe2b8644e7ea",
+        "huggingface-blog:e3ddd7a65cd3a566e91c"
       ],
       "stage": "corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 32,
+        "evidence_count": 31,
         "source_count": 14,
         "source_types": [
           "community",
@@ -608,7 +508,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.8
+        "trend_score": 69.2
       },
       "linked_requirements": [
         {
@@ -935,6 +835,109 @@
       "review_action": "review-existing-requirement",
       "pending_from_previous_review": true,
       "queue_rank": 5
+    },
+    {
+      "id": "theme:agent-harnesses",
+      "origin": "cross-source-theme",
+      "title": "Agent harnesses",
+      "description": "Control systems around models that manage planning, tools, state, execution, recovery, and multi-agent coordination.",
+      "source_analysis": "themes/agent-harnesses",
+      "theme_ids": [
+        "agent-harnesses"
+      ],
+      "evidence_ids": [
+        "alphasignal:52e919324888ba1b8e0f",
+        "hn:49850553",
+        "hn:49847249",
+        "alphasignal:1206dbc2b8c74248e62f",
+        "hn:49821438",
+        "aws-machine-learning-blog:29c650c1b20939ddf6d9",
+        "aws-machine-learning-blog:16b9772b96509775d2ea",
+        "hn:49785562",
+        "hf-paper:2609.24972",
+        "alphasignal:trend:skills-plugins-mcp-and-harnesses",
+        "alphasignal:trend:agent-orchestration-and-autonomy",
+        "bluesky:1278ebf77949:3mvxrv6krzs22",
+        "bluesky:e810fac7fd93:3mvxajmx5cz2n",
+        "arxiv:2609.21944v1",
+        "arxiv:2609.21859v1",
+        "arxiv:2609.21843v1",
+        "hf-paper:2609.21465",
+        "simon-willison:0c114974aa55eb9d7222",
+        "arxiv:2609.20620v1",
+        "aws-machine-learning-blog:5d4f323bd0d514800a8a"
+      ],
+      "stage": "corroborated-source-concentrated",
+      "movement": "falling",
+      "metrics": {
+        "evidence_count": 82,
+        "source_count": 18,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "event-paper",
+          "event-session",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 41,
+        "family_count": 15,
+        "trend_score": 65.9
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "linked_requirement": {
+        "id": "modular-agent-operating-stack",
+        "title": "Modular agent operating stack",
+        "maturity": "emerging"
+      },
+      "priority": {
+        "momentum": 3,
+        "source_breadth": 25,
+        "technical_support": 20,
+        "new_evidence": 4,
+        "operating_relevance": 10,
+        "total": 62
+      },
+      "change_reasons": [
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
+      "adjudication": {
+        "candidate_id": "theme:agent-harnesses",
+        "reviewed_at": "2026-09-25",
+        "outcome": "covered-by-existing-requirement",
+        "requirement_ids": [
+          "modular-agent-operating-stack"
+        ],
+        "decision": "Do not create a duplicate requirement.",
+        "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+        "evidence_review": {
+          "status": "complete",
+          "records_screened": 67,
+          "links_added": 4,
+          "finding": "Sixteen sources now support the orchestration layer, while the generic-agent cluster was deliberately left unresolved. The industrial comparison favoring a simpler single-agent baseline remains material counterevidence, so the modular-stack requirement stays emerging and conditional."
+        },
+        "status": "revisit-required"
+      },
+      "review_action": "review-existing-requirement",
+      "queue_rank": 2,
+      "pending_from_previous_review": true
     },
     {
       "id": "expert-finding:evaluation-as-system-design",
@@ -1486,71 +1489,6 @@
       "queue_rank": 9
     },
     {
-      "id": "early:validation-as-release",
-      "origin": "early-signal",
-      "title": "Validation is becoming the release gate for AI-generated work",
-      "description": "As agents produce code and operational changes, evaluation, observability, security, and reversible deployment become one continuous release discipline.",
-      "source_analysis": "early-signal-tracker/validation-as-release",
-      "theme_ids": [
-        "assurance-infrastructure",
-        "coding-agents",
-        "training-self-improvement",
-        "validation-release"
-      ],
-      "evidence_ids": [
-        "github:1384094559",
-        "hf-paper:2609.27308",
-        "alphasignal:ed11042f47b8f05c3ace",
-        "arxiv:2609.22068v1",
-        "the-batch:2622ee409c0a925f8cee",
-        "alphasignal:cec6f55c7deff2c8dfc5",
-        "alphasignal:trend:validation-and-release-bottlenecks",
-        "arxiv:2609.21841v1"
-      ],
-      "stage": "corroborating",
-      "movement": "steady",
-      "metrics": {
-        "evidence_count": 8,
-        "source_count": 5,
-        "source_types": [
-          "curated-newsletter",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "repository"
-        ],
-        "recent_evidence_count": 0,
-        "technical_record_count": 3,
-        "family_count": 3,
-        "technical_family_count": 2
-      },
-      "linked_requirements": [
-        {
-          "id": "evaluation-release-gates",
-          "title": "Evaluation and release gates",
-          "maturity": "experimental"
-        }
-      ],
-      "linked_requirement": {
-        "id": "evaluation-release-gates",
-        "title": "Evaluation and release gates",
-        "maturity": "experimental"
-      },
-      "priority": {
-        "momentum": 8,
-        "source_breadth": 21,
-        "technical_support": 9,
-        "new_evidence": 0,
-        "operating_relevance": 10,
-        "total": 48
-      },
-      "change_reasons": [],
-      "materially_changed": false,
-      "adjudication": null,
-      "review_action": "review-existing-requirement"
-    },
-    {
       "id": "early:heterogeneous-inference",
       "origin": "early-signal",
       "title": "Heterogeneous model portfolios are becoming the default inference architecture",
@@ -1750,6 +1688,71 @@
       "materially_changed": false,
       "adjudication": null,
       "review_action": "assess-new-requirement"
+    },
+    {
+      "id": "early:validation-as-release",
+      "origin": "early-signal",
+      "title": "Validation is becoming the release gate for AI-generated work",
+      "description": "As agents produce code and operational changes, evaluation, observability, security, and reversible deployment become one continuous release discipline.",
+      "source_analysis": "early-signal-tracker/validation-as-release",
+      "theme_ids": [
+        "assurance-infrastructure",
+        "coding-agents",
+        "training-self-improvement",
+        "validation-release"
+      ],
+      "evidence_ids": [
+        "github:1384094559",
+        "hf-paper:2609.27308",
+        "alphasignal:ed11042f47b8f05c3ace",
+        "arxiv:2609.22068v1",
+        "the-batch:2622ee409c0a925f8cee",
+        "alphasignal:trend:validation-and-release-bottlenecks",
+        "arxiv:2609.21841v1",
+        "arxiv:2609.20625v1"
+      ],
+      "stage": "corroborating",
+      "movement": "cooling",
+      "metrics": {
+        "evidence_count": 8,
+        "source_count": 5,
+        "source_types": [
+          "curated-newsletter",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "repository"
+        ],
+        "recent_evidence_count": 0,
+        "technical_record_count": 4,
+        "family_count": 3,
+        "technical_family_count": 2
+      },
+      "linked_requirements": [
+        {
+          "id": "evaluation-release-gates",
+          "title": "Evaluation and release gates",
+          "maturity": "experimental"
+        }
+      ],
+      "linked_requirement": {
+        "id": "evaluation-release-gates",
+        "title": "Evaluation and release gates",
+        "maturity": "experimental"
+      },
+      "priority": {
+        "momentum": 3,
+        "source_breadth": 21,
+        "technical_support": 12,
+        "new_evidence": 0,
+        "operating_relevance": 10,
+        "total": 46
+      },
+      "change_reasons": [],
+      "materially_changed": false,
+      "adjudication": null,
+      "review_action": "review-existing-requirement"
     },
     {
       "id": "theme:enterprise-vertical-ai",
@@ -2410,7 +2413,7 @@
       "id": "operator-narrative:coding-agent-stack",
       "origin": "operator-narrative",
       "title": "The coding-agent opportunity is shifting below the assistant interface",
-      "description": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 83.2 and appears across 18 radar sources.",
+      "description": "4 essays across 3 publishers focus on the environment around the agent: a full-stack cloud, software implementation, production operations, and scientific judgment. The broader coding-agent theme scores 83.0 and appears across 18 radar sources.",
       "source_analysis": "operator-narratives/coding-agent-stack",
       "theme_ids": [
         "coding-agents"
@@ -2582,7 +2585,7 @@
       "source_analysis": "themes/coding-agents",
       "stage": "broadly-corroborated",
       "metrics": {
-        "evidence_count": 132,
+        "evidence_count": 131,
         "source_count": 18,
         "source_types": [
           "community",
@@ -2603,7 +2606,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 66,
         "family_count": 14,
-        "trend_score": 83.2
+        "trend_score": 83.0
       },
       "linked_requirements": [
         {
@@ -2742,66 +2745,13 @@
       "status": "revisit-required"
     },
     {
-      "candidate_id": "theme:agent-harnesses",
-      "title": "Agent harnesses",
-      "origin": "cross-source-theme",
-      "source_analysis": "themes/agent-harnesses",
-      "stage": "corroborated-source-concentrated",
-      "metrics": {
-        "evidence_count": 83,
-        "source_count": 18,
-        "source_types": [
-          "community",
-          "company-directory",
-          "curated-newsletter",
-          "event-paper",
-          "event-session",
-          "expert-newsletter",
-          "expert-social",
-          "first-party-lab",
-          "investor-essay",
-          "newsletter",
-          "newsletter-analysis",
-          "paper",
-          "paper-curation",
-          "practitioner-blog",
-          "repository"
-        ],
-        "recent_evidence_count": 2,
-        "technical_record_count": 41,
-        "family_count": 15,
-        "trend_score": 66.1
-      },
-      "linked_requirements": [
-        {
-          "id": "modular-agent-operating-stack",
-          "title": "Modular agent operating stack",
-          "maturity": "emerging"
-        }
-      ],
-      "reviewed_at": "2026-09-25",
-      "outcome": "covered-by-existing-requirement",
-      "requirement_ids": [
-        "modular-agent-operating-stack"
-      ],
-      "decision": "Do not create a duplicate requirement.",
-      "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
-      "evidence_review": {
-        "status": "complete",
-        "records_screened": 67,
-        "links_added": 4,
-        "finding": "Sixteen sources now support the orchestration layer, while the generic-agent cluster was deliberately left unresolved. The industrial comparison favoring a simpler single-agent baseline remains material counterevidence, so the modular-stack requirement stays emerging and conditional."
-      },
-      "status": "revisit-required"
-    },
-    {
       "candidate_id": "theme:training-self-improvement",
       "title": "Training, evaluation & self-improvement",
       "origin": "cross-source-theme",
       "source_analysis": "themes/training-self-improvement",
       "stage": "broadly-corroborated",
       "metrics": {
-        "evidence_count": 241,
+        "evidence_count": 239,
         "source_count": 30,
         "source_types": [
           "community",
@@ -2825,7 +2775,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 136,
         "family_count": 17,
-        "trend_score": 99.9
+        "trend_score": 99.8
       },
       "linked_requirements": [
         {
@@ -2856,7 +2806,7 @@
       "source_analysis": "themes/voice-audio",
       "stage": "corroborated",
       "metrics": {
-        "evidence_count": 32,
+        "evidence_count": 31,
         "source_count": 14,
         "source_types": [
           "community",
@@ -2876,7 +2826,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.8
+        "trend_score": 69.2
       },
       "linked_requirements": [
         {
@@ -3045,6 +2995,59 @@
         "records_screened": 36,
         "links_added": 0,
         "finding": "The broader vocabulary pass added first-party robotics systems, implementation reports, research, and repositories. It strengthens the physical-AI domain but does not change the operating conclusion: simulation and staged validation remain a conditional requirement only for systems acting in the physical world."
+      },
+      "status": "revisit-required"
+    },
+    {
+      "candidate_id": "theme:agent-harnesses",
+      "title": "Agent harnesses",
+      "origin": "cross-source-theme",
+      "source_analysis": "themes/agent-harnesses",
+      "stage": "corroborated-source-concentrated",
+      "metrics": {
+        "evidence_count": 82,
+        "source_count": 18,
+        "source_types": [
+          "community",
+          "company-directory",
+          "curated-newsletter",
+          "event-paper",
+          "event-session",
+          "expert-newsletter",
+          "expert-social",
+          "first-party-lab",
+          "investor-essay",
+          "newsletter",
+          "newsletter-analysis",
+          "paper",
+          "paper-curation",
+          "practitioner-blog",
+          "repository"
+        ],
+        "recent_evidence_count": 1,
+        "technical_record_count": 41,
+        "family_count": 15,
+        "trend_score": 65.9
+      },
+      "linked_requirements": [
+        {
+          "id": "modular-agent-operating-stack",
+          "title": "Modular agent operating stack",
+          "maturity": "emerging"
+        }
+      ],
+      "reviewed_at": "2026-09-25",
+      "outcome": "covered-by-existing-requirement",
+      "requirement_ids": [
+        "modular-agent-operating-stack"
+      ],
+      "decision": "Do not create a duplicate requirement.",
+      "rationale": "An agent harness is the orchestration and control portion of the already-calibrated modular agent operating stack. Its evidence should strengthen that requirement rather than create a second entry with an indistinguishable operating prescription.",
+      "evidence_review": {
+        "status": "complete",
+        "records_screened": 67,
+        "links_added": 4,
+        "finding": "Sixteen sources now support the orchestration layer, while the generic-agent cluster was deliberately left unresolved. The industrial comparison favoring a simpler single-agent baseline remains material counterevidence, so the modular-stack requirement stays emerging and conditional."
       },
       "status": "revisit-required"
     },
@@ -3452,7 +3455,6 @@
       ],
       "evidence_ids": [
         "alphasignal:52e919324888ba1b8e0f",
-        "alphasignal:492c2f24255b6e22c68a",
         "hn:49850553",
         "hn:49847249",
         "alphasignal:1206dbc2b8c74248e62f",
@@ -3470,12 +3472,13 @@
         "arxiv:2609.21843v1",
         "hf-paper:2609.21465",
         "simon-willison:0c114974aa55eb9d7222",
-        "arxiv:2609.20620v1"
+        "arxiv:2609.20620v1",
+        "aws-machine-learning-blog:5d4f323bd0d514800a8a"
       ],
       "stage": "corroborated-source-concentrated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 83,
+        "evidence_count": 82,
         "source_count": 18,
         "source_types": [
           "community",
@@ -3494,10 +3497,10 @@
           "practitioner-blog",
           "repository"
         ],
-        "recent_evidence_count": 2,
+        "recent_evidence_count": 1,
         "technical_record_count": 41,
         "family_count": 15,
-        "trend_score": 66.1
+        "trend_score": 65.9
       },
       "linked_requirements": [
         {
@@ -3515,12 +3518,14 @@
         "momentum": 3,
         "source_breadth": 25,
         "technical_support": 20,
-        "new_evidence": 8,
+        "new_evidence": 4,
         "operating_relevance": 10,
-        "total": 66
+        "total": 62
       },
-      "change_reasons": [],
-      "materially_changed": false,
+      "change_reasons": [
+        "1 additional dated records entered the latest seven-day window"
+      ],
+      "materially_changed": true,
       "adjudication": {
         "candidate_id": "theme:agent-harnesses",
         "reviewed_at": "2026-09-25",
@@ -3539,8 +3544,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 2
+      "queue_rank": 2,
+      "pending_from_previous_review": true
     },
     {
       "id": "theme:frontier-inference-infrastructure",
@@ -3858,7 +3863,6 @@
         "alphasignal:b85c889a9b6e76025d46",
         "alphasignal:395eb5f88099f4c5b7d2",
         "hn:49842596",
-        "alphasignal:e32078afc6278482f336",
         "alphasignal:878cd0da4350818f61b9",
         "alphasignal:5e4d06e1b5148246bf48",
         "alphasignal:28e88f0768d976bbfccb",
@@ -3869,13 +3873,14 @@
         "hn:49807413",
         "aws-machine-learning-blog:eb69714bbf90b702d8c1",
         "alphasignal:ed11042f47b8f05c3ace",
-        "alphasignal:cec6f55c7deff2c8dfc5",
-        "hn:49800574"
+        "hn:49800574",
+        "huggingface-blog:e9f63aa1f7aaa02f4024",
+        "hn:49791343"
       ],
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 241,
+        "evidence_count": 239,
         "source_count": 30,
         "source_types": [
           "community",
@@ -3899,7 +3904,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 136,
         "family_count": 17,
-        "trend_score": 99.9
+        "trend_score": 99.8
       },
       "linked_requirements": [
         {
@@ -3921,8 +3926,10 @@
         "operating_relevance": 10,
         "total": 66
       },
-      "change_reasons": [],
-      "materially_changed": false,
+      "change_reasons": [
+        "Evidence increased by 2"
+      ],
+      "materially_changed": true,
       "adjudication": {
         "candidate_id": "theme:training-self-improvement",
         "reviewed_at": "2026-09-25",
@@ -3941,8 +3948,8 @@
         "status": "revisit-required"
       },
       "review_action": "review-existing-requirement",
-      "pending_from_previous_review": true,
-      "queue_rank": 6
+      "queue_rank": 6,
+      "pending_from_previous_review": true
     },
     {
       "id": "theme:coding-agents",
@@ -3978,7 +3985,7 @@
       "stage": "broadly-corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 132,
+        "evidence_count": 131,
         "source_count": 18,
         "source_types": [
           "community",
@@ -3999,7 +4006,7 @@
         "recent_evidence_count": 4,
         "technical_record_count": 66,
         "family_count": 14,
-        "trend_score": 83.2
+        "trend_score": 83.0
       },
       "linked_requirements": [
         {
@@ -4065,7 +4072,6 @@
         "aws-machine-learning-blog:aaca847ab96b8bddf45b",
         "bluesky:b3614927c6a2:3mw7magyrwc2i",
         "simon-willison:e47986333e4f67663922",
-        "alphasignal:5f3148d70539a8da7f25",
         "alphasignal:1ef7cf038f88524bc9b8",
         "hn:49789320",
         "alphasignal:trend:voice-and-audio-interfaces",
@@ -4079,12 +4085,13 @@
         "github:1361693766",
         "alphasignal:project:voicestudio",
         "deepmind-blog:ac6eb9276806c2f8127d",
-        "the-batch:ab4caab4fe2b8644e7ea"
+        "the-batch:ab4caab4fe2b8644e7ea",
+        "huggingface-blog:e3ddd7a65cd3a566e91c"
       ],
       "stage": "corroborated",
       "movement": "falling",
       "metrics": {
-        "evidence_count": 32,
+        "evidence_count": 31,
         "source_count": 14,
         "source_types": [
           "community",
@@ -4104,7 +4111,7 @@
         "recent_evidence_count": 2,
         "technical_record_count": 15,
         "family_count": 13,
-        "trend_score": 69.8
+        "trend_score": 69.2
       },
       "linked_requirements": [
         {
@@ -4287,7 +4294,7 @@
       "source_names": [
         "Y Combinator AI companies"
       ],
-      "new_record_count": 7,
+      "new_record_count": 0,
       "evidence_ids": [
         "yc-company:662",
         "yc-company:38492",

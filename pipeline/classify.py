@@ -39,7 +39,7 @@ def validate_classification_policy(policy: Mapping[str, Any]) -> None:
         seen.add(rule_id)
         if not rule.get("reason"):
             raise ValueError(f"Out-of-scope rule {rule_id} requires a public reason")
-        if not any(rule.get(field) for field in ("source_ids", "source_types", "title_patterns")):
+        if not any(rule.get(field) for field in ("source_ids", "source_types", "title_patterns", "sponsor_statuses")):
             raise ValueError(f"Out-of-scope rule {rule_id} is unbounded")
         for pattern in rule.get("title_patterns", []):
             re.compile(pattern, re.I)
@@ -56,6 +56,9 @@ def _matches_out_of_scope_rule(
     if source_ids and row.get("source_id") not in source_ids:
         return False
     if source_types and row.get("source_type") not in source_types:
+        return False
+    sponsor_statuses = set(rule.get("sponsor_statuses", []))
+    if sponsor_statuses and row.get("sponsor_status") not in sponsor_statuses:
         return False
     patterns = rule.get("title_patterns", [])
     if patterns and not any(re.search(pattern, row.get("title", ""), re.I) for pattern in patterns):
@@ -79,6 +82,19 @@ def classify_record(
             " ".join(row.get("tags", [])),
         ]
     ).casefold()
+    scope_terms = list(policy.get("scope_terms", []))
+    precedence_rules = [
+        rule for rule in policy.get("out_of_scope_rules", [])
+        if rule.get("precedence") == "before-theme"
+    ]
+    for rule in precedence_rules:
+        if _matches_out_of_scope_rule(row, searchable, rule, scope_terms):
+            return {
+                "theme_ids": [],
+                "disposition": "out-of-scope",
+                "reason": rule["reason"],
+                "rule_id": rule["id"],
+            }
     theme_ids = classify_text(searchable, keywords)
     if theme_ids:
         return {
@@ -87,8 +103,9 @@ def classify_record(
             "reason": "Matched reviewed canonical-theme vocabulary.",
             "rule_id": "canonical-theme-match",
         }
-    scope_terms = list(policy.get("scope_terms", []))
     for rule in policy.get("out_of_scope_rules", []):
+        if rule.get("precedence") == "before-theme":
+            continue
         if _matches_out_of_scope_rule(row, searchable, rule, scope_terms):
             return {
                 "theme_ids": [],

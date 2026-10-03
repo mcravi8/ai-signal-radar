@@ -1879,6 +1879,8 @@ function renderEvidence() {
     const row = node("tr");
     const subject = node("td", "subject-cell");
     subject.append(linkOrText(item));
+    if (item.sponsor_status === "sponsored") subject.append(badge("Sponsored", "sponsored"));
+    if (item.source_id === "alphasignal" && item.sponsor_status === "unknown") subject.append(badge("Sponsorship unclear", "uncertain"));
     if (item.summary) subject.append(node("small", "", item.summary));
     const themes = node("td", "theme-chip-cell");
     for (const themeId of item.theme_ids.slice(0, 3)) {

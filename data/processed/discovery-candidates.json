@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T04:55:52.313051+00:00",
+    "generated_at": "2026-10-03T05:01:49.828896+00:00",
     "method": "lexical-anchor-overlap-v1",
     "input_document_count": 1423,
     "input_changed_document_count": 0,
-    "cluster_count": 488,
+    "cluster_count": 490,
     "overbroad_cluster_count": 0,
-    "filtered_anchor_count": 171,
+    "filtered_anchor_count": 172,
     "coherent_cluster_count": 191,
     "quality_eligible_cluster_count": 12,
     "explained_cluster_count": 119,
@@ -19,7 +19,7 @@
     "disposition_counts": {
       "covered-by-existing-theme": 112,
       "merge-existing-direction": 7,
-      "novel": 369
+      "novel": 371
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -2373,6 +2373,68 @@
           ]
         }
       ],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:blog-posts-5884112a18",
+      "anchor_ids": [
+        "phrase:blog-posts"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:blog-posts",
+          "label": "blog posts",
+          "kind": "emergent-phrase",
+          "document_count": 3,
+          "source_count": 3
+        }
+      ],
+      "evidence_ids": [
+        "alphasignal:2f3c1fafd885b87ad2af",
+        "bluesky:1278ebf77949:3mwcpe6pdic26",
+        "simon-willison:f1ea99f442b165fa54fa"
+      ],
+      "source_ids": [
+        "alphasignal",
+        "bluesky-ethan-mollick",
+        "simon-willison"
+      ],
+      "source_family_ids": [
+        "attention",
+        "experts"
+      ],
+      "theme_ids": [],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {},
+      "first_seen": "2026-09-14T20:21:48+00:00",
+      "last_seen": "2026-09-28T14:56:46.000Z",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 3,
+        "source_family_count": 2,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 0.333,
+        "raw_evidence_count": 3,
+        "capped_evidence_count": 3,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 3,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
       "materially_changed": false,
       "disposition": "novel",
       "nearest_known": null
@@ -8009,6 +8071,70 @@
           }
         ],
         "context_outlier_count": 0,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:accuracy-using-e5ef922b75",
+      "anchor_ids": [
+        "phrase:accuracy-using"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:accuracy-using",
+          "label": "accuracy using",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "alphasignal:2f3c1fafd885b87ad2af",
+        "nvidia-developer-blog:d14025c328b788abfb85"
+      ],
+      "source_ids": [
+        "alphasignal",
+        "nvidia-developer-blog"
+      ],
+      "source_family_ids": [
+        "attention",
+        "builders"
+      ],
+      "theme_ids": [
+        "frontier-inference-infrastructure"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "frontier-inference-infrastructure": 1
+      },
+      "first_seen": "2026-09-02T16:04:19Z",
+      "last_seen": "2026-09-28T14:56:46.000Z",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 1,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
         "spark_quality_met": false,
         "candidate_quality_met": false
       },
@@ -14472,6 +14598,72 @@
       },
       "first_seen": "2026-09-16T06:00:45.210Z",
       "last_seen": "2026-10-03",
+      "metrics": {
+        "evidence_count": 2,
+        "independent_event_count": 2,
+        "source_count": 2,
+        "source_family_count": 2,
+        "technical_record_count": 0,
+        "dominant_publisher_share": 0.5,
+        "raw_evidence_count": 2,
+        "capped_evidence_count": 2,
+        "changed_evidence_count": 0
+      },
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": false,
+        "context_features": [],
+        "context_outlier_count": 2,
+        "spark_quality_met": false,
+        "candidate_quality_met": false
+      },
+      "source_cap_exclusions": [],
+      "materially_changed": false,
+      "disposition": "novel",
+      "nearest_known": null
+    },
+    {
+      "id": "discovery:google-deepmind-ea1f93bb0d",
+      "anchor_ids": [
+        "phrase:google-deepmind"
+      ],
+      "anchors": [
+        {
+          "id": "phrase:google-deepmind",
+          "label": "google deepmind",
+          "kind": "emergent-phrase",
+          "document_count": 2,
+          "source_count": 2
+        }
+      ],
+      "evidence_ids": [
+        "alphasignal:188349ac71ffaf42724d",
+        "radical-ventures:4be08dec55eba7fcfb9f"
+      ],
+      "source_ids": [
+        "alphasignal",
+        "radical-ventures"
+      ],
+      "source_family_ids": [
+        "attention",
+        "narratives"
+      ],
+      "theme_ids": [
+        "robotics-embodied-ai",
+        "training-self-improvement"
+      ],
+      "recurrent_theme_ids": [],
+      "theme_document_counts": {
+        "robotics-embodied-ai": 1,
+        "training-self-improvement": 1
+      },
+      "first_seen": "2026-09-01T20:39:59+00:00",
+      "last_seen": "2026-10-01T15:42:07.000Z",
       "metrics": {
         "evidence_count": 2,
         "independent_event_count": 2,
@@ -29573,65 +29765,6 @@
         "matched_anchor_phrases": [],
         "basis": "document-share"
       }
-    },
-    {
-      "id": "discovery:blog-posts-5884112a18",
-      "anchor_ids": [
-        "phrase:blog-posts"
-      ],
-      "anchors": [
-        {
-          "id": "phrase:blog-posts",
-          "label": "blog posts",
-          "kind": "emergent-phrase",
-          "document_count": 2,
-          "source_count": 2
-        }
-      ],
-      "evidence_ids": [
-        "bluesky:1278ebf77949:3mwcpe6pdic26",
-        "simon-willison:f1ea99f442b165fa54fa"
-      ],
-      "source_ids": [
-        "bluesky-ethan-mollick",
-        "simon-willison"
-      ],
-      "source_family_ids": [
-        "experts"
-      ],
-      "theme_ids": [],
-      "recurrent_theme_ids": [],
-      "theme_document_counts": {},
-      "first_seen": "2026-09-14T20:21:48+00:00",
-      "last_seen": "2026-09-25T02:18:16.941Z",
-      "metrics": {
-        "evidence_count": 2,
-        "independent_event_count": 2,
-        "source_count": 2,
-        "source_family_count": 1,
-        "technical_record_count": 0,
-        "dominant_publisher_share": 0.5,
-        "raw_evidence_count": 2,
-        "capped_evidence_count": 2,
-        "changed_evidence_count": 0
-      },
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": false,
-        "context_features": [],
-        "context_outlier_count": 2,
-        "spark_quality_met": false,
-        "candidate_quality_met": false
-      },
-      "source_cap_exclusions": [],
-      "materially_changed": false,
-      "disposition": "novel",
-      "nearest_known": null
     },
     {
       "id": "discovery:case-studies-62fd8f6252",

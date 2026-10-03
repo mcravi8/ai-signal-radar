@@ -164,6 +164,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .badge-linked { border-color: var(--blue); color: var(--blue); }
 .badge-new { border-color: var(--amber); color: var(--amber); }
 .badge-carried { border-color: var(--muted); color: var(--muted); }
+.badge-sponsored { border-color: var(--amber); color: var(--amber); margin-left: .35rem; }
+.badge-uncertain { border-color: var(--muted); color: var(--muted); margin-left: .35rem; }
 .adjudication-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
 .adjudication-card { display: grid; align-content: start; gap: .55rem; min-height: 210px; padding: 1rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .adjudication-head { display: grid; grid-template-columns: 1fr auto; gap: .35rem 1rem; align-items: start; }

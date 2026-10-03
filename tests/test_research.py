@@ -109,6 +109,21 @@ class CrossSourceResearchTests(unittest.TestCase):
     def test_public_boundary(self):
         validate_public_payload(self.payload)
 
+    def test_sponsored_newsletter_records_are_visible_but_not_theme_support(self):
+        sponsored = [
+            item for item in self.payload["evidence"]
+            if item.get("source_id") == "alphasignal" and item.get("sponsor_status") == "sponsored"
+        ]
+        self.assertTrue(all(item["disposition"] == "out-of-scope" for item in sponsored))
+        self.assertTrue(all(not item["theme_ids"] for item in sponsored))
+        self.assertTrue(all(item["classification_rule_id"] == "sponsored-newsletter-placement" for item in sponsored))
+        direct = [
+            item for item in self.payload["evidence"]
+            if item.get("source_id") == "alphasignal" and item.get("evidence_kind") == "public-source-item"
+        ]
+        self.assertTrue(direct)
+        self.assertTrue(all(item.get("sponsor_status") in {"editorial", "sponsored", "unknown"} for item in direct))
+
     def test_active_sources_publish_official_brand_metadata(self):
         branded = [source for source in self.payload["sources"] if source["status"] == "active"]
         self.assertTrue(branded)

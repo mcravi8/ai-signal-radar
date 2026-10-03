@@ -334,6 +334,8 @@ def synthesize() -> None:
         for item in load_social_links(_yaml(ROOT / "data/manual/social-links.yml"), event_config)
     ]
     processed_rows = read_jsonl(ROOT / "data/processed/items.jsonl")
+    from .collectors.agentmail import clean_alphasignal_rows
+    processed_rows = clean_alphasignal_rows(processed_rows)
     legacy_social_source_ids = {
         "simon-willison": "bluesky-simon-willison",
         "latent-space": "bluesky-swyx",

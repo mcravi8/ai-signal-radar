@@ -135,6 +135,23 @@ class ClassificationRegressionTests(unittest.TestCase):
         self.assertEqual(result["disposition"], "classified")
         self.assertIn("robotics-embodied-ai", result["theme_ids"])
 
+    def test_sponsored_newsletter_placement_is_excluded_before_theme_matching(self):
+        result = classify_record(
+            {
+                "source_id": "alphasignal",
+                "source_type": "newsletter",
+                "sponsor_status": "sponsored",
+                "title": "A coding agent evaluation platform",
+                "summary": "",
+                "tags": [],
+            },
+            self.keywords,
+            self.policy,
+        )
+        self.assertEqual(result["disposition"], "out-of-scope")
+        self.assertEqual(result["theme_ids"], [])
+        self.assertEqual(result["rule_id"], "sponsored-newsletter-placement")
+
     def test_inspected_publisher_housekeeping_is_out_of_scope(self):
         cases = (
             {

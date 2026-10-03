@@ -52,6 +52,14 @@ scope_terms:
   - embedding
 
 out_of_scope_rules:
+  - id: sponsored-newsletter-placement
+    source_ids: [alphasignal]
+    sponsor_statuses: [sponsored]
+    precedence: before-theme
+    reason: >-
+      Disclosed sponsored newsletter placement is retained for provenance but excluded from
+      thematic support so paid distribution cannot raise a trend score.
+
   - id: verification-only-no-theme
     source_types: [company-directory, job-posting]
     reason: >-
@@ -96,6 +104,7 @@ out_of_scope_rules:
       thematic evidence about an AI engineering or startup operating pattern.
 
 review_policy:
+  - Sponsored placements are excluded before theme matching because payment, not editorial selection, controls their inclusion.
   - Out-of-scope rules run only after canonical theme matching, so a precise theme always wins.
   - Out-of-scope records remain public and inspectable; they are excluded only from the coverage denominator and review backlog.
   - Classification-review is the default for unmatched research, repository, practitioner, newsletter, and expert records because they may expose a genuine taxonomy gap.

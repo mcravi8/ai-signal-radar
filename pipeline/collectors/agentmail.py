@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import time
+from collections import Counter
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from email.utils import parseaddr
@@ -41,6 +42,7 @@ TRACKING_QUERY_KEYS = {
 REDIRECT_QUERY_KEYS = ("url", "u", "target", "redirect", "redirect_url")
 SPONSOR_CONTEXT = re.compile(r"\b(?:presented by|in partnership with|partner with us)\b", re.I)
 LEADING_MARKER = re.compile(r"^(?:[▸▶→•]\s*)?(?:\d+[.)]\s*)?")
+SPACED_LETTER_RATIO = 0.6
 
 
 @dataclass(slots=True)
@@ -208,10 +210,89 @@ def _public_issue_url(html: str) -> str:
 
 
 def _candidate_title(value: str) -> str | None:
-    title = compact_text(LEADING_MARKER.sub("", value)).strip(" -|•")
+    title = _normalize_editorial_title(LEADING_MARKER.sub("", value))
+    tokens = title.split()
+    single_letter_tokens = sum(len(token.strip(".,:;!?&'\"-")) == 1 for token in tokens)
+    if len(tokens) >= 8 and single_letter_tokens / len(tokens) >= SPACED_LETTER_RATIO:
+        return None
     if len(title) < 32 or len(title.split()) < 5 or IGNORED_LINK_TEXT.search(title):
         return None
     return title
+
+
+def _normalize_editorial_title(value: str) -> str:
+    title = compact_text(value).strip(" -|•")
+    title = re.sub(r"\s+([,.;:!?])", r"\1", title)
+    title = re.sub(r"([([{])\s+", r"\1", title)
+    return title
+
+
+def _collapse_title_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    selected: list[dict[str, Any]] = []
+    for row in sorted(rows, key=lambda item: (-len(item["title"]), item["title"])):
+        row.setdefault("_duplicate_count", 1)
+        row.setdefault("_sponsor_seen", row.get("sponsored") or row.get("sponsor_status") == "sponsored")
+        normalized = row["title"].casefold()
+        duplicate = next(
+            (
+                existing for existing in selected
+                if (
+                    normalized in existing["title"].casefold()
+                    or existing["title"].casefold() in normalized
+                )
+                and min(len(normalized), len(existing["title"]))
+                / max(len(normalized), len(existing["title"])) >= 0.7
+            ),
+            None,
+        )
+        if duplicate:
+            duplicate["_duplicate_count"] += 1
+            duplicate["_sponsor_seen"] = duplicate["_sponsor_seen"] or row["_sponsor_seen"]
+            if row.get("sponsored") or row.get("sponsor_status") == "sponsored":
+                duplicate["sponsored"] = True
+                duplicate["sponsor_status"] = "sponsored"
+            continue
+        selected.append(row)
+    return selected
+
+
+def clean_alphasignal_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Migrate stored AlphaSignal records through the current public-safe title rules."""
+    retained = [
+        row for row in rows
+        if not (row.get("source_id") == "alphasignal" and row.get("source_type") == "newsletter")
+    ]
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for original in rows:
+        if original.get("source_id") != "alphasignal" or original.get("source_type") != "newsletter":
+            continue
+        row = dict(original)
+        row["title"] = _normalize_editorial_title(str(row.get("title", "")))
+        tokens = row["title"].split()
+        single_letter_tokens = sum(len(token.strip(".,:;!?&'\"-")) == 1 for token in tokens)
+        if len(tokens) >= 8 and single_letter_tokens / len(tokens) >= SPACED_LETTER_RATIO:
+            continue
+        day = str(row.get("published_at", ""))[:10]
+        grouped.setdefault(day, []).append(row)
+    for group in grouped.values():
+        for row in _collapse_title_rows(group):
+            metadata = dict(row.get("metadata", {}))
+            sponsor_basis = metadata.get("sponsor_basis")
+            if row.get("_sponsor_seen") and row["_duplicate_count"] > 1:
+                row["sponsor_status"] = "sponsored"
+                metadata["sponsor_basis"] = "duplicate-link-title"
+            elif row.get("_sponsor_seen") and sponsor_basis not in {
+                "duplicate-link-title", "repeated-link-with-sponsor-context"
+            }:
+                row["sponsor_status"] = "unknown"
+                metadata["sponsor_basis"] = "legacy-proximity-uncertain"
+            row["metadata"] = metadata
+            row.pop("_duplicate_count", None)
+            row.pop("_sponsor_seen", None)
+            row.pop("sponsored", None)
+            row["id"] = _stable_item_id("alphasignal", str(row.get("published_at", "")), row["title"])
+            retained.append(row)
+    return retained
 
 
 def _stable_item_id(source_id: str, published_at: str, title: str) -> str:
@@ -264,12 +345,13 @@ def parse_alphasignal(message: dict[str, Any], definition: NewsletterDefinition)
     public_url = _public_issue_url(html)
     published_at = str(message.get("timestamp") or message.get("created_at") or "")
 
+    href_counts = Counter(token.href for token in parser.tokens if token.href)
     sponsor_hrefs: set[str] = set()
     for index, token in enumerate(parser.tokens):
         if not token.href:
             continue
         context = " ".join(part.text for part in parser.tokens[max(0, index - 2) : index + 2])
-        if SPONSOR_CONTEXT.search(context):
+        if href_counts[token.href] > 1 and SPONSOR_CONTEXT.search(context):
             sponsor_hrefs.add(token.href)
 
     candidates: dict[str, dict[str, Any]] = {}
@@ -287,7 +369,7 @@ def parse_alphasignal(message: dict[str, Any], definition: NewsletterDefinition)
         row["sponsored"] = row["sponsored"] or token.href in sponsor_hrefs
 
     items = []
-    for row in candidates.values():
+    for row in _collapse_title_rows(list(candidates.values())):
         items.append(
             SourceItem(
                 id=_stable_item_id(definition.source_id, published_at, row["title"]),
@@ -298,6 +380,11 @@ def parse_alphasignal(message: dict[str, Any], definition: NewsletterDefinition)
                 published_at=published_at,
                 summary="Newsletter-curated item; the underlying claim has not been independently verified.",
                 sponsor_status="sponsored" if row["sponsored"] else "editorial",
+                metadata={
+                    "sponsor_basis": (
+                        "repeated-link-with-sponsor-context" if row["sponsored"] else "editorial-selection"
+                    )
+                },
             )
         )
     return items

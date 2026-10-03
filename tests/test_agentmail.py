@@ -5,6 +5,7 @@ from pathlib import Path
 
 from pipeline.collectors.agentmail import (
     NewsletterDefinition,
+    clean_alphasignal_rows,
     collect,
     parse_alphasignal,
     parse_issue,
@@ -90,6 +91,42 @@ class ExactAddressClient:
 
 
 class AgentMailCollectorTests(unittest.TestCase):
+    def test_alphasignal_cleanup_rejects_spaced_noise_and_collapses_suffix_duplicates(self):
+        rows = [
+            {
+                "id": "old-noise", "source_id": "alphasignal", "source_type": "newsletter",
+                "title": "T h i s i s s p a c e d n o i s e", "published_at": "2026-10-01T12:00:00Z",
+                "sponsor_status": "sponsored",
+            },
+            {
+                "id": "old-short", "source_id": "alphasignal", "source_type": "newsletter",
+                "title": "A useful model release for coding agents", "published_at": "2026-10-01T12:00:00Z",
+                "sponsor_status": "editorial",
+            },
+            {
+                "id": "old-long", "source_id": "alphasignal", "source_type": "newsletter",
+                "title": "Acme: A useful model release for coding agents", "published_at": "2026-10-01T12:00:00Z",
+                "sponsor_status": "sponsored",
+            },
+            {
+                "id": "old-uncertain", "source_id": "alphasignal", "source_type": "newsletter",
+                "title": "A standalone item previously caught near an advertisement", "published_at": "2026-10-02T12:00:00Z",
+                "sponsor_status": "sponsored",
+            },
+        ]
+        cleaned = clean_alphasignal_rows(rows)
+        self.assertEqual(len(cleaned), 2)
+        by_title = {item["title"]: item for item in cleaned}
+        duplicate = by_title["Acme: A useful model release for coding agents"]
+        uncertain = by_title["A standalone item previously caught near an advertisement"]
+        self.assertEqual(duplicate["sponsor_status"], "sponsored")
+        self.assertEqual(uncertain["sponsor_status"], "unknown")
+        self.assertEqual(duplicate["metadata"]["sponsor_basis"], "duplicate-link-title")
+        self.assertEqual(
+            clean_alphasignal_rows(cleaned)[0]["sponsor_status"],
+            "sponsored",
+        )
+        self.assertNotEqual(duplicate["id"], "old-long")
     def test_generic_issue_extracts_public_links_and_removes_tracking(self):
         definition = NewsletterDefinition(
             source_id="agent-news",

@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-03T04:55:52.313051+00:00",
+    "generated_at": "2026-10-03T05:01:49.828896+00:00",
     "method": "deterministic-lexical-v1",
     "window_days": 35,
     "document_count": 1423,
     "changed_document_count": 0,
     "removed_document_count": 0,
-    "excluded_record_count": 854,
+    "excluded_record_count": 823,
     "interpretation": "Lexical observations for clustering; not themes, trends, or findings."
   },
   "changed_document_ids": [],
@@ -20,9 +20,9 @@
     "alphasignal:111e6fbcff6d492fbbb3": "e8f7d72e9c0e8fe819ae152b23edc38e146ef042e91d9dd81eed443bf2ec002c",
     "alphasignal:12764514f1ce5e606c0d": "702572af28ad69e482dece0f3f5784fad40a7ef0602b7bf0fb4e77a99cc8c4fb",
     "alphasignal:1454af9586eaae4c2d8c": "37d233c720f4e5a329b5517946f9d3ae3344e9bc9bf5be53e8032b5c403951b4",
-    "alphasignal:168983bbd079e8fd1358": "1ebaf8af70eb31404c572e30799a897e853bc37e0f54faeffe266b3840f92364",
+    "alphasignal:188349ac71ffaf42724d": "902836eb6324bf5f8dd0f428de82b2c31b756668f289654421948cdf762d4f3a",
     "alphasignal:1d190337a91117d1e74f": "8c3071db8a0088819eca8e067f4570ba7366c8a9aa0651060ca15036dfdeb4a0",
-    "alphasignal:2a75a5e284a7bd24e83b": "a9dd82227eeb0fe1ce0cdf579a3cc1d96f604362bf9f7e4313183eb8884c68a1",
+    "alphasignal:2f3c1fafd885b87ad2af": "ecd10457239c9f5fc8314001f46b9678f8795f34dc0b06e54081890003a4555e",
     "alphasignal:b334cf2a8fb36dfa32e9": "7bbf1d2a948555a8913dacb0bfc9201fce7c4135fe3c7bb46f03f9475ba24153",
     "anthropic-news-research:018fb3abd44d6fe71e6b": "bec68fcbb5d7dd916dfe2e27d7bc3d39ac689f4494f5dd299bb7e83239220b8a",
     "anthropic-news-research:047a55d9a381df1fa2e7": "a681b731218e6fcfd378b9347713cef90d29dbc6fa7a176a8c03aa4785d5de82",
@@ -1978,6 +1978,13 @@
       "source_count": 3
     },
     {
+      "id": "phrase:blog-posts",
+      "label": "blog posts",
+      "kind": "emergent-phrase",
+      "document_count": 3,
+      "source_count": 3
+    },
+    {
       "id": "phrase:claude-opus",
       "label": "claude opus",
       "kind": "emergent-phrase",
@@ -2923,6 +2930,13 @@
       "source_count": 2
     },
     {
+      "id": "phrase:accuracy-using",
+      "label": "accuracy using",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 2
+    },
+    {
       "id": "phrase:action-model",
       "label": "action model",
       "kind": "emergent-phrase",
@@ -3219,13 +3233,6 @@
     {
       "id": "phrase:bitter-lesson",
       "label": "bitter lesson",
-      "kind": "emergent-phrase",
-      "document_count": 2,
-      "source_count": 2
-    },
-    {
-      "id": "phrase:blog-posts",
-      "label": "blog posts",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
@@ -3945,6 +3952,13 @@
       "source_count": 2
     },
     {
+      "id": "phrase:gemini-4",
+      "label": "gemini 4",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 2
+    },
+    {
       "id": "phrase:generation-editing",
       "label": "generation editing",
       "kind": "emergent-phrase",
@@ -3989,6 +4003,13 @@
     {
       "id": "phrase:glm-5-3-hy4-preview",
       "label": "glm 5.3 hy4 preview",
+      "kind": "emergent-phrase",
+      "document_count": 2,
+      "source_count": 2
+    },
+    {
+      "id": "phrase:google-deepmind",
+      "label": "google deepmind",
       "kind": "emergent-phrase",
       "document_count": 2,
       "source_count": 2
@@ -21711,6 +21732,16 @@
       ],
       "concepts": [
         {
+          "id": "phrase:google-deepmind",
+          "label": "google deepmind",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "google deepmind"
+          ],
+          "document_frequency": 2,
+          "score": 7.163
+        },
+        {
           "id": "phrase:performance-improvements",
           "label": "performance improvements",
           "kind": "emergent-phrase",
@@ -22718,6 +22749,16 @@
         "frontier-inference-infrastructure"
       ],
       "concepts": [
+        {
+          "id": "phrase:accuracy-using",
+          "label": "accuracy using",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "accuracy using"
+          ],
+          "document_frequency": 2,
+          "score": 7.163
+        },
         {
           "id": "theme:frontier-inference-infrastructure",
           "label": "Frontier inference infrastructure",
@@ -38464,8 +38505,8 @@
           "matched_terms": [
             "blog posts"
           ],
-          "document_frequency": 2,
-          "score": 18.191
+          "document_frequency": 3,
+          "score": 17.46
         },
         {
           "id": "phrase:multiple-times",
@@ -92124,8 +92165,8 @@
           "matched_terms": [
             "blog posts"
           ],
-          "document_frequency": 2,
-          "score": 10.744
+          "document_frequency": 3,
+          "score": 10.312
         },
         {
           "id": "phrase:gpt-6-astra",
@@ -96100,12 +96141,32 @@
       "relationships": []
     },
     {
-      "evidence_id": "alphasignal:2a75a5e284a7bd24e83b",
+      "evidence_id": "alphasignal:2f3c1fafd885b87ad2af",
       "source_id": "alphasignal",
       "source_type": "newsletter",
       "published_at": "2026-09-28T14:56:46.000Z",
       "theme_ids": [],
       "concepts": [
+        {
+          "id": "phrase:accuracy-using",
+          "label": "accuracy using",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "accuracy using"
+          ],
+          "document_frequency": 2,
+          "score": 10.744
+        },
+        {
+          "id": "phrase:blog-posts",
+          "label": "blog posts",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "blog posts"
+          ],
+          "document_frequency": 3,
+          "score": 10.312
+        },
         {
           "id": "phrase:independently-verified",
           "label": "independently verified",
@@ -96704,7 +96765,18 @@
       "source_type": "expert-social",
       "published_at": "2026-09-30T23:17:19.230Z",
       "theme_ids": [],
-      "concepts": [],
+      "concepts": [
+        {
+          "id": "phrase:gemini-4",
+          "label": "gemini 4",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "gemini 4"
+          ],
+          "document_frequency": 2,
+          "score": 10.744
+        }
+      ],
       "entities": [],
       "actions": [],
       "relationships": []
@@ -96962,12 +97034,32 @@
       "relationships": []
     },
     {
-      "evidence_id": "alphasignal:168983bbd079e8fd1358",
+      "evidence_id": "alphasignal:188349ac71ffaf42724d",
       "source_id": "alphasignal",
       "source_type": "newsletter",
       "published_at": "2026-10-01T15:42:07.000Z",
       "theme_ids": [],
       "concepts": [
+        {
+          "id": "phrase:gemini-4",
+          "label": "gemini 4",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "gemini 4"
+          ],
+          "document_frequency": 2,
+          "score": 10.744
+        },
+        {
+          "id": "phrase:google-deepmind",
+          "label": "google deepmind",
+          "kind": "emergent-phrase",
+          "matched_terms": [
+            "google deepmind"
+          ],
+          "document_frequency": 2,
+          "score": 10.744
+        },
         {
           "id": "phrase:independently-verified",
           "label": "independently verified",
@@ -97000,15 +97092,7 @@
         }
       ],
       "entities": [],
-      "actions": [
-        {
-          "id": "deploy",
-          "label": "Deploy",
-          "matched_terms": [
-            "releases"
-          ]
-        }
-      ],
+      "actions": [],
       "relationships": []
     },
     {
