@@ -1,11 +1,11 @@
 {
-  "collected_at": "2026-10-05T17:04:01.078775+00:00",
+  "collected_at": "2026-10-05T17:16:32.642364+00:00",
   "items": 1188,
-  "added": 220,
+  "added": 22,
   "errors": [
     "deepmind-blog: not well-formed (invalid token): line 1, column 0",
-    "import-ai: RSS collection failed (HTTP Error 403: Forbidden); official sitemap fallback failed (HTTP Error 403: Forbidden)",
-    "the-batch: HTTP Error 403: Forbidden"
+    "import-ai: RSS collection failed (HTTP Error 403: Forbidden); official sitemap fallback failed (HTTP Error 403: Forbidden); official HTML fallback failed (HTTP Error 403: Forbidden)",
+    "the-batch: Sitemap collection failed (HTTP Error 403: Forbidden); official HTML fallback failed (HTTP Error 403: Forbidden)"
   ],
   "collectors": [
     {
@@ -103,13 +103,13 @@
       "source_id": "import-ai",
       "status": "failed",
       "items": 0,
-      "error": "RSS collection failed (HTTP Error 403: Forbidden); official sitemap fallback failed (HTTP Error 403: Forbidden)"
+      "error": "RSS collection failed (HTTP Error 403: Forbidden); official sitemap fallback failed (HTTP Error 403: Forbidden); official HTML fallback failed (HTTP Error 403: Forbidden)"
     },
     {
       "source_id": "the-batch",
       "status": "failed",
       "items": 0,
-      "error": "HTTP Error 403: Forbidden"
+      "error": "Sitemap collection failed (HTTP Error 403: Forbidden); official HTML fallback failed (HTTP Error 403: Forbidden)"
     },
     {
       "source_id": "interconnects",
