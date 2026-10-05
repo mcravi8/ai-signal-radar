@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI Signal Radar cross-source research",
-    "generated_at": "2026-10-05T17:33:42.763507+00:00",
+    "generated_at": "2026-10-05T17:52:17.896224+00:00",
     "status": "success",
     "normalized_evidence_count": 3031,
     "public_record_count": 2996,
@@ -18,14 +18,14 @@
     "recent_source_count": 34,
     "collection_health": {
       "status": "healthy",
-      "latest_receipt_at": "2026-10-05T17:33:42.552265+00:00",
+      "latest_receipt_at": "2026-10-05T17:52:17.691790+00:00",
       "latest_failed_receipt_at": null,
       "failed_source_count": 0,
       "failed_source_ids": [],
       "runs": [
         {
           "id": "newsletters",
-          "collected_at": "2026-10-05T17:33:42.552265+00:00",
+          "collected_at": "2026-10-05T17:52:17.691790+00:00",
           "status": "healthy",
           "source_count": 4,
           "failed_source_count": 0,
@@ -33,7 +33,7 @@
         },
         {
           "id": "bluesky",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "status": "healthy",
           "source_count": 10,
           "failed_source_count": 0,
@@ -41,7 +41,7 @@
         },
         {
           "id": "verification",
-          "collected_at": "2026-10-05T17:33:37.490889+00:00",
+          "collected_at": "2026-10-05T17:52:10.309131+00:00",
           "status": "healthy",
           "source_count": 2,
           "failed_source_count": 0,
@@ -103,13 +103,13 @@
         },
         "yc-companies": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:37.490889+00:00",
+          "collected_at": "2026-10-05T17:52:10.309131+00:00",
           "items": 50,
           "run_id": "verification"
         },
         "yc-jobs": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:37.490889+00:00",
+          "collected_at": "2026-10-05T17:52:10.309131+00:00",
           "items": 13,
           "run_id": "verification"
         },
@@ -265,85 +265,85 @@
         },
         "bluesky-simon-willison": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 26,
           "run_id": "bluesky"
         },
         "bluesky-karpathy": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 1,
           "run_id": "bluesky"
         },
         "bluesky-swyx": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 4,
           "run_id": "bluesky"
         },
         "bluesky-nathan-lambert": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 41,
           "run_id": "bluesky"
         },
         "bluesky-mark-riedl": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 20,
           "run_id": "bluesky"
         },
         "bluesky-ethan-mollick": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 41,
           "run_id": "bluesky"
         },
         "bluesky-arvind-narayanan": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 4,
           "run_id": "bluesky"
         },
         "bluesky-melanie-mitchell": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 27,
           "run_id": "bluesky"
         },
         "bluesky-margaret-mitchell": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 13,
           "run_id": "bluesky"
         },
         "bluesky-emily-bender": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:39.615730+00:00",
+          "collected_at": "2026-10-05T17:52:14.357476+00:00",
           "items": 9,
           "run_id": "bluesky"
         },
         "alphasignal": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:42.552265+00:00",
+          "collected_at": "2026-10-05T17:52:17.691790+00:00",
           "items": 96,
           "run_id": "newsletters"
         },
         "agent-news": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:42.552265+00:00",
+          "collected_at": "2026-10-05T17:52:17.691790+00:00",
           "items": 6,
           "run_id": "newsletters"
         },
         "frontier-signal": {
           "status": "healthy",
-          "collected_at": "2026-10-05T17:33:42.552265+00:00",
+          "collected_at": "2026-10-05T17:52:17.691790+00:00",
           "items": 11,
           "run_id": "newsletters"
         },
         "the-batch": {
           "status": "awaiting-first-message",
-          "collected_at": "2026-10-05T17:33:42.552265+00:00",
+          "collected_at": "2026-10-05T17:52:17.691790+00:00",
           "items": 0,
           "run_id": "newsletters"
         },
@@ -415,7 +415,7 @@
         "bluesky-karpathy"
       ],
       "evidence_count": 3031,
-      "updated_at": "2026-10-05T17:33:42.763507+00:00"
+      "updated_at": "2026-10-05T17:52:17.896224+00:00"
     },
     {
       "id": "alphasignal-corpus",
@@ -543,7 +543,7 @@
         "yc-jobs"
       ],
       "evidence_count": 2996,
-      "updated_at": "2026-10-05T17:33:42.763507+00:00"
+      "updated_at": "2026-10-05T17:52:17.896224+00:00"
     },
     {
       "id": "early-signal-tracker",
@@ -1660,7 +1660,7 @@
           "fading": "Historical or trailing-window support exists, but no supporting evidence appeared in the latest 30 days."
         }
       },
-      "updated_at": "2026-10-05T17:33:42.763507+00:00"
+      "updated_at": "2026-10-05T17:52:17.896224+00:00"
     },
     {
       "id": "event-pulse",
@@ -2290,7 +2290,7 @@
         "persistence": "Each completed event is revisited after 30 and 90 days. Absence of later evidence is reported as not observed, never silently treated as confirmation.",
         "copyright": "Store titles, short descriptions, public URLs, dates, authors, and analyst observations. Do not store full social posts, transcripts, or copied article bodies."
       },
-      "updated_at": "2026-10-05T17:33:42.763507+00:00"
+      "updated_at": "2026-10-05T17:52:17.896224+00:00"
     },
     {
       "id": "expert-pulse",
@@ -2622,7 +2622,7 @@
         }
       ],
       "interpretation_note": "Bluesky posts are expert observations and discovery leads. They can identify an emerging idea or artifact, but they do not independently verify a technical claim. Reposts, replies, engagement counts, and off-topic posts are excluded.",
-      "updated_at": "2026-10-05T17:33:42.763507+00:00"
+      "updated_at": "2026-10-05T17:52:17.896224+00:00"
     },
     {
       "id": "operator-narratives",
@@ -2953,7 +2953,7 @@
         }
       ],
       "coverage_target": 5,
-      "updated_at": "2026-10-05T17:33:42.763507+00:00"
+      "updated_at": "2026-10-05T17:52:17.896224+00:00"
     },
     {
       "id": "project-opportunities",
@@ -2976,7 +2976,7 @@
     "as_of": "2026-10-05",
     "window_start": "2026-09-28",
     "previous_window_start": "2026-09-21",
-    "new_public_records": 703,
+    "new_public_records": 702,
     "movements": [
       {
         "theme_id": "training-self-improvement",
@@ -2998,8 +2998,8 @@
         "theme_id": "coding-agents",
         "name": "Coding agents & developer tooling",
         "recent": 30,
-        "prior": 26,
-        "delta": 4,
+        "prior": 25,
+        "delta": 5,
         "direction": "steady"
       },
       {
@@ -128272,7 +128272,7 @@
       "last_observed_at": "2026-10-05T15:04:34+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:42.552265+00:00",
+      "last_collection_at": "2026-10-05T17:52:17.691790+00:00",
       "last_collection_error": null,
       "collection_run_id": "newsletters"
     },
@@ -128308,7 +128308,7 @@
       "last_observed_at": "2026-10-05T00:00:00+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:37.490889+00:00",
+      "last_collection_at": "2026-10-05T17:52:10.309131+00:00",
       "last_collection_error": null,
       "collection_run_id": "verification"
     },
@@ -128346,7 +128346,7 @@
       "last_observed_at": "2026-10-04T15:29:51.298000+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -128403,7 +128403,7 @@
       "last_observed_at": "2026-10-05T14:41:35.065000+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -128441,7 +128441,7 @@
       "last_observed_at": "2026-10-03T17:36:19.825000+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -128610,7 +128610,7 @@
       "last_observed_at": "2026-10-02T14:27:11.573000+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -128741,7 +128741,7 @@
       "last_observed_at": "2026-09-04T07:00:31-07:00",
       "freshness": "aging",
       "collection_status": "awaiting-first-message",
-      "last_collection_at": "2026-10-05T17:33:42.552265+00:00",
+      "last_collection_at": "2026-10-05T17:52:17.691790+00:00",
       "last_collection_error": null,
       "collection_run_id": "newsletters"
     },
@@ -128760,7 +128760,7 @@
       "last_observed_at": "2026-09-28T22:12:41.183000+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -128779,7 +128779,7 @@
       "last_observed_at": "2026-10-05T13:31:34.247000+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -128836,7 +128836,7 @@
       "last_observed_at": "2026-09-30T00:00:00+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:37.490889+00:00",
+      "last_collection_at": "2026-10-05T17:52:10.309131+00:00",
       "last_collection_error": null,
       "collection_run_id": "verification"
     },
@@ -128891,7 +128891,7 @@
       "last_observed_at": "2026-10-04T12:01:49+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:42.552265+00:00",
+      "last_collection_at": "2026-10-05T17:52:17.691790+00:00",
       "last_collection_error": null,
       "collection_run_id": "newsletters"
     },
@@ -128910,7 +128910,7 @@
       "last_observed_at": "2026-09-21T17:30:34.278000+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -128982,7 +128982,7 @@
       "last_observed_at": "2026-10-02T22:03:33+00:00",
       "freshness": "recent",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:42.552265+00:00",
+      "last_collection_at": "2026-10-05T17:52:17.691790+00:00",
       "last_collection_error": null,
       "collection_run_id": "newsletters"
     },
@@ -129001,7 +129001,7 @@
       "last_observed_at": "2026-07-29T14:25:28.434000+00:00",
       "freshness": "aging",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -129020,7 +129020,7 @@
       "last_observed_at": "2025-10-13T06:12:22.993000+00:00",
       "freshness": "historical",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
@@ -129039,7 +129039,7 @@
       "last_observed_at": "2023-05-27T03:56:08.230000+00:00",
       "freshness": "historical",
       "collection_status": "healthy",
-      "last_collection_at": "2026-10-05T17:33:39.615730+00:00",
+      "last_collection_at": "2026-10-05T17:52:14.357476+00:00",
       "last_collection_error": null,
       "collection_run_id": "bluesky"
     },
