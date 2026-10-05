@@ -1,7 +1,7 @@
 {
-  "collected_at": "2026-10-05T16:42:19.094145+00:00",
+  "collected_at": "2026-10-05T17:33:42.552265+00:00",
   "items": 113,
-  "added": 17,
+  "added": 0,
   "errors": [],
   "collectors": [
     {
@@ -18,6 +18,11 @@
       "source_id": "frontier-signal",
       "status": "healthy",
       "items": 11
+    },
+    {
+      "source_id": "the-batch",
+      "status": "awaiting-first-message",
+      "items": 0
     }
   ]
 }

@@ -1,26 +1,25 @@
 {
   "meta": {
     "schema_version": 1,
-    "generated_at": "2026-10-05T16:42:19.304526+00:00",
+    "generated_at": "2026-10-05T17:33:42.763507+00:00",
     "method": "lexical-anchor-overlap-v1",
-    "input_document_count": 1846,
-    "input_changed_document_count": 843,
+    "input_document_count": 2120,
+    "input_changed_document_count": 655,
     "cluster_count": 500,
     "overbroad_cluster_count": 0,
-    "filtered_anchor_count": 248,
-    "coherent_cluster_count": 167,
-    "quality_eligible_cluster_count": 25,
-    "explained_cluster_count": 111,
-    "unexplained_quality_eligible_count": 6,
-    "active_record_count": 6,
-    "spark_count": 4,
-    "candidate_count": 2,
+    "filtered_anchor_count": 281,
+    "coherent_cluster_count": 164,
+    "quality_eligible_cluster_count": 32,
+    "explained_cluster_count": 126,
+    "unexplained_quality_eligible_count": 5,
+    "active_record_count": 5,
+    "spark_count": 2,
+    "candidate_count": 3,
     "merge_suggestion_count": 25,
     "disposition_counts": {
-      "covered-by-existing-theme": 106,
-      "cross-theme-extension": 1,
-      "merge-existing-direction": 5,
-      "novel": 388
+      "covered-by-existing-theme": 120,
+      "merge-existing-direction": 6,
+      "novel": 374
     },
     "interpretation": "Mechanically generated review leads; zero active records is a valid gated result, not a pipeline failure.",
     "baseline_cycle": false,
@@ -29,45 +28,36 @@
   },
   "records": [
     {
-      "id": "discovery:horizon-task-bbbaaee1cf",
-      "cluster_id": "discovery:horizon-task-bbbaaee1cf",
-      "title": "Long horizon + Horizon task",
+      "id": "discovery:frontier-reasoning-6a8beeb821",
+      "cluster_id": "discovery:frontier-reasoning-6a8beeb821",
+      "title": "Frontier reasoning",
       "state": "candidate",
-      "observed_pattern": "long horizon, horizon task, horizon tasks recur across 6 independent records from 4 sources and 3 source families, alongside coding-agents, skills-integrations, training-self-improvement.",
-      "hypothesis": "The recurring combination of long horizon, horizon task, horizon tasks may represent a distinct engineering direction rather than isolated implementations.",
-      "why_now": "5 retained evidence records are new or materially changed in the current run.",
-      "novelty": "The cluster crosses 3 recurrent existing themes without a matching tracked direction.",
+      "observed_pattern": "frontier reasoning recur across 4 independent records from 3 sources and 3 source families, alongside no recurrent established theme.",
+      "hypothesis": "The recurring combination of frontier reasoning may represent a distinct engineering direction rather than isolated implementations.",
+      "why_now": "3 retained evidence records are new or materially changed in the current run.",
+      "novelty": "No existing theme or tracked direction meets the configured coverage threshold for this cluster.",
       "evidence_ids": [
-        "arxiv:2610.02038v1",
-        "arxiv:2610.02163v1",
-        "bluesky:c2ef00c3e14c:3mwnqqicy5s2b",
-        "hf-paper:2609.23986",
-        "hf-paper:2609.27308",
-        "yc-company:30923"
+        "arxiv:2610.03519v1",
+        "arxiv:2610.03548v1",
+        "hn:49514781",
+        "nvidia-developer-blog:e5dad6d706203fa96af7"
       ],
       "source_ids": [
         "arxiv",
-        "bluesky-mark-riedl",
-        "huggingface-papers",
-        "yc-companies"
+        "hacker-news",
+        "nvidia-developer-blog"
       ],
       "source_family_ids": [
-        "experts",
-        "formation",
+        "attention",
+        "builders",
         "research"
       ],
       "theme_ids": [
-        "coding-agents",
-        "memory-context",
-        "robotics-embodied-ai",
-        "skills-integrations",
-        "small-specialized-models",
+        "open-local-inference",
         "training-self-improvement"
       ],
       "concepts": [
-        "long horizon",
-        "horizon task",
-        "horizon tasks"
+        "frontier reasoning"
       ],
       "alternative_explanations": [
         "The records may share vocabulary because they describe one release cycle or copied framing rather than a durable direction.",
@@ -81,21 +71,21 @@
         "The evidence resolves to one syndicated event, publisher, or product campaign.",
         "No independent reinforcement appears before the Spark becomes dormant."
       ],
-      "first_seen": "2026-09-21T00:00:00+00:00",
-      "last_seen": "2026-10-01T17:54:34Z",
+      "first_seen": "2026-08-31T21:00:09+00:00",
+      "last_seen": "2026-10-02T16:30:15Z",
       "metrics": {
-        "evidence_count": 6,
-        "independent_event_count": 6,
-        "source_count": 4,
+        "evidence_count": 4,
+        "independent_event_count": 4,
+        "source_count": 3,
         "source_family_count": 3,
-        "technical_record_count": 4,
-        "dominant_publisher_share": 0.333
+        "technical_record_count": 3,
+        "dominant_publisher_share": 0.5
       },
       "eligibility": {
         "decision": "eligible",
         "reason_codes": [
           "candidate-gate-met",
-          "cross-theme-extension",
+          "novel",
           "bounded-phrase-anchor",
           "anchor-support-met"
         ],
@@ -107,7 +97,7 @@
         "rationale": "",
         "target_id": ""
       },
-      "proposed_disposition": "cross-theme-extension",
+      "proposed_disposition": "novel",
       "nearest_known": null,
       "materially_changed": true,
       "quality": {
@@ -116,52 +106,12 @@
         "has_structural_anchor": false,
         "phrase_only": true,
         "entity_only": false,
-        "recurrent_theme_count": 3,
+        "recurrent_theme_count": 0,
         "context_coherence_met": true,
         "context_features": [
           {
             "id": "action:reason",
             "document_count": 4
-          },
-          {
-            "id": "action:train",
-            "document_count": 4
-          },
-          {
-            "id": "action:evaluate",
-            "document_count": 2
-          },
-          {
-            "id": "action:generate",
-            "document_count": 2
-          },
-          {
-            "id": "action:retrieve",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:coding-agents",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:skills-integrations",
-            "document_count": 2
-          },
-          {
-            "id": "concept:theme:training-self-improvement",
-            "document_count": 2
-          },
-          {
-            "id": "theme:coding-agents",
-            "document_count": 2
-          },
-          {
-            "id": "theme:skills-integrations",
-            "document_count": 2
-          },
-          {
-            "id": "theme:training-self-improvement",
-            "document_count": 2
           }
         ],
         "context_outlier_count": 0,
@@ -176,7 +126,7 @@
       "state": "candidate",
       "observed_pattern": "model inference recur across 3 independent records from 3 sources and 3 source families, alongside no recurrent established theme.",
       "hypothesis": "The recurring combination of model inference may represent a distinct engineering direction rather than isolated implementations.",
-      "why_now": "1 retained evidence records are new or materially changed in the current run.",
+      "why_now": "2 retained evidence records are new or materially changed in the current run.",
       "novelty": "No existing theme or tracked direction meets the configured coverage threshold for this cluster.",
       "evidence_ids": [
         "bluesky:e810fac7fd93:3mwqswvbz7k2r",
@@ -262,13 +212,108 @@
       }
     },
     {
+      "id": "discovery:satellite-imagery-c95397b957",
+      "cluster_id": "discovery:satellite-imagery-c95397b957",
+      "title": "Satellite imagery",
+      "state": "candidate",
+      "observed_pattern": "satellite imagery recur across 3 independent records from 3 sources and 3 source families, alongside no recurrent established theme.",
+      "hypothesis": "The recurring combination of satellite imagery may represent a distinct engineering direction rather than isolated implementations.",
+      "why_now": "2 retained evidence records are new or materially changed in the current run.",
+      "novelty": "No existing theme or tracked direction meets the configured coverage threshold for this cluster.",
+      "evidence_ids": [
+        "arxiv:2610.03649v1",
+        "github:1375615157",
+        "yc-company:37468"
+      ],
+      "source_ids": [
+        "arxiv",
+        "github",
+        "yc-companies"
+      ],
+      "source_family_ids": [
+        "engineering",
+        "formation",
+        "research"
+      ],
+      "theme_ids": [
+        "coding-agents",
+        "skills-integrations"
+      ],
+      "concepts": [
+        "satellite imagery"
+      ],
+      "alternative_explanations": [
+        "The records may share vocabulary because they describe one release cycle or copied framing rather than a durable direction.",
+        "The apparent connection may disappear when implementation details and counterexamples are reviewed."
+      ],
+      "confirmation_conditions": [
+        "Independent source families repeat the pattern in a later weekly cycle.",
+        "A technical artifact or production account demonstrates the combined pattern rather than naming it only."
+      ],
+      "invalidation_conditions": [
+        "The evidence resolves to one syndicated event, publisher, or product campaign.",
+        "No independent reinforcement appears before the Spark becomes dormant."
+      ],
+      "first_seen": "2026-09-18T08:51:34Z",
+      "last_seen": "2026-10-02T17:32:34Z",
+      "metrics": {
+        "evidence_count": 3,
+        "independent_event_count": 3,
+        "source_count": 3,
+        "source_family_count": 3,
+        "technical_record_count": 2,
+        "dominant_publisher_share": 0.333
+      },
+      "eligibility": {
+        "decision": "eligible",
+        "reason_codes": [
+          "candidate-gate-met",
+          "novel",
+          "bounded-phrase-anchor",
+          "anchor-support-met"
+        ],
+        "novelty_reviewed": false
+      },
+      "review": {
+        "status": "pending",
+        "action": null,
+        "rationale": "",
+        "target_id": ""
+      },
+      "proposed_disposition": "novel",
+      "nearest_known": null,
+      "materially_changed": true,
+      "quality": {
+        "anchor_support_share": 1.0,
+        "anchor_support_met": true,
+        "has_structural_anchor": false,
+        "phrase_only": true,
+        "entity_only": false,
+        "recurrent_theme_count": 0,
+        "context_coherence_met": true,
+        "context_features": [
+          {
+            "id": "action:deploy",
+            "document_count": 2
+          },
+          {
+            "id": "concept:theme:multimodal-3d",
+            "document_count": 2
+          }
+        ],
+        "context_outlier_count": 0,
+        "spark_quality_met": true,
+        "candidate_quality_met": true
+      }
+    },
+    {
       "id": "discovery:parameter-model-53a93abb75",
       "cluster_id": "discovery:parameter-model-53a93abb75",
       "title": "Parameter model",
       "state": "spark",
       "observed_pattern": "parameter model recur across 3 independent records from 3 sources and 2 source families, alongside no recurrent established theme.",
       "hypothesis": "The recurring combination of parameter model may represent a distinct engineering direction rather than isolated implementations.",
-      "why_now": "3 retained evidence records are new or materially changed in the current run.",
+      "why_now": "2 retained evidence records are new or materially changed in the current run.",
       "novelty": "No existing theme or tracked direction meets the configured coverage threshold for this cluster.",
       "evidence_ids": [
         "arxiv:2610.02142v1",
@@ -357,192 +402,13 @@
       }
     },
     {
-      "id": "discovery:reasoning-effort-ad0a39e836",
-      "cluster_id": "discovery:reasoning-effort-ad0a39e836",
-      "title": "Reasoning effort",
-      "state": "spark",
-      "observed_pattern": "reasoning effort recur across 3 independent records from 3 sources and 2 source families, alongside no recurrent established theme.",
-      "hypothesis": "The recurring combination of reasoning effort may represent a distinct engineering direction rather than isolated implementations.",
-      "why_now": "2 retained evidence records are new or materially changed in the current run.",
-      "novelty": "No existing theme or tracked direction meets the configured coverage threshold for this cluster.",
-      "evidence_ids": [
-        "aws-machine-learning-blog:16b9772b96509775d2ea",
-        "openai-news:c38af6e5cae43e23a64c",
-        "simon-willison:28569c3c31a0d771f817"
-      ],
-      "source_ids": [
-        "aws-machine-learning-blog",
-        "openai-news",
-        "simon-willison"
-      ],
-      "source_family_ids": [
-        "builders",
-        "experts"
-      ],
-      "theme_ids": [
-        "agent-harnesses",
-        "memory-context"
-      ],
-      "concepts": [
-        "reasoning effort"
-      ],
-      "alternative_explanations": [
-        "The records may share vocabulary because they describe one release cycle or copied framing rather than a durable direction.",
-        "The apparent connection may disappear when implementation details and counterexamples are reviewed."
-      ],
-      "confirmation_conditions": [
-        "Independent source families repeat the pattern in a later weekly cycle.",
-        "A technical artifact or production account demonstrates the combined pattern rather than naming it only."
-      ],
-      "invalidation_conditions": [
-        "The evidence resolves to one syndicated event, publisher, or product campaign.",
-        "No independent reinforcement appears before the Spark becomes dormant."
-      ],
-      "first_seen": "2026-09-11T22:49:18+00:00",
-      "last_seen": "2026-10-02T16:15:00+00:00",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 3,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.333
-      },
-      "eligibility": {
-        "decision": "eligible",
-        "reason_codes": [
-          "spark-gate-met",
-          "novel",
-          "bounded-phrase-anchor",
-          "anchor-support-met"
-        ],
-        "novelty_reviewed": false
-      },
-      "review": {
-        "status": "pending",
-        "action": null,
-        "rationale": "",
-        "target_id": ""
-      },
-      "proposed_disposition": "novel",
-      "nearest_known": null,
-      "materially_changed": true,
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:reason",
-            "document_count": 3
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": true,
-        "candidate_quality_met": false
-      }
-    },
-    {
-      "id": "discovery:web-search-b5495ab38c",
-      "cluster_id": "discovery:web-search-b5495ab38c",
-      "title": "Web search",
-      "state": "spark",
-      "observed_pattern": "web search recur across 3 independent records from 3 sources and 2 source families, alongside no recurrent established theme.",
-      "hypothesis": "The recurring combination of web search may represent a distinct engineering direction rather than isolated implementations.",
-      "why_now": "3 retained evidence records are new or materially changed in the current run.",
-      "novelty": "No existing theme or tracked direction meets the configured coverage threshold for this cluster.",
-      "evidence_ids": [
-        "aws-machine-learning-blog:ab558d6fe592362c8329",
-        "cloudflare-ai-blog:4d102151baabe918ede9",
-        "yc-company:32618"
-      ],
-      "source_ids": [
-        "aws-machine-learning-blog",
-        "cloudflare-ai-blog",
-        "yc-companies"
-      ],
-      "source_family_ids": [
-        "builders",
-        "formation"
-      ],
-      "theme_ids": [
-        "skills-integrations"
-      ],
-      "concepts": [
-        "web search"
-      ],
-      "alternative_explanations": [
-        "The records may share vocabulary because they describe one release cycle or copied framing rather than a durable direction.",
-        "The apparent connection may disappear when implementation details and counterexamples are reviewed."
-      ],
-      "confirmation_conditions": [
-        "Independent source families repeat the pattern in a later weekly cycle.",
-        "A technical artifact or production account demonstrates the combined pattern rather than naming it only."
-      ],
-      "invalidation_conditions": [
-        "The evidence resolves to one syndicated event, publisher, or product campaign.",
-        "No independent reinforcement appears before the Spark becomes dormant."
-      ],
-      "first_seen": "2026-09-22",
-      "last_seen": "2026-10-02T15:46:05+00:00",
-      "metrics": {
-        "evidence_count": 3,
-        "independent_event_count": 3,
-        "source_count": 3,
-        "source_family_count": 2,
-        "technical_record_count": 2,
-        "dominant_publisher_share": 0.333
-      },
-      "eligibility": {
-        "decision": "eligible",
-        "reason_codes": [
-          "spark-gate-met",
-          "novel",
-          "bounded-phrase-anchor",
-          "anchor-support-met"
-        ],
-        "novelty_reviewed": false
-      },
-      "review": {
-        "status": "pending",
-        "action": null,
-        "rationale": "",
-        "target_id": ""
-      },
-      "proposed_disposition": "novel",
-      "nearest_known": null,
-      "materially_changed": true,
-      "quality": {
-        "anchor_support_share": 1.0,
-        "anchor_support_met": true,
-        "has_structural_anchor": false,
-        "phrase_only": true,
-        "entity_only": false,
-        "recurrent_theme_count": 0,
-        "context_coherence_met": true,
-        "context_features": [
-          {
-            "id": "action:retrieve",
-            "document_count": 3
-          }
-        ],
-        "context_outlier_count": 0,
-        "spark_quality_met": true,
-        "candidate_quality_met": false
-      }
-    },
-    {
       "id": "discovery:agent-control-loop-f09a926fa3",
       "cluster_id": "discovery:agent-control-loop-f09a926fa3",
       "title": "Agent control loop",
       "state": "spark",
       "observed_pattern": "Agent control loop recur across 2 independent records from 2 sources and 2 source families, alongside no recurrent established theme.",
       "hypothesis": "The recurring combination of Agent control loop may represent a distinct engineering direction rather than isolated implementations.",
-      "why_now": "2 retained evidence records are new or materially changed in the current run.",
+      "why_now": "1 retained evidence records are new or materially changed in the current run.",
       "novelty": "No existing theme or tracked direction meets the configured coverage threshold for this cluster.",
       "evidence_ids": [
         "arxiv:2609.20804v1",
@@ -658,6 +524,39 @@
       ],
       "source_count": 4,
       "source_family_count": 4,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:horizon-task-bbbaaee1cf",
+      "disposition": "merge-existing-direction",
+      "nearest_known": {
+        "kind": "early-signal-direction",
+        "id": "simulation-first-physical-ai",
+        "title": "Simulation is becoming the development environment for physical AI",
+        "theme_recall": 0.667,
+        "matched_theme_ids": [
+          "multimodal-3d",
+          "robotics-embodied-ai"
+        ],
+        "matched_anchor_ids": [],
+        "matched_anchor_phrases": [],
+        "basis": "recurrent-theme-recall"
+      },
+      "anchor_labels": [
+        "long horizon",
+        "horizon task",
+        "horizon tasks"
+      ],
+      "evidence_ids": [
+        "arxiv:2610.02038v1",
+        "arxiv:2610.03476v1",
+        "bluesky:c2ef00c3e14c:3mwnqqicy5s2b",
+        "hf-paper:2609.27308",
+        "hf-paper:2610.02298",
+        "yc-company:30923"
+      ],
+      "source_count": 4,
+      "source_family_count": 3,
       "materially_changed": true
     },
     {
@@ -804,36 +703,6 @@
       "materially_changed": true
     },
     {
-      "cluster_id": "discovery:long-term-0ee888073b",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "memory-context",
-        "title": "Memory & context engineering",
-        "matched_anchor_phrases": [
-          "long term",
-          "term memory"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 0.6
-      },
-      "anchor_labels": [
-        "long term",
-        "term memory",
-        "memory long"
-      ],
-      "evidence_ids": [
-        "arxiv:2609.21940v1",
-        "arxiv:2610.02002v1",
-        "github:1354059245",
-        "github:1376838660",
-        "hn:49783671"
-      ],
-      "source_count": 3,
-      "source_family_count": 3,
-      "materially_changed": true
-    },
-    {
       "cluster_id": "discovery:deployed-engineer-b5a37ba8ec",
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
@@ -856,7 +725,7 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
       "cluster_id": "discovery:human-intervention-8072703836",
@@ -874,9 +743,37 @@
       ],
       "evidence_ids": [
         "arxiv:2610.02023v1",
-        "arxiv:2610.02206v1",
+        "arxiv:2610.03639v1",
         "aws-machine-learning-blog:5e23b1de5908da98dc70",
         "bluesky:6cf953cc69a4:3mw2il75vy22y"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:long-term-42422348f3",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "memory-context",
+        "title": "Memory & context engineering",
+        "matched_anchor_phrases": [
+          "long term",
+          "term memory"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.5
+      },
+      "anchor_labels": [
+        "long term",
+        "term memory"
+      ],
+      "evidence_ids": [
+        "arxiv:2610.02002v1",
+        "github:1354059245",
+        "github:1376838660",
+        "hn:49783671"
       ],
       "source_count": 3,
       "source_family_count": 3,
@@ -898,7 +795,7 @@
       ],
       "evidence_ids": [
         "arxiv:2609.20812v1",
-        "arxiv:2610.02001v1",
+        "arxiv:2610.03639v1",
         "aws-machine-learning-blog:abc4f7e609e383bd6c09",
         "bluesky:c2ef00c3e14c:3mx53w66tw222"
       ],
@@ -925,6 +822,29 @@
         "arxiv:2609.21676v1",
         "github:1369187725",
         "hn:49786485"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:agents-coding-agents-6896a4f3e9",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "coding-agents",
+        "title": "Coding agents & developer tooling",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "agents coding agents"
+      ],
+      "evidence_ids": [
+        "arxiv:2610.02163v1",
+        "github:1354991682",
+        "simon-willison:345f1755705d282a19e9"
       ],
       "source_count": 3,
       "source_family_count": 3,
@@ -973,6 +893,29 @@
         "arxiv:2609.21849v1",
         "nvidia-developer-blog:837464fefd470eaa54f6",
         "yc-company:34597"
+      ],
+      "source_count": 3,
+      "source_family_count": 3,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:shared-memory-cfe9d18d19",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "coding-agents",
+        "title": "Coding agents & developer tooling",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "shared memory"
+      ],
+      "evidence_ids": [
+        "arxiv:2610.03571v1",
+        "github:1376838660",
+        "yc-company:32201"
       ],
       "source_count": 3,
       "source_family_count": 3,
@@ -1045,51 +988,54 @@
       ],
       "source_count": 3,
       "source_family_count": 3,
-      "materially_changed": true
+      "materially_changed": false
     },
     {
-      "cluster_id": "discovery:experts-moe-71e61b30c7",
+      "cluster_id": "discovery:self-improvement-e0fd211529",
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
-        "id": "open-local-inference",
-        "title": "Open, local & efficient inference",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
+        "id": "training-self-improvement",
+        "title": "Training, evaluation & self-improvement",
+        "matched_anchor_phrases": [
+          "self improvement"
+        ],
+        "basis": "anchor-phrase",
+        "document_share": 0.5
       },
       "anchor_labels": [
-        "experts moe"
+        "self improvement",
+        "without updating model"
       ],
       "evidence_ids": [
-        "arxiv:2609.21672v1",
-        "aws-machine-learning-blog:1c1105e33f0f4d325d80",
-        "hf-paper:2609.18063",
-        "nvidia-developer-blog:7a123450627a2d3d1e65"
+        "arxiv:2610.03476v1",
+        "arxiv:2610.03548v1",
+        "bluesky:c2ef00c3e14c:3mwtj437fls2j",
+        "hf-paper:2609.15364"
       ],
-      "source_count": 4,
+      "source_count": 3,
       "source_family_count": 2,
       "materially_changed": true
     },
     {
-      "cluster_id": "discovery:source-code-5cf31d25b5",
+      "cluster_id": "discovery:vision-language-beb6ddf490",
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
         "kind": "theme",
-        "id": "operational-ontology",
-        "title": "Operational ontology",
-        "document_share": 0.5,
+        "id": "multimodal-3d",
+        "title": "Multimodal generation & 3D",
+        "document_share": 0.75,
         "matched_anchor_phrases": [],
         "basis": "document-share"
       },
       "anchor_labels": [
-        "source code"
+        "vision language"
       ],
       "evidence_ids": [
-        "arxiv:2609.21667v1",
-        "arxiv:2609.21683v1",
-        "hf-paper:2609.05571",
-        "hn:49927295"
+        "arxiv:2610.03445v1",
+        "arxiv:2610.03476v1",
+        "aws-machine-learning-blog:cebde03a9c49b95a1d42",
+        "hf-paper:2609.38426"
       ],
       "source_count": 3,
       "source_family_count": 2,
@@ -1119,6 +1065,52 @@
       "materially_changed": true
     },
     {
+      "cluster_id": "discovery:consumer-hardware-357f486fc0",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "frontier-inference-infrastructure",
+        "title": "Frontier inference infrastructure",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "consumer hardware"
+      ],
+      "evidence_ids": [
+        "arxiv:2609.21704v1",
+        "github:1385946301",
+        "hf-paper:2609.18063"
+      ],
+      "source_count": 3,
+      "source_family_count": 2,
+      "materially_changed": true
+    },
+    {
+      "cluster_id": "discovery:experts-moe-71e61b30c7",
+      "disposition": "covered-by-existing-theme",
+      "nearest_known": {
+        "kind": "theme",
+        "id": "open-local-inference",
+        "title": "Open, local & efficient inference",
+        "document_share": 1.0,
+        "matched_anchor_phrases": [],
+        "basis": "document-share"
+      },
+      "anchor_labels": [
+        "experts moe"
+      ],
+      "evidence_ids": [
+        "aws-machine-learning-blog:1c1105e33f0f4d325d80",
+        "hf-paper:2609.18063",
+        "nvidia-developer-blog:7a123450627a2d3d1e65"
+      ],
+      "source_count": 3,
+      "source_family_count": 2,
+      "materially_changed": false
+    },
+    {
       "cluster_id": "discovery:frontier-models-b1d6c7495c",
       "disposition": "covered-by-existing-theme",
       "nearest_known": {
@@ -1138,133 +1130,6 @@
         "openai-news:60efaf744a4d6c2c20e9"
       ],
       "source_count": 3,
-      "source_family_count": 2,
-      "materially_changed": true
-    },
-    {
-      "cluster_id": "discovery:mcp-tools-a50b66fc77",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "skills-integrations",
-        "title": "Skills, protocols & integrations",
-        "matched_anchor_phrases": [
-          "mcp tools"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 1.0
-      },
-      "anchor_labels": [
-        "mcp tools"
-      ],
-      "evidence_ids": [
-        "aws-machine-learning-blog:8fa3089824df1f197189",
-        "cloudflare-ai-blog:5b5c9b01f3d3a374444a",
-        "hn:49924943"
-      ],
-      "source_count": 3,
-      "source_family_count": 2,
-      "materially_changed": true
-    },
-    {
-      "cluster_id": "discovery:self-improvement-e0fd211529",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "matched_anchor_phrases": [
-          "self improvement"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 0.333
-      },
-      "anchor_labels": [
-        "self improvement",
-        "without updating model"
-      ],
-      "evidence_ids": [
-        "arxiv:2610.02204v1",
-        "bluesky:c2ef00c3e14c:3mwtj437fls2j",
-        "hf-paper:2609.15364"
-      ],
-      "source_count": 3,
-      "source_family_count": 2,
-      "materially_changed": true
-    },
-    {
-      "cluster_id": "discovery:robotics-50d12628fd",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "robotics-embodied-ai",
-        "title": "Robotics & embodied AI",
-        "document_share": 1.0,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "robotics"
-      ],
-      "evidence_ids": [
-        "github:1378287407",
-        "github:1398174806",
-        "yc-company:33279",
-        "yc-company:38492"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": true
-    },
-    {
-      "cluster_id": "discovery:satellite-imagery-94c2007468",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "multimodal-3d",
-        "title": "Multimodal generation & 3D",
-        "matched_anchor_phrases": [
-          "computer vision"
-        ],
-        "basis": "anchor-phrase",
-        "document_share": 0.25
-      },
-      "anchor_labels": [
-        "computer-vision",
-        "satellite imagery"
-      ],
-      "evidence_ids": [
-        "github:1382454774",
-        "github:1398174806",
-        "yc-company:32206",
-        "yc-company:37468"
-      ],
-      "source_count": 2,
-      "source_family_count": 2,
-      "materially_changed": true
-    },
-    {
-      "cluster_id": "discovery:theme-training-self-improvement-train-tech-129c004e19",
-      "disposition": "covered-by-existing-theme",
-      "nearest_known": {
-        "kind": "theme",
-        "id": "training-self-improvement",
-        "title": "Training, evaluation & self-improvement",
-        "document_share": 0.75,
-        "matched_anchor_phrases": [],
-        "basis": "document-share"
-      },
-      "anchor_labels": [
-        "deep-learning",
-        "theme:training-self-improvement train technology:deep-learning"
-      ],
-      "evidence_ids": [
-        "github:1390178310",
-        "github:1398174806",
-        "yc-company:32261",
-        "yc-company:34794"
-      ],
-      "source_count": 2,
       "source_family_count": 2,
       "materially_changed": true
     }
