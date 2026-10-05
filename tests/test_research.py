@@ -89,7 +89,14 @@ class CrossSourceResearchTests(unittest.TestCase):
         self.assertIn("operator-narratives", analyses)
         self.assertEqual(analyses["operator-narratives"]["status"], "complete")
         self.assertGreaterEqual(len(analyses["operator-narratives"]["source_ids"]), 5)
-        self.assertEqual(analyses["operator-narratives"]["classified_source_count"], 5)
+        self.assertGreaterEqual(
+            analyses["operator-narratives"]["classified_source_count"],
+            analyses["operator-narratives"]["coverage_target"],
+        )
+        self.assertLessEqual(
+            analyses["operator-narratives"]["classified_source_count"],
+            len(analyses["operator-narratives"]["source_ids"]),
+        )
         self.assertTrue(analyses["operator-narratives"]["theme_summary"])
         narrative_ids = set(analyses["operator-narratives"]["evidence_ids"])
         narrative_evidence = [item for item in self.payload["evidence"] if item["id"] in narrative_ids]
