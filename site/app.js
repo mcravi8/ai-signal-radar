@@ -102,6 +102,7 @@ function collectionStatusLabel(source) {
   const status = source.collection_status || "no-run-receipt";
   if (status === "healthy") return `Collection healthy · ${formatDate(source.last_collection_at)}`;
   if (status === "failed") return `Collection failed · ${formatDate(source.last_collection_at)}`;
+  if (status === "awaiting-first-message") return "Subscribed · awaiting first matching issue";
   if (status === "not-automated") return "Manual source · no automated collector";
   return "Collection status not yet recorded";
 }

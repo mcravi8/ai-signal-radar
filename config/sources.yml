@@ -223,7 +223,9 @@ sources:
     logo_url: https://importai.substack.com/favicon.ico
     enabled: true
     collection: rss
-    feed_url: https://importai.substack.com/feed
+    # Jack Clark's first-party archive mirrors the current Substack issues and
+    # remains reachable from GitHub-hosted runners.
+    feed_url: https://jack-clark.net/feed/
     fallback_sitemap_url: https://importai.substack.com/sitemap.xml
     fallback_html_url: https://importai.substack.com/
     fallback_include_prefixes:
@@ -242,14 +244,7 @@ sources:
     homepage_url: https://www.deeplearning.ai/the-batch
     logo_url: https://www.deeplearning.ai/favicon.ico
     enabled: true
-    collection: sitemap
-    sitemap_url: https://www.deeplearning.ai/sitemap.xml
-    fallback_html_url: https://www.deeplearning.ai/the-batch
-    include_prefixes:
-      - https://www.deeplearning.ai/the-batch/
-    include_patterns:
-      - ^https://www\.deeplearning\.ai/the-batch/issue-\d+/?$
-    limit: 30
+    collection: agentmail-sanitized
     publisher_id: deeplearning-ai
     evidence_role: curated-roundup
     source_quality: high

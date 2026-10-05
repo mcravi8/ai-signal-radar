@@ -281,7 +281,11 @@ def collect_newsletters() -> None:
         "added": added,
         "errors": [],
         "collectors": [
-            {"source_id": definition.source_id, "status": "healthy", "items": counts[definition.source_id]}
+            {
+                "source_id": definition.source_id,
+                "status": "healthy" if counts[definition.source_id] else "awaiting-first-message",
+                "items": counts[definition.source_id],
+            }
             for definition in definitions
         ],
     }, indent=2) + "\n", encoding="utf-8")

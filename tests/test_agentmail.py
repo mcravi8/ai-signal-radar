@@ -9,6 +9,7 @@ from pipeline.collectors.agentmail import (
     collect,
     parse_alphasignal,
     parse_issue,
+    load_definitions,
     read_after,
     write_after,
 )
@@ -91,6 +92,12 @@ class ExactAddressClient:
 
 
 class AgentMailCollectorTests(unittest.TestCase):
+    def test_project_newsletter_config_includes_the_batch(self):
+        definitions = load_definitions(Path("config/newsletters.yml"))
+        the_batch = next(item for item in definitions if item.source_id == "the-batch")
+        self.assertEqual(the_batch.sender_domains, ("deeplearning.ai",))
+        self.assertEqual(the_batch.source_type, "curated-newsletter")
+
     def test_alphasignal_cleanup_rejects_spaced_noise_and_collapses_suffix_duplicates(self):
         rows = [
             {

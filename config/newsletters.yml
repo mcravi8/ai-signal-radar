@@ -21,3 +21,11 @@ newsletters:
     homepage_url: https://frontier.m1c.vc/
     parser: issue
     enabled: true
+
+  - source_id: the-batch
+    source_type: curated-newsletter
+    sender_domains:
+      - deeplearning.ai
+    homepage_url: https://www.deeplearning.ai/the-batch
+    parser: issue
+    enabled: true
