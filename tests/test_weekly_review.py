@@ -134,6 +134,7 @@ class WeeklyReviewTests(unittest.TestCase):
                 "theme:skills-integrations",
                 "early:modular-agent-stack",
                 "early:enterprise-data-boundary",
+                "early:validation-as-release",
                 "theme:voice-audio",
                 "theme:open-local-inference",
                 "theme:multimodal-3d",
@@ -145,7 +146,10 @@ class WeeklyReviewTests(unittest.TestCase):
                 "theme:proprietary-data-boundary",
             },
         )
-        self.assertEqual(adjudications["theme:robotics-embodied-ai"]["outcome"], "conditional-requirement-added")
+        self.assertEqual(
+            adjudications["theme:robotics-embodied-ai"]["outcome"],
+            "conditional-requirement-revalidated",
+        )
         self.assertEqual(
             adjudications["early:enterprise-data-boundary"]["outcome"],
             "conditional-requirement-added",

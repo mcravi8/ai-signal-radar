@@ -93,7 +93,7 @@ python -m pipeline.cli synthesize
 
 The Operating Model workspace renders the public `data/public/operating-model.json` registry. Each requirement explains the concept, what it looks like in a startup, where it applies, its recommended posture, evidence dimensions, promotion blockers, verification gaps, and the disposition of every linked record.
 
-Seven adjudicated cases in `config/evidence-policy-calibration.yml` test the rules against real Radar evidence. Run the calibration with:
+Eight adjudicated cases in `config/evidence-policy-calibration.yml` test the rules against real Radar evidence. Run the calibration with:
 
 ```bash
 python -m pipeline.cli calibrate-evidence
