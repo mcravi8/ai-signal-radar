@@ -75,6 +75,38 @@ class RssCollectorTests(unittest.TestCase):
             [r"^https://example\.com/p/issue-\d+$"],
         )
 
+    @patch("pipeline.collectors.html_index.collect")
+    @patch("pipeline.collectors.sitemap.collect")
+    @patch("pipeline.collectors.rss._fetch")
+    def test_uses_official_html_when_feed_and_sitemap_are_unavailable(
+        self, fetch, collect_sitemap, collect_html
+    ):
+        fetch.side_effect = urllib.error.HTTPError("https://example.com/feed", 403, "Forbidden", {}, None)
+        collect_sitemap.side_effect = urllib.error.HTTPError(
+            "https://example.com/sitemap.xml", 403, "Forbidden", {}, None
+        )
+        fallback = SourceItem(
+            id="newsletter:html",
+            source_id="newsletter",
+            source_type="expert-newsletter",
+            title="HTML fallback issue",
+            url="https://example.com/p/issue-2",
+            published_at="2026-10-05",
+        )
+        collect_html.return_value = [fallback]
+
+        items = collect(
+            "newsletter",
+            "expert-newsletter",
+            "https://example.com/feed",
+            fallback_sitemap_url="https://example.com/sitemap.xml",
+            fallback_include_prefixes=["https://example.com/p/"],
+            fallback_include_patterns=[r"^https://example\.com/p/issue-\d+$"],
+            fallback_html_url="https://example.com/",
+        )
+
+        self.assertEqual(items, [fallback])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -102,24 +102,43 @@ def collect(
     fallback_sitemap_url: str = "",
     fallback_include_prefixes: list[str] | None = None,
     fallback_include_patterns: list[str] | None = None,
+    fallback_html_url: str = "",
 ) -> list[SourceItem]:
     try:
         return parse(source_id, source_type, _fetch(feed_url), limit)
     except Exception as feed_error:
-        if not fallback_sitemap_url:
+        if not fallback_sitemap_url and not fallback_html_url:
             raise
-        from . import sitemap
+        from . import html_index, sitemap
 
-        try:
-            return sitemap.collect(
-                source_id,
-                source_type,
-                fallback_sitemap_url,
-                fallback_include_prefixes or [],
-                limit,
-                fallback_include_patterns or [],
-            )
-        except Exception as fallback_error:
-            raise RuntimeError(
-                f"RSS collection failed ({feed_error}); official sitemap fallback failed ({fallback_error})"
-            ) from fallback_error
+        sitemap_error: Exception | None = None
+        if fallback_sitemap_url:
+            try:
+                return sitemap.collect(
+                    source_id,
+                    source_type,
+                    fallback_sitemap_url,
+                    fallback_include_prefixes or [],
+                    limit,
+                    fallback_include_patterns or [],
+                )
+            except Exception as exc:
+                sitemap_error = exc
+        if fallback_html_url:
+            try:
+                return html_index.collect(
+                    source_id,
+                    source_type,
+                    fallback_html_url,
+                    fallback_include_prefixes or [],
+                    limit,
+                    fallback_include_patterns or [],
+                )
+            except Exception as html_error:
+                raise RuntimeError(
+                    f"RSS collection failed ({feed_error}); official sitemap fallback failed "
+                    f"({sitemap_error}); official HTML fallback failed ({html_error})"
+                ) from html_error
+        raise RuntimeError(
+            f"RSS collection failed ({feed_error}); official sitemap fallback failed ({sitemap_error})"
+        ) from sitemap_error

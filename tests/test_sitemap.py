@@ -64,6 +64,29 @@ class SitemapCollectorTests(unittest.TestCase):
         )
         self.assertEqual([item.url for item in items], ["https://example.com/news/issue-42"])
 
+    @patch("pipeline.collectors.html_index.collect")
+    @patch("pipeline.collectors.sitemap._fetch")
+    def test_uses_official_html_when_sitemap_is_unavailable(self, fetch, collect_html):
+        fetch.side_effect = urllib.error.HTTPError(
+            "https://example.com/sitemap.xml", 403, "Forbidden", {}, None
+        )
+        collect_html.return_value = []
+        collect(
+            "newsletter",
+            "curated-newsletter",
+            "https://example.com/sitemap.xml",
+            ["https://example.com/news/"],
+            fallback_html_url="https://example.com/news",
+        )
+        collect_html.assert_called_once_with(
+            "newsletter",
+            "curated-newsletter",
+            "https://example.com/news",
+            ["https://example.com/news/"],
+            30,
+            [],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

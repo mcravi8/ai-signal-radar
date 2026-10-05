@@ -98,6 +98,7 @@ def collect() -> None:
                     source.get("fallback_sitemap_url", ""),
                     source.get("fallback_include_prefixes", []),
                     source.get("fallback_include_patterns", []),
+                    source.get("fallback_html_url", ""),
                 ),
             )
         elif source.get("collection") == "sitemap":
@@ -110,6 +111,7 @@ def collect() -> None:
                     source.get("include_prefixes", []),
                     source.get("limit", 30),
                     source.get("include_patterns", []),
+                    source.get("fallback_html_url", ""),
                 ),
             )
         elif source.get("collection") == "yc-directory":

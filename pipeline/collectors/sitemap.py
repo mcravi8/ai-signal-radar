@@ -93,8 +93,28 @@ def collect(
     include_prefixes: list[str],
     limit: int = 30,
     include_patterns: list[str] | None = None,
+    fallback_html_url: str = "",
 ) -> list[SourceItem]:
-    records, child_sitemaps = parse(_fetch(sitemap_url))
+    try:
+        records, child_sitemaps = parse(_fetch(sitemap_url))
+    except Exception as sitemap_error:
+        if not fallback_html_url:
+            raise
+        from . import html_index
+
+        try:
+            return html_index.collect(
+                source_id,
+                source_type,
+                fallback_html_url,
+                include_prefixes,
+                limit,
+                include_patterns or [],
+            )
+        except Exception as html_error:
+            raise RuntimeError(
+                f"Sitemap collection failed ({sitemap_error}); official HTML fallback failed ({html_error})"
+            ) from html_error
     for child_url in child_sitemaps:
         child_records, _ = parse(_fetch(child_url))
         records.extend(child_records)
