@@ -1,7 +1,8 @@
 import unittest
-from unittest.mock import patch
+import urllib.error
+from unittest.mock import MagicMock, patch
 
-from pipeline.collectors.sitemap import collect, page_metadata, parse
+from pipeline.collectors.sitemap import _fetch, collect, page_metadata, parse
 
 
 SITEMAP = b"""<?xml version="1.0" encoding="UTF-8"?>
@@ -20,6 +21,24 @@ class SitemapCollectorTests(unittest.TestCase):
         records, children = parse(SITEMAP)
         self.assertEqual(children, [])
         self.assertEqual(records, [("https://example.com/research/agent-evals", "2026-09-20T12:00:00Z")])
+
+    def test_accepts_whitespace_before_xml_declaration(self):
+        records, children = parse(b" \n\t" + SITEMAP)
+        self.assertEqual(children, [])
+        self.assertEqual(records, [("https://example.com/research/agent-evals", "2026-09-20T12:00:00Z")])
+
+    @patch("pipeline.collectors.sitemap.urllib.request.urlopen")
+    def test_retries_forbidden_sitemap_with_browser_compatible_request(self, urlopen):
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = SITEMAP
+        urlopen.side_effect = [
+            urllib.error.HTTPError("https://example.com/sitemap.xml", 403, "Forbidden", {}, None),
+            response,
+        ]
+
+        self.assertEqual(_fetch("https://example.com/sitemap.xml"), SITEMAP)
+        retry_request = urlopen.call_args_list[1].args[0]
+        self.assertIn("Mozilla/5.0", retry_request.get_header("User-agent"))
 
     def test_extracts_public_page_metadata(self):
         title, description = page_metadata(PAGE)

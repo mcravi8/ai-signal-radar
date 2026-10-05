@@ -4,6 +4,7 @@ import hashlib
 import html
 import re
 import urllib.parse
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -13,6 +14,8 @@ from pipeline.normalize import compact_text
 
 
 SITEMAP = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+COLLECTOR_USER_AGENT = "ai-signal-radar/0.1 (public research dashboard; https://github.com/mcravi8/ai-signal-radar)"
+BROWSER_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
 
 class _PageMetadataParser(HTMLParser):
@@ -45,19 +48,25 @@ class _PageMetadataParser(HTMLParser):
 
 
 def _fetch(url: str) -> bytes:
-    request = urllib.request.Request(
-        url,
-        headers={
-            "Accept": "application/xml, text/xml, text/html;q=0.9, */*;q=0.8",
-            "User-Agent": "ai-signal-radar/0.1 (public research dashboard; https://github.com/mcravi8/ai-signal-radar)",
-        },
-    )
-    with urllib.request.urlopen(request, timeout=30) as response:
+    headers = {
+        "Accept": "application/xml, text/xml, text/html;q=0.9, */*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.8",
+        "User-Agent": COLLECTOR_USER_AGENT,
+    }
+    request = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return response.read()
+    except urllib.error.HTTPError as exc:
+        if exc.code != 403:
+            raise
+    retry = urllib.request.Request(url, headers={**headers, "User-Agent": BROWSER_USER_AGENT})
+    with urllib.request.urlopen(retry, timeout=30) as response:
         return response.read()
 
 
 def parse(payload: bytes) -> tuple[list[tuple[str, str]], list[str]]:
-    root = ET.fromstring(payload)
+    root = ET.fromstring(payload.lstrip(b"\xef\xbb\xbf \t\r\n"))
     urls = [
         (compact_text(node.findtext(f"{SITEMAP}loc", "")), compact_text(node.findtext(f"{SITEMAP}lastmod", "")))
         for node in root.findall(f"{SITEMAP}url")

@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import html
 import re
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
@@ -13,6 +14,8 @@ from pipeline.normalize import compact_text
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 DC = "{http://purl.org/dc/elements/1.1/}"
+COLLECTOR_USER_AGENT = "ai-signal-radar/0.1 (public research dashboard; https://github.com/mcravi8/ai-signal-radar)"
+BROWSER_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
 
 def _plain_text(value: str) -> str:
@@ -31,7 +34,7 @@ def _date(value: str) -> str:
 
 
 def parse(source_id: str, source_type: str, payload: bytes, limit: int = 30) -> list[SourceItem]:
-    root = ET.fromstring(payload)
+    root = ET.fromstring(payload.lstrip(b"\xef\xbb\xbf \t\r\n"))
     records = root.findall("./channel/item")
     atom = False
     if not records:
@@ -73,13 +76,50 @@ def parse(source_id: str, source_type: str, payload: bytes, limit: int = 30) -> 
     return items
 
 
-def collect(source_id: str, source_type: str, feed_url: str, limit: int = 30) -> list[SourceItem]:
-    request = urllib.request.Request(
-        feed_url,
-        headers={
-            "Accept": "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8",
-            "User-Agent": "ai-signal-radar/0.1 (public research dashboard; https://github.com/mcravi8/ai-signal-radar)",
-        },
-    )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return parse(source_id, source_type, response.read(), limit)
+def _fetch(feed_url: str) -> bytes:
+    headers = {
+        "Accept": "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.8",
+        "User-Agent": COLLECTOR_USER_AGENT,
+    }
+    request = urllib.request.Request(feed_url, headers=headers)
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return response.read()
+    except urllib.error.HTTPError as exc:
+        if exc.code != 403:
+            raise
+    retry = urllib.request.Request(feed_url, headers={**headers, "User-Agent": BROWSER_USER_AGENT})
+    with urllib.request.urlopen(retry, timeout=30) as response:
+        return response.read()
+
+
+def collect(
+    source_id: str,
+    source_type: str,
+    feed_url: str,
+    limit: int = 30,
+    fallback_sitemap_url: str = "",
+    fallback_include_prefixes: list[str] | None = None,
+    fallback_include_patterns: list[str] | None = None,
+) -> list[SourceItem]:
+    try:
+        return parse(source_id, source_type, _fetch(feed_url), limit)
+    except Exception as feed_error:
+        if not fallback_sitemap_url:
+            raise
+        from . import sitemap
+
+        try:
+            return sitemap.collect(
+                source_id,
+                source_type,
+                fallback_sitemap_url,
+                fallback_include_prefixes or [],
+                limit,
+                fallback_include_patterns or [],
+            )
+        except Exception as fallback_error:
+            raise RuntimeError(
+                f"RSS collection failed ({feed_error}); official sitemap fallback failed ({fallback_error})"
+            ) from fallback_error

@@ -224,6 +224,11 @@ sources:
     enabled: true
     collection: rss
     feed_url: https://importai.substack.com/feed
+    fallback_sitemap_url: https://importai.substack.com/sitemap.xml
+    fallback_include_prefixes:
+      - https://importai.substack.com/p/
+    fallback_include_patterns:
+      - ^https://importai\.substack\.com/p/import(?:-ai|ai)-\d+
     limit: 30
     publisher_id: import-ai
     evidence_role: expert-interpretation

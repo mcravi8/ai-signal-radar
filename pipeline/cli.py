@@ -95,6 +95,9 @@ def collect() -> None:
                     source.get("channel", "essay"),
                     source["feed_url"],
                     source.get("limit", 30),
+                    source.get("fallback_sitemap_url", ""),
+                    source.get("fallback_include_prefixes", []),
+                    source.get("fallback_include_patterns", []),
                 ),
             )
         elif source.get("collection") == "sitemap":
