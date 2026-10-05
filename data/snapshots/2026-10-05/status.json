@@ -1,0 +1,185 @@
+{
+  "collected_at": "2026-10-05T17:04:01.078775+00:00",
+  "items": 1188,
+  "added": 220,
+  "errors": [
+    "deepmind-blog: not well-formed (invalid token): line 1, column 0",
+    "import-ai: RSS collection failed (HTTP Error 403: Forbidden); official sitemap fallback failed (HTTP Error 403: Forbidden)",
+    "the-batch: HTTP Error 403: Forbidden"
+  ],
+  "collectors": [
+    {
+      "source_id": "arxiv",
+      "status": "healthy",
+      "items": 100
+    },
+    {
+      "source_id": "huggingface-papers",
+      "status": "healthy",
+      "items": 50
+    },
+    {
+      "source_id": "github",
+      "status": "healthy",
+      "items": 270
+    },
+    {
+      "source_id": "hacker-news",
+      "status": "healthy",
+      "items": 133
+    },
+    {
+      "source_id": "linkedin-event-links",
+      "status": "healthy",
+      "items": 0
+    },
+    {
+      "source_id": "x-event-links",
+      "status": "healthy",
+      "items": 0
+    },
+    {
+      "source_id": "yc-companies",
+      "status": "healthy",
+      "items": 50
+    },
+    {
+      "source_id": "yc-jobs",
+      "status": "healthy",
+      "items": 13
+    },
+    {
+      "source_id": "openai-news",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "anthropic-news-research",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "deepmind-blog",
+      "status": "failed",
+      "items": 0,
+      "error": "not well-formed (invalid token): line 1, column 0"
+    },
+    {
+      "source_id": "microsoft-research-blog",
+      "status": "healthy",
+      "items": 10
+    },
+    {
+      "source_id": "nvidia-developer-blog",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "mistral-news",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "huggingface-blog",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "aws-machine-learning-blog",
+      "status": "healthy",
+      "items": 20
+    },
+    {
+      "source_id": "cloudflare-ai-blog",
+      "status": "healthy",
+      "items": 20
+    },
+    {
+      "source_id": "latent-space",
+      "status": "healthy",
+      "items": 20
+    },
+    {
+      "source_id": "import-ai",
+      "status": "failed",
+      "items": 0,
+      "error": "RSS collection failed (HTTP Error 403: Forbidden); official sitemap fallback failed (HTTP Error 403: Forbidden)"
+    },
+    {
+      "source_id": "the-batch",
+      "status": "failed",
+      "items": 0,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source_id": "interconnects",
+      "status": "healthy",
+      "items": 20
+    },
+    {
+      "source_id": "last-week-in-ai",
+      "status": "healthy",
+      "items": 20
+    },
+    {
+      "source_id": "simon-willison",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "chip-huyen",
+      "status": "healthy",
+      "items": 10
+    },
+    {
+      "source_id": "eugene-yan",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "lilian-weng",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "yc-essays",
+      "status": "healthy",
+      "items": 15
+    },
+    {
+      "source_id": "sequoia-essays",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "menlo-ventures",
+      "status": "healthy",
+      "items": 10
+    },
+    {
+      "source_id": "greylock-essays",
+      "status": "healthy",
+      "items": 40
+    },
+    {
+      "source_id": "radical-ventures",
+      "status": "healthy",
+      "items": 10
+    },
+    {
+      "source_id": "neurips-2025-proceedings",
+      "status": "healthy",
+      "items": 36
+    },
+    {
+      "source_id": "genai-genesis-2026-projects",
+      "status": "healthy",
+      "items": 30
+    },
+    {
+      "source_id": "ai-engineer-worlds-fair-2026-program",
+      "status": "healthy",
+      "items": 41
+    }
+  ]
+}
